@@ -1,5 +1,7 @@
 include Makefile.opts
 
+OPTS = $(BASEOPTS)
+
 all:
 	@echo "Please specify one of the following options to build Basilisk:"
 	@echo "  dynamic_lib: builds ONLY the dynamically linked Basilisk"
@@ -49,13 +51,13 @@ compile: dat/standard/*.bsk dat/snfist/*.bsk dat/scitadel/*.bsk bskcompile
 	@bskcompile dat/standard/index.bsk "dat/standard|dat/snfist|dat/scitadel|dat/dragon"
 	
 bskcompile: bskcompile.c bskcallbacks.c
-	$(CC) $(OPTS) -Wl,-rpath . -o bskcompile bskcompile.c bskcallbacks.c $(RUNLIBS)
+	$(CC) $(OPTS) -o bskcompile bskcompile.c bskcallbacks.c $(RUNLIBS)
 
 bskrun: bskrun.c bskcallbacks.c
-	$(CC) $(OPTS) -Wl,-rpath . -o bskrun bskrun.c bskcallbacks.c $(RUNLIBS)
+	$(CC) $(OPTS) -o bskrun bskrun.c bskcallbacks.c $(RUNLIBS)
 
 bsktreasure: bsktreasure.c bskcallbacks.c
-	$(CC) $(OPTS) -Wl,-rpath . -o bsktreasure bsktreasure.c bskcallbacks.c $(RUNLIBS)
+	$(CC) $(OPTS) -o bsktreasure bsktreasure.c bskcallbacks.c $(RUNLIBS)
 
 clean:
 	rm -f libbasilisk.a

@@ -6,12 +6,12 @@
 CC = gcc
 AR = ar
 
-DBGFLAGS := -g
-OPTS := -Iinclude $(DBGFLAGS) -Wall
+DBGFLAGS = -g
+BASEOPTS = -Iinclude $(DBGFLAGS) -Wall
 
-RUNLIBS := -L. -lbasilisk -lm
+RUNLIBS = -L. -lbasilisk -lm
 
-OUTDIR := output
+OUTDIR = output
 
 OBJS := \
   $(OUTDIR)/bskarray.o \

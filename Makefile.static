@@ -6,6 +6,7 @@
 include Makefile.opts
 include Makefile.obj
 
+OPTS = $(BASEOPTS)
 LIBNAME = libbasilisk.a
 
 all: $(OBJS)

@@ -6,7 +6,7 @@
 include Makefile.opts
 
 LIBNAME = libbasilisk.so
-OPTS := $(OPTS) -fPIC -DPIC
+OPTS = $(BASEOPTS) -fPIC -DPIC
 
 include Makefile.obj
 

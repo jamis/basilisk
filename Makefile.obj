@@ -6,59 +6,59 @@
 SRCDIR = src
 
 $(OUTDIR)/bskarray.o: $(SRCDIR)/bskarray.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskarray.c
 
 $(OUTDIR)/bskatdef.o: $(SRCDIR)/bskatdef.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskatdef.c
 
 $(OUTDIR)/bskbitset.o: $(SRCDIR)/bskbitset.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskbitset.c
 
 $(OUTDIR)/bskctgry.o: $(SRCDIR)/bskctgry.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskctgry.c
 
 $(OUTDIR)/bskdb.o: $(SRCDIR)/bskdb.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskdb.c
 
 $(OUTDIR)/bskdebug.o: $(SRCDIR)/bskdebug.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskdebug.c
 
 $(OUTDIR)/bskexec.o: $(SRCDIR)/bskexec.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskexec.c
 
 $(OUTDIR)/bskidtbl.o: $(SRCDIR)/bskidtbl.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskidtbl.c
 
 $(OUTDIR)/bsklexer.o: $(SRCDIR)/bsklexer.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bsklexer.c
 
 $(OUTDIR)/bskparse.o: $(SRCDIR)/bskparse.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskparse.c
 
 $(OUTDIR)/bskrule.o: $(SRCDIR)/bskrule.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskrule.c
 
 $(OUTDIR)/bskstream.o: $(SRCDIR)/bskstream.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskstream.c
 
 $(OUTDIR)/bsksymtb.o: $(SRCDIR)/bsksymtb.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bsksymtb.c
 
 $(OUTDIR)/bskthing.o: $(SRCDIR)/bskthing.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskthing.c
 
 $(OUTDIR)/bsktokens.o: $(SRCDIR)/bsktokens.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bsktokens.c
 
 $(OUTDIR)/bskutdef.o: $(SRCDIR)/bskutdef.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskutdef.c
 
 $(OUTDIR)/bskutil.o: $(SRCDIR)/bskutil.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskutil.c
 
 $(OUTDIR)/bskvalue.o: $(SRCDIR)/bskvalue.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskvalue.c
 
 $(OUTDIR)/bskvar.o: $(SRCDIR)/bskvar.c
-	$(CC) $(OPTS) -c -o $@ $<
+	$(CC) $(OPTS) -c -o $@ $(SRCDIR)/bskvar.c
 
