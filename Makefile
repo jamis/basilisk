@@ -7,6 +7,8 @@ OPTS=-Iinclude $(DBGFLAGS) -Wall
 OUTDIR=output
 SRCDIR=src
 
+RUNLIBS = -L. -lbasilisk -lm
+
 all: LIBOPTS =
 all: LIBNAME = libbasilisk.a
 all: prepare libbasilisk_static utils data
@@ -53,13 +55,13 @@ libbasilisk_dynamic: $(OBJS)
 	ld -shared -o $(LIBNAME) $(OBJS)
  
 bskcompile: $(LIBNAME) bskcompile.c bskcallbacks.c
-	$(CC) $(OPTS) $(LIBOPTS) -o bskcompile bskcompile.c bskcallbacks.c -lm -L. -lbasilisk
+	$(CC) $(OPTS) $(LIBOPTS) -o bskcompile bskcompile.c bskcallbacks.c $(RUNLIBS)
 
 bskrun: $(LIBNAME) bskrun.c bskcallbacks.c
-	$(CC) $(OPTS) $(LIBOPTS) -o bskrun bskrun.c bskcallbacks.c -lm -L. -lbasilisk
+	$(CC) $(OPTS) $(LIBOPTS) -o bskrun bskrun.c bskcallbacks.c $(RUNLIBS)
 
 bsktreasure: $(LIBNAME) bsktreasure.c bskcallbacks.c
-	$(CC) $(OPTS) $(LIBOPTS) -o bsktreasure bsktreasure.c bskcallbacks.c -lm -L. -lbasilisk
+	$(CC) $(OPTS) $(LIBOPTS) -o bsktreasure bsktreasure.c bskcallbacks.c $(RUNLIBS)
 
 data-compile: dat/standard/*.bsk dat/snfist/*.bsk dat/scitadel/*.bsk bskcompile $(LIBNAME)
 	bskcompile dat/standard/index.bsk "dat/standard|dat/snfist|dat/scitadel"
