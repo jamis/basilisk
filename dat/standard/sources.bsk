@@ -1,7 +1,8 @@
 template in ( groupAllSources ) { name }
   sourceCoreRules      in ( sourcesCoreRules )      { "Core Rules" }
   sourceSwordAndFist   in ( sourcesSwordAndFist )   { "Sword and Fist" }
+  sourceTomeAndBlood   in ( sourcesTomeAndBlood )   { "Tome and Blood" }
   sourceSunlessCitadel in ( sourcesSunlessCitadel ) { "Sunless Citadel, The" }
   sourceDragon         in ( sourcesDragon )         { "Dragon Magazine" }
-  sourceNboMTDnDCC     in ( sourcesNboMTDnDCC)      { "NboMT DnDCC" }
+  sourceDefendersoftheFaith in ( sourcesDefendersoftheFaith ) { "Defenders of the Faith" }
 end

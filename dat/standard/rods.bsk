@@ -170,6 +170,9 @@ rodWonder
 end
 
 
+category groupMinorRods
+end
+
 category groupMediumRods
   [ 6] rodImmovable
   [ 6] rodMetalAndMineralDetection
@@ -223,6 +226,8 @@ end
 
 rule rSelectRod( rodMagnitude options )
   case rodMagnitude
+    is "minor" then
+      c = groupMinorRods;
     is "medium" then
       c = groupMediumRods;
     is "major" then
@@ -231,7 +236,12 @@ rule rSelectRod( rodMagnitude options )
       exit rule;
   end
 
-  y = rGetAnyMatchingCriteria( c, options );
+/*
+  if c typeof category then
+	c = Any(c);
+  end
+*/
+  y = rGetAnyMatchingCriteria( c, options, 1 );
   if y ne null then
     rod = rNewInstanceOf( y );
     rod.treasureType = "rod";
