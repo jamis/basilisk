@@ -450,16 +450,20 @@ rule rSortHoardContents( a b )
     rSortHoardContents = -1;
   elseif a.treasureType gt b.treasureType then
     rSortHoardContents = 1;
-  elseif a.name lt b.name then
-    rSortHoardContents = -1;
-  elseif a.name gt b.name then
-    rSortHoardContents = 1;
-  elseif a.cost lt b.cost then
-    rSortHoardContents = -1;
-  elseif a.cost gt b.cost then
-    rSortHoardContents = 1;
   else
-    rSortHoardContents = 0;
+    n1 = Uppercase( a.name );
+    n2 = Uppercase( b.name );
+    if n1 lt n2 then
+      rSortHoardContents = -1;
+    elseif n1 gt n2 then
+      rSortHoardContents = 1;
+    elseif a.cost lt b.cost then
+      rSortHoardContents = -1;
+    elseif b.cost gt b.cost then
+      rSortHoardContents = 1;
+    else
+      rSortHoardContents = 0;
+    end
   end
 end
 

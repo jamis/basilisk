@@ -227,7 +227,7 @@ rule rLookupPotion( potionMagnitude options )
       exit rule;
   end
 
-  y = rGetAnyMatchingCriteria( c, options );
+  y = rGetAnyMatchingCriteria( c, options, true );
   if y ne null then
     x = rNewInstanceOf( y );
     x.prototype = y;

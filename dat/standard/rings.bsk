@@ -447,7 +447,7 @@ rule rLookupRing( ringMagnitude options )
       exit rule;
   end
 
-  y = rGetAnyMatchingCriteria( c, options );
+  y = rGetAnyMatchingCriteria( c, options, true );
   if y ne null then
     x = rNewInstanceOf( y, options );
     x.prototype = y;

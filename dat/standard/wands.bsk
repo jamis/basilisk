@@ -254,7 +254,7 @@ rule rSelectWand( wandMagnitude options )
       exit rule;
   end
 
-  y = rGetAnyMatchingCriteria( c, options );
+  y = rGetAnyMatchingCriteria( c, options, true );
   if y ne null then
     wand = rNewInstanceOf( any( c ) );
     wand.cost = rComputeWandMarketPrice( wand );

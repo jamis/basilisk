@@ -236,7 +236,7 @@ rule rSelectRod( rodMagnitude options )
       exit rule;
   end
 
-  y = rGetAnyMatchingCriteria( c, options, 1 );
+  y = rGetAnyMatchingCriteria( c, options, true );
   if y ne null then
     rod = rNewInstanceOf( y );
     rod.treasureType = "rod";

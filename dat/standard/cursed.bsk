@@ -179,7 +179,7 @@ end
 
 
 rule rCursesRandomClass( item obj options )
-  x = rGetAnyMatchingCriteria( groupAllClasses, options );
+  x = rGetAnyMatchingCriteria( groupAllClasses, options, true );
 	if x eq null then
 	  item.curse.description = rReplaceMacros( obj.description, "a random class" );
 	else
@@ -190,7 +190,7 @@ end
 
 
 rule rCursesRandomSkill( item obj options )
-  x = rGetAnyMatchingCriteria( groupAllSkills, options );
+  x = rGetAnyMatchingCriteria( groupAllSkills, options, true );
   r = Random( 2d6 );
 	if x eq null then
 		item.curse.description = rReplaceMacros( obj.description, r, "a random skill" );
@@ -202,7 +202,7 @@ end
 
 
 rule rCursesRandomSpell( item obj options )
-  x = rGetAnyMatchingCriteria( groupAllSpells, options );
+  x = rGetAnyMatchingCriteria( groupAllSpells, options, true );
 	if x eq null then
 		item.curse.description = rReplaceMacros( obj.description, "a random spell" );
 	else

@@ -1,3 +1,5 @@
+/* Modified by Shaun Gierent */
+
 attribute spellsPerMinorScroll number
 attribute spellsPerMediumScroll number
 attribute spellsPerMajorScroll number
@@ -33,7 +35,7 @@ category groupMajorScrollSpellLevels
   [ 5] { .spellLevel 9 }
 end
 
-category groupArcaneScrollSpells1
+category groupCoreBookArcaneScrollSpells1
   [ 5] spellBurningHands
   [ 5] spellChangeSelf
   [ 5] spellCharmPerson
@@ -62,7 +64,7 @@ category groupArcaneScrollSpells1
   [ 3] spellVentriloquism
 end
 
-category groupArcaneScrollSpells2
+category groupCoreBookArcaneScrollSpells2
   [ 3] spellArcaneLock
   [ 5] spellBlindnessDeafness
   [ 5] spellBlur
@@ -87,7 +89,7 @@ category groupArcaneScrollSpells2
   [ 3] spellWeb
 end
 
-category groupArcaneScrollSpells3
+category groupCoreBookArcaneScrollSpells3
   [ 5] spellBlink
   [ 5] spellClairaudienceClairvoyance
   [ 5] spellDispelMagic
@@ -117,7 +119,7 @@ category groupArcaneScrollSpells3
   [ 3] spellWaterBreathing
 end
 
-category groupArcaneScrollSpells4
+category groupCoreBookArcaneScrollSpells4
   [ 5] spellCharmMonster
   [ 5] spellConfusion
   [ 5] spellDetectScrying
@@ -143,7 +145,7 @@ category groupArcaneScrollSpells4
   [ 3] spellWallOfIce
 end
 
-category groupArcaneScrollSpells5
+category groupCoreBookArcaneScrollSpells5
   [ 4] spellBigbysInterposingHand
   [ 4] spellCloudkill
   [ 5] spellConeOfCold
@@ -168,7 +170,7 @@ category groupArcaneScrollSpells5
   [ 4] spellWallOfStone
 end
 
-category groupArcaneScrollSpells6
+category groupCoreBookArcaneScrollSpells6
   [ 4] spellAcidFog
   [ 3] spellAnalyzeDweomer
   [ 4] spellAntimagicField
@@ -194,7 +196,7 @@ category groupArcaneScrollSpells6
   [ 4] spellTrueSeeing
 end
 
-category groupArcaneScrollSpells7
+category groupCoreBookArcaneScrollSpells7
   [ 5] spellBigbysGraspingHand
   [ 5] spellControlUndead
   [ 5] spellDelayedBlastFireball
@@ -215,7 +217,7 @@ category groupArcaneScrollSpells7
   [ 5] spellVision
 end
 
-category groupArcaneScrollSpells8
+category groupCoreBookArcaneScrollSpells8
   [ 3] spellAntipathy
   [ 5] spellBigbysClenchedFist
   [ 5] spellClone
@@ -237,7 +239,7 @@ category groupArcaneScrollSpells8
   [ 2] spellSympathy
 end
 
-category groupArcaneScrollSpells9
+category groupCoreBookArcaneScrollSpells9
   [ 7] spellBigbysCrushingHand
   [ 7] spellEnergyDrain
   [ 7] spellImprisonment
@@ -252,7 +254,7 @@ category groupArcaneScrollSpells9
   [ 7] spellWish
 end
 
-category groupDivineScrollSpells1
+category groupCoreBookDivineScrollSpells1
   [ 5] spellBless
   [ 5] spellCalmAnimals
   [ 4] spellCommand
@@ -277,7 +279,7 @@ category groupDivineScrollSpells1
   [ 4] spellSummonNaturesAllyI
 end
 
-category groupDivineScrollSpells2
+category groupCoreBookDivineScrollSpells2
   [ 5] spellAid
   [ 5] spellAugury
   [ 5] spellBarkskin
@@ -302,7 +304,7 @@ category groupDivineScrollSpells2
   [ 5] spellUndetectableAlignment
 end
 
-category groupDivineScrollSpells3
+category groupCoreBookDivineScrollSpells3
   [ 2] spellCallLightning
   [ 7] spellCureSeriousWounds
   [ 4] spellDispelMagic
@@ -333,7 +335,7 @@ category groupDivineScrollSpells3
   [10] spellWaterWalk
 end
 
-category groupDivineScrollSpells4
+category groupCoreBookDivineScrollSpells4
   [ 2] spellAntiplantShell
   [ 3] spellControlWater
   [ 7] spellCureCriticalWounds
@@ -357,7 +359,7 @@ category groupDivineScrollSpells4
   [ 8] spellTongues
 end
 
-category groupDivineScrollSpells5
+category groupCoreBookDivineScrollSpells5
   [ 7] spellBreakEnchantment
   [ 6] spellCommune
   [ 2] spellControlWinds
@@ -384,7 +386,7 @@ category groupDivineScrollSpells5
   [10] spellWallOfThorns
 end
 
-category groupDivineScrollSpells6
+category groupCoreBookDivineScrollSpells6
   [ 8] spellAntilifeShell
   [ 6] spellBladeBarrier
   [ 5] spellFindThePath
@@ -403,7 +405,7 @@ category groupDivineScrollSpells6
   [10] spellWordOfRecall
 end
 
-category groupDivineScrollSpells7
+category groupCoreBookDivineScrollSpells7
   [11] spellControlWeather
   [ 7] spellCreepingDoom
   [ 7] spellDestruction
@@ -420,7 +422,7 @@ category groupDivineScrollSpells7
   [10] spellWordOfChaos
 end
 
-category groupDivineScrollSpells8
+category groupCoreBookDivineScrollSpells8
   [ 6] spellAntimagicField
   [ 6] spellCreepingDoom
   [ 6] spellDiscernLocation
@@ -437,7 +439,7 @@ category groupDivineScrollSpells8
   [10] spellWhirlwind
 end
 
-category groupDivineScrollSpells9
+category groupCoreBookDivineScrollSpells9
   [ 7] spellEarthquake
   [ 7] spellElementalSwarm
   [12] spellEnergyDrain
@@ -447,6 +449,78 @@ category groupDivineScrollSpells9
   [11] spellStormOfVengeance
   [12] spellSummonMonsterIX
   [10] spellTrueResurrection
+end
+
+category groupArcaneScrollSpells1
+  [26] groupCoreBookArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [22] groupCoreBookArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [28] groupCoreBookArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [23] groupCoreBookArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [22] groupCoreBookArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [23] groupCoreBookArcaneScrollSpells6
+end
+
+category groupArcaneScrollSpells7
+  [18] groupCoreBookArcaneScrollSpells7
+end
+
+category groupArcaneScrollSpells8
+  [18] groupCoreBookArcaneScrollSpells8
+end
+
+category groupArcaneScrollSpells9
+  [12] groupCoreBookArcaneScrollSpells9
+end
+
+category groupDivineScrollSpells1
+  [22] groupCoreBookDivineScrollSpells1
+end
+
+category groupDivineScrollSpells2
+  [22] groupCoreBookDivineScrollSpells2
+end
+
+category groupDivineScrollSpells3
+  [28] groupCoreBookDivineScrollSpells3
+end
+
+category groupDivineScrollSpells4
+  [21] groupCoreBookDivineScrollSpells4
+end
+
+category groupDivineScrollSpells5
+  [24] groupCoreBookDivineScrollSpells5
+end
+
+category groupDivineScrollSpells6
+  [16] groupCoreBookDivineScrollSpells6
+end
+
+category groupDivineScrollSpells7
+  [14] groupCoreBookDivineScrollSpells7
+end
+
+category groupDivineScrollSpells8
+  [14] groupCoreBookDivineScrollSpells8
+end
+
+category groupDivineScrollSpells9
+  [9] groupCoreBookDivineScrollSpells9
 end
 
 template { name spellList }
@@ -557,4 +631,5 @@ rule rSelectScroll( scrollMagnitude options )
 
   rSelectScroll = scroll;
 end
+
 

@@ -317,7 +317,7 @@ wsaWounding
 end
 
 
-category groupMeleeWeaponMinorSpecialAbilities
+category groupCoreBookMeleeWeaponMinorSpecialAbilities
   [15] wsaDefending
   [10] wsaFlaming
   [10] wsaFrost
@@ -330,7 +330,7 @@ category groupMeleeWeaponMinorSpecialAbilities
   [ 1] mwgtRollAgain
 end
 
-category groupMeleeWeaponMediumSpecialAbilities
+category groupCoreBookMeleeWeaponMediumSpecialAbilities
   [10] wsaDefending
   [ 5] wsaFlaming
   [ 5] wsaFrost
@@ -357,7 +357,7 @@ category groupMeleeWeaponMediumSpecialAbilities
   [ 4] mwgtRollAgain
 end
 
-category groupMeleeWeaponMajorSpecialAbilities
+category groupCoreBookMeleeWeaponMajorSpecialAbilities
   [ 3] wsaFlaming
   [ 3] wsaFrost
   [ 3] wsaShock
@@ -383,7 +383,7 @@ category groupMeleeWeaponMajorSpecialAbilities
   [20] mwgtRollAgain
 end
 
-category groupRangedWeaponMinorSpecialAbilities
+category groupCoreBookRangedWeaponMinorSpecialAbilities
   [20] wsaReturning
   [20] wsaDistance
   [20] wsaFlaming
@@ -391,7 +391,7 @@ category groupRangedWeaponMinorSpecialAbilities
   [20] wsaFrost
 end
 
-category groupRangedWeaponMediumSpecialAbilities
+category groupCoreBookRangedWeaponMediumSpecialAbilities
   [15] wsaReturning
   [15] wsaDistance
   [ 5] wsaFlaming
@@ -408,7 +408,7 @@ category groupRangedWeaponMediumSpecialAbilities
   [ 2] mwgtRollAgain
 end
 
-category groupRangedWeaponMajorSpecialAbilities
+category groupCoreBookRangedWeaponMajorSpecialAbilities
   [10] wsaFlaming
   [10] wsaShock
   [10] wsaFrost
@@ -423,6 +423,30 @@ category groupRangedWeaponMajorSpecialAbilities
   [ 5] wsaSpeed
   [ 7] wsaBrilliantEnergy
   [ 3] mwgtRollAgain
+end
+
+category groupMeleeWeaponMinorSpecialAbilities
+  [9] 	groupCoreBookMeleeWeaponMinorSpecialAbilities
+end
+
+category groupMeleeWeaponMediumSpecialAbilities
+  [23] 	groupCoreBookMeleeWeaponMediumSpecialAbilities
+end
+
+category groupMeleeWeaponMajorSpecialAbilities
+  [22] 	groupCoreBookMeleeWeaponMajorSpecialAbilities
+end
+
+category groupRangedWeaponMinorSpecialAbilities
+  [5] 	groupCoreBookRangedWeaponMinorSpecialAbilities
+end
+
+category groupRangedWeaponMediumSpecialAbilities
+  [13] 	groupCoreBookRangedWeaponMediumSpecialAbilities
+end
+
+category groupRangedWeaponMajorSpecialAbilities
+  [13] 	groupCoreBookRangedWeaponMajorSpecialAbilities
 end
 
 wstAssassinsDagger
@@ -713,7 +737,7 @@ wstTridentOfWarning
 end
 
 
-category groupMediumSpecificWeapons
+category groupCoreBookMediumSpecificWeapons
   [20] wstSleepArrow
   [20] wstScreamingBolt
   [15] wstJavelinOfLightning
@@ -733,7 +757,7 @@ category groupMediumSpecificWeapons
   [ 2] wstLifeDrinker
 end
 
-category groupMajorSpecificWeapons
+category groupCoreBookMajorSpecificWeapons
   [ 4] wstJavelinOfLightning
   [ 5] wstSlayingArrow
   [ 2] wstTridentOfFishCommand
@@ -759,6 +783,15 @@ category groupMajorSpecificWeapons
   [ 6] wstHolyAvenger
   [ 4] wstLuckBlade
 end
+
+category groupMediumSpecificWeapons
+  [17]  groupCoreBookMediumSpecificWeapons
+end
+
+category groupMajorSpecificWeapons
+  [24]  groupCoreBookMajorSpecificWeapons
+end
+
 
 
 rule rInitializeBaneAbility( item ability )
@@ -970,7 +1003,7 @@ rule rSelectMagicWeapon( weaponMagnitude options )
         exit rule;
     end
 
-    proto = rGetAnyMatchingCriteria( c, options );
+    proto = rGetAnyMatchingCriteria( c, options, true );
     if proto ne null then
       newItem = rNewInstanceOf( proto );
       if not has( newItem, "prototype" ) then
@@ -1071,7 +1104,7 @@ rule rSelectMagicWeapon( weaponMagnitude options )
       newItem.abilities = NewCategory();
 
       while abilityCnt gt 0 do
-        a = any( c );
+        a = rCascadeLookupWithOptions( c, options );
         abilityCnt = abilityCnt - 1;
 
         if a eq null or Count(c) lt 2 then
@@ -1173,3 +1206,4 @@ rule rSelectMagicWeapon( weaponMagnitude options )
 
   rSelectMagicWeapon = newItem;
 end
+

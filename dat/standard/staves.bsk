@@ -189,7 +189,7 @@ rule rSelectStaff( staffMagnitude options )
       exit rule;
   end
 
-  y = rGetAnyMatchingCriteria( c, options );
+  y = rGetAnyMatchingCriteria( c, options, true );
   if y ne null then
     staff = rNewInstanceOf( y );
     staff.treasureType = "staff";
