@@ -54,11 +54,11 @@ type := "number"
   # the thing.  The ident-list is a list of categories that the thing will
   # be added to.  If any of the categories do not exist, it will be created
   # and the thing will be added to it.  Example:
-  #     baseball ( ballGroup )
+  #     baseball in ( ballGroup )
   #        .name   "baseball"
   #        .weight 2 lb
   #     end
-thing-def := ident { "(" weighted-ident-list ")" } { property-list } "end"
+thing-def := ident { { "in" } "(" weighted-ident-list ")" } { property-list } "end"
 
 	# A weighted ident list lets you specify not only the categories that
 	# a thing belongs to, but also its weight in the specified category.
@@ -77,7 +77,7 @@ weighted-ident-list-entry := { num ":" } ident
   #       [3] soccerball
   #       football
   #     end
-category-def := "category" ident { "(" weighted-ident-list ")" } category-body "end"
+category-def := "category" ident { "in" "(" weighted-ident-list ")" } category-body "end"
 
   # A category-body consists of one or more category-entries.  A category
   # entry may be explicitly assigned a weighting, but if it is not, the
@@ -101,7 +101,7 @@ category-entry2 := ident
   # types.  The first (optional) ident-list in parentheses is the list of
   # groups the component items are to belong to.  The second ident-list is a
   # list of names of properties that each thing has.
-template-def := "template" { "(" weighted_ident-list ")" } "{" ident-list "}" template-entry-list "end"
+template-def := "template" { { "in" } "(" weighted_ident-list ")" } "{" ident-list "}" template-entry-list "end"
 
 template-entry-list := template-entry
                      | template-entry template-entry-list
@@ -110,7 +110,7 @@ template-entry-list := template-entry
   # of values that correspond to the list of properties given in the 
   # template definition.  The optional ident-list is a list of categories
   # that the component thing will belong to.
-template-entry := ident { "(" weighted_ident-list ")" } "{" template-value-list "}"
+template-entry := ident { { "in" } "(" weighted_ident-list ")" } "{" template-value-list "}"
 
 template-value-list := template-value
                      | template-value template-value-list
@@ -142,7 +142,7 @@ forward-decl := "thing" ident
   #     rule abilityScoreModifier( score )
   #       abilityScoreModifier = Int( ( score - 10 ) / 2 );
   #     end
-rule-def := "rule" ident "(" { ident-list } ")" { rule-statement-list } "end"
+rule-def := "rule" ident "(" { ident-list } ")" { "in" "(" weighted-ident-list ")" } { rule-statement-list } "end"
 
   # An identifier is a letter or underscore followed by zero or more
   # letters, digits, or underscores.
