@@ -4,6 +4,15 @@ version 1.02
 	Data Changes:
 		Added optAlwaysCursed attribute to attributes.bsk.
 		Added check for optAlwaysCursed in rItemDeservesCurse in utilities.bsk.
+  Makefile changes:
+    Use $(RM) instead of 'rm -f'.
+    Remove both plain and ".exe" binaries (Win32-Unix mixed environments).
+  Utility changes:
+    Added config.h.  Eventually, need to move to autoconf environment.
+    Updated bskrun.c, bskcompile.c, bsktreasure.c to use config.h instead
+      of duplicating common header information.
+    Compile cleanly under cygwin environment.  However, this might break
+      environments which were trying to implicitly include <unistd.h>.
 
 version 1.01
   Makefile changes:

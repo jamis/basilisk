@@ -1,16 +1,4 @@
-#include <time.h>
-#ifdef _WIN32
-  #ifdef __MWERKS__
-    // CodeWarrior
-    #include <types.h>
-  #else
-    // VC++, etc.
-    #include <sys/types.h>
-  #endif
-  #include <direct.h>
-#else
-  #include <unistd.h>
-#endif
+#include "config.h"
 
 #include "bskenv.h"
 #include "bsktypes.h"
