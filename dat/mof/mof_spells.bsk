@@ -1,6 +1,7 @@
 /* --------------------------------------------------------------------- *
  * Data from "Magic of Faerun", 
- * converted to Basilisk format
+  converted to Basilisk format
+  Modified by Shaun Gierent
  * --------------------------------------------------------------------- */
 
 template in ( groupAllSpells ) { name school subschool descriptors sources }
@@ -869,7 +870,7 @@ category groupArcaneScrollSpells0
   [ 4]  spellSilentPortal
 end
 
-category groupArcaneScrollSpells1
+category groupMagicofFaerunArcaneScrollSpells1
   [ 4]  spellIronguts
   [ 4]  spellCorrosiveGrasp
   [ 4]  spellSummonUndeadI
@@ -888,7 +889,7 @@ category groupArcaneScrollSpells1
   [ 4]  spellSpeedSwim
 end
 
-category groupArcaneScrollSpells2
+category groupMagicofFaerunArcaneScrollSpells2
   [ 4]  spellIgedrazaarsMiasma
   [ 4]  spellSummonUndeadII
   [ 4]  spellBatteringRam
@@ -906,7 +907,7 @@ category groupArcaneScrollSpells2
   [ 4]  spellStoneBones
 end
 
-category groupArcaneScrollSpells3
+category groupMagicofFaerunArcaneScrollSpells3
   [ 4]  spellReverseArrows
   [ 4]  spellMestilsAcidBreath
   [ 4]  spellSummonUndeadIII
@@ -925,7 +926,7 @@ category groupArcaneScrollSpells3
   [ 4]  spellWeaponOfImpact
 end
 
-category groupArcaneScrollSpells4
+category groupMagicofFaerunArcaneScrollSpells4
   [ 4]  spellWallOfChaos
   [ 4]  spellWallOfEvil
   [ 4]  spellWallOfGood
@@ -942,7 +943,7 @@ category groupArcaneScrollSpells4
   [ 4]  spellSpellEnhancer
 end
 
-category groupArcaneScrollSpells5
+category groupMagicofFaerunArcaneScrollSpells5
   [ 4]  spellDimensionalLock
   [ 4]  spellMestilsAcidSheath
   [ 4]  spellSummonUndeadV
@@ -955,7 +956,7 @@ category groupArcaneScrollSpells5
   [ 4]  spellSimbulsSpellMatrix
 end
 
-category groupArcaneScrollSpells6
+category groupMagicofFaerunArcaneScrollSpells6
   [ 4]  spellFireSpiders
   [ 4]  spellAcidStorm
   [ 4]  spellCacophonicShield
@@ -968,7 +969,7 @@ category groupArcaneScrollSpells6
   [ 4]  spellTranslocationTrick
 end
 
-category groupArcaneScrollSpells7
+category groupMagicofFaerunArcaneScrollSpells7
   [ 4]  spellAntimagicAura
   [ 4]  spellGreaterIronguard
   [ 4]  spellVipergout
@@ -981,7 +982,7 @@ category groupArcaneScrollSpells7
   [ 4]  spellSimbulsSynostodweomer
 end
 
-category groupArcaneScrollSpells8
+category groupMagicofFaerunArcaneScrollSpells8
   [ 4]  spellSpellEngine
   [ 4]  spellTranscribeSymbol
   [ 4]  spellNyborsWrathfulCastigation
@@ -991,7 +992,7 @@ category groupArcaneScrollSpells8
   [ 4]  spellSimbulsSkeletalDeliquescence
 end
 
-category groupArcaneScrollSpells9
+category groupMagicofFaerunArcaneScrollSpells9
   [ 4]  spellElminstersEffulgentEpuration
   [ 4]  spellMawOfChaos
   [ 4]  spellBlackBladeOfDisaster
@@ -1000,14 +1001,14 @@ category groupArcaneScrollSpells9
   [ 4]  spellSimbulsSpellTrigger
 end
 
-category groupDivineScrollSpells1
+category groupMagicofFaerunDivineScrollSpells1
   [ 4]  spellFaithHealing
   [ 4]  spellHandfire
   [ 4]  spellVisionOfGlory
   [ 4]  spellWieldskull
 end
 
-category groupDivineScrollSpells2
+category groupMagicofFaerunDivineScrollSpells2
   [ 4]  spellAuraAgainstFlame
   [ 4]  spellBodyBlades
   [ 4]  spellCurseOfIllFortune
@@ -1017,7 +1018,7 @@ category groupDivineScrollSpells2
   [ 4]  spellStoneBones
 end
 
-category groupDivineScrollSpells3
+category groupMagicofFaerunDivineScrollSpells3
   [ 4]  spellAmanuensis
   [ 4]  spellCircleDance
   [ 4]  spellDarkWay
@@ -1030,7 +1031,7 @@ category groupDivineScrollSpells3
   [ 4]  spellWeaponOfImpact
 end
 
-category groupDivineScrollSpells4
+category groupMagicofFaerunDivineScrollSpells4
   [ 4]  spellBlindsight
   [ 4]  spellDoomtide
   [ 4]  spellFavorOfIlmater
@@ -1046,14 +1047,14 @@ category groupDivineScrollSpells4
   [ 4]  spellWeaponOfTheDeity
 end
 
-category groupDivineScrollSpells5
+category groupMagicofFaerunDivineScrollSpells5
   [ 4]  spellBattletide
   [ 4]  spellCrawlingDarkness
   [ 4]  spellMonstrousRegeneration
   [ 4]  spellSpellPhylactery
 end
 
-category groupDivineScrollSpells6
+category groupMagicofFaerunDivineScrollSpells6
   [ 4]  spellAzuthsExaltedTriad
   [ 4]  spellSpellmantle
   [ 4]  spellStoneWalk
@@ -1061,7 +1062,7 @@ category groupDivineScrollSpells6
   [ 4]  spellUndeathToDeath
 end
 
-category groupDivineScrollSpells7
+category groupMagicofFaerunDivineScrollSpells7
   [ 4]  spellAzuthsSpellShield
   [ 4]  spellDeathDragon
   [ 4]  spellFortunateFate
@@ -1069,13 +1070,85 @@ category groupDivineScrollSpells7
   [ 4]  spellUndeathAfterDeath
 end
 
-category groupDivineScrollSpells8
+category groupMagicofFaerunDivineScrollSpells8
   [ 4]  spellDeathPact
   [ 4]  spellGeneralOfUndeath
   [ 4]  spellStormrage
 end
 
-category groupDivineScrollSpells9
+category groupMagicofFaerunDivineScrollSpells9
   [ 4]  spellUndeathsEternalFoe
+end
+
+category groupArcaneScrollSpells1
+  [16] groupMagicofFaerunArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [15] groupMagicofFaerunArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [16] groupMagicofFaerunArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [14] groupMagicofFaerunArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [10] groupMagicofFaerunArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [10] groupMagicofFaerunArcaneScrollSpells6
+end
+
+category groupArcaneScrollSpells7
+  [10] groupMagicofFaerunArcaneScrollSpells7
+end
+
+category groupArcaneScrollSpells8
+  [7] groupMagicofFaerunArcaneScrollSpells8
+end
+
+category groupArcaneScrollSpells9
+  [6] groupMagicofFaerunArcaneScrollSpells9
+end
+
+category groupDivineScrollSpells1
+  [4] groupMagicofFaerunDivineScrollSpells1
+end
+
+category groupDivineScrollSpells2
+  [7] groupMagicofFaerunDivineScrollSpells2
+end
+
+category groupDivineScrollSpells3
+  [10] groupMagicofFaerunDivineScrollSpells3
+end
+
+category groupDivineScrollSpells4
+  [13] groupMagicofFaerunDivineScrollSpells4
+end
+
+category groupDivineScrollSpells5
+  [4] groupMagicofFaerunDivineScrollSpells5
+end
+
+category groupDivineScrollSpells6
+  [5] groupMagicofFaerunDivineScrollSpells6
+end
+
+category groupDivineScrollSpells7
+  [5] groupMagicofFaerunDivineScrollSpells7
+end
+
+category groupDivineScrollSpells8
+  [3] groupMagicofFaerunDivineScrollSpells8
+end
+
+category groupDivineScrollSpells9
+  [1] groupMagicofFaerunDivineScrollSpells9
 end
 

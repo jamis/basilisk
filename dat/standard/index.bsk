@@ -42,18 +42,32 @@
 /* the following are files for data that extends the data found
  * in the core rulebooks. */
 
-#include "boem.bsk"       /* Book of Eldritch Might */
-#include "defenders.bsk"  /* Defenders of the Faith */
-#include "diablo.bsk"     /* Diablo */
-#include "dragon.bsk"     /* Dragon Magazine data */
-#include "dungeon.bsk"    /* Dungeon Magazine */
-#include "motplanes.bsk"  /* Manual of the Planes */
-#include "nbomt.bsk"      /* Netbook of Magical Treasures */
-#include "polyhedron.bsk" /* Polyhedron Magazine */
-#include "scitadel.bsk"   /* the Sunless Citadel */
-#include "snfist.bsk"     /* Sword & Fist */
-#include "tnblood.bsk"    /* Tome and Blood */
-#include "frcs.bsk"       /* Forgotton Realms Campaign Sourcebook */
-#include "mof.bsk"        /* Magic of Faerun */
-#include "rr.bsk"         /* Relics & Rituals */
+#include "boem.bsk"          /* Book of Eldritch Might */
+#include "defenders.bsk"     /* Defenders of the Faith */
+#include "diablo.bsk"        /* Diablo II */
+#include "motplanes.bsk"     /* Manual of the Planes */
+#include "snfist.bsk"        /* Sword & Fist */
+#include "tnblood.bsk"       /* Tome and Blood */
+#include "frcs.bsk"          /* Forgotton Realms Campaign Sourcebook */
+#include "mof.bsk"           /* Magic of Faerun */
+#include "rr.bsk"            /* Relics & Rituals */
+#include "DLofM.bsk"         /* Dragon Lords of Melniboné */
+#include "dragon.bsk"        /* Dragon Magazines */
+#include "NDreams.bsk"       /* Nightmares & Dreams */
+#include "songsil.bsk"       /* Song and Silence */
+#include "demon.bsk"         /* Demonology */
+#include "LoD.bsk"           /* Lords of Darkness */
+#include "monstersofF.bsk"   /* Monsters of Faerun */
+#include "TT.bsk"            /* Traps & Treachery */
+#include "Undead.bsk"        /* Undead */
+#include "Glad.bsk"          /* Gladiator: Sands of Death */
+#include "Dragons.bsk"       /* Dragons */
+#include "Evil.bsk"          /* Evil */
+#include "MysticWar.bsk"     /* Mystic Warriors */
+#include "Dung.bsk"          /* Dungeons */
+#include "Necro.bsk"         /* Necromancy */
+#include "Gods.bsk"          /* Touched by the Gods */
+#include "LoH.bsk"           /* Legions of Hell */
+#include "Diom.bsk"          /* Diomin */
+#include "Jade.bsk"          /* Jade Dragons & Hungry Ghosts */
 

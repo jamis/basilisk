@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------------ *
  * Material in this file is taken from the "Sword and Fist" guidebook by
- * Jason Carl.
+ * Jason Carl.; Modified by Shaun Gierent
  *
  * Contents are arranged as follows:
  *  1) weapons
@@ -102,13 +102,13 @@ wondrousVestOfResistance5
   .sources sourcesTomeAndBlood
 end
 
-category groupMinorWondrousItems
+category groupToBMinorWondrousItems
   wondrousVestOfResistance1
   wondrousVestOfResistance2
   wondrousVestOfResistance3
 end
 
-category groupMediumWondrousItems
+category groupToBMediumWondrousItems
   wondrousBeltofManyPockets
   wondrousClayGolemManual
   wondrousFleshGolemManual
@@ -116,10 +116,22 @@ category groupMediumWondrousItems
   wondrousVestOfResistance5
 end
 
-category groupMajorWondrousItems
+category groupToBMajorWondrousItems
   wondrousBeltofSpellResistance
   wondrousIronGolemManual
   wondrousStoneGolemManual
   wondrousRugofWelcome
 end
+
+category groupMinorWondrousItems
+ [3]  groupToBMinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [5]  groupToBMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [4]  groupToBMajorWondrousItems
+end  
 

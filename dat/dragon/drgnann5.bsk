@@ -1,34 +1,38 @@
 /* --------------------------------------------------------------------- *
  * Data from Dragon Magazine Annual #5, converted to Basilisk format by
  * Robert Szkotak (dkphoenix@hotmail.com), aka "LightPhoenix" on
- * Eric Noah's messageboards.
+ * Eric Noah's messageboards. Modified by Shaun Gierent
  * --------------------------------------------------------------------- */
+
+sourceDragonAn5 ( sourcesDragonAn5 groupAllSources )
+  .name "Dragon Annual 5"
+end
 
 /* "Rays of Light", p. 22-26 */
 
 template in ( groupAllSpells ) { name school subschool descriptors sources }
-  spellDistract { "Distract" schEnchantment subschCompulsion $ sourcesDragon }
-  spellDistractingRay { "Distracting Ray" schAbjuration $ $ sourcesDragon }
-  spellEagleEyes { "Eagle Eyes" schTransmutation $ $ sourcesDragon }
-  spellGlibTongue { "Glib Tongue" schTransmutation $ $ sourcesDragon }
-  spellGreaterDisruptUndead { "Greater Disrupt Undead" schNecromancy $ $ sourcesDragon }
-  spellLordsCharisma { "Lord's Charisma" schTransmutation $ $ sourcesDragon }
-  spellMinorReflection { "Minor Reflection" schAbjuration $ $ sourcesDragon }
-  spellRayOfClumsiness { "Ray of Clumsiness" schTransmutation $ $ sourcesDragon }  
-  spellRayOfDeanimation { "Ray of Deanimation" schAbjuration $ $ sourcesDragon }
-  spellRayOfDizziness { "Ray of Dizziness" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDragon }
-  spellRayOfEntropy { "Ray of Entropy" schNecromancy $ $ sourcesDragon }
-  spellRayOfFlame { "Ray of Flame" schEvocation  $ ( descFire ) sourcesDragon }
-  spellRayOfIce { "Ray of Ice" schEvocation $ ( descCold ) sourcesDragon }
-  spellRayOfLight { "Ray of Light" schEvocation $ ( descLight ) sourcesDragon }
-  spellRayOfSickness { "Ray of Sickness" schNecromancy $ $ sourcesDragon }
-  spellRayOfStupidity { "Ray of Stupidity" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDragon }
-  spellRayOfWeakness { "Ray of Weakness" schNecromancy $ $ sourcesDragon }
-  spellRustRay { "Rust Ray" schTransmutation $ $ sourcesDragon }
-  spellStingRay { "Sting Ray" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDragon }
-  spellStunRay { "Stun Ray" schConjuration subschCreation (descElectricity) sourcesDragon }
-  spellSuddenMastery { "Sudden Mastery" schTransmutation $ $ sourcesDragon }
-  spellTargetingRay { "Targeting Ray" schDivination $ $ sourcesDragon }
+  spellDistract { "Distract" schEnchantment subschCompulsion $ sourcesDragonAn5 }
+  spellDistractingRay { "Distracting Ray" schAbjuration $ $ sourcesDragonAn5 }
+  spellEagleEyes { "Eagle Eyes" schTransmutation $ $ sourcesDragonAn5 }
+  spellGlibTongue { "Glib Tongue" schTransmutation $ $ sourcesDragonAn5 }
+  spellGreaterDisruptUndead { "Greater Disrupt Undead" schNecromancy $ $ sourcesDragonAn5 }
+  spellLordsCharisma { "Lord's Charisma" schTransmutation $ $ sourcesDragonAn5 }
+  spellMinorReflection { "Minor Reflection" schAbjuration $ $ sourcesDragonAn5 }
+  spellRayOfClumsiness { "Ray of Clumsiness" schTransmutation $ $ sourcesDragonAn5 }  
+  spellRayOfDeanimation { "Ray of Deanimation" schAbjuration $ $ sourcesDragonAn5 }
+  spellRayOfDizziness { "Ray of Dizziness" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDragonAn5 }
+  spellRayOfEntropy { "Ray of Entropy" schNecromancy $ $ sourcesDragonAn5 }
+  spellRayOfFlame { "Ray of Flame" schEvocation  $ ( descFire ) sourcesDragonAn5 }
+  spellRayOfIce { "Ray of Ice" schEvocation $ ( descCold ) sourcesDragonAn5 }
+  spellRayOfLight { "Ray of Light" schEvocation $ ( descLight ) sourcesDragonAn5 }
+  spellRayOfSickness { "Ray of Sickness" schNecromancy $ $ sourcesDragonAn5 }
+  spellRayOfStupidity { "Ray of Stupidity" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDragonAn5 }
+  spellRayOfWeakness { "Ray of Weakness" schNecromancy $ $ sourcesDragonAn5 }
+  spellRustRay { "Rust Ray" schTransmutation $ $ sourcesDragonAn5 }
+  spellStingRay { "Sting Ray" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDragonAn5 }
+  spellStunRay { "Stun Ray" schConjuration subschCreation (descElectricity) sourcesDragonAn5 }
+  spellSuddenMastery { "Sudden Mastery" schTransmutation $ $ sourcesDragonAn5 }
+  spellTargetingRay { "Targeting Ray" schDivination $ $ sourcesDragonAn5 }
 end
 
 category groupSpellsBardL1
@@ -108,60 +112,83 @@ category groupSpellsWizardL5
   spellRayOfEntropy
 end
 
-category groupArcaneScrollSpells0
+category groupDragonAn5ArcaneScrollSpells0
   spellDistract
 end
 
-category groupArcaneScrollSpells1
+category groupDragonAn5ArcaneScrollSpells1
   spellRayOfClumsiness spellRayOfFlame spellRayOfLight spellStunRay spellTargetingRay spellGlibTongue
 end
 
-category groupArcaneScrollSpells2
+category groupDragonAn5ArcaneScrollSpells2
   spellDistractingRay spellRayOfDizziness spellRayOfSickness spellRayOfIce spellRayOfStupidity spellLordsCharisma
 end
 
-category groupArcaneScrollSpells3
+category groupDragonAn5ArcaneScrollSpells3
   spellMinorReflection spellRustRay spellStingRay spellGreaterDisruptUndead spellEagleEyes
 end
 
-category groupArcaneScrollSpells4
+category groupDragonAn5ArcaneScrollSpells4
   spellRayOfWeakness spellRayOfDeanimation spellSuddenMastery
 end
 
-category groupArcaneScrollSpells5
+category groupDragonAn5ArcaneScrollSpells5
   spellRayOfEntropy
 end
 
+category groupArcaneScrollSpells0
+  [1] groupDragonAn5ArcaneScrollSpells0
+end
+
+category groupArcaneScrollSpells1
+  [6] groupDragonAn5ArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [6] groupDragonAn5ArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [5] groupDragonAn5ArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [3] groupDragonAn5ArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [1] groupDragonAn5ArcaneScrollSpells5
+end
 
 /* "Rays of Light", p. 20-26 */
 
 featRayBurst in ( groupAllFeats groupMetaMagicFeats )
   .name "ray burst"
   .takeMultiple no
-  .sources sourcesDragon
+  .sources sourcesDragonAn5
 end
 
 featRayConing in ( groupAllFeats groupMetaMagicFeats )
   .name "ray coning"
   .takeMultiple no
-  .sources sourcesDragon
+  .sources sourcesDragonAn5
 end
 
 featRayExtension in ( groupAllFeats groupMetaMagicFeats )
   .name "ray extension"
   .takeMultiple no
-  .sources sourcesDragon
+  .sources sourcesDragonAn5
 end
 
 featRayFocus in ( groupAllFeats groupGeneralFeats )
   .name "ray focus"
   .takeMultiple no
-  .sources sourcesDragon
+  .sources sourcesDragonAn5
 end
 
 featRaySplitting in ( groupAllFeats groupMetaMagicFeats )
   .name "ray splitting"
   .takeMultiple no
-  .sources sourcesDragon
+  .sources sourcesDragonAn5
 end
 

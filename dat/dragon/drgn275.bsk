@@ -1,15 +1,19 @@
 /* --------------------------------------------------------------------- *
  * Data from Dragon Magazine issue #275, converted to Basilisk format by
  * Robert Szkotak (dkphoenix@hotmail.com), aka "LightPhoenix" on
- * Eric Noah's messageboards.
+ * Eric Noah's messageboards. Modified by Shaun Gierent
  * --------------------------------------------------------------------- */
+
+sourceDragon275 ( sourcesDragon275 groupAllSources )
+  .name "Dragon 275"
+end
 
 /* "Unusual Suspects", p. 32-36 */
 
 template in ( groupArmor ) { name cost bonuses maxDexBonus armorCheckPenalty arcaneSpellFailure speedModifier weight sources }
-  armorBone { "bone armor"  20 gp  ( AC3 )  +4  -3  15  1  20 lb sourcesDragon }
-  armorCord { "cord armor"  8 gp  ( AC2 )  +4  -2  20  1  15 lb sourcesDragon }
-  armorWood { "wood armor"  15 gp  ( AC3 )  +4  -3  15  1  20 lb sourcesDragon }
+  armorBone { "bone armor"  20 gp  ( AC3 )  +4  -3  15  1  20 lb sourcesDragon275 }
+  armorCord { "cord armor"  8 gp  ( AC2 )  +4  -2  20  1  15 lb sourcesDragon275 }
+  armorWood { "wood armor"  15 gp  ( AC3 )  +4  -3  15  1  20 lb sourcesDragon275 }
 end
 
 category groupLightArmor
@@ -33,13 +37,13 @@ featImprovedRapidShot in ( groupAllFeats groupGeneralFeats )
 	{ .type ptFeat .affectedThing featRapidShot }
 	{ .type ptMinimumBaseAttack .magnitude 8 } )
   .specialAttacks ( { .description "ignore -2 penalty when using Rapid Shot" } )
-  .sources sourcesDragon
+  .sources sourcesDragon275
 end
 
 featDelaySpell in (groupAllFeats groupMetaMagicFeats )
   .name "delay spell"
   .takeMultiple no
-  .sources sourcesDragon
+  .sources sourcesDragon275
 end
 
 
@@ -50,24 +54,24 @@ template in ( groupAspectType ) { name }
 end
 
 template in ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
-  weaponBarbedBolas { "barbed bolas" 10 gp 1d6 20 2 4 lb small sourcesDragon }
-  weaponBlowgun { "blowgun" 20 gp 1d3 20 2 2 lb large sourcesDragon }
-  weaponBolas { "bolas" 4 gp $ 20 2 3 lb small sourcesDragon }
-  weaponBoomerang { "boomerang" 20 gp $ 20 2 2 lb small sourcesDragon }
-  weaponChatkcha { "chatkcha" 40 gp 1d6 20 2 1/2 lb small sourcesDragon }
-  weaponCrescentKnife { "crescent knife" 20 gp 1d3 20 2 1 lb small sourcesDragon }
-  weaponDart2 { "dart (tiny)" 1 sp $ $ $ 1/20 lb tiny sourcesDragon }
-  weaponDwarfBucklerAxe { "dwarf buckler-axe" 30 gp 1d6 20 3 6 lb small sourcesDragon }
-  weaponElvenThinblade { "elven thinblade" 100 gp 1d8 18 2 3 lb medium sourcesDragon }
-  weaponGnomeTortoiseBlade { "gnome tortoise blade" 20 gp 1d4 19 2 1 lb tiny sourcesDragon }
-  weaponGreatScimitar { "great scimitar" 50 gp 2d6 18  2 16 lb large sourcesDragon }
-  weaponGythka { "gythka" 100 gp 1d8 20 2 12 lb large sourcesDragon }
-  weaponHalflingBlowgun { "halfling blowgun"  15 gp 1d2 20 2 1 lb medium sourcesDragon }
-  weaponHalflingLajatang { "halfling lajatang" 80 gp 1d6 20 2 3 lb medium sourcesDragon }
-  weaponLajatang { "lajatang" 90 gp 1d8 20 2 7 lb large sourcesDragon }
-  weaponMancatcher { "mancatcher" 30 gp $ 20 2 8 lb large sourcesDragon }
-  weaponOrcCrusher { "orc crusher" 60 gp 1d8 20 2 15 lb large sourcesDragon }
-  weaponScourge { "scourge" 20 gp 1d3 20 2 2 lb medium sourcesDragon }
+  weaponBarbedBolas { "barbed bolas" 10 gp 1d6 20 2 4 lb small sourcesDragon275 }
+  weaponBlowgun { "blowgun" 20 gp 1d3 20 2 2 lb large sourcesDragon275 }
+  weaponBolas { "bolas" 4 gp $ 20 2 3 lb small sourcesDragon275 }
+  weaponBoomerang { "boomerang" 20 gp $ 20 2 2 lb small sourcesDragon275 }
+  weaponChatkcha { "chatkcha" 40 gp 1d6 20 2 1/2 lb small sourcesDragon275 }
+  weaponCrescentKnife { "crescent knife" 20 gp 1d3 20 2 1 lb small sourcesDragon275 }
+  weaponDart2 { "dart (tiny)" 1 sp $ $ $ 1/20 lb tiny sourcesDragon275 }
+  weaponDwarfBucklerAxe { "dwarf buckler-axe" 30 gp 1d6 20 3 6 lb small sourcesDragon275 }
+  weaponElvenThinblade { "elven thinblade" 100 gp 1d8 18 2 3 lb medium sourcesDragon275 }
+  weaponGnomeTortoiseBlade { "gnome tortoise blade" 20 gp 1d4 19 2 1 lb tiny sourcesDragon275 }
+  weaponGreatScimitar { "great scimitar" 50 gp 2d6 18  2 16 lb large sourcesDragon275 }
+  weaponGythka { "gythka" 100 gp 1d8 20 2 12 lb large sourcesDragon275 }
+  weaponHalflingBlowgun { "halfling blowgun"  15 gp 1d2 20 2 1 lb medium sourcesDragon275 }
+  weaponHalflingLajatang { "halfling lajatang" 80 gp 1d6 20 2 3 lb medium sourcesDragon275 }
+  weaponLajatang { "lajatang" 90 gp 1d8 20 2 7 lb large sourcesDragon275 }
+  weaponMancatcher { "mancatcher" 30 gp $ 20 2 8 lb large sourcesDragon275 }
+  weaponOrcCrusher { "orc crusher" 60 gp 1d8 20 2 15 lb large sourcesDragon275 }
+  weaponScourge { "scourge" 20 gp 1d3 20 2 2 lb medium sourcesDragon275 }
 end
 
 weaponBolas
@@ -179,26 +183,26 @@ category groupDragon275RangedWeapons
 end
 
 category groupUncommonWeapons
-  [10] groupDragon275MeleeWeapons
-	[ 5] groupDragon275RangedWeapons
+  [11] groupDragon275MeleeWeapons
+  [ 7] groupDragon275RangedWeapons
 end
 
 /* "Alister's Augmentations", p.84-87 */
 
 template in ( groupAllSpells ) { name school subschool descriptors sources }
-  spellBattleHymn { "Battle Hymn" schEnchantment subschCharm (descMindAffecting) sourcesDragon }
-  spellBristle { "Bristle" schTransmutation $ $ sourcesDragon }
-  spellBurningSword { "Burning Sword" schEvocation $ $ sourcesDragon }
-  spellDiamondsteel { "Diamondsteel" schTransmutation $ $ sourcesDragon }
-  spellDolorousBlow { "Dolorous Blow" schTransmutation $ $ sourcesDragon }
-  spellHeroics { "Heroics" schTransmutation $ $ sourcesDragon }
-  spellHurl { "Hurl" schTransmutation $ $ sourcesDragon }
-  spellIndomitability { "Indomitability" schAbjuration $ $ sourcesDragon }
-  spellLesserSpellImmunity { "Lesser Spell Immunity" schAbjuration $ $ sourcesDragon }
-  spellMassStrength { "Mass Strength" schTransmutation $ $ sourcesDragon }
-  spellRapidStrikes { "Rapid Strikes" schTransmutation $ $ sourcesDragon }
-  spellShieldbearer { "Shieldbearer" schTransmutation $ $ sourcesDragon }
-  spellWeaponShift { "Weapon Shift" schTransmutation $ $ sourcesDragon }
+  spellBattleHymn { "Battle Hymn" schEnchantment subschCharm (descMindAffecting) sourcesDragon275 }
+  spellBristle { "Bristle" schTransmutation $ $ sourcesDragon275 }
+  spellBurningSword { "Burning Sword" schEvocation $ $ sourcesDragon275 }
+  spellDiamondsteel { "Diamondsteel" schTransmutation $ $ sourcesDragon275 }
+  spellDolorousBlow { "Dolorous Blow" schTransmutation $ $ sourcesDragon275 }
+  spellHeroics { "Heroics" schTransmutation $ $ sourcesDragon275 }
+  spellHurl { "Hurl" schTransmutation $ $ sourcesDragon275 }
+  spellIndomitability { "Indomitability" schAbjuration $ $ sourcesDragon275 }
+  spellLesserSpellImmunity { "Lesser Spell Immunity" schAbjuration $ $ sourcesDragon275 }
+  spellMassStrength { "Mass Strength" schTransmutation $ $ sourcesDragon275 }
+  spellRapidStrikes { "Rapid Strikes" schTransmutation $ $ sourcesDragon275 }
+  spellShieldbearer { "Shieldbearer" schTransmutation $ $ sourcesDragon275 }
+  spellWeaponShift { "Weapon Shift" schTransmutation $ $ sourcesDragon275 }
 end
 
 category groupSpellsBardL2
@@ -261,34 +265,59 @@ category groupSpellsWizardL6
   spellMassStrength
 end
 
-category groupArcaneScrollSpells1
+category groupDragon275ArcaneScrollSpells1
   [ 4] spellShieldbearer
   [ 4] spellWeaponShift
 end
 
-category groupArcaneScrollSpells2
+category groupDragon275ArcaneScrollSpells2
   [ 4] spellBristle
   [ 4] spellLesserSpellImmunity
   [ 4] spellHurl
   [ 4] spellRapidStrikes
 end
 
-category groupArcaneScrollSpells3
+category groupDragon275ArcaneScrollSpells3
   [ 4] spellDiamondsteel
 end
 
-category groupArcaneScrollSpells4
+category groupDragon275ArcaneScrollSpells4
   [ 4] spellBattleHymn
   [ 4] spellBurningSword
   [ 4] spellDolorousBlow
   [ 4] spellHeroics
 end
 
-category groupArcaneScrollSpells5
+category groupDragon275ArcaneScrollSpells5
   [ 4] spellIndomitability
 end
 
-category groupArcaneScrollSpells6
+category groupDragon275ArcaneScrollSpells6
   [ 4] spellMassStrength
 end
+
+category groupArcaneScrollSpells1
+  [2] groupDragon275ArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [4] groupDragon275ArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [1] groupDragon275ArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [4] groupDragon275ArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [1] groupDragon275ArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [1] groupDragon275ArcaneScrollSpells6
+end
+
 

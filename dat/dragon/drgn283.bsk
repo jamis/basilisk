@@ -1,7 +1,11 @@
 /* --------------------------------------------------------------------- *
  * Data from Dragon Magazine issue #283, converted to Basilisk format by
- * Eric Polovich
+ * Eric Polovich.  Modified by Shaun Gierent
  * --------------------------------------------------------------------- */
+
+sourceDragon283 ( sourcesDragon283 groupAllSources )
+  .name "Dragon 283"
+end
 
 /* "Foes of Stormweather", p.86-91 */
 
@@ -11,15 +15,15 @@ wondrousDustofSlumber
   .specialQualities ( { .type satSpellEffect
                         .spell spellSleep } )
 
-  .sources sourcesDragon
+  .sources sourcesDragon283
 end
 
 category groupMinorWondrousItems
-  wondrousDustofSlumber
+  [1] wondrousDustofSlumber
 end
 
 category groupMediumWondrousItems
-  wondrousPortalDust
+  [1] wondrousPortalDust
 end
 
 ringRingsofPlaneShifting in ( groupRings )
@@ -27,7 +31,7 @@ ringRingsofPlaneShifting in ( groupRings )
   .cost 136500 gp
   .activationMethod atCommandWord
   .specialQualities ( { .type satSpellEffect .spell spellPlaneShift } )
-  .sources sourcesDragon
+  .sources sourcesDragon283
 end
 
 
@@ -42,9 +46,9 @@ wstQuarterstaffofPain
   .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
              { .type btEnhancement .aspect asDamage .magnitude +3 } )
   .cost 72300 gp
-  .sources sourcesDragon
+  .sources sourcesDragon283
 end
 
 category groupMajorSpecificWeapons
-  [ 4] wstQuarterstaffofPain
+  [ 1] wstQuarterstaffofPain
 end

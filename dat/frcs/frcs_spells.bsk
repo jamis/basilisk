@@ -18,7 +18,6 @@ template in ( groupAllSpells ) { name school subschool descriptors sources }
   spellFlensing { "Flensing" schEvocation $ $ sourcesFRCS }
   spellGateSeal { "Gate Seal" schAbjuration $ $ sourcesFRCS }
   spellGembomb { "Gembomb" schConjuration subschCreation ( descForce ) sourcesFRCS }
-  spellGreatShout { "Great Shout" schEvocation $ ( descSonic ) sourcesFRCS }
   spellGreaterAnyspell { "Greater Anyspell" schTransmutation $ $ sourcesFRCS }
   spellGreaterFantasticMachine { "Greater Fantastic Machine" schIllusion subschShadow $ sourcesFRCS }
   spellGrimwaldsGreymantle { "Grimwald's Greymantle" schNecromancy $ $ sourcesFRCS }
@@ -1435,8 +1434,7 @@ end
 
 category groupSpellsSorcererL8
   spellFlensing
-  spellGreatShout
-end
+  end
 
 category groupSpellsSorcererL9
   spellElminstersEvasion
@@ -1870,7 +1868,6 @@ end
 
 category groupSpellsWizardL8
   spellFlensing
-  spellGreatShout
 end
 
 category groupSpellsWizardL9

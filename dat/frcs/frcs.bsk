@@ -1,8 +1,13 @@
-/* data submitted by Spencer "the Sigil" Cooley" */
+/* data submitted by Spencer "the Sigil" Cooley" 
+Scrolls by Shaun Gierent*/
 
 sourceFRCS ( sourcesFRCS groupAllSources )
   .name "Forgotton Realms Campaign Setting"
 end
 
 #include "frcs_spells.bsk"
+#include "frcs_scrolls.bsk"
+#include "frcs_mundane.bsk"
+#include "frcs_weapons.bsk"
+
 

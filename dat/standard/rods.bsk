@@ -169,11 +169,7 @@ rodWonder
   .sources sourcesCoreRules
 end
 
-
-category groupMinorRods
-end
-
-category groupMediumRods
+category groupCoreBookMediumRods
   [ 6] rodImmovable
   [ 6] rodMetalAndMineralDetection
   [ 8] rodCancellation
@@ -192,7 +188,7 @@ category groupMediumRods
   [ 1] rodSecurity
 end
 
-category groupMajorRods
+category groupCoreBookMajorRods
   [ 5] rodCancellation
   [ 5] rodWonder
   [ 5] rodPython
@@ -211,6 +207,16 @@ category groupMajorRods
   [ 2] rodAlertness
 end
 
+category groupMinorRods
+end
+
+category groupMediumRods
+ [16]  groupCoreBookMediumRods
+end
+
+category groupMajorRods
+ [16]  groupCoreBookMajorRods
+end  
 
 rule rInitAbsorptionRod( item )
   potentialRemaining = Random(50) + 1;

@@ -1,16 +1,20 @@
 /* --------------------------------------------------------------------- *
  * Data from Dragon Magazine issue #279, converted to Basilisk format by
  * Robert Szkotak (dkphoenix@hotmail.com), aka "LightPhoenix" on
- * Eric Noah's messageboards.
+ * Eric Noah's messageboards. Modified by Shaun Gierent
  * --------------------------------------------------------------------- */
+
+sourceDragon279 ( sourcesDragon279 groupAllSources )
+  .name "Dragon 279"
+end
 
 /* "Leaf & Thorn", p. 34-46 */
 /* "Revenge of the Spider Queen", p. 42-47 */
 
 template in ( groupAllSpells ) { name school subschool descriptors sources }
-  spellBaneWeapon { "Bane Weapon" schTransmutation $ $ sourcesDragon }  
-  spellForagersBlessing { "Forager's Blessing" schDivination $ $ sourcesDragon }
-  spellWombOfTheEarth { "Womb of the Earth" schTransmutation $ $ sourcesDragon }
+  spellBaneWeapon { "Bane Weapon" schTransmutation $ $ sourcesDragon279 }  
+  spellForagersBlessing { "Forager's Blessing" schDivination $ $ sourcesDragon279 }
+  spellWombOfTheEarth { "Womb of the Earth" schTransmutation $ $ sourcesDragon279 }
 end
 
 category groupSpellsClericL0
@@ -37,50 +41,77 @@ category groupSpellsWizardL4
   spellBaneWeapon
 end
 
-category groupArcaneScrollSpells4
+category groupDragon279ArcaneScrollSpells4
   [ 4] spellBaneWeapon
 end
 
-category groupDivineScrollSpells0
+category groupDragon279DivineScrollSpells0
   [ 4] spellForagersBlessing
 end
 
-category groupDivineScrollSpells1
+category groupDragon279DivineScrollSpells1
   [ 4] spellWombOfTheEarth
 end
 
-category groupDivineScrollSpells4
+category groupDragon279DivineScrollSpells4
   [ 4] spellBaneWeapon
 end
 
+category groupArcaneScrollSpells4
+ [1]  groupDragon279ArcaneScrollSpells4
+end
 
+category groupDivineScrollSpells0
+ [1]  groupDragon279DivineScrollSpells0
+end
+
+category groupDivineScrollSpells1
+ [1]  groupDragon279DivineScrollSpells1
+end
+
+category groupDivineScrollSpells4
+ [1]  groupDragon279DivineScrollSpells4
+end
+ 
 /* "The Elven Marketplace", p. 48-50 */
 
 template in ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
-  weaponBluntArrow { "blunt arrow" 10 gp  $  $  $  3/20 lb  tiny sourcesDragon }
-  weaponFlightArrow { "flight arrow" 10 gp  $  $  $  2/20 lb  tiny sourcesDragon }
-  weaponSignalArrow { "signal arrow" 10 gp  $  $  $  3/20 lb  tiny sourcesDragon }
-  weaponSmokeArrow { "smoke arrow" 25 gp  $  $  $  4/20 lb  tiny sourcesDragon }
-  weaponThunderArrow { "thunder arrow" 35 gp  $  $  $  6/20 lb  tiny sourcesDragon }
+  weaponBluntArrow { "blunt arrow" 10 gp  $  $  $  3/20 lb  tiny sourcesDragon279 }
+  weaponFlightArrow { "flight arrow" 10 gp  $  $  $  2/20 lb  tiny sourcesDragon279 }
+  weaponSignalArrow { "signal arrow" 10 gp  $  $  $  3/20 lb  tiny sourcesDragon279 }
+  weaponSmokeArrow { "smoke arrow" 25 gp  $  $  $  4/20 lb  tiny sourcesDragon279 }
+  weaponThunderArrow { "thunder arrow" 35 gp  $  $  $  6/20 lb  tiny sourcesDragon279 }
 end 
+
+category groupDragon279CommonRangedWeapons
+ [1] weaponBluntArrow 
+ [1] weaponFlightArrow 
+ [1] weaponSignalArrow 
+ [1] weaponSmokeArrow 
+ [1] weaponThunderArrow 
+end
+
+category groupCommonRangedWeapons
+ [1]    groupDragon279CommonRangedWeapons
+end
 
 // -------------
 // Weapon data here... needs to be adjusted so arrows do damage, have range, damage type, etc.
 // -------------
 
 template in ( groupArmor ) { name cost bonuses maxDexBonus armorCheckPenalty arcaneSpellFailure speedModifier weight sources }
-  armorLeafPadded { "leaf armor - padded"  755 gp  ( AC1 )  +9  0  0  1  10 lb sourcesDragon }
-  armorLeafLeather { "leaf armor - leather"  760 gp  ( AC2 )  +7  0  5  1  15 lb sourcesDragon }
-  armorLeafStuddedLeather { "leaf armor - studded leather"  775 gp  ( AC3 )  +6  0  10  1  20 lb sourcesDragon }
-  armorLeafHide { "leaf armor - hide"  765 gp  ( AC3 )  +5  -1  15  2/3  25 lb sourcesDragon }
-  armorWoodChainShirt { "darkwood chain shirt"  850 gp  ( AC4 )  +5  0  15  1  25 lb sourcesDragon }
-  armorWoodScaleMail { "darkwood scale mail"  2300 gp  ( AC4 )  +4  -2  20  1  30 lb sourcesDragon }
-  armorWoodChainMail { "darkwood chain mail"  2400 gp ( AC5 ) +3  -3  25  1  40 lb sourcesDragon }
-  armorWoodBreastplate { "darkwood breastplate"  2450 gp ( AC5 ) +4  -2  20  1  30 lb sourcesDragon }
-  armorWoodSplintMail { "darkwood splint mail"  6200 gp  ( AC6 )  +1  -5  35  2/3  45 lb sourcesDragon }
-  armorWoodBandedMail { "darkwood banded mail"  6250 gp  ( AC6 )  +2  -4  30  2/3  35 lb sourcesDragon }
-  armorWoodHalfPlate { "darkwood half-plate"  6600 gp  ( AC7 )  +1  -5  35  2/3  50 lb sourcesDragon }
-  armorWoodFullPlate { "darkwood full plate"  7500 gp  ( AC8 )  +2  -4  30  2/3  50 lb sourcesDragon }
+  armorLeafPadded { "leaf armor - padded"  755 gp  ( AC1 )  +9  0  0  1  10 lb sourcesDragon279 }
+  armorLeafLeather { "leaf armor - leather"  760 gp  ( AC2 )  +7  0  5  1  15 lb sourcesDragon279 }
+  armorLeafStuddedLeather { "leaf armor - studded leather"  775 gp  ( AC3 )  +6  0  10  1  20 lb sourcesDragon279 }
+  armorLeafHide { "leaf armor - hide"  765 gp  ( AC3 )  +5  -1  15  2/3  25 lb sourcesDragon279 }
+  armorWoodChainShirt { "darkwood chain shirt"  850 gp  ( AC4 )  +5  0  15  1  25 lb sourcesDragon279 }
+  armorWoodScaleMail { "darkwood scale mail"  2300 gp  ( AC4 )  +4  -2  20  1  30 lb sourcesDragon279 }
+  armorWoodChainMail { "darkwood chain mail"  2400 gp ( AC5 ) +3  -3  25  1  40 lb sourcesDragon279 }
+  armorWoodBreastplate { "darkwood breastplate"  2450 gp ( AC5 ) +4  -2  20  1  30 lb sourcesDragon279 }
+  armorWoodSplintMail { "darkwood splint mail"  6200 gp  ( AC6 )  +1  -5  35  2/3  45 lb sourcesDragon279 }
+  armorWoodBandedMail { "darkwood banded mail"  6250 gp  ( AC6 )  +2  -4  30  2/3  35 lb sourcesDragon279 }
+  armorWoodHalfPlate { "darkwood half-plate"  6600 gp  ( AC7 )  +1  -5  35  2/3  50 lb sourcesDragon279 }
+  armorWoodFullPlate { "darkwood full plate"  7500 gp  ( AC8 )  +2  -4  30  2/3  50 lb sourcesDragon279 }
 end
 
 category groupLightArmor
@@ -93,7 +124,7 @@ category groupMediumArmor
   armorPadded armorLeather armorStuddedLeather armorChainShirt
 end
 
-category groupMinorSpecificArmors
+category groupDragon279MinorSpecificArmors
   [ 5] armorLeafPadded
   [ 5] armorLeafLeather
   [ 5] armorLeafStuddedLeather
@@ -108,15 +139,23 @@ category groupMinorSpecificArmors
   [ 5] armorWoodFullPlate
 end
 
+category groupMinorSpecificArmors
+ [12] groupDragon279MinorSpecificArmors
+end
+
 template in ( groupMundaneItems ) { name cost sources }
-  miMaskingPerfume { "masking perfume"  100 gp sourcesDragon }
-  miStarLantern { "star lantern"  100 gp sourcesDragon }
-  miForestCamoKit { "forest camouflage kit, masterwork"  50 gp sourcesDragon }
-  miStarlightCloth { "starlight cloth (5 lb.)"  100 gp sourcesDragon }
+  miMaskingPerfume { "masking perfume"  100 gp sourcesDragon279 }
+  miStarLantern { "star lantern"  100 gp sourcesDragon279 }
+  miForestCamoKit { "forest camouflage kit, masterwork"  50 gp sourcesDragon279 }
+  miStarlightCloth { "starlight cloth (5 lb.)"  100 gp sourcesDragon279 }
+end
+
+category groupDragon279AlchemicalItems
+  [ 5] { .magnitude 1  .type miMaskingPerfume }
 end
 
 category groupAlchemicalItems
-  [ 5] { .magnitude 1  .type miMaskingPerfume }
+ [1] groupDragon279AlchemicalItems
 end
 
 // -------------
@@ -133,7 +172,7 @@ featHammerFist in ( groupAllFeats groupGeneralFeats )
   .conditions ( { .type ptMinimumAbilityScore .affectedThing astStrength .magnitude 13 }
                 { .type ptFeat .affectedThing featImprovedUnarmedStrike })
   .specialAttacks ( { .description "do 1.5 times damage with unarmed attacks" } )
-  .sources sourcesDragon
+  .sources sourcesDragon279
 end
 
 featUnorthodoxFlurry in ( groupAllFeats )
@@ -141,7 +180,7 @@ featUnorthodoxFlurry in ( groupAllFeats )
   .takeMultiple yes
   .conditions ( { .type ptMinimumClassLevel .affectedThing classMonk .magnitude 6 } )
   .specialAttacks ( { .description "treat chosen light weapon as a monk weapon" } )
-  .sources sourcesDragon
+  .sources sourcesDragon279
 end
 
 featPebbleUnderfoot in ( groupAllFeats groupGeneralFeats )
@@ -151,7 +190,7 @@ featPebbleUnderfoot in ( groupAllFeats groupGeneralFeats )
   	{ .type ptFeat .affectedThing featExpertise }
   	{ .type ptFeat .affectedThing featImprovedTrip } )
   .specialAttacks ( { .description "+4 to trip attempts when two sizes smaller, can not counter-trip" } )
-  .sources sourcesDragon
+  .sources sourcesDragon279
 end
 
 featGrasshopperStrike in ( groupAllFeats groupGeneralFeats )
@@ -164,7 +203,7 @@ featGrasshopperStrike in ( groupAllFeats groupGeneralFeats )
   	{ .type ptMinimumBaseAttack .magnitude 4 }
   	{ .type ptMinimumSkillRank .affectedThing skillJump .magnitude 5 }
   	{ .type ptMinimumSkillRank .affectedThing skillTumble .magnitude 5 } )
-  .sources sourcesDragon
+  .sources sourcesDragon279
 end
 
 featStaggeringBlow in ( groupAllFeats groupGeneralFeats )  
@@ -177,6 +216,6 @@ featStaggeringBlow in ( groupAllFeats groupGeneralFeats )
   	{ .type ptFeat .affectedThing featStunningFist }
   	{ .type ptMinimumBaseAttack .magnitude 8 } )
   .specialAttacks ( { .description "Stagger an opponent if he is stunned" } )
-  .sources sourcesDragon
+  .sources sourcesDragon279
 end
 

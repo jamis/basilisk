@@ -139,7 +139,7 @@ astWightArmor in ( groupSpecificArmors )
 end
 
 
-category groupMediumSpecificArmors
+category groupRRMediumSpecificArmors
   [15] astShadoworkArmor
   [15] astMantleofHope
   [1] astClothbornLeather
@@ -160,7 +160,7 @@ category groupMediumSpecificArmors
   [5] astArmoroftheSeaMonarchs
 end
 
-category groupMajorSpecificArmors
+category groupRRMajorSpecificArmors
   [15] astMantleoftheIceBear
   [15] astIronShieldofVesh
   [15] astArmoroftheSeaMonarchs
@@ -168,6 +168,14 @@ category groupMajorSpecificArmors
   [15] astChainShirtofSerpents
   [15] astSnakeskinArmor
   [10] astWightArmor
+end
+
+category groupMediumSpecificArmors
+  [18]  groupRRMediumSpecificArmors
+end
+
+category groupMajorSpecificArmors
+  [7]  groupRRMajorSpecificArmors
 end
 
 /* weapons */
@@ -469,7 +477,7 @@ wstWraithblade
   .sources sourcesRelicsRituals
 end
 
-category groupMediumSpecificWeapons
+category groupRRMediumSpecificWeapons
   [ 10] wstSquiresSword
   [ 10] wstWebArrow
   [ 10] wstHornsawBlade
@@ -492,7 +500,7 @@ category groupMediumSpecificWeapons
   [ 1] wstLadyoftheValley
 end
 
-category groupMajorSpecificWeapons
+category groupRRMajorSpecificWeapons
   [ 5] wstHuntersSpear
   [ 5] wstTridentofSparkfury
   [ 5] wstAsaatthiBlade
@@ -516,6 +524,14 @@ category groupMajorSpecificWeapons
   [ 3] wstThanqual
   [ 3] wstHammerofShattering
   [ 3] wstWraithblade
+end
+
+category groupMediumSpecificWeapons
+  [20]  groupRRMediumSpecificWeapons
+end
+
+category groupMajorSpecificWeapons
+  [23]  groupRRMajorSpecificWeapons
 end
 
 /* rings */
@@ -611,7 +627,7 @@ ringRingsofthePack ( groupRings )
   .needPrefix false
 end
 
-category groupRingsMinor
+category groupRRRingsMinor
   [ 20] ringDimitrisRing
   [ 20] ringLesserRingsofKyel
   [ 20] ringRingofAlarm
@@ -623,7 +639,7 @@ category groupRingsMinor
   [ 5] ringRingofWindfury
 end
 
-category groupRingsMedium
+category groupRRRingsMedium
   [ 20] ringRingofAlarm
   [ 20] ringRingofScribingGreater
   [ 20] ringMagicAnimalRing
@@ -635,7 +651,7 @@ category groupRingsMedium
   [ 5] ringAsaatthiBattleRing
 end
 
-category groupRingsMajor
+category groupRRRingsMajor
   [ 20] ringPlatinumRingofHedrada
   [ 20] ringRingsofthePack
   [ 20] ringRingofTrueSacrifice
@@ -643,6 +659,20 @@ category groupRingsMajor
   [ 10] ringRingofMadrielsBlessing
   [ 10] ringAsaatthiBattleRing
   [ 10] ringMaidenofWeaponcall
+end
+
+category groupRingsMinor
+ [ 9] groupRRRingsMinor
+end
+
+
+category groupRingsMedium 
+[ 9] groupRRRingsMedium
+end
+
+
+category groupRingsMajor
+[ 7] groupRRRingsMajor
 end
 
 /* rods */
@@ -675,19 +705,27 @@ rodRodofBlessedRest
   .needPrefix false
 end
 
-category groupMediumRods
+category groupRRMediumRods
   [ 60]  rodProteusRod
   [ 20]  rodIronScepterofHedrada
   [ 15]  rodRodofBlessedRest
   [ 5]  rodRodofBlasphemy
 end
 
-category groupMajorRods
+category groupRRMajorRods
   [ 20]  rodProteusRod
   [ 30]  rodIronScepterofHedrada
   [ 30]  rodRodofBlessedRest
   [ 20]  rodRodofBlasphemy
 end
+
+category groupMediumRods
+ [4]  groupRRMediumRods
+end
+
+category groupMajorRods
+ [4]  groupRRMajorRods
+end  
 
 /* staffs */
 
@@ -745,7 +783,7 @@ staffStaffofSpirits
   .needPrefix false
 end
 
-category groupMediumStaves
+category groupRRMediumStaves
   [ 40]  staffStaffofSpirits
   [ 25]  staffStaffoftheWayfarer
   [ 15]  staffStaffofGaurak
@@ -753,13 +791,21 @@ category groupMediumStaves
   [ 5]  staffStaffofDivineFlame
 end
 
-category groupMajorStaves
+category groupRRMajorStaves
   [ 25]  staffStaffofSpirits
   [ 25]  staffStaffoftheWayfarer
   [ 20] staffStaffofGaurak
   [ 20]  staffStaffofHornsawWood
   [ 10]  staffStaffofDivineFlame
 end
+
+category groupMediumStaves
+ [5]  groupRRMediumStaves
+end
+
+category groupMajorStaves
+ [5]  groupRRMajorStaves
+end  
 
 /* wondrous items */
 
@@ -1276,7 +1322,7 @@ wondrousPackofSafekeeping
 end
 
 wondrousPipeofVisions
-  .name "PipeofVisions"
+  .name "Pipe of Visions"
   .cost  21600 gp
   .canBeIntelligent no
   .sources sourcesRelicsRituals
@@ -1380,7 +1426,7 @@ wondrousVengaurakMask
   .sources sourcesRelicsRituals
 end
 
-category groupMinorWondrousItems
+category groupRRMinorWondrousItems
   [ 8]  wondrousAmuletofPeacefulRepose
   [ 8]  wondrousBeadsoftheAlteredVoice
   [ 8]  wondrousArtemesiasGarrote
@@ -1406,7 +1452,7 @@ category groupMinorWondrousItems
   [ 1]  wondrousStarGazer
 end
 
-category groupMediumWondrousItems
+category groupRRMediumWondrousItems
   [ 5]  wondrousAmuletsofLove
   [ 5]  wondrousBloodstone
   [ 5]  wondrousPackofSafekeeping
@@ -1454,7 +1500,7 @@ category groupMediumWondrousItems
   [ 1]  wondrousSolarBroochFireResistantVersion
 end
 
-category groupMajorWondrousItems
+category groupRRMajorWondrousItems
   [ 10]  wondrousCircletofWarning
   [ 10]  wondrousCloakofFame
   [ 9]  wondrousPipeofVisions
@@ -1475,4 +1521,16 @@ category groupMajorWondrousItems
   [ 1]  wondrousKadumsPearlsPearlofStrife
   [ 1]  wondrousKadumsPearlsPearlofWounding
 end
+
+category groupMinorWondrousItems
+ [23]  groupRRMinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [45]  groupRRMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [19]  groupRRMajorWondrousItems
+end  
 

@@ -5,3 +5,5 @@ end
 #include "boem_feats.bsk"
 #include "boem_items.bsk"
 #include "boem_spells.bsk"
+#include "boem_potions.bsk"
+

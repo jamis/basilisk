@@ -4,3 +4,5 @@
 #include "tnblood_rods.bsk"
 #include "tnblood_staves.bsk"
 #include "tnblood_scrolls.bsk"
+#include "tnblood_mundane.bsk"
+

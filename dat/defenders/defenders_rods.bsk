@@ -3,3 +3,21 @@ rodAuthority
   .cost 20576 gp
   .sources sourcesDefendersoftheFaith
 end
+
+category groupDotFMediumRods
+ [1]  rodAuthority
+end
+
+category groupDotFMajorRods
+ [1]  rodAuthority
+end  
+
+category groupMediumRods
+ [1]  groupDotFMediumRods
+end
+
+category groupMajorRods
+ [1]  groupDotFMajorRods
+end  
+
+

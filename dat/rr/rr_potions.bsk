@@ -35,7 +35,7 @@ template in ( groupPotions ) { name cost sources }
 end
 
 
-category groupPotionsMinor
+category groupRRPotionsMinor
   [ 6] potionAcidSpittle
   [ 6] potionChameleonSkin
   [ 6] potionAdheretoWood
@@ -55,7 +55,7 @@ category groupPotionsMinor
   end
 
 
-category groupPotionsMedium
+category groupRRPotionsMedium
   [ 6] potionGlue
   [ 6] potionQuickSober
   [ 6] potionRabbitFeet
@@ -76,7 +76,7 @@ category groupPotionsMedium
 end
 
 
-category groupPotionsMajor
+category groupRRPotionsMajor
   [ 6] potionFalseDeath
   [ 6] potionFrogTongue
   [ 6] potionPerfectRecollection
@@ -94,5 +94,19 @@ category groupPotionsMajor
   [ 6] potionHedradasBalance
   [ 6] potionLimbsofEndurance
   [ 4] potionVangalsTouch
+end
+
+category groupPotionsMinor
+ [ 16] groupRRPotionsMinor
+end
+
+
+category groupPotionsMedium 
+[ 17] groupRRPotionsMedium
+end
+
+
+category groupPotionsMajor
+[ 17] groupRRPotionsMajor
 end
 

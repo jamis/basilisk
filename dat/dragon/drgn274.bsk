@@ -1,8 +1,13 @@
 /* --------------------------------------------------------------------- *
  * Data from Dragon Magazine issue #274, converted to Basilisk format by
  * Robert Szkotak (dkphoenix@hotmail.com), aka "LightPhoenix" on
- * Eric Noah's messageboards.
+ * Eric Noah's messageboards. Modified by Shaun Gierent
  * --------------------------------------------------------------------- */
+
+sourceDragon274 ( sourcesDragon274 groupAllSources )
+  .name "Dragon 274"
+end
+
 
 /* "How To Design a Feat", p.38-41 */
 
@@ -14,7 +19,7 @@ featRangedDisarm in ( groupAllFeats groupGeneralFeats )
 								{ .type ptFeat .affectedThing featPreciseShot }
 								{ .type ptMinimumBaseAttack .magnitude 5 } )
   .specialAttacks ( { .description "can disarm with a ranged weapon" } )
-  .sources sourcesDragon
+  .sources sourcesDragon274
 end
 
 featDeflectRangedAttack in ( groupAllFeats groupGeneralFeats )
@@ -26,7 +31,7 @@ featDeflectRangedAttack in ( groupAllFeats groupGeneralFeats )
 								{ .type ptFeat .affectedThing featRangedDisarm }
 								{ .type ptMinimumBaseAttack .magnitude 5 } )
   .specialAttacks ( { .description "defelect ranged weapons in flight" } )
-  .sources sourcesDragon
+  .sources sourcesDragon274
 end
 
 featRangedPin in ( groupAllFeats groupGeneralFeats )
@@ -37,7 +42,7 @@ featRangedPin in ( groupAllFeats groupGeneralFeats )
 								{ .type ptFeat .affectedThing featPreciseShot }
 								{ .type ptMinimumBaseAttack .magnitude 5 } )
   .specialAttacks ( { .description "can grapple with a ranged weapon" } )
-  .sources sourcesDragon
+  .sources sourcesDragon274
 end
 
 featRangedSunder in ( groupAllFeats groupGeneralFeats )
@@ -49,5 +54,5 @@ featRangedSunder in ( groupAllFeats groupGeneralFeats )
 								{ .type ptFeat .affectedThing featRangedPin }
 								{ .type ptMinimumBaseAttack .magnitude 5 } )
   .specialAttacks ( { .description "deal full damage when sundering with ranged weapons" } )
-  .sources sourcesDragon
+  .sources sourcesDragon274
 end

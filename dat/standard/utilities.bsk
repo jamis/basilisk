@@ -379,3 +379,15 @@ rule rCascadeLookupWithOptions( aCategory options )
 end
 
 
+rule rDeepCopyWithOptions( aDestination aCategory options )
+  for a in aCategory do
+    if a typeof thing then
+      if rThingMatchesCriteria( a, options ) then
+        Add( aDestination, a );
+      end
+    elseif a typeof category then
+      rDeepCopyWithOptions( aDestination, a, options );
+    end
+  end
+end
+

@@ -2354,7 +2354,7 @@ category groupIronFlaskContents
   [  1] { .name "a demon (pit fiend)" }
 end
 
-category groupMinorWondrousItems
+category groupCoreBookMinorWondrousItems
   wondrousDullGrayIounStone
   wondrousQuaalsFeatherToken_Anchor
   wondrousEverburningTorch
@@ -2455,7 +2455,7 @@ category groupMinorWondrousItems
   wondrousBagOfHolding3
 end
 
-category groupMediumWondrousItems
+category groupCoreBookMediumWondrousItems
   wondrousBootsOfLevitation
   wondrousHarpOfCharming
   wondrousPeriaptOfHealth
@@ -2557,7 +2557,7 @@ category groupMediumWondrousItems
   wondrousCarpetOfFlying4x6
 end
 
-category groupMajorWondrousItems
+category groupCoreBookMajorWondrousItems
   [ 2] wondrousLanternOfRevealing
   [ 2] wondrousNecklaceOfPrayerBeads_WindWalking
   [ 2] wondrousDrumsOfPanic
@@ -2647,6 +2647,17 @@ category groupMajorWondrousItems
        wondrousMirrorOfMentalProwess
 end
 
+category groupMinorWondrousItems
+ [98]  groupCoreBookMinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [101]  groupCoreBookMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [87]  groupCoreBookMajorWondrousItems
+end  
 
 rule rInitCandleOfInvocation( item )
   item.geAlignment = any( groupGEAlignmentTypes );
@@ -2756,4 +2767,5 @@ rule rSelectWondrousItem( itemMagnitude options )
 
   rSelectWondrousItem = item;
 end
+
 

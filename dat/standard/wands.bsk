@@ -86,7 +86,7 @@ wandStoneskin
 end
 
 
-category groupMinorWands
+category groupCoreBookMinorWands
   [ 5] wandDetectMagic
   [ 5] wandLight
   [ 5] wandDetectSecretDoors
@@ -117,7 +117,7 @@ category groupMinorWands
   [ 1] wandDarkness
 end
 
-category groupMediumWands
+category groupCoreBookMediumWands
   [ 3] wandCharmPerson
   [ 3] wandEnlarge
   [ 3] wandMagicMissile
@@ -158,7 +158,7 @@ category groupMediumWands
   [ 1] wandLightningBolt6
 end
 
-category groupMajorWands
+category groupCoreBookMajorWands
   [ 2] wandMagicMissile5
   [ 1] wandLevitate
   [ 1] wandSummonMonsterII
@@ -218,16 +218,27 @@ category groupMajorWands
   [ 1] wandStoneskin
 end
 
+category groupMinorWands
+ [29]  groupCoreBookMinorWands
+end
+
+category groupMediumWands
+ [38]  groupCoreBookMediumWands
+end
+
+category groupMajorWands
+ [57]  groupCoreBookMajorWands
+end  
 
 rule rComputeWandMarketPrice( wand )
   l = wand.spellLevel;
-  
+
   if l eq 0 then
     l = 0.5;
   end
 
   c = l * wand.casterLevel * SetUnits( 750, "gp" );
-  
+
   if has( wand, "componentCost" ) then
     c = c + wand.componentCost * 50;
   end
@@ -256,9 +267,9 @@ rule rSelectWand( wandMagnitude options )
 
   y = rGetAnyMatchingCriteria( c, options, true );
   if y ne null then
-    wand = rNewInstanceOf( any( c ) );
+    wand = rNewInstanceOf( y );
     wand.cost = rComputeWandMarketPrice( wand );
-    wand.name = wand.spell.name + 
+    wand.name = wand.spell.name +
                 " (l" + wand.spellLevel + ", cl" + wand.casterLevel + ")";
 
     wand.charges = Random(50) + 1;
@@ -284,3 +295,4 @@ rule rSelectWand( wandMagnitude options )
 
   rSelectWand = wand;
 end
+

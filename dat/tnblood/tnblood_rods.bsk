@@ -1,3 +1,5 @@
+/* Modified by Shaun Gierent */
+
 rodChaining
   .name "chaining"
   .cost 108000 gp
@@ -179,9 +181,7 @@ rodgreaterSubstitution
   .sources sourcesTomeAndBlood
 end
 
-
-
-category groupMinorRods
+category groupTomeAndBloodMinorRods
   [17] rodLesserCooperation
   [16] rodlesserSubstitution
   [15] rodlesserEnlargement
@@ -220,10 +220,14 @@ category groupTomeAndBloodMajorRods
   [6] rodgreaterQuickening
 end
 
+category groupMinorRods
+  [6] groupTomeAndBloodMinorRods
+end
+
 category groupMediumRods
   [10] groupTomeAndBloodMediumRods
 end
 
 category groupMajorRods
-  [10] groupTomeAndBloodMajorRods
+  [14] groupTomeAndBloodMajorRods
 end

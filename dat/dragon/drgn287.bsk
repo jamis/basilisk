@@ -1,25 +1,34 @@
 /* --------------------------------------------------------------------- *
  * Data from Dragon Magazine issue #287, converted to Basilisk format by
- * Eric Polovich
+ * Eric Polovich; Modified by Shaun Gierent
  * --------------------------------------------------------------------- */
+
+sourceDragon287 ( sourcesDragon287 groupAllSources )
+  .name "Dragon 287"
+end
+
 
 /* "Dreamlands", p.32-37 */
 
 wondrousMirrorofDreams
   .name "mirror of dreams"
   .cost 40000 gp
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 wondrousFigurineofProtectionFromDreams
   .name "figurine of protection from dreams"
   .cost 40000 gp
-  .sources sourcesDragon
+  .sources sourcesDragon287
+end
+
+category groupDragon287MajorWondrousItems
+  wondrousMirrorofDreams
+  wondrousFigurineofProtectionFromDreams
 end
 
 category groupMajorWondrousItems
-  wondrousMirrorofDreams
-  wondrousFigurineofProtectionFromDreams
+ [2] groupDragon287MajorWondrousItems
 end
 
 /* "Expand Your Mind", p.54-56 */
@@ -27,27 +36,27 @@ end
 featPsionicDefense in ( groupAllFeats groupPsionicFeats )
   .name "psionic defense"
   .takeMultiple no
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featAugmentConstruction in ( groupAllFeats groupPsionicFeats )
   .name "augment construction"
   .takeMultiple no
   .conditions ( { .type ptMinimumManifesterLevel .magnitude 2 } )
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featChainPower in ( groupAllFeats groupPsionicFeats )
   .name "chain power"
   .takeMultiple no
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featPsionicEnergySubstitution in ( groupAllFeats groupMetapsionicFeats )
   .name "psionic energy substitution"
   .takeMultiple yes
   .conditions ( { .type ptSkill .affectedThing skillKnowldegePsionics .magnitude 5 } )
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featPsionicEnergyAdmixture in ( groupAllFeats groupMetapsionicFeats )
@@ -55,53 +64,53 @@ featPsionicEnergyAdmixture in ( groupAllFeats groupMetapsionicFeats )
   .takeMultiple yes
   .conditions ( { .type ptFeat .affectedThing featPsionicEnergySubstitution }
                 { .type ptSkill .affectedThing skillKnowlegePsionics .magnitude 5 } )
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featExtraPower in ( groupAllFeats groupPsionicFeats )
   .name "extra power"
   .takeMultiple yes
   .conditions ( { .type ptMinimumManifesterLevel .magnitude 3 } )
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featFortifyPower in ( groupAllFeats groupMetapsionicFeats )
   .name "fortify power"
   .takeMultiple yes
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featMindBlind in ( groupAllFeats groupPsionicFeats )
   .name "mind blind"
   .takeMultiple no
   .conditions ( { .type ptFeat .affectedThing featPsychicBastion } )
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featReachPower in ( groupAllFeats groupMetapsionicFeats )
   .name "reach power"
   .takeMultiple no
   .conditions ( { .type ptFeat .affectedThing featEnlargePower } )
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featRepeatPower in ( groupAllFeats groupMetapsionicFeats )
   .name "repeat power"
   .takeMultiple no
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featResculptMind in ( groupAllFeats groupPsionicFeats )
   .name "resculpt mind"
   .takeMultiple no
   .conditions ( { .type ptMinimumManifesterLevel .magnitude 3 } )
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featSculptPower in ( groupAllFeats groupMetapsionicFeats )
   .name "sculpt power"
   .takeMultiple no
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featPowerSpecialization in ( groupAllFeats groupPsionicFeats )
@@ -109,23 +118,23 @@ featPowerSpecialization in ( groupAllFeats groupPsionicFeats )
   .takeMultiple no
   .conditions ( { .type ptFeat .affectedThing featWeaponFocus }
                 { .type ptMinimumManifesterLevel .magnitude 4 } )
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featSplitPsionicRay in ( groupAllFeats groupMetapsionicFeats )
   .name "split psionic ray"
   .takeMultiple no
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featWidenPower in ( groupAllFeats groupMetapsionicFeats )
   .name "widen power"
   .takeMultiple no
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end
 
 featUpgradePower in ( groupAllFeats groupPsionicFeats )
   .name "upgrade power"
   .takeMultiple no
-  .sources sourcesDragon
+  .sources sourcesDragon287
 end

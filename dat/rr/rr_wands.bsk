@@ -61,7 +61,7 @@ template in ( groupAllWands )  { spell     spellLevel casterLevel sources }
   wandWatersEmbrace              { spellWatersEmbrace           4   7 sourcesRelicsRituals }
 end
 
-category groupMinorWands
+category groupRRMinorWands
   [ 5] wandBuoyancyNet
   [ 5] wandClean
   [ 5] wandDetectGold
@@ -84,7 +84,7 @@ category groupMinorWands
   [ 5] wandDeadMansEyes
 end
 
-category groupMediumWands
+category groupRRMediumWands
   [ 5] wandAlibi
   [ 5] wandBlazingshield
   [ 5] wandCallAquaticAnimalI
@@ -107,7 +107,7 @@ category groupMediumWands
   [ 5] wandSmother
 end
 
-category groupMajorWands
+category groupRRMajorWands
   [ 5] wandIntoxicate
   [ 5] wandLiliandelsFlurry
   [ 5] wandLocateCorpse
@@ -142,4 +142,16 @@ category groupMajorWands
   [ 5] wandVerminplague
   [ 5] wandWatersEmbrace
 end
+
+category groupMinorWands
+ [20]  groupRRMinorWands
+end
+
+category groupMediumWands
+ [20]  groupRRMediumWands
+end
+
+category groupMajorWands
+ [33]  groupRRMajorWands
+end  
 

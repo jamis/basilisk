@@ -1,4 +1,4 @@
-category groupAlchemicalItems
+category groupCoreBookAlchemicalItems
   [ 5] { .magnitude 1d4 .type miAlchemistsFire }
   [ 5] { .magnitude 2d4 .type miAcid }
   [ 2] { .magnitude 1d4 .type miSmokestick }
@@ -7,6 +7,11 @@ category groupAlchemicalItems
   [ 5] { .magnitude 1d4 .type miAntitoxin }
   [ 2] { .magnitude 1d4 .type miTanglefootBag }
 end
+
+category groupAlchemicalItems
+ [7]  groupCoreBookAlchemicalItems
+end
+
 
 category groupMundaneItemSizes1
   [10] small
@@ -30,7 +35,7 @@ category groupMundaneMightyCompositeLongbows
   [10] weaponMightyCompositeLongbow4
 end
 
-category groupCommonMeleeWeapons
+category groupCoreBookCommonMeleeWeapons
   [ 4] weaponDagger
   [10] weaponGreataxe
   [10] weaponGreatsword
@@ -49,7 +54,7 @@ category groupCommonMeleeWeapons
   [11] weaponDwarvenWaraxe
 end
 
-category groupUncommonWeapons
+category groupCoreBookUncommonWeapons
   [ 3] weaponOrcDoubleAxe
   [ 4] weaponBattleaxe
   [ 3] weaponSpikedChain
@@ -91,7 +96,7 @@ category groupUncommonWeapons
   [ 3] weaponWhip
 end
 
-category groupCommonRangedWeapons
+category groupCoreBookCommonRangedWeapons
   [ 5] weaponArrow
   [ 3] weaponCrossbowBolt
   [ 2] weaponSlingBullet
@@ -113,9 +118,20 @@ category groupCommonRangedWeapons
   [ 5] weaponMightyCompositeLongbow4
 end
 
+category groupCommonMeleeWeapons
+ [16]    groupCoreBookCommonMeleeWeapons
+end
+
+category groupUncommonWeapons
+ [39]    groupCoreBookUncommonWeapons
+end
+
+category groupCommonRangedWeapons
+ [19]    groupCoreBookCommonRangedWeapons
+end
 
 category groupMundaneItemTable
-	[27] groupAlchemicalItems
+  [29] groupAlchemicalItems
   [ 2] { .magnitude 1 .type armorChainShirt .subtable groupMundaneItemSizes1 }
   [ 5] { .magnitude 1 .type armorStuddedLeather .bonuses ( masterworkArmor ) .subtable groupMundaneItemSizes2 }
   [ 5] { .magnitude 1 .subtable groupMundaneMightyCompositeShortbows }
@@ -218,4 +234,5 @@ rule rLookupMundaneItem( options )
   mi = rConfigureMundaneItem( mi, options ); 
   rLookupMundaneItem = mi;
 end
+
 

@@ -289,7 +289,7 @@ asaSpellResistance19 in ( groupArmorSpecialAbilities groupShieldSpecialAbilities
 end
 
 
-category groupMinorArmorSpecialAbilities
+category groupCoreBookMinorArmorSpecialAbilities
   [30] asaGlamered
   [22] asaSlick
   [22] asaShadow
@@ -298,7 +298,7 @@ category groupMinorArmorSpecialAbilities
   [ 2] magtRollAgain
 end
 
-category groupMediumArmorSpecialAbilities
+category groupCoreBookMediumArmorSpecialAbilities
   [ 2] asaFortificationLight
   [ 5] asaGlamered
   [12] asaSlick
@@ -319,7 +319,7 @@ category groupMediumArmorSpecialAbilities
   [ 2] magtRollAgain
 end
 
-category groupMajorArmorSpecialAbilities
+category groupCoreBookMajorArmorSpecialAbilities
   [ 2] asaFortificationLight
   [ 6] asaGlamered
   [ 1] asaSlick
@@ -342,7 +342,7 @@ category groupMajorArmorSpecialAbilities
   [25] magtRollAgain
 end
 
-category groupMinorShieldSpecialAbilities
+category groupCoreBookMinorShieldSpecialAbilities
   [30] asaBashing
   [20] asaBlinding
   [10] asaFortificationLight
@@ -350,7 +350,7 @@ category groupMinorShieldSpecialAbilities
   [ 1] magtRollAgain
 end
 
-category groupMediumShieldSpecialAbilities
+category groupCoreBookMediumShieldSpecialAbilities
   [10] asaArrowDeflection
   [ 6] asaAnimated
   [ 4] asaSpellResistance13
@@ -365,7 +365,7 @@ category groupMediumShieldSpecialAbilities
   [10] magtRollAgain
 end
 
-category groupMajorShieldSpecialAbilities
+category groupCoreBookMajorShieldSpecialAbilities
   [15] asaAnimated
   [ 5] asaSpellResistance13
   [ 5] asaGhostTouch
@@ -381,6 +381,30 @@ category groupMajorShieldSpecialAbilities
   [ 5] asaReflection
   [10] asaSpellResistance19
   [20] magtRollAgain
+end
+
+category groupMinorArmorSpecialAbilities
+  [5] groupCoreBookMinorArmorSpecialAbilities
+end
+
+category groupMediumArmorSpecialAbilities
+  [17] groupCoreBookMediumArmorSpecialAbilities
+end
+
+category groupMajorArmorSpecialAbilities
+  [19] groupCoreBookMajorArmorSpecialAbilities
+end
+
+category groupMinorShieldSpecialAbilities
+  [4] groupCoreBookMinorShieldSpecialAbilities
+end
+
+category groupMediumShieldSpecialAbilities
+  [11] groupCoreBookMediumShieldSpecialAbilities
+end
+
+category groupMajorShieldSpecialAbilities
+  [14] groupCoreBookMajorShieldSpecialAbilities
 end
 
 astBandedMailOfLuck in ( groupSpecificArmors )
@@ -503,7 +527,7 @@ astWingedShield in ( groupSpecificShields )
   .sources sourcesCoreRules
 end
 
-category groupMediumSpecificArmors
+category groupCoreBookMediumSpecificArmors
   [10] armorMithralShirt
   [15] armorElvenChain
   [10] astRhinoHide
@@ -514,7 +538,7 @@ category groupMediumSpecificArmors
   [10] astBreastplateOfCommand
 end
 
-category groupMajorSpecificArmors
+category groupCoreBookMajorSpecificArmors
   [10] astPlateArmorOfTheDeep
   [30] astBandedMailOfLuck
   [20] astBreastplateOfCommand
@@ -522,7 +546,7 @@ category groupMajorSpecificArmors
   [20] astDemonArmor
 end
 
-category groupMediumSpecificShields
+category groupCoreBookMediumSpecificShields
   [10] shieldDarkwood
   [ 8] shieldLargeMithral
   [ 7] shieldAdamantine
@@ -532,12 +556,28 @@ category groupMediumSpecificShields
   [10] astWingedShield
 end
 
-category groupMajorSpecificShields
+category groupCoreBookMajorSpecificShields
   [20] astSpinedShield
   [20] astCastersShield
   [20] astLionsShield
   [20] astWingedShield
   [20] astAbsorbingShield
+end
+
+category groupMediumSpecificShields
+  [8]  groupCoreBookMediumSpecificShields
+end
+
+category groupMajorSpecificShields
+  [5]  groupCoreBookMajorSpecificShields
+end
+
+category groupMediumSpecificArmors
+  [7]  groupCoreBookMediumSpecificArmors
+end
+
+category groupMajorSpecificArmors
+  [5]  groupCoreBookMajorSpecificArmors
 end
 
 rule rComputeArmorBonusPrice( plusses )
@@ -693,11 +733,7 @@ rule rSelectMagicArmor( armorMagnitude options )
 
     if abilityCnt gt 0 then
       tmp = NewCategory();
-      for a in c do
-        if rThingMatchesCriteria( a, options ) then
-          Add( tmp, a );
-        end
-      end
+      rDeepCopyWithOptions( tmp, c, options );
       c = tmp;
       newItem.abilities = NewCategory();
 
@@ -720,9 +756,6 @@ rule rSelectMagicArmor( armorMagnitude options )
             valid = a.type eq masatAny;
             if not valid then
               valid = not rHasAbilityType( newItem, a.type );
-            end
-            if valid then
-              valid = rThingMatchesCriteria( a, options );
             end
             if valid then
               a = rInstallArmorAbility( newItem, a );
@@ -777,3 +810,4 @@ rule rSelectMagicArmor( armorMagnitude options )
 
   rSelectMagicArmor = newItem;
 end
+

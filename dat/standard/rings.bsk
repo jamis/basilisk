@@ -352,7 +352,7 @@ end
  * ring tables
  * --------------------------------------------------------------------- */
 
-category groupRingsMinor
+category groupCoreBookRingsMinor
   [ 5] ringClimbing
   [ 5] ringJumping
   [15] ringProtection1
@@ -371,7 +371,7 @@ category groupRingsMinor
   [ 5] ringMinorElementalResistance
 end
 
-category groupRingsMedium
+category groupCoreBookRingsMedium
   [ 5] ringCounterspells
   [ 5] ringMindShielding
   [10] ringProtection2
@@ -398,7 +398,7 @@ category groupRingsMedium
   [ 1] ringWizardry3
 end
 
-category groupRingsMajor
+category groupCoreBookRingsMajor
   [ 1] ringRam
   [ 1] ringAnimalFriendship
   [ 1] ringChameleonPower
@@ -430,6 +430,21 @@ category groupRingsMajor
   [ 1] ringFireElementalCommand
   [ 1] ringWaterElementalCommand
 end
+
+category groupRingsMinor
+ [ 16] groupCoreBookRingsMinor
+end
+
+
+category groupRingsMedium 
+[ 24] groupCoreBookRingsMedium
+end
+
+
+category groupRingsMajor
+[ 30] groupCoreBookRingsMajor
+end
+
 
 /* -------------------------------------------------------------------- *
  * rules for determining a ring
@@ -584,3 +599,4 @@ rule rSelectStoredRingSpells( r options )
 
   rSelectStoredRingSpells = r;
 end
+

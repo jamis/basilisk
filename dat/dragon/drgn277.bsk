@@ -1,27 +1,32 @@
 /* --------------------------------------------------------------------- *
  * Data from Dragon Magazine issue #277, converted to Basilisk format by
  * Robert Szkotak (dkphoenix@hotmail.com), aka "LightPhoenix" on
- * Eric Noah's messageboards.
+ * Eric Noah's messageboards. Modified by Shaun Gierent
  * --------------------------------------------------------------------- */
+
+sourceDragon277 ( sourcesDragon277 groupAllSources )
+  .name "Dragon 277"
+end
+
 
 /* "Unusual Suspects", p. 62-67 */
 
 template in ( groupPerformSubskills ) { name sources }
-  performHistoricalRecitation { "historical recitation" sourcesDragon }
-  perfromClanGenealogy { "clan geneology" sourcesDragon }
-  performBaritoneFlute { "baritone flute" sourcesDragon }
-  performViol { "viol" sourcesDragon }
-  performHorns { "horns" sourcesDragon }
-  performConchShell { "conch shell" sourcesDragon }
-  performOboe { "oboe" sourcesDragon }
-  performWhistling { "whistling" sourcesDragon }
-  performHumming { "humming" sourcesDragon }
-  performHurdyGurdy { "hurdy gurdy" sourcesDragon }
-  performFiddle { "fiddle" sourcesDragon }
-  performChimes { "chimes" sourcesDragon }
-  performGlockenspiel { "glockenspiel" sourcesDragon }
-  performTambourine { "tambourine" sourcesDragon }
-  performStampingStick { "stamping stick" sourcesDragon }
-  performRainStick { "rain stick" sourcesDragon }
-  performCymbals { "cymbals" sourcesDragon }
+  performHistoricalRecitation { "historical recitation" sourcesDragon277 }
+  perfromClanGenealogy { "clan geneology" sourcesDragon277 }
+  performBaritoneFlute { "baritone flute" sourcesDragon277 }
+  performViol { "viol" sourcesDragon277 }
+  performHorns { "horns" sourcesDragon277 }
+  performConchShell { "conch shell" sourcesDragon277 }
+  performOboe { "oboe" sourcesDragon277 }
+  performWhistling { "whistling" sourcesDragon277 }
+  performHumming { "humming" sourcesDragon277 }
+  performHurdyGurdy { "hurdy gurdy" sourcesDragon277 }
+  performFiddle { "fiddle" sourcesDragon277 }
+  performChimes { "chimes" sourcesDragon277 }
+  performGlockenspiel { "glockenspiel" sourcesDragon277 }
+  performTambourine { "tambourine" sourcesDragon277 }
+  performStampingStick { "stamping stick" sourcesDragon277 }
+  performRainStick { "rain stick" sourcesDragon277 }
+  performCymbals { "cymbals" sourcesDragon277 }
 end

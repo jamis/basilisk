@@ -1,4 +1,4 @@
-category groupArcaneScrollSpells1
+category groupRRArcaneScrollSpells1
   [ 5] spellAcidSpittle
   [ 5] spellArrowCharm
   [ 5] spellBuoyancyNet
@@ -19,7 +19,7 @@ category groupArcaneScrollSpells1
   [ 5] spellTriggerRune
 end
 
-category groupArcaneScrollSpells2
+category groupRRArcaneScrollSpells2
   [ 3] spellAlibi
   [ 3] spellAssassinsSenses
   [ 3] spellBattlecry
@@ -53,7 +53,7 @@ category groupArcaneScrollSpells2
   [ 3] spellSwiftWater
 end
 
-category groupArcaneScrollSpells3
+category groupRRArcaneScrollSpells3
   [ 4] spellAnimalInfusion
   [ 4] spellAnimateShadow
   [ 4] spellArmorofUndeath
@@ -80,7 +80,7 @@ category groupArcaneScrollSpells3
   [ 4] spellUnbuckle
 end
 
-category groupArcaneScrollSpells4
+category groupRRArcaneScrollSpells4
   [ 4] spellBelsamethsStrife
   [ 4] spellBottomlessPit
   [ 4] spellGhostdweomer
@@ -104,7 +104,7 @@ category groupArcaneScrollSpells4
   [ 4] spellZombieForm
 end
 
-category groupArcaneScrollSpells5
+category groupRRArcaneScrollSpells5
   [ 6] spellCallAquaticMonster
   [ 6] spellCurtainofDarkness
   [ 6] spellDarkWater
@@ -123,7 +123,7 @@ category groupArcaneScrollSpells5
   [ 6] spellShipSnare
 end
 
-category groupArcaneScrollSpells6
+category groupRRArcaneScrollSpells6
   [ 8] spellAwakenLesserTitanAvatar
   [ 8] spellCallAquaticHumanoidII
   [ 8] spellDeathBlade
@@ -137,7 +137,7 @@ category groupArcaneScrollSpells6
   [ 8] spellTaldocksSpellInhibitor
 end
 
-category groupArcaneScrollSpells7
+category groupRRArcaneScrollSpells7
   [ 10] spellDaggersofVaul
   [ 10] spellFreezingCurse
   [ 10] spellIlajamFire
@@ -148,7 +148,7 @@ category groupArcaneScrollSpells7
   [ 10] spellTransmuteFleshtoShadow
 end
 
-category groupArcaneScrollSpells8
+category groupRRArcaneScrollSpells8
   [ 9] spellBlackFlame
   [ 9] spellDarkstaff
   [ 9] spellGreaterCircleofSeeing
@@ -161,7 +161,7 @@ category groupArcaneScrollSpells8
   [ 9] spellWiddershins
 end
 
-category groupDivineScrollSpells1
+category groupRRDivineScrollSpells1
   [ 4] spellAdheretoWood
   [ 4] spellBuoyancyNet
   [ 4] spellChameleonSkin
@@ -188,7 +188,7 @@ category groupDivineScrollSpells1
   [ 4] spellTanilsTouch
 end
 
-category groupDivineScrollSpells2
+category groupRRDivineScrollSpells2
   [ 3] spellAnimalInfusion
   [ 3] spellAssassinsSenses
   [ 3] spellBattlecry
@@ -219,7 +219,7 @@ category groupDivineScrollSpells2
   [ 3] spellWolfsCry
 end
 
-category groupDivineScrollSpells3
+category groupRRDivineScrollSpells3
   [ 4] spellAnimalSpy
   [ 4] spellBanishShadow
   [ 4] spellBeastSoul
@@ -245,7 +245,7 @@ category groupDivineScrollSpells3
   [ 4] spellYaralsTotemicTransformation
 end
 
-category groupDivineScrollSpells4
+category groupRRDivineScrollSpells4
   [ 4] spellBelsamethsStrife
   [ 4] spellCallAquaticAnimalII
   [ 4] spellCloakofRighteousness
@@ -271,7 +271,7 @@ category groupDivineScrollSpells4
   [ 4] spellVerminplague
 end
 
-category groupDivineScrollSpells5
+category groupRRDivineScrollSpells5
   [ 10] spellBelsamethsBlessing
   [ 10] spellBrothersinArms
   [ 10] spellDoomwail
@@ -282,7 +282,7 @@ category groupDivineScrollSpells5
   [ 10] spellWatersEmbrace
 end
 
-category groupDivineScrollSpells6
+category groupRRDivineScrollSpells6
   [ 10] spellCallAquaticHumanoidII
   [ 10] spellDarkWater
   [ 10] spellEnkilisLightningStorm
@@ -294,7 +294,7 @@ category groupDivineScrollSpells6
   [ 10] spellTaldocksSpellInhibitor
 end
 
-category groupDivineScrollSpells7
+category groupRRDivineScrollSpells7
   [ 16] spellDaggersofVaul
   [ 16] spellFreezingCurse
   [ 16] spellGreaterHealingCircle
@@ -302,7 +302,7 @@ category groupDivineScrollSpells7
   [ 16] spellSever
 end
 
-category groupDivineScrollSpells8
+category groupRRDivineScrollSpells8
   [ 16] spellAvatar
   [ 16] spellGroveofSerenity
   [ 16] spellLeechField
@@ -310,9 +310,77 @@ category groupDivineScrollSpells8
   [ 16] spellStrengthofKadum
 end
 
-category groupDivineScrollSpells9
+category groupRRDivineScrollSpells9
   [ 25] spellConvert
   [ 25] spellIncapacitate
   [ 25] spellShatterSoul
+end
+
+category groupArcaneScrollSpells1
+  [18] groupRRArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [31] groupRRArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [24] groupRRArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [21] groupRRArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [17] groupRRArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [11] groupRRArcaneScrollSpells6
+end
+
+category groupArcaneScrollSpells7
+  [8] groupRRArcaneScrollSpells7
+end
+
+category groupArcaneScrollSpells8
+  [10] groupRRArcaneScrollSpells8
+end
+
+category groupDivineScrollSpells1
+  [24] groupRRDivineScrollSpells1
+end
+
+category groupDivineScrollSpells2
+  [28] groupRRDivineScrollSpells2
+end
+
+category groupDivineScrollSpells3
+  [23] groupRRDivineScrollSpells3
+end
+
+category groupDivineScrollSpells4
+  [23] groupRRDivineScrollSpells4
+end
+
+category groupDivineScrollSpells5
+  [8] groupRRDivineScrollSpells5
+end
+
+category groupDivineScrollSpells6
+  [9] groupRRDivineScrollSpells6
+end
+
+category groupDivineScrollSpells7
+  [5] groupRRDivineScrollSpells7
+end
+
+category groupDivineScrollSpells8
+  [5] groupRRDivineScrollSpells8
+end
+
+category groupDivineScrollSpells9
+  [3] groupRRDivineScrollSpells9
 end
 

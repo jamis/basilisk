@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------- *
  * Data from Monte Cooke's "Book of Eldritch Might", 
  * converted to Basilisk format by
- * Eric Polovich
+ * Eric Polovich, Modified and Extended by Shaun Gierent
  * --------------------------------------------------------------------- */
 /* weapons */
 
@@ -41,14 +41,22 @@ wstTenticleBlade
   .sources sourcesBookofEldritchMight
 end
 
-category groupMinorSpecificWeapons
+category groupBoEMMinorSpecificWeapons
   [ 3] wstFlayerFlail
   [ 3] wstKTerronWitchblade
   [ 3] wstTenticleBlade
 end
 
-category groupMediumSpecificWeapons
+category groupBoEMMediumSpecificWeapons
   [ 3] wstTheBleedingSword
+end
+
+category groupMinorSpecificWeapons
+  [3]  groupBOEMMinorSpecificWeapons
+end
+
+category groupMediumSpecificWeapons
+  [1]  groupBOEMMediumSpecificWeapons
 end
 
 /* rings */
@@ -71,6 +79,12 @@ ringRingofHolySpells ( groupRings )
   .sources sourcesBookofEldritchMight
 end
 
+ringPotionStorage ( groupRings )
+  .name "ring of potion storage"
+  .cost 1000 gp
+  .sources sourcesBookofEldritchMight
+end
+
 ringRingofRedConjures ( groupRings )
   .name "ring of red conjures"
   .cost 14000 gp
@@ -83,18 +97,33 @@ ringRingofSilence ( groupRings )
   .sources sourcesBookofEldritchMight
 end
 
-category groupRingsMinor
+category groupBoEMRingsMinor
   [ 5] ringRingofSilence 
+  [ 5] ringPotionStorage 
 end
 
-category groupRingsMedium
+category groupBoEMRingsMedium
   [ 5] ringRingofRedConjures
   [ 5] ringRingofHolySpells
 end
 
-category groupRingsMajor
+category groupBoEMRingsMajor
   [ 5] ringRingofBlueConjures 
   [ 3] ringRingofEbonyBolts
+end
+
+category groupRingsMinor
+ [ 2] groupBoEMRingsMinor
+end
+
+
+category groupRingsMedium 
+ [ 2] groupBoEMRingsMedium
+end
+
+
+category groupRingsMajor
+ [ 2] groupBoEMRingsMajor
 end
 
 /* rods */
@@ -149,6 +178,13 @@ rodRodofFears
   .sources sourcesBookofEldritchMight
 end
 
+rodPotionTouch
+  .name "rod of potion touch"
+  .cost 5000 gp
+  .sources sourcesBookofEldritchMight
+  .needPrefix false
+end
+
 rodSlaysongRod
   .name "slaysong rod"
   .cost 36000 gp
@@ -156,16 +192,17 @@ rodSlaysongRod
   .needPrefix false
 end
 
-category groupMediumRods
+category groupBoEMMediumRods
   [ 4]  rodBookrod
   [ 4]  rodDemonwhistleRod
   [ 4]  rodRodofBrandingSilence
   [ 4]  rodRodofBrandingWeakness
-  [ 8]  rodRodofFears
+  [ 4]  rodRodofFears
   [ 4]  rodSlaysongRod
+  [ 4]  rodPotionTouch
 end
 
-category groupMajorRods
+category groupBoEMMajorRods
   [ 4]  rodBookrod
   [ 4]  rodDemonwhistleRod
   [ 4]  rodRodofBrandingSilence
@@ -175,6 +212,14 @@ category groupMajorRods
   [ 4]  rodRodofBrandingTrueRest
   [ 4]  rodSlaysongRod
 end
+
+category groupMediumRods
+ [7]  groupBoEMMediumRods
+end
+
+category groupMajorRods
+ [8]  groupBoEMMajorRods
+end  
 
 /* staffs */
 
@@ -202,10 +247,14 @@ staffStaffoftheIcyHeart
   .sources sourcesBookofEldritchMight
 end
 
-category groupMajorStaves
+category groupBoEMMajorStaves
   [ 4]  staffStaffoftheIcyHeart
   [ 4]  staffStaffofGoldenFires
 end
+
+category groupMajorStaves
+ [2]  groupBoEMMajorStaves
+end  
 
 /* wondrous items */
 
@@ -233,6 +282,13 @@ end
 wondrousDoomskull
   .name "doomskull"
   .cost 800 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousElementalCharms
+  .name "Elemental Charms"
+  .cost 1250 gp
   .canBeIntelligent no
   .sources sourcesBookofEldritchMight
 end
@@ -356,16 +412,17 @@ wondrousWarThrone
   .sources sourcesBookofEldritchMight
 end
 
-category groupMinorWondrousItems
+category groupBoEMMinorWondrousItems
   wondrousBottledWhirlwind
   wondrousDoomskull
+  wondrousElementalCharms
   wondrousLanneathsConjureBomb
   wondrousMirrorofVanity2
   wondrousScabbardofVenoms
   wondrousStarofBlood
 end
 
-category groupMediumWondrousItems
+category groupBoEMMediumWondrousItems
   wondrousGlassofMist
   wondrousGlassRose
   wondrousMirrorofVanity4
@@ -373,7 +430,7 @@ category groupMediumWondrousItems
   wondrousWandwrap
 end
 
-category groupMajorWondrousItems
+category groupBoEMMajorWondrousItems
   wondrousAmuletoftheArcanist
   wondrousBookofRoses
   wondrousMirrorofVanity6
@@ -385,3 +442,16 @@ category groupMajorWondrousItems
   wondrousWarAlter
   wondrousWarThrone
 end
+
+category groupMinorWondrousItems
+ [7]  groupBoEMMinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [5]  groupBoEMMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [10]  groupBoEMMajorWondrousItems
+end  
+

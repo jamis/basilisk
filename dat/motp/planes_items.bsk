@@ -2,7 +2,7 @@
  * Material in this file is taken from the "Manual of the Planes"  by
  * the Jeff Grubb, Bruce Cordell, and David Noonan.
  *
- * converted to Basilisk format by Eric Polovich
+ * converted to Basilisk format by Eric Polovich; Modified by Shaun Gierent
  * ------------------------------------------------------------------------ */
 
 /* wondrous items */
@@ -21,10 +21,19 @@ wondrousEtherealTapestry
   .sources sourcesMotPlanes
 end
 
-category groupMediumWondrousItems
+category groupMotPMediumWondrousItems
  [ 2] wondrousDimensionalSextant
 end
 
-category groupMajorWondrousItems
+category groupMotPMajorWondrousItems
  [2] wondrousEtherealTapestry
 end
+
+category groupMediumWondrousItems
+ [1]  groupMotPMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [1]  groupMotPMajorWondrousItems
+end  
+

@@ -6,4 +6,8 @@ end
 
 #include "mof_feats.bsk"
 #include "mof_spells.bsk"
+#include "mof_items.bsk"
+#include "mof_potions.bsk"
+
+
 

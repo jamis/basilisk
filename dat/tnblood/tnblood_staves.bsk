@@ -113,7 +113,7 @@ staffTransmutation
   .sources sourcesTomeAndBlood
 end
 
-category groupMediumStaves
+category groupTBMediumStaves
   [1] staffIllumination
   [1] staffAbjuration
   [1] staffConjuration
@@ -123,3 +123,8 @@ category groupMediumStaves
   [1] staffNecromancy
   [1] staffTransmutation
 end
+
+category groupMediumStaves
+ [8]  groupTBMediumStaves
+end
+

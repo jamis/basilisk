@@ -1,14 +1,19 @@
 /* --------------------------------------------------------------------- *
  * Data from Dragon Magazine issue #281, converted to Basilisk format by
- * Eric Polovich
+ * Eric Polovich.  Modified by Shaun Gierent
  * --------------------------------------------------------------------- */
+
+sourceDragon281 ( sourcesDragon281 groupAllSources )
+  .name "Dragon 281"
+end
+
 
 /* "The Splintering Mind", p.38-45 */
 
 template in ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
-  weaponBladedStaff { "bladed staff" 50 gp  1d8  20  2  10 lb  large sourcesDragon }
-  weaponDoubleScimitar { "double scimitar" 125 gp  1d6  18  2  15 lb  large sourcesDragon }
-  weaponPantherClaw { "panther claw"  75 gp  1d4  20  3  3 lb  tiny sourcesDragon }
+  weaponBladedStaff { "bladed staff" 50 gp  1d8  20  2  10 lb  large sourcesDragon281 }
+  weaponDoubleScimitar { "double scimitar" 125 gp  1d6  18  2  15 lb  large sourcesDragon281 }
+  weaponPantherClaw { "panther claw"  75 gp  1d4  20  3  3 lb  tiny sourcesDragon281 }
 end
 
 weaponBladedStaff
@@ -55,8 +60,8 @@ category groupSplinteredMindRangedWeapons
 end
 
 category groupUncommonWeapons
-  [10] groupSplinteredMindRangedWeapons
-  [15] groupSplinteredMindMeleeWeapons
+  [1] groupSplinteredMindRangedWeapons
+  [3] groupSplinteredMindMeleeWeapons
 end
 
 
@@ -68,20 +73,30 @@ wstDeathArrow
   .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
              { .type btEnhancement .aspect asDamage .magnitude +1 } )
   .cost 9650 gp
-  .sources sourcesDragon
+  .sources sourcesDragon281
+end
+
+category groupDragon281MajorSpecificWeapons
+	wstDeathArrow
 end
 
 category groupMajorSpecificWeapons
-  [ 5] wstDeathArrow
+  [ 1] groupDragon281MajorSpecificWeapons
 end
+
 
 wondrousRopeofImmutableBinding
   .name "rope of immutable binding"
   .cost 18000 gp
   .canBeIntelligent true
-  .sources sourcesDragon
+  .sources sourcesDragon281
+end
+
+category groupDragon281MediumWonderousItems
+  wondrousRopeofImmutableBinding
 end
 
 category groupMediumWonderousItems
-  wondrousRopeofImmutableBinding
+[1] groupDragon281MediumWonderousItems
 end
+

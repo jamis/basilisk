@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------- *
  * Data from Monte Cooke's "Book of Eldritch Might", 
  * converted to Basilisk format by
- * Eric Polovich
+ * Eric Polovich, modified by Shaun Gierent
  * --------------------------------------------------------------------- */
 
 template in ( groupAllSpells ) { name school subschool descriptors sources }
@@ -217,7 +217,7 @@ category groupSpellsAssassinL3
   spellDevlinsVenomblade
 end
 
-category groupArcaneScrollSpells0
+category groupBoEMArcaneScrollSpells0
   [ 4]  spellDevlinsBarb
   [ 4]  spellEnchantingFlavor
   [ 4]  spellMentalAlarm
@@ -226,14 +226,14 @@ category groupArcaneScrollSpells0
   [ 4]  spellTongueofFiends
 end
 
-category groupArcaneScrollSpells1
+category groupBoEMArcaneScrollSpells1
   [ 4]  spellAcidicCurse
   [ 4]  spellGuilt
   [ 4]  spellPreciseVision
   [ 4]  spellSilentSound
 end
 
-category groupArcaneScrollSpells2
+category groupBoEMArcaneScrollSpells2
   [ 4]  spellEnhanceMagicalFlow
   [ 4]  spellIcebolt
   [ 4]  spellMarkofAir
@@ -246,7 +246,7 @@ category groupArcaneScrollSpells2
   [ 4]  spellUndauntedFixture
 end
 
-category groupArcaneScrollSpells3
+category groupBoEMArcaneScrollSpells3
   [ 4]  spellBoltofConjuring
   [ 4]  spellBoneTattoo
   [ 4]  spellDevlinsVenomblade
@@ -255,7 +255,7 @@ category groupArcaneScrollSpells3
   [ 4]  spellGreaterSleep
 end
 
-category groupArcaneScrollSpells4
+category groupBoEMArcaneScrollSpells4
   [ 4]  spellBindItem
   [ 4]  spellBlackMulching
   [ 4]  spellChainsofVengeance
@@ -273,14 +273,14 @@ category groupArcaneScrollSpells4
   [ 4]  spellZoneofSpeed
 end
 
-category groupArcaneScrollSpells5
+category groupBoEMArcaneScrollSpells5
   [ 4]  spellCrossofLightning
   [ 4]  spellElementalShroud
   [ 4]  spellTeleportBlock
   [ 4]  spellTeleportRedirect
 end
 
-category groupArcaneScrollSpells6
+category groupBoEMArcaneScrollSpells6
   [ 4]  spellComa
   [ 4]  spellConditionalSpell
   [ 4]  spellElectricalDeluge
@@ -288,32 +288,32 @@ category groupArcaneScrollSpells6
   [ 4]  spellTeleportTracer
 end
 
-category groupArcaneScrollSpells7
+category groupBoEMArcaneScrollSpells7
   [ 4]  spellMassFly
 end
 
-category groupArcaneScrollSpells8
+category groupBoEMArcaneScrollSpells8
   [ 4]  spellImbueGuardian
   [ 4]  spellMantleofEgregiousMight
   [ 4]  spellMarkofDeath
   [ 4]  spellPrimalRelease
 end
 
-category groupArcaneScrollSpells9
+category groupBoEMArcaneScrollSpells9
   [ 4]  spellArcanaForm
   [ 4]  spellMagmaBurst
 end
 
-category groupDivineScrollSpells0
+category groupBoEMDivineScrollSpells0
   [ 4]  spellTongueofAngels
   [ 4]  spellTongueofFiends
 end
 
-category groupDivineScrollSpells1
+category groupBoEMDivineScrollSpells1
   [ 4]  spellGuilt
 end
 
-category groupDivineScrollSpells2
+category groupBoEMDivineScrollSpells2
   [ 4]  spellEnhanceMagicalFlow
   [ 4]  spellIcebolt
   [ 4]  spellMarkofAir
@@ -324,7 +324,7 @@ category groupDivineScrollSpells2
   [ 4]  spellStaticVeil
 end
 
-category groupDivineScrollSpells4
+category groupBoEMDivineScrollSpells4
   [ 4]  spellBlackMulching
   [ 4]  spellGreaterMagicalFlowEnhancement
   [ 4]  spellGreaterMarkofAir
@@ -334,11 +334,69 @@ category groupDivineScrollSpells4
   [ 4]  spellGreaterMarkofWater
 end
 
-category groupDivineScrollSpells6
+category groupBoEMDivineScrollSpells6
   [ 4]  spellComa
   [ 4]  spellFoilTracer
 end
 
-category groupDivineScrollSpells9
+category groupBoEMDivineScrollSpells9
   spellMagmaBurst
 end
+
+category groupArcaneScrollSpells1
+  [4] groupBoEMArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [10] groupBoEMArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [6] groupBoEMArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [15] groupBoEMArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [4] groupBoEMArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [5] groupBoEMArcaneScrollSpells6
+end
+
+category groupArcaneScrollSpells7
+  [1] groupBoEMArcaneScrollSpells7
+end
+
+category groupArcaneScrollSpells8
+  [4] groupBoEMArcaneScrollSpells8
+end
+
+category groupArcaneScrollSpells9
+  [2] groupBoEMArcaneScrollSpells9
+end
+
+category groupDivineScrollSpells1
+  [1] groupBoEMDivineScrollSpells1
+end
+
+category groupDivineScrollSpells2
+  [8] groupBoEMDivineScrollSpells2
+end
+
+category groupDivineScrollSpells4
+  [7] groupBoEMDivineScrollSpells4
+end
+
+category groupDivineScrollSpells6
+  [2] groupBoEMDivineScrollSpells6
+end
+
+category groupDivineScrollSpells9
+  [1] groupBoEMDivineScrollSpells9
+end
+
+

@@ -1,4 +1,6 @@
-category groupArcaneScrollSpells1
+/* Corrected & Modified by Shaun Gierent */
+
+category groupTBArcaneScrollSpells1
   [ 3] spelllesserAcidOrb
   [ 3] spelllesserColdOrb
   [ 3] spelllesserElectricOrb
@@ -8,7 +10,7 @@ category groupArcaneScrollSpells1
   [ 3] spellRepairLightDamage
 end
 
-category groupArcaneScrollSpells2
+category groupTBArcaneScrollSpells2
   [ 3] spellFilter
   [ 3] spellGazeScreen
   [ 3] spellChoke
@@ -24,7 +26,7 @@ category groupArcaneScrollSpells2
   [ 3] spellFamiliarPocket
 end
 
-category groupArcaneScrollSpells3
+category groupTBArcaneScrollSpells3
   [ 3] spellCorpseCandle
   [ 3] spellIceBurst
   [ 3] spellFeignDeath
@@ -33,7 +35,7 @@ category groupArcaneScrollSpells3
   [ 3] spellEnhanceFamiliar
 end
 
-category groupArcaneScrollSpells4
+category groupTBArcaneScrollSpells4
   [ 4] spellMassResistElements
   [ 4] spellOtilukesDispellingScreen
   [ 4] spellAcidOrb
@@ -47,62 +49,37 @@ category groupArcaneScrollSpells4
   [ 4] spellFortifyFamiliar
 end
 
-category groupArcaneScrollSpells5
+category groupTBArcaneScrollSpells5
   [ 4] spellEnergyBuffer
   [ 4] spellMordenkainensPrivateSanctum
   [ 4] spellSpiritwall
   [ 4] spellGhostform
 end
 
-category groupArcaneScrollSpells6
+category groupTBArcaneScrollSpells6
   [ 3] spellUndeathtoDeath
   [ 3] spellMassFly
   [ 3] spellImbueFamiliar
   [ 1] spellGreatShout
 end
 
-category groupArcaneScrollSpells7
+category groupTBArcaneScrollSpells7
   [ 5] spellEnergyImmunity
   [ 5] spellOtilukesGreaterDispellingScreen
   [ 5] spellMassTeleport
 end
 
-category groupArcaneScrollSpells8
+category groupTBArcaneScrollSpells8
   [ 3] spellDimensionalLock
   [ 3] spellGreatShout
 end
 
-category groupArcaneScrollSpells9
+category groupTBArcaneScrollSpells9
   [ 7] spellChainContingency
   [ 7] spellHideLife
 end
 
-category groupDivineScrollSpells1
-  [ 5] spellBless
-  [ 5] spellCalmAnimals
-  [ 4] spellCommand
-  [ 5] spellCureLightWounds
-  [ 3] spellDetectChaos
-  [ 3] spellDetectEvil
-  [ 3] spellDetectGood
-  [ 3] spellDetectLaw
-  [ 3] spellDetectSnaresAndPits
-  [ 5] spellDoom
-  [ 5] spellEntangle
-  [ 5] spellFaerieFire
-  [ 5] spellInflictLightWounds
-  [ 5] spellInvisibilityToAnimals
-  [ 5] spellInvisibilityToUndead
-  [ 3] spellMagicFang
-  [ 3] spellMagicStone
-  [ 3] spellMagicWeapon
-  [ 4] spellSanctuary
-  [ 5] spellShillelagh
-  [ 4] spellSummonMonsterI
-  [ 4] spellSummonNaturesAllyI
-end
-
-category groupDivineScrollSpells2
+category groupTBDivineScrollSpells2
   [ 3] spellEaglesSplendor 
   [ 3] spellFilter
   [ 3] spellFoxsCunning
@@ -110,15 +87,69 @@ category groupDivineScrollSpells2
   [ 3] spellOwlsWisdom
 end
 
-category groupDivineScrollSpells3
+category groupTBDivineScrollSpells3
   [ 3] spellMassResistElements
 end
 
-category groupDivineScrollSpells6
+category groupTBDivineScrollSpells6
   [ 6] spellEnergyImmunity
   [ 6] spellUndeathtoDeath
 end
 
-category groupDivineScrollSpells8
+category groupTBDivineScrollSpells8
   [6] spellDimensionalLock
 end
+
+category groupArcaneScrollSpells1
+  [7] groupTBArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [13] groupTBArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [6] groupTBArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [11] groupTBArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [4] groupTBArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [4] groupTBArcaneScrollSpells6
+end
+
+category groupArcaneScrollSpells7
+  [3] groupTBArcaneScrollSpells7
+end
+
+category groupArcaneScrollSpells8
+  [2] groupTBArcaneScrollSpells8
+end
+
+category groupArcaneScrollSpells9
+  [2] groupTBArcaneScrollSpells9
+end
+
+category groupDivineScrollSpells2
+  [5] groupTBDivineScrollSpells2
+end
+
+category groupDivineScrollSpells3
+  [1] groupTBDivineScrollSpells3
+end
+
+category groupDivineScrollSpells6
+  [2] groupTBDivineScrollSpells6
+end
+
+category groupDivineScrollSpells8
+  [1] groupTBDivineScrollSpells8
+end
+
+

@@ -1,19 +1,24 @@
 /* --------------------------------------------------------------------- *
  * Data from Dragon Magazine issue #280, converted to Basilisk format by
  * Robert Szkotak (dkphoenix@hotmail.com), aka "LightPhoenix" on
- * Eric Noah's messageboards.
+ * Eric Noah's messageboards. Modified by Shaun Gierent
  * --------------------------------------------------------------------- */
+
+sourceDragon280 ( sourcesDragon280 groupAllSources )
+  .name "Dragon 280"
+end
+
 
 /* "Polymorphology", p. 39-45 */
 /* "A Little More Familiar", p. 60-63 */
 
 template in ( groupAllSpells ) { name school subschool descriptors sources }
-  spellCallFamiliar { "Call Familiar" schTransmutation $ ( descTeleportation ) sourcesDragon }
-  spellFamiliarsForm { "Familiar's Form" schNecromancy $ $ sourcesDragon }
-  spellFamiliarsSense { "Familiar's Sense" schDivination $ $ sourcesDragon }
-  spellFamiliarsTouch { "Familiar's Touch" schConjuration $ $ sourcesDragon }
-  spellShareLife { "Share Life" schNecromancy $ $ sourcesDragon }
-  spellSwarmForm { "Swarm Form" schTransmutation $ $ sourcesDragon }
+  spellCallFamiliar { "Call Familiar" schTransmutation $ ( descTeleportation ) sourcesDragon280 }
+  spellFamiliarsForm { "Familiar's Form" schNecromancy $ $ sourcesDragon280 }
+  spellFamiliarsSense { "Familiar's Sense" schDivination $ $ sourcesDragon280 }
+  spellFamiliarsTouch { "Familiar's Touch" schConjuration $ $ sourcesDragon280 }
+  spellShareLife { "Share Life" schNecromancy $ $ sourcesDragon280 }
+  spellSwarmForm { "Swarm Form" schTransmutation $ $ sourcesDragon280 }
 end
 
 category groupSpellsSorcererL2
@@ -46,48 +51,59 @@ category groupSpellsWizardL5
   spellSwarmForm
 end
 
-
-category groupArcaneScrollSpells2
+category groupDragon280ArcaneScrollSpells2
 	spellFamiliarsSense spellFamiliarsTouch spellShareLife
 end
 
-category groupArcaneScrollSpells3
+category groupDragon280ArcaneScrollSpells3
 	spellFamiliarsForm spellCallFamiliar
 end
 
-category groupArcaneScrollSpells5
+category groupDragon280ArcaneScrollSpells5
 	spellSwarmForm
+end
+
+category groupDragonArcaneScrollSpells2
+[3] groupDragon280ArcaneScrollSpells2
+end
+
+category groupDragonArcaneScrollSpells3
+[2] groupDragon280ArcaneScrollSpells3
+end
+
+category groupDragonArcaneScrollSpells5
+[1] groupDragon280ArcaneScrollSpells5
 end
 
 /* "Better Living Through Alchemy", p. 50-53 */
 
 template in ( groupMundaneItems ) { name cost sources }
-  miAlchemistsMercy { "alchemist's mercy(s)"  1 gp sourcesDragon }
-  miArmorSoft { "armor soft(s)"  50 gp sourcesDragon }
-  miCoolingGel { "cooling gel(s)"  100 gp sourcesDragon }
-  miCouriersInk { "courier's ink"  20 gp sourcesDragon }
-  miFireBeetlePaste { "fire beetle paste(s)"  50 gp sourcesDragon }
-  miFireBane { "fire bane(s)"  50 gp sourcesDragon }
-  miFirestone { "firestone(s)"  50 gp sourcesDragon }
-  miFlashPowder { "flash powder(s)"  20 gp sourcesDragon }
-  miFreeFoot { "free foot(s)"  25 gp sourcesDragon }
-  miHoldfast { "holdfast(s)"  50 gp sourcesDragon }
-  miIceCrystal { "ice crystal(s)"  5 gp sourcesDragon }
-  miInsectRepellent { "insect repellent(s)"  5 gp sourcesDragon }
-  miLiquidIce { "liquid ice(s)"  30 gp sourcesDragon }
-  miNightEyes { "night eyes"  25 gp sourcesDragon }
-  miPowderedWater { "powdered water(s)"  5 sp sourcesDragon }
-  miRedRager { "red rager(s)"  50 gp sourcesDragon }
-  miSlimebane { "slimebane(s)"  15 gp sourcesDragon }
-  miSlipperyOil { "slippery oil(s)"  50 gp sourcesDragon }
-  miSneezingPowder { "sneezing powder(s)"  60 gp sourcesDragon }
-  miSoftshoePowder { "softshoe powder(s)"  25 gp sourcesDragon }
-  miSoupstone { "soupstone(s)"  300 gp sourcesDragon }
-  miStonecloth { "stonecloth(s)"  100 gp sourcesDragon }
-  miTangleWire { "tangle wire(s)"  25 gp sourcesDragon }
-  miTravellersSolace { "traveller's solace(s)"  50 gp sourcesDragon }
-  miTruthWine { "truth wine(s)"  75 gp sourcesDragon }
-  miVaporsOfSleep { "vapors of sleep(s)"  50 gp sourcesDragon }
+  miAlchemistsMercy { "alchemist's mercy(s)"  1 gp sourcesDragon280 }
+  miArmorSoft { "armor soft(s)"  50 gp sourcesDragon280 }
+  miCoolingGel { "cooling gel(s)"  100 gp sourcesDragon280 }
+  miCouriersInk { "courier's ink"  20 gp sourcesDragon280 }
+  miFireBeetlePaste { "fire beetle paste(s)"  50 gp sourcesDragon280 }
+  miFireBane { "fire bane(s)"  50 gp sourcesDragon280 }
+  miFirestone { "firestone(s)"  50 gp sourcesDragon280 }
+  miFlashPowder { "flash powder(s)"  20 gp sourcesDragon280 }
+  miFreeFoot { "free foot(s)"  25 gp sourcesDragon280 }
+  miHoldfast { "holdfast(s)"  50 gp sourcesDragon280 }
+  miIceCrystal { "ice crystal(s)"  5 gp sourcesDragon280 }
+  miInsectRepellent { "insect repellent(s)"  5 gp sourcesDragon280 }
+  miLiquidIce { "liquid ice(s)"  30 gp sourcesDragon280 }
+  miNightEyes { "night eyes"  25 gp sourcesDragon280 }
+  miPowderedWater { "powdered water(s)"  5 sp sourcesDragon280 }
+  miRedRager { "red rager(s)"  50 gp sourcesDragon280 }
+  miSlimebane { "slimebane(s)"  15 gp sourcesDragon280 }
+  miSlipperyOil { "slippery oil(s)"  50 gp sourcesDragon280 }
+  miSneezingPowder { "sneezing powder(s)"  60 gp sourcesDragon280 }
+  miSoftshoePowder { "softshoe powder(s)"  25 gp sourcesDragon280 }
+  miSoupstone { "soupstone(s)"  300 gp sourcesDragon280 }
+  miStonecloth { "stonecloth(s)"  100 gp sourcesDragon280 }
+  miTangleWire { "tangle wire(s)"  25 gp sourcesDragon280 }
+  miTravellersSolace { "traveller's solace(s)"  50 gp sourcesDragon280 }
+  miTruthWine { "truth wine(s)"  75 gp sourcesDragon280 }
+  miVaporsOfSleep { "vapors of sleep(s)"  50 gp sourcesDragon280 }
 end
 
 category groupDragon280Items
@@ -120,7 +136,7 @@ category groupDragon280Items
 end
 
 category groupAlchemicalItems
-  [ 5] groupDragon280Items
+  [ 26] groupDragon280Items
 end
 
 
@@ -133,7 +149,7 @@ featEnspellFamiliar in ( groupAllFeats groupGeneralFeats )
 									{ .type ptIsClass .affectedThing classWizard }
 									{ .type ptIsClass .affectedThing classSorcerer } )
 								} )
-  .sources sourcesDragon
+  .sources sourcesDragon280
 end
 
 featExtraFamiliar in ( groupAllFeats groupGeneralFeats )
@@ -143,7 +159,7 @@ featExtraFamiliar in ( groupAllFeats groupGeneralFeats )
 									{ .type ptIsClass .affectedThing classWizard }
 									{ .type ptIsClass .affectedThing classSorcerer } )
 								} )
-  .sources sourcesDragon
+  .sources sourcesDragon280
 end
 
 featConstructFamiliar in ( groupAllFeats groupGeneralFeats )
@@ -153,7 +169,7 @@ featConstructFamiliar in ( groupAllFeats groupGeneralFeats )
 									{ .type ptIsClass .affectedThing classWizard }
 									{ .type ptIsClass .affectedThing classSorcerer } )
 								} )
-  .sources sourcesDragon
+  .sources sourcesDragon280
 end
 
 featTokenFamiliar in ( groupAllFeats groupGeneralFeats )
@@ -163,7 +179,7 @@ featTokenFamiliar in ( groupAllFeats groupGeneralFeats )
 									{ .type ptIsClass .affectedThing classWizard }
 									{ .type ptIsClass .affectedThing classSorcerer } )
 								} )
-  .sources sourcesDragon
+  .sources sourcesDragon280
 end
 
 featUndeadFamiliar in ( groupAllFeats groupGeneralFeats )
@@ -173,7 +189,7 @@ featUndeadFamiliar in ( groupAllFeats groupGeneralFeats )
 									{ .type ptIsClass .affectedThing classWizard }
 									{ .type ptIsClass .affectedThing classSorcerer } )
 								} )
-  .sources sourcesDragon
+  .sources sourcesDragon280
 end
 
 
@@ -186,7 +202,7 @@ wondrousQuicksandRug
   .capacityWeight 250 lb
   .capacityVolume 30 cu_ft
   .canBeIntelligent false
-  .sources sourcesDragon
+  .sources sourcesDragon280
 end
 
 wondrousPortalDust
@@ -195,7 +211,7 @@ wondrousPortalDust
   .specialQualities ( { .type satSpellEffect
                         .spell spellGate } )
   .canBeIntelligent false
-  .sources sourcesDragon
+  .sources sourcesDragon280
 end
 
 category groupMinorWondrousItems

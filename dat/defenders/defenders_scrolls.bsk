@@ -1,17 +1,19 @@
-category groupArcaneScrollSpells6
+/* Modified by Shaun Gierent */
+
+category groupDotFArcaneScrollSpells6
   [ 3] spellProbeThoughts
 end
 
-category groupArcaneScrollSpells9
+category groupDotFArcaneScrollSpells9
   [ 7] spellUnbinding
 end
 
-category groupDivineScrollSpells1
+category groupDotFDivineScrollSpells1
   [ 5] spellBurialBlessing
   [ 5] spellDivineSacrifice
 end
 
-category groupDivineScrollSpells2
+category groupDotFDivineScrollSpells2
   [ 3] spellBrambles
   [ 3] spellDivineFlame
   [ 3] spellDivineZephyr
@@ -24,7 +26,7 @@ category groupDivineScrollSpells2
   [ 3] spellSweetWater
 end
 
-category groupDivineScrollSpells3
+category groupDotFDivineScrollSpells3
   [ 3] spellChainofEyes
   [ 3] spellCurseoftheBrute
   [ 3] spellFlameofFaith
@@ -36,7 +38,7 @@ category groupDivineScrollSpells3
   [ 3] spellWeatherEye
 end
 
-category groupDivineScrollSpells4
+category groupDotFDivineScrollSpells4
   [ 5] spellCastigate
   [ 5] spellRecitation
   [ 5] spellUnfailingEndurance
@@ -47,12 +49,45 @@ category groupDivineScrollSpells4
   [ 5] spellBearsHeart
 end
 
-category groupDivineScrollSpells7
+category groupDotFDivineScrollSpells7
   [ 6] spellRighteousWrathoftheFaithful
   [ 6] spellSlimeWave
 end
 
-category groupDivineScrollSpells8
+category groupDotFDivineScrollSpells8
   [ 6] spellBrainSpider
   [ 6] spellChainofChaos
 end
+
+category groupArcaneScrollSpells6
+  [1] groupDotFArcaneScrollSpells6
+end
+
+category groupArcaneScrollSpells9
+  [1] groupDotFArcaneScrollSpells9
+end
+
+category groupDivineScrollSpells1
+  [2] groupDotFDivineScrollSpells1
+end
+
+category groupDivineScrollSpells2
+  [10] groupDotFDivineScrollSpells2
+end
+
+category groupDivineScrollSpells3
+  [9] groupDotFDivineScrollSpells3
+end
+
+category groupDivineScrollSpells4
+  [8] groupDotFDivineScrollSpells4
+end
+
+category groupDivineScrollSpells7
+  [2] groupDotFDivineScrollSpells7
+end
+
+category groupDivineScrollSpells8
+  [2] groupDotFDivineScrollSpells8
+end
+

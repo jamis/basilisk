@@ -53,7 +53,7 @@ template in ( groupPotions ) { name cost sources }
 end
 
 
-category groupPotionsMinor
+category groupCoreBookPotionsMinor
   [ 5] potionJump
   [ 5] potionSpiderClimb
   [ 9] potionCureLightWounds
@@ -91,7 +91,7 @@ category groupPotionsMinor
 end
 
 
-category groupPotionsMedium
+category groupCoreBookPotionsMedium
   [ 1] potionLove
   [ 1] potionVision
   [ 1] potionSwimming
@@ -134,7 +134,7 @@ category groupPotionsMedium
 end
 
 
-category groupPotionsMajor
+category groupCoreBookPotionsMajor
   [ 1] potionClairaudienceClairvoyance
   [ 1] potionCharisma
   [ 1] potionIntelligence
@@ -174,6 +174,21 @@ category groupPotionsMajor
   [ 2] potionOilOfSlipperiness
   [ 3] potionHeroism
   [ 2] potionFireBreath
+end
+
+category groupPotionsMinor
+ [ 34] groupCoreBookPotionsMinor
+end
+
+
+category groupPotionsMedium 
+[ 39] groupCoreBookPotionsMedium
+end
+
+
+category groupPotionsMajor
+[ 39] groupCoreBookPotionsMajor
+
 end
 
 /* --------------------------------------------------------- *
@@ -255,4 +270,5 @@ rule rLookupPotion( potionMagnitude options )
 
   rLookupPotion = x;
 end
+
 

@@ -1,27 +1,13 @@
-/* --------------------------------------------------------- *
- * The material in this file is from "DiabloII:Diablerie"
- * by JD Wiker.
- * --------------------------------------------------------- */
-
-/* the siegehammer appears on page 94 of the rulebook
- * since its the only unique in the book, its the only one here. 
- * I estimated it's gp value. */
-
-sourceDiablo in ( sourcesDiablo groupAllSources )
-  .name "Diablo"
+/* --------------------------------------------------------------------- *
+ * Data from JD Wiker's "Diablo II:Diablerie"
+ * converted to Basilisk format by
+ * Shaun Gierent, except Diablo_items
+ * --------------------------------------------------------------------- */
+SourceDiablo in ( sourcesDiablo groupAllSources )
+  .name "Diablo II: Diablerie"
 end
 
-wstSiegehammer
-  .name "the siegehammer"
-  .prototype weaponWarhammer
-  .bonuses        ( { .type btEnhancement .aspect asAttack .magnitude +2 }
-                            { .type btEnhancement .aspect asDamage .magnitude +2 } )
-  .specialAttacks ( { .description "+3 vrs. undead or deamons" }
-                               { .description "+5 enhancement bonus to strength when used to bash open doors" } )
-  .cost 32000 gp
-  .sources sourcesDiablo
-end
+#include "Diablo_items.bsk"
+#include "Diablo_spells.bsk"
+#include "Diablo_scrolls.bsk"
 
-category groupMediumSpecificWeapons
-  [ 5] wstSiegehammer
-end

@@ -139,7 +139,7 @@ staffWoodlands
 end
 
 
-category groupMediumStaves
+category groupCoreBookMediumStaves
   [10] staffSizeAlteration
   [10] staffCharming
   [10] staffHealing
@@ -153,7 +153,7 @@ category groupMediumStaves
   [ 5] staffPassage
 end
 
-category groupMajorStaves
+category groupCoreBookMajorStaves
   [ 5] staffCharming
   [10] staffHealing
   [15] staffFire
@@ -167,6 +167,13 @@ category groupMajorStaves
   [ 4] staffPower
 end
 
+category groupMediumStaves
+ [11]  groupCoreBookMediumStaves
+end
+
+category groupMajorStaves
+ [11]  groupCoreBookMajorStaves
+end  
 
 rule rInitGenericStaffProperties( item )
   item.charges = Random(50) + 1;
@@ -212,3 +219,4 @@ rule rSelectStaff( staffMagnitude options )
 
   rSelectStaff = staff;
 end
+

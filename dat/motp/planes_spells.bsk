@@ -2,7 +2,7 @@
  * Material in this file is taken from the "Manual of the Planes"  by
  * the Jeff Grubb, Bruce Cordell, and David Noonan.
  *
- * converted to Basilisk format by Eric Polovich
+ * converted to Basilisk format by Eric Polovich, modified by Shaun Gierent
  * --------------------------------------------------------------------- */
 
 template in ( groupAllSpells ) { name school subschool descriptors sources }
@@ -187,15 +187,15 @@ category groupSpellsSorcererL8
   spellDreamTravel
 end
 
-category groupArcaneScrollSpells1
+category groupMotPArcaneScrollSpells1
   [ 4]    spellPortalBeacon
 end
 
-category groupArcaneScrollSpells2
+category groupMotPArcaneScrollSpells2
   [ 4]    spellPortalAlarm
 end
 
-category groupArcaneScrollSpells3
+category groupMotPArcaneScrollSpells3
   [ 4]    spellAnalyzePortal
   [ 4]    spellAvoidPlanarEffects
   [ 4]    spellChamber
@@ -203,7 +203,7 @@ category groupArcaneScrollSpells3
   [ 4]    spellShadowCache
 end
 
-category groupArcaneScrollSpells4
+category groupMotPArcaneScrollSpells4
   [ 4]   spellAttuneForm
   [ 4]    spellEtherealMount
   [ 4]    spellImprovedPortalAlarm
@@ -212,36 +212,36 @@ category groupArcaneScrollSpells4
   [ 4]    spellZoneofRevelation
 end
 
-category groupArcaneScrollSpells5
+category groupMotPArcaneScrollSpells5
   [ 4]    spellShadowfade
   [ 4]    spellXornMovement
 end
 
-category groupArcaneScrollSpells6
+category groupMotPArcaneScrollSpells6
   [ 4]    spellMakeManifest
   [ 4]    spellSealPortal
 end
 
-category groupArcaneScrollSpells7
+category groupMotPArcaneScrollSpells7
   [ 4]   spellElementalBody
   [ 4]    spellRealityMaelstrom
   [ 4]    spellMirrorWalking
 end
 
-category groupArcaneScrollSpells8
+category groupMotPArcaneScrollSpells8
   [ 4]    spellMassManifest
   [ 4]    spellDreamTravel
 end
 
-category groupDivineScrollSpells1
+category groupMotPDivineScrollSpells1
   [ 4]    spellPortalBeacon
 end
 
-category groupDivineScrollSpells2
+category groupMotPDivineScrollSpells2
   [ 4]    spellAvoidPlanarEffects
 end
 
-category groupDivineScrollSpells3
+category groupMotPDivineScrollSpells3
   [ 4]    spellAttuneForm
   [ 4]    spellInterplanarMessage
   [ 4]    spellPositiveEnergyProtection
@@ -250,17 +250,75 @@ category groupDivineScrollSpells3
   [ 4]    spellZoneofRevelation
 end
 
-category groupDivineScrollSpells4
+category groupMotPDivineScrollSpells4
   [ 4]    spellEtherBlast
   [ 4]    spellMakeManifest
   [ 4]    spellShadowblast
 end
 
-category groupDivineScrollSpells5
+category groupMotPDivineScrollSpells5
   [ 4]    spellMirrorWalking
 end
 
-category groupDivineScrollSpells6
+category groupMotPDivineScrollSpells6
   [ 4]    spellMassManifest
   [ 4]    spellReviveOutsider
 end
+
+category groupArcaneScrollSpells1
+  [1] groupMotPArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [1] groupMotPArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [5] groupMotPArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [6] groupMotPArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [2] groupMotPArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [2] groupMotPArcaneScrollSpells6
+end
+
+category groupArcaneScrollSpells7
+  [3] groupMotPArcaneScrollSpells7
+end
+
+category groupArcaneScrollSpells8
+  [2] groupMotPArcaneScrollSpells8
+end
+
+category groupDivineScrollSpells1
+  [1] groupMotPDivineScrollSpells1
+end
+
+category groupDivineScrollSpells2
+  [1] groupMotPDivineScrollSpells2
+end
+
+category groupDivineScrollSpells3
+  [6] groupMotPDivineScrollSpells3
+end
+
+category groupDivineScrollSpells4
+  [3] groupMotPDivineScrollSpells4
+end
+
+category groupDivineScrollSpells5
+  [1] groupMotPDivineScrollSpells5
+end
+
+category groupDivineScrollSpells6
+  [2] groupMotPDivineScrollSpells6
+end
+
+

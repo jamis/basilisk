@@ -1,9 +1,8 @@
 template in ( groupAllSources ) { name }
   sourceCoreRules      in ( sourcesCoreRules )      { "Core Rules" }
   sourceSwordAndFist   in ( sourcesSwordAndFist )   { "Sword and Fist" }
+  sourceFrcs   in ( sourcesFrcs )   { "Forgotten Realms Campaign Setting" }
+  sourcediablo   in ( sourcesdiablo )   { "Diablo II: Diablerie" }
   sourceTomeAndBlood   in ( sourcesTomeAndBlood )   { "Tome and Blood" }
-  sourceSunlessCitadel in ( sourcesSunlessCitadel ) { "Sunless Citadel, The" }
-  sourceDragon         in ( sourcesDragon )         { "Dragon Magazine" }
   sourceDefendersoftheFaith in ( sourcesDefendersoftheFaith ) { "Defenders of the Faith" }
-  sourceNboMTDnDCC     in ( sourcesNboMTDnDCC ) { "Netbook of Magical Treasures (DnDCC)" }
 end

@@ -298,8 +298,8 @@ end
 /* add the sword and fist weapons to the mundane items' table */
 
 category groupUncommonWeapons
-  [10] groupSwordAndFistRangedWeapons
-  [15] groupSwordAndFistMeleeWeapons
+  [39] groupSwordAndFistRangedWeapons
+  [13] groupSwordAndFistMeleeWeapons
 end
 
 /* shield special abilities */
@@ -318,16 +318,28 @@ asaDancing ( groupShieldSpecialAbilities )
   .sources sourcesSwordAndFist
 end
 
-category groupMinorShieldSpecialAbilities
+category groupSFMinorShieldSpecialAbilities
   [10] asaArrowCatching
 end
 
-category groupMediumShieldSpecialAbilities
+category groupSFMediumShieldSpecialAbilities
   [10] asaDancing
 end
 
-category groupMajorShieldSpecialAbilities
+category groupSFMajorShieldSpecialAbilities
   [ 5] asaDancing
+end
+
+category groupMinorShieldSpecialAbilities
+  [1] groupSFMinorShieldSpecialAbilities
+end
+
+category groupMediumShieldSpecialAbilities
+  [1] groupSFMediumShieldSpecialAbilities
+end
+
+category groupMajorShieldSpecialAbilities
+  [1] groupSFMajorShieldSpecialAbilities
 end
 
 /* weapon special abilities */
@@ -371,39 +383,64 @@ wsaVicious
   .sources sourcesSwordAndFist
 end
 
-category groupMeleeWeaponMinorSpecialAbilities
+category groupSFMeleeWeaponMinorSpecialAbilities
   [ 5] wsaKiFocus
   [ 5] wsaMerciful
   [10] wsaSureStriking
   [10] wsaVicious
 end
 
-category groupMeleeWeaponMediumSpecialAbilities
+category groupSFMeleeWeaponMediumSpecialAbilities
   [ 2] wsaKiFocus
   [ 2] wsaMerciful
   [ 5] wsaSureStriking
   [ 5] wsaVicious
 end
 
-category groupMeleeWeaponMajorSpecialAbilities
+category groupSFMeleeWeaponMajorSpecialAbilities
   [ 2] wsaSureStriking
   [ 2] wsaVicious
 end
 
-category groupRangedWeaponMinorSpecialAbilities
+category groupSFRangedWeaponMinorSpecialAbilities
   [ 5] wsaMerciful
   [20] wsaSeeking
   [10] wsaSureStriking
 end
 
-category groupRangedWeaponMediumSpecialAbilities
+category groupSFRangedWeaponMediumSpecialAbilities
   [15] wsaSeeking
   [ 5] wsaSureStriking
 end
 
-category groupRangedWeaponMajorSpecialAbilities
+category groupSFRangedWeaponMajorSpecialAbilities
   [ 3] wsaSeeking
 end
+
+category groupMeleeWeaponMinorSpecialAbilities
+  [4] 	groupSFMeleeWeaponMinorSpecialAbilities
+end
+
+category groupMeleeWeaponMediumSpecialAbilities
+  [4] 	groupSFMeleeWeaponMediumSpecialAbilities
+end
+
+category groupMeleeWeaponMajorSpecialAbilities
+  [2] 	groupSFMeleeWeaponMajorSpecialAbilities
+end
+
+category groupRangedWeaponMinorSpecialAbilities
+  [3] 	groupSFRangedWeaponMinorSpecialAbilities
+end
+
+category groupRangedWeaponMediumSpecialAbilities
+  [2] 	groupSFRangedWeaponMediumSpecialAbilities
+end
+
+category groupRangedWeaponMajorSpecialAbilities
+  [1] 	groupSFRangedWeaponMajorSpecialAbilities
+end
+
 
 /* specific weapons */
 
@@ -422,7 +459,7 @@ wstShatterspike
   .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
              { .type btEnhancement .aspect asDamage .magnitude +1 } )
   .cost 4315 gp
-  .sources ( sourceSwordAndFist sourceSunlessCitadel )
+  .sources sourcesSwordAndFist
 end
 
 wstShurikenOfTremendousShock
@@ -434,14 +471,24 @@ wstShurikenOfTremendousShock
   .sources sourcesSwordAndFist
 end
 
-category groupMediumSpecificWeapons
+category groupSFMediumSpecificWeapons
   [ 3] wstBowOfTrueArrows
   [ 3] wstShatterspike
 end
 
-category groupMajorSpecificWeapons
+category groupSFMajorSpecificWeapons
   [ 4] wstShurikenOfTremendousShock
 end
+
+category groupMediumSpecificWeapons
+  [2]  groupSFMediumSpecificWeapons
+end
+
+category groupMajorSpecificWeapons
+  [1]  groupSFMajorSpecificWeapons
+end
+
+
 
 /* potions */
 
@@ -450,14 +497,23 @@ template ( groupPotions ) { name cost sources }
   potionFlamingFists { "flaming fists"  300 gp  sourcesSwordAndFist }
 end
 
-category groupPotionsMinor
+category groupSFPotionsMinor
   [ 3] potionFalseLife
   [ 3] potionFlamingFists
 end
 
-category groupPotionsMedium
+category groupSFPotionsMedium
   [ 1] potionFalseLife
   [ 1] potionFlamingFists
+end
+
+category groupPotionsMinor
+ [ 2] groupSFPotionsMinor
+end
+
+
+category groupPotionsMedium 
+ [ 2] groupSFPotionsMedium
 end
 
 /* rings */
@@ -474,15 +530,25 @@ ringShockingBlows ( groupRings )
   .sources sourcesSwordAndFist
 end
 
-category groupRingsMinor
+category groupSfRingsMinor
   [ 5] ringMageArmor
   [ 5] ringShockingBlows
 end
 
-category groupRingsMedium
+category groupSFRingsMedium
   [ 5] ringMageArmor
   [ 5] ringShockingBlows
 end
+
+category groupRingsMinor
+ [ 2] groupSFRingsMinor
+end
+
+
+category groupRingsMedium 
+ [ 2] groupSFRingsMedium
+end
+
 
 /* wondrous items */
 
@@ -570,24 +636,38 @@ wondrousVestOfFalseLife
   .sources sourcesSwordAndFist
 end
 
-category groupMinorWondrousItems
+category groupSFMinorWondrousItems
   wondrousAmuletOfMightyFists1
   wondrousHeadbandOfFerocity
   wondrousKiStraps
   wondrousSandalsOfTheTigersLeap
 end
 
-category groupMediumWondrousItems
+category groupSFMediumWondrousItems
   wondrousAmuletOfMightyFists2
   wondrousGlovesOfFearsomeGrip
   wondrousVestOfFalseLife
 end
 
-category groupMajorWondrousItems
+category groupSFMajorWondrousItems
   wondrousAmuletOfMightyFists3
   wondrousAmuletOfMightyFists4
   wondrousAmuletOfMightyFists5
   wondrousBeltOfMightyProwess
   wondrousHeadbandOfPerfectExcellence
 end
+
+category groupMinorWondrousItems
+ [4]  groupSFMinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [3]  groupSFMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [5]  groupSFMajorWondrousItems
+end  
+
+
 

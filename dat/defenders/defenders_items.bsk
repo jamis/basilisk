@@ -1,3 +1,5 @@
+/*Modified by Shaun Gierent*/
+
 /* new magic armour abilities */
 
 asaAbsorbing ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
@@ -115,94 +117,124 @@ asaUndeadDisrupting ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .sources sourcesDefendersoftheFaith
 end
 
-category groupMinorShieldSpecialAbilities
+category groupDotFMinorShieldSpecialAbilities
   [10] asaBlinding
   [10] asaCalled
+  [ 1] magtRollAgain
+end
+
+category groupDotFMinorArmorSpecialAbilities
+  [10] asaBlinding
+  [10] asaCalled
+  [ 1] magtRollAgain
+end
+
+category groupDotFMediumArmorSpecialAbilities
+  [10] asaAbsorbing
+  [10] asaAntipathy
+  [10] asaAquatic
+  [10] asaAquaticWB
+  [10] asaCharming
+  [10] asaCommand
+  [10] asaDaylight
+  [10] asaEnergyDrain
+  [10] asaEtherealSO
+  [10] asaEtherealAC
+  [10] asaFearsome
+  [10] asaFeathered
+  [10] asaIce
+  [10] asaSacred
+  [10] asaSpeed
+  [10] asaUndeadControlling
+  [10] asaUndeadDisrupting
+  [10] magtRollAgain
+end
+
+category groupDotFMediumShieldSpecialAbilities
+  [10] asaAbsorbing
+  [10] asaAntipathy
+  [10] asaAquatic
+  [10] asaAquaticWB
+  [10] asaCharming
+  [10] asaCommand
+  [10] asaDaylight
+  [10] asaEnergyDrain
+  [10] asaEtherealSO
+  [10] asaEtherealAC
+  [10] asaFearsome
+  [10] asaFeathered
+  [10] asaIce
+  [10] asaSacred
+  [10] asaSpeed
+  [10] asaUndeadControlling
+  [10] asaUndeadDisrupting
+  [10] magtRollAgain
+end
+
+category groupDotFMajorArmorSpecialAbilities
+  [5] asaAbsorbing
+  [5] asaAntipathy
+  [5] asaAquatic
+  [5] asaAquaticWB
+  [5] asaCharming
+  [5] asaCommand
+  [5] asaDaylight
+  [5] asaEnergyDrain
+  [5] asaEtherealSO
+  [5] asaEtherealAC
+  [5] asaFearsome
+  [5] asaFeathered
+  [5] asaIce
+  [5] asaSacred
+  [5] asaSpeed
+  [5] asaUndeadControlling
+  [5] asaUndeadDisrupting
+  [5] magtRollAgain
+end
+
+category groupDotFMajorShieldSpecialAbilities
+  [5] asaAbsorbing
+  [5] asaAntipathy
+  [5] asaAquatic
+  [5] asaAquaticWB
+  [5] asaCharming
+  [5] asaCommand
+  [5] asaDaylight
+  [5] asaEnergyDrain
+  [5] asaEtherealSO
+  [5] asaEtherealAC
+  [5] asaFearsome
+  [5] asaFeathered
+  [5] asaIce
+  [5] asaSacred
+  [5] asaSpeed
+  [5] asaUndeadControlling
+  [5] asaUndeadDisrupting
+  [5] magtRollAgain
 end
 
 category groupMinorArmorSpecialAbilities
-  [10] asaBlinding
-  [10] asaCalled
+  [2] groupDotFMinorArmorSpecialAbilities
 end
 
 category groupMediumArmorSpecialAbilities
-  [10] asaAbsorbing
-  [10] asaAntipathy
-  [10] asaAquatic
-  [10] asaAquaticWB
-  [10] asaCharming
-  [10] asaCommand
-  [10] asaDaylight
-  [10] asaEnergyDrain
-  [10] asaEtherealSO
-  [10] asaEtherealAC
-  [10] asaFearsome
-  [10] asaFeathered
-  [10] asaIce
-  [10] asaSacred
-  [10] asaSpeed
-  [10] asaUndeadControlling
-  [10] asaUndeadDisrupting
-end
-
-category groupMediumShieldSpecialAbilities
-  [10] asaAbsorbing
-  [10] asaAntipathy
-  [10] asaAquatic
-  [10] asaAquaticWB
-  [10] asaCharming
-  [10] asaCommand
-  [10] asaDaylight
-  [10] asaEnergyDrain
-  [10] asaEtherealSO
-  [10] asaEtherealAC
-  [10] asaFearsome
-  [10] asaFeathered
-  [10] asaIce
-  [10] asaSacred
-  [10] asaSpeed
-  [10] asaUndeadControlling
-  [10] asaUndeadDisrupting
+  [17] groupDotFMediumArmorSpecialAbilities
 end
 
 category groupMajorArmorSpecialAbilities
-  [5] asaAbsorbing
-  [5] asaAntipathy
-  [5] asaAquatic
-  [5] asaAquaticWB
-  [5] asaCharming
-  [5] asaCommand
-  [5] asaDaylight
-  [5] asaEnergyDrain
-  [5] asaEtherealSO
-  [5] asaEtherealAC
-  [5] asaFearsome
-  [5] asaFeathered
-  [5] asaIce
-  [5] asaSacred
-  [5] asaSpeed
-  [5] asaUndeadControlling
-  [5] asaUndeadDisrupting
+  [17] groupDotFMajorArmorSpecialAbilities
+end
+
+category groupMinorShieldSpecialAbilities
+  [2] groupDotFMinorShieldSpecialAbilities
+end
+
+category groupMediumShieldSpecialAbilities
+  [17] groupDotFMediumShieldSpecialAbilities
 end
 
 category groupMajorShieldSpecialAbilities
-  [5] asaAbsorbing
-  [5] asaAntipathy
-  [5] asaAquatic
-  [5] asaAquaticWB
-  [5] asaCharming
-  [5] asaCommand
-  [5] asaDaylight
-  [5] asaEnergyDrain
-  [5] asaEtherealSO
-  [5] asaEtherealAC
-  [5] asaFearsome
-  [5] asaFeathered
-  [5] asaIce
-  [5] asaSacred
-  [5] asaSpeed
-  [5] asaUndeadControlling
-  [5] asaUndeadDisrupting
+  [17] groupDotFMajorShieldSpecialAbilities
 end
 
 /* specific shields & armours */
@@ -236,17 +268,27 @@ astSplintMailofStability in ( groupSpecificArmors )
   .sources sourcesDefendersoftheFaith
 end
 
-category groupMediumSpecificArmor
+category groupDotFMediumSpecificArmors
   [10] astBlueArmor
   [10] astEquerrysArmor
   [10] astSplintMailofStability
 end
 
-category groupMajorSpecificArmor
+category groupDotFMajorSpecificArmors
   [10] astBlueArmor
   [10] astGoldenApron
   [10] astRedDragonArmor
 end
+
+category groupMediumSpecificArmors
+  [3]  groupDOTFMediumSpecificArmors
+end
+
+category groupMajorSpecificArmors
+  [3]  groupDOTFMajorSpecificArmors
+end
+
+
 
 /* specific Weapons */
 
@@ -281,18 +323,26 @@ wstGoadofMastery
   .sources sourcesDefendersoftheFaith
 end
 
-category groupMediumSpecificWeapons
+category groupDotFMediumSpecificWeapons
   [3] wstArrowofFarsight
   [3] wstBattleRod
   [3] wstBoltofBattering
   [3] wstGoadofMastery
 end
 
-category groupMajorSpecificWeapons
+category groupDotFMajorSpecificWeapons
   [4] wstArrowofFarsight
   [4] wstBattleRod
   [4] wstBoltofBattering
   [4] wstGoadofMastery
+end
+
+category groupMediumSpecificWeapons
+  [4]  groupDotFMediumSpecificWeapons
+end
+
+category groupMajorSpecificWeapons
+  [4]  groupDoTFMajorSpecificWeapons
 end
 
 /* wondrous Items */
@@ -388,12 +438,12 @@ wondrousSacredScabbard
   .sources sourcesDefendersoftheFaith
 end
 
-category groupMinorWondrousItems
+category groupDotFMinorWondrousItems
   wondrousGreaterHolySymbol
   wondrousSacredScabbard
 end
 
-category groupMediumWondrousItems
+category groupDotFMediumWondrousItems
   wondrousArmofNyr
   wondrousBlackPatch
   wondrousBracersofBinding
@@ -401,7 +451,7 @@ category groupMediumWondrousItems
   wondrousMaskoftheDead
 end
 
-category groupMajorWondrousItems
+category groupDotFMajorWondrousItems
   wondrousAmuletofMemory
   wondrousBowlofContemplation
   wondrousGateAmulet
@@ -409,3 +459,16 @@ category groupMajorWondrousItems
   wondrousMarkofApostasy
   wondrousMirrorofRevelation
 end
+
+category groupMinorWondrousItems
+ [2]  groupDotFMinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [5]  groupDotFMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [6]  groupDotFMajorWondrousItems
+end  
+

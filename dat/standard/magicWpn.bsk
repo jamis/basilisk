@@ -1100,11 +1100,13 @@ rule rSelectMagicWeapon( weaponMagnitude options )
     totalBonus = i.magnitude;
 
     if abilityCnt gt 0 then 
-      c = duplicate( c );
+      tmp = NewCategory();
+      rDeepCopyWithOptions( tmp, c, options );
+      c = tmp;
       newItem.abilities = NewCategory();
 
       while abilityCnt gt 0 do
-        a = rCascadeLookupWithOptions( c, options );
+        a = any( c );
         abilityCnt = abilityCnt - 1;
 
         if a eq null or Count(c) lt 2 then
@@ -1113,7 +1115,7 @@ rule rSelectMagicWeapon( weaponMagnitude options )
           abilityCnt = abilityCnt + 2;
         else
           remove( c, a );
-          valid =  rThingMatchesCriteria( a, options ) and rAlignmentsCompatible( newItem, a );
+          valid = rAlignmentsCompatible( newItem, a );
           if valid then
             valid = a.marketPriceWeaponModifier + totalBonus le options.optMaxVirtualWeaponBonus;
           end
