@@ -1,3 +1,10 @@
+version 1.02
+	Documentation Changes:
+		Added tutorial3, tutorial4, and tutorial5, submitted by Richard Avery.
+	Data Changes:
+		Added optAlwaysCursed attribute to attributes.bsk.
+		Added check for optAlwaysCursed in rItemDeservesCurse in utilities.bsk.
+
 version 1.01
   Makefile changes:
     Added a RUNLIBS variable.  Swapped order of -lbasilisk and -lm so that
