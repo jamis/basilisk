@@ -23,6 +23,8 @@ attribute optMaxTreasureValue           number
 attribute optFillDifferenceWithCoins    boolean
 attribute optUseSources                 category
 attribute optAlwaysIntelligent          boolean
+attribute optExcludeGems                boolean
+attribute optExcludeArt                 boolean
 
 // ----------------------------- string attributes ------------------------
 attribute name                          string
