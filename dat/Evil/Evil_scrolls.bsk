@@ -1,0 +1,164 @@
+category groupEvilArcaneScrollSpells1
+   spellSummonDismiss1
+  
+end
+
+category groupEvilArcaneScrollSpells2
+   spellSummonDismiss2
+   spellIronFist
+end
+
+category groupEvilArcaneScrollSpells3
+   spellBelaroshsLaw
+   spellSummonDismiss3
+   spellHideousAppearance
+   spellShadowCloak
+   spellSummonShadowRaven
+   spellUndeadAttraction
+   spellWakingNightmares
+end
+
+category groupEvilArcaneScrollSpells4
+   spellSummonDismiss4
+end
+
+category groupEvilArcaneScrollSpells5
+   spellSummonDismiss5
+   spellSpiritLink
+end
+
+category groupEvilArcaneScrollSpells6
+   spellSummonDismiss6
+   spellBonewand
+   spellNecromanticChannel
+end
+
+category groupEvilArcaneScrollSpells7
+   spellSummonDismiss7
+end
+
+category groupEvilArcaneScrollSpells8
+   spellSummonDismiss8
+end
+
+category groupEvilArcaneScrollSpells9
+   spellSummonDismiss9
+   spellDimensionalRupture
+end
+
+category groupEvilDivineScrollSpells1
+   spellSummonDismiss1
+end
+
+category groupEvilDivineScrollSpells2
+   spellSummonDismiss2
+   spellBoneSpikes
+   spellIllOmen
+end
+
+category groupEvilDivineScrollSpells3
+   spellSummonDismiss3
+   spellSummonShadowRaven
+   spellUndeadAttraction
+end
+
+category groupEvilDivineScrollSpells4
+   spellBelaroshsLaw
+   spellSummonDismiss4
+   spellWounding
+end
+
+category groupEvilDivineScrollSpells5
+   spellSummonDismiss5
+end
+
+category groupEvilDivineScrollSpells6
+   spellSummonDismiss6
+end
+
+category groupEvilDivineScrollSpells7
+   spellSummonDismiss7
+end
+
+category groupEvilDivineScrollSpells8
+   spellSummonDismiss8
+   spellDisruptSoul
+end
+
+category groupEvilDivineScrollSpells9
+   spellSummonDismiss9
+end
+
+category groupArcaneScrollSpells1
+  [1] groupEvilArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [2] groupEvilArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [7] groupEvilArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [1] groupEvilArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [2] groupEvilArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [3] groupEvilArcaneScrollSpells6
+end
+
+category groupArcaneScrollSpells7
+  [1] groupEvilArcaneScrollSpells7
+end
+
+category groupArcaneScrollSpells8
+  [1] groupEvilArcaneScrollSpells8
+end
+
+category groupArcaneScrollSpells9
+  [2] groupEvilArcaneScrollSpells9
+end
+
+category groupDivineScrollSpells1
+  [1] groupEvilDivineScrollSpells1
+end
+
+category groupDivineScrollSpells2
+  [3] groupEvilDivineScrollSpells2
+end
+
+category groupDivineScrollSpells3
+  [3] groupEvilDivineScrollSpells3
+end
+
+category groupDivineScrollSpells4
+  [3] groupEvilDivineScrollSpells4
+end
+
+category groupDivineScrollSpells5
+  [1] groupEvilDivineScrollSpells5
+end
+
+category groupDivineScrollSpells6
+  [1] groupEvilDivineScrollSpells6
+end
+
+category groupDivineScrollSpells7
+  [1] groupEvilDivineScrollSpells7
+end
+
+category groupDivineScrollSpells8
+  [2] groupEvilDivineScrollSpells8
+end
+
+category groupDivineScrollSpells9
+  [1] groupEvilDivineScrollSpells9
+end
+
+

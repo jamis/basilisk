@@ -1,0 +1,9 @@
+SourceNecromancy in ( sourcesNecromancy groupAllSources )
+  .name "Encyclopaedia Arcane: Necromancy"
+end
+
+#include "Necro_spells.bsk"
+#include "Necro_scrolls.bsk"
+#include "Necro_items.bsk"
+
+

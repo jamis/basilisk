@@ -1,0 +1,27 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dragon Magazine issue #285, converted to Basilisk format by
+ * Shaun Gierent
+ * --------------------------------------------------------------------- */
+
+sourceDragon285 ( sourcesDragon285 groupAllSources )
+  .name "Dragon 285"
+end
+
+/* Four in Darkness, p.44-47 */
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellWaterBurst { "Water Burst" schEvocation $ $ sourcesDragon285 }
+  spellStoneMissles { "Stone Missles" schEvocation $ $ sourcesDragon285 }
+  spellBlastofAir { "Blast of Air" schEvocation $ $ sourcesDragon285 }
+end
+
+category groupDragon285ArcaneScrollSpells1
+  [ 4] spellWaterBurst
+  [ 4] spellStoneMissles
+  [ 4] spellBlastofAir
+end
+
+category groupArcaneScrollSpells1
+  [3] groupDragon285ArcaneScrollSpells1
+end
+

@@ -1,0 +1,99 @@
+/*Compiled by Shaun Gierent*/
+
+/* wondrous Items */
+
+wondrousGlovesofTunneling
+  .name "Gloves of Tunneling"
+  .cost 3000 gp
+  .canBeIntelligent yes
+  .sources sourcesDungeons
+end
+
+wondrousKanegorsInstantWall
+  .name "Kanegor's Instant Wall"
+  .cost 1000 gp
+  .canBeIntelligent yes
+  .sources sourcesDungeons
+end
+
+wondrousLightstepBoots
+  .name "Lightstep Boots"
+  .cost 1000 gp
+  .canBeIntelligent yes
+  .sources sourcesDungeons
+end
+
+wondrousMyrrsMagicalMarblesCatsEyeMarbles
+  .name "Myrr's Magical Marbles (Cat's Eye Marbles)"
+  .cost 1500 gp
+  .canBeIntelligent yes
+  .sources sourcesDungeons
+end
+
+wondrousMyrrsMagicalMarblesFlamecatcherMarbles
+  .name "Myrr's Magical Marbles (Flamecatcher Marbles)"
+  .cost 1500 gp
+  .canBeIntelligent yes
+  .sources sourcesDungeons
+end
+
+wondrousMyrrsMagicalMarblesFootseekerMarbles
+  .name "Myrr's Magical Marbles (Footseeker Marbles)"
+  .cost 1500 gp
+  .canBeIntelligent yes
+  .sources sourcesDungeons
+end
+
+wondrousMyrrsMagicalMarblesPathfinderMarbles
+  .name "Myrr's Magical Marbles (Pathfinder Marbles)"
+  .cost 1500 gp
+  .canBeIntelligent yes
+  .sources sourcesDungeons
+end
+
+wondrousMyrrsMagicalMarblesSteelMarbles
+  .name "Myrr's Magical Marbles (Steel Marbles)"
+  .cost 1500 gp
+  .canBeIntelligent yes
+  .sources sourcesDungeons
+end
+
+wondrousRavenwingsExtensibleRope
+  .name "Ravenwing's Extensible Rope"
+  .cost 5000 gp
+  .canBeIntelligent yes
+  .sources sourcesDungeons
+end
+
+wondrousScrollofMapping
+  .name "Scroll of Mapping"
+  .cost 500 gp
+  .canBeIntelligent yes
+  .sources sourcesDungeons
+end
+
+wondrousStoneofMuting
+  .name "Stone of Muting"
+  .cost 1500 gp
+  .canBeIntelligent yes
+  .sources sourcesDungeons
+end
+
+category groupDungeonsMinorWondrousItems
+  wondrousGlovesofTunneling
+  wondrousKanegorsInstantWall
+  wondrousLightstepBoots
+  wondrousMyrrsMagicalMarblesCatsEyeMarbles
+  wondrousMyrrsMagicalMarblesFlamecatcherMarbles
+  wondrousMyrrsMagicalMarblesFootseekerMarbles
+  wondrousMyrrsMagicalMarblesPathfinderMarbles
+  wondrousMyrrsMagicalMarblesSteelMarbles
+  wondrousRavenwingsExtensibleRope
+  wondrousScrollofMapping
+  wondrousStoneofMuting
+end
+
+category groupMinorWondrousItems
+ [11]  groupDungeonsMinorWondrousItems
+end  
+

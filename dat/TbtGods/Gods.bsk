@@ -1,0 +1,12 @@
+/* --------------------------------------------------------------------- *
+ * Data from Touched by the Gods, 
+ * converted to Basilisk format by
+ * Shaun Gierent
+ * --------------------------------------------------------------------- */
+SourceTouchedbytheGods in ( sourcesTouchedbytheGods groupAllSources )
+  .name "Touched by the Gods"
+end
+
+#include "Gods_items.bsk"
+#include "Gods_spells.bsk"
+

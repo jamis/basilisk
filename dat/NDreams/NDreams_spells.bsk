@@ -1,0 +1,23 @@
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellCallReaver { "Call Reaver" schConjuration $ $ sourcesNightmaresDreams }
+end
+
+category groupNDArcaneScrollSpells4
+ spellCallReaver
+end
+
+category groupNDDivineScrollSpells4
+ spellCallReaver
+end
+
+category groupArcaneScrollSpells4
+  [1] groupNDArcaneScrollSpells4
+end
+
+category groupDivineScrollSpells4
+  [1] groupNDDivineScrollSpells4
+end
+
+
+
+

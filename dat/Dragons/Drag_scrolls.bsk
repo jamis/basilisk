@@ -1,0 +1,137 @@
+category groupDragonsArcaneScrollSpells1
+   spellFindLair
+   spellWisdomoftheIvoryEmperor
+end
+
+category groupDragonsArcaneScrollSpells2
+   spellDragonMark
+end
+
+category groupDragonsArcaneScrollSpells3
+   spellEstivation
+   spellHibernation
+   spellSharingtheAncientLore
+end
+
+category groupDragonsArcaneScrollSpells4
+   spellBreathoftheGreatWyrm
+   spellDeathCurse
+   spellScourtheEarth
+end
+
+category groupDragonsArcaneScrollSpells5
+   spellSecretoftheGrave
+   spellSmotherMagic
+end
+
+category groupDragonsArcaneScrollSpells6
+   spellBlessingoftheAges
+   spellBurdenoftheFathersSins
+   spellTwisttheLand
+end
+
+category groupDragonsArcaneScrollSpells7
+   spellLockDragon
+   spellRetainNaturalArmor
+   spellRetainSupernaturalPowers
+end
+
+category groupDragonsArcaneScrollSpells8
+   spellShapeoftheTrueSoul
+end
+
+category groupDragonsArcaneScrollSpells9
+   spellBecomeDragon
+   spellDroughtofEternitysWell
+   spellMagicalHusbandry
+end
+
+category groupDragonsDivineScrollSpells1
+   spellEstivation
+   spellHibernation
+end
+
+category groupDragonsDivineScrollSpells3
+   spellLesserDragonshield
+end
+
+category groupDragonsDivineScrollSpells4
+   spellBlessingoftheAges
+   spellDragonshield
+   spellSouloftheSlayer
+end
+
+category groupDragonsDivineScrollSpells5
+   spellGreaterDragonshield
+   spellSmotherMagic
+end
+
+category groupDragonsDivineScrollSpells6
+   spellTwisttheLand
+end
+
+category groupDragonsDivineScrollSpells9
+   spellMagicalHusbandry
+end
+
+category groupArcaneScrollSpells1
+  [2] groupDragonsArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [1] groupDragonsArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [3] groupDragonsArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [3] groupDragonsArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [2] groupDragonsArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [3] groupDragonsArcaneScrollSpells6
+end
+
+category groupArcaneScrollSpells7
+  [3] groupDragonsArcaneScrollSpells7
+end
+
+category groupArcaneScrollSpells8
+  [1] groupDragonsArcaneScrollSpells8
+end
+
+category groupArcaneScrollSpells9
+  [3] groupDragonsArcaneScrollSpells9
+end
+
+category groupDivineScrollSpells1
+  [2] groupDragonsDivineScrollSpells1
+end
+
+category groupDivineScrollSpells3
+  [1] groupDragonsDivineScrollSpells3
+end
+
+category groupDivineScrollSpells4
+  [3] groupDragonsDivineScrollSpells4
+end
+
+category groupDivineScrollSpells5
+  [2] groupDragonsDivineScrollSpells5
+end
+
+category groupDivineScrollSpells6
+  [1] groupDragonsDivineScrollSpells6
+end
+
+category groupDivineScrollSpells9
+  [1] groupDragonsDivineScrollSpells9
+end
+
+

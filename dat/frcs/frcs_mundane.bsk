@@ -1,0 +1,25 @@
+template in ( groupMundaneItems ) { name cost sources }
+  miAlchemicalsleepgas { "Alchemical sleep gas"  30 gp sourcesFrcs }
+  miDisappearingink { "Disappearing ink"  5 gp sourcesFrcs }
+  miHerbsCassil { "Herbs, Cassil"  1 gp sourcesFrcs }
+  miHerbsNararoot { "Herbs, Nararoot"  2 sp sourcesFrcs }
+  miPowderhorn { "Powderhorn"  55 gp sourcesFrcs }
+  miPowderkeg { "Powderkeg"  400 gp sourcesFrcs }
+  miScentbreaker { "Scentbreaker"  5 gp sourcesFrcs }
+end
+
+category groupFrcsItems
+  [ 5] { .magnitude 1  .type miAlchemistsMercy }
+  [ 5] { .magnitude 1  .type miAlchemicalsleepgas }
+  [ 5] { .magnitude 1  .type miDisappearingink }
+  [ 5] { .magnitude 1  .type miHerbsCassil }
+  [ 5] { .magnitude 1  .type miHerbsNararoot }
+  [ 3] { .magnitude 1  .type miPowderhorn }
+  [ 1] { .magnitude 1  .type miPowderkeg }
+  [ 5] { .magnitude 1  .type miScentbreaker }
+end
+
+category groupAlchemicalItems
+  [ 5] groupFrcsItems
+end
+

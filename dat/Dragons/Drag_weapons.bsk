@@ -1,0 +1,30 @@
+/* Dragons Compiled by Shaun Gierent */
+
+template in ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
+  weaponArrowWingripper { "Arrow, Wingripper"  3 gp  1d8  20  2  1.5 lb  small sourcesDragons }
+  weaponRamSpear { "Ram Spear"  50 gp  3d6  20  2  30 lb  large sourcesDragons }
+  weaponWingblade { "Wingblade"  15 gp  1d6  19  2  2 lb  small sourcesDragons }
+end
+
+// -------------------------------------------------------------------------
+// Weapon Categories
+// -------------------------------------------------------------------------
+
+category groupExoticWeapon
+  weaponRamSpear
+  weaponWingblade
+end
+
+category groupRangedWeapon
+  weaponArrowWingripper
+end
+
+category groupPiercingWeapon
+  weaponRamspear
+end
+
+category groupSlashingWeapon
+  weaponWingblade
+end
+
+

@@ -1,0 +1,137 @@
+/* --------------------------------------------------------------------- *
+ * Data from Mongoose Publishing's "Encylopaedia Arcana: Demonology", 
+ * converted to Basilisk format by Shaun Gierent
+ * --------------------------------------------------------------------- */
+/* weapons */
+
+wstDemonsBane
+  .name "Demon's Bane"
+  .prototype weaponDagger
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +5 }
+             { .type btEnhancement .aspect asDamage .magnitude +5 } )
+  .cost 25000 gp
+  .sources sourcesDemon
+end
+
+category groupDemonMediumSpecificWeapons
+  wstDemonsBane
+end
+
+category groupDemonMajorSpecificWeapons
+  wstDemonsBane
+end
+
+category groupMediumSpecificWeapons
+  [1]  groupDemonMediumSpecificWeapons
+end
+
+category groupMajorSpecificWeapons
+  [1]  groupDemonMajorSpecificWeapons
+end
+
+/* rings */
+
+ringDemonicControl ( groupRings )
+  .name "Demonic Control"
+  .cost 10000 gp
+  .sources sourcesDemon
+end
+
+ringDemonicObedience ( groupRings )
+  .name "Demonic Obedience"
+  .cost 25000 gp
+  .sources sourcesDemon
+end
+
+category groupDemonRingsMinor
+   ringDemonicControl
+end
+
+category groupDemonRingsMedium
+   ringDemonicControl
+   ringDemonicObedience
+end
+
+category groupDemonRingsMajor
+   ringDemonicObedience
+end
+
+category groupRingsMinor
+ [1] groupDemonRingsMinor
+end
+
+
+category groupRingsMedium 
+ [2] groupDemonRingsMedium
+end
+
+
+category groupRingsMajor
+ [1] groupDemonRingsMajor
+end
+
+/* rods */
+
+rodSummoning
+  .name "Summoning"
+  .cost 32000 gp
+  .sources sourcesDemon
+  .needPrefix true
+end
+
+category groupDemonMediumRods
+   rodSummoning
+end
+
+category groupDemonMajorRods
+   rodSummoning
+end
+
+category groupMediumRods
+ [1]  groupDemonMediumRods
+end
+
+category groupMajorRods
+ [1]  groupDemonMajorRods
+end  
+
+/* wondrous items */
+
+wondrousAmuletofMentalFortitude
+  .name "Amulet of Mental Fortitude"
+  .cost 25000 gp
+  .canBeIntelligent yes
+  .sources sourcesDemon
+end
+
+wondrousMaskofDisguise
+  .name "Mask of Disguise"
+  .cost 30000 gp
+  .canBeIntelligent yes
+  .sources sourcesDemon
+end
+
+wondrousSoulGem
+  .name "Soul Gem"
+  .cost 50000 gp
+  .canBeIntelligent yes
+  .sources sourcesDemon
+end
+
+category groupDemonMediumWondrousItems
+  wondrousAmuletofMentalFortitude
+end
+
+category groupDemonMajorWondrousItems
+  wondrousMaskofDisguise
+  wondrousSoulGem
+end
+
+category groupMediumWondrousItems
+ [1]  groupDemonMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [2]  groupDemonMajorWondrousItems
+end  
+

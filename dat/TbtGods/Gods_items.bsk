@@ -1,0 +1,148 @@
+/*Touched by the Gods Items compiled by Shaun Gierent*/
+
+/* Weapon special abilities */
+
+wsaTrueSlaying
+  .name "True Slaying"
+  .marketPriceArmorModifier +3
+  .sources sourcesTouchedbytheGods
+end
+
+category groupTbtGodsMeleeWeaponMediumSpecialAbilities
+  [10] wsaTrueSlaying
+  [ 5] mwgtRollAgain
+end
+
+category groupTbtGodsMeleeWeaponMajorSpecialAbilities
+  [2] wsaTrueSlaying
+  [20] mwgtRollAgain
+end
+
+category groupTbtGodsRangedWeaponMediumSpecialAbilities
+  [15] wsaTrueSlaying
+  [ 2] mwgtRollAgain
+end
+
+category groupTbtGodsRangedWeaponMajorSpecialAbilities
+  [10] wsaTrueSlaying
+  [ 2] mwgtRollAgain
+end
+
+category groupMeleeWeaponMediumSpecialAbilities
+  [1] 	groupTbtGodsMeleeWeaponMediumSpecialAbilities
+end
+
+category groupMeleeWeaponMajorSpecialAbilities
+  [1] 	groupTbtGodsMeleeWeaponMajorSpecialAbilities
+end
+
+category groupRangedWeaponMediumSpecialAbilities
+  [1] 	groupTbtGodsRangedWeaponMediumSpecialAbilities
+end
+
+category groupRangedWeaponMajorSpecialAbilities
+  [1] 	groupTbtGodsRangedWeaponMajorSpecialAbilities
+end
+
+/* specific Weapons */
+
+wstTheSwordofLight
+  .name "The Sword of Light"
+  .prototype weaponLongsword
+  .cost 125000 gp
+  .sources sourcesTouchedbytheGods
+end
+
+wstOttisPickaxe
+  .name "Ottis' Pickaxe"
+  .prototype weaponPickaxe
+  .cost 87864 gp
+  .sources sourcesTouchedbytheGods
+end
+
+wstScreamingScimitar
+  .name "Screaming Scimitar"
+  .prototype weaponScimitar
+  .cost 98315 gp
+  .sources sourcesTouchedbytheGods
+end
+
+category groupTbtGodsMajorSpecificWeapons
+  [5]  wstTheSwordofLight
+  [5]  wstOttisPickaxe
+  [5]  wstScreamingScimitar
+end
+
+category groupMajorSpecificWeapons
+  [3]  groupTbtGodsMajorSpecificWeapons
+end
+
+/* Potions */
+template in ( groupPotions ) { name cost sources }
+  potionMakkutPoison { "Makk'ut Poison"  100 gp sourcesTouchedbytheGods }
+end
+
+category groupTbtGodsPotionsMinor
+  [ 1] potionMakkutPoison
+end
+
+category groupPotionsMinor
+ [ 1] groupTbtGodsPotionsMinor
+end
+
+/* wondrous Items */
+
+wondrousWolfsPaw
+  .name "Wolf's Paw"
+  .cost  33000 gp
+  .canBeIntelligent yes
+  .sources sourcesTouchedbytheGods
+end
+
+wondrousAuraGem
+  .name "Aura Gem"
+  .cost  14000 gp
+  .canBeIntelligent yes
+  .sources sourcesTouchedbytheGods
+end
+
+wondrousBloodhoundsNose
+  .name "Bloodhound's Nose"
+  .cost  8000 gp
+  .canBeIntelligent yes
+  .sources sourcesTouchedbytheGods
+end
+
+wondrousDiscriminatingEar
+  .name "Discriminating Ear"
+  .cost  22000 gp
+  .canBeIntelligent yes
+  .sources sourcesTouchedbytheGods
+end
+
+wondrousSilverTongue
+  .name "Silver Tongue"
+  .cost  16000 gp
+  .canBeIntelligent yes
+  .sources sourcesTouchedbytheGods
+end
+
+category groupTbtGodsMediumWondrousItems
+  [5] wondrousAuraGem
+  [5] wondrousBloodhoundsNose
+  [5] wondrousDiscriminatingEar
+  [5] wondrousSilverTongue
+end
+
+category groupTbtGodsMajorWondrousItems
+  [5] wondrousWolfsPaw
+end
+
+category groupMediumWondrousItems
+ [4]  groupTbtGodsMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [1]  groupTbtGodsMajorWondrousItems
+end
+

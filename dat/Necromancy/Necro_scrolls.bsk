@@ -1,0 +1,95 @@
+category groupNecromancyArcaneScrollSpells1
+   spellAnimateSkeletonN
+   spellChillBloodN
+   spellDeathsShadow
+   spellProtectionfromUndead
+   spellWoundN
+end
+
+category groupNecromancyArcaneScrollSpells2
+   spellAnimateZombie
+   spellBleedingWound
+   spellBonesofSteel
+   spellSensoryLink
+   spellVoiceofDeathlyWhispers
+   spellVisageoftheDead
+end
+
+category groupNecromancyArcaneScrollSpells3
+   spellInvigorationofUndeath
+   spellShadowHorror
+   spellShadowMastery
+   spellStrikeBarren
+   spellUndeadConduit
+end
+
+category groupNecromancyArcaneScrollSpells4
+   spellGhoulishCurse
+   spellGraftWeapons
+   spellWallofBoneN
+end
+
+category groupNecromancyArcaneScrollSpells5
+   spellAnnihilation
+   spellRecallSpirit
+   spellShriekingMissle
+   spellSkeletalSpikes
+end
+
+category groupNecromancyArcaneScrollSpells6
+   spellLongevity
+   spellThresholdofUnlife
+   spellUnfetterUndead
+end
+
+category groupNecromancyArcaneScrollSpells7
+   spellRaiseDeathHulk
+end
+
+category groupNecromancyArcaneScrollSpells8
+   spellFleshMadeFoul
+   spellShadowSkin
+end
+
+category groupNecromancyArcaneScrollSpells9
+   spellRaiseCity
+   spellRaiseDeathFleet
+end
+
+category groupArcaneScrollSpells1
+  [5] groupNecromancyArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [6] groupNecromancyArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [5] groupNecromancyArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [3] groupNecromancyArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [4] groupNecromancyArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [3] groupNecromancyArcaneScrollSpells6
+end
+
+category groupArcaneScrollSpells7
+  [1] groupNecromancyArcaneScrollSpells7
+end
+
+category groupArcaneScrollSpells8
+  [2] groupNecromancyArcaneScrollSpells8
+end
+
+category groupArcaneScrollSpells9
+  [2] groupNecromancyArcaneScrollSpells9
+end
+
+

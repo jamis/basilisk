@@ -1,0 +1,28 @@
+/* --------------------------------------------------------------------- *
+ * Data from "Monsters of Faerun", 
+  converted to Basilisk format by Shaun Gierent
+ * --------------------------------------------------------------------- */
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellCreateChosenOne { "Create Chosen One" schAlteration $ $ sourcesMonstersOfFaerun }
+  spellCreateCrawlingClaw { "Create Crawling Claw" schTransmutation $ $ sourcesMonstersOfFaerun }
+  spellCreateDarkenbeast { "Create Darkenbeast" schTransmutation $ $ sourcesMonstersOfFaerun }
+end
+
+category groupMonstersofFaerunArcaneScrollSpells3
+  [4]  spellCreateCrawlingClaw
+end
+
+category groupMonstersofFaerunArcaneScrollSpells5
+  [4]  spellCreateChosenOne
+  [4]  spellCreateDarkenbeast
+end
+
+category groupArcaneScrollSpells3
+  [1] groupMonstersofFaerunArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells5
+  [2] groupMonstersofFaerunArcaneScrollSpells5
+end
+

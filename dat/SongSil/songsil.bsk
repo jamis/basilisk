@@ -1,0 +1,8 @@
+SourceSongSil in ( sourcesSongSil groupAllSources )
+  .name "Song and Silence"
+end
+
+#include "SongSil_items.bsk"
+#include "SongSil_spells.bsk"
+#include "SongSil_scrolls.bsk"
+

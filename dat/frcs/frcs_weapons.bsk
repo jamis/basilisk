@@ -1,0 +1,71 @@
+template in ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
+  weaponCutlass { "Cutlass" 15 gp 1d6 19 2 3 lb small sourcesFRCS }
+  weaponSaber { "Saber" 20 gp 1d8 19 2 4 lb medium sourcesFRCS }
+  weaponMaul { "Maul" 15 gp 1d10 20 3 20 lb large sourcesFRCS }
+  weaponBladeboot { "Blade boot" 15 gp 1d4 19 2 1 lb tiny sourcesFRCS }
+  weaponClawbracer { "Claw bracer" 30 gp 1d4 19 2 2 lb tiny sourcesFRCS }
+  weaponKhopesh { "Khopesh" 20 gp 1d8 19 2 12 lb medium sourcesFRCS }
+  weaponScourge { "Scourge" 20 gp 1d8 20 2 2 lb medium sourcesFRCS }
+  weaponChakram { "Chakram" 15 gp 1d4 20 3 2 lb small sourcesFRCS }
+end
+
+weaponChakram
+  .rangeIncrement 30 ft
+end
+
+
+category groupExoticWeapon
+	weaponBladeboot
+	weaponClawbracer
+	weaponKhopesh
+	weaponScourge
+end
+
+category groupMeleeWeapon
+	weaponCutlass
+	weaponSaber
+	weaponMaul
+end
+
+category groupRangedWeapon
+	weaponChakram
+end
+
+category groupThrownWeapon
+	weaponChakram
+end
+category groupBludgeoningWeapon
+	weaponMaul
+end
+
+category groupPiercingWeapon
+	weaponCutlass
+	weaponSaber
+	weaponBladeboot
+	weaponClawbracer
+end
+
+category groupSlashingWeapon
+	weaponCutlass
+	weaponSaber
+	weaponKhopesh
+	weaponScourge
+	weaponChakram
+end
+
+
+category groupFrcsUncommonWeapons
+  [ 1] weaponCutlass
+  [ 1] weaponSaber
+  [ 1] weaponMaul
+  [ 1] weaponBladeboot
+  [ 1] weaponClawbracer
+  [ 1] weaponKhopesh
+  [ 1] weaponScourge
+  [ 1] weaponChakram
+end
+
+category groupUncommonWeapons
+ [8]  groupFrcsUncommonWeapons
+end
+

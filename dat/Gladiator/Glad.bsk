@@ -1,0 +1,11 @@
+/* data submitted by Shaun Gierent*/
+
+sourceGladiator ( sourcesGladiator groupAllSources )
+  .name "Gladiator: Sands of Death"
+end
+
+#include "Glad_weapons.bsk"
+#include "Glad_mundane.bsk"
+
+
+

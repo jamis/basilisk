@@ -1,0 +1,79 @@
+category groupFrcsArcaneScrollSpells1
+  [ 4] spellScatterspray
+end
+
+category groupFrcsArcaneScrollSpells2
+  [ 4] spellAganazzarsScorcher
+  [ 4] spellClawsofDarkness
+  [ 4] spellCreateMagicTattoo
+  [ 4] spellEaglesSplendor
+  [ 4] spellShadowMask
+  [ 4] spellShadowSpray
+  [ 4] spellSnillocsSnowballSwarm
+end
+
+category groupFrcsArcaneScrollSpells3
+  [ 4] spellAnalyzePortal
+  [ 4] spellBlacklight
+  [ 4] spellFlashburst
+end
+
+category groupFrcsArcaneScrollSpells4
+  [ 4] spellFireStride
+  [ 4] spellThunderlance
+end
+
+category groupFrcsArcaneScrollSpells5
+  [ 4] spellGrimwaldsGreymantle
+  [ 4] spellLesserIronguard
+end
+
+category groupFrcsArcaneScrollSpells6
+  [ 4] spellGateSeal
+end
+
+category groupFrcsArcaneScrollSpells8
+  [ 4] spellFlensing
+end
+
+category groupFrcsArcaneScrollSpells9
+  [ 4] spellElminstersEvasion
+end
+
+category groupFrcsDivineScrollSpells6
+  [ 4] spellGateSeal
+end
+
+category groupArcaneScrollSpells1
+  [1] groupFrcsArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [7] groupFrcsArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [3] groupFrcsArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [2] groupFrcsArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [2] groupFrcsArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [1] groupFrcsArcaneScrollSpells6
+end
+
+category groupArcaneScrollSpells8
+  [1] groupFrcsArcaneScrollSpells8
+end
+
+category groupArcaneScrollSpells9
+  [1] groupFrcsArcaneScrollSpells9
+end
+
+

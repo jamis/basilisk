@@ -1,0 +1,12 @@
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellTrueFilch { "True Filch" schDivination $ $ sourcesTrapsTreachery }
+  spellPerfectCrime { "Perfect Crime" schDivination $ $ sourcesTrapsTreachery }
+  spellDetectTraps { "Detect Traps" schDivination $ $ sourcesTrapsTreachery }
+  spellGreaterKnock { "Greater Knock" schTransmutation $ $ sourcesTrapsTreachery }
+  spellLair { "Lair" schConjuration $ $ sourcesTrapsTreachery }
+  spellStealBody { "StealBody" schTransmutation $ $ sourcesTrapsTreachery }
+  spellDistraction { "Distraction" sch $ $ sourcesTrapsTreachery }
+  spellInvisibleObject { "Invisible Object" schIllusion $ $ sourcesTrapsTreachery }
+end
+
+

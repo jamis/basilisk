@@ -1,0 +1,198 @@
+/* --------------------------------------------------------------------- *
+ * Data from Noonan and Rateliff's "Song and Silence", 
+ * converted to Basilisk format by Shaun Gierent
+ * --------------------------------------------------------------------- */
+
+/* weapons */
+
+wstSingingSword
+  .name "Singing Sword"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 127855 gp
+  .sources sourcesSongSil
+end
+
+category groupSongSilMajorSpecificWeapons
+  wstTheBleedingSword
+end
+
+category groupMajorSpecificWeapons
+  [1]  groupSongSilMajorSpecificWeapons
+end
+
+/* Armor */
+
+astBarricadeBuckler in ( groupSpecificShields )
+  .name "Barricade Buckler"
+  .cost 4165 gp
+  .prototype shieldBuckler
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +1 } )
+  .sources sourcesSongSil
+end
+
+category groupSongSilMediumSpecificShields
+    astBarricadeBuckler	
+end
+
+category groupSongSilMajorSpecificShields
+    astBarricadeBuckler	
+end
+
+category groupMediumSpecificShields
+  [1]  groupSongSilMediumSpecificShields
+end
+
+category groupMajorSpecificShields
+  [1]  groupSongSilMajorSpecificShields
+end
+
+/* Potions */
+
+template in ( groupPotions ) { name cost sources }
+  potionVialoftheLastGasp { "Vial of the Last Gasp"  6200 gp sourcesSongSil }
+end
+
+category groupSongSilPotionsMajor
+  [1] potionVialoftheLastGasp
+end
+
+category groupPotionsMajor
+ [1] groupSongSilPotionsMajor
+end
+
+/* wondrous items */
+
+wondrousBreakerBottle
+  .name "Breaker Bottle"
+  .cost 150 gp
+  .canBeIntelligent yes
+  .sources sourcesSongSil
+end
+
+wondrousEyesofDarkAura
+  .name "Eyes of ark Aura"
+  .cost 2000 gp
+  .canBeIntelligent yes
+  .sources sourcesSongSil
+end
+
+wondrousFluteoftheSnake
+  .name "Flute of the Snake"
+  .cost 15400 gp
+  .canBeIntelligent yes
+  .sources sourcesSongSil
+end
+
+wondrousHarpoftheImmortalMaestro
+  .name "Harp of the Immortal Maestro"
+  .cost 69580 gp
+  .canBeIntelligent yes
+  .sources sourcesSongSil
+end
+
+wondrousHornofTriumph
+  .name "Horm of Triumph"
+  .cost 35380 gp
+  .canBeIntelligent yes
+  .sources sourcesSongSil
+end
+
+wondrousJumpingCaltrops
+  .name "Jumping Caltrops"
+  .cost 150 gp
+  .canBeIntelligent yes
+  .sources sourcesSongSil
+end
+
+wondrousLuteoftheWanderingMinstrel
+  .name "Lute of the Wandering Minstrel"
+  .cost 39500 gp
+  .canBeIntelligent yes
+  .sources sourcesSongSil
+end
+
+wondrousMandolinoftheInspiringMuse
+  .name "Mandolin of the Inspiring Muse"
+  .cost 53920 gp
+  .canBeIntelligent yes
+  .sources sourcesSongSil
+end
+
+wondrousNondescriptBox
+  .name "Nondescript Box"
+  .cost 4552 gp
+  .canBeIntelligent yes
+  .sources sourcesSongSil
+end
+
+wondrousPossumPouch
+  .name "Possum Pouch"
+  .cost 1800 gp
+  .canBeIntelligent yes
+  .sources sourcesSongSil
+end
+
+wondrousSafeBox
+  .name "Safe Box"
+  .cost 77500 gp
+  .canBeIntelligent yes
+  .sources sourcesSongSil
+end
+
+wondrousSpoolofEndlessRope
+  .name "Spool of Endless Rope"
+  .cost 2000 gp
+  .canBeIntelligent yes
+  .sources sourcesSongSil
+end
+
+wondrousStringsofSpellStoring
+  .name "Strings of Spell Storing"
+  .cost 48600 gp
+  .canBeIntelligent yes
+  .sources sourcesSongSil
+end
+
+wondrousThiefCatcherHungryBook
+  .name "Thief Catcher (Hungry Book)"
+  .cost 32250 gp
+  .canBeIntelligent yes
+  .sources sourcesSongSil
+end
+
+category groupSongSilMinorWondrousItems
+  wondrousBreakerBottle
+  wondrousEyesofDarkAura
+  wondrousJumpingCaltrops
+  wondrousNondescriptBox
+  wondrousPossumPouch
+  wondrousSpoolofEndlessRope
+end
+
+category groupSongSilMediumWondrousItems
+  wondrousFluteoftheSnake
+end
+category groupSongSilMajorWondrousItems
+  wondrousHarpoftheImmortalMaestro
+  wondrousHornofTriumph
+  wondrousLuteoftheWanderingMinstrel
+  wondrousMandolinoftheInspiringMuse
+  wondrousSafeBox
+  wondrousStringsofSpellStoring
+  wondrousThiefCatcherHungryBook
+end
+
+category groupMinorWondrousItems
+ [6]  groupSongSilMinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [1]  groupSongSilMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [7]  groupSongSilMajorWondrousItems
+end  
+

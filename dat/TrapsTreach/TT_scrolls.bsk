@@ -1,0 +1,35 @@
+/* Compiled by Shaun Gierent */
+
+category groupTTArcaneScrollSpells1
+  [1] spellInvisibleObject
+end
+
+category groupTTArcaneScrollSpells2
+  [1] spellTrueFilch
+end
+
+category groupTTArcaneScrollSpells3
+  [1] spellDetectTraps
+end
+
+category groupTTArcaneScrollSpells6
+  [1] spellGreaterKnock
+end
+
+category groupArcaneScrollSpells1
+  [1] groupTTArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [1] groupTTArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [1] groupTTArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells6
+  [1] groupTTArcaneScrollSpells6
+end
+
+

@@ -1,0 +1,10 @@
+sourceUndead in ( sourcesUndead groupAllSources )
+  .name "Undead (AEG)"
+end
+
+#include "Undead_items.bsk"
+#include "Undead_spells.bsk"
+#include "Undead_scrolls.bsk"
+#include "Undead_rods.bsk"
+
+

@@ -1,0 +1,283 @@
+/*Dragons Items compiled by Shaun Gierent*/
+
+/* Weapon special abilities */
+
+wsaAccord
+  .name "Accord"
+  .marketPriceArmorModifier +4
+  .sources sourcesDragons
+end
+
+category groupDragonsMeleeWeaponMediumSpecialAbilities
+  [2] wsaAccord
+  [5] mwgtRollAgain
+end
+
+category groupDragonsMeleeWeaponMajorSpecialAbilities
+  [3] wsaAccord
+  [20] mwgtRollAgain
+end
+
+category groupDragonsRangedWeaponMajorSpecialAbilities
+  [7] wsaAccord
+  [2] mwgtRollAgain
+end
+
+category groupMeleeWeaponMediumSpecialAbilities
+  [1] 	groupDragonsMeleeWeaponMediumSpecialAbilities
+end
+
+category groupMeleeWeaponMajorSpecialAbilities
+  [1] 	groupDragonsMeleeWeaponMajorSpecialAbilities
+end
+
+category groupRangedWeaponMajorSpecialAbilities
+  [1] 	groupDragonsRangedWeaponMajorSpecialAbilities
+end
+
+
+/* specific Weapons */
+
+wstDragonClawGauntlets
+  .name "Dragon Claw Gauntlets"
+  .prototype weaponSpikedGauntlets
+  .cost 32000 gp
+  .sources sourcesDragons
+end
+
+wstDragonClaws
+  .name "Dragon Claws"
+  .prototype weaponPunchingDagger
+  .cost 25000 gp
+  .sources sourcesDragons
+end
+
+wstDragontooth
+  .name "Dragontooth"
+  .prototype weaponDagger
+  .cost 18500 gp
+  .sources sourcesDragons
+end
+
+wstMercuriansWeapons
+  .name "Mercurian Weapons"
+  .prototype weaponLongsword
+  .cost 30000 gp
+  .sources sourcesDragons
+end
+
+category groupDragMediumSpecificWeapons
+  [2]  wstDragonClawGauntlets
+  [2]  wstDragonClaws
+  [2]  wstDragontooth
+  [2]  wstMercuriansWeapons
+end 
+
+
+category groupDragMajorSpecificWeapons
+  [2]  wstDragonClawGauntlets
+  [2]  wstDragonClaws
+  [2]  wstDragontooth
+  [2]  wstMercuriansWeapons
+end
+
+category groupMediumSpecificWeapons
+  [4]  groupDragMediumSpecificWeapons
+end
+
+category groupMajorSpecificWeapons
+  [4]  groupDragMajorSpecificWeapons
+end
+
+/* Potions */
+
+template in ( groupPotions ) { name cost sources }
+  potionOilofDragonsBlood { "Oil of Dragon's Blood"  10000 gp sourcesDragons }
+  potionDraconicMight { "Draconic Might"  1200 gp sourcesDragons }
+end
+
+category groupDragonsPotionsMajor
+  [1] potionOilofDragonsBlood
+  [3] potionDraconicMight
+end
+
+category groupPotionsMajor
+ [2] groupDragonsPotionsMajor
+end
+
+/* wondrous Items */
+
+wondrousCloakofDragonFear
+  .name "Cloak of Dragon Fear"
+  .cost  22000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousCloakoftheWyrm
+  .name "Cloak of the Wyrm"
+  .cost  28000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousDarkLantern
+  .name "Dark Lantern"
+  .cost  100 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousDragonBoneFlute
+  .name "Dragon Bone Flute"
+  .cost  12000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousDragonBoneHorn
+  .name "Dragon Bone Horn"
+  .cost  6000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousDragonToothChoker
+  .name "Dragon Tooth Choker"
+  .cost  15000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousDragonshadowCloak
+  .name "Dragonshadow Cloak"
+  .cost  25000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousLensofMemory
+  .name "Lense of Memory"
+  .cost  2000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousLinksofLoyalty
+  .name "Links of Loyalty"
+  .cost  18000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousLinksofTrespass
+  .name "Links of Trespass"
+  .cost  100 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousManaclesofHunger
+  .name "Manacles of Hunger"
+  .cost  26000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousOrbofSeeing
+  .name "Orb of Seeing"
+  .cost  10000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousRazorwire
+  .name "Razorwire"
+  .cost  1000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousSphereofCaltrops
+  .name "Shere of Caltrops"
+  .cost  600 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousTentofDragonWings
+  .name "Tent of Dragon Wings"
+  .cost  28000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousThunderbelcher
+  .name "Thunderbelcher"
+  .cost  12500 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousTomeofHistory
+  .name "Tome of History"
+  .cost  1 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousVesselofPurestEssence
+  .name "Vessel of Purest Essence"
+  .cost  50000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+wondrousWellofForgetting
+  .name "Well of Forgetting"
+  .cost  100000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragons
+end
+
+category groupDragMinorWondrousItems
+   [3] wondrousDarkLantern
+   [3] wondrousDragonBoneHorn
+   [3] wondrousLensofMemory
+   [3] wondrousLinksofTrespass
+   [3] wondrousRazorwire
+   [3] wondrousSphereofCaltrops
+   [3] wondrousTomeofHistory
+end
+
+category groupDragMediumWondrousItems
+   [3] wondrousCloakofDragonFear
+   [3] wondrousCloakoftheWyrm
+   [3] wondrousDragonBoneFlute
+   [3] wondrousDragonToothChoker
+   [3] wondrousDragonshadowCloak
+   [3] wondrousLinksofLoyalty
+   [3] wondrousManaclesofHunger
+   [3] wondrousOrbofSeeing
+   [3] wondrousTentofDragonWings
+   [3] wondrousTomeofHistory
+end
+
+category groupDragMajorWondrousItems
+   [3] wondrousTomeofHistory
+   [3] wondrousVesselofPurestEssence
+   [3] wondrousWellofForgetting
+end
+
+category groupMinorWondrousItems
+ [7]  groupDragMinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [10]  groupDragMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [3]  groupDragMajorWondrousItems
+end
+

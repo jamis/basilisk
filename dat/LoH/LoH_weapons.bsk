@@ -1,0 +1,37 @@
+template in ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
+  weaponMilitaryFork { "Military Fork" 15 gp 1d8 20 3 7 lb large sourcesLegionsofHell }
+  weaponHandscythe { "Handscythe" 20 gp 1d8 20 4 4 lb medium sourcesLegionsofHell }
+end
+
+weaponMilitaryFork
+  .rangeIncrement 10 ft
+end
+
+
+category groupExoticWeapon
+	weaponMilitaryFork
+	weaponHandscythe
+end
+
+category groupMeleeWeapon
+	weaponMilitaryFork
+	weaponHandscythe
+end
+
+category groupPiercingWeapon
+	weaponMilitaryFork
+end
+
+category groupSlashingWeapon
+	weaponHandscythe
+end
+
+category groupLoHUncommonWeapons
+ [1]	weaponMilitaryFork
+ [1]	weaponHandscythe
+end
+
+category groupUncommonWeapons
+ [2]  groupLoHUncommonWeapons
+end
+

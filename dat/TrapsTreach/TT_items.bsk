@@ -1,0 +1,202 @@
+/*Traps & Treachery Items compiled by Shaun Gierent*/
+
+/* specific Weapons */
+
+wstSwordofSilencett
+  .name "Sword of Silence"
+  .prototype weaponShortsword
+  .cost 10310 gp
+  .sources sourcesTrapsTreachery
+end
+
+category groupTTMediumSpecificWeapons
+  [1] wstSwordofSilencett
+end
+
+category groupTTMajorSpecificWeapons
+  [1] wstSwordofSilencett
+end
+
+category groupMediumSpecificWeapons
+  [1]  groupTTMediumSpecificWeapons
+end
+
+category groupMajorSpecificWeapons
+  [1]  groupTTMajorSpecificWeapons
+end
+
+/* rings */
+
+ringMagicDetection ( groupRings )
+  .name "Magic Detection"
+  .cost 1800 gp
+  .sources sourcesTrapsTreachery
+  .needPrefix true
+end
+
+ringTrapDetection ( groupRings )
+  .name "Trap Detection"
+  .cost 20000 gp
+  .sources sourcesTrapsTreachery
+  .needPrefix true
+end
+
+ringUrchinRing ( groupRings )
+  .name "Urchin Ring"
+  .cost 30000 gp
+  .sources sourcesTrapsTreachery
+  .needPrefix false
+end
+
+category groupTTRingsMinor
+  ringMagicDetection
+end
+
+category groupTTRingsMedium
+  ringTrapDetection
+  ringUrchinRing
+end
+
+category groupTTRingsMajor
+  ringTrapDetection
+  ringUrchinRing
+end
+
+category groupRingsMinor
+ [1] groupTTRingsMinor
+end
+
+category groupRingsMedium 
+ [2] groupTTRingsMedium
+end
+
+category groupRingsMajor
+ [2] groupTTRingsMajor
+end
+
+/* wondrous Items */
+
+wondrousAlricsTinyGolem
+  .name "Alric's Tiny Golem"
+  .cost  12000 gp
+  .canBeIntelligent yes
+  .sources sourcesTrapsTreachery
+end
+
+wondrousBagofTrashBeltPouch
+  .name "Bag of Trash (Belt pouch)"
+  .cost  2500 gp
+  .canBeIntelligent yes
+  .sources sourcesTrapsTreachery
+end
+
+wondrousBagofTrashBag
+  .name "Bag of Trash (Bag)"
+  .cost  5000 gp
+  .canBeIntelligent yes
+  .sources sourcesTrapsTreachery
+end
+
+wondrousBagofTrashLargeSack
+  .name "Bag of Trash (Large Sack)"
+  .cost  10000 gp
+  .canBeIntelligent yes
+  .sources sourcesTrapsTreachery
+end
+
+wondrousBootsofGrace
+  .name "Boots of Grace"
+  .cost  4000 gp
+  .canBeIntelligent yes
+  .sources sourcesTrapsTreachery
+end
+
+wondrousBootsofMisdirection
+  .name "Boots of Misdirection"
+  .cost  52000 gp
+  .canBeIntelligent yes
+  .sources sourcesTrapsTreachery
+end
+
+wondrousBracersofFacade
+  .name "Bracers of Façade"
+  .cost  60000 gp
+  .canBeIntelligent yes
+  .sources sourcesTrapsTreachery
+end
+
+wondrousBridleofInvisibility
+  .name "Bridle of Invisibility"
+  .cost  15000 gp
+  .canBeIntelligent yes
+  .sources sourcesTrapsTreachery
+end
+
+wondrousCompassofPassage
+  .name "Compass of Passage"
+  .cost  37800 gp
+  .canBeIntelligent yes
+  .sources sourcesTrapsTreachery
+end
+
+wondrousScarabAgent
+  .name "Scarab Agent"
+  .cost  22000 gp
+  .canBeIntelligent yes
+  .sources sourcesTrapsTreachery
+end
+
+wondrousTolaretsStaffBronze
+  .name "Tolaret's Staff (Bronze)" 
+  .cost  3000 gp
+  .canBeIntelligent yes
+  .sources sourcesTrapsTreachery
+end
+
+wondrousTolaretsStaffSilver
+  .name "Tolaret's Staff (Silver)" 
+  .cost  10000 gp
+  .canBeIntelligent yes
+  .sources sourcesTrapsTreachery
+end
+
+wondrousTolaretsStaffGold
+  .name "Tolaret's Staff (Gold)" 
+  .cost  24000 gp
+  .canBeIntelligent yes
+  .sources sourcesTrapsTreachery
+end
+
+category groupTTMinorWondrousItems
+  [5] wondrousBagofTrashBeltPouch
+  [5] wondrousBagofTrashBag
+  [5] wondrousBootsofGrace
+  [5] wondrousTolaretsStaffBronze
+end
+
+category groupTTMediumWondrousItems
+  [5] wondrousBagofTrashLargeSack
+  [5] wondrousBridleofInvisibility
+  [5] wondrousScarabAgent
+  [5] wondrousTolaretsStaffSilver
+  [5] wondrousTolaretsStaffGold
+end
+
+category groupTTMajorWondrousItems
+  [3] wondrousBootsofMisdirection
+  [3] wondrousBracersofFacade
+  [3] wondrousCompassofPassage
+end
+
+category groupMinorWondrousItems
+ [4]  groupTTMinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [5]  groupTTMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [3]  groupTTMajorWondrousItems
+end
+

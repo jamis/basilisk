@@ -1,0 +1,68 @@
+/*Legions of Hell Items compiled by Shaun Gierent*/
+
+/* specific Weapons */
+
+wstHandWrappings1
+  .name "Hand Wrappings 1"
+  .prototype weaponGloves
+  .cost 4000 gp
+  .sources sourcesLegionsofHell
+end
+
+wstHandWrappings2
+  .name "Hand Wrappings 2"
+  .prototype weaponGloves
+  .cost 16000 gp
+  .sources sourcesLegionsofHell
+end
+
+wstHandWrappings3
+  .name "Hand Wrappings 3"
+  .prototype weaponGloves
+  .cost 36000 gp
+  .sources sourcesLegionsofHell
+end
+
+wstHandWrappings4
+  .name "Hand Wrappings 4"
+  .prototype weaponGloves
+  .cost 64000 gp
+  .sources sourcesLegionsofHell
+end
+
+wstHandWrappings5
+  .name "Hand Wrappings 5"
+  .prototype weaponGloves
+  .cost 100000 gp
+  .sources sourcesLegionsofHell
+end
+
+wstTheProphetsStaff
+  .name "The Prophet's Staff"
+  .prototype weaponQuarterstaff
+  .cost 119720 gp
+  .sources sourcesLegionsofHell
+end
+
+category groupLoHMediumSpecificWeapons
+  [2]  wstHandWrappings1
+  [2]  wstHandWrappings2
+  [2]  wstHandWrappings3
+end 
+
+
+category groupLoHMajorSpecificWeapons
+  [2]  wstHandWrappings4
+  [2]  wstHandWrappings5
+  [2]  wstTheProphetsStaff
+end
+
+category groupMediumSpecificWeapons
+  [3]  groupLoHMediumSpecificWeapons
+end
+
+category groupMajorSpecificWeapons
+  [3]  groupLoHMajorSpecificWeapons
+end
+
+

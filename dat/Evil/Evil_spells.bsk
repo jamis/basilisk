@@ -1,0 +1,29 @@
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellBelaroshsLaw { "Belarosh's Law" schAbjuration $ $ sourcesEvil }
+  spellSummonDismiss1 { "Summon/Dismiss 1" schConjuration $ $ sourcesEvil }
+  spellSummonDismiss2 { "Summon/Dismiss 2" schConjuration $ $ sourcesEvil }
+  spellSummonDismiss3 { "Summon/Dismiss 3" schConjuration $ $ sourcesEvil }
+  spellSummonDismiss4 { "Summon/Dismiss 4" schConjuration $ $ sourcesEvil }
+  spellSummonDismiss5 { "Summon/Dismiss 5" schConjuration $ $ sourcesEvil }
+  spellSummonDismiss6 { "Summon/Dismiss 6" schConjuration $ $ sourcesEvil }
+  spellSummonDismiss7 { "Summon/Dismiss 7" schConjuration $ $ sourcesEvil }
+  spellSummonDismiss8 { "Summon/Dismiss 8" schConjuration $ $ sourcesEvil }
+  spellSummonDismiss9 { "Summon/Dismiss 9" schConjuration $ $ sourcesEvil }
+  spellBoneSpikes { "Bone Spikes" schNecromancy $ $ sourcesEvil }
+  spellBonewand { "Bonewand" schTransmutation $ $ sourcesEvil }
+  spellDimensionalRupture { "Dimensional Rupture" schTransmutation $ $ sourcesEvil }
+  spellDisruptSoul { "Disrupt Soul" schNecromancy $ $ sourcesEvil }
+  spellIllOmen { "Ill Omen" schDivination $ $ sourcesEvil }
+  spellIronFist { "Iron Fist" schTransmutation $ $ sourcesEvil }
+  spellHideousAppearance { "Hideous Appearance" schIllusion $ $ sourcesEvil }
+  spellNecromanticChannel { "Necromantic Channel" schNecromancy $ $ sourcesEvil }
+  spellShadowCloak { "Shadow Cloak" schConjuration $ $ sourcesEvil }
+  spellSpiritLink { "Spirit Link" schNecromancy $ $ sourcesEvil }
+  spellStrengthofYeenoghu { "Strength of Yeenoghu" schNecromancy $ $ sourcesEvil }
+  spellSummonShadowRaven { "Summon Shadow Raven" schConjuration $ $ sourcesEvil }
+  spellUndeadAttraction { "Undead Attraction" schNecromancy $ $ sourcesEvil }
+  spellWakingNightmares { "Waking Nightmares" schIllusion $ $ sourcesEvil }
+  spellWounding { "Wounding" schTransmutation $ $ sourcesEvil }
+end
+
+

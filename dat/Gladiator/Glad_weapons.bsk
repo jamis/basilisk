@@ -1,0 +1,82 @@
+/* Gladiators: Sands of Death Compiled by Shaun Gierent, Chakram already exists in Frcs  */
+
+template in ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
+  weaponSpikedHelmet { "Spiked Helmet"  25 gp  1d6  19  2  3 lb  small sourcesGladiator }
+  weaponWristrazor { "Wrist razor"  25 gp  1d6  18  2  5 lb  small sourcesGladiator }
+  weaponAclis { "Aclis"  1 gp  1d4  20  2  3 lb  medium sourcesGladiator }
+  weaponBolas3ball { "Bolas (3-ball)"  15 gp  1d6  20  2  4 lb  medium sourcesGladiator }
+  weaponLightHarpoon { "Light Harpoon"  10 gp  1d8  20  2  8 lb  medium sourcesGladiator }
+  weaponQuadCrossbow { "Quad Crossbow"  375 gp  1d10  19  2  18 lb  medium sourcesGladiator }
+  weaponMancatcher { "Mancatcher"  40 gp  1d3  20  3  12 lb  large sourcesGladiator }
+end
+
+// additional properties
+
+weaponAclis
+  .rangeIncrement 10 ft
+end
+
+weaponBolas3Ball
+  .rangeIncrement 10 ft
+end
+
+weaponLightHarpoon
+  .rangeIncrement 30 ft
+end
+
+weaponQuadCrossbow
+  .rangeIncrement 120 ft
+end
+
+
+// -------------------------------------------------------------------------
+// Weapon Categories
+// -------------------------------------------------------------------------
+
+category groupExoticWeapon
+  weaponSpikedHelmet
+  weaponWristRazor
+  weaponAclis
+  weaponBolas3Ball
+  weaponLightHarpoon
+  weaponQuadCrossbow
+  weaponMancatcher
+end
+
+category groupMeleeWeapon
+  weaponSpikedHelmet
+  weaponWristRazor
+  weaponMancatcher
+end
+
+category groupRangedWeapon
+  weaponAclis
+  weaponBolas3Ball
+  weaponLightHarpoon
+  weaponQuadCrossbow
+  weaponMancatcher
+end
+
+category groupThrownWeapon
+  weaponAclis
+  weaponBolas3Ball
+  weaponLightHarpoon
+  weaponMancatcher
+end
+
+category groupBludgeoningWeapon
+  weaponAclis
+  weaponBolas3Ball
+end
+
+category groupPiercingWeapon
+  weaponSpikedHelmet
+  weaponLightHarpoon
+  weaponQuadCrossbow
+end
+
+category groupSlashingWeapon
+  weaponWristRazor
+end
+
+

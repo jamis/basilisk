@@ -1,0 +1,144 @@
+category groupDiabloArcaneScrollSpells1
+  [ 4] spellFireboltD
+  [ 4] spellIceBolt
+end
+
+category groupDiabloArcaneScrollSpells2
+  [ 4] spellChargedBolt
+  [ 4] spellFrostNova
+  [ 4] spellIceBlast
+  [ 4] spellInferno
+  [ 4] spellStaticField
+end
+
+category groupDiabloArcaneScrollSpells3
+  [ 4] spellBlaze
+  [ 4] spellFrozenArmor
+  [ 4] spellLifeTap
+  [ 4] spellNova
+  [ 4] spellShiverArmor
+  [ 4] spellTelekineticBlast
+end
+
+category groupDiabloArcaneScrollSpells4
+  [ 4] spellGlacialSpike
+end
+
+category groupDiabloArcaneScrollSpells5
+  [ 4] spellEnergyShield
+  [ 4] spellMeteor
+end
+
+category groupDiabloArcaneScrollSpells6
+  [ 4] spellEnchant
+end
+
+category groupDiabloArcaneScrollSpells7
+  [ 4] spellChillingArmor
+  [ 4] spellClayGolem
+  [ 4] spellThunderStorm
+end
+
+category groupDiabloArcaneScrollSpells8
+  [ 4] spellBlizzard
+  [ 4] spellFrozenOrb
+  [ 4] spellHydra
+end
+
+category groupDiabloDivineScrollSpells1
+  [ 4] spellAmplifyDamage
+  [ 4] spellTeeth
+end
+
+category groupDiabloDivineScrollSpells2
+  [ 4] spellBoneArmor
+  [ 4] spellCorpseExplosion
+  [ 4] spellDimVision
+  [ 4] spellPoisonDagger
+  [ 4] spellWeaken
+end
+
+category groupDiabloDivineScrollSpells3
+  [ 4] spellRaiseSkeletonD
+end
+
+category groupDiabloDivineScrollSpells4
+  [ 4] spellBoneSpear
+  [ 4] spellBoneWall
+  [ 4] spellIronMaiden
+  [ 4] spellRaiseSkeletonMage
+end
+
+category groupDiabloDivineScrollSpells5
+  [ 4] spellAttract
+  [ 4] spellBloodGolem
+  [ 4] spellBonePrison
+  [ 4] spellDecrepify
+  [ 4] spellLowerResist
+  [ 4] spellPoisonExplosion
+end
+
+category groupDiabloDivineScrollSpells7
+  [ 4] spellBoneSpirit
+  [ 4] spellFireGolem
+  [ 4] spellIronGolem
+  [ 4] spellPoisonNova
+  [ 4] spellRevive
+end
+
+category groupArcaneScrollSpells1
+  [2] groupDiabloArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [5] groupDiabloArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [6] groupDiabloArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [1] groupDiabloArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [2] groupDiabloArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [1] groupDiabloArcaneScrollSpells6
+end
+
+category groupArcaneScrollSpells7
+  [3] groupDiabloArcaneScrollSpells7
+end
+
+category groupArcaneScrollSpells8
+  [3] groupDiabloArcaneScrollSpells8
+end
+
+category groupDivineScrollSpells1
+  [2] groupDiabloDivineScrollSpells1
+end
+
+category groupDivineScrollSpells2
+  [5] groupDiabloDivineScrollSpells2
+end
+
+category groupDivineScrollSpells3
+  [1] groupDiabloDivineScrollSpells3
+end
+
+category groupDivineScrollSpells4
+  [4] groupDiabloDivineScrollSpells4
+end
+
+category groupDivineScrollSpells5
+  [6] groupDiabloDivineScrollSpells5
+end
+
+category groupDivineScrollSpells7
+  [5] groupDiabloDivineScrollSpells7
+end
+

@@ -1,0 +1,8 @@
+SourceNightmaresDreams in ( sourcesNightmaresDreams groupAllSources )
+  .name "Nightmares & Dreams"
+end
+
+#include "NDreams_items.bsk"
+#include "NDreams_spells.bsk"
+#include "NDreams_mundane.bsk"
+

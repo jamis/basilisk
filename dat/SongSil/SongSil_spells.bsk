@@ -1,0 +1,37 @@
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellAbsorbWeapon { "Absorb Weapons" schTransmutation $ $ sourcesSongSil }
+  spellAllegro { "Allegro" schTransmutation $ $ sourcesSongSil }
+  spellAmbientSong { "Ambient Song" schIllusion $ $ sourcesSongSil }
+  spellBluntWeapon { "Blunt Weapon" schTransmutation $ $ sourcesSongSil }
+  spellChoir { "Choir" schIllusion $ $ sourcesSongSil }
+  spellCrescendo { "Crescendo" schEvocation $ $ sourcesSongSil }
+  spellEasyMath { "Easy Math" schTransmutation $ $ sourcesSongSil }
+  spellFanfare { "Fanfare" schEvocation $ $ sourcesSongSil }
+  spellFinetuning { "Fine-Tuning" schTransmutation $ $ sourcesSongSil }
+  spellFocusingChant { "Focusing Chant" schAbjuration $ $ sourcesSongSil }
+  spellFollowtheLeader { "Follow the Leader" schEnchantment $ $ sourcesSongSil }
+  spellFortissimo { "Fortissimo" schEvocation $ $ sourcesSongSil }
+  spellGetaway { "Getaway" schEnchantment $ $ sourcesSongSil }
+  spellHarmonicChorus { "Harmonic Chorus" schTransmutation $ $ sourcesSongSil }
+  spellHarmonize { "Harmonize" schEvocation $ $ sourcesSongSil }
+  spellHealthfulSlumber { "Healthful Slumber" schConjuration $ $ sourcesSongSil }
+  spellHymnofPraise { "Hymn of Praise" schEvocation $ $ sourcesSongSil }
+  spellImprovisation { "Improvisation" schTransmutation $ $ sourcesSongSil }
+  spellInfernalThrenody { "Inferal Threnody" schEvocation $ $ sourcesSongSil }
+  spellInsidiousRhythm { "Insidious Rhythm" schEnchantment $ $ sourcesSongSil }
+  spellJoyfulNoise { "Joyful Noise" schAbjuration $ $ sourcesSongSil }
+  spellListeningCoin { "Listening Coin" schDivination $ $ sourcesSongSil }
+  spellLullaby { "Lullaby" schEnchantment $ $ sourcesSongSil }
+  spellOttosResistibleDance { "Otto's Resistible Dance" schEnchantment $ $ sourcesSongSil } 
+  spellPercussion { "Percussion" schIllusion $ $ sourcesSongSil }
+  spellProtege { "Protégé" schEvocation $ $ sourcesSongSil }
+  spellSnipersEyes { "Sniper's Eyes" sch $ $ sourcesSongSil }
+  spellSongofDiscord { "Song of Discord" schEnchantment $ $ sourcesSongSil }
+  spellSpectralWeapon { "Spectral Weapon" schIllusion $ $ sourcesSongSil }
+  spellSpringSheath { "Spring Sheath" schTransmutation $ $ sourcesSongSil }
+  spellSummonInstrument { "Summon Instrument" schConjuration $ $ sourcesSongSil }
+  spellSympatheticVibration { "Sympathetic Vibration" schEvocation $ $ sourcesSongSil }
+  spellWailofDoom { "Wail of Doom" schEvocation $ $ sourcesSongSil }
+  spellZoneofSilence { "Zone of Silence" schIllusion $ $ sourcesSongSil }
+end
+

@@ -1,0 +1,236 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dragon Magazine issue #289, converted to Basilisk format by
+ * Shaun Gierent
+ * --------------------------------------------------------------------- */
+
+sourceDragon289 ( sourcesDragon289 groupAllSources )
+  .name "Dragon 289"
+end
+
+/* The Foes of StormWeather II: The Villians of Black Wolf p. 94-98*/
+
+wstBoneBlade
+  .name "Bone Blade"
+  .prototype weaponDagger
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 28565 gp
+  .sources sourcesDragon289
+end
+
+category groupDragon289MajorSpecificWeapons
+  [ 1] wstBoneBlade
+end
+
+category groupDragon289MediumSpecificWeapons
+  [ 1] wstBoneBlade
+end
+
+category groupMajorSpecificWeapons
+  [1]  groupDragon289MajorSpecificWeapons
+end
+
+category groupMediumSpecificWeapons
+  [1]  groupDragon289MediumSpecificWeapons
+end
+
+wondrousTalismanofMalar
+  .name "Talisman of Malar"
+  .cost  24425 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon289
+end
+
+category groupDragon289MediumWondrousItems
+  [1] wondrousTalismanofMalar
+end
+
+category groupMediumWondrousItems
+ [1]  groupDragon289MediumWondrousItems
+end
+
+/* The Shunned Street p.100 */
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellArcaneMarkWard { "Arcane Mark Ward" schAbjuration $ $ sourcesDragon289 }
+end
+
+category groupDragon289ArcaneScrollSpells2
+  [ 1] spellArcaneMarkWard
+end
+
+category groupArcaneScrollSpells2
+  [1] groupDragon289ArcaneScrollSpells2
+end
+
+/* Bazaar of the Bizarre: Cup & Chalice */
+
+wondrousAlchemistsGlass
+  .name "Alchemist's Glass"
+  .cost  1800 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon289
+end
+
+wondrousBardicCup
+  .name "Bardic Cup"
+  .cost  6500 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon289
+end
+
+wondrousDwarvenRuneStein
+  .name "Dwarven Rune Stein"
+  .cost  3300 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon289
+end
+
+wondrousCainesFlagonsofShadows
+  .name "Caine's Flagons of Shadows"
+  .cost  21600 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon289
+end
+
+wondrousChaliceofTrueSeeing
+  .name "Chalice of True Seeing"
+  .cost  21600 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon289
+end
+
+wondrousDragonsGoblet
+  .name "Dragon's Goblet"
+  .cost  72000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon289
+end
+
+wondrousRoseofKings
+  .name "Rose of Kings"
+  .cost  10000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon289
+end
+
+wondrousSpyGlass
+  .name "Spy Glass"
+  .cost  16000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon289
+end
+
+wondrousTalkingCups
+  .name "Talking Cups"
+  .cost  20000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon289
+end
+
+wondrousVampiricGoblet
+  .name "Vampiric Goblet"
+  .cost  8100 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon289
+end
+
+wondrousWarMugoftheOgreMagi
+  .name "War Mug of the Ogre Magi"
+  .cost  8315 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon289
+end
+
+category groupDragon289MinorWondrousItems
+  [1] wondrousAlchemistsGlass
+  [1] wondrousBardicCup
+  [1] wondrousDwarvenRuneStein
+end
+
+category groupDragon289MediumWondrousItems
+  [1] wondrousCainesFlagonsofShadows
+  [1] wondrousChaliceofTrueSeeing
+  [1] wondrousRoseofKings
+  [1] wondrousSpyGlass
+  [1] wondrousTalkingCups
+  [1] wondrousVampiricGoblet
+  [1] wondrousWarMugoftheOgreMagi
+end
+
+category groupDragon289MajorWondrousItems
+  [1] wondrousDragonsGoblet
+end
+
+category groupMinorWondrousItems
+ [3]  groupDragon289MinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [7]  groupDragon289MediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [1]  groupDragon289MajorWondrousItems
+end  
+
+/* Silicon Sorcery: Gauntlet Dark Legacy p.120-121 */
+
+wondrousFireAmulet
+  .name "Fire Amulet"
+  .cost  4675 gp
+  .canBeIntelligent no
+  .sources sourcesDragon289
+end
+
+wondrousElectricAmulet
+  .name "Electric Amulet"
+  .cost  4675 gp
+  .canBeIntelligent no
+  .sources sourcesDragon289
+end
+
+wondrousAcidAmulet
+  .name "Acid Amulet"
+  .cost  4675 gp
+  .canBeIntelligent no
+  .sources sourcesDragon289
+end
+
+wondrousLightAmulet
+  .name "Light Amulet"
+  .cost  4675 gp
+  .canBeIntelligent no
+  .sources sourcesDragon289
+end
+
+category groupDragon289MinorWondrousItems
+  [1] wondrousFireAmulet
+  [1] wondrousElectricAmulet
+  [1] wondrousAcidAmulet
+  [1] wondrousLightAmulet
+end
+
+category groupMinorWondrousItems
+ [4]  groupDragon289MinorWondrousItems
+end
+
+template in ( groupPotions ) { name cost sources }
+  potionRedPotion { "Red Potion"  2000 gp sourcesDragon289 }
+  potionBluePotion { "Blue Potion"  2000 gp sourcesDragon289 }
+  potionGreenPotion { "Green Potion"  3000 gp sourcesDragon289 }
+  potionYellowPotion { "Yellow Potion"  2750 gp sourcesDragon289 }
+end
+
+category groupDragon289PotionsMajor
+  [1] potionRedPotion
+  [1] potionBluePotion
+  [1] potionGreenPotion
+  [1] potionYellowPotion
+end
+
+category groupPotionsMajor
+ [4] groupDragon289PotionsMajor
+end
+
+

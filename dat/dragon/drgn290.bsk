@@ -1,0 +1,80 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dragon Magazine issue #290, converted to Basilisk format by
+ * Shaun Gierent
+ * --------------------------------------------------------------------- */
+
+sourceDragon290 ( sourcesDragon290 groupAllSources )
+  .name "Dragon 290"
+end
+
+/* Rogues Gallery: The Heroes of 'Decent Into the Depths of the Earth' p. 82-86*/
+
+ringCharmResistance ( groupRings )
+  .name "Charm Resistance"
+  .cost 13100 gp
+  .sources sourcesDragon290
+end
+
+ringDefense1 ( groupRings )
+  .name "Defense +1"
+  .cost 4000 gp
+  .sources sourcesDragon290
+end
+
+ringDefense2 ( groupRings )
+  .name "Defense +2"
+  .cost 16000 gp
+  .sources sourcesDragon290
+end
+
+ringDefense3 ( groupRings )
+  .name "Defense +3"
+  .cost 36000 gp
+  .sources sourcesDragon290
+end
+
+ringDefense4 ( groupRings )
+  .name "Defense +4"
+  .cost 64000 gp
+  .sources sourcesDragon290
+end
+
+ringDefense5 ( groupRings )
+  .name "Defense +5"
+  .cost 100000 gp
+  .sources sourcesDragon290
+end
+
+category groupDragon290RingsMinor
+  [15] ringCharmResistance
+  [15] ringDefense1
+  [5] ringDefense2
+end
+
+category groupDragon290RingsMedium
+  [ 5] ringDefense1
+  [ 10] ringDefense2
+  [ 2] ringDefense3
+  [ 1] ringDefense4
+end
+
+category groupDragon290RingsMajor
+  [ 2] ringDefense2
+  [ 5] ringDefense3
+  [ 5] ringDefense4
+  [ 3] ringDefense5
+end
+
+category groupRingsMinor
+ [ 3] groupDragon290RingsMinor
+end
+
+category groupRingsMedium 
+ [ 4] groupDragon290RingsMedium
+end
+
+category groupRingsMajor
+ [ 4] groupDragon290RingsMajor
+end
+
+

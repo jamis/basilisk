@@ -1,0 +1,15 @@
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellClaimThrall { "Claim Thrall" schEnchantment $ $ sourcesTouchedbytheGods }
+  spellInterment { "Interment" schAbjuration $ $ sourcesTouchedbytheGods }
+  spellShapeoftheSpirit { "Shape of the Spirit" schTransmutation $ $ sourcesTouchedbytheGods }
+  spellTruePassage { "True Passage" schNecromancy $ $ sourcesTouchedbytheGods }
+end
+
+category groupTbtGodsDivineScrollSpells6
+   spellInterment
+end
+
+category groupDivineScrollSpells6
+  [1] groupTbtGodsDivineScrollSpells6
+end
+

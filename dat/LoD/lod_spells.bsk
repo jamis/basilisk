@@ -1,0 +1,14 @@
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellDevastateUndead { "Devastate Undead" schNecromancy $ $ sourcesLordsofDarkness }
+  spellDreadBlast { "Dread Blast" schNecromancy $ $ sourcesLordsofDarkness }
+  spellGreaterShadowTentacle { "Greater Shadow Tentacle" schAbjuration $ $ sourcesLordsofDarkness }
+  spellHandfang { "Handfang" schNecromancy $ $ sourcesLordsofDarkness }
+  spellLesserShadowTentacle { "Lesser Shadow Tentacle" schAbjuration $ $ sourcesLordsofDarkness }
+  spellNightsMantle { "Night's Mantle" schAbjuration $ $ sourcesLordsofDarkness }
+  spellPhantomPlow { "Phantom Plow" schEvocation $ $ sourcesLordsofDarkness }
+  spellShadowCanopy { "Shadow Canopy" schEvocation $ $ sourcesLordsofDarkness }
+  spellSkullEyes { "Skull Eyes" schTransmutation $ $ sourcesLordsofDarkness }
+  spellStasisClone { "Stasis Clone" schNecromancy $ $ sourcesLordsofDarkness }
+  spellTripleMask { "Triple Mask" schIllusion $ $ sourcesLordsofDarkness }
+end
+

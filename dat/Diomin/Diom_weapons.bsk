@@ -1,0 +1,32 @@
+template in ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
+  weaponBaraq { "Baraq" 15 gp 1d10 18 2 4 lb medium sourcesDiomin }
+  weaponCaphar { "Caphar" 10 gp 1d8 18 2 3 lb small sourcesDiomin }
+end
+
+category groupExoticWeapon
+	weaponBaraq
+	weaponCaphar
+end
+
+category groupMeleeWeapon
+	weaponBaraq
+	weaponCaphar
+end
+
+category groupPiercingWeapon
+	weaponCaphar
+end
+
+category groupSlashingWeapon
+	weaponBaraq
+end
+
+category groupDiominUncommonWeapons
+	weaponBaraq
+	weaponCaphar
+end
+
+category groupUncommonWeapons
+ [2]  groupDiominUncommonWeapons
+end
+

@@ -1,0 +1,10 @@
+sourceDragons in ( sourcesDragons groupAllSources )
+  .name "Dragons (AEG)"
+end
+
+#include "Drag_items.bsk"
+#include "Drag_spells.bsk"
+#include "Drag_scrolls.bsk"
+#include "Drag_mundane.bsk"
+#include "Drag_weapons.bsk"
+

@@ -1,0 +1,10 @@
+/* data submitted by Shaun Gierent */
+
+sourceMonstersOfFaerun ( sourcesMonstersOfFaerun groupAllSources )
+  .name "Monsters of Faerun"
+end
+
+#include "monstersofF_spells.bsk"
+
+
+

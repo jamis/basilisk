@@ -1,0 +1,6 @@
+SourceDemon in ( sourcesDemon groupAllSources )
+  .name "Encyclopaedia Arcane: Demonology"
+end
+
+#include "Demon_items.bsk"
+

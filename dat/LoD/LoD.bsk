@@ -1,0 +1,12 @@
+/* data submitted by Shaun Gierent*/
+
+sourceLordsofDarkness ( sourcesLordsofDarkness groupAllSources )
+  .name "Lords of Darkness"
+end
+
+#include "lod_spells.bsk"
+#include "lod_scrolls.bsk"
+#include "lod_mundane.bsk"
+#include "lod_items.bsk"
+
+

@@ -1,0 +1,176 @@
+/* --------------------------------------------------------------------
+Data from Dragon Magazine issue #278, converted to Basilisk format by Shaun Gierent
+* --------------------------------------------------------------------- */
+
+sourceDragon278 ( sourcesDragon278 groupAllSources )
+  .name "Dragon 278"
+end
+
+/* Tools of the Deep: Dwarven Gizmos pg 84-85*/
+
+template in ( groupMundaneItems ) { name cost sources }
+  miRopeclimber { "Rope climber"  15 gp sourcesDragon278 }
+  miMobilebrace { "Mobile brace"  10 gp sourcesDragon278 }
+  miBootpumps { "Bootpumps"  10 gp sourcesDragon278 }
+  miHeadlamp { "Headlamp"  15 gp sourcesDragon278 }
+  miHeadlampRefill { "Headlamp refill"  5 gp sourcesDragon278 }
+  miBellowsMask { "Bellows mask"  20 gp sourcesDragon278 }
+  miMaskfilterrefill { "Mask filter refill"  5 gp sourcesDragon278 }
+  miGraspingShield { "Grasping Shield"  50 gp sourcesDragon278 }
+  miSpikeShooter { "Spike Shooter"  25 gp sourcesDragon278 }
+  miHurler { "Hurler"  200 gp sourcesDragon278 }
+  miLiquijet { "Liqui-jet"  150 gp sourcesDragon278 }
+
+end
+
+category groupDragon278Items
+  [ 5] { .magnitude 1  .type miRopeclimber }
+  [ 5] { .magnitude 1  .type miMobilebrace }
+  [ 5] { .magnitude 1  .type miBootpumps }
+  [ 2] { .magnitude 1  .type miHeadlamp }
+  [ 1] { .magnitude 1  .type miHeadlamprefill }
+  [ 2] { .magnitude 1  .type miBellowsmask }
+  [ 1] { .magnitude 1  .type miMaskfitlerrefill }
+  [ 5] { .magnitude 1  .type miGraspingshield }
+  [ 5] { .magnitude 1  .type miSpikeshooter }
+  [ 2] { .magnitude 1  .type miHurler }
+  [ 2] { .magnitude 1  .type miLiquijet }
+end
+
+category groupAlchemicalItems
+  [ 11] groupDragon278Items
+end
+
+/* Rogues Gallery pg95 Items are listed without a price so I have made them up trying to follow the costs listed in CoreBook II*/
+
+wstBlackMithralDaggerofSubtlety
+  .name "Black Mithral Dagger of Subtlety"
+  .prototype weaponDagger
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 } )
+  .cost 32302 gp
+  .sources sourcesDragon278
+end
+
+ringXRayVision in ( groupRings )
+  .name "x-ray vision"
+  .cost 25000 gp
+  .activationMethod atCommandWord
+  .specialQualities ( { .description "x-ray vision" } )
+  .sources sourcesCoreRules
+end
+
+ringStone in ( groupRings )
+  .name "Stone"
+  .cost 50000 gp
+  .sources sourcesDragon278
+end
+
+category groupDragon278RingsMedium
+  [ 1] ringStone
+end
+
+category groupDragon278RingsMajor
+  [ 1] ringStone
+end
+
+category groupDragonRingsMedium
+ [1] groupDragon278RingsMedium
+end
+
+category groupDragonRingsMajor
+ [1] groupDragon278RingsMajor
+end
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellImprovedBlink { "Improved Blink" schTransmutation $ $ sourcesDragon278 }
+end
+
+category groupArcaneScrollSpells7
+  [1] SpellImprovedBlink
+end
+
+/* Magic From Icewind Dale pg 180-109*/
+
+wstAlamion
+  .name "Alamion ('Frost Father')"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 90315 gp
+  .sources sourcesDragon278
+end
+
+wstFaithKiller
+  .name "Faith Killer"
+  .prototype weaponBattleaxe
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 69810 gp
+  .sources sourcesDragon278
+end
+
+category groupDragon278MediumSpecificWeapons
+  [ 1] wstBlackMithralDaggerofSubtlety
+end
+
+category groupDragon278MajorSpecificWeapons
+  [ 1] wstBlackMithralDaggerofSubtlety
+  [ 1] wstAlamion
+  [ 1] wstFaithKiller
+end
+
+category groupMediumSpecificWeapons
+ [1] groupDragon278MediumSpecificWeapons
+end
+
+category groupMajorSpecificWeapons
+ [3] groupDragon278MajorSpecificWeapons
+end
+
+astBitchQueensEnvoy in ( groupSpecificArmors )
+  .name "The Bitch Queen's Envoy"
+  .cost 16309 gp
+  .sources sourcesDragon278
+end
+
+astBlackSwanArmor in ( groupSpecificArmors )
+  .name "Black Swan Armor"
+  .cost 27562 gp
+  .sources sourcesDragon278
+end
+
+category groupDragon278MediumSpecificArmors
+  [3] astBitchQueensEnvoy
+  [2] astBlackSwanArmor
+end
+
+category groupDragon278MajorSpecificArmors
+  [2] astBitchQueensEnvoy
+  [3] astBlackSwanArmor
+end
+
+category groupMediumSpecificArmors
+  [2]  groupDragon278MediumSpecificArmors
+end
+
+category groupMajorSpecificArmors
+  [2]  groupDragon278MajorSpecificArmors
+end
+
+wondrousDeadMansFace
+  .name "Dead Man's Face"
+  .cost  6310 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon278
+end
+
+category groupDragon278MinorWondrousItems
+  [ 1] wondrousDeadMansFace
+end
+
+category groupMinorWondrousItems
+ [1]  groupDragon278MinorWondrousItems
+end
+
+

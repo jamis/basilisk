@@ -1,0 +1,71 @@
+/* Compiled by Shaun Gierent */
+
+category groupSongSilArcaneScrollSpells1
+  spellAmbientSong
+  spellFocusingChant
+  spellJoyfulNoise
+  spellLullaby
+end
+
+category groupSongSilArcaneScrollSpells2
+  spellCrescendo
+  spellFortissimo
+  spellHarmonize
+  spellSummonInstrument
+end
+
+category groupSongSilArcaneScrollSpells3
+  spellBluntWeapon
+  spellHealthfulSlumber
+  spellHymnofPraise
+  spellInfernalThrenody
+end
+
+category groupSongSilArcaneScrollSpells4
+  spellAllegro
+  spellChoir
+  spellFollowtheLeader
+  spellHarmonicChorus
+  spellListeningCoin
+  spellSpectralWeapon
+  spellZoneofSilence
+end
+
+category groupSongSilArcaneScrollSpells5
+  spellImprovisation
+  spellOttosResistibleDance
+  spellSongofDiscord
+  spellWailofDoom
+end
+
+category groupSongSilArcaneScrollSpells6
+  spellFanfare
+  spellInsidiousRhythm
+  spellProtege
+  spellSympatheticVibration
+end
+
+category groupArcaneScrollSpells1
+  [4] groupSongSilArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [4] groupSongSilArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [4] groupSongSilArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [7] groupSongSilArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [4] groupSongSilArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [4] groupSongSilArcaneScrollSpells6
+end
+

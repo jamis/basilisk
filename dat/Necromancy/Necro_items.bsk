@@ -1,0 +1,124 @@
+/*Necromancy Items compiled by Shaun Gierent*/
+
+/* specific Weapons */
+
+wstBladeoftheBanshee
+  .name "Blade of the Banshee"
+  .prototype weaponLongsword
+  .cost 306000 gp
+  .sources sourcesNecromancy
+end
+
+category groupNecroMajorSpecificWeapons
+  [5]  wstBladeoftheBanshee
+end
+
+category groupMajorSpecificWeapons
+  [1]  groupNecroMajorSpecificWeapons
+end
+
+/* rings */
+
+ringBone ( groupRings )
+  .name "Bone"
+  .cost 7000 gp
+  .sources sourcesNecromancy
+  .needPrefix true
+end
+
+ringPettyVengeance ( groupRings )
+  .name "Petty Vengeance"
+  .cost 500 gp
+  .sources sourcesNecromancy
+  .needPrefix true
+end
+
+category groupNecroRingsMinor
+  ringBone
+  ringPettyVengeance
+end
+
+category groupNecroRingsMedium
+  ringBone
+  ringPettyVengeance
+end
+
+category groupNecroRingsMajor
+  ringPettyVengeance
+end
+
+category groupRingsMinor
+ [2] groupNecroRingsMinor
+end
+
+category groupRingsMedium 
+ [2] groupNecroRingsMedium
+end
+
+category groupRingsMajor
+ [1] groupNecroRingsMajor
+end
+
+/* wondrous Items */
+
+wondrousBlackGauntlet
+  .name "Black Gauntlet"
+  .cost  15000 gp
+  .canBeIntelligent yes
+  .sources sourcesNecromancy
+end
+
+wondrousBoneDelverLantern
+  .name "Bone Delver Lantern"
+  .cost  4000 gp
+  .canBeIntelligent yes
+  .sources sourcesNecromancy
+end
+
+wondrousBloodiedOnyx
+  .name "Bloodied Onyx"
+  .cost  500 gp
+  .canBeIntelligent yes
+  .sources sourcesNecromancy
+end
+
+wondrousCupoftheDamned
+  .name "Cup of the Damned"
+  .cost  30000 gp
+  .canBeIntelligent yes
+  .sources sourcesNecromancy
+end
+
+wondrousMaskofDeath
+  .name "Mask of Death"
+  .cost  7000 gp
+  .canBeIntelligent yes
+  .sources sourcesNecromancy
+end
+
+category groupNecroMinorWondrousItems
+  [5] wondrousBoneDelverLantern
+  [5] wondrousBloodiedOnyx
+end
+
+category groupNecroMediumWondrousItems
+  [5] wondrousBlackGauntlet
+  [5] wondrousMaskofDeath
+end
+
+category groupNecroMajorWondrousItems
+  [5] wondrousCupoftheDamned
+end
+
+category groupMinorWondrousItems
+ [2]  groupNecroMinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [2]  groupNecroMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [1]  groupNecroMajorWondrousItems
+end
+

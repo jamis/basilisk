@@ -1,0 +1,34 @@
+/*Magic of Faerun Potions compiled by Shaun Gierent*/
+
+template in ( groupPotions ) { name cost sources }
+  potionOilofAnimateDead { "Oil of Animate Dead"  1550 gp sourcesMagicofFaerun }
+  potionPotionofInfertility { "Potion of Infertility"  150 gp sourcesMagicofFaerun }
+end
+
+category groupMoFPotionsMinor
+  [ 1] potionPotionofInfertility
+end
+
+category groupMoFPotionsMedium
+  [ 1] potionPotionofInfertility
+end
+
+
+category groupMoFPotionsMajor
+  [ 1] potionOilofAnimateDead
+end
+
+category groupPotionsMinor
+ [ 1] groupMoFPotionsMinor
+end
+
+
+category groupPotionsMedium 
+[ 1] groupMoFPotionsMedium
+end
+
+
+category groupPotionsMajor
+[ 1] groupMoFPotionsMajor
+end
+

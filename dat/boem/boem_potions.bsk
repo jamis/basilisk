@@ -1,0 +1,188 @@
+/* Compiled by Shaun Gierent */
+
+template in ( groupPotions ) { name cost sources }
+  potionOilofPurifyFoodandDrink { "Oil of Purify Food and Drink"  25 gp sourcesBookofEldritchMight }
+  potionResistance { "Resistance"  25 gp sourcesBookofEldritchMight }
+  potionComprehendLanguages { "Comprehend Languages"  50 gp sourcesBookofEldritchMight }
+  potionEndureElementsCold { "Endure Elements (Cold)"  50 gp sourcesBookofEldritchMight }
+  potionEndureElementsElectricity { "Endure Elements (Electricity)"  50 gp sourcesBookofEldritchMight }
+  potionEndureElementsFire { "Endure Elements (Fire)"  50 gp sourcesBookofEldritchMight }
+  potionEndureElementsAcid { "Endure Elements (Acid)"  50 gp sourcesBookofEldritchMight }
+  potionEndureElementsSonic { "Endure Elements (Sonic)"  50 gp sourcesBookofEldritchMight }
+  potionVentriliquism { "Ventriliquism"  50 gp sourcesBookofEldritchMight }
+  potionExpeditiousRetreat { "Expeditious Retreat"  50 gp sourcesBookofEldritchMight }
+  potionRemoveFear { "Remove Fear"  50 gp sourcesBookofEldritchMight }
+  potionOilofMagicStone { "Oil of Magic Stone"  50 gp sourcesBookofEldritchMight }
+  potionDivineFavor { "Divine Favor"  50 gp sourcesBookofEldritchMight }
+  potionShillelaghOil { "Shillelagh Oil"  50 gp sourcesBookofEldritchMight }
+  potionShieldofFaith { "Shield of Faith"  50 gp sourcesBookofEldritchMight }
+  potionOilofProtectionfromGood { "Oil of Protection from Good"  50 gp sourcesBookofEldritchMight }
+  potionOilofProtectionfromEvil { "Oil of Protection from Evil"  50 gp sourcesBookofEldritchMight }
+  potionOilofProtectionfromLaw { "Oil of Protection from Law"  50 gp sourcesBookofEldritchMight }
+  potionOilofProtectionfromChaos { "Oil of Protection from Chaos"  50 gp sourcesBookofEldritchMight }
+  potionOilofMagicWeapon { "Oil of Magic Weapon"  50 gp sourcesBookofEldritchMight }
+  potionSanctuary { "Sanctuary"  50 gp sourcesBookofEldritchMight }
+  potionTrueStrike { "True Strike"  50 gp sourcesBookofEldritchMight }
+  potionMageArmor { "Mage Armor"  50 gp sourcesBookofEldritchMight }
+  potionShield { "Shield"  50 gp sourcesBookofEldritchMight }
+  potionResistElementsCold { "Resist Elements (Cold)"  300 gp sourcesBookofEldritchMight }
+  potionResistElementsElectricity { "Resist Elements (Electricity)"  300 gp sourcesBookofEldritchMight }
+  potionResistElementsFire { "Resist Elements (Fire)"  300 gp sourcesBookofEldritchMight }
+  potionResistElementsAcid { "Resist Elements (Acid)"  300 gp sourcesBookofEldritchMight }
+  potionResistElementsSonic { "Resist Elements (Sonic)"  300 gp sourcesBookofEldritchMight }
+  potionOilofGentleRepose { "Oil of Gentle Repose"  300 gp sourcesBookofEldritchMight }
+  potionBarkskin { "Barkskin"  300 gp sourcesBookofEldritchMight }
+  potionTreeShape { "TreeShape"  300 gp sourcesBookofEldritchMight }
+  potionOilofWarpWood { "Oil of Warp Wood"  300 gp sourcesBookofEldritchMight }
+  potionOilofWoodShape { "Oil of Wood Shape"  300 gp sourcesBookofEldritchMight }
+  potionOilofConsecrate { "Oil of Consecrate"  300 gp sourcesBookofEldritchMight }
+  potionOilofDesecrate { "Oil of Desecrate"  300 gp sourcesBookofEldritchMight }
+  potionWhisperingWind { "Whispering Wind"  300 gp sourcesBookofEldritchMight }
+  potionSeeInvisibility { "See Invisibility"  300 gp sourcesBookofEldritchMight }
+  potionProtectionfromArrows { "Protection from Arrows"  300 gp sourcesBookofEldritchMight }
+  potionOilofKnock { "Oil of Knock"  300 gp sourcesBookofEldritchMight }
+  potionSpeakwithPlants { "Speak with Plants"  750 gp sourcesBookofEldritchMight }
+  potionOilofPlantGrowth { "Oil of Plant Growth"  750 gp sourcesBookofEldritchMight }
+  potionMeldwithStone { "Meld with Stone"  750 gp sourcesBookofEldritchMight }
+  potionOilofShrinkItem { "Oil of Shrink Item"  750 gp sourcesBookofEldritchMight }
+  potionOilofMagicCircleAgainstGood { "Oil of Magic Circle Against Good"  750 gp sourcesBookofEldritchMight }
+  potionOilofMagicCircleAgainstEvil { "Oil of Magic Circle Against Evil"  750 gp sourcesBookofEldritchMight }
+  potionOilofMagicCircleAgainstLaw { "Oil of Magic Circle Against Law"  750 gp sourcesBookofEldritchMight }
+  potionOilofMagicCircleAgainstChaos { "Oil of Magic Circle Against Chaos"  750 gp sourcesBookofEldritchMight }
+  potionOilofStoneShape { "Oil of Stone Shape"  750 gp sourcesBookofEldritchMight }
+  potionWaterWalk { "Water Walk"  750 gp sourcesBookofEldritchMight }
+  potionBlink { "Blink"  750 gp sourcesBookofEldritchMight }
+  potionOilofMagicVestment { "Oil of Magic Vestment"  750 gp sourcesBookofEldritchMight }
+  potionDisplacement { "Displacement"  750 gp sourcesBookofEldritchMight }
+  potionOilofPoison { "Oil of Poison"  750 gp sourcesBookofEldritchMight }
+  potionOilofGreaterMagicWeapon { "Oil of Greater Magic Weapon"  750 gp sourcesBookofEldritchMight }
+  potionOilofKeenEdge { "Oil of Keen Edge"  750 gp sourcesBookofEldritchMight }
+  potionOilofAnimateDead { "Oil of Animate Dead"  750 gp sourcesBookofEldritchMight }
+  potionVampiricTouch { "Vampiric Touch"  750 gp sourcesBookofEldritchMight }
+  potionPotionofEvasion { "Potion of Evasion"  800 gp sourcesBookofEldritchMight }
+  potionPotionofSpellPower { "Potion of Spell Power"  600 gp sourcesBookofEldritchMight }
+end
+
+
+category groupBoEMPotionsMinor
+  [8] potionOilofPurifyFoodandDrink
+  [7] potionResistance
+  [5] potionComprehendLanguages
+  [5] potionEndureElementsCold
+  [5] potionEndureElementsElectricity
+  [5] potionEndureElementsFire
+  [5] potionEndureElementsAcid
+  [5] potionEndureElementsSonic
+  [5] potionVentriliquism
+  [5] potionExpeditiousRetreat
+  [5] potionRemoveFear
+  [5] potionOilofMagicStone
+  [5] potionDivineFavor
+  [5] potionShillelaghOil
+  [5] potionShieldofFaith
+  [3] potionOilofProtectionfromGood
+  [3] potionOilofProtectionfromEvil
+  [3] potionOilofProtectionfromLaw
+  [3] potionOilofProtectionfromChaos
+  [3] potionOilofMagicWeapon
+  [3] potionSanctuary
+  [1] potionTrueStrike
+  [1] potionMageArmor
+  [1] potionShield
+  end
+
+
+category groupBoEMPotionsMedium
+  [1] potionEndureElementsCold
+  [1] potionEndureElementsElectricity
+  [1] potionEndureElementsFire
+  [1] potionEndureElementsAcid
+  [1] potionEndureElementsSonic
+  [1] potionVentriliquism
+  [1] potionExpeditiousRetreat
+  [1] potionRemoveFear
+  [1] potionOilofMagicStone
+  [1] potionDivineFavor
+  [1] potionShillelaghOil
+  [2] potionShieldofFaith
+  [2] potionOilofProtectionfromGood
+  [2] potionOilofProtectionfromEvil
+  [2] potionOilofProtectionfromLaw
+  [2] potionOilofProtectionfromChaos
+  [4] potionOilofMagicWeapon
+  [5] potionSanctuary
+  [5] potionTrueStrike
+  [5] potionMageArmor
+  [5] potionShield
+  [5] potionResistElementsCold
+  [5] potionResistElementsElectricity
+  [5] potionResistElementsFire
+  [5] potionResistElementsAcid
+  [5] potionResistElementsSonic
+  [5] potionOilofGentleRepose
+  [5] potionBarkskin
+  [3] potionTreeShape
+  [3] potionOilofWarpWood
+  [3] potionOilofWoodShape
+  [3] potionOilofConsecrate
+  [3] potionOilofDesecrate
+  [3] potionWhisperingWind
+  [1] potionSeeInvisibility
+  [1] potionProtectionfromArrows
+  [1] potionOilofKnock
+end
+
+
+category groupBoEMPotionsMajor
+  [1] potionResistElementsCold
+  [1] potionResistElementsElectricity
+  [1] potionResistElementsFire
+  [1] potionResistElementsAcid
+  [1] potionResistElementsSonic
+  [1] potionOilofGentleRepose
+  [1] potionBarkskin
+  [1] potionTreeShape
+  [1] potionOilofWarpWood
+  [1] potionOilofWoodShape
+  [2] potionOilofConsecrate
+  [2] potionOilofDesecrate
+  [2] potionWhisperingWind
+  [6] potionSeeInvisibility
+  [5] potionProtectionfromArrows
+  [5] potionOilofKnock
+  [5] potionSpeakwithPlants
+  [5] potionOilofPlantGrowth
+  [5] potionMeldwithStone
+  [5] potionOilofShrinkItem
+  [5] potionOilofMagicCircleAgainstGood
+  [5] potionOilofMagicCircleAgainstEvil
+  [5] potionOilofMagicCircleAgainstLaw
+  [5] potionOilofMagicCircleAgainstChaos
+  [5] potionOilofStoneShape
+  [5] potionWaterWalk
+  [5] potionBlink
+  [5] potionOilofMagicVestment
+  [3] potionDisplacement
+  [2] potionOilofPoison
+  [2] potionOilofGreaterMagicWeapon
+  [1] potionOilofKeenEdge
+  [1] potionOilofAnimateDead
+  [1] potionVampiricTouch
+  [1] potionPotionofEvasion
+  [1] potionPotionofSpellPower
+end
+
+category groupPotionsMinor
+ [ 24] groupBoEMPotionsMinor
+end
+
+
+category groupPotionsMedium 
+[ 37] groupBoEMPotionsMedium
+end
+
+
+category groupPotionsMajor
+[ 36] groupBoEMPotionsMajor
+end
+

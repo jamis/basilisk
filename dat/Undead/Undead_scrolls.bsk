@@ -1,0 +1,120 @@
+category groupUndeadArcaneScrollSpells2
+  [1] spellBonestaff
+  [1] spellMaskUndead
+end
+
+category groupUndeadArcaneScrollSpells3
+  [1] spellAcidBlood
+  [1] spellFeignLife
+  [1] spellHavrokrsMinorBlessing
+  [1] spellResistTurning
+  [1] spellStrengthenBone
+  [1] spellWallofBone
+end
+
+category groupUndeadArcaneScrollSpells5
+  [1] spellDanceoftheDead
+  [1] spellHoldUndead
+end
+
+category groupUndeadArcaneScrollSpells7
+  [1] spellAnimationField
+  [1] spellHavrokrsBlessing
+end
+
+category groupUndeadArcaneScrollSpells8
+  [1] spellMassAnimation
+end
+
+category groupUndeadArcaneScrollSpells9
+  [1] spellHavrokrsGreaterBlessing
+end
+
+category groupUndeadDivineScrollSpells1
+  [1] spellMinorHealUndead
+end
+
+category groupUndeadDivineScrollSpells2
+  [1] spellBonestaff
+  [1] spellHavrokrsMinorBlessing
+  [1] spellMaskUndead
+  [1] spellResistTurning
+end
+
+category groupUndeadDivineScrollSpells3
+  [1] spellHealUndead
+  [1] spellRestfulDeath
+  [1] spellWallofBone
+end
+
+category groupUndeadDivineScrollSpells4
+  [1] spellHoldUndead
+end
+
+category groupUndeadDivineScrollSpells5
+  [1] spellAnimationField
+  [1] spellHavrokrsBlessing
+end
+
+category groupUndeadDivineScrollSpells6
+  [1] spellBlessingsoftheLightBringer
+  [1] spellHavrokrsDesecration
+end
+
+category groupUndeadDivineScrollSpells7
+  [1] spellHavrokrsGreaterBlessing
+  [1] spellMassAnimation
+end
+
+category groupArcaneScrollSpells2
+  [2] groupUndeadArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [6] groupUndeadArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells5
+  [2] groupUndeadArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells7
+  [2] groupUndeadArcaneScrollSpells7
+end
+
+category groupArcaneScrollSpells8
+  [1] groupUndeadArcaneScrollSpells8
+end
+
+category groupArcaneScrollSpells9
+  [1] groupUndeadArcaneScrollSpells9
+end
+
+category groupDivineScrollSpells1
+  [1] groupUndeadDivineScrollSpells1
+end
+
+category groupDivineScrollSpells2
+  [4] groupUndeadDivineScrollSpells2
+end
+
+category groupDivineScrollSpells3
+  [3] groupUndeadDivineScrollSpells3
+end
+
+category groupDivineScrollSpells4
+  [1] groupUndeadDivineScrollSpells4
+end
+
+category groupDivineScrollSpells5
+  [2] groupUndeadDivineScrollSpells5
+end
+
+category groupDivineScrollSpells6
+  [2] groupUndeadDivineScrollSpells6
+end
+
+category groupDivineScrollSpells7
+  [2] groupUndeadDivineScrollSpells7
+end
+

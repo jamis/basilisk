@@ -1,0 +1,16 @@
+template in ( groupMundaneItems ) { name cost sources }
+  miKanegorsBitterPill { "Kanegor's Bitter Pill"  65 gp sourcesDragons }
+  miJawTrapper { "Jaw Trapper"  75 gp sourcesDragons }
+  miTanglebomb { "Tanglebomb"  100 gp sourcesDragons }
+  end
+
+category groupDragItems
+  [10] { .magnitude 1  .type miKanegorsBitterPill }
+  [5] { .magnitude 1 .type miJawTrapper }
+  [10] { .magnitude 1  .type miTanglebomb }
+end
+
+category groupAlchemicalItems
+  [3] groupDragItems
+end
+

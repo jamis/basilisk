@@ -1,0 +1,38 @@
+template in ( groupMundaneItems ) { name cost sources }
+  miWitchweedstick { "Witchweed stick"  40 gp sourcesLordsofDarkness }
+  miHaunspeir { "Haunspeir"  50 gp sourcesLordsofDarkness }
+  miJhuild { "Jhuild ('Thrallwine')"  6 gp sourcesLordsofDarkness }
+  miKammarth { "Kammarth"  80 gp sourcesLordsofDarkness }
+  miKatakuda { "Katakuda ('Dragonskin')"  100 gp sourcesLordsofDarkness }
+  miMordaynVapor { "Mordawn Vapor ('Dreammist')"  200 gp sourcesLordsofDarkness }
+  miOruighen { "Oruighen ('Phantomdust')"  20 gp sourcesLordsofDarkness }
+  miPanaeolo { "Panaeolo"  250 gp sourcesLordsofDarkness }
+  miRedflowerLeaves { "Redflower Leaves"  300 gp sourcesLordsofDarkness }
+  miRhul { "Rhul ('Battlewine')"  50 gp sourcesLordsofDarkness }
+  miSakrash { "Sakrash ('Twilight Mind')"  500 gp sourcesLordsofDarkness }
+  miSezaradRoot { "Sezarad Root"  75 gp sourcesLordsofDarkness }
+  miTekkil { "Tekkil"  5 gp sourcesLordsofDarkness }
+  miZiran { "Ziran ('Bloodfast')"  100 gp sourcesLordsofDarkness }
+end
+
+category groupLodItems
+  [2] { .magnitude 1  .type miWitchweedstick }
+  [2] { .magnitude 1  .type miHaunspeir }
+  [3] { .magnitude 1  .type miJhuild }
+  [2] { .magnitude 1  .type miKammarth }
+  [2] { .magnitude 1  .type miKatakuda }
+  [1] { .magnitude 1  .type miMordaynVapor }
+  [2] { .magnitude 1  .type miOruighen }
+  [1] { .magnitude 1  .type miPanaeolo }
+  [1] { .magnitude 1  .type miRedflowerLeaves }
+  [2] { .magnitude 1  .type miRhul }
+  [2] { .magnitude 1  .type miSakrash }
+  [2] { .magnitude 1  .type miSezaradRoot }
+  [2] { .magnitude 1  .type miTekkil }
+  [2] { .magnitude 1  .type miZiran }
+end
+
+category groupAlchemicalItems
+  [14] groupLodItems
+end
+

@@ -1,0 +1,10 @@
+/* Dungeons from AEG Converted by Shaun Gierent  */
+
+SourceDungeons in ( sourcesDungeons groupAllSources )
+  .name "Dungeons (AEG)"
+end
+
+#include "Dung_items.bsk"
+#include "Dung_spells.bsk"
+#include "Dung_scrolls.bsk"
+

@@ -1,0 +1,239 @@
+/*Lords of Darkness Items compiled by Shaun Gierent*/
+
+/* Weapon special abilities */
+
+wsaSmoking
+  .name "Smoking"
+  .marketPriceArmorModifier +1
+  .sources sourcesLordsofDarkness
+end
+
+category groupLoDMeleeWeaponMinorSpecialAbilities
+  [15] wsaSmoking
+  [ 1] mwgtRollAgain
+end
+
+category groupLoDMeleeWeaponMediumSpecialAbilities
+  [10] wsaSmoking
+  [ 5] mwgtRollAgain
+end
+
+category groupLoDMeleeWeaponMajorSpecialAbilities
+  [2] wsaSmoking
+  [20] mwgtRollAgain
+end
+
+category groupLoDRangedWeaponMinorSpecialAbilities
+  [1] wsaSmoking
+end
+
+category groupLoDRangedWeaponMediumSpecialAbilities
+  [15] wsaSmoking
+  [ 2] mwgtRollAgain
+end
+
+category groupLoDRangedWeaponMajorSpecialAbilities
+  [10] wsaSmoking
+  [ 2] mwgtRollAgain
+end
+
+category groupMeleeWeaponMinorSpecialAbilities
+  [1] 	groupLoDMeleeWeaponMinorSpecialAbilities
+end
+
+category groupMeleeWeaponMediumSpecialAbilities
+  [1] 	groupLoDMeleeWeaponMediumSpecialAbilities
+end
+
+category groupMeleeWeaponMajorSpecialAbilities
+  [1] 	groupLoDMeleeWeaponMajorSpecialAbilities
+end
+
+category groupRangedWeaponMinorSpecialAbilities
+  [1] 	groupLoDRangedWeaponMinorSpecialAbilities
+end
+
+category groupRangedWeaponMediumSpecialAbilities
+  [1] 	groupLoDRangedWeaponMediumSpecialAbilities
+end
+
+category groupRangedWeaponMajorSpecialAbilities
+  [1] 	groupLoDRangedWeaponMajorSpecialAbilities
+end
+
+/* specific Weapons */
+
+wstBanesword
+  .name "Banesword"
+  .prototype weaponLongsword
+  .cost 18315 gp
+  .sources sourcesLordsofDarkness
+end
+
+wstEbonLash
+  .name "Ebon Lash"
+  .prototype weaponWhip
+  .cost 4526 gp
+  .sources sourcesLordsofDarkness
+end
+
+wstNightblade
+  .name "Nightblade"
+  .prototype weaponDagger
+  .cost 8702 gp
+  .sources sourcesLordsofDarkness
+end
+
+wstSkullBlade
+  .name "Skull Blade"
+  .prototype weaponLongsword
+  .cost 18315 gp
+  .sources sourcesLordsofDarkness
+end
+
+
+category groupLoDMediumSpecificWeapons
+  [2]  wstBanesword 
+  [2]  wstEbonLash
+  [2]  wstNightblade
+  [2]  wstSkullBlade
+end 
+
+
+category groupLoDMajorSpecificWeapons
+  [5]  wstBanesword 
+  [2]  wstEbonLash
+  [2]  wstNightblade
+  [5]  wstSkullBlade
+end
+
+category groupMediumSpecificWeapons
+  [1]  groupLoDMediumSpecificWeapons
+end
+
+category groupMajorSpecificWeapons
+  [1]  groupLoDMajorSpecificWeapons
+end
+
+/* rings */
+
+ringAntivenom ( groupRings )
+  .name "Antivenom"
+  .cost 6750 gp
+  .sources sourcesLordsofDarkness
+  .needPrefix true
+end
+
+category groupLoDRingsMinor
+  ringAntivenom
+end
+
+category groupLoDRingsMedium
+  ringAntivenom
+end
+
+category groupRingsMinor
+ [1] groupLoDRingsMinor
+end
+
+category groupRingsMedium 
+ [1] groupLoDRingsMedium
+end
+
+/* wondrous Items */
+
+wondrousDrowHouseInsignia1
+  .name "Drow House Insignia 1"
+  .cost  360 gp
+  .canBeIntelligent yes
+  .sources sourcesLordsofDarkness
+end
+
+wondrousDrowHouseInsignia2
+  .name "Drow House Insignia 2"
+  .cost  2160 gp
+  .canBeIntelligent yes
+  .sources sourcesLordsofDarkness
+end
+
+wondrousDrowHouseInsignia3
+  .name "Drow House Insignia 3"
+  .cost  5400 gp
+  .canBeIntelligent yes
+  .sources sourcesLordsofDarkness
+end
+
+wondrousFireElementalGemSmall
+  .name "Fire Elemental Gem (Small)"
+  .cost  750 gp
+  .canBeIntelligent yes
+  .sources sourcesLordsofDarkness
+end
+
+wondrousFireElementalGemMedium
+  .name "Fire Elemental Gem (Medium)"
+  .cost  2250 gp
+  .canBeIntelligent yes
+  .sources sourcesLordsofDarkness
+end
+
+wondrousFireElementalGemLarge
+  .name "Fire Elemental Gem (Large)"
+  .cost  3300 gp
+  .canBeIntelligent yes
+  .sources sourcesLordsofDarkness
+end
+
+wondrousFireElementalGemHuge
+  .name "Fire Elemental Gem (Huge)"
+  .cost  4550 gp
+  .canBeIntelligent yes
+  .sources sourcesLordsofDarkness
+end
+
+wondrousFireElementalGemGreater
+  .name "Fire Elemental Gem (Greater)"
+  .cost  6000 gp
+  .canBeIntelligent yes
+  .sources sourcesLordsofDarkness
+end
+
+wondrousFireElementalGemElder
+  .name "Fire Elemental Gem (Elder)"
+  .cost  7650 gp
+  .canBeIntelligent yes
+  .sources sourcesLordsofDarkness
+end
+
+wondrousGreaterPiwafwi
+  .name "Greater Piwafwi"
+  .cost  6100 gp
+  .canBeIntelligent yes
+  .sources sourcesLordsofDarkness
+end
+
+category groupLoDMinorWondrousItems
+  [5] wondrousDrowHouseInsignia1
+  [3] wondrousDrowHouseInsignia2
+  [1] wondrousDrowHouseInsignia3
+  [5] wondrousFireElementalGemSmall
+  [4] wondrousFireElementalGemMedium
+  [3] wondrousFireElementalGemLarge
+  [2] wondrousFireElementalGemHuge
+  [1] wondrousFireElementalGemGreater
+  [5] wondrousGreaterPiwafwi
+end
+
+category groupLoDMediumWondrousItems
+ [3] wondrousFireElementalGemElder
+end
+
+category groupMinorWondrousItems
+ [3]  groupLoDMinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [1]  groupLoDMediumWondrousItems
+end
+
+

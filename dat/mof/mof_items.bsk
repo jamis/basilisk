@@ -1,0 +1,2462 @@
+/*Magic of Faerun Items compiled by Shaun Gierent*/
+
+/* new magic armour abilities */
+
+asaBlueshine ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Blueshine"
+  .marketPriceArmorModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+asaDeathWard ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Death Ward"
+  .marketPriceArmorModifier +2
+  .sources sourcesMagicofFaerun
+end
+
+asaEverbright ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Everbright"
+  .marketPriceArmorModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+asaMagicEating ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Magic Eating"
+  .marketPriceArmorModifier +3
+  .sources sourcesMagicofFaerun
+end
+
+asaNegativeEnergyProtection ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Negative Energy Protection"
+  .marketPriceArmorModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+asaNimbleness ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Nimbleness"
+  .marketPriceArmorModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+asaProofAgainstTransmutation ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Proof Against Transmutation"
+  .marketPriceArmorModifier +6
+  .sources sourcesMagicofFaerun
+end
+
+asaStrength2 ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Strength +2"
+  .marketPriceArmorModifier +2
+  .sources sourcesMagicofFaerun
+end
+
+asaStrength4 ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Strength +4"
+  .marketPriceArmorModifier +4
+  .sources sourcesMagicofFaerun
+end
+
+
+category groupMoFMinorShieldSpecialAbilities
+  [20] asaBlueshine
+  [20] asaEverbright
+  [20] asaNegativeEnergyProtection
+  [20] asaNimbleness
+  [5] asaDeathWard
+  [5] asaMagicEating
+  [8] asaStrength2
+  [2] asaStrength4
+  [2] mwgtRollAgain
+end
+
+category groupMoFMinorArmorSpecialAbilities
+  [20] asaBlueshine
+  [20] asaEverbright
+  [20] asaNegativeEnergyProtection
+  [20] asaNimbleness
+  [5] asaDeathWard
+  [5] asaMagicEating
+  [8] asaStrength2
+  [2] asaStrength4
+  [2] mwgtRollAgain
+end
+
+category groupMoFMediumArmorSpecialAbilities
+  [15] asaBlueshine
+  [15] asaEverbright
+  [15] asaNegativeEnergyProtection
+  [15] asaNimbleness
+  [12] asaDeathWard
+  [6] asaMagicEating
+  [2] asaProofAgainstTransmutation
+  [5] asaStrength2
+  [5] asaStrength4
+  [10] mwgtRollAgain
+end
+
+category groupMoFMediumShieldSpecialAbilities
+  [15] asaBlueshine
+  [15] asaEverbright
+  [15] asaNegativeEnergyProtection
+  [15] asaNimbleness
+  [12] asaDeathWard
+  [6] asaMagicEating
+  [2] asaProofAgainstTransmutation
+  [5] asaStrength2
+  [5] asaStrength4
+  [10] mwgtRollAgain
+end
+
+category groupMoFMajorArmorSpecialAbilities
+  [5] asaBlueshine
+  [5] asaEverbright
+  [15] asaNegativeEnergyProtection
+  [10] asaNimbleness
+  [15] asaDeathWard
+  [12] asaMagicEating
+  [3] asaProofAgainstTransmutation
+  [5] asaStrength2
+  [5] asaStrength4
+  [25] mwgtRollAgain
+end
+
+category groupMoFMajorShieldSpecialAbilities
+  [5] asaBlueshine
+  [5] asaEverbright
+  [15] asaNegativeEnergyProtection
+  [10] asaNimbleness
+  [15] asaDeathWard
+  [12] asaMagicEating
+  [3] asaProofAgainstTransmutation
+  [5] asaStrength2
+  [5] asaStrength4
+  [25] mwgtRollAgain
+end
+
+category groupMinorArmorSpecialAbilities
+  [8] groupMofMinorArmorSpecialAbilities
+end
+
+category groupMediumArmorSpecialAbilities
+  [9] groupMoFMediumArmorSpecialAbilities
+end
+
+category groupMajorArmorSpecialAbilities
+  [9] groupMoFMajorArmorSpecialAbilities
+end
+
+category groupMinorShieldSpecialAbilities
+  [8] groupMoFMinorShieldSpecialAbilities
+end
+
+category groupMediumShieldSpecialAbilities
+  [9] groupMoFMediumShieldSpecialAbilities
+end
+
+category groupMajorShieldSpecialAbilities
+  [9] groupMoFMajorShieldSpecialAbilities
+end
+
+/* specific shields & armours */
+astBlueArmor in ( groupSpecificArmors )
+  .name "Blue Armor of the Crystalmist Mountains"
+  .cost 20960 gp
+  .sources sourcesDefendersoftheFaith
+end
+
+astCormyrianGreatshield in ( groupSpecificArmors )
+  .name "Cormyrian Greatshield"
+  .cost 9170 gp
+  .sources sourcesMagicofFaerun
+end
+
+astLaeralsSpellShield in ( groupSpecificArmors )
+  .name "Laeral's Spell Shield"
+  .cost 9170 gp
+  .sources sourcesMagicofFaerun
+end
+
+astShieldofVigilance in ( groupSpecificArmors )
+  .name "Shield of Vigilance"
+  .cost 9170 gp
+  .sources sourcesMagicofFaerun
+end
+
+astLaeralsStormArmor in ( groupSpecificArmors )
+  .name "Laeral's Storm Armor"
+  .cost 66650 gp
+  .sources sourcesMagicofFaerun
+end
+
+astStormArmoroftheEarthsChildren in ( groupSpecificArmors )
+  .name "Storm Armor of the Earth's Children"
+  .cost 111650 gp
+  .sources sourcesMagicofFaerun
+end
+
+category groupMoFMediumSpecificArmors
+  [25] astCormyrianGreatshield
+  [25] astLaeralsSpellShield
+  [25] astShieldofVigilance
+  [15] astLaeralsStormArmor
+  [10] astStormArmoroftheEarthsChildren
+end
+
+category groupMoFMajorSpecificArmors
+  [20] astCormyrianGreatshield
+  [20] astLaeralsSpellShield
+  [20] astShieldofVigilance
+  [20] astLaeralsStormArmor
+  [20] astStormArmoroftheEarthsChildren
+end
+
+category groupMediumSpecificArmors
+  [4]  groupMofMediumSpecificArmors
+end
+
+category groupMajorSpecificArmors
+  [5]  groupMoFMajorSpecificArmors
+end
+
+/* Weapon Abilities */
+
+wsaCorrosive
+  .name "Corrosive"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+wsaDispelling
+  .name "Dispelling"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+wsaFlying
+  .name "Flying"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+wsaImpact
+  .name "Impact"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+wsaMerciful
+  .name "Merciful"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+wsaScreaming
+  .name "Screaming"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+wsaSpellblade
+  .name "Spellblade"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+wsaSureStriking
+  .name "Sure Striking"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+wsaSweeping
+  .name "Sweeping"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+wsaVenomous
+  .name "Venomous"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+wsaWarning
+  .name "Warning"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+wsaAcidicBurst
+  .name "Acidic Burst"
+  .marketPriceWeaponModifier +2
+  .sources sourcesMagicofFaerun
+end
+
+wsaDisarming
+  .name "Disarming"
+  .marketPriceWeaponModifier +2
+  .sources sourcesMagicofFaerun
+end
+
+wsaEverbright
+  .name "Everbright"
+  .marketPriceWeaponModifier +2
+  .sources sourcesMagicofFaerun
+end
+
+wsaVampiric
+  .name "Vampiric"
+  .marketPriceWeaponModifier +2
+  .sources sourcesMagicofFaerun
+end
+
+wsaDomineering
+  .name "Domineering"
+  .marketPriceWeaponModifier +3
+  .sources sourcesMagicofFaerun
+end
+
+wsaDoomwarding
+  .name "Doomwarding"
+  .marketPriceWeaponModifier +3
+  .sources sourcesMagicofFaerun
+end
+
+wsaElementalAura
+  .name "Elemental Aura"
+  .marketPriceWeaponModifier +3
+  .sources sourcesMagicofFaerun
+end
+
+wsaKnockback
+  .name "Knockback"
+  .marketPriceWeaponModifier +3
+  .sources sourcesMagicofFaerun
+end
+
+wsaJumping
+  .name "Jumping"
+  .marketPriceWeaponModifier +3
+  .sources sourcesMagicofFaerun
+end
+
+wsaPrecise
+  .name "Precise"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+wsaSeeking
+  .name "Seeking"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMagicofFaerun
+end
+
+wsaQuickloading
+  .name "quick-loading"
+  .marketPriceWeaponModifier +2
+  .sources sourcesMagicofFaerun
+end
+
+wsaRadiantHolding
+  .name "Radiant Holding"
+  .marketPriceWeaponModifier +3
+  .sources sourcesMagicofFaerun
+end
+
+category groupMoFMeleeWeaponMinorSpecialAbilities
+  [9] wsaCorrosive
+  [9] wsaDispelling
+  [9] wsaFlying
+  [9] wsaImpact
+  [9] wsaMerciful
+  [9] wsaScreaming
+  [9] wsaSpellblade
+  [9] wsaSureStriking
+  [9] wsaSweeping
+  [9] wsaVenomous
+  [7] wsaWarning
+  [2] wsaJumping
+  [1] mwgtRollAgain
+end
+
+category groupMoFMeleeWeaponMediumSpecialAbilities
+  [5] wsaCorrosive
+  [5] wsaDispelling
+  [5] wsaFlying
+  [5] wsaImpact
+  [5] wsaMerciful
+  [5] wsaScreaming
+  [5] wsaSpellblade
+  [5] wsaSureStriking
+  [5] wsaSweeping
+  [5] wsaVenomous
+  [5] wsaWarning
+  [7] wsaAcidicBurst
+  [7] wsaDisarming
+  [7] wsaEverbright
+  [6] wsaVampiric
+  [3] wsaDomineering
+  [3] wsaDoomwarding
+  [3] wsaElementalAura
+  [3] wsaKnockback
+  [2] wsaJumping
+  [5] mwgtRollAgain
+end
+
+category groupMoFMeleeWeaponMajorSpecialAbilities
+  [3] wsaCorrosive
+  [3] wsaDispelling
+  [3] wsaFlying
+  [3] wsaImpact
+  [3] wsaMerciful
+  [3] wsaScreaming
+  [3] wsaSpellblade
+  [3] wsaSureStriking
+  [3] wsaSweeping
+  [3] wsaVenomous
+  [3] wsaWarning
+  [6] wsaAcidicBurst
+  [6] wsaDisarming
+  [6] wsaEverbright
+  [6] wsaVampiric
+  [5] wsaDomineering
+  [6] wsaDoomwarding
+  [4] wsaElementalAura
+  [5] wsaKnockback
+  [3] wsaJumping
+  [20] mwgtRollAgain
+end
+
+category groupMoFRangedWeaponMinorSpecialAbilities
+  [14] wsaCorrosive
+  [14] wsaImpact
+  [14] wsaMerciful
+  [14] wsaPrecise
+  [14] wsaScreaming
+  [14] wsaSeeking
+  [14] wsaVenomous
+  [ 2] mwgtRollAgain
+end
+
+category groupMoFRangedWeaponMediumSpecialAbilities
+  [9] wsaCorrosive
+  [9] wsaImpact
+  [9] wsaMerciful
+  [9] wsaPrecise
+  [9] wsaScreaming
+  [9] wsaSeeking
+  [9] wsaVenomous
+  [17] wsaAcidicBurst
+  [15] wsaQuickloading
+  [5] mwgtRollAgain
+end
+
+category groupMoFRangedWeaponMajorSpecialAbilities
+  [4] wsaCorrosive
+  [4] wsaImpact
+  [4] wsaMerciful
+  [4] wsaPrecise
+  [4] wsaScreaming
+  [4] wsaSeeking
+  [4] wsaVenomous
+  [6] wsaAcidicBurst
+  [6] wsaQuickloading
+  [10] wsaDoomwarding
+  [10] wsaElementalAura
+  [10] wsaKnockback
+  [10] wsaRadiantHolding
+  [20] mwgtRollAgain
+end
+
+category groupMeleeWeaponMinorSpecialAbilities
+  [13] 	groupMoFMeleeWeaponMinorSpecialAbilities
+end
+
+category groupMeleeWeaponMediumSpecialAbilities
+  [21] 	groupMoFMeleeWeaponMediumSpecialAbilities
+end
+
+category groupMeleeWeaponMajorSpecialAbilities
+  [20] 	groupMoFMeleeWeaponMajorSpecialAbilities
+end
+
+category groupRangedWeaponMinorSpecialAbilities
+  [7] 	groupMoFRangedWeaponMinorSpecialAbilities
+end
+
+category groupRangedWeaponMediumSpecialAbilities
+  [9] 	groupMoFRangedWeaponMediumSpecialAbilities
+end
+
+category groupRangedWeaponMajorSpecialAbilities
+  [13] 	groupMoFRangedWeaponMajorSpecialAbilities
+end
+
+/* specific Weapons */
+
+wstArrowofBiting
+  .name "Arrow of Biting"
+  .prototype weaponArrow
+  .cost 1457 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstBanesword
+  .name "Banesword"
+  .prototype weaponLongsword
+  .cost 18315 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstBerserkerBlade1
+  .name "Berserker Blade +1"
+  .prototype weaponBastardsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 6335 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstBerserkerBlade2
+  .name "Berserker Blade +2"
+  .prototype weaponBastardsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 15335 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstBlingdenstoneWarpick
+  .name "Blingdenstone Warpick"
+  .prototype weaponHeavypick
+  .cost 8308 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstCormanthyrianElfblade
+  .name "Cormanthyrian Elfblade"
+  .prototype weaponLongsword
+  .cost 8315 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstCormyrianGoblinthrasher
+  .name "Cormyrian Goblinthrasher"
+  .prototype weaponLongsword
+  .cost 18315 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstDaggerofChaos
+  .name "Dagger of Chaos"
+  .prototype weaponDagger
+  .cost 106302 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstDaggerofDefiance
+  .name "Dagger of Defiance"
+  .prototype weaponDagger
+  .cost 12302 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstTheFist
+  .name "The Fist"
+  .prototype weaponGauntlet
+  .cost 23305 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstGauntletsoftheValorous
+  .name "Gauntlets of the Valorous"
+  .prototype weaponGauntlet
+  .cost 18302 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstGoldenAxeoftheGreatRift
+  .name "Golden Axe of the Great Rift"
+  .prototype weaponBattleaxe
+  .cost 18310 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstJusticeBlade
+  .name "Justice Blade"
+  .prototype weaponLongsword
+  .cost 32315 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstLanceofFaerun
+  .name "Lance of Faerun"
+  .prototype weaponLance
+  .cost 98310 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstLitwithDanger
+  .name "Lit with Danger"
+  .prototype weaponshortspear
+  .cost 8330 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstLuirenShortbow
+  .name "Luiren Shortbow"
+  .prototype weaponShortbow
+  .cost 8330 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstMaceoftheDarkchildren
+  .name "Mace of the Darkchildren"
+  .prototype weaponHeavymace
+  .cost 17000 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstNamarra
+  .name "Namarra"
+  .prototype weaponLongsword
+  .cost 30315 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstNightblade
+  .name "Nightblade"
+  .prototype weaponDagger
+  .cost 8702 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstOneThousandBrokenDreams
+  .name "One Thousand Broken Dreams"
+  .prototype weaponLongsword
+  .cost 100315 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstPrayerofAnger
+  .name "Prayer of Anger"
+  .prototype weaponGreatsword
+  .cost 14350 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstQuarterstaffofBattle
+  .name "Quarterstaff of Battle"
+  .prototype weaponQuarterstaff
+  .cost 162600 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstRunehammer
+  .name "Runehammer"
+  .prototype weaponwarhammer
+  .cost 11912 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstScimitaroftheFool
+  .name "Scimitar of the Fool"
+  .prototype weaponScimitar
+  .cost 3000 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstSembianGuardblade
+  .name "Sembian Guardblade"
+  .prototype weaponRapier
+  .cost 8320 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstSilvermanesAxe
+  .name "Silvermane's Axe"
+  .prototype weaponBattleaxe
+  .cost 50302 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstSingingSword
+  .name "Singing Sword"
+  .prototype weaponGreatsword
+  .cost 24450 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstSpectralDagger
+  .name "Spectral Dagger"
+  .prototype weapon
+  .cost 20000 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstSpiderFang
+  .name "Spider Fang"
+  .prototype weaponDagger
+  .cost 11782 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstStaffofMightySweeping
+  .name "Staff of Mighty Sweeping"
+  .prototype weaponQuarterstaff
+  .cost 28600 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstTalosianShortspear
+  .name "Talosian Shortspear"
+  .prototype weaponShortspear
+  .cost 18302 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstTaragarth
+  .name "Taragarth"
+  .prototype weaponBastardsword
+  .cost 86335 gp
+  .sources sourcesMagicofFaerun
+end
+
+wstViperDagger
+  .name "Viper Dagger"
+  .prototype weaponDagger
+  .cost 5382 gp
+  .sources sourcesMagicofFaerun
+end
+
+category groupMoFMediumSpecificWeapons
+  [5] wstArrowofBiting
+  [5] wstScimitaroftheFool
+  [5] wstDaggerofDefiance
+  [5] wstBerserkerBlade1
+  [5] wstBlingdenstoneWarpick
+  [5] wstCormanthyrianElfblade
+  [5] wstSembianGuardblade
+  [5] wstLuirenShortbow
+  [5] wstNightblade
+  [4] wstViperDagger
+  [4] wstSpiderFang
+  [4] wstRunehammer
+  [4] wstPrayerofAnger
+  [4] wstBerserkerBlade2
+  [4] wstMaceoftheDarkchildren
+  [4] wstLitwithDanger
+  [4] wstTalosianShortspear
+  [4] wstGauntletsoftheValorous
+  [4] wstGoldenAxeoftheGreatRift
+  [4] wstBanesword
+  [4] wstCormyrianGoblinthrasher
+  [2] wstSpectralDagger
+  [2] wstTheFist
+  [2] wstSingingSword
+  [1] wstStaffofMightySweeping
+end
+
+category groupMoFMajorSpecificWeapons
+  [5] wstViperDagger
+  [5] wstSpiderFang
+  [5] wstRunehammer
+  [5] wstPrayerofAnger
+  [5] wstBerserkerBlade2
+  [5] wstMaceoftheDarkchildren
+  [5] wstLitwithDanger
+  [5] wstTalosianShortspear
+  [5] wstGauntletsoftheValorous
+  [5] wstGoldenAxeoftheGreatRift
+  [5] wstBanesword
+  [5] wstCormyrianGoblinthrasher
+  [4] wstSpectralDagger
+  [4] wstTheFist
+  [4] wstSingingSword
+  [4] wstStaffofMightySweeping
+  [1] wstNamarra
+  [6] wstJusticeBlade
+  [3] wstSilvermanesAxe
+  [7] wstTaragarth
+  [5] wstLanceofFaerun
+  [3] wstOneThousandBrokenDreams
+  [3] wstDaggerofChaos
+  [2] wstQuarterstaffofBattle
+end
+
+category groupMediumSpecificWeapons
+  [25]  groupMoFMediumSpecificWeapons
+end
+
+category groupMajorSpecificWeapons
+  [24]  groupMofMajorSpecificWeapons
+end
+
+
+/* rings */
+
+ringAribethsRing ( groupRings )
+  .name "Aribeth's Ring"
+  .cost 50000 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix false
+end
+
+ringBoneRing ( groupRings )
+  .name "Bone Ring"
+  .cost 36000 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix false
+end
+
+ringCommandersRing ( groupRings )
+  .name "Commander's Ring"
+  .cost 120000 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix false
+end
+
+ringTheDarkhidden ( groupRings )
+  .name "The Darkhidden"
+  .cost 6700 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix false
+end
+
+ringDiseaseImmunity ( groupRings )
+  .name "Disease Immunity"
+  .cost 8000 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix True
+end
+
+ringDragons ( groupRings )
+  .name "Dragons"
+  .cost 25000 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+ringLore ( groupRings )
+  .name "Lore"
+  .cost 23250 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+ringMight ( groupRings )
+  .name "Might"
+  .cost 4000 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+ringNineLives ( groupRings )
+  .name "Nine Lives"
+  .cost 70000 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+ringPurpleDragonRing ( groupRings )
+  .name "Purple Dragon Ring"
+  .cost 2125 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix false
+end
+
+ringSpellbattle ( groupRings )
+  .name "Spell-battle"
+  .cost 67600 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+category groupMoFRingsMinor
+  [ 30] ringPurpleDragonRing
+  [ 25] ringMight
+  [ 25] ringTheDarkhidden
+  [ 20] ringDiseaseImmunity
+end
+
+category groupMoFRingsMedium
+  [ 15] ringPurpleDragonRing
+  [ 15] ringMight
+  [ 15] ringTheDarkhidden
+  [ 15] ringDiseaseImmunity
+  [ 10] ringLore
+  [ 10] ringDragons
+  [ 10] ringBoneRing
+  [ 10] ringAribethsRing
+end
+
+category groupMoFRingsMajor
+  [ 15] ringLore
+  [ 15] ringDragons
+  [ 15] ringBoneRing
+  [ 15] ringAribethsRing
+  [ 15] ringSpellbattle
+  [ 15] ringNineLives
+  [ 10] ringCommandersRing
+end
+
+category groupRingsMinor
+ [ 4] groupMoFRingsMinor
+end
+
+
+category groupRingsMedium 
+ [ 8] groupMoFRingsMedium
+end
+
+
+category groupRingsMajor
+ [ 7] groupMoFRingsMajor
+end
+
+/* rods */
+
+rodCats
+  .name "Cats"
+  .cost 25000 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodDisplacement
+  .name "Displacement"
+  .cost 48600 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodDivergence
+  .name "Divergence"
+  .cost 32600 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodFury1
+  .name "Fury +1"
+  .cost  26800 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodFury1
+  .name "Fury +1"
+  .cost  26800 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodFury2
+  .name "Fury +2"
+  .cost  38800 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodFury3
+  .name "Fury +3"
+  .cost  58800 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodFury4
+  .name "Fury +4"
+  .cost  77600 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodFury5
+  .name "Fury +5"
+  .cost  95600 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodMirrors
+  .name "Mirrors"
+  .cost 40200 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodSilence
+  .name "Silence"
+  .cost 24200 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodSpheres
+  .name "Spheres"
+  .cost 3250 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodSpiderRod
+  .name "Spider Rod"
+  .cost 40000 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix false
+end
+
+rodSuprises
+  .name "Suprises"
+  .cost 21600 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodTuning
+  .name "Tuning"
+  .cost 84400 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodViscidGlobs
+  .name "Viscid Globs"
+  .cost 6000 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+rodWhips
+  .name "Whips"
+  .cost 21600 gp
+  .sources sourcesMagicofFaerun
+  .needPrefix true
+end
+
+category groupMoFMediumRods
+  [ 10]  rodSpheres
+  [ 10]  rodViscidGlobs
+  [ 8]  rodSuprises
+  [ 8]  rodWhips
+  [ 8]  rodSilence
+  [ 8]  rodCats
+  [ 8]  rodFury1
+  [ 8]  rodDivergence
+  [ 8]  rodFury2
+  [ 8]  rodSpiderRod
+  [ 8]  rodMirrors
+  [ 8]  rodDisplacement
+end
+
+category groupMoFMajorRods
+  [ 6]  rodSuprises
+  [ 6]  rodWhips
+  [ 6]  rodSilence
+  [ 6]  rodCats
+  [ 6]  rodFury1
+  [ 10]  rodDivergence
+  [ 10]  rodFury2
+  [ 10]  rodSpiderRod
+  [ 10]  rodMirrors
+  [ 10]  rodDisplacement
+  [ 7]  rodFury3
+  [ 4]  rodFury4
+  [ 4]  rodTuning
+  [ 2]  rodFury5
+end
+
+category groupMediumRods
+ [12]  groupMoFMediumRods
+end
+
+category groupMajorRods
+ [14]  groupMoFMajorRods
+end  
+
+
+/* staffs */
+
+
+staffDivinersStaff
+  .name "Divener's Staff"
+  .cost 137375 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellIdentify .charges 1 }
+                    { .type satSpellEffect .spell spellLocateObject .charges 1 }
+                    { .type satSpellEffect .spell spellLocateCreature .charges 1 } 
+                    { .type satSpellEffect .spell spellAnalyzedweomer .charges 2 }
+                    { .type satSpellEffect .spell spellVision .charges 2 } )
+  .sources (sourceMagicofFaerun sourceFrcs SourceCorerules)
+  .needPrefix false
+end
+
+staffEntrapment
+  .name "Entrapment"
+  .cost 57300 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellDimensionalAnchor .charges 1 }
+                    { .type satSpellEffect .spell spellOtilukesResilientSphere .charges 1 } )
+  .sources (sourceMagicofFaerun sourceFrcs SourceCorerules)
+  .needPrefix true
+end
+
+staffEtherealAction
+  .name "Ethereal Action"
+  .cost 57300 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellBlink .charges 1 }
+                    { .type satSpellEffect .spell spellEtherealJaunt .charges 1 } )
+  .sources (sourceMagicofFaerun sourceFrcs SourceCorerules)
+  .needPrefix true
+end
+
+staffEyes
+  .name "Eyes"
+  .cost 34700 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellArcaneEye .charges 1 }
+                    { .type satSpellEffect .spell spellRemoveBlindness .charges 1 }
+                    { .type satSpellEffect .spell spellSeeInvisiblity .charges 1 } )
+  .sources (sourceMagicofFaerun sourceFrcs SourceCorerules)
+  .needPrefix true
+end
+
+staffFiendishDarkness
+  .name "Fiendish Darkness"
+  .cost 98200 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellDarkness .charges 1 }
+                    { .type satSpellEffect .spell spellSummonMonsterIX .charges 2 }
+                    { .type satSpellEffect .spell spellDispelMagic .charges 2 } 
+                    { .type satSpellEffect .spell spellAnimateDead .charges 2 } )
+  .sources (sourceMagicofFaerun sourceFrcs SourceCorerules)
+  .needPrefix true
+end
+
+staffMiracles
+  .name "Miracles"
+  .cost 77000 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellHeal .charges 1 }
+                    { .type satSpellEffect .spell spellHolyAura .charges 2 }
+                    { .type satSpellEffect .spell spellRosemantle .charges 2 } )
+  .sources (sourceMagicofFaerun sourceFrcs SourceCorerules)
+  .needPrefix true
+end
+
+staffNight
+  .name "Night"
+  .cost 30000 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellDarkvision .charges 1 }
+                    { .type satSpellEffect .spell spellLowLightVision .charges 1 }
+                    { .type satSpellEffect .spell spellDispelMagic .charges 1 } 
+                    { .type satSpellEffect .spell spellDarkness .charges 1 }
+                    { .type satSpellEffect .spell spellSummonMonsterVI .charges 2 } )
+  .sources (sourceMagicofFaerun sourceFrcs SourceCorerules)
+  .needPrefix true
+end
+
+staffOpenDoors
+  .name "Open Doors"
+  .cost 42200 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellKnock .charges 1 }
+                    { .type satSpellEffect .spell spellOpenClose .charges 2 }
+                    { .type satSpellEffect .spell spellPasswall .charges 2 } 
+                    { .type satSpellEffect .spell spellShatter .charges 2 } )
+  .sources (sourceMagicofFaerun sourceFrcs SourceCorerules)
+  .needPrefix true
+end
+
+staffPeace
+  .name "Peace"
+  .cost 175250 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellSanctuary .charges 1 }
+                    { .type satSpellEffect .spell spellHoldPerson .charges 1 }
+                    { .type satSpellEffect .spell spellCalmEmotions .charges 1 } 
+                    { .type satSpellEffect .spell spellGreaterCommand .charges 2 } )
+  .sources (sourceMagicofFaerun sourceFrcs SourceCorerules)
+  .needPrefix true
+end
+
+staffScrivening
+  .name "Scrivening"
+  .cost 53600 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellComprehendLanguages .charges 1 }
+                    { .type satSpellEffect .spell spellErase .charges 1 }
+                    { .type satSpellEffect .spell spellSuppressglyph .charges 2 } 
+                    { .type satSpellEffect .spell spellAmanuensis .charges 1 }
+                    { .type satSpellEffect .spell spellReadmagic .charges 1 } )
+  .sources (sourceMagicofFaerun sourceFrcs SourceCorerules)
+  .needPrefix true
+end
+
+staffSkulls
+  .name "Skulls"
+  .cost 39200 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellAnimateDead .charges 1 }
+                    { .type satSpellEffect .spell spellCircleofDoom .charges 2 }
+                    { .type satSpellEffect .spell spellCureLightWounds .charges 1 } 
+                    { .type satSpellEffect .spell spellInflictLightWounds .charges 1 } )
+  .sources (sourceMagicofFaerun sourceFrcs SourceCorerules)
+  .needPrefix true
+end
+
+staffTransportation
+  .name "Transportation"
+  .cost 67500 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellBlink .charges 1 }
+                    { .type satSpellEffect .spell spellDimensionDoor .charges 2 }
+                    { .type satSpellEffect .spell spellTeleport .charges 2 } )
+  .sources (sourceMagicofFaerun sourceFrcs SourceCorerules)
+  .needPrefix true
+end
+
+staffVision
+  .name "Vision"
+  .cost 42800 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellSeeInvisible .charges 1 }
+                    { .type satSpellEffect .spell spellDarkvision .charges 1 }
+                    { .type satSpellEffect .spell spellRemoveblindness .charges 1 } 
+                    { .type satSpellEffect .spell spellTrueSeeing .charges 2 } )
+  .sources (sourceMagicofFaerun sourceFrcs SourceCorerules)
+  .needPrefix true
+end
+
+category groupMoFMediumStaves
+  [ 11]  staffNight
+  [ 11]  staffEyes
+  [ 11]  staffEntrapment
+  [ 11]  staffSkulls
+  [ 10]  staffOpenDoors
+  [ 9]  staffVision
+  [ 9]  staffScrivening
+  [ 9]  staffEtherealAction
+  [ 9]  staffTransportation
+  [ 7]  staffMiracles
+  [ 3]  staffFiendishDarkness
+end
+
+category groupMoFMajorStaves
+  [ 8]  staffNight
+  [ 8]  staffEyes
+  [ 8]  staffEntrapment
+  [ 8]  staffSkulls
+  [ 8]  staffOpenDoors
+  [ 9]  staffVision
+  [ 9]  staffScrivening
+  [ 9]  staffEtherealAction
+  [ 9]  staffTransportation
+  [ 9]  staffMiracles
+  [ 9]  staffFiendishDarkness
+  [ 3]  staffDivinersStaff
+  [ 3]  staffPeace
+end
+
+category groupMediumStaves
+ [11]  groupMoFMediumStaves
+end
+
+category groupMajorStaves
+ [13]  groupMoFMajorStaves
+end  
+
+
+/* wondrous Items */
+
+wondrousAmberAmuletofVerminGiantBee
+  .name "Amber Amulet of Vermin (Giant Bee)"
+  .cost  500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousAmberAmuletofVerminGiantAntQueen
+  .name "Amber Amulet of Vermin (Giant Any, Queen)"
+  .cost  700 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousAmberAmuletofVerminGiantPrayingMantis
+  .name "Amber Amulet of Vermin (Giant Praying Mantis)"
+  .cost  700 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousAmberAmuletofVerminHugeMonstrousCentipede
+  .name "Amber Amulet of Vermin (Huge Monstrous Centipede)"
+  .cost  700 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousAmberAmuletofVerminLargeMonstrousScorpion
+  .name "Amber Amulet of Vermin (Large Monstrous Scorpion)"
+  .cost  700 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousAmberAmuletofVerminLargeMonstrousSpider
+  .name "Amber Amulet of Vermin (LargeMonstrous Spider)"
+  .cost  700 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousAmberAmuletofVerminGiantWasp
+  .name "Amber Amulet of Vermin (Giant Wasp)"
+  .cost  800 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousAmberAmuletofVerminGiantStagBeetle
+  .name "Amber Amulet of Vermin (Giant Stag Beetle)"
+  .cost  1200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousAmuletofLaeralsTears
+  .name "Amuler of Laeral's Tears"
+  .cost  1200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousAquamarineofSpellExtending
+  .name "Aquamarine of Spell Extending"
+  .cost  7200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousArmbandofMaximizedHealing
+  .name "Armband of Maximized Healing"
+  .cost  7200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousArvoreensAmuletofAid
+  .name "Arvoreen's Amulet of Aid"
+  .cost  4320 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousAzlaersHarp
+  .name "Azlaer's Harp"
+  .cost  16000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousBadgeoftheSvifneblin
+  .name "Badget of the Svifneblin"
+  .cost  17480 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousBagofBoulders
+  .name "Bag of Boulders"
+  .cost  1200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousBattleBridle
+  .name "Battle Bridle"
+  .cost  9000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousBeholderCrown
+  .name "Beholder Crown"
+  .cost  22000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousBeltofLions
+  .name "Belt of Lions"
+  .cost  20000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousBeltofPriestlyMight
+  .name "Belt of Priestly Might"
+  .cost  40000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousBeltofPriestlyMightandWarding
+  .name "Belt of Priestly Might and Warding"
+  .cost  52800 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousBeltofHolyMight
+  .name "Belt of Holy Might"
+  .cost  104000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousBirdFeatherHeaddress
+  .name "Bird Feather Headdress"
+  .cost  2900 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousBlastGlobes
+  .name "Blast Globes"
+  .cost  8000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousBoneBracersoftheDeathDeity
+  .name "Bone Bracers of the Death Deity"
+  .cost  58300 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousBookofBlood
+  .name "Book of Blood"
+  .cost  21300 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousBracersoftheBlindingStrike
+  .name "Bracers of the Blinding Strike"
+  .cost  102000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousBracersofStriking
+  .name "Bracers of Striking"
+  .cost  1310 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousCapeoftheFireBath
+  .name "Cape of the Fire Bath"
+  .cost  6200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousCapeofWinter
+  .name "Cape of Winter"
+  .cost  6200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousCloakofBattle
+  .name "Cloak of Battle"
+  .cost  22600 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousCloakofBlackflame
+  .name "Cloak of Blackflame"
+  .cost  11800 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousCowlofWarding
+  .name "Cowl of Warding"
+  .cost  200800 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousCrystalSphereofSingingWaters
+  .name "Crystal Sphere of Singing Waters"
+  .cost  28300 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousDovesHarp
+  .name "Dove's Harp"
+  .cost  45100 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousDragonskullTalisman
+  .name "Dragonskull Talisman"
+  .cost  4000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousDragonsDraughtBlack
+  .name "Dragon's Draught (Black)"
+  .cost  2300 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousDragonsDraughtBlue
+  .name "Dragon's Draught (Blue)"
+  .cost  4500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousDragonsDraughtGreen
+  .name "Dragon's Draught (Green)"
+  .cost  3500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousDragonsDraughtRed
+  .name "Dragon's Draught (Red)"
+  .cost  5500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousDragonsDraughtWhite
+  .name "Dragon's Draught (White)"
+  .cost  1200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousDragonsDraughtBrass
+  .name "Dragon's Draught (Brass)"
+  .cost  1200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousDragonsDraughtBronze
+  .name "Dragon's Draught (Bronze)"
+  .cost  3500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousDragonsDraughtCopper
+  .name "Dragon's Draught (Copper)"
+  .cost  2400 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousDragonsDraughtGold
+  .name "Dragon's Draught (Gold)"
+  .cost  5600 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousDragonsDraughtSilver
+  .name "Dragon's Draught (Silver)"
+  .cost  4600 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousDustofDispersion
+  .name "Dust of Dispersion"
+  .cost  2100 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousElixirofHorusRe
+  .name "Elixir of Horus-Re"
+  .cost  6500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousEnemySpiritPouch
+  .name "Enemy Spirit Pouch"
+  .cost  2100 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousEsheensHarp
+  .name "Esheen's Harp"
+  .cost  6800 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousEyeoftheDruuthbane
+  .name "Eye of the Druuthbane"
+  .cost  18000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousEyeofWinking
+  .name "Eye of Winking"
+  .cost  120000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousFangedMask
+  .name "Fanged Mask"
+  .cost  8302 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousGauntletofFury
+  .name "Gauntlet of Fury"
+  .cost  22000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousGlovesofLightning
+  .name "Gloves of Lightning"
+  .cost  8000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousGlovesoftheBalancedHands
+  .name "Gloves of the Balanced Hands"
+  .cost  18000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousGoldenChaliceofLathander
+  .name "Golden Chalice of Lathander"
+  .cost  29500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousGwaeronsBelt
+  .name "Gwaeron's Belt"
+  .cost  60500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousGwaeronsBoots
+  .name "Gwaeron's Boots"
+  .cost  6000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousHairShirtofIlmater
+  .name "Hair Shirt of Ilmater"
+  .cost  17400 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousHalruaanSkyship
+  .name "Halruaan Skyship"
+  .cost  700000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousHammeroftheWeaponsmith
+  .name "Hammer of the Weaponsmith"
+  .cost  1055 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousHandoftheOakfather
+  .name "Hand of the Oakfather"
+  .cost  41400 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousHandharp
+  .name "Handharp"
+  .cost  25000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousHarperPinLesser
+  .name "Harper Pin (Lesser)"
+  .cost  8000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousHarperPinGreater
+  .name "Harper Pin (Greater)"
+  .cost  79000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousHeadbandoftheBinder
+  .name "Headband of the Binder"
+  .cost  2600 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousHeartoftheBeast
+  .name "Heart of the Beast"
+  .cost  2000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousHelmofDarkness
+  .name "Helm of Darkness"
+  .cost  157000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousHelmofGazes
+  .name "Helm of Gazes"
+  .cost  33000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousIceNecklaceoftheUlutiun
+  .name "Ice Necklace of the Ulutiun"
+  .cost  5000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousInstrumentsoftheBardsFochluchanBandore
+  .name "Instruments of the Bards (Fochluchan Bandor)"
+  .cost  1900 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousInstrumentsoftheBardsMacFuirmidhCithern
+  .name "Instruments of the Bards (Mac-Fluirmidth Cithern)"
+  .cost  2900 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousInstrumentsoftheBardsDossLute
+  .name "Instruments of the Bards (Doss Lute)"
+  .cost  9800 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousInstrumentsoftheBardsCanaithMandolin
+  .name "Instruments of the Bards (Canaith Mandolin)"
+  .cost  23400 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousInstrumentsoftheBardsCliLyre
+  .name "Instruments of the Bards (Cli Lyre)"
+  .cost  37600 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousInstrumentsoftheBardsAnstruthHarp
+  .name "Instruments of the Bards (Anstruth Harp)"
+  .cost  60000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousInstrumentsoftheBardsOllamhHarp
+  .name "Instruments of the Bards (Ollamh Harp)"
+  .cost  83600 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousInstrumentoftheWinds
+  .name "Instrument of the Winds"
+  .cost  11000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousJanthrasHarp
+  .name "Janthra's Harp"
+  .cost  12000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousJoyousStarSong
+  .name "Joyous Star Song"
+  .cost  5800 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousKiira
+  .name "Kiira"
+  .cost  7500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousKnifeoftheBowyer
+  .name "Knife of the Bowyer"
+  .cost  1055 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousLensesofDarkness
+  .name "Lenses of Darkness"
+  .cost  7700 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMaskofBlood
+  .name "Mask of Blood"
+  .cost  17000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMierestsStarlitSphere
+  .name "Mierest's Starlit Sphere"
+  .cost  53000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMirrorMask
+  .name "Mirror Mask"
+  .cost  8759 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMethildsHarp
+  .name "Methild's Harp"
+  .cost  4100 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMithralBells
+  .name "Mithral Bells"
+  .cost  3700 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMonksTattoo
+  .name "Monk's Tattoo"
+  .cost  80000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMoonBracers1
+  .name "Moon Bracers +1"
+  .cost  12100 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMoonBracers2
+  .name "Moon Bracers +2"
+  .cost  14100 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMoonBracers3
+  .name "Moon Bracers +3"
+  .cost  19100 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMoonBracers4
+  .name "Moon Bracers +4"
+  .cost  36200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMoonBracers5
+  .name "Moon Bracers +5"
+  .cost  45200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMoonBracers6
+  .name "Moon Bracers +6"
+  .cost  56200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMoonBracers7
+  .name "Moon Bracers +7"
+  .cost  69160 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMoonBracers8
+  .name "Moon Bracers +8"
+  .cost  84160 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMoonMote
+  .name "Moon Mote"
+  .cost  180 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMooncloak1
+  .name "Mooncloak +1"
+  .cost  9000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMooncloak2
+  .name "Mooncloak +2"
+  .cost  13800 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMooncloak3
+  .name "Mooncloak +3"
+  .cost  18800 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMooncloak4
+  .name "Mooncloak +4"
+  .cost  25800 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMooncloak5
+  .name "Mooncloak +5"
+  .cost  34800 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMoondraught
+  .name "Moondraught"
+  .cost  1500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMoonfireSalve
+  .name "Moonfire Salve"
+  .cost  2500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousMoonstoneMask
+  .name "Moonstone Mask"
+  .cost  12000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousNecklaceofAcidPearls
+  .name "Necklace of acid Pearls"
+  .cost  10700 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousNecklaceofCopperDragonScales
+  .name "Necklace of Copper Dragon Scales"
+  .cost  570 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousNecklaceofLightning
+  .name "Necklace of Lightning"
+  .cost  4350 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousNecklaceofNaturesTeeth
+  .name "Necklace of Nature's Teeth"
+  .cost  2900 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousNithanalorsHarp
+  .name "Nithanalor's Harp"
+  .cost  22300 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousOrbofHoliness
+  .name "Orb of Holiness"
+  .cost  178700 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousOrbakhsGlassSkull
+  .name "Orbakh's Glass Skull"
+  .cost  15700 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousPheonixHelm
+  .name "Pheonix Helm"
+  .cost  53000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousPhylacteryofthePriesthoodLesser
+  .name "Phylactery of the Priesthood (Lesser)"
+  .cost  27200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousPhylacteryofthePriesthoodGreater
+  .name "Phylactery of the Priesthood (Greater)"
+  .cost  108000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousRhingaladesHarp
+  .name "Rhingalade's Harp"
+  .cost  5400 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousSalveofMinorSpellResistance
+  .name "Salve of Minor Spell Resistance"
+  .cost  1250 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousScarabofScintillatingAuras
+  .name "Scarab of Scintillating Auras"
+  .cost  45000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousSendingStones
+  .name "Sending Stones"
+  .cost  15000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousShaundakulsBoots
+  .name "Shaundakul's Boots"
+  .cost  6300 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousSilentPortalDisk
+  .name "Silent Portal Disk"
+  .cost  360 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousSkullPlaque
+  .name "Skull Plaque"
+  .cost  9200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousSmokepowder
+  .name "Smoke Powder"
+  .cost  25 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousSpiceJar
+  .name "Spice Jar"
+  .cost  5600 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousSuniteSash
+  .name "Sunite Sash"
+  .cost  19600 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousTongsoftheArmorer
+  .name "Tongs of the Armorer"
+  .cost  2055 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousTorqueoftheDeity1
+  .name "Torque of the Deity +1"
+  .cost  4500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousTorqueoftheDeity2
+  .name "Torque of the Deity +2"
+  .cost  16500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousTorqueoftheTitans
+  .name "Torque of the Titans"
+  .cost  72000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousTravelCloak
+  .name "Travel Cloak"
+  .cost  1200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousTrollGutRope
+  .name "Troll Gut Rope"
+  .cost  3000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousUnicornPendant
+  .name "Unicorn Pendant"
+  .cost  28000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousValardesHarp
+  .name "Valarde's Harp"
+  .cost  8500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousVestmentsofPowerLesser
+  .name "Vestments of Power (Lesser)"
+  .cost  88000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousVestmentsofPowerGreater
+  .name "Vestments of Power (Greater)"
+  .cost  200000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousWarWizardCloak
+  .name "War Wizard Cloak"
+  .cost  30375 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousWhiteCloakoftheSpider
+  .name "White Cloak of the Spider"
+  .cost  8200 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousWildShapeAmulet
+  .name "Wild Shape Amulet"
+  .cost  40000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousWordofChaosPower
+  .name "Word of Chao's Power"
+  .cost  12000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousWhiteSkullMask
+  .name "White Skull Mask"
+  .cost  50000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousWildingClasp
+  .name "Wilding Clasp"
+  .cost  4000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousWingedMask
+  .name "Winged Mask"
+  .cost  13000 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousWingsofPain
+  .name "Wings of Pain"
+  .cost  17500 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousXvimsGreenEyedGauntlet
+  .name "Xvim's Green-Eyed Gauntlet"
+  .cost  11800 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+wondrousYornarsCrescent
+  .name "Yornar's Crescent"
+  .cost  27700 gp
+  .canBeIntelligent yes
+  .sources sourcesMagicofFaerun
+end
+
+category groupMoFMinorWondrousItems
+  [11] wondrousSmokePowder
+  [ 2] wondrousMoonMote
+  [ 2] wondrousSilentPortalDisk
+  [ 1] wondrousAmberAmuletofVerminGiantBee
+  [ 1] wondrousNecklaceofCopperDragonScales
+  [ 1] wondrousAmberAmuletofVerminGiantAntQueen
+  [ 1] wondrousAmberAmuletofVerminGiantPrayingMantis
+  [ 1] wondrousAmberAmuletofVerminHugeMonstrousCentipede
+  [ 1] wondrousAmberAmuletofVerminLargeMonstrousScorpion
+  [ 1] wondrousAmberAmuletofVerminLargemonstrousSpider
+  [ 1] wondrousAmberAmuletofVerminGiantWasp
+  [ 1] wondrousAmberAmuletofVerminGiantStagBeetle
+  [ 2] wondrousAmuletofLaeralsTears
+  [ 2] wondrousBagofBoulders
+  [ 2] wondrousDragonsDraughtBrass
+  [ 2] wondrousDragonsDraughtWhite
+  [ 2] wondrousTravelCloak
+  [ 2] wondrousSalveofMinorSpellResistance
+  [ 2] wondrousBracersofStriking
+  [ 2] wondrousMoondraught
+  [ 2] wondrousInstrumentsoftheBardsFochluchanBandore
+  [ 2] wondrousHeartoftheBeast
+  [ 2] wondrousHammeroftheWeaponsmith
+  [ 2] wondrousKnifeoftheBowyer
+  [ 2] wondrousTongsoftheArmorer
+  [ 2] wondrousDustofDispersion
+  [ 2] wondrousEnemySpiritPouch
+  [ 2] wondrousDragonsDraughtBlack
+  [ 2] wondrousDragonsDraughtCopper
+  [ 2] wondrousMoonfireSalve
+  [ 2] wondrousHeadbandoftheBinder
+  [ 2] wondrousBirdFeatherHeaddress
+  [ 2] wondrousInstrumentsoftheBardsMacFuirmidhCithern
+  [ 2] wondrousNecklaceofNaturesTeeth
+  [ 2] wondrousTrollGutRope
+  [ 1] wondrousDragonsDraughtBronze
+  [ 1] wondrousDragonsDraughtGreen
+  [ 1] wondrousMithralBells
+  [ 1] wondrousDragonskullTalisman
+  [ 1] wondrousWildingClasp
+  [ 1] wondrousMethildsHarp
+  [ 1] wondrousArvoreensAmuletofAid
+  [ 1] wondrousNecklaceofLightning
+  [ 1] wondrousDragonsDraughtBlue
+  [ 1] wondrousTorqueoftheDeity1
+  [ 1] wondrousDragonsDraughtSilver
+  [ 1] wondrousIceNecklaceoftheUlutiun
+  [ 1] wondrousRhingaladesHarp
+  [ 1] wondrousDragonsDraughtRed
+  [ 1] wondrousDragonsDraughtGold
+  [ 1] wondrousSpiceJar
+  [ 1] wondrousJoyousStarSong
+  [ 1] wondrousGwaeronsBoots
+  [ 1] wondrousCapeoftheFireBath
+  [ 1] wondrousCapeofWinter
+  [ 1] wondrousShaundakulsBoots
+  [ 1] wondrousElixirofHorusRe
+  [ 1] wondrousEsheensHarp
+  [ 1] wondrousAquamarineofSpellExtending
+  [ 1] wondrousArmbandofMaximizedHealing
+  [ 1] wondrousKiira
+  [ 1] wondrousLensesofDarkness
+  [ 1] wondrousBlastGlobes
+  [ 1] wondrousGlovesofLightning
+  [ 1] wondrousHarperPinLesser
+end
+
+category groupMoFMediumWondrousItems
+  [ 2] wondrousWhiteCloakoftheSpider
+  [ 2] wondrousFangedMask
+  [ 2] wondrousValardesHarp
+  [ 2] wondrousMirrorMask
+  [ 2] wondrousBattleBridle
+  [ 2] wondrousMooncloak1
+  [ 2] wondrousSkullPlaque
+  [ 2] wondrousInstrumentsoftheBardsDossLute
+  [ 2] wondrousNecklaceofAcidPearls
+  [ 2] wondrousInstrumentoftheWinds
+  [ 2] wondrousCloakofBlackflame
+  [ 2] wondrousXvimsGreenEyedGauntlet
+  [ 2] wondrousJanthrasHarp
+  [ 2] wondrousMoonstoneMask
+  [ 2] wondrousWordofChaosPower
+  [ 2] wondrousMoonBracers1
+  [ 2] wondrousWingedMask
+  [ 2] wondrousMooncloak2
+  [ 2] wondrousMoonBracers2
+  [ 2] wondrousSendingStones
+  [ 2] wondrousOrbakhsGlassSkull
+  [ 2] wondrousAzlaersHarp
+  [ 2] wondrousTorqueoftheDeity2
+  [ 2] wondrousMaskofBlood
+  [ 2] wondrousHairShirtofIlmater
+  [ 2] wondrousBadgeoftheSvifneblin
+  [ 2] wondrousWingsofPain
+  [ 2] wondrousEyeoftheDruuthbane
+  [ 2] wondrousGlovesoftheBalancedHands
+  [ 2] wondrousMooncloak3
+  [ 2] wondrousMoonbracers3
+  [ 2] wondrousSuniteSash
+  [ 2] wondrousBeltofLions
+  [ 2] wondrousBookofBlood
+  [ 2] wondrousBeholderCrown
+  [ 2] wondrousGauntletoffury
+  [ 2] wondrousNithanalorsHarp
+  [ 2] wondrousCloakofBattle
+  [ 2] wondrousInstrumentsoftheBardsCanaithMandolin
+  [ 2] wondrousHandharp
+  [ 2] wondrousMooncloak4
+  [ 2] wondrousPhylacteryofthepriesthoodLesser
+  [ 2] wondrousYornarsCrescent
+  [ 2] wondrousUnicornPendant
+  [ 2] wondrousCrystalSphereofSingingWaters
+  [ 2] wondrousGoldenChaliceofLathander
+  [ 2] wondrousWarWizardCloak
+  [ 2] wondrousHelmofGazes
+  [ 2] wondrousMooncloak5
+  [ 1] wondrousMoonBracers4
+  [ 1] wondrousInstrumentsoftheBardsCliLyre
+end
+
+category groupMoFMajorWondrousItems
+  [ 4] wondrousBeltofPriestlyMight
+  [ 4] wondrousWildShapeAmulet
+  [ 4] wondrousHandoftheOakfather
+  [ 4] wondrousScarabofScintillatingAuras
+  [ 4] wondrousDovesHarp
+  [ 4] wondrousMoonBracers5
+  [ 4] wondrousWhiteSkullMask
+  [ 4] wondrousBeltofPriestlyMightandWarding
+  [ 4] wondrousMierestsStarlitSphere
+  [ 4] wondrousPheonixHelm
+  [ 4] wondrousMoonBracers6
+  [ 4] wondrousBoneBracersoftheDeathDeity
+  [ 3] wondrousInstrumentsoftheBardsAnstruthHarp
+  [ 3] wondrousGwaeronsBelt
+  [ 3] wondrousMoonBracers7
+  [ 3] wondrousTorqueoftheTitans
+  [ 3] wondrousHarperPinGreater
+  [ 3] wondrousMonksTattoo
+  [ 3] wondrousInstrumentsoftheBardsOllamhHarp
+  [ 3] wondrousMoonBracers8
+  [ 3] wondrousVestmentsofPowerLesser
+  [ 3] wondrousBeltofHolyMight
+  [ 3] wondrousEyeofWinking
+  [ 3] wondrousHelmofDarkness
+  [ 3] wondrousOrbofHoliness
+  [ 3] wondrousVestmentsofPowerGreater
+  [ 3] wondrousCowlofWarding
+  [ 1] wondrousHalruaanSkyship
+end
+
+category groupMinorWondrousItems
+ [65]  groupMoFMinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [51]  groupMoFMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [28]  groupMoFMajorWondrousItems
+end  
+

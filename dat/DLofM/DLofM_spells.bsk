@@ -1,0 +1,39 @@
+
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellBountyofStraasha { "Bounty of Straasha" schConjuration $ $ sourcesDLofM }
+  spellBrazierofPower { "Brazier of Power" schTransmutation $ $ sourcesDLofM }
+  spellBuzzardEyes { "Buzzard Eyes" schEnchantment $ $ sourcesDLofM }
+  spellChainofBeing { "Chain of Being" schEvocation $ $ sourcesDLofM }
+  spellChaosWarp { "Chaos Warp" schTransmutation $ $ sourcesDLofM }
+  spellCloakofCranLiret { "Cloak of Cran Liret" schTransmutation $ $ sourcesDLofM }
+  spellCurseofChaos { "Curse of Chaos" schTransmutation $ $ sourcesDLofM }
+  spellDemonsEye { "Demon's Eye" schTransmutation $ $ sourcesDLofM }
+  spellDetectBalance { "Detect Balance" schDiviation $ $ sourcesDLofM }
+  spellDetectChaos { "Detect Chaos" schDivination $ $ sourcesDLofM }
+  spellDetectLaw { "Detect Law" schDivination $ $ sourcesDLofM }
+  spellDispelBalance { "Dispel Balance" schAbjuration $ $ sourcesDLofM }
+  spellDisruptUndead { "Disrupt Undead" schNecromacy $ $ sourcesDLofM }
+  spellFieldofLaw { "Field of Law" schAbjuration $ $ sourcesDLofM }
+  spellFourInOne { "Four-In-One" schTransmutation $ $ sourcesDLofM }
+  spellFury { "Fury" schEnchantment $ $ sourcesDLofM }
+  spellGiftofGrome { "Gift of Grome" schConjuration $ $ sourcesDLofM }
+  spellHellsBulwark { "Hell's Bulwark" schConjuration $ $ sourcesDLofM }
+  spellHellsHammer { "Hell's Hammer" schTransmutation $ $ sourcesDLofM }
+  spellHellsRazor { "Hell's Razor" schTransmutation $ $ sourcesDLofM }
+  spellHellsSharpFlame { "Hell's Sharp Flame" schTransmutation $ $ sourcesDLofM }
+  spellHellsTalons { "Hell's Talons" sch $ $ sourcesDLofM }
+  spellMagicCircleAgainstBalance { "Magic Circle Against Balance" schAbjuration $ $ sourcesDLofM }
+  spellMakeFast { "Make Fast" schTransmutation $ $ sourcesDLofM }
+    spellMembraneofLaw { "Membrane of Law" schAbjuration $ $ sourcesDLofM }
+  spellPox { "Pox" schNecromancy $ $ sourcesDLofM }
+  spellProtectionfromBalance { "Protect from Balance" schAbjuration $ $ sourcesDLofM }
+  spellRatVision { "Rat Vision" schEnchantment $ $ sourcesDLofM }
+  spellSoulofChardros { "Soul of Chardros" schTransmutation $ $ sourcesDLofM }
+  spellInvokeBeastLordPlantLord { "Invoke BeastLord/PlantLord" schConjuration $ $ sourcesDLofM }
+  spellTreadofCranLiret { "Tread of Cran Liret" schTransmutation $ $ sourcesDLofM }
+  spellVisageofArioch { "Visage of Arioch" schTransmutation $ $ sourcesDLofM }
+  spellWisdomofSlortar { "Wisdom of Slortar" schTransmutation $ $ sourcesDLofM }
+end
+
+

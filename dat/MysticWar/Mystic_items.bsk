@@ -1,0 +1,268 @@
+/*Compiled by Shaun Gierent*/
+
+/* new magic armour abilities */
+
+asaAdaptation ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Adaptation"
+  .marketPriceArmorModifier +4
+  .sources sourcesMysticWarriors
+end
+
+asaEnergized ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Energized"
+  .marketPriceArmorModifier +2
+  .sources sourcesMysticWarriors
+end
+
+asaGrowing ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Growing"
+  .marketPriceArmorModifier +2
+  .sources sourcesMysticWarriors
+end
+
+asaLiving ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Living"
+  .marketPriceArmorModifier +2
+  .sources sourcesMysticWarriors
+end
+
+asaPreservation ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Preservation"
+  .marketPriceArmorModifier +1
+  .sources sourcesMysticWarriors
+end
+
+category groupMWMinorShieldSpecialAbilities
+  [10] asaPreservation
+  [ 1] magtRollAgain
+end
+
+category groupMWMinorArmorSpecialAbilities
+  [10] asaPreservation
+  [ 1] magtRollAgain
+end
+
+category groupMWMediumArmorSpecialAbilities
+  [5] asaPreservation
+  [10] asaEnergized
+  [10] asaGrowing
+  [10] asaLiving
+  [2] asaAdaptation
+  [10] magtRollAgain
+end
+
+category groupMWMediumShieldSpecialAbilities
+  [5] asaPreservation
+  [10] asaEnergized
+  [10] asaGrowing
+  [10] asaLiving
+  [2] asaAdaptation
+  [10] magtRollAgain
+end
+
+category groupMWMajorArmorSpecialAbilities
+  [5] asaPreservation
+  [5] asaEnergized
+  [5] asaGrowing
+  [5] asaLiving
+  [6] asaAdaptation
+  [5] magtRollAgain
+end
+
+category groupMWMajorShieldSpecialAbilities
+  [5] asaPreservation
+  [5] asaEnergized
+  [5] asaGrowing
+  [5] asaLiving
+  [6] asaAdaptation
+  [5] magtRollAgain
+end
+
+category groupMinorArmorSpecialAbilities
+  [4] groupMWMinorArmorSpecialAbilities
+end
+
+category groupMediumArmorSpecialAbilities
+  [5] groupMWMediumArmorSpecialAbilities
+end
+
+category groupMajorArmorSpecialAbilities
+  [5] groupMWMajorArmorSpecialAbilities
+end
+
+category groupMinorShieldSpecialAbilities
+  [4] groupMWMinorShieldSpecialAbilities
+end
+
+category groupMediumShieldSpecialAbilities
+  [5] groupMWMediumShieldSpecialAbilities
+end
+
+category groupMajorShieldSpecialAbilities
+  [5] groupMWMajorShieldSpecialAbilities
+end
+
+/* Weapon special ability */
+
+wsaDraining
+  .name "Draining"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMysticWarriors
+end
+
+wsaEnergized
+  .name "Energized"
+  .marketPriceWeaponModifier +2
+  .sources sourcesMysticWarriors
+end
+
+wsaEnhancing
+  .name "Enhancing"
+  .marketPriceWeaponModifier +3
+  .sources sourcesMysticWarriors
+end
+
+wsaLiving
+  .name "Living"
+  .marketPriceWeaponModifier +2
+  .sources sourcesMysticWarriors
+end
+
+wsaVerdantFlames
+  .name "Verdant Flames"
+  .marketPriceWeaponModifier +1
+  .sources sourcesMysticWarriors
+end
+
+category groupMWMeleeWeaponMinorSpecialAbilities
+  [15] wsaDraining
+  [15] wsaVerdantFlames
+  [1] mwgtRollAgain
+end
+
+category groupMWMeleeWeaponMediumSpecialAbilities
+  [5] wsaDraining
+  [5] wsaVerdantFlames
+  [4] wsaEnergized
+  [4] wsaLiving
+  [5] mwgtRollAgain
+end
+
+category groupMWMeleeWeaponMajorSpecialAbilities
+  [3] wsaDraining
+  [3] wsaVerdantFlames
+  [2] wsaEnergized
+  [2] wsaLiving
+  [3] wsaEnhancing
+  [20] mwgtRollAgain
+end
+
+category groupMWRangedWeaponMinorSpecialAbilities
+  [9] wsaDraining
+  [9] wsaVerdantFlames
+end
+
+category groupMWRangedWeaponMediumSpecialAbilities
+  [9] wsaDraining
+  [9] wsaVerdantFlames
+  [9] wsaEnergized
+  [9] wsaLiving
+  [2] mwgtRollAgain
+end
+
+category groupMWRangedWeaponMajorSpecialAbilities
+  [10] wsaDraining
+  [10] wsaVerdantFlames
+  [10] wsaEnergized
+  [10] wsaLiving
+  [7] wsaEnhancing
+  [3] mwgtRollAgain
+end
+
+category groupMeleeWeaponMinorSpecialAbilities
+  [13] 	groupMWMeleeWeaponMinorSpecialAbilities
+end
+
+category groupMeleeWeaponMediumSpecialAbilities
+  [21] 	groupMWMeleeWeaponMediumSpecialAbilities
+end
+
+category groupMeleeWeaponMajorSpecialAbilities
+  [20] 	groupMWMeleeWeaponMajorSpecialAbilities
+end
+
+category groupRangedWeaponMinorSpecialAbilities
+  [7] 	groupMWRangedWeaponMinorSpecialAbilities
+end
+
+category groupRangedWeaponMediumSpecialAbilities
+  [9] 	groupMWRangedWeaponMediumSpecialAbilities
+end
+
+category groupRangedWeaponMajorSpecialAbilities
+  [13] 	groupMWRangedWeaponMajorSpecialAbilities
+end
+
+/* specific Weapons */
+
+wstGogiyoMastersSword
+  .name "Gogiyo Master's Sword"
+  .prototype weaponBastardSword
+  .cost 18335 gp
+  .sources sourcesMysticWarriors
+end
+
+wstKalisDagger
+  .name "Kali's Dagger"
+  .prototype weaponDagger
+  .cost 49820 gp
+  .sources sourcesMysticWarriors
+end
+
+category groupMWMediumSpecificWeapons
+  [1] wstGogiyoMastersSword
+end
+
+category groupMWMajorSpecificWeapons
+  [5] wstGogiyoMastersSword
+  [6] wstKalisDagger
+end
+
+category groupMediumSpecificWeapons
+  [1]  groupMWMediumSpecificWeapons
+end
+
+category groupMajorSpecificWeapons
+  [3]  groupMWMajorSpecificWeapons
+end
+
+/* Staves */
+
+staffTotemStaff
+  .name "Totem Staff"
+  .cost 75000 gp
+  .init rInitGenericStaffProperties
+  .specialQualities ( { .type satSpellEffect .spell spellAnimalFriendship .charges 1 }
+                      { .type satSpellEffect .spell spellSpeakwithAnimals .charges 1 }
+                      { .type satSpellEffect .spell spellSummonNaturesAllyV .charges 2 }
+)
+  .sources sourcesMysticWarriors
+end
+
+category groupMWMediumStaves
+  [1] staffTotemStaff
+end
+
+category groupMWMajorStaves
+  [1] staffTotemStaff
+end
+
+category groupMediumStaves
+ [1]  groupMWMediumStaves
+end
+
+category groupMajorStaves
+ [1]  groupMWMajorStaves
+end
+
+

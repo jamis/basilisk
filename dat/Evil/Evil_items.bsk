@@ -1,0 +1,51 @@
+/*Compiled by Shaun Gierent*/
+
+/* specific Weapons */
+
+wstReaver
+  .name "Reaver"
+  .prototype weaponGreatSword
+  .cost 55050 gp
+  .sources sourcesEvil
+end
+
+category groupEvilMajorSpecificWeapons
+  [1] wstReaver
+end
+
+category groupMajorSpecificWeapons
+  [1]  groupEvilMajorSpecificWeapons
+end
+
+/* wondrous Items */
+
+wondrousDemonTalisman
+  .name "Demon Talisman"
+  .cost 1 gp
+  .canBeIntelligent yes
+  .sources sourcesEvil
+end
+
+wondrousMaskofShadows
+  .name "Mask of Shadows"
+  .cost 52000 gp
+  .canBeIntelligent yes
+  .sources sourcesEvil
+end
+
+wondrousUlrusTorque
+  .name "Ulru's Torque"
+  .cost 42000 gp
+  .canBeIntelligent yes
+  .sources sourcesEvil
+end
+
+category groupEvilMajorWondrousItems
+  wondrousMaskofShadows
+  wondrousUlrusTorque
+end
+
+category groupMajorWondrousItems
+ [2]  groupEvilMajorWondrousItems
+end  
+

@@ -1,0 +1,9 @@
+/* Jade Dragons & Hungery Ghosts data submitted by Shaun Gierent*/
+
+sourceJadeDragons ( sourcesJadeDragons groupAllSources )
+  .name "Jade Dragons & Hungry Ghosts"
+end
+
+#include "Jade_weapons.bsk"
+
+

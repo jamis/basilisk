@@ -1,0 +1,169 @@
+/*Nightmares and Dreams Items compiled by Shaun Gierent*/
+
+/* Specific Armors */
+
+astCrimsonPlateArmor in ( groupSpecificArmors )
+  .name "Crimson Plate Armor"
+  .cost 14400 gp
+  .sources sourcesNightmaresDreams
+end
+
+category groupNDMediumSpecificArmors
+  astCrimsonPlateArmor
+end
+
+category groupMediumSpecificArmors
+  [1]  groupNDMediumSpecificArmors
+end
+
+/* specific Weapons */
+
+wstDrejoriCommanderSpikedChain
+  .name "Derjori Commander Spiked Chain"
+  .prototype weaponSpikedChain
+  .cost 8000 gp
+  .sources sourcesNightmaresDreams
+end
+
+category groupNDMediumSpecificWeapons
+  [1] wstDrejoriCommanderSpikedChain
+end
+
+category groupNDMajorSpecificWeapons
+  [1] wstDrejoriCommanderSpikedChain
+end
+
+category groupMediumSpecificWeapons
+  [1]  groupNDMediumSpecificWeapons
+end
+
+category groupMajorSpecificWeapons
+  [1]  groupNDMajorSpecificWeapons
+end
+
+/* Potions */
+
+template in ( groupPotions ) { name cost sources }
+  potionMemoryLoss { "Memory Loss"  900 gp sourcesNightmaresDreams }
+  potionElixirofLoss { "Elixir of Loss"  500 gp sourcesNightmaresDreams }
+end
+
+category groupNDPotionsMajor
+  potionMemoryLoss
+  potionElixirofLoss
+end
+
+category groupPotionsMajor
+[2] groupNDPotionsMajor
+end
+
+/* rings */
+
+ringRingofNightmares ( groupRings )
+  .name "Ring of Nightmares"
+  .cost 50000 gp
+  .sources sourcesNightmaresDreams
+  .needPrefix false
+end
+
+category groupNDRingsMedium
+  ringRingofNightmares
+end
+
+category groupNDRingsMajor
+  ringRingofNightmares
+end
+
+category groupRingsMedium 
+ [1] groupNDRingsMedium
+end
+
+category groupRingsMajor
+ [1] groupNDRingsMajor
+end
+
+/* Staves */
+
+staffForgetfulness
+  .name "Forgetfulness"
+  .cost 43000 gp
+  .init rInitGenericStaffProperties
+  .specialQualities ( { .type satSpellEffect .spell spellErase .saveDC 11 .charges 1 }
+                      { .type satSpellEffect .spell spellDetectThoughts .charges 1 }
+                      { .type satSpellEffect .spell spellConfusion .charges 2 }
+                      { .type satSpellEffect .spell spellFeeblemind .charges 3 } )
+  .sources sourcesNightmaresDreams
+end
+
+category groupNDMediumStaves
+  [1] staffForgetfulness
+end
+
+category groupNDMajorStaves
+  [1] staffForgetfulness
+end
+
+category groupMediumStaves
+ [1]  groupNDMediumStaves
+end
+
+category groupMajorStaves
+ [1]  groupNDMajorStaves
+end
+
+/* wondrous Items */
+
+wondrousCraniumCap
+  .name "Cranium Cap"
+  .cost  16000 gp
+  .canBeIntelligent yes
+  .sources sourcesNightmaresDreams
+end
+
+wondrousGoldenLute
+  .name "Golden Lute"
+  .cost  35000 gp
+  .canBeIntelligent yes
+  .sources sourcesNightmaresDreams
+end
+
+wondrousNecklaceofSeeming
+  .name "Necklace of Seeming"
+  .cost  14000 gp
+  .canBeIntelligent yes
+  .sources sourcesNightmaresDreams
+end
+
+wondrousPhenomidPen
+  .name "Phenomid Pen"
+  .cost  5500 gp
+  .canBeIntelligent yes
+  .sources sourcesNightmaresDreams
+end
+
+
+category groupNDMinorWondrousItems
+  [1] wondrousPhenomidPen
+end
+
+category groupNDMediumWondrousItems
+  [1] wondrousCraniumCap
+  [1] wondrousNecklaceofSeeming
+end
+
+category groupNDMajorWondrousItems
+  [1] wondrousGoldenLute
+end
+
+category groupMinorWondrousItems
+ [1]  groupNDMinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [2]  groupNDMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [1]  groupNDMajorWondrousItems
+end
+

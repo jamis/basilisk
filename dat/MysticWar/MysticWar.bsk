@@ -1,0 +1,6 @@
+SourceMysticWarriors in ( sourcesMysticWarriors groupAllSources )
+  .name "Mystic Warriors"
+end
+
+#include "Mystic_items.bsk"
+

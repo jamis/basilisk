@@ -1,0 +1,24 @@
+template in ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
+  weaponTigerClaws { "Tiger Claws" 4 gp 1d4 20 3 1 lb tiny sourcesJadeDragons }
+end
+
+category groupExoticWeapon
+  weaponTigerClaws 
+end
+
+category groupMeleeWeapon
+  weaponTigerClaws 
+end
+
+category groupSlashingWeapon
+  weaponTigerClaws 
+end
+
+category groupJadeDragonsUncommonWeapons
+  weaponTigerClaws
+end
+
+category groupUncommonWeapons
+ [1]  groupJadeDragonsUncommonWeapons
+end
+

@@ -1,0 +1,52 @@
+
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellAmplifyDamage { "Amplify Damage" schNecromancy $ $ sourcesDiablo }
+  spellAttract { "Attract" schEnchantment $ $ sourcesDiablo }
+  spellBlaze { "Blaze" schEvocation $ $ sourcesDiablo }
+  spellBlizzard { "Blizzard" schEvocation $ $ sourcesDiablo }
+  spellBloodGolem { "BloodGolem" schConjuration $ $ sourcesDiablo }
+  spellBoneArmor { "Bone Armor" schConjuration $ $ sourcesDiablo }
+  spellBonePrison { "Bone Prison" schConjuration $ $ sourcesDiablo }
+  spellBoneSpear { "Bone Spear" schConjuration $ $ sourcesDiablo }
+  spellBoneSpirit { "Bone Spirit" schConjuration $ $ sourcesDiablo }
+  spellBoneWall { "Bone Wall" schConjuration $ $ sourcesDiablo }
+  spellChargedBolt { "Charged Bolt" schEvocation $ $ sourcesDiablo }
+  spellChillingArmor { "Chilling Armor" schEvocation $ $ sourcesDiablo }
+  spellClayGolem { "Clay Golem" schConjuration $ $ sourcesDiablo }
+  spellCorpseExplosion { "Corpse Explosion" schNecromancy $ $ sourcesDiablo }
+  spellDecrepify { "Decrepify" schCharm $ $ sourcesDiablo }
+  spellDimVision { "Dim Vision" schTransmutation $ $ sourcesDiablo }
+  spellEnchant { "Enchant" schEvocation $ $ sourcesDiablo }
+  spellEnergyShield { "Energy Shield" schAbjuration $ $ sourcesDiablo }
+  spellFireBoltD { "Fire Bolt" schEvocation $ $ sourcesDiablo }
+  spellFireGolem { "Fire Golem" schConjuration $ $ sourcesDiablo }
+  spellFrostNova { "Frost Nova" schEvocation $ $ sourcesDiablo }
+  spellFrozenArmor { "Frozen Armor" schEvocation $ $ sourcesDiablo }
+  spellFrozenOrb { "Frozen Orb" schEvocation $ $ sourcesDiablo }
+  spellGlacialSpike { "Glacial Spike" schEvocation $ $ sourcesDiablo }
+  spellHydra { "Hydra" schConjuration $ $ sourcesDiablo }
+  spellIceBlast { "Ice Blast" schEvocation $ $ sourcesDiablo }
+  spellIceBolt { "Ice Bolt" schEvocation $ $ sourcesDiablo }
+  spellInferno { "Inferno" schEvocation $ $ sourcesDiablo }
+  spellIronGolem { "Iron Golem" schConjuration $ $ sourcesDiablo }
+  spellIronMaiden { "Iron Maiden" schNecromancy $ $ sourcesDiablo }
+  spellLifeTap { "Life Tap" schNecromancy $ $ sourcesDiablo }
+  spellLowerResist { "Lower Resist" schNecromancy $ $ sourcesDiablo }
+  spellMeteor { "Meteor" schEvocation $ $ sourcesDiablo }
+  spellNova { "Nova" schEvocation $ $ sourcesDiablo }
+  spellPoisonDagger { "Poison Dagger" schNecromancy $ $ sourcesDiablo }
+  spellPoisonExplosion { "Poison Explosion" schNecromancy $ $ sourcesDiablo }
+  spellPoisonNova { "Poison Nova" schNecromancy $ $ sourcesDiablo }
+  spellRaiseSkeletonD { "Raise Skeleton" schNecromancy $ $ sourcesDiablo }
+  spellRaiseSkeletonMage { "Raise Skeleton Mage" schNecromancy $ $ sourcesDiablo }
+  spellRevive { "Revive" schNecromancy $ $ sourcesDiablo }
+  spellShiverArmor { "Shiver Armor" schEvocation $ $ sourcesDiablo }
+  spellStaticField { "Static Field" schEvocation $ $ sourcesDiablo }
+  spellTeeth { "Teeth" schConjuration $ $ sourcesDiablo }
+  spellTelekineticBlast { "Telekinetic Blast" schTransmutation $ $ sourcesDiablo }
+  spellThunderStorm { "Thunder Storm" schEvocation $ $ sourcesDiablo }
+  spellWeaken { "Weaken" schNecromancy $ $ sourcesDiablo }
+end
+
+

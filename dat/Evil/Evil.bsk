@@ -1,0 +1,10 @@
+/* Evil from AEG Converted by Shaun Gierent  */
+
+SourceEvil in ( sourcesEvil groupAllSources )
+  .name "Evil (AEG)"
+end
+
+#include "Evil_items.bsk"
+#include "Evil_spells.bsk"
+#include "Evil_scrolls.bsk"
+

@@ -1,0 +1,285 @@
+/* --------------------------------------------------------------------- *
+ Compiled by Shaun Gierent
+ * --------------------------------------------------------------------- */
+
+sourceDragon291 ( sourcesDragon291 groupAllSources )
+  .name "Dragon 291"
+end
+
+/* "AbuseYour Illusions", p.42-46 */
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellPhantasmalWhisper { "Phantasmal Whisper" schIllusion $ $ sourcesDragon291 }
+  spellPhantasmalAssailants { "Phantasmal Assailants" schIllusion $ $ sourcesDragon291 }
+  spellShadowBinding { "Shadow Binding" schIllusion $ $ sourcesDragon291 }
+  spellShadowRadiance { "Shadow Radiance" schIllusion $ $ sourcesDragon291 }
+  spellIllusoryFeast { "Illusory Feast" schIllusion $ $ sourcesDragon291 }
+  spellIllusoryPit { "Illusory Pit" schIllusion $ $ sourcesDragon291 }
+  spellShiftingPaths { "Shifting Paths" schIllusion $ $ sourcesDragon291 }
+  spellStalkingSpell { "Stalking Spell" schIllusion $ $ sourcesDragon291 }
+end
+
+category groupDragon291ArcaneScrollSpells1
+end
+
+category groupDragon291ArcaneScrollSpells2
+   spellPhantasmalAssailants
+end
+
+category groupDragon291ArcaneScrollSpells3
+   spellShadowBinding
+end
+
+category groupDragon291ArcaneScrollSpells4
+   spellShadowRadiance
+end
+
+category groupDragon291ArcaneScrollSpells5
+   spellIllusoryFeast
+end
+
+category groupDragon291ArcaneScrollSpells6
+   spellIllusoryPit
+end
+
+category groupDragon291ArcaneScrollSpells8
+   spellShiftingPaths
+end
+
+category groupDragon291ArcaneScrollSpells9
+   spellStalkingSpell
+end
+
+category groupDragon291DivineScrollSpells7
+   spellShiftingPaths
+end
+
+category groupArcaneScrollSpells1
+  [1] groupDragon291ArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [1] groupDragon291ArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [1] groupDragon291ArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [1] groupDragon291ArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [1] groupDragon291ArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [1] groupDragon291ArcaneScrollSpells6
+end
+
+category groupArcaneScrollSpells8
+  [1] groupDragon291ArcaneScrollSpells8
+end
+
+category groupArcaneScrollSpells9
+  [1] groupDragon291ArcaneScrollSpells9
+end
+
+category groupDivineScrollSpells7
+  [1] groupDragon291DivineScrollSpells7
+end
+
+
+/* "Gnome Alchemy", p. 30-31 */
+
+template in ( groupMundaneItems ) { name cost sources }
+  miSpiderlillyEssence { "Spiderlilly Essence"  75 gp sourcesDragon291 }
+  miGlitterbright { "Glitterbright"  5 gp sourcesDragon291 }
+  miRedWriggler { "Red Wriggler"  1 gp sourcesDragon291 }
+  miSnortawake { "Snortawake"  25 gp sourcesDragon291 }
+  miStinktar { "Stinktar"  50 gp sourcesDragon291 }
+end
+
+category groupDragon291Items
+  [ 5] { .magnitude 1  .type miSpiderlillyEssence }
+  [ 5] { .magnitude 1  .type miGlitterbright }
+  [ 5] { .magnitude 1  .type miRedWriggler }
+  [ 5] { .magnitude 1  .type miSnortawake }
+  [ 5] { .magnitude 1  .type miStinktar }
+end
+
+category groupAlchemicalItems
+  [5] groupDragon291Items
+end
+
+/* Bazaar of the Bizarre p. 48-53*/
+
+astBadgerArmor in ( groupSpecificArmors )
+  .name "Badger Armor"
+  .cost 9562 gp
+  .sources sourcesDragon291
+end
+
+astWarfoxHarness in ( groupSpecificArmors )
+  .name "WarfoxHarness"
+  .cost 36280 gp
+  .sources sourcesDragon291
+end
+
+astDoppelgangerArmor in ( groupSpecificArmors )
+  .name "Doppelganger Armor"
+  .cost 22160 gp
+  .sources sourcesDragon291
+end
+
+astTrapfinderArmor in ( groupSpecificArmors )
+  .name "Trapfinder Armor"
+  .cost 12960 gp
+  .sources sourcesDragon291
+end
+
+category groupDragon291MediumSpecificArmors
+  [5] astBadgerArmor
+  [5] astWarfoxHarness
+  [5] astDoppelgangerArmor
+  [5] astTrapfinderArmor
+end
+
+category groupDragon291MajorSpecificArmors
+  [5] astWarfoxHarness
+  [5] astDoppelgangerArmor
+end
+
+category groupMediumSpecificArmors
+  [4]  groupDragon291MediumSpecificArmors
+end
+
+category groupMajorSpecificArmors
+  [2]  groupDragon291MajorSpecificArmors
+end
+
+wondrousMushroomCap
+  .name "Mushroom Cap"
+  .cost  10800 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon291
+end
+
+wondrousNeuroshieldHelm
+  .name "Neuroshield Helm"
+  .cost  46200 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon291
+end
+
+wondrousPortableBreach
+  .name "Portable Breach"
+  .cost  90000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon291
+end
+
+wondrousBracersofWands
+  .name "Bracers of Wands"
+  .cost  60000 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon291
+end
+
+wondrousReadingSnuff
+  .name "Reading Snuff"
+  .cost  315 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon291
+end
+
+wondrousAladsFireExtinguisher
+  .name "Alad's Fire Extinguisher"
+  .cost  68400 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon291
+end
+
+wondrousSpellfastMedallionsHeatMetalMedallion
+  .name "Spellfast Medallions: Heat Metal Medallion"
+  .cost  600 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon291
+end
+
+wondrousSpellfastMedallionsPainMedallion
+  .name "Spellfast Medallions: Pain Medallion"
+  .cost  2800 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon291
+end
+
+wondrousSpellfastMedallionsGravityMedallion
+  .name "Spellfast Medallions: Gravity Medallion"
+  .cost  9100 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon291
+end
+
+wondrousSpellfastMedallionsBoomMedallion
+  .name "Spellfast Medallions: Boom Medallion"
+  .cost  9100 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon291
+end
+
+wondrousSpellfastMedallionsSlowMedallion
+  .name "Spellfast Medallions: Slow Medallion"
+  .cost  1500 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon291
+end
+
+category groupDragon291MinorWondrousItems
+  [1] wondrousReadingSnuff
+  [1] wondrousSpellFastMedallionsHeatMetalMedallion
+  [1] wondrousSpellFastMedallionsPainMedallion
+  [1] wondrousSpellFastMedallionsSlowMedallion
+end
+
+category groupDragon291MediumWondrousItems
+  [1] wondrousMushroomCap
+  [1] wondrousSpellFastMedallionsGravityMedallion
+  [1] wondrousSpellFastMedallionsBoomMedallion
+end
+
+category groupDragon291MajorWondrousItems
+  [1] wondrousNeuroshieldHelm
+  [1] wondrousPortableBreach
+  [1] wondrousBracersofWands
+  [1] wondrousAladsFireExtinguisher
+end
+
+category groupMinorWondrousItems
+ [4]  groupDragon291MinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [3]  groupDragon291MediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [4]  groupDragon291MajorWondrousItems
+end
+
+template in ( groupMundaneItems ) { name cost sources }
+  miBlastingPellets { "Blasting Pellets"  50 gp sourcesDragon291 }
+  miFlashBang { "Flash-Bang"  95 gp sourcesDragon291 }
+end
+
+category groupDragon2912Items
+  [ 5] { .magnitude 1  .type miBlastingPellets }
+  [ 5] { .magnitude 1  .type miFlashBang }
+end
+
+category groupAlchemicalItems
+  [2] groupDragon2912Items
+end
+
+

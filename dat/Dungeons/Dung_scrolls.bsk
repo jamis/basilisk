@@ -1,0 +1,45 @@
+category groupDungeonsArcaneScrollSpells2
+   spellForcefulFootfalls
+
+end
+
+category groupDungeonsArcaneScrollSpells3
+   spellCloakedSphereofRadiance
+   spellDistantLight
+   spellSphereofPureAir
+end
+
+category groupDungeonsArcaneScrollSpells9
+   spellTennitsTemporalFold
+end
+
+category groupDungeonsDivineScrollSpells2
+   spellSphereofPureAir
+   spellStonetell
+end
+
+category groupDungeonsDivineScrollSpells4
+   spellCloakedSphereofRadiance
+   spellDistantLight
+end
+
+category groupArcaneScrollSpells2
+  [1] groupDungeonsArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [3] groupDungeonsArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells9
+  [1] groupDungeonsArcaneScrollSpells9
+end
+
+category groupDivineScrollSpells2
+  [2] groupDungeonsDivineScrollSpells2
+end
+
+category groupDivineScrollSpells4
+  [2] groupDungeonsDivineScrollSpells4
+end
+

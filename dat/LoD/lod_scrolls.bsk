@@ -1,0 +1,86 @@
+/* Compiled by Shaun Gierent */
+
+category groupLoDArcaneScrollSpells3
+  spellHandfang
+  spellLesserShadowTentacle
+end
+
+category groupLoDArcaneScrollSpells5
+  spellGreaterShadowTentacle
+end
+
+category groupLoDArcaneScrollSpells6
+  spellShadowCanopy
+end
+
+category groupLoDArcaneScrollSpells8
+  spellDevastateUndead
+end
+
+category groupLoDArcaneScrollSpells9
+  spellStasisClone
+end
+
+category groupLoDDivineScrollSpells3
+  spellHandfang
+  spellPhantomPlow
+end
+
+category groupLoDDivineScrollSpells4
+  spellDreadBlast
+  spellNightsMantle
+end
+
+category groupLoDDivineScrollSpells5
+  spellSkullEyes
+end
+
+category groupLoDDivineScrollSpells7
+  spellTripleMask
+
+end
+
+category groupLoDDivineScrollSpells8
+  spellDevastateUndead
+end
+
+category groupArcaneScrollSpells3
+  [2] groupLoDArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells5
+  [1] groupLoDArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells6
+  [1] groupLoDArcaneScrollSpells6
+end
+
+category groupArcaneScrollSpells8
+  [1] groupLoDArcaneScrollSpells8
+end
+
+category groupArcaneScrollSpells9
+  [1] groupLoDArcaneScrollSpells9
+end
+
+category groupDivineScrollSpells3
+  [2] groupLoDDivineScrollSpells3
+end
+
+category groupDivineScrollSpells4
+  [2] groupLoDDivineScrollSpells4
+end
+
+category groupDivineScrollSpells
+  [1] groupLoDDivineScrollSpells5
+end
+
+category groupDivineScrollSpells
+  [1] groupLoDDivineScrollSpells7
+end
+
+category groupDivineScrollSpells
+  [1] groupLoDDivineScrollSpells8
+end
+

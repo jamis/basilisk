@@ -1,0 +1,28 @@
+/* Compiled by Shaun Gierent */
+
+template in ( groupMundaneItems ) { name cost sources }
+  miFlashpellet { "Flash Pellet"  50 gp sourcesTomeAndBlood }
+  miGlowpowder { "Glowpowder"  50 gp sourcesTomeAndBlood }
+  miHealingSalve { "Healing Salve"  50 gp sourcesTomeAndBlood }
+  miPhantomInkFirelight { "Phantom Ink (Firelight)"  10 gp sourcesTomeAndBlood }
+  miPhantomInkMagicallight { "Phantom Ink (Magical light)"  10 gp sourcesTomeAndBlood }
+  miPhantomInkMoonlight { "Phantom Ink (Moonlight)"  10 gp sourcesTomeAndBlood }
+  miPhantomInkStarlight { "Phantom Ink (Starlight)"  10 gp sourcesTomeAndBlood }
+  miSuregrip { "Suregrip"  20 gp sourcesTomeAndBlood }
+end
+
+category groupTBItems
+  [ 5] { .magnitude 1  .type miFlashpellet }
+  [ 5] { .magnitude 1  .type miGlowpowder }
+  [ 5] { .magnitude 1  .type miHealingSalve }
+  [ 5] { .magnitude 1  .type miPhantomInkFirelight }
+  [ 5] { .magnitude 1  .type miPhantomInkMagicallight }
+  [ 5] { .magnitude 1  .type miPhantomInkMoonlight }
+  [ 5] { .magnitude 1  .type miPhantomInkStarlight }
+  [ 5] { .magnitude 1  .type miSuregrip }
+end
+
+category groupAlchemicalItems
+  [8] groupTBItems
+end
+

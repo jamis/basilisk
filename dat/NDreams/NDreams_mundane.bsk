@@ -1,0 +1,12 @@
+template in ( groupMundaneItems ) { name cost sources }
+  miBloodBomb { "Blood Bomb"  300 gp sourcesNightmaresDreams }
+end
+
+category groupNDItems
+  [1] { .magnitude 1  .type miBloodBomb }
+end
+
+category groupAlchemicalItems
+  [1] groupNDItems
+end
+

@@ -1,0 +1,11 @@
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellCloakedSphereofRadiance { "Cloaked Sphere of Radiance" schEvocation $ $ sourcesDungeons }
+  spellDetectPreciousMetals { "Detect Precious Metals" schDivination $ $ sourcesDungeons }
+  spellDistantLight { "DistantLight" schEvocation $ $ sourcesDungeons }
+  spellForcefulFootfalls { "Forceful Footfalls" schConjuration $ $ sourcesDungeons }
+  spellSphereofPureAir { "Sphere of Pure Air" schConjuration $ $ sourcesDungeons }
+  spellStonetell { "Stonetell" schDivination $ $ sourcesDungeons }
+  spellTennitsTemporalFold { "Tennit's Temporal Fold" schTransmutation $ $ sourcesDungeons }
+end
+
+

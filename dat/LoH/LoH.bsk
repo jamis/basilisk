@@ -1,0 +1,11 @@
+/* data submitted by Shaun Gierent*/
+
+sourceLegionsofHell ( sourcesLegionsofHell groupAllSources )
+  .name "Legions of Hell"
+end
+
+#include "LoH_weapons.bsk"
+#include "LoH_items.bsk"
+
+
+

@@ -1,0 +1,39 @@
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellAnimateAnimal { "Animate Animal" schNecromancy $ $ sourcesNecromancy }
+  spellAnimateSkeletonN { "Animate Skeleton" schNecromancy $ $ sourcesNecromancy }
+  spellAnimateZombie { "Animate Zombie" schNecromancy $ $ sourcesNecromancy }
+  spellAnnihilation { "Annihilation" schNecromancy $ $ sourcesNecromancy }
+  spellBleedingWound { "Bleeding Wound" schNecromancy $ $ sourcesNecromancy }
+  spellBonesofSteel { "Bones of Steel" schNecromancy $ $ sourcesNecromancy }
+  spellChillBloodN { "Chill Blood" schNecromancy $ $ sourcesNecromancy }
+  spellDeathsShadow { "Death's Shadow" schNecromancy $ $ sourcesNecromancy }
+  spellDetectDead { "Detect Dead" schNecromancy $ $ sourcesNecromancy }
+  spellFleshMadeFoul { "Flesh Made Foul" schNecromancy $ $ sourcesNecromancy }
+  spellGhoulishCurse { "Ghoulish Curse" schNecromancy $ $ sourcesNecromancy }
+  spellGraftWeapons { "Graft Weapons" schNecromancy $ $ sourcesNecromancy }
+  spellIdentifyUndead { "Identify Undead" schNecromancy $ $ sourcesNecromancy }
+  spellInvigorationofUndeath { "Invigoration of Undeath" schNecromancy $ $ sourcesNecromancy }
+  spellLongevity { "Longevity" schNecromancy $ $ sourcesNecromancy }
+  spellProtectionfromUndead { "Protect from Undead" schNecromancy $ $ sourcesNecromancy }
+  spellRaiseCity { "Raise City" schNecromancy $ $ sourcesNecromancy }
+  spellRaiseDeathFleet { "Raise Death Fleet" schNecromancy $ $ sourcesNecromancy }
+  spellRaiseDeathHulk { "Raise Death Hulk" schNecromancy $ $ sourcesNecromancy }
+  spellRecallSpirit { "Recall Spirit" schNecromancy $ $ sourcesNecromancy }
+  spellSensoryLink { "Sensory Link" schNecromancy $ $ sourcesNecromancy }
+  spellShadowHorror { "Shadow Horror" schNecromancy $ $ sourcesNecromancy }
+  spellShadowMastery { "Shadow Mastery" schNecromancy $ $ sourcesNecromancy }
+  spellShadowSkin { "Shadow Skin" schNecromancy $ $ sourcesNecromancy }
+  spellShriekingMissle { "Shrieking Missle" schNecromancy $ $ sourcesNecromancy }
+  spellSkeletalSpikes { "Skeletal Spikes" schNecromancy $ $ sourcesNecromancy }
+  spellSkullSnare { "Skull Snare" schNecromancy $ $ sourcesNecromancy }
+  spellStrikeBarren { "Strike Barren" schNecromancy $ $ sourcesNecromancy }
+  spellThresholdofUnlife { "Threshold of Unlife" schNecromancy $ $ sourcesNecromancy }
+  spellUndeadConduit { "Undead Conduit" schNecromancy $ $ sourcesNecromancy }
+  spellUnfetterUndead { "Unfetter Undead" schNecromancy $ $ sourcesNecromancy }
+  spellVoiceofDeathlyWhispers { "Voice of Deathly Whispers" schNecromancy $ $ sourcesNecromancy }
+  spellVisageoftheDead { "Visage of the Dead" schNecromancy $ $ sourcesNecromancy }
+  spellWallofBoneN { "Wall of Bone" schNecromancy $ $ sourcesNecromancy }
+  spellWoundN { "Wound" schNecromancy $ $ sourcesNecromancy }
+end
+
+

@@ -1,0 +1,8 @@
+SourceTrapsTreachery in ( sourcesTrapsTreachery groupAllSources )
+  .name "Traps & Treachery"
+end
+
+#include "TT_items.bsk"
+#include "TT_spells.bsk"
+#include "TT_scrolls.bsk"
+

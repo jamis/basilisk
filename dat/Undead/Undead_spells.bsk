@@ -1,0 +1,23 @@
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellAcidBlood { "Acid Blood" schTransmutation $ $ sourcesUndead }
+  spellAnimationField { "Animation Field" schNecromancy $ $ sourcesUndead }
+  spellBlessingsoftheLightBringer { "Blessings of the Light Bringer" schEvocation $ $ sourcesUndead }
+  spellBonestaff { "Bonestaff" schConjuration $ $ sourcesUndead }
+  spellDanceoftheDead { "Dance of the Dead" schNecromancy $ $ sourcesUndead }
+  spellFeignLife { "Feigh Life" schTransmutation $ $ sourcesUndead }
+  spellHavrokrsBlessing { "Havrøkr's Blessing" schNecromancy $ $ sourcesUndead }
+  spellHavrokrsDesecration { "Havrøkr's Desecration" schEvocation $ $ sourcesUndead }
+  spellHavrokrsGreaterBlessing { " Havrøkr's Greater Blessing " schNecromancy $ $ sourcesUndead }
+  spellHavrokrsMinorBlessing { " Havrøkr's Minor Blessing " schNecromancy $ $ sourcesUndead }
+  spellHealUndead { "Heal Undead" schNecromancy $ $ sourcesUndead }
+  spellHoldUndead { "Hold Undead" schNecromancy $ $ sourcesUndead }
+  spellMaskUndead { "Mask Undead" schIllusion $ $ sourcesUndead }
+  spellMassAnimation { "Mass Animation" schNecromancy $ $ sourcesUndead }
+  spellMinorHealUndead { "Minor Heal Undead" schNecromancy $ $ sourcesUndead }
+  spellResistTurning { "Resist Turning" schNecromancy $ $ sourcesUndead }
+  spellRestfulDeath { "Restful Death" schNecromancy $ $ sourcesUndead }
+  spellStrengthenBone { "Strengthen Bone" schTransmutation $ $ sourcesUndead }
+  spellWallofBone { "Wall of Bone" schConjuration $ $ sourcesUndead }
+end
+
+

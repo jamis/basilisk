@@ -1,0 +1,30 @@
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellBecomeDragon { "Become Dragon" schTransmutation $ $ sourcesDragons }
+  spellBlessingoftheAges { "Blessing of the Ages" schEnchantment $ $ sourcesDragons }
+  spellBreathoftheGreatWyrm { "Breath of the Great Wyrm" schEvocation $ $ sourcesDragons }
+  spellBurdenoftheFathersSins { "Burden of the Father's Sins" schEnchantment $ $ sourcesDragons }
+  spellDeathCurse { "Death Curse" schNecromancy $ $ sourcesDragons }
+  spellDragonMark { "Dragon Mark" schAbjuration $ $ sourcesDragons }
+  spellDragonshield { "Dragonshield" schAbjuration $ $ sourcesDragons }
+  spellDroughtofEternitysWell { "Drought of Eternity's Well" schNecromancy $ $ sourcesDragons }
+  spellEstivation { "Estivation" schTransmutation $ $ sourcesDragons }
+  spellFindLair { "Find Lair" schDivination $ $ sourcesDragons }
+  spellGreaterDragonshield { "Greater Dragonshield" schAbjuration $ $ sourcesDragons }
+  spellHibernation { "Hibernation" schTransmutation $ $ sourcesDragons }
+  spellLesserDragonshield { "Lesser Dragonshield" schAbjuration $ $ sourcesDragons }
+  spellLockDragon { "Lock Dragon" schAbjuration $ $ sourcesDragons }
+  spellMagicalHusbandry { "Magical Husbandry" schAlteration $ $ sourcesDragons }
+  spellRetainNaturalArmor { "Retain Natural Armor" schTransmutation $ $ sourcesDragons }
+  spellRetainSupernaturalPowers { "Retain Supernatural Powers" schTransmutation $ $ sourcesDragons }
+  spellScourtheEarth { "Scour the Earth" schDivination $ $ sourcesDragons }
+  spellSecretoftheGrave { "Secret of the Grave" schDivination $ $ sourcesDragons }
+  spellSetTraps { "Set Traps" schEvocation $ $ sourcesDragons }
+  spellShapeoftheTrueSoul { "Shape of the True Soul" schTransmutation $ $ sourcesDragons }
+  spellSharingtheAncientLore { "Sharing the Ancient Lore" schAlteration $ $ sourcesDragons }
+  spellSmotherMagic { "Smother Magic" schAbjuration $ $ sourcesDragons }
+  spellSouloftheSlayer { "Soul of the Slayer" schTransmutation $ $ sourcesDragons }
+  spellTwisttheLand { "Twist the Land" schTransmutation $ $ sourcesDragons }
+  spellWisdomoftheIvoryEmperor { "Wisdom of the Ivory Emperor" schDivination $ $ sourcesDragons }
+end
+
+

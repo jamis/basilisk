@@ -1,0 +1,108 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dragon Magazine issue #288, converted to Basilisk format by
+ * Shaun Gierent
+ * --------------------------------------------------------------------- */
+
+sourceDragon288 ( sourcesDragon288 groupAllSources )
+  .name "Dragon 288"
+end
+
+/* Bazaar of the Bizarre: Vampire Slayers Toolboc p 78-82 */
+
+wstDeitusDaggers
+  .name "The Deitus Daggers"
+  .prototype weaponDagger
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 88302 gp
+  .sources sourcesDragon288
+end
+
+wstBarthonsDelvingDoves
+  .name "Barthon's Delving Doves"
+  .prototype weaponArrow
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 78000 gp
+  .sources sourcesDragon288
+end
+
+wstHeartTracker
+  .name "Heart Tracker"
+  .prototype weaponRepeatingCrossbow
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 110550 gp
+  .sources sourcesDragon288
+end
+
+category groupDragon288MajorSpecificWeapons
+  [ 1] wstDeitusDaggers
+  [ 1] wstBarthonsDelvingDoves
+  [ 1] wstHeartTracker
+end
+
+
+category groupMajorSpecificWeapons
+  [3]  groupDragon288MajorSpecificWeapons
+end
+
+astBreastplateofRighteousEndeavors in ( groupSpecificArmors )
+  .name "Breastplate of Righteous Endeavors"
+  .cost 61600 gp
+  .sources sourcesDragon288
+end
+
+category groupDragon288MajorSpecificArmors
+  [1] astBreastplateofRighteousEndeavors
+end
+
+category groupMajorSpecificArmors
+  [1]  groupDragon288MajorSpecificArmors
+end
+
+wondrousSilverCollarsofAdentrius
+  .name "The Silver Collars of Adentrius"
+  .cost  7250 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon288
+end
+
+wondrousCoffinClampsofAziellMoonchild
+  .name "The Coffin Clamps of Aziell Moonchild"
+  .cost  37760 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon288
+end
+
+wondrousHolyBoneShackles
+  .name "Holy Bone Shackles"
+  .cost  19500 gp
+  .canBeIntelligent yes
+  .sources sourcesDragon288
+end
+
+category groupDragon288MinorWondrousItems
+  [1] wondrousSilverCollarsofAdentrius
+end
+
+category groupDragon288MediumWondrousItems
+  [1] wondrousHolyBoneShackles
+end
+
+category groupDragon288MajorWondrousItems
+  [1] wondrousCoffinClampsofAziellMoonchild
+end
+
+category groupMinorWondrousItems
+ [1]  groupDragon288MinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [1]  groupDragon288MediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [1]  groupDragon288MajorWondrousItems
+end  
+

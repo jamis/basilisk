@@ -1,0 +1,14 @@
+template in ( groupMundaneItems ) { name cost sources }
+  miIrritationPowders { "Irritation Powders"  250 gp sourcesGladiator }
+  miDeathwatchPowder { "Deathwatch Powder"  1800 gp sourcesGladiator }
+end
+
+category groupGladItems
+  [10] { .magnitude 1  .type miIrritationPowders }
+  [1] { .magnitude 1  .type miDeathwatchPowder }
+end
+
+category groupAlchemicalItems
+  [2] groupGladItems
+end
+

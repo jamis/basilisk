@@ -1,0 +1,9 @@
+/* Diomin data submitted by Shaun Gierent*/
+
+sourceDiomin ( sourcesDiomin groupAllSources )
+  .name "Diomin (OWC)"
+end
+
+#include "Diom_weapons.bsk"
+
+

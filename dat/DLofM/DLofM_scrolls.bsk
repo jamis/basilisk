@@ -1,0 +1,114 @@
+category groupDLofMArcaneScrollSpells1
+  [ 2] spellBuzzardEyes
+  [ 2] spellCloakofCranLiret
+  [ 2] spellFury
+  [ 2] spellHellsBulwark
+  [ 2] spellHellsHammer
+  [ 2] spellHellsRazor
+  [ 2] spellHellsSharpFlame
+  [ 2] spellHellsTalons
+  [ 2] spellMakeFast
+  [ 2] spellProtectionfromBalance
+  [ 2] spellRatVision
+  [ 2] spellTreadofCranLiret
+end
+
+category groupDLofMArcaneScrollSpells2
+  [ 2] spellDemonsEye
+  [ 2] spellFieldofLaw
+  [ 2] spellMembraneofLaw
+  [ 2] spellPox
+  [ 2] spellSoulofChardros
+  [ 2] spellVisageofArioch
+  [ 2] spellWisdomofSlortar
+end
+
+category groupDLofMArcaneScrollSpells3
+  [ 2] spellBountyofStraasha
+  [ 2] spellGiftofGrome
+  [ 2] spellMagicCircleAgainstBalance
+end
+
+category groupDLofMArcaneScrollSpells4
+  [ 2] spellBrazierofPower
+  [ 2] spellChainofBeing
+  [ 2] spellCurseofChaos
+end
+
+category groupDLofMArcaneScrollSpells5
+  [ 2] spellChaosWarp
+end
+
+category groupDLofMArcaneScrollSpells9
+  [ 2] spellInvokeBeastLordPlantLord
+end
+
+category groupDLofMDivineScrollSpells1
+  [ 2] spellBuzzardeyes
+  [ 2] spellDetectBalance
+  [ 2] spellDetectChaos
+  [ 2] spellDetectLaw
+  [ 2] spellFury
+  [ 2] spellHellsBulwark
+  [ 2] spellHellsHammer
+  [ 2] spellHellsRazor
+  [ 2] spellHellsSharpFlame
+  [ 2] spellHellsTalons
+  [ 2] spellRatVision
+end
+
+category groupDLofMDivineScrollSpells3
+  [ 2] spellBountyofStraasha
+  [ 2] spellGiftofGrome
+end
+
+category groupDLofMDivineScrollSpells4
+  [ 2] spellBrazierofPower
+  [ 2] spellChainofBeing
+end
+
+category groupDLofMDivineScrollSpells9
+  [ 2] spellInvokeBeastLordPlantLord
+end
+
+category groupArcaneScrollSpells1
+  [12] groupDLofMArcaneScrollSpells1
+end
+
+category groupArcaneScrollSpells2
+  [7] groupDLofMArcaneScrollSpells2
+end
+
+category groupArcaneScrollSpells3
+  [3] groupDLofMArcaneScrollSpells3
+end
+
+category groupArcaneScrollSpells4
+  [3] groupDLofMArcaneScrollSpells4
+end
+
+category groupArcaneScrollSpells5
+  [1] groupDLofMArcaneScrollSpells5
+end
+
+category groupArcaneScrollSpells9
+  [1] groupDLofMArcaneScrollSpells9
+end
+
+category groupDivineScrollSpells1
+  [11] groupDLofMDivineScrollSpells1
+end
+
+category groupDivineScrollSpells3
+  [2] groupDLofMDivineScrollSpells3
+end
+
+category groupDivineScrollSpells4
+  [2] groupDLofMDivineScrollSpells4
+end
+
+category groupDivineScrollSpells9
+  [1] groupDLofMDivineScrollSpells9
+end
+
+

@@ -1,0 +1,174 @@
+/* --------------------------------------------------------------------- *
+ * Data from AEG's Undead
+ * converted to Basilisk format by Shaun Gierent
+ * --------------------------------------------------------------------- */
+
+/* weapon special ability */
+
+wsaExorcism
+  .name "Exorcism"
+  .marketPriceArmorModifier +4
+  .sources sourcesUndead
+end
+
+category groupUndeadMeleeWeaponMediumSpecialAbilities
+  [2] wsaExorcism
+  [5] mwgtRollAgain
+end
+
+category groupUndeadMeleeWeaponMajorSpecialAbilities
+  [3] wsaExorcism
+  [20] mwgtRollAgain
+end
+
+category groupUndeadRangedWeaponMajorSpecialAbilities
+  [7] wsaExorcism
+  [2] mwgtRollAgain
+end
+
+category groupMeleeWeaponMediumSpecialAbilities
+  [1] 	groupUndeadMeleeWeaponMediumSpecialAbilities
+end
+
+category groupMeleeWeaponMajorSpecialAbilities
+  [1] 	groupUndeadMeleeWeaponMajorSpecialAbilities
+end
+
+category groupRangedWeaponMajorSpecialAbilities
+  [1] 	groupUndeadRangedWeaponMajorSpecialAbilities
+end
+
+/* Potions */
+
+template in ( groupPotions ) { name cost sources }
+  potionPreservation { "Preservation"  750 gp sourcesUndead }
+end
+
+category groupUndeadPotionsMedium
+  [1] potionPreservation
+end
+
+category groupUndeadPotionsMajor
+  [1] potionPreservation
+end
+
+category groupPotionsMedium
+ [1] groupUndeadPotionsMajor
+end
+
+category groupPotionsMajor
+ [1] groupUndeadPotionsMajor
+end
+
+/* rings */
+
+ringRingoftheTombGuardian ( groupRings )
+  .name "Ring of the Tomb Guardian"
+  .cost 10000 gp
+  .sources sourcesUndead
+end
+
+category groupUndeadRingsMinor
+  ringRingoftheTombGuardian
+end
+
+category groupUndeadRingsMedium
+  ringRingoftheTombGuardian
+end
+
+category groupUndeadRingsMajor
+  ringRingoftheTombGuardian
+end
+
+category groupRingsMinor
+ [1] groupUndeadRingsMinor
+end
+
+category groupRingsMedium 
+ [1] groupUndeadRingsMedium
+end
+
+category groupRingsMajor
+ [1] groupUndeadRingsMajor
+end
+
+/* wondrous items */
+
+wondrousAmuletofTurningandTurnResistance
+  .name "Amulet of Turning and Turn Resistance"
+  .cost 250000 gp
+  .canBeIntelligent yes
+  .sources sourcesUndead
+end
+
+wondrousMedallionofCourage
+  .name "Medallion of Courage"
+  .cost 25000 gp
+  .canBeIntelligent yes
+  .sources sourcesUndead
+end
+
+wondrousSunlightStone
+  .name "Sunlight Stone"
+  .cost 10000 gp
+  .canBeIntelligent yes
+  .sources sourcesUndead
+end
+
+wondrousAmuletofBone
+  .name "Amulet of Bone"
+  .cost 3000 gp
+  .canBeIntelligent yes
+  .sources sourcesUndead
+end
+
+wondrousCloakofDarkness
+  .name "Cloak of Darkness"
+  .cost 30000 gp
+  .canBeIntelligent yes
+  .sources sourcesUndead
+end
+
+wondrousDustofHardening
+  .name "Dust of Hardening"
+  .cost 500 gp
+  .canBeIntelligent yes
+  .sources sourcesUndead
+end
+
+wondrousSkinofAlMalif
+  .name "Skin of Al-Malif"
+  .cost 15000 gp
+  .canBeIntelligent yes
+  .sources sourcesUndead
+end
+
+category groupUndeadMinorWondrousItems
+  wondrousAmuletofBone
+  wondrousDustofHardening
+end
+
+category groupUndeadMediumWondrousItems
+  wondrousMedallionofCourage
+  wondrousSunlightStone
+  wondrousSkinofAlMalif
+ 
+end
+
+category groupUndeadMajorWondrousItems
+  wondrousAmuletofTurningandTurnResistance
+  wondrousCloakofDarkness
+end
+
+category groupMinorWondrousItems
+ [2]  groupUndeadMinorWondrousItems
+end
+
+category groupMediumWondrousItems
+ [3]  groupUndeadMediumWondrousItems
+end
+
+category groupMajorWondrousItems
+ [2]  groupUndeadMajorWondrousItems
+end  
+

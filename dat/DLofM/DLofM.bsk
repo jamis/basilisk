@@ -1,0 +1,12 @@
+/* --------------------------------------------------------------------- *
+ * Data from Chaosium Inc.'s "Dragon Lords of Melniboné"
+ * converted to Basilisk format by
+Shaun Gierent 
+* --------------------------------------------------------------------- */
+SourceDLofM in ( sourcesDLofM groupAllSources )
+  .name "Dragon Lords of Melniboné"
+end
+
+#include "DLofM_spells.bsk"
+#include "DLofM_scrolls.bsk"
+

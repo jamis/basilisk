@@ -1,0 +1,30 @@
+/* Compiled by Shaun Gierent */
+
+rodCorporeality
+  .name "Corporeality"
+  .cost 70000 gp
+  .sources sourcesUndead
+end
+
+rodUndeadNegation
+  .name "Undead Negation"
+  .cost 27000 gp
+  .sources sourcesUndead
+end
+
+category groupUndeadMediumRods
+  rodUndeadNegation
+end
+
+category groupUndeadMajorRods
+  [10] rodUndeadNegation
+  [4] rodCorporeality
+end
+
+category groupMediumRods
+  [1] groupUndeadMediumRods
+end
+
+category groupMajorRods
+  [2] groupUndeadMajorRods
+end
