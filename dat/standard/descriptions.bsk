@@ -1,0 +1,156 @@
+/* ---------------------------------------------------------------- *
+ * This data was submitted by Spencer "the Sigil" Cooley
+ * (the_sigil@hotmail.com).  It was originally intended to be used
+ * with the potions.bsk file, but I (Jamis Buck) thought it might
+ * be useful in other places, too, and made it it's own file.
+ *
+ * 21 Feb 2001 - Jamis Buck (minam@rpgplanet.com)
+ * ---------------------------------------------------------------- */
+
+template in ( groupColors ) { name }
+  colorAmber {"amber"}
+  colorBuff {"buff"}
+  colorCitrine {"citrine"}
+  colorCream {"cream"}
+  colorFallow {"fallow"}
+  colorFlaxen {"flaxen"}
+  colorOchre {"ochre"}
+  colorPeach {"peach"}
+  colorSaffron {"saffron"}
+  colorStraw {"straw"}
+  colorYellow {"yellow"}
+  colorWhite {"white"}
+  colorBone {"bone"}
+  colorColorless {"colorless"}
+  colorIvory {"ivory"}
+  colorPearl {"pearl"}
+  colorFuchsia {"fuchsia"}
+  colorHeliotrope {"heliotrope"}
+  colorLake {"lake"}
+  colorLavender {"lavender"}
+  colorLilac {"lilac"}
+  colorMagenta {"magenta"}
+  colorMauve {"mauve"}
+  colorPlum {"plum"}
+  colorPuce {"puce"}
+  colorPurple {"purple"}
+  colorViolet {"violet"}
+  colorRed {"red"}
+  colorCarmine {"carmine"}
+  colorCerise {"cerise"}
+  colorCherry {"red"}
+  colorCinnabar {"cinnabar"}
+  colorCoral {"coral"}
+  colorCrimson {"crimson"}
+  colorMadder {"madder"}
+  colorMaroon {"maroon"}
+  colorPink {"pink"}
+  colorRose {"rose"}
+  colorRuby {"ruby"}
+  colorRusset {"russet"}
+  colorRust {"rust"}
+  colorSanguine {"sanguine"}
+  colorScarlet {"scarlet"}
+  colorVermillion {"vermillion"}
+  colorOrange {"orange"}
+  colorApricot {"apricot"}
+  colorFlame {"flame"}
+  colorGolden {"golden"}
+  colorSalmon {"salmon"}
+  colorTawny {"tawny"}
+  colorBrassy {"brassy"}
+  colorBronze {"bronze"}
+  colorCoppery {"coppery"}
+  colorGold {"gold"}
+  colorSilvery {"silvery"}
+  colorSteely {"steely"}
+  colorMetallic {"metallic"}
+  colorGreen {"green"}
+  colorAquamarine {"aquamarine"}
+  colorEmerald {"emerald"}
+  colorOlive {"olive"}
+  colorGray {"gray"}
+  colorDove {"dove"}
+  colorDun {"dun"}
+  colorNeutral {"neutral"}
+  colorBrown {"brown"}
+  colorChocolate {"chocolate"}
+  colorEcru {"ecru"}
+  colorFawn {"fawn"}
+  colorMahogany {"mahogany"}
+  colorTan {"tan"}
+  colorTerraCotta {"terra cotta"}
+  colorBlue {"blue"}
+  colorAzure {"azure"}
+  colorCerulean {"cerulean"}
+  colorIndigo {"indigo"}
+  colorSapphire {"sapphire"}
+  colorTurquoise {"turquoise"}
+  colorUltramarine {"ultramarine"}
+  colorBlack {"black"}
+  colorEbony {"ebony"}
+  colorInky {"inky"}
+  colorPitchy {"pitchy"}
+  colorSable {"sable"}
+  colorSooty {"sooty"}
+end
+
+template in ( groupOdorsAndTastes ) { name }
+  tasteAcidic {"acidic"}
+  tasteBilious {"bilious"}
+  tasteBitter {"bitter"}
+  tasteBurningBiting {"burning/biting"}
+  tasteButtery {"buttery"}
+  tasteDusty {"dusty"}
+  tasteEarthy {"earthy"}
+  tasteFiery {"fiery"}
+  tasteFishy {"fishy"}
+  tasteFruity {"fruity"}
+  tasteGreasy {"greasy"}
+  tasteHerbal {"herbal"}
+  tasteHoneyed {"honeyed"}
+  tasteLemony {"lemony"}
+  tasteMeaty {"meaty"}
+  tasteMetallic {"metallic"}
+  tasteMilky {"milky"}
+  tasteMusty {"musty"}
+  tasteOniony {"oniony"}
+  tastePeppery {"peppery"}
+  tastePerfumy {"perfumy"}
+  tasteSalty {"salty"}
+  tasteSoothing {"soothing"}
+  tasteSugary {"sugary"}
+  tasteSour {"sour"}
+  tasteSpicy {"spicy"}
+  tasteSweet {"sweet"}
+  tasteTart {"tart"}
+  tasteVinegary {"vinegary"}
+  tasteWatery {"watery"}
+end
+
+template in ( groupLiquidAppearances ) { name }
+  appearsBubbling {"bubbling"}
+  appearsCloudy {"cloudy"}
+  appearsEffervescent {"effervescent"}
+  appearsFuming {"fuming"}
+  appearsOily {"oily"}
+  appearsSmoky {"smoky"}
+  appearsSyrupy {"syrupy"}
+  appearsVaporous {"vaporous"}
+  appearsViscous {"viscous"}
+  appearsWatery {"watery"}
+end
+
+template in ( groupTransparentVariations ) { name }
+  transClear {"clear"}
+  transFlecked {"flecked"}
+  transLayered {"layered"}
+  transLuminous {"luminous"}
+  transOpaline {"opaline"}
+  transOpaque {"opaque"}
+  transPhosphorescent {"phosphorescent"}
+  transRainbowed {"rainbowed"}
+  transTranslucent {"translucent"}
+  transVariegated {"variegated"}
+end
+
