@@ -2,9 +2,9 @@ version 1.01
   Makefile changes:
     Added a RUNLIBS variable.  Swapped order of -lbasilisk and -lm so that
       math library would be picked up correctly on some platforms.
-		Re-did Makefile to allow selection of various targets (type "make"
+    Re-did Makefile to allow selection of various targets (type "make"
       without arguments to get a list of supported targets).  Supported
-			targets now include a dynamically linked Basilisk library.
+      targets now include a dynamically linked Basilisk library.
   Utility changes:
     Changed names of 4 callback functions in bskcallback.c:
       myConsole -> BSKDefaultConsole
@@ -56,6 +56,9 @@ version 1.01
     Added Dragon Magazine data submitted by Robert Szkotak (dkphoenix@hotmail.com).
     Fixed treasure.bsk so that similar items are counted together, rather than
       separately.
+    Fixed display.bsk so that if a spell is scribed multiple times on a single
+      scroll, a message is displayed indicating how many times it has been
+      scribed on that scroll.
   Library Changes:
     Modified bsktokens.h, bsklexer.c, bskparse.c to handle new
       preferred syntax for specifying parent categories for entities
