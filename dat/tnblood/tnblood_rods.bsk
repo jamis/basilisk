@@ -1,0 +1,229 @@
+rodChaining
+  .name "Chaining"
+  .cost 108000 gp
+  .itemQualities ( { .description "item may be converted from rod to flail form or back as a move-equivalent action" } )
+  .sources sourcesTomeAndBlood
+end
+
+rodlesserChaining
+  .name "Lesser Chaining"
+  .cost 27200 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodgreaterChaining
+  .name "Greater Chaining"
+  .cost 243000 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodCooperation
+  .name "Cooperation"
+  .cost 10500 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodlesserCooperation
+  .name "Lesser Cooperation"
+  .cost 2700 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodgreaterCooperation
+  .name "Greater Cooperation"
+  .cost 24300 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodEmpowerment
+  .name "Empowerment"
+  .cost 64800 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodlesserEmpowerment
+  .name "Lesser Empowerment"
+  .cost 16200 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodgreaterEmpowerment
+  .name "Greater Empowerment"
+  .cost 145800 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodEnlargement
+  .name "Enlargement"
+  .cost 21600 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodlesserEnlargement
+  .name "Lesser Enlargement"
+  .cost 5400 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodgreaterEnlargement
+  .name "Greater Enlargement"
+  .cost 48600 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodExtension
+  .name "Extension"
+  .cost 21600 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodlesserExtension
+  .name "Lesser Extension"
+  .cost 5400 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodgreaterExtension
+  .name "Greater Extension"
+  .cost 48600 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodMaximization
+  .name "Maximization"
+  .cost 108000 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodlesserMaximization
+  .name "Lesser Maximization"
+  .cost 27200 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodgreaterMaximization
+  .name "Greater Maximization"
+  .cost 243000 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodQuickening
+  .name "Quickening"
+  .cost 151200 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodlesserQuickening
+  .name "Lesser Quickening"
+  .cost 37800 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodgreaterQuickening
+  .name "Greater Quickening"
+  .cost 340200 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodSculpting
+  .name "Sculpting"
+  .cost 21600 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodlesserSculpting
+  .name "Lesser Sculpting"
+  .cost 5400 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodgreaterSculpting
+  .name "Greater Sculpting"
+  .cost 48600 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodSilence
+  .name "Silence"
+  .cost 21600 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodlesserSilence
+  .name "Lesser Silence"
+  .cost 5400 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodgreaterSilence
+  .name "Greater Silence"
+  .cost 48600 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodSubstitution
+  .name "Substitution"
+  .cost 10500 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodlesserSubstitution
+  .name "Lesser Substitution"
+  .cost 2700 gp
+  .sources sourcesTomeAndBlood
+end
+
+rodgreaterSubstitution
+  .name "Greater Substitution"
+  .cost 24300 gp
+  .sources sourcesTomeAndBlood
+end
+
+
+
+category groupMinorRods
+  [17] rodLesserCooperation
+  [16] rodlesserSubstitution
+  [15] rodlesserEnlargement
+  [16] rodlesserExtension
+  [15] rodlesserSculpting
+  [16] rodlesserSilence
+end
+
+category groupTomeAndBloodMediumRods
+  [10] rodCooperation
+  [10] rodSubstitution
+  [10] rodlesserEmpowerment
+  [10] rodEnlargement
+  [10] rodExtension
+  [10] rodSculpting
+  [10] rodSilence
+  [10] rodgreaterCooperation
+  [10] rodgreaterSubstitution
+  [10] rodlesserChaining
+end
+
+category groupTomeAndBloodMajorRods
+  [7] rodlesserMaximization
+  [7] rodlesserQuickening
+  [6] rodgreaterEnlargement
+  [6] rodgreaterExtension
+  [6] rodgreaterSculpting
+  [6] rodgreaterSilence
+  [7] rodEmpowerment
+  [6] rodChaining
+  [6] rodMaximization
+  [6] rodQuickening
+  [6] rodgreaterEmpowerment
+  [6] rodgreaterChaining
+  [6] rodgreaterMaximization
+  [6] rodgreaterQuickening
+end
+
+category groupMediumRods
+  [10] groupTomeAndBloodMediumRods
+end
+
+category groupMajorRods
+  [10] groupTomeAndBloodMajorRods
+end

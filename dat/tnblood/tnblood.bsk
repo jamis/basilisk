@@ -1,0 +1,6 @@
+#include "tnblood_feats.bsk"
+#include "tnblood_items.bsk"
+#include "tnblood_spells.bsk"
+#include "tnblood_rods.bsk"
+#include "tnblood_staves.bsk"
+#include "tnblood_scrolls.bsk"

@@ -1,0 +1,125 @@
+staffIllumination
+  .name "Illumination"
+  .cost 51000 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellDancingLights .charges 1 }
+                    { .type satSpellEffect .spell spellFlare .saveDC 10 .charges 1 }
+                    { .type satSpellEffect .spell spellDaylight .charges 2 }
+                    { .type satSpellEffect .spell spellSunburst .saveDC 22 .charges 2 } )
+  .sources sourcesTomeAndBlood
+end
+
+staffAbjuration
+  .name "Abjuration"
+  .cost 99000 gp
+  .init rInitGenericStaffProperties
+  .specialQualities ( { .type satSpellEffect .spell spellShield .charges 1 }
+                      { .type satSpellEffect .spell spellResistElements .charges 1 }
+                      { .type satSpellEffect .spell spellDispelMagic .charges 1 }
+                      { .type satSpellEffect .spell spellMinorGlobeofInvulnerability .charges 1 }
+                      { .type satSpellEffect .spell spellDismissal .saveDC 17 .charges 2 }
+                      { .type satSpellEffect .spell spellRepulsion .saveDC 19 .charges 2 } )
+  .sources sourcesTomeAndBlood
+end
+
+staffConjuration
+  .name "Conjuration"
+  .cost 102000 gp
+  .init rInitGenericStaffProperties
+  .specialQualities ( { .type satSpellEffect .spell spellUnseenServant .charges 1 }
+                      { .type satSpellEffect .spell spellSwarm .charges 1 }
+                      { .type satSpellEffect .spell spellCloud .saveDC 14 .charges 1 }
+                      { .type satSpellEffect .spell spellMinorCreation .charges 1 } 
+                      { .type satSpellEffect .spell spellCloudkill .saveDC 17 .charges 2 }
+                      { .type satSpellEffect .spell spellSummonMonsterVI .charges 2 } )
+  .sources sourcesTomeAndBlood
+end
+
+staffDivination
+  .name "Divination"
+  .cost 102000 gp
+  .init rInitGenericStaffProperties
+  .specialQualities ( { .type satSpellEffect .spell spellDetectSecretDoors .charges 1 }
+                      { .type satSpellEffect .spell spellLocateObject .charges 1 }
+                      { .type satSpellEffect .spell spellTongues .charges 1 }
+                      { .type satSpellEffect .spell spellLocateCreature .charges 1 } 
+                      { .type satSpellEffect .spell spellPryingEyes .saveDC 17 .charges 2 }
+                      { .type satSpellEffect .spell spellTrueSeeing .charges 2 } )
+  .sources sourcesTomeAndBlood
+end
+
+staffEnchantment
+  .name "Enchantment"
+  .cost 101000 gp
+  .init rInitGenericStaffProperties
+  .specialQualities ( { .type satSpellEffect .spell spellSleep .saveDC 11 .charges 1 }
+                      { .type satSpellEffect .spell spellTashaSHideousLaughter .saveDC 13 .charges 1 }
+                      { .type satSpellEffect .spell spellSuggestion .saveDC 14 .charges 1 }
+                      { .type satSpellEffect .spell spellEmotion .saveDC 16 .charges 1 }
+                      { .type satSpellEffect .spell spellMindFog .saveDC 17 .charges 2 }
+                      { .type satSpellEffect .spell spellMassSuggestion .saveDC 19 .charges 2 } )
+  .sources sourcesTomeAndBlood
+end
+
+staffEvocation
+  .name "Evocation"
+  .cost 98000 gp
+  .init rInitGenericStaffProperties
+  .specialQualities ( { .type satSpellEffect .spell spellMagicMissile .charges 1 }
+                      { .type satSpellEffect .spell spellShatter .saveDC 13 .charges 1 }
+                      { .type satSpellEffect .spell spellFireball .saveDC 14 .charges 1 }
+                      { .type satSpellEffect .spell spellIceStorm .charges 1 }
+                      { .type satSpellEffect .spell spellWallofForce .saveDC 17 .charges 2 }
+                      { .type satSpellEffect .spell spellChainLightning .saveDC 19 .charges 2 } )
+  .sources sourcesTomeAndBlood
+end
+
+staffIllusion
+  .name "Illusion"
+  .cost 102000 gp
+  .init rInitGenericStaffProperties
+  .specialQualities ( { .type satSpellEffect .spell spellChangeSelf .charges 1 }
+                      { .type satSpellEffect .spell spellMirrorImage .charges 1 }
+                      { .type satSpellEffect .spell spellMajorImage .saveDC 14 .charges 1 }
+                      { .type satSpellEffect .spell spellRainbowPattern .saveDC 16 .charges 1 }
+                      { .type satSpellEffect .spell spellPersistentImage .saveDC 17 .charges 2 }
+                      { .type satSpellEffect .spell spellProjectImage .saveDC 19 .charges 2 } )
+  .sources sourcesTomeAndBlood
+end
+
+staffNecromancy
+  .name "Necromancy"
+  .cost 101000 gp
+  .init rInitGenericStaffProperties
+  .specialQualities ( { .type satSpellEffect .spell spellCauseFear .saveDC 11 .charges 1 }
+                      { .type satSpellEffect .spell spellGhoulTouch .saveDC 13 .charges 1 }
+                      { .type satSpellEffect .spell spellHaltUndead .saveDC 14 .charges 1 }
+                      { .type satSpellEffect .spell spellEnervation .saveDC 16 .charges 1 }
+                      { .type satSpellEffect .spell spellAnimateDead .charges 2 }
+                      { .type satSpellEffect .spell spellCircleofDeath .saveDC 19 .charges 2 } )
+  .sources sourcesTomeAndBlood
+end
+
+staffTransmutation
+  .name "Transmutation"
+  .cost 101000 gp
+  .init rInitGenericStaffProperties
+  .specialQualities ( { .type satSpellEffect .spell spellBurningHands .saveDC 11 .charges 1 }
+                      { .type satSpellEffect .spell spellAlterSelf .charges 1 }
+                      { .type satSpellEffect .spell spellBlink .charges 1 }
+                      { .type satSpellEffect .spell spellPolymorphOther .saveDC 16 .charges 1 }
+                      { .type satSpellEffect .spell spellPasswall .charges 2 }
+                      { .type satSpellEffect .spell spellDisintegrate .saveDC 19 .charges 2 } )
+  .sources sourcesTomeAndBlood
+end
+
+category groupMediumStaves
+  [1] staffIllumination
+  [1] staffAbjuration
+  [1] staffConjuration
+  [1] staffEnchantment
+  [1] staffEvocation
+  [1] staffIllusion
+  [1] staffNecromancy
+  [1] staffTransmutation
+end

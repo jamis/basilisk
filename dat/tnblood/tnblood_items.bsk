@@ -1,0 +1,125 @@
+/* ------------------------------------------------------------------------ *
+ * Material in this file is taken from the "Sword and Fist" guidebook by
+ * Jason Carl.
+ *
+ * Contents are arranged as follows:
+ *  1) weapons
+ *  2) weapon groupings and categories
+ *  3) random selection tables
+ *  4) special shield abilities
+ *  5) special weapon abilities
+ *  6) specific weapons
+ *  7) potions
+ *  8) rings
+ *  9) wondrous items
+ * ------------------------------------------------------------------------ */
+
+/* categories for use with the tables in mundane.bsk */
+
+/* wondrous items */
+
+wondrousBeltofManyPockets
+  .name "belt of many pockets"
+  .cost 11000 gp
+  .canBeIntelligent no
+  .sources sourcesTomeAndBlood
+end
+
+wondrousBeltofSpellResistance
+  .name "Belt of Spell Resistance"
+  .cost 90000 gp
+  .canBeIntelligent no
+  .sources sourcesTomeAndBlood
+end
+
+wondrousClayGolemManual
+  .name "Clay Golem Manual"
+  .cost 24000 gp
+  .canBeIntelligent no
+  .sources sourcesTomeAndBlood
+end
+
+wondrousFleshGolemManual
+  .name "Flesh Golem Manual"
+  .cost 24000 gp
+  .canBeIntelligent no
+  .sources sourcesTomeAndBlood
+end
+
+wondrousIronGolemManual
+  .name "Iron Golem Manual"
+  .cost 32250 gp
+  .canBeIntelligent no
+  .sources sourcesTomeAndBlood
+end
+
+wondrousStoneGolemManual
+  .name "Stone Golem Manual"
+  .cost 28750 gp
+  .canBeIntelligent no
+  .sources sourcesTomeAndBlood
+end
+
+wondrousRugofWelcome
+  .name "Rug of Welcome"
+  .cost 30000 gp
+  .canBeIntelligent yes
+  .sources sourcesTomeAndBlood
+end
+
+wondrousVestOfResistance1
+  .name "Vest Of Resistance (+1)"
+  .cost 1000 gp
+  .canBeIntelligent yes
+  .sources sourcesTomeAndBlood
+end
+
+wondrousVestOfResistance2
+  .name "Vest Of Resistance (+2)"
+  .cost 2000 gp
+  .canBeIntelligent yes
+  .sources sourcesTomeAndBlood
+end
+
+wondrousVestOfResistance3
+  .name "Vest Of Resistance (+3)"
+  .cost 4000 gp
+  .canBeIntelligent yes
+  .sources sourcesTomeAndBlood
+end
+
+wondrousVestOfResistance4
+  .name "Vest Of Resistance (+4)"
+  .cost 16000 gp
+  .canBeIntelligent yes
+  .sources sourcesTomeAndBlood
+end
+
+wondrousVestOfResistance5
+  .name "Vest Of Resistance (+5)"
+  .cost 25000 gp
+  .canBeIntelligent yes
+  .sources sourcesTomeAndBlood
+end
+
+category groupMinorWondrousItems
+  wondrousVestOfResistance1
+  wondrousVestOfResistance2
+  wondrousVestOfResistance3
+end
+
+category groupMediumWondrousItems
+  wondrousBeltofManyPockets
+  wondrousClayGolemManual
+  wondrousFleshGolemManual
+  wondrousVestOfResistance4
+  wondrousVestOfResistance5
+end
+
+category groupMajorWondrousItems
+  wondrousBeltofSpellResistance
+  wondrousIronGolemManual
+  wondrousStoneGolemManual
+  wondrousRugofWelcome
+end
+

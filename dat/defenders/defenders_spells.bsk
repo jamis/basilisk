@@ -1,0 +1,146 @@
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellAspectoftheDeity { "Aspect of the Deity" schTransmutation $ ( descGood descEvil ) sourcesDefendersoftheFaith }
+  spellBearsHeart { "Bear's Heart" schTransmutation $ $ sourcesDefendersoftheFaith }
+  spellBeastClaws { "Beast Claws" schTransmutation $ $ sourcesDefendersoftheFaith }
+  spellBeastmask { "Beastmask" schIllusion subschGlamer $ sourcesDefendersoftheFaith }
+  spellBlessedAim { "Blessed Aim" schDivination $ $ sourcesDefendersoftheFaith }
+  spellBlight { "Blight" schNecromancy $ $ sourcesDefendersoftheFaith }
+  spellBoltofGlory { "Bolt of Glory" schEvocation $ ( descGood ) sourcesDefendersoftheFaith }
+  spellBoltofBedevilment { "Bolt of Bedevilment" schEnchantment $ ( descMindAffecting ) sourcesDefendersoftheFaith }
+  spellBrainSpider { "Brain Spider" schDivination $ ( descMindAffecting ) sourcesDefendersoftheFaith }
+  spellBrambles { "Brambles" schTransmutation $ $ sourcesDefendersoftheFaith }
+  spellBriarWeb { "Briar Web" schTransmutation $ $ sourcesDefendersoftheFaith }
+  spellBurialBlessing { "Burial Blessing" schAbjuration $ ( descGood ) sourcesDefendersoftheFaith }
+  spellCastigate { "Castigate" schEvocation $ ( descSonic ) sourcesDefendersoftheFaith }
+  spellChainofChaos { "Chain of Chaos" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDefendersoftheFaith }
+  spellChainofEyes { "Chain of Eyes" schDivination $ $ sourcesDefendersoftheFaith }
+  spellCrownofGlory { "Crown of Glory" schEvocation $ $ sourcesDefendersoftheFaith }
+  spellCurseoftheBrute { "Curse of the Brute" schTransmutation $ $ sourcesDefendersoftheFaith }
+  spellCurseofLycanthropy { "Curse of Lycanthropy" schNecromancy $ $ sourcesDefendersoftheFaith }
+  spellDivineAgility { "Divine Agility" schTransmutation $ $ sourcesDefendersoftheFaith }
+  spellDivineFlame { "Divine Flame" schAbjuration $ $ sourcesDefendersoftheFaith }
+  spellDivineStorm { "Divine Storm" schEvocation $ $ sourcesDefendersoftheFaith }
+  spellDivineZephyr { "Divine Zephyr" schAbjuration $ $ sourcesDefendersoftheFaith }
+  spellFlameofFaith { "Flame of Faith" schEvocation $ $ sourcesDefendersoftheFaith }
+  spellDivineSacrifice { "Divine Sacrifice" schEvocation $ $ sourcesDefendersoftheFaith }
+  spellGenesis { "Genesis" schConjuration subschCreation $ sourcesDefendersoftheFaith }
+  spellGreaterAspectoftheDeity { "Greater Aspect of the Deity" schTransmutation $ ( descGood descEvil ) sourcesDefendersoftheFaith }
+  spellHarrier { "Harrier" schConjuration subschCreation $ sourcesDefendersoftheFaith }
+  spellKnifeSpray { "Knife Spray" schEvocation $ $ sourcesDefendersoftheFaith }
+  spellLesserAspectoftheDeity { "Lesser Aspect of the Deity" schTransmutation $ ( descGood descEvil ) sourcesDefendersoftheFaith }
+  spellLesserTelepathicBond { "Lesser Telepathic Bond" schDivination $ ( descMindAffecting ) sourcesDefendersoftheFaith }
+  spellMaddeningScream { "Maddening Scream" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDefendersoftheFaith }
+  spellMonstrousTroll { "Monstrous Troll" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDefendersoftheFaith }
+  spellOtyughSwarm { "Otyugh Swarm" schConjuration subschCreation $ sourcesDefendersoftheFaith }
+  spellPlagueofRats { "Plague of Rats" schConjuration subschSummoning $ sourcesDefendersoftheFaith }
+  spellProbeThoughts { "ProbeThoughts" schDivination $ ( descMindAffecting ) sourcesDefendersoftheFaith }
+  spellRage { "Rage" schEchantment subschCompulsion ( descMindAffecting ) sourcesDefendersoftheFaith }
+  spellRecitation { "Recitation" schConjuration subschCreation $ sourcesDefendersoftheFaith }
+  spellRighteousWrathoftheFaithful { "Righteous Wrath of the Faithful" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDefendersoftheFaith }
+  spellScourge { "Scourge" schNecromancy $ $ sourcesDefendersoftheFaith }
+  spellSlimeWave { "Slime Wave" schConjuration subschSummoning $ sourcesDefendersoftheFaith }
+  spellSpikes { "Spikes" schTransmutation $ $ sourcesDefendersoftheFaith }
+  spellSweetWater { "Sweet Water" schDivination $ $ sourcesDefendersoftheFaith }
+  spellSwordStream { "Sword Stream" schEvocation $ $ sourcesDefendersoftheFaith }
+  spellTouchofMadness { "Touch of Madness" schEnchantment $ ( descMindAffecting ) sourcesDefendersoftheFaith }
+  spellTrueCreation { "True Creation" schConjuration subschCreation $ sourcesDefendersoftheFaith }
+  spellTrueDomination { "True Domination" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDefendersoftheFaith }
+  spellUnbinding { "Unbinding" schAbjuration $ $ sourcesDefendersoftheFaith }
+  spellUnfailingEndurance { "Unfailing Endurance" schTransmutation $ sourcesDefendersoftheFaith }
+  spellWeaponoftheDeity { "Weapon of the Deity" schTransmutation $ $ sourcesDefendersoftheFaith }
+  spellWeatherEye { "Weather Eye" schDivination $ $ sourcesDefendersoftheFaith }
+  spellZeal { "Zeal" schAbjuration $ $ sourcesDefendersoftheFaith }
+end
+
+category groupSpellsClericL1
+  spellBurialBlessing    
+end
+
+category groupSpellsClericL2
+  spellBrambles
+  spellDivineFlame
+  spellDivineZephyr
+  spellKnifeSpray
+end
+
+category groupSpellsClericL3
+  spellBeastmask
+  spellBlessedAim
+  spellBriarWeb
+  spellChainofEyes
+  spellCurseoftheBrute
+  spellFlameofFaith
+  spellLesserTelepathicBond
+  spellSpikes
+  spellSweetWater
+  spellSwordStream
+end
+
+category groupSpellsClericL4
+  spellBeastClaws
+  spellCastigate
+  spellHarrier
+  spellRecitation
+  spellUnfailingEndurance
+  spellWeaponoftheDeity
+  spellWeatherEye
+end
+
+category groupSpellsClericL5
+  spellBearsHeart
+  spellBlight
+  spellDivineAgility
+end
+
+category groupSpellsClericL7
+  spellRighteousWrathoftheFaithful
+  spellSlimeWave
+end
+
+category groupSpellsClericL8
+  spellBrainSpider
+  spellChainofChaos
+end
+
+category groupSpellsPaladinL1
+  spellDivineSacrifice
+end
+
+category groupSpellsPaladinL2
+  spellBlessedAim
+  spellCurseoftheBrute
+  spellZeal
+end
+
+category groupSpellsPaladinL4
+  spellLesserAspectoftheDeity
+  spellWeaponoftheDeity
+end
+
+category groupSpellsDruidL2
+  spellBeastmask
+  spellBrambles
+  spellBriarWeb
+  spellSweetWater
+end
+
+category groupSpellsDruidL3
+  spellBeastClaws
+  spellHarrier
+  spellSpikes
+  spellWeatherEye
+end
+
+category groupSpellsDruidL4
+  spellBlight
+  spellBearsHeart
+  spellChainofEyes
+end
+
+category groupSpellsDruidL7
+  spellSlimeWave
+end
+
+category groupSpellsRangerL2
+  spellBriarWeb
+end

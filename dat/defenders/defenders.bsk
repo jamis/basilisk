@@ -1,0 +1,6 @@
+#include "defenders_feats.bsk"
+#include "defenders_items.bsk"
+#include "defenders_spells.bsk"
+#include "defenders_rods.bsk"
+#include "defenders_scrolls.bsk"
+

@@ -1,0 +1,58 @@
+category groupArcaneScrollSpells6
+  [ 3] spellProbeThoughts
+end
+
+category groupArcaneScrollSpells9
+  [ 7] spellUnbinding
+end
+
+category groupDivineScrollSpells1
+  [ 5] spellBurialBlessing
+  [ 5] spellDivineSacrifice
+end
+
+category groupDivineScrollSpells2
+  [ 3] spellBrambles
+  [ 3] spellDivineFlame
+  [ 3] spellDivineZephyr
+  [ 3] spellKnifeSpray
+  [ 3] spellBlessedAim
+  [ 3] spellCurseoftheBrute
+  [ 3] spellZeal
+  [ 3] spellBeastmask
+  [ 3] spellBriarWeb
+  [ 3] spellSweetWater
+end
+
+category groupDivineScrollSpells3
+  [ 3] spellChainofEyes
+  [ 3] spellCurseoftheBrute
+  [ 3] spellFlameofFaith
+  [ 3] spelllesserTelepathicBond
+  [ 3] spellSpikes
+  [ 3] spellSwordStream
+  [ 3] spellBeastClaws
+  [ 3] spellHarrier
+  [ 3] spellWeatherEye
+end
+
+category groupDivineScrollSpells4
+  [ 5] spellCastigate
+  [ 5] spellRecitation
+  [ 5] spellUnfailingEndurance
+  [ 5] spellWeaponoftheDeity
+  [ 5] spellLesserAspectoftheDeity
+  [ 5] spellZeal
+  [ 5] spellBlight
+  [ 5] spellBearsHeart
+end
+
+category groupDivineScrollSpells7
+  [ 6] spellRighteousWrathoftheFaithful
+  [ 6] spellSlimeWave
+end
+
+category groupDivineScrollSpells8
+  [ 6] spellBrainSpider
+  [ 6] spellChainofChaos
+end

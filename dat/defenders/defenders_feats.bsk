@@ -1,0 +1,143 @@
+featArcaneDefense in ( groupAllFeats groupGeneralFeats )
+  .name "Arcane Defense"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
+end
+
+featArcanePreparation in ( groupAllFeats groupGeneralFeats )
+  .name "Arcane Preparation"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featAugmentSummoning in ( groupAllFeats groupGeneralFeats )
+  .name "Augment Summoning"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featExtraSlot in ( groupAllFeats groupGeneralFeats )
+  .name "Extra Slot"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
+end
+
+featExtraSpell in ( groupAllFeats groupGeneralFeats )
+  .name "Extra Spell"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
+end
+
+featGreaterSpellFocus in ( groupAllFeats groupGeneralFeats )
+  .name "Greater Spell Focus"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
+end
+
+featGreaterSpellPenetration in ( groupAllFeats groupGeneralFeats )
+  .name "Greater Spell Penetration"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featImprovedFamiliar in ( groupAllFeats groupGeneralFeats )
+  .name "Improved Familiar"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featInnateSpell in ( groupAllFeats groupGeneralFeats )
+  .name "Innate Spell"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
+end
+
+featSpellSpecialization in ( groupAllFeats groupGeneralFeats )
+  .name "Spell Specialization"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
+end
+
+featChainSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Chain Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featCooperativeSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Cooperative Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featDelaySpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Delay Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featEnergyAdmixture in ( groupAllFeats groupMetaMagicFeats )
+  .name "Energy Admixture"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
+end
+
+featSubstitution in ( groupAllFeats groupMetaMagicFeats )
+  .name "Substitution"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
+end
+
+featEschewMaterials in ( groupAllFeats groupMetaMagicFeats )
+  .name "Eschew Materials"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featPersistentSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Persistent Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featRepeatSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Repeat Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featSanctumSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Sanctum Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featSculptSpell in ( groupAllFeats groupSculptSpellFeats )
+  .name "Sculpt Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featSplitRay in ( groupAllFeats groupMetaMagicFeats )
+  .name "Split Ray"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featSubdualSubstitution in ( groupAllFeats groupMetaMagicFeats )
+  .name "Subdual Substitution"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featTwinSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Twin Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featWidenSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Widen Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end

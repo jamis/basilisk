@@ -1,0 +1,5 @@
+rodAuthority
+  .name "Authority"
+  .cost 20576 gp
+  .sources sourcesDefendersoftheFaith
+end

@@ -1,0 +1,411 @@
+/* new magic armour abilities */
+
+asaAbsorbing ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Absorbing"
+  .marketPriceArmorModifier +3
+  .sources sourcesDefendersoftheFaith
+end
+
+asaAntipathy ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatAny
+  .name "Antipathy"
+  .marketPriceArmorModifier +4
+  .sources sourcesDefendersoftheFaith
+end
+
+asaAquatic ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Aquatic"
+  .marketPriceArmorModifier +2
+  .sources sourcesDefendersoftheFaith
+end
+
+asaAquaticWB ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Aquatic with water breathing"
+  .marketPriceArmorModifier +3
+  .sources sourcesDefendersoftheFaith
+end
+
+asaBlinding ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Blinding"
+  .marketPriceArmorModifier +1
+  .sources sourcesDefendersoftheFaith
+end
+
+asaCalled ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Called"
+  .marketPriceArmorModifier +1
+  .sources sourcesDefendersoftheFaith
+end
+
+asaCharming ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Charming"
+  .marketPriceArmorModifier +3
+  .sources sourcesDefendersoftheFaith
+end
+
+asaCommand ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Command"
+  .marketPriceArmorModifier +2
+  .sources sourcesDefendersoftheFaith
+end
+
+asaDaylight ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Daylight"
+  .marketPriceArmorModifier +2
+  .sources sourcesDefendersoftheFaith
+end
+
+asaEnergyDrain ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Energy Drain"
+  .marketPriceArmorModifier +2
+  .sources sourcesDefendersoftheFaith
+end
+
+asaEtherealSO ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Ethereal, self only"
+  .marketPriceArmorModifier +3
+  .sources sourcesDefendersoftheFaith
+end
+
+asaEtherealAC ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Ethereal, all in contact"
+  .marketPriceArmorModifier +4
+  .sources sourcesDefendersoftheFaith
+end
+
+asaFearsome ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Fearsome"
+  .marketPriceArmorModifier +2
+  .sources sourcesDefendersoftheFaith
+end
+
+asaFeathered ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Feathered"
+  .marketPriceArmorModifier +2
+  .sources sourcesDefendersoftheFaith
+end
+
+asaIce ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Ice"
+  .marketPriceArmorModifier +3
+  .sources sourcesDefendersoftheFaith
+end
+
+asaSacred ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Sacred"
+  .marketPriceArmorModifier +2
+  .sources sourcesDefendersoftheFaith
+end
+
+asaSpeed ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Speed"
+  .marketPriceArmorModifier +3
+  .sources sourcesDefendersoftheFaith
+end
+
+asaUndeadControlling ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Undead Controlling"
+  .marketPriceArmorModifier +4
+  .sources sourcesDefendersoftheFaith
+end
+
+asaUndeadDisrupting ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .name "Undead Distrupting"
+  .marketPriceArmorModifier +2
+  .sources sourcesDefendersoftheFaith
+end
+
+category groupMinorShieldSpecialAbilities
+  [10] asaBlinding
+  [10] asaCalled
+end
+
+category groupMinorArmorSpecialAbilities
+  [10] asaBlinding
+  [10] asaCalled
+end
+
+category groupMediumArmorSpecialAbilities
+  [10] asaAbsorbing
+  [10] asaAntipathy
+  [10] asaAquatic
+  [10] asaAquaticWB
+  [10] asaCharming
+  [10] asaCommand
+  [10] asaDaylight
+  [10] asaEnergyDrain
+  [10] asaEtherealSO
+  [10] asaEtherealAC
+  [10] asaFearsome
+  [10] asaFeathered
+  [10] asaIce
+  [10] asaSacred
+  [10] asaSpeed
+  [10] asaUndeadControlling
+  [10] asaUndeadDisrupting
+end
+
+category groupMediumShieldSpecialAbilities
+  [10] asaAbsorbing
+  [10] asaAntipathy
+  [10] asaAquatic
+  [10] asaAquaticWB
+  [10] asaCharming
+  [10] asaCommand
+  [10] asaDaylight
+  [10] asaEnergyDrain
+  [10] asaEtherealSO
+  [10] asaEtherealAC
+  [10] asaFearsome
+  [10] asaFeathered
+  [10] asaIce
+  [10] asaSacred
+  [10] asaSpeed
+  [10] asaUndeadControlling
+  [10] asaUndeadDisrupting
+end
+
+category groupMajorArmorSpecialAbilities
+  [5] asaAbsorbing
+  [5] asaAntipathy
+  [5] asaAquatic
+  [5] asaAquaticWB
+  [5] asaCharming
+  [5] asaCommand
+  [5] asaDaylight
+  [5] asaEnergyDrain
+  [5] asaEtherealSO
+  [5] asaEtherealAC
+  [5] asaFearsome
+  [5] asaFeathered
+  [5] asaIce
+  [5] asaSacred
+  [5] asaSpeed
+  [5] asaUndeadControlling
+  [5] asaUndeadDisrupting
+end
+
+category groupMajorShieldSpecialAbilities
+  [5] asaAbsorbing
+  [5] asaAntipathy
+  [5] asaAquatic
+  [5] asaAquaticWB
+  [5] asaCharming
+  [5] asaCommand
+  [5] asaDaylight
+  [5] asaEnergyDrain
+  [5] asaEtherealSO
+  [5] asaEtherealAC
+  [5] asaFearsome
+  [5] asaFeathered
+  [5] asaIce
+  [5] asaSacred
+  [5] asaSpeed
+  [5] asaUndeadControlling
+  [5] asaUndeadDisrupting
+end
+
+/* specific shields & armours */
+astBlueArmor in ( groupSpecificArmors )
+  .name "Blue Armor of the Crystalmist Mountains"
+  .cost 20960 gp
+  .sources sourcesDefendersoftheFaith
+end
+
+astEquerrysArmor in ( groupSpecificArmors )
+  .name "Equerry's Armor"
+  .cost 10670 gp
+  .sources sourcesDefendersoftheFaith
+end
+
+astGoldenApron in ( groupSpecificArmors )
+  .name "Golden Apron"
+  .cost 22200 gp
+  .sources sourcesDefendersoftheFaith
+end
+
+astRedDragonArmor in ( groupSpecificArmors )
+  .name "Red Dragon Armor"
+  .cost 35200 gp
+  .sources sourcesDefendersoftheFaith
+end
+
+astSplintMailofStability in ( groupSpecificArmors )
+  .name "Splint Mail of Stability"
+  .cost 5845 gp
+  .sources sourcesDefendersoftheFaith
+end
+
+category groupMediumSpecificArmor
+  [10] astBlueArmor
+  [10] astEquerrysArmor
+  [10] astSplintMailofStability
+end
+
+category groupMajorSpecificArmor
+  [10] astBlueArmor
+  [10] astGoldenApron
+  [10] astRedDragonArmor
+end
+
+/* specific Weapons */
+
+wstArrowofFarsight
+  .name "Arrow of Farsight"
+  .prototype weaponArrow
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } ) 
+  .cost 3507 gp
+  .sources sourcesDefendersoftheFaith
+end
+
+wstBattleRod
+  .name "Battle Rod"
+  .prototype weaponHeavyMace
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 35712 gp
+  .sources sourcesDefendersoftheFaith
+end
+
+wstBoltofBattering
+  .name "Bolt of Battering"
+  .prototype weaponBolt
+  .cost 3157 gp
+  .sources sourcesDefendersoftheFaith
+end
+
+wstGoadofMastery
+  .name "Goad of Mastery"
+  .cost 3507 gp
+  .sources sourcesDefendersoftheFaith
+end
+
+category groupMediumSpecificWeapons
+  [3] wstArrowofFarsight
+  [3] wstBattleRod
+  [3] wstBoltofBattering
+  [3] wstGoadofMastery
+end
+
+category groupMajorSpecificWeapons
+  [4] wstArrowofFarsight
+  [4] wstBattleRod
+  [4] wstBoltofBattering
+  [4] wstGoadofMastery
+end
+
+/* wondrous Items */
+
+wondrousAmuletOfMemory
+  .name "Amulet of Memory"
+  .cost 36000 gp
+  .canBeIntelligent yes
+  .sources sourcesDefendersoftheFaith
+end
+
+wondrousArmofNyr
+  .name "Arm of Nyr"
+  .cost 12800 gp
+  .canBeIntelligent no
+  .sources sourcesDefendersoftheFaith
+end
+
+wondrousBlackPatch
+  .name "Black Patch"
+  .cost 8800 gp
+  .canBeIntelligent no
+  .sources sourcesDefendersoftheFaith
+end
+
+wondrousBowlofContemplation
+  .name "Bowl of Contemplation"
+  .cost 44800 gp
+  .canBeIntelligent no
+  .sources sourcesDefendersoftheFaith
+end
+
+wondrousBracersofBinding
+  .name "Bracers of Binding"
+  .cost 10800 gp
+  .canBeIntelligent yes
+  .sources sourcesDefendersoftheFaith
+end
+
+wondrousCloakoftheForest
+  .name "Cloak of the Forest"
+  .cost 9392 gp
+  .canBeIntelligent yes
+  .sources sourcesDefendersoftheFaith
+end
+
+wondrousGateAmulet
+  .name "Gate Amulet"
+  .cost 64000 gp
+  .canBeIntelligent yes
+  .sources sourcesDefendersoftheFaith
+end
+
+wondrousGreaterHolySymbol
+  .name "Greater Holy Symbol"
+  .cost 5040 gp
+  .canBeIntelligent yes
+  .sources sourcesDefendersoftheFaith
+end
+
+wondrousHelmofVision
+  .name "Helm of Vision"
+  .cost 91600 gp
+  .canBeIntelligent yes
+  .sources sourcesDefendersoftheFaith
+end
+
+wondrousMarkofApostasy
+  .name "Mark of Apostasy"
+  .cost 38880 gp
+  .canBeIntelligent no
+  .sources sourcesDefendersoftheFaith
+end
+
+wondrousMaskoftheDead
+  .name "Mask of the Dead"
+  .cost 23400 gp
+  .canBeIntelligent yes
+  .sources sourcesDefendersoftheFaith
+end
+
+wondrousMirrorofRevelation
+  .name "Mirror of Revelation"
+  .cost 48000 gp
+  .canBeIntelligent yes
+  .sources sourcesDefendersoftheFaith
+end
+
+wondrousSacredScabbard
+  .name "Sacred Scabbard"
+  .cost 6400 gp
+  .canBeIntelligent yes
+  .sources sourcesDefendersoftheFaith
+end
+
+category groupMinorWondrousItems
+  wondrousGreaterHolySymbol
+  wondrousSacredScabbard
+end
+
+category groupMediumWondrousItems
+  wondrousArmofNyr
+  wondrousBlackPatch
+  wondrousBracersofBinding
+  wondrousCloakoftheForest
+  wondrousMaskoftheDead
+end
+
+category groupMajorWondrousItems
+  wondrousAmuletofMemory
+  wondrousBowlofContemplation
+  wondrousGateAmulet
+  wondrousHelmofVision
+  wondrousMarkofApostasy
+  wondrousMirrorofRevelation
+end

@@ -1,0 +1,83 @@
+featDivineCleansing in ( groupAllFeats groupDivineFeats )
+  .name "Divine Cleansing"
+  .takeMultiple no
+  .sources sourcesDefendersoftheFaith
+end
+
+featDivineMight in ( groupAllFeats groupDivineFeats )
+  .name "Divine Might"
+  .takeMultiple no
+  .sources sourcesDefendersoftheFaith
+end
+
+featDivineResistance in ( groupAllFeats groupDivineFeats )
+  .name "Divine Resistance"
+  .takeMultiple no
+  .sources sourcesDefendersoftheFaith
+end
+
+featDivineShield in ( groupAllFeats groupDivineFeats )
+  .name "Divine Shield"
+  .takeMultiple no
+  .sources sourcesDefendersoftheFaith
+end
+
+featDivineVengence in ( groupAllFeats groupDivineFeats )
+  .name "Divine Vengence"
+  .takeMultiple no
+  .sources sourcesDefendersoftheFaith
+end
+
+featDivineVigor in ( groupAllFeats groupDivineFeats )
+  .name "Divine Vigor"
+  .takeMultiple no
+  .sources sourcesDefendersoftheFaith
+end
+
+featEmpowerTurning in ( groupAllFeats groupSpecialFeats )
+  .name "Empower Turning"
+  .takeMultiple no
+  .sources sourcesDefendersoftheFaith
+end
+
+featExtraSmiting in ( groupAllFeats groupSpecialFeats )
+  .name "Extra Smiting"
+  .takeMultiple no
+  .sources sourcesDefendersoftheFaith
+end
+
+featHeightenTurning in ( groupAllFeats groupSpecialFeats )
+  .name "Heighten Turning"
+  .takeMultiple no
+  .sources sourcesDefendersoftheFaith
+end
+
+featImprovedShieldBash in ( groupAllFeats groupGeneralFeats )
+  .name "Improved Shield Bash"
+  .takeMultiple no
+  .sources sourcesDefendersoftheFaith
+end
+
+featQuickenTurning in ( groupAllFeats groupSpecialFeats )
+  .name "Special Feats"
+  .takeMultiple no
+  .sources sourcesDefendersoftheFaith
+end
+
+featReachSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Reach Spell"
+  .takeMultiple no
+  .sources sourcesDefendersoftheFaith
+end
+
+featSacredSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Sacred Spell"
+  .takeMultiple no
+  .sources sourcesDefendersoftheFaith
+end
+
+featShieldCharge in ( groupAllFeats groupGeneralFeats )
+  .name "Shield Charge"
+  .takeMultiple no
+  .sources sourcesDefendersoftheFaith
+end

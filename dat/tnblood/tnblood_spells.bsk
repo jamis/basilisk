@@ -1,0 +1,270 @@
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellRepairMinorDamage { "Repair Minor Damage" schTransmutation $ $ sourcesTomeAndBlood }
+  spellAbsorption { "Absorption" schAbjuration $ $ sourcesTomeAndBlood }
+  spellAcidOrb { "Acid Orb" schEvocation $ ( descAcid ) sourcesTomeAndBlood }
+  spellArcaneSight { "Arcane Sight" schDivination $ $ sourcesTomeAndBlood }
+  spellChainContingency { "Chain Contingency" schEvocation $ $ sourcesTomeAndBlood }
+  spellColdOrb { "Cold Orb" schEvocation $ ( descCold ) sourcesTomeAndBlood }
+  spellChoke { "Choke" schConjuration subschCreation ( descForce ) sourcesTomeAndBlood }
+  spellCommandUndead { "Command Undead" schNecromancy $ $ sourcesTomeAndBlood }
+  spellCorpseCandle { "Corpse Candle" schConjuration subschCreation $ sourcesTomeAndBlood }
+  spellDimensionalLock { "Dimensional Lock" schAbjuration $ $ sourcesTomeAndBlood }
+  spellDisguiseUndead { "Disguise Undead" schIllusion subschGlamer $ sourcesTomeAndBlood }
+  spellEaglesSplendor { "Eagle's Splendor" schTransmutation $ $ sourcesTomeAndBlood }
+  spellElectricOrb { "Electric Orb" schEvocation $ ( descElectricity ) sourcesTomeAndBlood }
+  spellEnergyBuffer { "Energy Buffer" schAbjuration $ $ sourcesTomeAndBlood }
+  spellEnergyImmunity { "Energy Immunity" schAbjuration $ $ sourcesTomeAndBlood }
+  spellEnhanceFamiliar { "Enhance Familiar" schUniversal $ $ sourcesTomeAndBlood }
+  spellFamiliarPocket { "Familiar Pocket" schUniversal $ $ sourcesTomeAndBlood }
+  spellFalseLife { "False Life" schNecromancy $ $ sourcesTomeAndBlood }
+  spellFeignDeath { "Feign Death" schNecromancy $ $ sourcesTomeAndBlood }
+  spellFilter { "Filter" schAbjuration $ $ sourcesTomeAndBlood }
+  spellFireOrb { "Fire Orb" schEvocation $ ( descFire ) sourcesTomeAndBlood }
+  spellFortifyFamiliar { "Fortify Familiar" schUniversal $ $ sourcesTomeAndBlood }
+  spellFoxsCunning { "Fox's Cunning" schTransmutation $ $ sourcesTomeAndBlood }
+  spellGazeScreen { "Gaze Screen" schAbjuration $ $ sourcesTomeAndBlood }
+  spellGhostForm { "Ghost Form" schTransmutation $ $ sourcesTomeAndBlood }
+  spellGreatShout { "Great Shout" schEvocation $ ( descSonic ) sourcesTomeAndBlood }
+  spellHideLife { "Hide Life" schNecromancy $ $ sourcesTomeAndBlood }
+  spellIceBurst { "Ice Burst" schEvocation $ ( descCold ) sourcesTomeAndBlood }
+  spellIceKnife { "Ice Knife" schConjuration subschCreation ( descCold ) sourcesTomeAndBlood }
+  spellImbueFamiliar { "Imbue Familiar with Spell Ability" schUniversal $ sourcesTomeAndBlood }
+  spellIndifference { "Indiference" schEnchanment $ ( descMindAffecting ) sourcesTomeAndBlood }
+  spellLesserAcidOrb { "Lesser Acid Orb" schEvocation $ ( descAcid ) sourcesTomeAndBlood }
+  spellLesserColdOrb { "Lesser Cold Orb" schEvocation $ ( descCold ) sourcesTomeAndBlood }
+  spellLesserElectricOrb { "Lesser Electric Orb" schEvocation $ ( descElectricity ) sourcesTomeAndBlood }
+  spellLesserFireOrb { "Lesser Fire Orb" schEvocation $ ( descFire ) sourcesTomeAndBlood }
+  spellSonicOrb { "Lesser Sonic Orb" schEvocation $ ( descSonic ) sourcesTomeAndBlood }
+  spellMassDarkvision { "Mass Darkvision" schTransmutation $ $ sourcesTomeAndBlood }
+  spellMassFly { "Mass Fly" schTransmutation $ $ sourcesTomeAndBlood }
+  spellMassResistElements { "Mass Resist Elements" schAbjuration $ $ sourcesTomeAndBlood }
+  spellMassTeleport { "Mass Teleport" schTransmutation subschTeleportation $ sourcesTomeAndBlood }
+  spellMordenkainensPrivateSanctum { "Mordenkainen's Private Sanctum" schAbjuration $ $ sourcesTomeAndBlood }
+  spellNegativeEnergyBurst { "Negative Energy Burst" schNecromancy $ $ sourcesTomeAndBlood }
+  spellNegativeEnergyRay { "Negative Energy Ray" schNecromancy $ $ sourcesTomeAndBlood }
+  spellNegativeEnergyWave { "Negative Energy Wave" schNecromancy $ $ sourcesTomeAndBlood }
+  spellOtilukesDispellingScreen { "Otiluke's Dispelling Screen" schAbjuration $ $ sourcesTomeAndBlood }
+  spellOtilukesGreaterDispellingScreen { "Otiluke's Greater Dispelling Screen" schAbjuration $ $ sourcesTomeAndBlood }
+  spellOwlsWisdom { "Owl's Wisdom" schTransmutation $ $ sourcesTomeAndBlood }
+  spellRepairCriticalDamage { "Repair Critical Damage" schTransmutation $ $ sourcesTomeAndBlood }
+  spellRepairLightDamage { "Repair Light Damage" schTransmutaion $ $ sourcesTomeAndBlood }
+  spellRepairMinorDamage { "Repair Minor Damage" schTransmutaion $ $ sourcesTomeAndBlood }
+  spellRepairModerateDamage { "Repair Moderate Damage" schTransmutaion $ $ sourcesTomeAndBlood }
+  spellRepairSeriousDamage { "Repair Serious Damage" schTransmutaion $ $ sourcesTomeAndBlood }
+  spellSonicOrb { "Sonic Orb" schEvocation $ ( descSonic ) sourcesTomeAndBlood }
+  spellLesserSonicOrb { "Lesser Sonic Orb" schEvocation $ ( descSonic ) sourcesTomeAndBlood }
+  spellSpiritWall { "Spirit Wall" schNecromancy $ $ sourcesTomeAndBlood }
+  spellUndeathtoDeath { "Undeath to Death" schNecromancy $ $ sourcesTomeAndBlood }  
+end
+
+category groupSpellsSorcererL0
+  spellRepairMinorDamage    
+end
+
+category groupSpellsSorcererL1
+  spellLesserAcidOrb
+  spellLesserColdOrb
+  spellLesserElectricOrb
+  spellLesserFireOrb
+  spellLesserSonicOrb  
+  spellNegativeEnergyRay
+  spellRepairLightDamage
+end
+
+category groupSpellsSorcererL2
+  spellChoke 
+  spellCommandUndead
+  spellDisguiseUndead
+  spellEaglesSplendor
+  spellFamiliarPocket
+  spellFalseLife
+  spellFilter
+  spellFoxsCunning
+  spellGazeScreen
+  spellIceKnife
+  spellIndifference
+  spellOwlsWisdom
+  spellRepairModerateDamage
+end
+
+category groupSpellsSorcererL3
+  spellArcaneSight 
+  spellCorpseCandle
+  spellEnhanceFamiliar
+  spellFeignDeath
+  spellIceBurst
+  spellNegativeEnergyBurst
+  spellRepairSeriousDamage
+end
+
+category groupSpellsSorcererL4
+  spellAcidOrb
+  spellColdOrb
+  spellElectricOrb
+  spellFireOrb
+  spellFortifyFamiliar
+  spellMassDarkvision
+  spellMassResistElements
+  spellNegativeEnergyWave
+  spellOtilukesDispellingScreen
+  spellRepairCriticalDamage
+  spellSonicOrb
+end
+
+category groupSpellsSorcererL5
+  spellEnergyBuffer 
+  spellGhostForm
+  spellMassFly
+  spellMordenkainensPrivateSanctum
+  spellSpiritWall
+end
+
+category groupSpellsSorcererL6
+  spellImbueFamiliar  
+  spellUndeathtoDeath
+end
+
+category groupSpellsSorcererL7
+  spellEnergyImmunity  
+  spellMassTeleport
+  spellOtilukesGreaterDispellingScreen
+end
+
+category groupSpellsSorcererL8
+  spellDimensionalLock 
+  spellGreatShout
+end
+
+category groupSpellsSorcererL9
+  spellAbsorption    
+  spellChainContingency
+  spellHideLife
+end
+
+category groupSpellsWizardL0
+  spellRepairMinorDamage    
+end
+
+category groupSpellsWizardL1
+  spellLesserAcidOrb
+  spellLesserColdOrb
+  spellLesserElectricOrb
+  spellLesserFireOrb
+  spellLesserSonicOrb  
+  spellNegativeEnergyRay
+  spellRepairLightDamage
+end
+
+category groupSpellsWizardL2
+  spellChoke 
+  spellCommandUndead
+  spellDisguiseUndead
+  spellEaglesSplendor
+  spellFamiliarPocket
+  spellFalseLife
+  spellFilter
+  spellFoxsCunning
+  spellGazeScreen
+  spellIceKnife
+  spellIndifference
+  spellOwlsWisdom
+  spellRepairModerateDamage
+end
+
+category groupSpellsWizardL3
+  spellArcaneSight 
+  spellCorpseCandle
+  spellEnhanceFamiliar
+  spellFeignDeath
+  spellIceBurst
+  spellNegativeEnergyBurst
+  spellRepairSeriousDamage
+end
+
+category groupSpellsWizardL4
+  spellAcidOrb
+  spellColdOrb
+  spellElectricOrb
+  spellFireOrb
+  spellFortifyFamiliar
+  spellMassDarkvision
+  spellMassResistElements
+  spellNegativeEnergyWave
+  spellOtilukesDispellingScreen
+  spellRepairCriticalDamage
+  spellSonicOrb
+end
+
+category groupSpellsWizardL5
+  spellEnergyBuffer 
+  spellGhostForm
+  spellMassFly
+  spellMordenkainensPrivateSanctum
+  spellSpiritWall
+end
+
+category groupSpellsWizardL6
+  spellImbueFamiliar  
+  spellUndeathtoDeath
+end
+
+category groupSpellsWizardL7
+  spellEnergyImmunity  
+  spellMassTeleport
+  spellOtilukesGreaterDispellingScreen
+end
+
+category groupSpellsWizardL8
+  spellDimensionalLock 
+  spellGreatShout
+end
+
+category groupSpellsWizardL9
+  spellAbsorption    
+  spellChainContingency
+  spellHideLife
+end
+
+category groupSpellsClericL8
+  spellDimensionalLock
+end
+
+category groupSpellsClericL2
+  spellEaglesSplendor
+  spellFoxsCunning
+  spellFilter
+  spellGazeScreen
+  spellOwlsWisdom
+end
+
+category groupSpellsBardL2
+  spellEaglesSplendor
+  spellOwlsWisdom
+end
+
+category groupSpellsClericL6
+  spellEnergyImmunity
+  spellUndeathtoDeath
+end
+
+category groupSpellsDruidL6
+  spellEnergyImmunity
+end
+
+category groupSpellsDruidL2
+  spellFoxsCunning
+  spellFilter
+  spellGazeScreen
+end
+
+category groupSpellsClericL3
+  spellMassResistElements
+end
+
+category groupSpellsDruidL3
+  spellMassResistElements
+end
+
+category groupSpellsBardL6
+  spellGreatShout
+end
