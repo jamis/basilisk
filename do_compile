@@ -1,0 +1,13 @@
+#!/usr/local/bin/ruby
+
+search_path = []
+Dir.chdir "dat"
+Dir.foreach( "." ) do |entry|
+  next if entry =~ /CVS|^\./
+  next if not File.directory? entry
+  search_path.push "dat/#{entry}"
+end
+
+Dir.chdir ".."
+paths = search_path.join( "|" )
+system( "bskcompile dat/standard/index.bsk \"" + paths + "\"" )
