@@ -1,39 +1,63 @@
 version 1.01
-	Added "library" target to Makefile for making a dynamic-loading basilisk
-	  library.
-	Changed names of 4 callback functions in bskcallback.c:
-		myConsole -> BSKDefaultConsole
-		myRTEHandler -> BSKDefaultRuntimeErrorHandler
-		myErrorHandler -> BSKDefaultParseErrorHandler
-		printStackTrace -> BSKPrintStackTrace
-	Added a FILE* parameter to BSKPrintStackTrace.
-	Added a new type to bskcallback.h (BSKCallbackData) which should be
-		passed as the "userData" parameter to BSKExec and BSKParse
-		whenever one of the "default" callbacks are used.
-	Changes bskcompile.c, bskrun.c, and bsktreasure.c to use the new
-		callback functions.
-	Modified script.bnf to reflect the new preferred syntax for specifying
-		parent categories for entities (using the "in" keyword).
-	Modified all data files to use the new preferred syntax for specifying
-		parent categories for entities (using the "in" keyword).
-	Alphabetized deity list in deities.bsk.
-	Replaced gems.bsk with data from Spencer Cooley (MUCH more detail).
-	Modified rings.bsk, wands.bsk, and staves.bsk to compute item cost
-		proportionally to the number of charges remaining in the item.
-	Modified dff.html to include documentation for new preferred syntax
-		for specifying parent categories for entities (using the "in"
-		keyword).
-	Modified tutorial1.html to use new preferred syntax for specifying
-		parent categories for entities (using the "in" keyword).
-	Added a new tutorial (tutorial2.html) -- "Adding Data, Part 2"
-	Modified bsktokens.h, bsklexer.c, bskparse.c to handle new
-		preferred syntax for specifying parent categories for entities
-		(using the "in" keyword).
-	Modified BSKGetMemberByIndex in bskctgry.c to be clearer.
-	Fixed bug in bskexec.c (in the "WeightOf" built-in function) where
-		the parameters were being swapped.
-	Increased maximum string length in bsklexer.c from 256 to 4095 to
-		accomodate larger strings in basilisk files.
+  Makefile changes:
+		Added "library" target to Makefile for making a dynamic-loading basilisk
+			library.
+	Utility changes:
+		Changed names of 4 callback functions in bskcallback.c:
+			myConsole -> BSKDefaultConsole
+			myRTEHandler -> BSKDefaultRuntimeErrorHandler
+			myErrorHandler -> BSKDefaultParseErrorHandler
+			printStackTrace -> BSKPrintStackTrace
+		Added a FILE* parameter to BSKPrintStackTrace.
+		Added a new type to bskcallback.h (BSKCallbackData) which should be
+			passed as the "userData" parameter to BSKExec and BSKParse
+			whenever one of the "default" callbacks are used.
+		Changes bskcompile.c, bskrun.c, and bsktreasure.c to use the new
+			callback functions.
+		Modified BSKPrintStackTrace to use new "line" member of BSKStackFrame
+			to tell what line of what rule was called, for each level of the
+			stack.
+	Documentation Changes:
+		Modified script.bnf to reflect the new preferred syntax for specifying
+			parent categories for entities (using the "in" keyword).
+		Modified dff.html to include documentation for new preferred syntax
+			for specifying parent categories for entities (using the "in"
+			keyword).
+		Modified tutorial1.html to use new preferred syntax for specifying
+			parent categories for entities (using the "in" keyword).
+		Added a new tutorial (tutorial2.html) -- "Adding Data, Part 2"
+		Added undocumented functions from bskexec.
+	Data Changes:
+		Modified all data files to use the new preferred syntax for specifying
+			parent categories for entities (using the "in" keyword).
+		Alphabetized deity list in deities.bsk.
+		Replaced gems.bsk with data from Spencer Cooley (MUCH more detail).
+		Modified rings.bsk, wands.bsk, and staves.bsk to compute item cost
+			proportionally to the number of charges remaining in the item.
+		Modified "rGetAnyMatchingCriteria" rule (in utilities.bsk) to accept
+			an optional third parameter ("recursive") that, when true, indicates
+			that rGetAnyMatchingCriteria should call itself if a category is
+			selected from the given category.
+		Modified scrolls.bsk to use pass "true" as the third parameter to
+			rGetAnyMatchingCriteria, to make scroll selection more flexible
+			and robust.
+		Added "optExcludeGems" and "optExcludeArt" attributes to attributes.bsk.
+		Changed rGenerateGoodsByEncounterLevel to use new optExcludeGems
+			and optExcludeArt attributes, if set.
+		Changed rGenerateTreasureByEncounterLevel to generate goods or coins if
+			items have been banned (by setting percentage to 0).
+	Library Changes:
+		Modified bsktokens.h, bsklexer.c, bskparse.c to handle new
+			preferred syntax for specifying parent categories for entities
+			(using the "in" keyword).
+		Modified BSKGetMemberByIndex in bskctgry.c to be clearer.
+		Fixed bug in bskexec.c (in the "WeightOf" built-in function) where
+			the parameters were being swapped.
+		Increased maximum string length in bsklexer.c from 256 to 4095 to
+			accomodate larger strings in basilisk files.
+		Added BSKStackFrameGetLineNumber function to bskexec module.
+		Added "line" member to BSKStackFrame to store current line number on
+			a per-stack-frame basis (for use in stack tracing).
 	
 14 Feb 2001
 version 1.0
