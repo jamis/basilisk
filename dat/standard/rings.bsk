@@ -11,7 +11,7 @@ forward rule rSelectStoredRingSpells
  * Ring descriptions
  * --------------------------------------------------------------------- */
 
-ringAnimalFriendship ( groupRings )
+ringAnimalFriendship in ( groupRings )
   .name "animal friendship"
   .cost 9500 gp
   .activationMethod atCommandWord
@@ -19,7 +19,7 @@ ringAnimalFriendship ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringBlinking ( groupRings )
+ringBlinking in ( groupRings )
   .name "blinking"
   .cost 30000 gp
   .activationMethod atCommandWord
@@ -27,7 +27,7 @@ ringBlinking ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringChameleonPower ( groupRings )
+ringChameleonPower in ( groupRings )
   .name "chameleon power"
   .cost 12000 gp
   .activationMethod atWill
@@ -35,7 +35,7 @@ ringChameleonPower ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringClimbing ( groupRings )
+ringClimbing in ( groupRings )
   .name "climbing"
   .cost 2000 gp
   .activationMethod atContinuous
@@ -43,7 +43,7 @@ ringClimbing ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringCounterspells ( groupRings )
+ringCounterspells in ( groupRings )
   .name "counterspells"
   .cost 4000 gp
   .activationMethod atUse
@@ -51,7 +51,7 @@ ringCounterspells ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringDjinniCalling 
+ringDjinniCalling in ( groupRings )
   .name "djinni calling"
   .cost 125000 gp
   .activationMethod atUse
@@ -59,7 +59,7 @@ ringDjinniCalling
   .sources sourcesCoreRules
 end
 
-ringAirElementalCommand ( groupRings )
+ringAirElementalCommand in ( groupRings )
   .name "air elemental command"
   .cost 200000 gp
   .activationMethod atContinuous
@@ -69,7 +69,7 @@ ringAirElementalCommand ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringEarthElementalCommand ( groupRings )
+ringEarthElementalCommand in ( groupRings )
   .name "earth elemental command"
   .cost 200000 gp
   .activationMethod atContinuous
@@ -79,7 +79,7 @@ ringEarthElementalCommand ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringFireElementalCommand ( groupRings )
+ringFireElementalCommand in ( groupRings )
   .name "fire elemental command"
   .cost 200000 gp
   .activationMethod atContinuous
@@ -89,7 +89,7 @@ ringFireElementalCommand ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringWaterElementalCommand ( groupRings )
+ringWaterElementalCommand in ( groupRings )
   .name "water elemental command"
   .cost 200000 gp
   .activationMethod atContinuous
@@ -99,7 +99,7 @@ ringWaterElementalCommand ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringMinorElementalResistance ( groupRings )
+ringMinorElementalResistance in ( groupRings )
   .name "minor elemental resistance"
   .cost 16000 gp
   .activationMethod atContinuous
@@ -108,7 +108,7 @@ ringMinorElementalResistance ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringMajorElementalResistance ( groupRings )
+ringMajorElementalResistance in ( groupRings )
   .name "major elemental resistance"
   .cost 24000 gp
   .activationMethod atContinuous
@@ -117,7 +117,7 @@ ringMajorElementalResistance ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringEvasion ( groupRings )
+ringEvasion in ( groupRings )
   .name "evasion"
   .cost 25000 gp
   .activationMethod atUse
@@ -125,7 +125,7 @@ ringEvasion ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringFeatherFalling
+ringFeatherFalling in ( groupRings )
   .name "feather falling"
   .cost 2200 gp
   .activationMethod atUse
@@ -133,7 +133,7 @@ ringFeatherFalling
   .sources sourcesCoreRules
 end
 
-ringFriendShield
+ringFriendShield in ( groupRings )
   .name "friend shield (pair)"
   .cost 50000 gp
   .activationMethod atCommandWord
@@ -141,7 +141,7 @@ ringFriendShield
   .sources sourcesCoreRules
 end
 
-ringForceShield ( groupRings )
+ringForceShield in ( groupRings )
   .name "force shield"
   .cost 8500 gp
   .activationMethod atWill
@@ -149,7 +149,7 @@ ringForceShield ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringFreedomOfMovement ( groupRings )
+ringFreedomOfMovement in ( groupRings )
   .name "freedom of movement"
   .cost 40000 gp
   .activationMethod atContinuous
@@ -157,7 +157,7 @@ ringFreedomOfMovement ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringInvisibility ( groupRings )
+ringInvisibility in ( groupRings )
   .name "invisibility"
   .cost 20000 gp
   .activationMethod atWill
@@ -165,7 +165,7 @@ ringInvisibility ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringJumping ( groupRings )
+ringJumping in ( groupRings )
   .name "jumping"
   .cost 2000 gp
   .activationMethod atContinuous
@@ -173,7 +173,7 @@ ringJumping ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringMindShielding ( groupRings )
+ringMindShielding in ( groupRings )
   .name "mind shielding"
   .cost 8000 gp
   .activationMethod atContinuous
@@ -181,7 +181,7 @@ ringMindShielding ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringProtection1 ( groupRings )
+ringProtection1 in ( groupRings )
   .name "protection +1"
   .cost 2000 gp
   .activationMethod atContinuous
@@ -189,7 +189,7 @@ ringProtection1 ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringProtection2 ( groupRings )
+ringProtection2 in ( groupRings )
   .name "protection +2"
   .cost 8000 gp
   .activationMethod atContinuous
@@ -197,7 +197,7 @@ ringProtection2 ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringProtection3 ( groupRings )
+ringProtection3 in ( groupRings )
   .name "protection +3"
   .cost 18000 gp
   .activationMethod atContinuous
@@ -205,7 +205,7 @@ ringProtection3 ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringProtection4 ( groupRings )
+ringProtection4 in ( groupRings )
   .name "protection +4"
   .cost 32000 gp
   .activationMethod atContinuous
@@ -213,7 +213,7 @@ ringProtection4 ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringProtection5 ( groupRings )
+ringProtection5 in ( groupRings )
   .name "protection +5"
   .cost 50000 gp
   .activationMethod atContinuous
@@ -221,7 +221,7 @@ ringProtection5 ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringRam ( groupRings )
+ringRam in ( groupRings )
   .name "the ram"
   .cost 8600 gp
   .activationMethod atCommandWord
@@ -229,7 +229,7 @@ ringRam ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringRegeneration ( groupRings )
+ringRegeneration in ( groupRings )
   .name "regeneration"
   .cost 90000 gp
   .activationMethod atContinuous
@@ -237,14 +237,14 @@ ringRegeneration ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringShootingStars
+ringShootingStars in ( groupRings )
   .name "shooting stars"
   .cost 50000 gp
   .activationMethod atCommandWord
   .sources sourcesCoreRules
 end
 
-ringSpellStoring ( groupRings )
+ringSpellStoring in ( groupRings )
   .name "spell storing"
   .cost 90000 gp
   .activationMethod atSpellTrigger
@@ -252,7 +252,7 @@ ringSpellStoring ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringSpellTurning ( groupRings )
+ringSpellTurning in ( groupRings )
   .name "spell turning"
   .cost 150000 gp
   .activationMethod atCommandWord
@@ -260,7 +260,7 @@ ringSpellTurning ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringSustenance ( groupRings )
+ringSustenance in ( groupRings )
   .name "sustenance"
   .cost 2500 gp
   .activationMethod atContinuous
@@ -268,7 +268,7 @@ ringSustenance ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringSwimming ( groupRings )
+ringSwimming in ( groupRings )
   .name "swimming"
   .cost 2300 gp
   .activationMethod atContinuous
@@ -276,7 +276,7 @@ ringSwimming ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringTelekinesis ( groupRings )
+ringTelekinesis in ( groupRings )
   .name "telekinesis"
   .cost 75000 gp
   .activationMethod atCommandWord
@@ -284,7 +284,7 @@ ringTelekinesis ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringThreeWishes ( groupRings )
+ringThreeWishes in ( groupRings )
   .name "three wishes"
   .cost 97950 gp
   .activationMethod atSpellTrigger
@@ -292,7 +292,7 @@ ringThreeWishes ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringWarmth ( groupRings )
+ringWarmth in ( groupRings )
   .name "warmth"
   .cost 2100 gp
   .activationMethod atContinuous
@@ -300,7 +300,7 @@ ringWarmth ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringWaterWalking ( groupRings )
+ringWaterWalking in ( groupRings )
   .name "water walking"
   .cost 15000 gp
   .activationMethod atContinuous
@@ -308,7 +308,7 @@ ringWaterWalking ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringWizardry1 ( groupRings )
+ringWizardry1 in ( groupRings )
   .name "wizardry I"
   .cost 20000 gp
   .activationMethod atContinuous
@@ -316,7 +316,7 @@ ringWizardry1 ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringWizardry2 ( groupRings )
+ringWizardry2 in ( groupRings )
   .name "wizardry II"
   .cost 40000 gp
   .activationMethod atContinuous
@@ -324,7 +324,7 @@ ringWizardry2 ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringWizardry3 ( groupRings )
+ringWizardry3 in ( groupRings )
   .name "wizardry III"
   .cost 70000 gp
   .activationMethod atContinuous
@@ -332,7 +332,7 @@ ringWizardry3 ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringWizardry4 ( groupRings )
+ringWizardry4 in ( groupRings )
   .name "wizardry IV"
   .cost 100000 gp
   .activationMethod atContinuous
@@ -340,7 +340,7 @@ ringWizardry4 ( groupRings )
   .sources sourcesCoreRules
 end
 
-ringXRayVision ( groupRings )
+ringXRayVision in ( groupRings )
   .name "x-ray vision"
   .cost 25000 gp
   .activationMethod atCommandWord

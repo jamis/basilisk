@@ -1,4 +1,4 @@
-template ( groupAllRaces ) { name sources }
+template in ( groupAllRaces ) { name sources }
   raceHuman { "human" sourcesCoreRules }
   raceElf { "elf" sourcesCoreRules }
   raceHalfElf { "half-elf" sourcesCoreRules }

@@ -1,184 +1,184 @@
-featBlindsight5FootRadius ( groupAllFeats groupGeneralFeats )
+featBlindsight5FootRadius in ( groupAllFeats groupGeneralFeats )
   .name "blindsight, 5-foot radius"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featCircleKick ( groupAllFeats groupGeneralFeats )
+featCircleKick in ( groupAllFeats groupGeneralFeats )
   .name "circle kick"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featCloseQuartersFighting ( groupAllFeats groupGeneralFeats )
+featCloseQuartersFighting in ( groupAllFeats groupGeneralFeats )
   .name "close-quarters fighting"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featDeathBlow ( groupAllFeats groupGeneralFeats )
+featDeathBlow in ( groupAllFeats groupGeneralFeats )
   .name "death blow"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featDirtyFighting ( groupAllFeats groupGeneralFeats )
+featDirtyFighting in ( groupAllFeats groupGeneralFeats )
   .name "dirty fighting"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featDualStrike ( groupAllFeats groupGeneralFeats )
+featDualStrike in ( groupAllFeats groupGeneralFeats )
   .name "dual strike"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featEagleClawAttack ( groupAllFeats groupGeneralFeats )
+featEagleClawAttack in ( groupAllFeats groupGeneralFeats )
   .name "eagle claw attack"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featExpertTactician ( groupAllFeats groupGeneralFeats )
+featExpertTactician in ( groupAllFeats groupGeneralFeats )
   .name "expert tactician"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featExtraStunningAttacks ( groupAllFeats groupGeneralFeats )
+featExtraStunningAttacks in ( groupAllFeats groupGeneralFeats )
   .name "extra stunning attacks"
   .takeMultiple yes
   .sources sourcesSwordAndFist
 end
 
-featEyesInTheBackOfYourHead ( groupAllFeats groupGeneralFeats )
+featEyesInTheBackOfYourHead in ( groupAllFeats groupGeneralFeats )
   .name "eyes in the back of your head"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featFeignWeakness ( groupAllFeats groupGeneralFeats )
+featFeignWeakness in ( groupAllFeats groupGeneralFeats )
   .name "feign weakness"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featFistsOfIron ( groupAllFeats groupGeneralFeats )
+featFistsOfIron in ( groupAllFeats groupGeneralFeats )
   .name "fists of iron"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featHoldTheLine ( groupAllFeats groupGeneralFeats )
+featHoldTheLine in ( groupAllFeats groupGeneralFeats )
   .name "hold the line"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featImprovedOverrun ( groupAllFeats groupGeneralFeats )
+featImprovedOverrun in ( groupAllFeats groupGeneralFeats )
   .name "improved overrun"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featImprovedSunder ( groupAllFeats groupGeneralFeats )
+featImprovedSunder in ( groupAllFeats groupGeneralFeats )
   .name "improved sunder"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featKnockDown ( groupAllFeats groupGeneralFeats )
+featKnockDown in ( groupAllFeats groupGeneralFeats )
   .name "knock down"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featLightningFists ( groupAllFeats groupGeneralFeats )
+featLightningFists in ( groupAllFeats groupGeneralFeats )
   .name "lightning fists"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featMantisLeap ( groupAllFeats groupGeneralFeats )
+featMantisLeap in ( groupAllFeats groupGeneralFeats )
   .name "mantis leap"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featMonkeyGrip ( groupAllFeats groupGeneralFeats )
+featMonkeyGrip in ( groupAllFeats groupGeneralFeats )
   .name "monkey grip"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featOffHandParry ( groupAllFeats groupGeneralFeats )
+featOffHandParry in ( groupAllFeats groupGeneralFeats )
   .name "off-hand parry"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featPainTouch ( groupAllFeats groupGeneralFeats )
+featPainTouch in ( groupAllFeats groupGeneralFeats )
   .name "pain touch"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featPinShield ( groupAllFeats groupGeneralFeats )
+featPinShield in ( groupAllFeats groupGeneralFeats )
   .name "pin shield"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featPowerLunge ( groupAllFeats groupGeneralFeats )
+featPowerLunge in ( groupAllFeats groupGeneralFeats )
   .name "power lunge"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featProneAttack ( groupAllFeats groupGeneralFeats )
+featProneAttack in ( groupAllFeats groupGeneralFeats )
   .name "prone attack"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featRapidReload ( groupAllFeats groupGeneralFeats )
+featRapidReload in ( groupAllFeats groupGeneralFeats )
   .name "rapid reload"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featRemainConscious ( groupAllFeats groupGeneralFeats )
+featRemainConscious in ( groupAllFeats groupGeneralFeats )
   .name "remain conscious"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featSharpShooting ( groupAllFeats groupGeneralFeats )
+featSharpShooting in ( groupAllFeats groupGeneralFeats )
   .name "sharp shooting"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featShieldExpert ( groupAllFeats groupGeneralFeats )
+featShieldExpert in ( groupAllFeats groupGeneralFeats )
   .name "shield expert"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featSnatchArrows ( groupAllFeats groupGeneralFeats )
+featSnatchArrows in ( groupAllFeats groupGeneralFeats )
   .name "snatch arrows"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featThrowAnything ( groupAllFeats groupGeneralFeats )
+featThrowAnything in ( groupAllFeats groupGeneralFeats )
   .name "throw anything"
   .takeMultiple no
   .sources sourcesSwordAndFist
 end
 
-featZenArchery ( groupAllFeats groupGeneralFeats )
+featZenArchery in ( groupAllFeats groupGeneralFeats )
   .name "zen archery"
   .takeMultiple no
   .sources sourcesSwordAndFist

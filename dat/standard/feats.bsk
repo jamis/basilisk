@@ -1,6 +1,6 @@
 attribute takeMultiple           boolean
 
-featAlertness ( groupAllFeats groupGeneralFeats )
+featAlertness in ( groupAllFeats groupGeneralFeats )
   .name "alertness"
   .takeMultiple no
   .bonuses ( { .type btUnnamed .aspect asSkill .affectedThing skillListen .magnitude +2 }
@@ -8,14 +8,14 @@ featAlertness ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featAmbidexterity ( groupAllFeats groupGeneralFeats )
+featAmbidexterity in ( groupAllFeats groupGeneralFeats )
   .name "ambidexterity"
   .takeMultiple no
   .conditions ( { .type ptMinimumAbilityScore .affectedThing astDexterity .magnitude 15 } )
   .sources sourcesCoreRules
 end
 
-featArmorProficiencyHeavy ( groupAllFeats groupGeneralFeats )
+featArmorProficiencyHeavy in ( groupAllFeats groupGeneralFeats )
   .name "armor proficiency (heavy)"
   .takeMultiple no
   .conditions ( { .type ptFeat .affectedThing featArmorProficiencyLight }
@@ -23,33 +23,33 @@ featArmorProficiencyHeavy ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featArmorProficiencyLight ( groupAllFeats groupGeneralFeats )
+featArmorProficiencyLight in ( groupAllFeats groupGeneralFeats )
   .name "armor proficiency (light)"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featArmorProficiencyMedium ( groupAllFeats groupGeneralFeats )
+featArmorProficiencyMedium in ( groupAllFeats groupGeneralFeats )
   .name "armor proficiency (medium)"
   .takeMultiple no
   .conditions ( { .type ptFeat .affectedThing featArmorProficiencyLight } )
   .sources sourcesCoreRules
 end
 
-featBlindFight ( groupAllFeats groupGeneralFeats )
+featBlindFight in ( groupAllFeats groupGeneralFeats )
   .name "blind-fight"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featBrewPotion ( groupAllFeats groupItemCreationFeats )
+featBrewPotion in ( groupAllFeats groupItemCreationFeats )
   .name "brew potion"
   .takeMultiple no
   .conditions ( { .type ptMinimumSpellcasterLevel .magnitude 3 } )
   .sources sourcesCoreRules
 end
 
-featCleave ( groupAllFeats groupGeneralFeats )
+featCleave in ( groupAllFeats groupGeneralFeats )
   .name "cleave"
   .takeMultiple no
   .conditions ( { .type ptFeat .affectedThing featPowerAttack }
@@ -57,7 +57,7 @@ featCleave ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featCombatCasting ( groupAllFeats groupGeneralFeats )
+featCombatCasting in ( groupAllFeats groupGeneralFeats )
   .name "combat casting"
   .takeMultiple no
   .bonuses ( { .type btUnnamed 
@@ -68,48 +68,48 @@ featCombatCasting ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featCombatReflexes ( groupAllFeats groupGeneralFeats )
+featCombatReflexes in ( groupAllFeats groupGeneralFeats )
   .name "combat reflexes"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featCraftMagicArmsAndArmor ( groupAllFeats groupItemCreationFeats )
+featCraftMagicArmsAndArmor in ( groupAllFeats groupItemCreationFeats )
   .name "craft magic arms and armor"
   .takeMultiple no
   .conditions ( { .type ptMinimumSpellcasterLevel .magnitude 5 } )
   .sources sourcesCoreRules
 end
 
-featCraftRod ( groupAllFeats groupItemCreationFeats )
+featCraftRod in ( groupAllFeats groupItemCreationFeats )
   .name "craft rod"
   .takeMultiple no
   .conditions ( { .type ptMinimumSpellcasterLevel .magnitude 9 } )
   .sources sourcesCoreRules
 end
 
-featCraftStaff ( groupAllFeats groupItemCreationFeats )
+featCraftStaff in ( groupAllFeats groupItemCreationFeats )
   .name "craft staff"
   .takeMultiple no
   .conditions ( { .type ptMinimumSpellcasterLevel .magnitude 12 } )
   .sources sourcesCoreRules
 end
 
-featCraftWand ( groupAllFeats groupItemCreationFeats )
+featCraftWand in ( groupAllFeats groupItemCreationFeats )
   .name "craft wand"
   .takeMultiple no
   .conditions ( { .type ptMinimumSpellcasterLevel .magnitude 5 } )
   .sources sourcesCoreRules
 end
 
-featCraftWondrousItem ( groupAllFeats groupItemCreationFeats )
+featCraftWondrousItem in ( groupAllFeats groupItemCreationFeats )
   .name "craft wondrous item"
   .takeMultiple no
   .conditions ( { .type ptMinimumSpellcasterLevel .magnitude 3 } )
   .sources sourcesCoreRules
 end
 
-featDeflectArrows ( groupAllFeats groupGeneralFeats )
+featDeflectArrows in ( groupAllFeats groupGeneralFeats )
   .name "deflect arrows"
   .takeMultiple no
   .conditions ( { .type ptMinimumAbilityScore .affectedThing astDexterity .magnitude 13 }
@@ -117,7 +117,7 @@ featDeflectArrows ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featDodge ( groupAllFeats groupGeneralFeats )
+featDodge in ( groupAllFeats groupGeneralFeats )
   .name "dodge"
   .takeMultiple no
   .conditions ( { .type ptMinimumAbilityScore .affectedThing astDexterity .magnitude 13 } )
@@ -125,33 +125,33 @@ featDodge ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featEmpowerSpell ( groupAllFeats groupMetaMagicFeats )
+featEmpowerSpell in ( groupAllFeats groupMetaMagicFeats )
   .name "empower spell"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featEndurance ( groupAllFeats groupGeneralFeats )
+featEndurance in ( groupAllFeats groupGeneralFeats )
   .name "endurance"
   .takeMultiple no
   .specialQualities ( { .description "+4 bonus to all checks for extended physical actions" } )
   .sources sourcesCoreRules
 end
 
-featEnlargeSpell ( groupAllFeats groupMetaMagicFeats )
+featEnlargeSpell in ( groupAllFeats groupMetaMagicFeats )
   .name "enlarge spell"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featExoticWeaponProficiency ( groupAllFeats groupGeneralFeats )
+featExoticWeaponProficiency in ( groupAllFeats groupGeneralFeats )
   .name "exotic weapon proficiency"
   .takeMultiple yes
   .conditions ( { .type ptMinimumBaseAttack .magnitude 1 } )
   .sources sourcesCoreRules
 end
 
-featExpertise ( groupAllFeats groupGeneralFeats )
+featExpertise in ( groupAllFeats groupGeneralFeats )
   .name "expertise"
   .takeMultiple no
   .conditions ( { .type ptMinimumAbilityScore .affectedThing astIntelligence .magnitude 13 } )
@@ -159,13 +159,13 @@ featExpertise ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featExtendSpell ( groupAllFeats groupMetaMagicFeats )
+featExtendSpell in ( groupAllFeats groupMetaMagicFeats )
   .name "extend spell"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featExtraTurning ( groupAllFeats )
+featExtraTurning in ( groupAllFeats )
   .name "extra turning"
   .takeMultiple yes
   .bonuses ( { .type btUnnamed .aspect asTurningAttempts .magnitude +4 } )
@@ -173,21 +173,21 @@ featExtraTurning ( groupAllFeats )
   .sources sourcesCoreRules
 end
 
-featFarShot ( groupAllFeats groupGeneralFeats )
+featFarShot in ( groupAllFeats groupGeneralFeats )
   .name "far shot"
   .takeMultiple no
   .conditions ( { .type ptFeat .affectedThing featPointBlankShot } )
   .sources sourcesCoreRules
 end
 
-featForgeRing ( groupAllFeats groupItemCreationFeats )
+featForgeRing in ( groupAllFeats groupItemCreationFeats )
   .name "forge ring"
   .takeMultiple no
   .conditions ( { .type ptMinimumSpellcasterLevel .magnitude 12 } )
   .sources sourcesCoreRules
 end
 
-featGreatCleave ( groupAllFeats groupGeneralFeats )
+featGreatCleave in ( groupAllFeats groupGeneralFeats )
   .name "great cleave"
   .takeMultiple no
   .conditions ( { .type ptMinimumAbilityScore .affectedThing astStrength .magnitude 13 }
@@ -197,20 +197,20 @@ featGreatCleave ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featGreatFortitude ( groupAllFeats groupGeneralFeats )
+featGreatFortitude in ( groupAllFeats groupGeneralFeats )
   .name "great fortitude"
   .takeMultiple no
   .bonuses ( { .type btUnnamed .aspect asSave .affectedThing sttFortitude .magnitude +2 } )
   .sources sourcesCoreRules
 end
 
-featHeightenSpell ( groupAllFeats groupMetaMagicFeats )
+featHeightenSpell in ( groupAllFeats groupMetaMagicFeats )
   .name "heighten spell"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featImprovedBullRush ( groupAllFeats groupGeneralFeats )
+featImprovedBullRush in ( groupAllFeats groupGeneralFeats )
   .name "improved bull rush"
   .takeMultiple no
   .conditions ( { .type ptMinimumAbilityScore .affectedThing astStrength .magnitude 13 }
@@ -218,7 +218,7 @@ featImprovedBullRush ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featImprovedCritical ( groupAllFeats groupGeneralFeats )
+featImprovedCritical in ( groupAllFeats groupGeneralFeats )
   .name "improved critical"
   .takeMultiple yes
   .conditions ( { .type ptWeaponProficiency }
@@ -226,7 +226,7 @@ featImprovedCritical ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featImprovedDisarm ( groupAllFeats groupGeneralFeats )
+featImprovedDisarm in ( groupAllFeats groupGeneralFeats )
   .name "improved disarm"
   .takeMultiple no
   .conditions ( { .type ptMinimumAbilityScore .affectedThing astIntelligence .magnitude 13 }
@@ -234,14 +234,14 @@ featImprovedDisarm ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featImprovedInitiative ( groupAllFeats groupGeneralFeats )
+featImprovedInitiative in ( groupAllFeats groupGeneralFeats )
   .name "improved initiative"
   .takeMultiple no
   .bonuses ( { .type btUnnamed .aspect asInitiative .magnitude +4 } )
   .sources sourcesCoreRules
 end
 
-featImprovedTwoWeaponFighting ( groupAllFeats groupGeneralFeats )
+featImprovedTwoWeaponFighting in ( groupAllFeats groupGeneralFeats )
   .name "improved two-weapon fighting"
   .takeMultiple no
   .conditions ( { .type ptFeat .affectedThing featTwoWeaponFighting }
@@ -250,47 +250,47 @@ featImprovedTwoWeaponFighting ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featImprovedUnarmedStrike ( groupAllFeats groupGeneralFeats )
+featImprovedUnarmedStrike in ( groupAllFeats groupGeneralFeats )
   .name "improved unarmed strike"
   .takeMultiple no
   .specialAttacks ( { .description "considered armed even when unarmed" } )
   .sources sourcesCoreRules
 end
 
-featIronWill ( groupAllFeats groupGeneralFeats )
+featIronWill in ( groupAllFeats groupGeneralFeats )
   .name "iron will"
   .takeMultiple no
   .bonuses ( { .type btUnnamed .aspect asSave .affectedThing sttWill .magnitude +2 } )
   .sources sourcesCoreRules
 end
 
-featLeadership ( groupAllFeats groupGeneralFeats )
+featLeadership in ( groupAllFeats groupGeneralFeats )
   .name "leadership"
   .takeMultiple no
   .conditions ( { .type ptMinimumCharacterLevel .magnitude 6 } )
   .sources sourcesCoreRules
 end
 
-featLightningReflexes ( groupAllFeats groupGeneralFeats )
+featLightningReflexes in ( groupAllFeats groupGeneralFeats )
   .name "lightning reflexes"
   .takeMultiple no
   .bonuses ( { .type btUnnamed .aspect asSave .affectedThing sttReflex .magnitude +2 } )
   .sources sourcesCoreRules
 end
 
-featMartialWeaponProficiency ( groupAllFeats groupGeneralFeats )
+featMartialWeaponProficiency in ( groupAllFeats groupGeneralFeats )
   .name "martial weapon proficiency"
   .takeMultiple yes
   .sources sourcesCoreRules
 end
 
-featMaximizeSpell ( groupAllFeats groupMetaMagicFeats )
+featMaximizeSpell in ( groupAllFeats groupMetaMagicFeats )
   .name "maximize spell"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featMobility ( groupAllFeats groupGeneralFeats )
+featMobility in ( groupAllFeats groupGeneralFeats )
   .name "mobility"
   .takeMultiple no
   .conditions ( { .type ptMinimumAbilityScore .affectedThing astDexterity .magnitude 13 }
@@ -299,7 +299,7 @@ featMobility ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featMountedArchery ( groupAllFeats groupGeneralFeats )
+featMountedArchery in ( groupAllFeats groupGeneralFeats )
   .name "mounted archery"
   .takeMultiple no
   .conditions ( { .type ptSkill .affectedThing skillRide }
@@ -307,7 +307,7 @@ featMountedArchery ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featMountedCombat ( groupAllFeats groupGeneralFeats )
+featMountedCombat in ( groupAllFeats groupGeneralFeats )
   .name "mounted combat"
   .takeMultiple no
   .conditions ( { .type ptSkill .affectedThing skillRide } )
@@ -315,14 +315,14 @@ featMountedCombat ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featPointBlankShot ( groupAllFeats groupGeneralFeats )
+featPointBlankShot in ( groupAllFeats groupGeneralFeats )
   .name "point blank shot"
   .takeMultiple no
   .bonuses ( { .type btUnnamed .aspect asRangedAttack .magnitude +1 .conditions ( { .description "up to 30 ft." } ) } )
   .sources sourcesCoreRules
 end
 
-featPowerAttack ( groupAllFeats groupGeneralFeats )
+featPowerAttack in ( groupAllFeats groupGeneralFeats )
   .name "power attack"
   .takeMultiple no
   .conditions ( { .type ptMinimumAbilityScore .affectedThing astStrength .magnitude 13 } )
@@ -330,7 +330,7 @@ featPowerAttack ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featPreciseShot ( groupAllFeats groupGeneralFeats )
+featPreciseShot in ( groupAllFeats groupGeneralFeats )
   .name "precise shot"
   .takeMultiple no
   .conditions ( { .type ptFeat .affectedThing featPointBlankShot } )
@@ -338,7 +338,7 @@ featPreciseShot ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featQuickDraw ( groupAllFeats groupGeneralFeats )
+featQuickDraw in ( groupAllFeats groupGeneralFeats )
   .name "quick draw"
   .takeMultiple no
   .conditions ( { .type ptMinimumBaseAttack .magnitude 1 } )
@@ -346,13 +346,13 @@ featQuickDraw ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featQuickenSpell ( groupAllFeats groupMetaMagicFeats )
+featQuickenSpell in ( groupAllFeats groupMetaMagicFeats )
   .name "quicken spell"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featRapidShot ( groupAllFeats groupGeneralFeats )
+featRapidShot in ( groupAllFeats groupGeneralFeats )
   .name "rapid shot"
   .takeMultiple no
   .conditions ( { .type ptFeat .affectedThing featPointBlankShot }
@@ -361,7 +361,7 @@ featRapidShot ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featRideByAttack ( groupAllFeats groupGeneralFeats )
+featRideByAttack in ( groupAllFeats groupGeneralFeats )
   .name "ride-by attack"
   .takeMultiple no
   .conditions ( { .type ptSkill .affectedThing skillRide }
@@ -369,63 +369,63 @@ featRideByAttack ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featRun ( groupAllFeats groupGeneralFeats )
+featRun in ( groupAllFeats groupGeneralFeats )
   .name "run"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featScribeScroll ( groupAllFeats groupItemCreationFeats )
+featScribeScroll in ( groupAllFeats groupItemCreationFeats )
   .name "scribe scroll"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featShieldProficiency ( groupAllFeats groupGeneralFeats )
+featShieldProficiency in ( groupAllFeats groupGeneralFeats )
   .name "shield proficiency"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featShotOnTherun ( groupAllFeats groupGeneralFeats )
+featShotOnTherun in ( groupAllFeats groupGeneralFeats )
   .name "shot on the run"
   .takeMultiple no
   .specialAttacks ( { .description "may move both before and after a ranged attack" } )
   .sources sourcesCoreRules
 end
 
-featSilentSpell ( groupAllFeats groupGeneralFeats )
+featSilentSpell in ( groupAllFeats groupGeneralFeats )
   .name "silent spell"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featSimpleWeaponProficiency ( groupAllFeats groupGeneralFeats )
+featSimpleWeaponProficiency in ( groupAllFeats groupGeneralFeats )
   .name "simple weapon proficiency"
   .takeMultiple yes
   .sources sourcesCoreRules
 end
 
-featSkillFocus ( groupAllFeats groupGeneralFeats )
+featSkillFocus in ( groupAllFeats groupGeneralFeats )
   .name "skill focus"
   .takeMultiple yes
   .bonuses ( { .type btUnnamed .aspect asSkill .magnitude +2 } )
   .sources sourcesCoreRules
 end
 
-featSpellFocus ( groupAllFeats )
+featSpellFocus in ( groupAllFeats )
   .name "spell focus"
   .takeMultiple yes
   .sources sourcesCoreRules
 end
 
-featSpellPenetration ( groupAllFeats groupGeneralFeats )
+featSpellPenetration in ( groupAllFeats groupGeneralFeats )
   .name "spell penetration"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featSpiritedCharge ( groupAllFeats groupGeneralFeats )
+featSpiritedCharge in ( groupAllFeats groupGeneralFeats )
   .name "spirited charge"
   .takeMultiple no
   .conditions ( { .type ptSkill .affectedThing skillRide }
@@ -434,7 +434,7 @@ featSpiritedCharge ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featSpringAttack ( groupAllFeats groupGeneralFeats )
+featSpringAttack in ( groupAllFeats groupGeneralFeats )
   .name "spring attack"
   .takeMultiple no
   .conditions ( { .type ptMinimumAbilityScore .affectedThing astDexterity .magnitude 13 }
@@ -445,13 +445,13 @@ featSpringAttack ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featStillSpell ( groupAllFeats groupMetaMagicFeats )
+featStillSpell in ( groupAllFeats groupMetaMagicFeats )
   .name "still spell"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featStunningFist ( groupAllFeats groupGeneralFeats )
+featStunningFist in ( groupAllFeats groupGeneralFeats )
   .name "stunning fist"
   .takeMultiple no
   .conditions ( { .type ptMinimumAbilityScore .affectedThing astDexterity .magnitude 13 }
@@ -461,7 +461,7 @@ featStunningFist ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featSunder ( groupAllFeats groupGeneralFeats )
+featSunder in ( groupAllFeats groupGeneralFeats )
   .name "sunder"
   .takeMultiple no
   .conditions ( { .type ptMinimumAbilityScore .affectedThing astStrength .magnitude 13 }
@@ -469,20 +469,20 @@ featSunder ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featToughness ( groupAllFeats groupGeneralFeats )
+featToughness in ( groupAllFeats groupGeneralFeats )
   .name "toughness"
   .takeMultiple yes
   .bonuses ( { .type btUnnamed .aspect asHitPoints .magnitude +3 } )
   .sources sourcesCoreRules
 end
 
-featTrack ( groupAllFeats groupGeneralFeats )
+featTrack in ( groupAllFeats groupGeneralFeats )
   .name "track"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featTrample ( groupAllFeats groupGeneralFeats )
+featTrample in ( groupAllFeats groupGeneralFeats )
   .name "trample"
   .takeMultiple no
   .conditions ( { .type ptSkill .affectedThing skillRide }
@@ -490,13 +490,13 @@ featTrample ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featTwoWeaponFighting ( groupAllFeats groupGeneralFeats )
+featTwoWeaponFighting in ( groupAllFeats groupGeneralFeats )
   .name "two-weapon fighting"
   .takeMultiple no
   .sources sourcesCoreRules
 end
 
-featWeaponFinesse ( groupAllFeats groupGeneralFeats )
+featWeaponFinesse in ( groupAllFeats groupGeneralFeats )
   .name "weapon finesse"
   .takeMultiple yes
   .conditions ( { .type ptWeaponProficiency }
@@ -504,7 +504,7 @@ featWeaponFinesse ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featWeaponFocus ( groupAllFeats groupGeneralFeats )
+featWeaponFocus in ( groupAllFeats groupGeneralFeats )
   .name "weapon focus"
   .takeMultiple yes
   .conditions ( { .type ptWeaponProficiency }
@@ -512,7 +512,7 @@ featWeaponFocus ( groupAllFeats groupGeneralFeats )
   .sources sourcesCoreRules
 end
 
-featWeaponSpecialization ( groupAllFeats )
+featWeaponSpecialization in ( groupAllFeats )
   .name "weapon specialization"
   .takeMultiple yes
   .conditions ( { .type ptWeaponFocus }
@@ -520,7 +520,7 @@ featWeaponSpecialization ( groupAllFeats )
   .sources sourcesCoreRules
 end
 
-featWhirlwindAttack ( groupAllFeats groupGeneralFeats )
+featWhirlwindAttack in ( groupAllFeats groupGeneralFeats )
   .name "whirlwind attack"
   .takeMultiple no
   .conditions ( { .type ptMinimumAbilityScore .affectedThing astIntelligence .magnitude 13 }

@@ -1,4 +1,4 @@
-template ( groupMundaneItems ) { name cost sources }
+template in ( groupMundaneItems ) { name cost sources }
   miAlchemistsFire { "alchemist's fire"  20 gp sourcesCoreRules }
   miAcid { "acid flask(s)"  10 gp sourcesCoreRules }
   miSmokestick { "smokestick(s)"  20 gp sourcesCoreRules }

@@ -1,4 +1,4 @@
-template ( groupAllClasses ) { name sources }
+template in ( groupAllClasses ) { name sources }
   classBarbarian { "barbarian" sourcesCoreRules }
   classBard { "bard" sourcesCoreRules }
   classCleric { "cleric" sourcesCoreRules }

@@ -4,7 +4,7 @@ attribute installArmorAbility       rule
 forward rule rInstallBashingAbility
 forward rule rSelectShieldSpell
 
-template ( groupMagicArmorGeneratorTypes ) { name }
+template in ( groupMagicArmorGeneratorTypes ) { name }
   magtShield     { "shield" }
   magtArmor      { "armor" }
   magtRollAgain  { "roll again" }
@@ -12,7 +12,7 @@ template ( groupMagicArmorGeneratorTypes ) { name }
   magtSpecShield { "specific shield" }
 end
 
-template ( groupMagicArmorSpecialAbilityTypes ) { name }
+template in ( groupMagicArmorSpecialAbilityTypes ) { name }
   masatAny { "any" }
   masatFortification { "fortification" }
   masatSpellResistance { "spell resistance" }
@@ -77,7 +77,7 @@ category groupMajorArmorAndShields
   [37] { .type magtRollAgain }
 end
 
-asaAcidResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+asaAcidResistance in ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .type masatAny
   .name "acid resistance"
   .activationMethod atContinuous
@@ -86,7 +86,7 @@ asaAcidResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaAnimated ( groupShieldSpecialAbilities )
+asaAnimated in ( groupShieldSpecialAbilities )
   .type masatAny
   .name "animated"
   .activationMethod atCommandWord
@@ -95,7 +95,7 @@ asaAnimated ( groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaArrowDeflection ( groupShieldSpecialAbilities )
+asaArrowDeflection in ( groupShieldSpecialAbilities )
   .type masatArrows
   .name "arrow deflection"
   .activationMethod atWill
@@ -104,7 +104,7 @@ asaArrowDeflection ( groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaBashing ( groupShieldSpecialAbilities )
+asaBashing in ( groupShieldSpecialAbilities )
   .type masatAny
   .name "bashing"
   .installArmorAbility rInstallBashingAbility
@@ -114,7 +114,7 @@ asaBashing ( groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaBlinding ( groupShieldSpecialAbilities )
+asaBlinding in ( groupShieldSpecialAbilities )
   .type masatAny
   .name "blinding"
   .activationMethod atCommandWord
@@ -124,7 +124,7 @@ asaBlinding ( groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaColdResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+asaColdResistance in ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .type masatAny
   .name "cold resistance"
   .activationMethod atContinuous
@@ -133,7 +133,7 @@ asaColdResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaEtherealness ( groupArmorSpecialAbilities )
+asaEtherealness in ( groupArmorSpecialAbilities )
   .type masatAny
   .name "etherealness"
   .activationMethod atCommandWord
@@ -142,7 +142,7 @@ asaEtherealness ( groupArmorSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaFireResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+asaFireResistance in ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .type masatAny
   .name "fire resistance"
   .activationMethod atContinuous
@@ -151,7 +151,7 @@ asaFireResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaFortificationLight ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+asaFortificationLight in ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .type masatFortification
   .name "light fortification"
   .specialDefenses ( { .description "25% chance to avoid a critical hit or sneak attack" } )
@@ -159,7 +159,7 @@ asaFortificationLight ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaFortificationModerate ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+asaFortificationModerate in ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .type masatFortification
   .name "moderate fortification"
   .specialDefenses ( { .description "75% chance to avoid a critical hit or sneak attack" } )
@@ -167,7 +167,7 @@ asaFortificationModerate ( groupArmorSpecialAbilities groupShieldSpecialAbilitie
   .sources sourcesCoreRules
 end
 
-asaFortificationHeavy ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+asaFortificationHeavy in ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .type masatFortification
   .name "heavy fortification"
   .specialDefenses ( { .description "immune to critical hits and sneak attacks" } )
@@ -175,7 +175,7 @@ asaFortificationHeavy ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaGhostTouch ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+asaGhostTouch in ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .type masatAny
   .name "ghost touch"
   .specialDefenses ( { .description "armor bonus and enhancement bonus counts vs. attacks from incorporeal creatures" } )
@@ -184,7 +184,7 @@ asaGhostTouch ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaGlamered ( groupArmorSpecialAbilities )
+asaGlamered in ( groupArmorSpecialAbilities )
   .type masatAny
   .name "glamered"
   .activationMethod atCommandWord
@@ -193,7 +193,7 @@ asaGlamered ( groupArmorSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaInvulnerability ( groupArmorSpecialAbilities )
+asaInvulnerability in ( groupArmorSpecialAbilities )
   .type masatAny
   .name "invulnerability"
   .specialDefenses ( { .type satDamageReduction .aspect { .name "+1" } .magnitude 5 } )
@@ -201,7 +201,7 @@ asaInvulnerability ( groupArmorSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaLightningResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+asaLightningResistance in ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .type masatAny
   .name "lightning resistance"
   .activationMethod atContinuous
@@ -210,7 +210,7 @@ asaLightningResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities 
   .sources sourcesCoreRules
 end
 
-asaReflection ( groupShieldSpecialAbilities )
+asaReflection in ( groupShieldSpecialAbilities )
   .type masatAny
   .name "reflection"
   .activationMethod atWill
@@ -219,7 +219,7 @@ asaReflection ( groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaShadow ( groupArmorSpecialAbilities )
+asaShadow in ( groupArmorSpecialAbilities )
   .type masatAny
   .name "shadow"
   .bonuses ( { .type btCircumstance .aspect asSkill .affectedThing skillHide .magnitude +10 } )
@@ -227,7 +227,7 @@ asaShadow ( groupArmorSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaSilentMoves ( groupArmorSpecialAbilities )
+asaSilentMoves in ( groupArmorSpecialAbilities )
   .type masatAny
   .name "silent moves"
   .bonuses ( { .type btCircumstance .aspect asSkill .affectedThing skillMoveSilently .magnitude +10 } )
@@ -235,7 +235,7 @@ asaSilentMoves ( groupArmorSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaSlick ( groupArmorSpecialAbilities )
+asaSlick in ( groupArmorSpecialAbilities )
   .type masatAny
   .name "slick"
   .bonuses ( { .type btCircumstance .aspect asSkill .affectedThing skillEscapeArtist .magnitude +10 } )
@@ -243,7 +243,7 @@ asaSlick ( groupArmorSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaSonicResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+asaSonicResistance in ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .type masatAny
   .name "sonic resistance"
   .activationMethod atContinuous
@@ -252,7 +252,7 @@ asaSonicResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaSpellResistance13 ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+asaSpellResistance13 in ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .type masatSpellResistance
   .name "spell resistance (13)"
   .activationMethod atContinuous
@@ -261,7 +261,7 @@ asaSpellResistance13 ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaSpellResistance15 ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+asaSpellResistance15 in ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .type masatSpellResistance
   .name "spell resistance (15)"
   .activationMethod atContinuous
@@ -270,7 +270,7 @@ asaSpellResistance15 ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaSpellResistance17 ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+asaSpellResistance17 in ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .type masatSpellResistance
   .name "spell resistance (17)"
   .activationMethod atContinuous
@@ -279,7 +279,7 @@ asaSpellResistance17 ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .sources sourcesCoreRules
 end
 
-asaSpellResistance19 ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+asaSpellResistance19 in ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
   .type masatSpellResistance
   .name "spell resistance (19)"
   .activationMethod atContinuous
@@ -383,7 +383,7 @@ category groupMajorShieldSpecialAbilities
   [20] magtRollAgain
 end
 
-astBandedMailOfLuck ( groupSpecificArmors )
+astBandedMailOfLuck in ( groupSpecificArmors )
   .name "banded mail of luck"
   .cost 18900 gp
   .prototype armorBandedMail
@@ -392,7 +392,7 @@ astBandedMailOfLuck ( groupSpecificArmors )
   .sources sourcesCoreRules
 end
 
-astBreastplateOfCommand ( groupSpecificArmors )
+astBreastplateOfCommand in ( groupSpecificArmors )
   .name "breastplate of command"
   .cost 21600 gp
   .prototype breastplate
@@ -404,7 +404,7 @@ astBreastplateOfCommand ( groupSpecificArmors )
   .sources sourcesCoreRules
 end
 
-astCelestialArmor ( groupSpecificArmors )
+astCelestialArmor in ( groupSpecificArmors )
   .name "celestial armor"
   .cost 25300 gp
   .prototype {
@@ -421,7 +421,7 @@ astCelestialArmor ( groupSpecificArmors )
   .sources sourcesCoreRules
 end
 
-astDemonArmor ( groupSpecificArmors )
+astDemonArmor in ( groupSpecificArmors )
   .name "demon armor"
   .cost 41650 gp
   .prototype armorFullPlate
@@ -432,7 +432,7 @@ astDemonArmor ( groupSpecificArmors )
   .sources sourcesCoreRules
 end
 
-astPlateArmorOfTheDeep ( groupSpecificArmors )
+astPlateArmorOfTheDeep in ( groupSpecificArmors )
   .name "plate armor of the deep"
   .cost 16650 gp
   .prototype armorFullPlate
@@ -443,7 +443,7 @@ astPlateArmorOfTheDeep ( groupSpecificArmors )
   .sources sourcesCoreRules
 end
 
-astRhinoHide ( groupSpecificArmors )
+astRhinoHide in ( groupSpecificArmors )
   .name "rhino hide"
   .cost 5165 gp
   .prototype armorHide
@@ -453,7 +453,7 @@ astRhinoHide ( groupSpecificArmors )
   .sources sourcesCoreRules
 end
 
-astAbsorbingShield ( groupSpecificShields )
+astAbsorbingShield in ( groupSpecificShields )
   .name "absorbing shield"
   .cost 50170 gp
   .prototype shieldLargeSteel
@@ -463,7 +463,7 @@ astAbsorbingShield ( groupSpecificShields )
   .sources sourcesCoreRules
 end
 
-astCastersShield ( groupSpecificShields )
+astCastersShield in ( groupSpecificShields )
   .name "caster's shield"
   .cost 3153 gp
   .prototype shieldSmallWooden
@@ -472,7 +472,7 @@ astCastersShield ( groupSpecificShields )
   .sources sourcesCoreRules
 end
 
-astLionsShield ( groupSpecificShields )
+astLionsShield in ( groupSpecificShields )
   .name "lion's shield"
   .cost 9170 gp
   .prototype shieldLargeSteel
@@ -482,7 +482,7 @@ astLionsShield ( groupSpecificShields )
   .sources sourcesCoreRules
 end
 
-astSpinedShield ( groupSpecificShields )
+astSpinedShield in ( groupSpecificShields )
   .name "spined shield"
   .cost 2670 gp
   .prototype shieldLargeSteel
@@ -492,7 +492,7 @@ astSpinedShield ( groupSpecificShields )
   .sources sourcesCoreRules
 end
 
-astWingedShield ( groupSpecificShields )
+astWingedShield in ( groupSpecificShields )
   .name "winged shield"
   .cost 15159 gp
   .prototype shieldLargeWooden

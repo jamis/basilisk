@@ -1,4 +1,4 @@
-template ( groupAllSpellSchools ) { name }
+template in ( groupAllSpellSchools ) { name }
   schAbjuration { "Abjuration" }
   schConjuration { "Conjuration" }
   schDivination { "Divination" }
@@ -10,7 +10,7 @@ template ( groupAllSpellSchools ) { name }
   schUniversal { "Universal" }
 end
 
-template ( groupAllSpellSubschools ) { name }
+template in ( groupAllSpellSubschools ) { name }
   subschCalling { "Calling" }
   subschCharm { "Charm" }
   subschCompulsion { "Compulsion" }
@@ -24,7 +24,7 @@ template ( groupAllSpellSubschools ) { name }
   subschSummoning { "Summoning" }
 end
 
-template ( groupAllDescriptors ) { name }
+template in ( groupAllDescriptors ) { name }
   descAcid { "Acid" }
   descAir { "Air" }
   descChaotic { "Chaotic" }
@@ -48,7 +48,7 @@ template ( groupAllDescriptors ) { name }
   descWater { "Water" }
 end
 
-template ( groupAllSpells ) { name school subschool descriptors sources }
+template in ( groupAllSpells ) { name school subschool descriptors sources }
   spellAcidFog { "Acid Fog" schConjuration subschCreation ( descAcid ) sourcesCoreRules }
   spellAid { "Aid" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
   spellAirWalk { "Air Walk" schTransmutation $ $ sourcesCoreRules }

@@ -1,4 +1,4 @@
-template ( groupPotions ) { name cost sources }
+template in ( groupPotions ) { name cost sources }
   potionJump { "jump"  50 gp sourcesCoreRules }
   potionSpiderClimb { "spider climb"  50 gp sourcesCoreRules }
   potionCureLightWounds { "cure light wounds"  50 gp sourcesCoreRules }

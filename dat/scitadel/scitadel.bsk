@@ -3,19 +3,15 @@
  * by Bruce Cordell.
  * --------------------------------------------------------- */
 
-wondrousAzanGund
+/* the 'shatterspike' is also from sunless citadel, but it exists
+ * in "sword and fist", too.  It is defined in the snfist_items.bsk
+ * file. */
+
+wondrousAzanGund in ( 1:groupMinorWondrousItems )
   .name "azan-gund (\"night caller\")"
   .cost 3000 gp
   .geAlignment geEvil
   .weight 1 lb
   .canBeIntelligent yes
   .sources sourcesSunlessCitadel
-end
-
-/* the 'shatterspike' is also from sunless citadel, but it exists
- * in "sword and fist", too.  It is defined in the snfist_items.bsk
- * file. */
-
-category groupMinorWondrousItems
-  wondrousAzanGund
 end

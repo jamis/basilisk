@@ -2,7 +2,7 @@
 // Bonus Aspects
 // ------------------------------------------------------------------------
 
-template ( groupAspectType ) { name }
+template in ( groupAspectType ) { name }
   asAC      { "ac" }
   asAttack  { "attack" }
   asGrapple { "grapple" }
@@ -36,7 +36,7 @@ end
 // Bonus Types
 // ------------------------------------------------------------------------
 
-template ( groupBonusType ) { name }
+template in ( groupBonusType ) { name }
   btUnnamed      { $ }
   btArmor        { "armor" }
   btShield       { "shield" }

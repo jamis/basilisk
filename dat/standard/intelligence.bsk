@@ -68,7 +68,7 @@ category groupItemAlignments
   [20] { .lcAlignment lcNeutral .geAlignment geNeutral }
 end
 
-template ( groupItemAbilityTypes ) {}
+template in ( groupItemAbilityTypes ) {}
   iatHasSkill {}
   iatGrantsFeat {}
   iatGrantsAbility {}

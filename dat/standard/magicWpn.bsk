@@ -60,7 +60,7 @@ conditionOutdoors
 end
 
 
-template ( groupMagicWeaponGeneratorTypes ) { name }
+template in ( groupMagicWeaponGeneratorTypes ) { name }
   mwgtWeapon    { "weapon" }
   mwgtSpcWeapon { "specific weapon" }
   mwgtRollAgain { "roll again" }

@@ -2,7 +2,7 @@
 // Sub-skill types
 // -------------------------------------------------------------------------
 
-template ( groupPerformSubskills ) { name sources }
+template in ( groupPerformSubskills ) { name sources }
   performBallad       { "ballad" sourcesCoreRules }
   performBuffoonery   { "buffoonery" sourcesCoreRules }
   performChant        { "chant" sourcesCoreRules }
@@ -27,7 +27,7 @@ template ( groupPerformSubskills ) { name sources }
   performTrumpet      { "trumpet" sourcesCoreRules }
 end
 
-template ( groupLanguageSubskills ) { name sources }
+template in ( groupLanguageSubskills ) { name sources }
   languageAbyssal      { "abyssal" sourcesCoreRules }
   languageAquan        { "aquan" sourcesCoreRules }
   languageAuran        { "auran" sourcesCoreRules }
@@ -54,7 +54,7 @@ end
 // Skills
 // -------------------------------------------------------------------------
 
-template ( groupAllSkills ) { name affectedThing untrained ACPenaltyApplies subskills sources }
+template in ( groupAllSkills ) { name affectedThing untrained ACPenaltyApplies subskills sources }
   skillAlchemy { "alchemy"  astIntelligence  no  no  $  sourcesCoreRules }
   skillAnimalEmpathy { "animal empathy"  astCharisma  no  no  $  sourcesCoreRules }
   skillAppraise { "appraise"  astIntelligence  yes  no  $  sourcesCoreRules }
@@ -62,24 +62,24 @@ template ( groupAllSkills ) { name affectedThing untrained ACPenaltyApplies subs
   skillBluff { "bluff" astCharisma yes  no  $  sourcesCoreRules }
   skillClimb { "climb" astStrength yes  yes  $ sourcesCoreRules }
   skillConcentration { "concentration" astConstitution yes  no  $  sourcesCoreRules }
-  skillCraftArmorsmithing ( groupCraft ) { "craft (armorsmithing)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftBasketweaving ( groupCraft ) { "craft (basketweaving)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftBookbinding ( groupCraft ) { "craft (bookbinding)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftBowmaking ( groupCraft ) { "craft (bowmaking)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftBlacksmithing ( groupCraft ) { "craft (blacksmithing)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftBalligraphy ( groupCraft ) { "craft (calligraphy)"  astIntelligence  yes no  $  sourcesCoreRules }
-  skillCraftCarpentry ( groupCraft ) { "craft (carpentry)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftCobbling ( groupCraft ) { "craft (cobbling)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftGemcutting ( groupCraft ) { "craft (gemcutting)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftLeatherworking ( groupCraft ) { "craft (leatherworking)" astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftLocksmithing ( groupCraft ) { "craft (locksmithing)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftPainting ( groupCraft ) { "craft (painting)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftSculpture ( groupCraft ) { "craft (sculpture)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftShipmaking ( groupCraft ) { "craft (shipmaking)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftStonemasonry ( groupCraft ) { "craft (stonemasonry)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftTrapmaking ( groupCraft ) { "craft (trapmaking)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftWeaponsmithing ( groupCraft ) { "craft (weaponsmithing)" astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftWeaving ( groupCraft ) { "craft (weaving)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftArmorsmithing in ( groupCraft ) { "craft (armorsmithing)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftBasketweaving in ( groupCraft ) { "craft (basketweaving)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftBookbinding in ( groupCraft ) { "craft (bookbinding)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftBowmaking in ( groupCraft ) { "craft (bowmaking)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftBlacksmithing in ( groupCraft ) { "craft (blacksmithing)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftBalligraphy in ( groupCraft ) { "craft (calligraphy)"  astIntelligence  yes no  $  sourcesCoreRules }
+  skillCraftCarpentry in ( groupCraft ) { "craft (carpentry)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftCobbling in ( groupCraft ) { "craft (cobbling)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftGemcutting in ( groupCraft ) { "craft (gemcutting)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftLeatherworking in ( groupCraft ) { "craft (leatherworking)" astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftLocksmithing in ( groupCraft ) { "craft (locksmithing)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftPainting in ( groupCraft ) { "craft (painting)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftSculpture in ( groupCraft ) { "craft (sculpture)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftShipmaking in ( groupCraft ) { "craft (shipmaking)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftStonemasonry in ( groupCraft ) { "craft (stonemasonry)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftTrapmaking in ( groupCraft ) { "craft (trapmaking)"  astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftWeaponsmithing in ( groupCraft ) { "craft (weaponsmithing)" astIntelligence  yes  no  $ sourcesCoreRules }
+  skillCraftWeaving in ( groupCraft ) { "craft (weaving)"  astIntelligence  yes  no  $ sourcesCoreRules }
   skillDecipherScript { "decipher script"  astIntelligence  no  no  $ sourcesCoreRules }
   skillDiplomacy { "diplomacy"  astCharisma  yes  no  $ sourcesCoreRules }
   skillDisableDevice { "disable device"  astIntelligence  no  no  $ sourcesCoreRules }
@@ -94,44 +94,44 @@ template ( groupAllSkills ) { name affectedThing untrained ACPenaltyApplies subs
   skillIntimidate { "intimidate"  astCharisma  yes  no  $  sourcesCoreRules }
   skillIntuitDirection { "intuit direction"  astWisdom  no  no  $  sourcesCoreRules }
   skillJump { "jump"  astStrength  yes  yes  $  sourcesCoreRules }
-  skillKnowledgeArcana ( groupKnowledge ) { "knowledge (arcana)"  astIntelligence  no  no  $  sourcesCoreRules }
-  skillKnowledgeReligion ( groupKnowledge ) { "knowledge (religion)"  astIntelligence  no  no  $  sourcesCoreRules }
-  skillKnowledgeNature ( groupKnowledge ) { "knowledge (nature)"  astIntelligence  no  no  $  sourcesCoreRules }
-  skillKnowledgeArchitecture ( groupKnowledge ) { "knowledge (architecture)" intellilence no  no  $  sourcesCoreRules }
-  skillKnowledgeGeography ( groupKnowledge ){ "knowledge (geography)"  astIntelligence  no  no  $  sourcesCoreRules }
-  skillKnowledgeHistory ( groupKnowledge ) { "knowledge (history)"  astIntelligence  no  no  $  sourcesCoreRules }
-  skillKnowledgeLocal ( groupKnowledge ) { "knowledge (local)"  astIntelligence  no  no  $  sourcesCoreRules }
-  skillKnowledgeNobility ( groupKnowledge ) { "knowledge (nobility and royalty)" astIntelligence no no  $   sourcesCoreRules }
-  skillKnowledgePlanes ( groupKnowledge ) { "knowledge (the planes)" astIntelligence  no  no  $  sourcesCoreRules }
+  skillKnowledgeArcana in ( groupKnowledge ) { "knowledge (arcana)"  astIntelligence  no  no  $  sourcesCoreRules }
+  skillKnowledgeReligion in ( groupKnowledge ) { "knowledge (religion)"  astIntelligence  no  no  $  sourcesCoreRules }
+  skillKnowledgeNature in ( groupKnowledge ) { "knowledge (nature)"  astIntelligence  no  no  $  sourcesCoreRules }
+  skillKnowledgeArchitecture in ( groupKnowledge ) { "knowledge (architecture)" intellilence no  no  $  sourcesCoreRules }
+  skillKnowledgeGeography in ( groupKnowledge ){ "knowledge (geography)"  astIntelligence  no  no  $  sourcesCoreRules }
+  skillKnowledgeHistory in ( groupKnowledge ) { "knowledge (history)"  astIntelligence  no  no  $  sourcesCoreRules }
+  skillKnowledgeLocal in ( groupKnowledge ) { "knowledge (local)"  astIntelligence  no  no  $  sourcesCoreRules }
+  skillKnowledgeNobility in ( groupKnowledge ) { "knowledge (nobility and royalty)" astIntelligence no no  $   sourcesCoreRules }
+  skillKnowledgePlanes in ( groupKnowledge ) { "knowledge (the planes)" astIntelligence  no  no  $  sourcesCoreRules }
   skillListen { "listen"  astWisdom  yes  no  $  sourcesCoreRules }
   skillMoveSilently { "move silently"  astDexerity  yes  yes  $  sourcesCoreRules }
   skillOpenLock { "open lock"  astDexerity  yes  no  $  sourcesCoreRules }
   skillPerform { "perform" astCharisma  yes  no  groupPerformSubskills  sourcesCoreRules }
   skillPickPocket { "pick pocket"  astDexerity  yes  no  $  sourcesCoreRules }
-  skillProfessionApothecary ( groupProfession ) { "profession (apothecary)"  astWisdom  no  no  $  sourcesCoreRules }
-  skillProfessionBoater ( groupProfession ) { "profession (boater)" astWisdom no  no  $  sourcesCoreRules }
-  skillProfessionBookkeeper ( groupProfession ) { "profession (bookkeeper)" astWisdom no no  $  sourcesCoreRules }
-  skillProfessionBrewer ( groupProfession ) { "profession (brewer)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionCook ( groupProfession ) { "profession (cook)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionDriver ( groupProfession ) { "profession (driver)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionFarmer ( groupProfession ) { "profession (farmer)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionFisher ( groupProfession ) { "profession (fisher)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionGuide ( groupProfession ) { "profession (guide)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionHerbalist ( groupProfession ) { "profession (herbalist)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionHerdsman ( groupProfession ) { "profession (herdsman)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionInnkeeper ( groupProfession ) { "profession (innkeeper)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionLumberjack ( groupProfession ) { "profession (lumberjack)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionMiller ( groupProfession ) { "profession (miller)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionMiner ( groupProfession ) { "profession (miner)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionPorter ( groupProfession ) { "profession (porter)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionRancher ( groupProfession ) { "profession (rancher)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionSailor ( groupProfession ) { "profession (sailor)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionScribe ( groupProfession ) { "profession (scribe)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionSiegeEngineer ( groupProfession ) { "profession (siege engineer)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionStablehand ( groupProfession ) { "profession (stablehand)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionTanner ( groupProfession ) { "profession (tanner)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionTeamster ( groupProfession ) { "profession (teamster)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionOodcutter ( groupProfession ) { "profession (woodcutter)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionApothecary in ( groupProfession ) { "profession (apothecary)"  astWisdom  no  no  $  sourcesCoreRules }
+  skillProfessionBoater in ( groupProfession ) { "profession (boater)" astWisdom no  no  $  sourcesCoreRules }
+  skillProfessionBookkeeper in ( groupProfession ) { "profession (bookkeeper)" astWisdom no no  $  sourcesCoreRules }
+  skillProfessionBrewer in ( groupProfession ) { "profession (brewer)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionCook in ( groupProfession ) { "profession (cook)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionDriver in ( groupProfession ) { "profession (driver)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionFarmer in ( groupProfession ) { "profession (farmer)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionFisher in ( groupProfession ) { "profession (fisher)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionGuide in ( groupProfession ) { "profession (guide)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionHerbalist in ( groupProfession ) { "profession (herbalist)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionHerdsman in ( groupProfession ) { "profession (herdsman)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionInnkeeper in ( groupProfession ) { "profession (innkeeper)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionLumberjack in ( groupProfession ) { "profession (lumberjack)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionMiller in ( groupProfession ) { "profession (miller)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionMiner in ( groupProfession ) { "profession (miner)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionPorter in ( groupProfession ) { "profession (porter)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionRancher in ( groupProfession ) { "profession (rancher)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionSailor in ( groupProfession ) { "profession (sailor)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionScribe in ( groupProfession ) { "profession (scribe)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionSiegeEngineer in ( groupProfession ) { "profession (siege engineer)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionStablehand in ( groupProfession ) { "profession (stablehand)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionTanner in ( groupProfession ) { "profession (tanner)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionTeamster in ( groupProfession ) { "profession (teamster)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionOodcutter in ( groupProfession ) { "profession (woodcutter)" astWisdom no no $ sourcesCoreRules }
   skillReadLips { "read lips" astIntelligence no no $ sourcesCoreRules }
   skillRide { "ride" astDexerity yes no $ sourcesCoreRules }
   skillScry { "scry" astIntelligence yes no $ sourcesCoreRules }

@@ -1,6 +1,6 @@
 forward thing skillHide
 
-fine ( groupSizes )
+fine in ( groupSizes )
   .name "fine"
   .magnitude 1
   .bonuses ( { .type btSize .aspect asAC .magnitude +8 }
@@ -9,7 +9,7 @@ fine ( groupSizes )
              { .type btSize .aspect asSkill .affectedThing skillHide .magnitude +16 } )
 end
 
-diminutive ( groupSizes )
+diminutive in ( groupSizes )
   .name "diminutive"
   .magnitude 2
   .bonuses ( { .type btSize .aspect asAC .magnitude +4 }
@@ -18,7 +18,7 @@ diminutive ( groupSizes )
              { .type btSize .aspect asSkill .affectedThing skillHide .magnitude +12 } )
 end
 
-tiny ( groupSizes )
+tiny in ( groupSizes )
   .name "tiny"
   .magnitude 3
   .bonuses ( { .type btSize .aspect asAC .magnitude +2 }
@@ -27,7 +27,7 @@ tiny ( groupSizes )
              { .type btSize .aspect asSkill .affectedThing skillHide .magnitude +8 } )
 end
 
-small ( groupSizes )
+small in ( groupSizes )
   .name "small"
   .magnitude 4
   .bonuses ( { .type btSize .aspect asAC .magnitude +1 }
@@ -36,12 +36,12 @@ small ( groupSizes )
              { .type btSize .aspect asSkill .affectedThing skillHide .magnitude +4 } )
 end
 
-medium ( groupSizes ) 
+medium in ( groupSizes ) 
   .name "medium"
   .magnitude 5
 end
 
-large ( groupSizes )
+large in ( groupSizes )
   .name "large"
   .magnitude 6
   .bonuses ( { .type btSize .aspect asAC .magnitude -1 }
@@ -50,7 +50,7 @@ large ( groupSizes )
              { .type btSize .aspect asSkill .affectedThing skillHide .magnitude -4 } )
 end
 
-huge ( groupSizes )
+huge in ( groupSizes )
   .name "huge"
   .magnitude 7
   .bonuses ( { .type btSize .aspect asAC .magnitude -2 }
@@ -59,7 +59,7 @@ huge ( groupSizes )
              { .type btSize .aspect asSkill .affectedThing skillHide .magnitude -8 } )
 end
 
-gargantuan ( groupSizes )
+gargantuan in ( groupSizes )
   .name "gargantuan"
   .magnitude 8
   .bonuses ( { .type btSize .aspect asAC .magnitude -4 }
@@ -68,7 +68,7 @@ gargantuan ( groupSizes )
              { .type btSize .aspect asSkill .affectedThing skillHide .magnitude -12 } )
 end
 
-colossal ( groupSizes )
+colossal in ( groupSizes )
   .name "colossal"
   .magnitude 9
   .bonuses ( { .type btSize .aspect asAC .magnitude -8 }

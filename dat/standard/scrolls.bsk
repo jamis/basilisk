@@ -2,7 +2,7 @@ attribute spellsPerMinorScroll number
 attribute spellsPerMediumScroll number
 attribute spellsPerMajorScroll number
 
-optsScrollSettings ( groupAllOptions )
+optsScrollSettings in ( groupAllOptions )
   .name "scroll settings"
 
   .spellsPerMinorScroll  1d3

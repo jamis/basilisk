@@ -14,7 +14,7 @@
  *  9) wondrous items
  * ------------------------------------------------------------------------ */
 
-template ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
+template in ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
   weapon2BallBolas { "2-ball bolas" 5 gp 1d4 20 2 2 lb small sourcesSwordAndFist }
   weaponAlchemistsArrow { "alchemist's arrow" 75 gp $ $ $ 1/5 lb tiny sourcesSwordAndFist }
   weaponBladedGauntlet { "bladed gauntlet" 30 gp 1d6 17 2 4 lb small sourcesSwordAndFist }

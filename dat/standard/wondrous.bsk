@@ -2288,7 +2288,7 @@ category groupRobesOfTheArchmagi
   [25] wondrousBlackRobeOfTheArchmagi
 end
 
-template ( groupDeckOfCards ) { name }
+template in ( groupDeckOfCards ) { name }
   aceOfHearts { "ace of hearts" }
   kingOfHearts { "king of hearts" }
   queenOfHearts { "queen of hearts" }

@@ -1,5 +1,5 @@
-template ( groupAllSources ) { name }
-  sourceCoreRules      ( sourcesCoreRules )      { "Core Rules" }
-  sourceSwordAndFist   ( sourcesSwordAndFist )   { "Sword and Fist" }
-  sourceSunlessCitadel ( sourcesSunlessCitadel ) { "Sunless Citadel, The" }
+template in ( groupAllSources ) { name }
+  sourceCoreRules      in ( sourcesCoreRules )      { "Core Rules" }
+  sourceSwordAndFist   in ( sourcesSwordAndFist )   { "Sword and Fist" }
+  sourceSunlessCitadel in ( sourcesSunlessCitadel ) { "Sunless Citadel, The" }
 end

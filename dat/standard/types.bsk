@@ -1,4 +1,4 @@
-template ( groupAttributeTypes ) { name }
+template in ( groupAttributeTypes ) { name }
   atString { "string" }
   atNumber { "number" }
   atBoolean { "boolean" }
@@ -8,7 +8,7 @@ template ( groupAttributeTypes ) { name }
 end
 
 
-template ( groupAbilityScoreTypes ) { name }
+template in ( groupAbilityScoreTypes ) { name }
   astStrength { "strength" }
   astDexterity { "dexterity" }
   astConstitution { "constitution" }
@@ -18,34 +18,34 @@ template ( groupAbilityScoreTypes ) { name }
 end
 
 
-template ( groupSavingThrowTypes ) { name affectedThing }
+template in ( groupSavingThrowTypes ) { name affectedThing }
   sttFortitude { "fortitude" astConstitution }
   sttReflex { "reflex" astDexterity }
   sttWill { "will" astWisdom }
 end
 
 
-template ( groupGEAlignmentTypes ) { name }
+template in ( groupGEAlignmentTypes ) { name }
   geGood { "good" }
   geNeutral { "neutral" }
   geEvil { "evil" }
 end
 
 
-template ( groupLCAlignmentTypes ) { name }
+template in ( groupLCAlignmentTypes ) { name }
   lcLawful { "lawful" }
   lcNeutral { "neutral" }
   lcChaotic { "chaotic" }
 end
 
 
-template ( groupGenders ) { name }
+template in ( groupGenders ) { name }
   genderMale { "male" }
   genderFemale { "female" }
 end
 
 
-template ( groupElementTypes ) { name }
+template in ( groupElementTypes ) { name }
   etFire { "fire" }
   etCold { "cold" }
   etElectricity { "electricity" }
@@ -54,7 +54,7 @@ template ( groupElementTypes ) { name }
 end
 
 
-template ( groupSpecialAttributeTypes ) { name }
+template in ( groupSpecialAttributeTypes ) { name }
   satSpellEffect { "spell effect" }
   satDamageReduction { "damage reduction" }
   satRegeneration { "regeneration" }
@@ -62,7 +62,7 @@ template ( groupSpecialAttributeTypes ) { name }
 end
 
 
-template ( groupActivationTypes ) { name }
+template in ( groupActivationTypes ) { name }
   atSpellCompletion { "spell completion" }
   atSpellTrigger { "spell trigger" }
   atCommandWord { "command word" }
@@ -72,7 +72,7 @@ template ( groupActivationTypes ) { name }
 end
 
 
-template ( groupPrerequisiteTypes ) { name }
+template in ( groupPrerequisiteTypes ) { name }
   ptMinimumAbilityScore { "minimum ability score" }
   ptFeat { "feat" }
   ptSkill { "skill" }
@@ -87,7 +87,7 @@ template ( groupPrerequisiteTypes ) { name }
 end
 
 
-template ( groupMonsterTypes ) { name }
+template in ( groupMonsterTypes ) { name }
   mtAberration { "aberration" }
   mtAnimal { "animal" }
   mtBeast { "beast" }
@@ -108,7 +108,7 @@ template ( groupMonsterTypes ) { name }
 end
 
 
-template ( groupHumanoidSubtypes ) { name }
+template in ( groupHumanoidSubtypes ) { name }
   hstAquatic { "aquatic humanoid" }
   hstDwarf { "dwarf" }
   hstElf { "elf" }
@@ -121,7 +121,7 @@ template ( groupHumanoidSubtypes ) { name }
 end
 
 
-template ( groupOutsiderSubtypes ) { name lcAlignment geAlignment }
+template in ( groupOutsiderSubtypes ) { name lcAlignment geAlignment }
   ostChaotic { "chaotic outsider" lcChaotic $ }
   ostEvil { "evil outsider" $ geEvil }
   ostGood { "good outsider" $ geGood }
@@ -129,14 +129,14 @@ template ( groupOutsiderSubtypes ) { name lcAlignment geAlignment }
 end
 
 
-template ( groupConditionTypes ) { name }
+template in ( groupConditionTypes ) { name }
   ctIsRace { "is of race" }
   ctIsClass { "is of class" }
   ctIsAlignment { "is of alignment" }
 end
 
 
-template ( groupSpaceType ) { name }
+template in ( groupSpaceType ) { name }
   gstCap { "cap" }
   gstEyes { "eyes" }
   gstCloak { "cloak" }
