@@ -604,7 +604,7 @@ rule rAddItemToHoard( hoard item )
   hoard.cost = hoard.cost + item.cost;
 	valid = true;
 
-  if item.type ne "gem" or item.type ne "art" then
+  if item.type eq "mundane" or item.type eq "coin" then
 		i = SearchCategory( hoard.contents, "name", item.name );
 		if i ne null then
 		  valid = false;
@@ -1074,7 +1074,7 @@ rule rGenerateTreasureByItemType( itemCount magnitudes itemTypes options )
             rAddItemToHoard( hoard, largestSeen );
           end
 
-          // if we can't meet the maximum cost, then (if asked to) fill the
+          // if we can't meet the minimum cost, then (if asked to) fill the
           // difference with coins.
           
     		  if hoard.cost lt minCost and rSafeGet( options, "optFillDifferenceWithCoins", false ) then
