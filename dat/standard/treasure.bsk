@@ -853,6 +853,7 @@ rule rGenerateItemsByEncounterLevel( level hoard pct options )
         end
         if valid then
           tries = 0;
+					v.cost = ConvertUnits( v.cost, "gp" );
           rAddItemToHoard( hoard, v );
         end
       end
