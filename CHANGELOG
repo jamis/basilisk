@@ -1,39 +1,40 @@
-version 2.0.b3
-  Added accessor methods as macros to nearly all modules.
-  bskparse.c
-    Added search paths to the #include functionality.
-  bskthing.c
-    Fixed memory leak in BSKDuplicateThing (was not invalidating
-      the temporary value)
-
-2 Feb 2001
-version 2.0.b2
-  Added "copy all" and "clear console" to the edit menu, and the
-    context menu for the console.
-  No coins were showing up for EL 1 treasures -- fixed.
-  Made console a separate (and resizable) window
-  Added parameters for treasure generation (max value, min value,
-    fill with coins)
-  Displayed treasure parameters in console
-  Allow percentages of coins, goods, items in treasures by EL.
-  bskctgry.c
-    BSKRemoveFromCategory:
-      when the tail element of a category was removed, the 'tail' member
-        field was not being set to the next-to-last element in the category.
-    BSKRemoveAllFromCategory:
-      was not setting the 'tail' field to 0.
-  Added name generation (grammar.bsk, names.bsk, etc.)
-  cursed.bsk
-    fixed items recieving curses inappropriate to their type
-    added random names to curses (rCursesRandomName)
-    added random creatures to curses (groupRandomCreatures)
-  potions.bsk
-    fixed misspelling ('edurance' -> 'endurance')
-  utilities.bsk
-    added rItemDeservesCurse rule to determine when an item gets a curse.
-  weapons.bsk:
-    fixed misspelling ('short swort' -> 'short sword')
-
-31 Jan 2001
-version 2.0.b1
+version 1.01
+	Added "library" target to Makefile for making a dynamic-loading basilisk
+	  library.
+	Changed names of 4 callback functions in bskcallback.c:
+		myConsole -> BSKDefaultConsole
+		myRTEHandler -> BSKDefaultRuntimeErrorHandler
+		myErrorHandler -> BSKDefaultParseErrorHandler
+		printStackTrace -> BSKPrintStackTrace
+	Added a FILE* parameter to BSKPrintStackTrace.
+	Added a new type to bskcallback.h (BSKCallbackData) which should be
+		passed as the "userData" parameter to BSKExec and BSKParse
+		whenever one of the "default" callbacks are used.
+	Changes bskcompile.c, bskrun.c, and bsktreasure.c to use the new
+		callback functions.
+	Modified script.bnf to reflect the new preferred syntax for specifying
+		parent categories for entities (using the "in" keyword).
+	Modified all data files to use the new preferred syntax for specifying
+		parent categories for entities (using the "in" keyword).
+	Alphabetized deity list in deities.bsk.
+	Replaced gems.bsk with data from Spencer Cooley (MUCH more detail).
+	Modified rings.bsk, wands.bsk, and staves.bsk to compute item cost
+		proportionally to the number of charges remaining in the item.
+	Modified dff.html to include documentation for new preferred syntax
+		for specifying parent categories for entities (using the "in"
+		keyword).
+	Modified tutorial1.html to use new preferred syntax for specifying
+		parent categories for entities (using the "in" keyword).
+	Added a new tutorial (tutorial2.html) -- "Adding Data, Part 2"
+	Modified bsktokens.h, bsklexer.c, bskparse.c to handle new
+		preferred syntax for specifying parent categories for entities
+		(using the "in" keyword).
+	Modified BSKGetMemberByIndex in bskctgry.c to be clearer.
+	Fixed bug in bskexec.c (in the "WeightOf" built-in function) where
+		the parameters were being swapped.
+	Increased maximum string length in bsklexer.c from 256 to 4095 to
+		accomodate larger strings in basilisk files.
+	
+14 Feb 2001
+version 1.0
   Initial release
