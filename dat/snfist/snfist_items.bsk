@@ -426,7 +426,7 @@ wstShatterspike
 end
 
 wstShurikenOfTremendousShock
-  .name "shurikens of tremendous shock (3)"
+  .name "set(s) of 3 shurikens of tremendous shock"
   .prototype weaponShuriken
   .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
              { .type btEnhancement .aspect asDamage .magnitude +1 } )
