@@ -124,6 +124,10 @@ BSKI32 doRuleExec( BSKDatabase* db,
   BSKBOOL halt;
   BSKValue *rval;
   BSKValue temp;
+	BSKCallbackData cbdata;
+
+	cbdata.consoleOut = stdout;
+	cbdata.errorOut = stderr;
 
   rval = ( retVal != 0 ? retVal : &temp );
 
@@ -132,9 +136,9 @@ BSKI32 doRuleExec( BSKDatabase* db,
   opts.parameterCount = parmCount;
   opts.parameters = parameters;
   opts.rval = rval;
-  opts.errorHandler = myRTEHandler;
+  opts.errorHandler = BSKDefaultRuntimeErrorHandler;
   opts.console = formattedConsole;
-  opts.userData = 0;
+  opts.userData = &cbdata;
 
   halt = BSKFALSE;
   opts.halt = &halt;
@@ -518,6 +522,7 @@ int main( int argc, char* argv[] ) {
   BSKBOOL isCompiled;
   BSKUI32 start;
   BSKUI32 end;
+	BSKCallbackData cbdata;
 
   if( argc < 4 ) {
     usage();
@@ -574,12 +579,15 @@ int main( int argc, char* argv[] ) {
   }
 
   if( !isCompiled ) {
+		cbdata.consoleOut = stdout;
+		cbdata.errorOut = stderr;
+
     db = BSKNewDatabase();
     rc = BSKParse( stream,
                    db,
                    SEARCH_PATHS,
-                   myErrorHandler,
-                   0 );
+                   BSKDefaultParseErrorHandler,
+                   &cbdata );
   } else {
     db = BSKSerializeDatabaseIn( stream );
     rc = ( db == 0 );
