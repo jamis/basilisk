@@ -637,14 +637,14 @@ rule rSelectMagicArmor( armorMagnitude options )
       end
     end
 
-    newItem = rGetAnyMatchingCriteria( c, options );
+    newItem = rGetAnyMatchingCriteria( c, options, true );
 		if newItem eq null then
 		  exit rule;
 		end
 		newItem = rNewInstanceOf( newItem );
   else
     if i.type eq magtArmor then
-      proto = rGetAnyMatchingCriteria( groupRandomArmorType, options );
+      proto = rGetAnyMatchingCriteria( groupRandomArmorType, options, true );
       case armorMagnitude
         is "minor" then
           c = groupMinorArmorSpecialAbilities;
@@ -654,7 +654,7 @@ rule rSelectMagicArmor( armorMagnitude options )
           c = groupMajorArmorSpecialAbilities;
       end
     elseif i.type eq magtShield then
-      proto = rGetAnyMatchingCriteria( groupRandomShieldType, options );
+      proto = rGetAnyMatchingCriteria( groupRandomShieldType, options, true );
       case armorMagnitude
         is "minor" then
           c = groupMinorShieldSpecialAbilities;
