@@ -67,7 +67,7 @@ template in ( groupAllSkills ) { name affectedThing untrained ACPenaltyApplies s
   skillCraftBookbinding in ( groupCraft ) { "craft (bookbinding)"  astIntelligence  yes  no  $ sourcesCoreRules }
   skillCraftBowmaking in ( groupCraft ) { "craft (bowmaking)"  astIntelligence  yes  no  $ sourcesCoreRules }
   skillCraftBlacksmithing in ( groupCraft ) { "craft (blacksmithing)"  astIntelligence  yes  no  $ sourcesCoreRules }
-  skillCraftBalligraphy in ( groupCraft ) { "craft (calligraphy)"  astIntelligence  yes no  $  sourcesCoreRules }
+  skillCraftCalligraphy in ( groupCraft ) { "craft (calligraphy)"  astIntelligence  yes no  $  sourcesCoreRules }
   skillCraftCarpentry in ( groupCraft ) { "craft (carpentry)"  astIntelligence  yes  no  $ sourcesCoreRules }
   skillCraftCobbling in ( groupCraft ) { "craft (cobbling)"  astIntelligence  yes  no  $ sourcesCoreRules }
   skillCraftGemcutting in ( groupCraft ) { "craft (gemcutting)"  astIntelligence  yes  no  $ sourcesCoreRules }
@@ -131,7 +131,7 @@ template in ( groupAllSkills ) { name affectedThing untrained ACPenaltyApplies s
   skillProfessionStablehand in ( groupProfession ) { "profession (stablehand)" astWisdom no no $ sourcesCoreRules }
   skillProfessionTanner in ( groupProfession ) { "profession (tanner)" astWisdom no no $ sourcesCoreRules }
   skillProfessionTeamster in ( groupProfession ) { "profession (teamster)" astWisdom no no $ sourcesCoreRules }
-  skillProfessionOodcutter in ( groupProfession ) { "profession (woodcutter)" astWisdom no no $ sourcesCoreRules }
+  skillProfessionWoodcutter in ( groupProfession ) { "profession (woodcutter)" astWisdom no no $ sourcesCoreRules }
   skillReadLips { "read lips" astIntelligence no no $ sourcesCoreRules }
   skillRide { "ride" astDexerity yes no $ sourcesCoreRules }
   skillScry { "scry" astIntelligence yes no $ sourcesCoreRules }
