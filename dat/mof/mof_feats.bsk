@@ -1,0 +1,53 @@
+featAttuneGem in ( groupAllFeats groupItemCreationFeats )
+  .name "attune gem"
+  .takeMultiple no
+  .sources sourcesMagicOfFaerun
+end
+
+featAugmentSummoning in ( groupAllFeats groupGeneralFeats )
+  .name "augment summoning"
+  .takeMultiple no
+  .sources sourcesMagicOfFaerun
+end
+
+featEnergySubstitution in ( groupAllFeats groupMetamagicFeats )
+  .name "energy substitution"
+  .takeMultiple no
+  .sources sourcesMagicOfFaerun
+end
+
+featEschewMaterials in ( groupAllFeats groupMetamagicFeats )
+  .name "eschew materials"
+  .takeMultiple no
+  .sources sourcesMagicOfFaerun
+end
+
+featReactiveCounterspell in ( groupAllFeats groupGeneralFeats )
+  .name "reactive counterspell"
+  .takeMultiple no
+  .sources sourcesMagicOfFaerun
+end
+
+featSpellGirding in ( groupAllFeats groupGeneralFeats )
+  .name "spell girding"
+  .takeMultiple no
+  .sources sourcesMagicOfFaerun
+end
+
+featSpellThematics in ( groupAllFeats groupGeneralFeats )
+  .name "spell thematics"
+  .takeMultiple no
+  .sources sourcesMagicOfFaerun
+end
+
+featSpellfireWielder in ( groupAllFeats groupGeneralFeats )
+  .name "spellfire wielder"
+  .takeMultiple no
+  .sources sourcesMagicOfFaerun
+end
+
+featWidenSpell in ( groupAllFeats groupMetamagicFeats )
+  .name "widen spell"
+  .takeMultiple no
+  .sources sourcesMagicOfFaerun
+end

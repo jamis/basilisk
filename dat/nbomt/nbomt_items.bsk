@@ -18,6 +18,62 @@
 
 /* armor special abilities */
 
+asaLifekeeper in ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatAny
+  .name "lifekeeper"
+  .activationMethod atContinuous
+  .marketPriceArmorModifier +2
+  .sources sourcesNboMTDnDCC
+end
+
+asaDivineArmor in ( groupArmorSpecialAbilities )
+  .type masatAny
+  .name "divine"
+  .activationMethod atContinuous
+  .marketPriceArmorModifier +2
+  .sources sourcesNboMTDnDCC
+end
+
+asaPositiveChargeL in ( groupArmorSpecialAbilities )
+  .type masatAny
+  .name "positive charge (light)"
+  .activationMethod atContinuous
+  .marketPriceArmorModifier +1
+  .sources sourcesNboMTDnDCC
+end
+
+asaPositiveChargeM in ( groupArmorSpecialAbilities )
+  .type masatAny
+  .name "positive charge (medium)"
+  .activationMethod atContinuous
+  .marketPriceArmorModifier +3
+  .sources sourcesNboMTDnDCC
+end
+
+asaPositiveChargeH in ( groupArmorSpecialAbilities )
+  .type masatAny
+  .name "positive charge (heavy)"
+  .activationMethod atContinuous
+  .marketPriceArmorModifier +5
+  .sources sourcesNboMTDnDCC
+end
+
+category groupMinorArmorSpecialAbilities
+  [22] asaPositiveChargeL
+end
+
+
+category groupMediumArmorSpecialAbilities
+  [10] asaDivineArmor
+  [10] asaLifekeeper
+  [22] asaPositiveChargeL
+  [ 5] asaPositiveChargeM
+end
+
+category groupMajorArmorSpecialAbilities
+  [ 2] asaPositiveChargeH
+end
+
 
 /* specific armor */
 
@@ -55,29 +111,42 @@ astShieldofShelter ( groupSpecificArmors )
   .sources sourcesNboMTDnDCC
 end
 
+astShieldofEffigies ( groupSpecificArmors )
+  .name "austere shield of effigies "
+  .prototype shieldSmallSteel
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +2 } )
+  .cost 37000gp
+  .sources sourcesNboMTDnDCC
+end
+
+astDivineArmorFaithful ( groupSpecificArmors )
+  .name "divine armor of the faithful"
+  .prototype shieldFullPlate
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +3 } )
+  .cost 34250gp
+  .sources sourcesNboMTDnDCC
+end
+
 category groupMediumSpecificArmors
   [10] astArmorofDefiance
   [10] astShiftingArmor
   [10] astShieldofShelter
+  [10] astDivineArmorFaithful
+  [10] astShieldofEffigies
 end
 
 category groupMajorSpecificArmors
-  [25] astShieldofShelter
-  [25] astArmorofDefiance
-  [25] astShiftingArmor
+  [20] astShieldofShelter
+  [20] astArmorofDefiance
+  [20] astShiftingArmor
+  [20] astDivineArmorFaithful
+  [20] astShieldofEffigies
   [10] astBlackArmor
 end
 
 
 /* weapon special abilities */
 
-
-wsaNight
-  .name "night"
-  .installWeaponAbility rInstallNightAbility
-  .marketPriceWeaponModifier +2
-  .sources sourcesNboMTDnDCC
-end
 
 rule rInstallNightAbility( item ability )
   if not Exists( groupSlashingWeapon, item.prototype ) and Exists( groupPiercingWeapon, item.prototype ) then
@@ -87,19 +156,27 @@ rule rInstallNightAbility( item ability )
   rInstallNightAbility = ability;
 end
 
-wsaPlagueBlade
-  .name "plague blade"
-  .installWeaponAbility rInstallPlagueBladeAbility
-  .marketPriceWeaponModifier +4
-  .sources sourcesNboMTDnDCC
-end
-
 rule rInstallPlagueBladeAbility( item ability )
   if not Exists( groupSlashingWeapon, item.prototype ) and Exists( groupPiercingWeapon, item.prototype ) then
     exit rule;
   end
 
   rInstallPlagueBladeAbility = ability;
+end
+
+
+wsaNight
+  .name "night"
+  .installWeaponAbility rInstallNightAbility
+  .marketPriceWeaponModifier +2
+  .sources sourcesNboMTDnDCC
+end
+
+wsaPlagueBlade
+  .name "plague blade"
+  .installWeaponAbility rInstallPlagueBladeAbility
+  .marketPriceWeaponModifier +4
+  .sources sourcesNboMTDnDCC
 end
 
 category groupMeleeWeaponMinorSpecialAbilities
@@ -165,17 +242,28 @@ wstSwordofFieryThirst
   .sources sourcesNboMTDnDCC
 end
 
+wstSwordofRage
+  .name "sword of rage"
+  .prototype weaponGreatsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 32350 gp
+  .sources sourcesNboMTDnDCC
+end
+
 category groupMediumSpecificWeapons
   [20] wstAcidBolts
   [20] wstParalyzingBolts
   [10] wstCrossbowofPain
   [10] wstSwordofFieryThirst
+  [10] wstSwordofRage
 end
 
 category groupMajorSpecificWeapons
-  [ 5] wstCrossbowofPain
-  [ 5] wstSwordofFieryThirst
+  [10] wstCrossbowofPain
+  [10] wstSwordofFieryThirst
   [ 5] wstPickoftheHalfling
+  [10] wstSwordofRage
 end
 
 /* potions */
@@ -206,6 +294,12 @@ ringWilting ( groupRings )
   .sources sourcesNboMTDnDCC
 end
 
+ringBandPurity ( groupRings )
+  .name "band of purity"
+  .cost 48825 gp
+  .sources sourcesNboMTDnDCC
+end
+
 category groupRingsMinor
   [10] ringDivineFate
   [ 5] ringWilting
@@ -214,6 +308,12 @@ end
 category groupRingsMedium
   [10] ringDivineFate
   [10] ringWilting
+end
+
+category groupRingsMajor
+  [10] ringDivineFate
+  [10] ringWilting
+  [ 5] ringBandPurity
 end
 
 
@@ -230,8 +330,38 @@ rodPunishment
     .sources sourcesNboMTDnDCC
 end
 
+
+rodHand
+  .name "the hand"
+  .cost 40400 gp
+  .specialAttacks ( { .type satSpellEffect .spell spellBigsbySInterposingHand .description "spell function"  .frequency 2 .period 1 day }
+                    { .description "rod becomes a +2 light mace" } ) 
+		     
+    .sources sourcesNboMTDnDCC
+end
+
+
+rodDragonScepterCopBlue
+  .name "dragon scepter (copper & blue)"
+  .cost 101200 gp
+  .sources sourcesNboMTDnDCC
+end
+
+rodDragonScepterSilvRed
+  .name "dragon scepter (silver & red)"
+  .cost 97600 gp
+  .sources sourcesNboMTDnDCC
+end
+
+category groupMediumRods
+  [5]  rodHand
+end
+
 category groupMajorRods
+  [10] rodHand
   [ 5] rodPunishment
+  [ 5] rodDragonScepterCopBlue
+  [ 5] rodDragonScepterSilvRed
 end
 
 /* staffs */
@@ -276,6 +406,153 @@ end
 
 /* wondrous items */
 
+wondrousAmuletOfHealing1
+  .name "amulet of healing (light wounds 1/day)"
+  .cost 360 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousAmuletOfHealing2
+  .name "amulet of healing (light wounds 2/day)"
+  .cost 2160 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousAmuletOfHealing3
+  .name "amulet of healing (light wounds 3/day)"
+  .cost 3240 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousAmuletOfHealing4
+  .name "amulet of healing (moderate wounds 1/day)"
+  .cost 2160 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousAmuletOfHealing5
+  .name "amulet of healing (moderate wounds 2/day)"
+  .cost 4320 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousAmuletOfHealing6
+  .name "amulet of healing (moderate wounds 3/day)"
+  .cost 6480 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousAmuletOfHealing7
+  .name "amulet of healing (serious wounds 1/day)"
+  .cost 5400 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousAmuletOfHealing8
+  .name "amulet of healing (serious wounds 2/day)"
+  .cost 10800 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousAmuletOfHealing9
+  .name "amulet of healing (serious wounds 3/day)"
+  .cost 16200 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousAmuletOfHealing10
+  .name "amulet of healing (critical wounds 1/day)"
+  .cost 10080 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousAmuletOfHealing11
+  .name "amulet of healing (critical wounds 2/day)"
+  .cost 20160 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousAmuletOfHealing12
+  .name "amulet of healing (critical wounds 3/day)"
+  .cost 30240 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousAmuletOfHealing13
+  .name "amulet of healing (healing circle 1/day)"
+  .cost 16200 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousAmuletOfHealing14
+  .name "amulet of healing (heal 1/day)"
+  .cost 23760 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousArcaneBattleRobes
+  .name "arcane battle robes"
+  .cost 108500 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousBandFerociousness
+  .name "band of ferociousness"
+  .cost 34500 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousBasinSea
+  .name "basin of the sea"
+  .cost 39000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousBindingBandage
+  .name "binding bandage"
+  .cost 1200 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousBracersOfShuriken1
+  .name "bracers of shuriken launching +1"
+  .cost 5000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousBracersOfShuriken2
+  .name "bracers of shuriken launching +2"
+  .cost 12000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousBracersOfShuriken3
+  .name "bracers of shuriken launching +3"
+  .cost 22000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
 wondrousBuskinsOfBruteForce
   .name "buskins of brute force"
   .cost 14000 gp
@@ -297,6 +574,13 @@ wondrousCloakofHastur
   .sources sourcesNboMTDnDCC
 end
 
+wondrousCloakoftheWoodlands
+  .name "cloak of the woodlands"
+  .cost 2160 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
 wondrousCofferofMending
   .name "coffer of mending"
   .cost 1000 gp
@@ -304,9 +588,16 @@ wondrousCofferofMending
   .sources sourcesNboMTDnDCC
 end
 
-wondrousXionsColorGloves
-  .name "xions color-gloves"
-  .cost 4000 gp
+wondrousCollarAlertness
+  .name "collar of alertness"
+  .cost 3000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousCubeofIce
+  .name "cube of ice"
+  .cost 360 gp
   .canBeIntelligent true
   .sources sourcesNboMTDnDCC
 end
@@ -325,6 +616,34 @@ wondrousEyesofTerror
   .sources sourcesNboMTDnDCC
 end
 
+wondrousFredsKnowledge
+  .name "fred's glasses of knowledge"
+  .cost 4000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousFredsStone
+  .name "fred's glasses of stone"
+  .cost 132000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousFloatCloak
+  .name "float cloak"
+  .cost 6000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousFloatCloakFly
+  .name "float cloak (fly)"
+  .cost 12000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
 wondrousGlovesofWoundTransfer
   .name "gloves of wound transfer"
   .cost 10700 gp
@@ -335,6 +654,41 @@ end
 wondrousHelmoftheNight
   .name "helm of the night"
   .cost 6400 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousHelmofTrapSearching1
+  .name "helm of trap searching +5"
+  .cost 7000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousHelmofTrapSearching2
+  .name "helm of trap searching +10"
+  .cost 10000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousHelmofTrapSearching3
+  .name "helm of trap searching +15"
+  .cost 15000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousHelmofTrapSearching4
+  .name "helm of trap searching +20"
+  .cost 22000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousHelperStone
+  .name "helper stone"
+  .cost 2700 gp
   .canBeIntelligent true
   .sources sourcesNboMTDnDCC
 end
@@ -367,6 +721,27 @@ wondrousMovingPictures2
   .sources sourcesNboMTDnDCC
 end
 
+wondrousMuzzleTerror
+  .name "muzzle of terror"
+  .cost 56000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousNaleesMagicCover
+  .name "nalee's magic cover of replication"
+  .cost 90000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousNailsOfShrew
+  .name "nails of the shrew"
+  .cost 58000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
 wondrousNeverEmptyCanteen
   .name "never empty canteen"
   .cost 500 gp
@@ -381,6 +756,13 @@ wondrousPebbleofDoom
   .sources sourcesNboMTDnDCC
 end
 
+wondrousPelletsofSmokeyDisappearance
+  .name "pellets of smokey disappearance"
+  .cost 1250 gp
+  .canBeIntelligent false
+  .sources sourcesNboMTDnDCC
+end
+
 wondrousPouchoftheSilkWorm
   .name "pouch of the silk worm"
   .cost 1200 gp
@@ -388,16 +770,9 @@ wondrousPouchoftheSilkWorm
   .sources sourcesNboMTDnDCC
 end
 
-wondrousSpadeofDigging
-  .name "spade of digging"
-  .cost 7560 gp
-  .canBeIntelligent true
-  .sources sourcesNboMTDnDCC
-end
-
-wondrousTwinJournals
-  .name "twin journals"
-  .cost 17000 gp
+wondrousStrobeStones
+  .name "rasta's strobe stones"
+  .cost 1500 gp
   .canBeIntelligent true
   .sources sourcesNboMTDnDCC
 end
@@ -409,9 +784,81 @@ wondrousScabbardOfPoisedResponse
   .sources sourcesNboMTDnDCC
 end
 
-wondrousCloakoftheWoodlands
-  .name "cloak of the woodlands"
-  .cost 2160 gp
+wondrousShoreofTuning
+  .name "shore of tuning"
+  .cost 8000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousSpadeofDigging
+  .name "spade of digging"
+  .cost 7560 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousSpiderDust
+  .name "spider dust"
+  .cost 50 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousStevesHotPlate
+  .name "steve's hot-plate"
+  .cost 5400 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousStevesSpinning
+  .name "steve's spinning plate"
+  .cost 6000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousTreeAcorn
+  .name "tree acorn"
+  .cost 300 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousTwinJournals
+  .name "twin journals"
+  .cost 17000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousViperFlute
+  .name "viper flute"
+  .cost 12000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousXionsColorGloves
+  .name "xions color-gloves"
+  .cost 4000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+/*Cursed*/
+
+wondrousAbominableArmor
+  .name "abominable armor (cursed)"
+  .cost 5325 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousFastidiousKerchief
+  .name "fastidious kerchief (cursed)"
+  .cost 29700 gp
   .canBeIntelligent true
   .sources sourcesNboMTDnDCC
 end
@@ -437,13 +884,6 @@ wondrousVestmentofDiminishing
   .sources sourcesNboMTDnDCC
 end
 
-wondrousAbominableArmor
-  .name "abominable armor (cursed)"
-  .cost 5325 gp
-  .canBeIntelligent true
-  .sources sourcesNboMTDnDCC
-end
-
 wondrousZymoticMantle
   .name "zymotic mantle (cursed)"
   .cost 8000 gp
@@ -451,35 +891,24 @@ wondrousZymoticMantle
   .sources sourcesNboMTDnDCC
 end
 
-wondrousStrobeStones
-  .name "rasta's strobe stones"
-  .cost 1500 gp
-  .canBeIntelligent true
-  .sources sourcesNboMTDnDCC
-end
 
-wondrousShoreofTuning
-  .name "shore of tuning"
-  .cost 8000 gp
-  .canBeIntelligent true
-  .sources sourcesNboMTDnDCC
-end
-
-wondrousNaleesMagicCover
-  .name "nalee's magic cover of replication"
-  .cost 90000 gp
-  .canBeIntelligent true
-  .sources sourcesNboMTDnDCC
-end
-
-wondrousNailsOfShrew
-  .name "nails of the shrew"
-  .cost 58000 gp
-  .canBeIntelligent true
-  .sources sourcesNboMTDnDCC
-end
 
 category groupMinorWondrousItems
+ [ 1] wondrousAmuletOfHealing1
+ [ 1] wondrousAmuletOfHealing2
+ [ 1] wondrousAmuletOfHealing3
+ [ 1] wondrousAmuletOfHealing4
+ [ 1] wondrousAmuletOfHealing5
+ [ 1] wondrousAmuletOfHealing6
+ [ 1] wondrousAmuletOfHealing7
+ [ 2] wondrousBracersOfShuriken1
+ [ 2] wondrousBindingBandage
+ [ 2] wondrousCollarAlertness
+ [ 2] wondrousCubeofIce
+ [ 2] wondrousHelmofTrapSearching1
+ [ 2] wondrousHelperStone
+ [ 2] wondrousFredsKnowledge
+ [ 2] wondrousPelletsofSmokeyDisappearance
  [ 2] wondrousVestmentofDiminishing
  [ 2] wondrousAbominableArmor
  [ 2] wondrousStrobeStones
@@ -487,6 +916,11 @@ category groupMinorWondrousItems
  [ 2] wondrousCloakoftheWoodlands
  [ 2] wondrousPouchoftheSilkWorm
  [ 2] wondrousSpadeofDigging
+ [ 2] wondrousSpiderDust
+ [ 2] wondrousStevesHotPlate
+ [ 2] wondrousStevesSpinning
+ [ 2] wondrousTreeAcorn
+ [ 2] wondrousViperFlute
  [ 2] wondrousNeverEmptyCanteen
  [ 2] wondrousMovingPictures1
  [ 2] wondrousHelmoftheNight
@@ -494,9 +928,26 @@ category groupMinorWondrousItems
  [ 2] wondrousXionsColorGloves
  [ 2] wondrousCofferofMending
  [ 2] wondrousLuckyUnderwear
+ [ 2] wondrousViperFlute
 end
 
 category groupMediumWondrousItems
+ [ 1] wondrousAmuletOfHealing8
+ [ 1] wondrousAmuletOfHealing9
+ [ 1] wondrousAmuletOfHealing10
+ [ 1] wondrousAmuletOfHealing11
+ [ 1] wondrousAmuletOfHealing12
+ [ 1] wondrousAmuletOfHealing13
+ [ 1] wondrousAmuletOfHealing14
+ [ 2] wondrousBracersOfShuriken2
+ [ 2] wondrousBracersOfShuriken3
+ [ 2] wondrousBandFerociousness
+ [ 2] wondrousFloatCloak
+ [ 2] wondrousFloatCloakFly
+ [ 2] wondrousHelmofTrapSearching2
+ [ 2] wondrousHelmofTrapSearching3
+ [ 2] wondrousHelmofTrapSearching4
+ [ 2] wondrousFastidiousKerchief
  [ 2] wondrousGogglesofNightmares
  [ 2] wondrousScrollofDisjunction
  [ 2] wondrousNailsOfShrew
@@ -515,4 +966,8 @@ end
 
 category groupMajorWondrousItems
  [ 4] wondrousNaleesMagicCover
+ [ 4] wondrousArcaneBattleRobes
+ [ 4] wondrousBasinSea
+ [ 4] wondrousFredsStone
+ [ 4] wondrousMuzzleTerror
 end

@@ -1,0 +1,1879 @@
+/* data submitted by Spencer "the Sigil" Cooley */
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellAganazzarsScorcher { "Aganazzar's Scorcher" schEvocation $ ( descFire ) sourcesFRCS }
+  spellAnalyzePortal { "Analyze Portal" schDivination $ $ sourcesFRCS }
+  spellAnyspell { "Anyspell" schTransmutation $ $ sourcesFRCS }
+  spellArmorofDarkness { "Armor of Darkness" schAbjuration $ ( descDarkness ) sourcesFRCS }
+  spellBlacklight { "Blacklight" schEvocation $ ( descDarkness ) sourcesFRCS }
+  spellClawsOfDarkness { "Claws Of Darkness" schIllusion subschShadow $ sourcesFRCS }
+  spellCloakOfDarkPower { "Cloak Of Dark Power" schAbjuration $ $ sourcesFRCS }
+  spellCreateMagicTattoo { "Create Magic Tattoo" schConjuration subschCreation $ sourcesFRCS }
+  spellDarkbolt { "Darkbolt" schEvocation $ ( descDarkness ) sourcesFRCS }
+  spellEaglesSplendor { "Eagle's Splendor" schTransmutation $ $ sourcesFRCS }
+  spellElminstersEvasion { "Elminster's Evasion" schEvocation $ $ sourcesFRCS }
+  spellFantasticMachine { "Fantastic Machine" schIllusion subschShadow $ sourcesFRCS }
+  spellFireStride { "Fire Stride" schTransmutation $ ( descTeleportation ) sourcesFRCS }
+  spellFlashburst { "Flashburst" schEvocation $ ( descFire ) sourcesFRCS }
+  spellFlensing { "Flensing" schEvocation $ $ sourcesFRCS }
+  spellGateSeal { "Gate Seal" schAbjuration $ $ sourcesFRCS }
+  spellGembomb { "Gembomb" schConjuration subschCreation ( descForce ) sourcesFRCS }
+  spellGreatShout { "Great Shout" schEvocation $ ( descSonic ) sourcesFRCS }
+  spellGreaterAnyspell { "Greater Anyspell" schTransmutation $ $ sourcesFRCS }
+  spellGreaterFantasticMachine { "Greater Fantastic Machine" schIllusion subschShadow $ sourcesFRCS }
+  spellGrimwaldsGreymantle { "Grimwald's Greymantle" schNecromancy $ $ sourcesFRCS }
+  spellLesserIronguard { "Lesser Ironguard" schAbjuration $ $ sourcesFRCS }
+  spellMaelstrom { "Maelstrom" schConjuration subschCreation $ sourcesFRCS }
+  spellMawofStone { "Maw of Stone" schTransmutation $ $ sourcesFRCS }
+  spellMoonBlade { "Moon Blade" schEvocation $ $ sourcesFRCS }
+  spellMoonPath { "Moon Path" schEvocation $ ( descForce ) sourcesFRCS }
+  spellMoonbeam { "Moonbeam" schEvocation $ ( descLight ) sourcesFRCS }
+  spellMoonfire { "Moonfire" schEvocation $ ( descLight ) sourcesFRCS }
+  spellScatterspray { "Scatterspray" schTransmutation $ $ sourcesFRCS }
+  spellShadowMask { "Shadow Mask" schIllusion subschShadow $ sourcesFRCS }
+  spellShadowSpray { "Shadow Spray" schIllusion subschShadow $ sourcesFRCS }
+  spellSnillocsSnowballSwarm { "Snilloc's Snowball Swarm" schEvocation $ ( descCold ) sourcesFRCS }
+  spellSpiderCurse { "Spider Curse" schTransmutation $ ( descMindAffecting) sourcesFRCS }
+  spellSpiderShapes { "Spider Shapes" schTransmutation $ $ sourcesFRCS }
+  spellSpiderform { "Spiderform" schTransmutation $ $ sourcesFRCS }
+  spellStoneSpiders { "Stone Spiders" schTransmutation $ $ sourcesFRCS }
+  spellThunderlance { "Thunderlance" schEvocation $ ( descForce ) sourcesFRCS }
+  spellWaterspout { "Waterspout" schConjuration subschCreation $ sourcesFRCS }
+end
+
+category groupSpellsBardL2
+  spellEaglesSplendor
+end
+
+category groupSpellsBardL3
+  spellAnalyzePortal
+end
+
+category groupSpellsBardL6
+  spellGateSeal
+end
+
+category groupSpellsCavernL1
+  spellDetectSecretDoors
+end
+
+category groupSpellsCavernL2
+  spellDarkness
+end
+
+category groupSpellsCavernL3
+  spellMeldIntoStone
+end
+
+category groupSpellsCavernL4
+  spellLeomundsSecureShelter
+end
+
+category groupSpellsCavernL5
+  spellPasswall
+end
+
+category groupSpellsCavernL6
+  spellFindThePath
+end
+
+category groupSpellsCavernL7
+  spellMawOfStone
+end
+
+category groupSpellsCavernL8
+  spellEarthquake
+end
+
+category groupSpellsCavernL9
+  spellImprisonment
+end
+
+category groupSpellsCavern
+  null
+  groupSpellsCavernL1
+  groupSpellsCavernL2
+  groupSpellsCavernL3
+  groupSpellsCavernL4
+  groupSpellsCavernL5
+  groupSpellsCavernL6
+  groupSpellsCavernL7
+  groupSpellsCavernL8
+  groupSpellsCavernL9
+end
+
+category groupSpellsCharmL1
+  spellCharmPerson
+end
+
+category groupSpellsCharmL2
+  spellCalmEmotions
+end
+
+category groupSpellsCharmL3
+  spellSuggestion
+end
+
+category groupSpellsCharmL4
+  spellEmotion
+end
+category groupSpellsCharmL5
+  spellCharmMonster
+end
+
+category groupSpellsCharmL6
+  spellGeasQuest
+end
+
+category groupSpellsCharmL7
+  spellInsanity
+end
+
+category groupSpellsCharmL8
+  spellDemand
+end
+
+category groupSpellsCharmL9
+  spellDominateMonster
+end
+
+category groupSpellsCharm
+  null
+  groupSpellsCharmL1
+  groupSpellsCharmL2
+  groupSpellsCharmL3
+  groupSpellsCharmL4
+  groupSpellsCharmL5
+  groupSpellsCharmL6
+  groupSpellsCharmL7
+  groupSpellsCharmL8
+  groupSpellsCharmL9
+end
+
+category groupSpellsClericL6
+  spellGateSeal
+end
+
+category groupSpellsCraftL1
+  spellAnimateRope
+end
+
+category groupSpellsCraftL2
+  spellWoodShape
+end
+
+category groupSpellsCraftL3
+  spellStoneShape
+end
+
+category groupSpellsCraftL4
+  spellMinorCreation
+end
+category groupSpellsCraftL5
+  spellWallOfStone
+end
+
+category groupSpellsCraftL6
+  spellFantasticMachine
+end
+
+category groupSpellsCraftL7
+  spellMajorCreation
+end
+
+category groupSpellsCraftL8
+  spellForcecage
+end
+
+category groupSpellsCraftL9
+  spellGreaterFantasticMachine
+end
+
+category groupSpellsCraft
+  null
+  groupSpellsCraftL1
+  groupSpellsCraftL2
+  groupSpellsCraftL3
+  groupSpellsCraftL4
+  groupSpellsCraftL5
+  groupSpellsCraftL6
+  groupSpellsCraftL7
+  groupSpellsCraftL8
+  groupSpellsCraftL9
+end
+
+category groupSpellsDarknessL1
+  spellObscuringMist
+end
+
+category groupSpellsDarknessL2
+  spellBlindnessDeafness
+end
+
+category groupSpellsDarknessL3
+  spellBlacklight
+end
+
+category groupSpellsDarknessL4
+  spellArmorOfDarkness
+end
+
+category groupSpellsDarknessL5
+  spellDarkbolt
+end
+
+category groupSpellsDarknessL6
+  spellPryingEyes
+end
+
+category groupSpellsDarknessL7
+  spellNightmare
+end
+
+category groupSpellsDarknessL8
+  spellPowerWordBlind
+end
+
+category groupSpellsDarknessL9
+  spellPowerWordKill
+end
+
+category groupSpellsDarkness
+  null
+  groupSpellsDarknessL1
+  groupSpellsDarknessL2
+  groupSpellsDarknessL3
+  groupSpellsDarknessL4
+  groupSpellsDarknessL5
+  groupSpellsDarknessL6
+  groupSpellsDarknessL7
+  groupSpellsDarknessL8
+  groupSpellsDarknessL9
+end
+
+category groupSpellsDrowL1
+  spellCloakOfDarkPower
+end
+
+category groupSpellsDrowL2
+  spellClairaudienceClairvoyance
+end
+
+category groupSpellsDrowL3
+  spellSuggestion
+end
+
+category groupSpellsDrowL4
+  spellDiscernLies
+end
+
+category groupSpellsDrowL5
+  spellSpiderform
+end
+
+category groupSpellsDrowL6
+  spellGreaterDispelling
+end
+
+category groupSpellsDrowL7
+  spellWordOfChaos
+end
+
+category groupSpellsDrowL8
+  spellGreaterPlanarAlly
+end
+
+category groupSpellsDrowL9
+  spellGate
+end
+
+category groupSpellsDrow
+  null
+  groupSpellsDrowL1
+  groupSpellsDrowL2
+  groupSpellsDrowL3
+  groupSpellsDrowL4
+  groupSpellsDrowL5
+  groupSpellsDrowL6
+  groupSpellsDrowL7
+  groupSpellsDrowL8
+  groupSpellsDrowL9
+end
+
+category groupSpellsDruidL6
+  spellGateSeal
+end
+
+category groupSpellsDwarfL1
+  spellMagicWeapon
+end
+
+category groupSpellsDwarfL2
+  spellEndurance
+end
+
+category groupSpellsDwarfL3
+  spellGlyphOfWarding
+end
+
+category groupSpellsDwarfL4
+  spellGreaterMagicWeapon
+end
+
+category groupSpellsDwarfL5
+  spellFabricate
+end
+
+category groupSpellsDwarfL6
+  spellStoneTell
+end
+
+category groupSpellsDwarfL7
+  spellDictum
+end
+
+category groupSpellsDwarfL8
+  spellProtectionFromSpells
+end
+
+category groupSpellsDwarfL9
+  spellElementalSwarm
+end
+
+category groupSpellsDwarf
+  null
+  groupSpellsDwarfL1
+  groupSpellsDwarfL2
+  groupSpellsDwarfL3
+  groupSpellsDwarfL4
+  groupSpellsDwarfL5
+  groupSpellsDwarfL6
+  groupSpellsDwarfL7
+  groupSpellsDwarfL8
+  groupSpellsDwarfL9
+end
+
+category groupSpellsElfL1
+  spellTrueStrike
+end
+
+category groupSpellsElfL2
+  spellCatsGrace
+end
+
+category groupSpellsElfL3
+  spellSnare
+end
+
+category groupSpellsElfL4
+  spellTreeStride
+end
+
+category groupSpellsElfL5
+  spellCommuneWithNature
+end
+
+category groupSpellsElfL6
+  spellFindThePath
+end
+
+category groupSpellsElfL7
+  spellLiveoak
+end
+
+category groupSpellsElfL8
+  spellSunburst
+end
+
+category groupSpellsElfL9
+  spellAntipathy
+end
+
+category groupSpellsElf
+  null
+  groupSpellsElfL1
+  groupSpellsElfL2
+  groupSpellsElfL3
+  groupSpellsElfL4
+  groupSpellsElfL5
+  groupSpellsElfL6
+  groupSpellsElfL7
+  groupSpellsElfL8
+  groupSpellsElfL9
+end
+
+category groupSpellsFamilyL1
+  spellBless
+end
+
+category groupSpellsFamilyL2
+  spellShieldOther
+end
+
+category groupSpellsFamilyL3
+  spellHelpingHand
+end
+
+category groupSpellsFamilyL4
+  spellImbueWithSpellAbility
+end
+
+category groupSpellsFamilyL5
+  spellRarysTelepathicBond
+end
+
+category groupSpellsFamilyL6
+  spellHeroesFeast
+end
+
+category groupSpellsFamilyL7
+  spellRefuge
+end
+
+category groupSpellsFamilyL8
+  spellProtectionFromSpells
+end
+
+category groupSpellsFamilyL9
+  spellPrismaticSphere
+end
+
+category groupSpellsFamily
+  null
+  groupSpellsFamilyL1
+  groupSpellsFamilyL2
+  groupSpellsFamilyL3
+  groupSpellsFamilyL4
+  groupSpellsFamilyL5
+  groupSpellsFamilyL6
+  groupSpellsFamilyL7
+  groupSpellsFamilyL8
+  groupSpellsFamilyL9
+end
+
+category groupSpellsFateL1
+  spellTrueStrike
+end
+
+category groupSpellsFateL2
+  spellAugury
+end
+
+category groupSpellsFateL3
+  spellBestowCurse
+end
+
+category groupSpellsFateL4
+  spellStatus
+end
+
+category groupSpellsFateL5
+  spellMarkOfJustice
+end
+
+category groupSpellsFateL6
+  spellGeasQuest
+end
+
+category groupSpellsFateL7
+  spellVision
+end
+
+category groupSpellsFateL8
+  spellMindBlank
+end
+
+category groupSpellsFateL9
+  spellForesight
+end
+
+category groupSpellsFate
+  null
+  groupSpellsFateL1
+  groupSpellsFateL2
+  groupSpellsFateL3
+  groupSpellsFateL4
+  groupSpellsFateL5
+  groupSpellsFateL6
+  groupSpellsFateL7
+  groupSpellsFateL8
+  groupSpellsFateL9
+end
+
+category groupSpellsGnomeL1
+  spellSilentImage
+end
+
+category groupSpellsGnomeL2
+  spellGembomb
+end
+
+category groupSpellsGnomeL3
+  spellMinorimage
+end
+
+category groupSpellsGnomeL4
+  spellMinorCreation
+end
+
+category groupSpellsGnomeL5
+  spellHallucinatoryTerrain
+end
+
+category groupSpellsGnomeL6
+  spellFantasticMachine
+end
+
+category groupSpellsGnomeL7
+  spellScreen
+end
+
+category groupSpellsGnomeL8
+  spellOttosIrresistibleDance
+end
+
+category groupSpellsGnome
+  null
+  groupSpellsGnomeL1
+  groupSpellsGnomeL2
+  groupSpellsGnomeL3
+  groupSpellsGnomeL4
+  groupSpellsGnomeL5
+  groupSpellsGnomeL6
+  groupSpellsGnomeL7
+  groupSpellsGnomeL8
+end
+
+category groupSpellsHalflingL1
+  spellMagicStone
+end
+
+category groupSpellsHalflingL2
+  spellCatsGrace
+end
+
+category groupSpellsHalflingL3
+  spellMagicVestment
+end
+
+category groupSpellsHalflingL4
+  spellFreedomOfMovement
+end
+
+category groupSpellsHalflingL5
+  spellMordenkainensFaithfulHound
+end
+
+category groupSpellsHalflingL6
+  spellMoveEarth
+end
+
+category groupSpellsHalflingL7
+  spellShadowWalk
+end
+
+category groupSpellsHalflingL8
+  spellWordOfRecall
+end
+
+category groupSpellsHalflingL9
+  spellForesight
+end
+
+category groupSpellsHalfling
+  null
+  groupSpellsHalflingL1
+  groupSpellsHalflingL2
+  groupSpellsHalflingL3
+  groupSpellsHalflingL4
+  groupSpellsHalflingL5
+  groupSpellsHalflingL6
+  groupSpellsHalflingL7
+  groupSpellsHalflingL8
+  groupSpellsHalflingL9
+end
+
+category groupSpellsHarperL1
+  spellChangeSelf
+  spellCharmPerson
+  spellComprehendLanguages
+  spellErase
+  spellFeatherFall
+  spellJump
+  spellLight
+  spellMessage
+  spellMount
+  spellReadMagic
+  spellScatterspray
+  spellSleep
+  spellSpiderClimb
+end
+
+category groupSpellsHarperL2
+  spellCatsGrace
+  spellDarkvision
+  spellDetectThoughts
+  spellEaglesSplendor
+  spellInvisibility
+  spellKnock
+  spellLocateObject
+  spellMagicMouth
+  spellMisdirection
+  spellSeeInvisibility
+  spellShadowMask
+end
+
+category groupSpellsHarperL3
+  spellClairaudienceClairvoyance
+  spellNondetection
+  spellSuggestion
+  spellTongues
+  spellUndetectableAlignment
+end
+
+category groupSpellsHarper
+  null
+  groupSpellsHarperL1
+  groupSpellsHarperL2
+  groupSpellsHarperL3
+end
+
+category groupSpellsHathranL1
+  spellScatterspray
+end
+
+category groupSpellsHathranL2
+  spellMoonbeam
+end
+
+category groupSpellsHathranL3
+  spellFlashburst
+  spellMoonBlade
+end
+
+category groupSpellsHathranL5
+  spellMoonPath
+end
+
+category groupSpellsHathran
+  null
+  groupSpellsHathranL1
+  groupSpellsHathranL2
+  groupSpellsHathranL3
+  null
+  groupSpellsHathranL5
+end
+
+category groupSpellsHatredL1
+  spellDoom
+end
+
+category groupSpellsHatredL2
+  spellScare
+end
+
+category groupSpellsHatredL3
+  spellBestowCurse
+end
+
+category groupSpellsHatredL4
+  spellEmotion
+end
+
+category groupSpellsHatredL5
+  spellRighteousMight
+end
+
+category groupSpellsHatredL6
+  spellForbiddance
+end
+
+category groupSpellsHatredL7
+  spellBlasphemy
+end
+
+category groupSpellsHatredL8
+  spellAntipathy
+end
+
+category groupSpellsHatredL9
+  spellWailOfTheBanshee
+end
+
+category groupSpellsHatred
+  null
+  groupSpellsHatredL1
+  groupSpellsHatredL2
+  groupSpellsHatredL3
+  groupSpellsHatredL4
+  groupSpellsHatredL5
+  groupSpellsHatredL6
+  groupSpellsHatredL7
+  groupSpellsHatredL8
+  groupSpellsHatredL9
+end
+
+category groupSpellsIllusionL1
+  spellSilentImage
+end
+
+category groupSpellsIllusionL2
+  spellMinorImage
+end
+
+category groupSpellsIllusionL3
+  spellDisplacement
+end
+
+category groupSpellsIllusionL4
+  spellPhantasmalKiller
+end
+
+category groupSpellsIllusionL5
+  spellPersistentImage
+end
+
+category groupSpellsIllusionL6
+  spellMislead
+end
+
+category groupSpellsIllusionL7
+  spellProjectImage
+end
+
+category groupSpellsIllusionL8
+  spellScreen
+end
+
+category groupSpellsIllusionL9
+  spellWeird
+end
+
+category groupSpellsIllusion
+  null
+  groupSpellsIllusionL1
+  groupSpellsIllusionL2
+  groupSpellsIllusionL3
+  groupSpellsIllusionL4
+  groupSpellsIllusionL5
+  groupSpellsIllusionL6
+  groupSpellsIllusionL7
+  groupSpellsIllusionL8
+  groupSpellsIllusionL9
+end
+
+category groupSpellsMentalismL1
+  spellRandomAction
+end
+
+category groupSpellsMentalismL2
+  spellDetectThoughts
+end
+
+category groupSpellsMentalismL3
+  spellClairaudienceClairvoyance
+end
+
+category groupSpellsMentalismL4
+  spellModifyMemory
+end
+
+category groupSpellsMentalismL5
+  spellMindFog
+end
+
+category groupSpellsMentalismL6
+  spellRarysTelepathicBond
+end
+
+category groupSpellsMentalismL7
+  spellAntipathy
+end
+
+category groupSpellsMentalismL8
+  spellMindBlank
+end
+
+category groupSpellsMentalismL9
+  spellAstralProjection
+end
+
+category groupSpellsMentalism
+  null
+  groupSpellsMentalismL1
+  groupSpellsMentalismL2
+  groupSpellsMentalismL3
+  groupSpellsMentalismL4
+  groupSpellsMentalismL5
+  groupSpellsMentalismL6
+  groupSpellsMentalismL7
+  groupSpellsMentalismL8
+  groupSpellsMentalismL9
+end
+
+category groupSpellsMetalL1
+  spellMagicWeapon
+end
+
+category groupSpellsMetalL2
+  spellHeatMetal
+end
+
+category groupSpellsMetalL3
+  spellKeenEdge
+end
+
+category groupSpellsMetalL4
+  spellRustingGrasp
+end
+
+category groupSpellsMetalL5
+  spellWallOfIron
+end
+
+category groupSpellsMetalL6
+  spellBladeBarrier
+end
+
+category groupSpellsMetalL7
+  spellTransmuteMetalToWood
+end
+
+category groupSpellsMetalL8
+  spellIronBody
+end
+
+category groupSpellsMetalL9
+  spellRepelMetalOrStone
+end
+
+category groupSpellsMetal
+  null
+  groupSpellsMetalL1
+  groupSpellsMetalL2
+  groupSpellsMetalL3
+  groupSpellsMetalL4
+  groupSpellsMetalL5
+  groupSpellsMetalL6
+  groupSpellsMetalL7
+  groupSpellsMetalL8
+  groupSpellsMetalL9
+end
+
+category groupSpellsMoonL1
+  spellFaerieFire
+end
+
+category groupSpellsMoonL2
+  spellMoonbeam
+end
+
+category groupSpellsMoonL3
+  spellMoonBlade
+end
+
+category groupSpellsMoonL4
+  spellEmotion
+end
+
+category groupSpellsMoonL5
+  spellMoonPath
+end
+
+category groupSpellsMoonL6
+  spellPermanentImage
+end
+
+category groupSpellsMoonL7
+  spellInsanity
+end
+
+category groupSpellsMoonL8
+  spellAnimalShapes
+end
+
+category groupSpellsMoonL9
+  spellMoonfire
+end
+
+category groupSpellsMoon
+  null
+  groupSpellsMoonL1
+  groupSpellsMoonL2
+  groupSpellsMoonL3
+  groupSpellsMoonL4
+  groupSpellsMoonL5
+  groupSpellsMoonL6
+  groupSpellsMoonL7
+  groupSpellsMoonL8
+  groupSpellsMoonL9
+end
+
+category groupSpellsNobilityL1
+  spellDivineFavor
+end
+
+category groupSpellsNobilityL2
+  spellEnthrall
+end
+
+category groupSpellsNobilityL3
+  spellMagicVestment
+end
+
+category groupSpellsNobilityL4
+  spellDiscernLies
+end
+
+category groupSpellsNobilityL5
+  spellGreaterCommand
+end
+
+category groupSpellsNobilityL6
+  spellGeasQuest
+end
+
+category groupSpellsNobilityL7
+  spellRepulsion
+end
+
+category groupSpellsNobilityL8
+  spellDemand
+end
+
+category groupSpellsNobilityL9
+  spellStormOfVengeance
+end
+
+category groupSpellsNobility
+  null
+  groupSpellsNobilityL1
+  groupSpellsNobilityL2
+  groupSpellsNobilityL3
+  groupSpellsNobilityL4
+  groupSpellsNobilityL5
+  groupSpellsNobilityL6
+  groupSpellsNobilityL7
+  groupSpellsNobilityL8
+  groupSpellsNobilityL9
+end
+
+category groupSpellsOceanL1
+  spellEndureElements
+end
+
+category groupSpellsOceanL2
+  spellSoundBurst
+end
+
+category groupSpellsOceanL3
+  spellWaterBreathing
+end
+
+category groupSpellsOceanL4
+  spellFreedomOfMovement
+end
+
+category groupSpellsOceanL5
+  spellWallOfIce
+end
+
+category groupSpellsOceanL6
+  spellOtilukesFreezingSphere
+end
+
+category groupSpellsOceanL7
+  spellWaterspout
+end
+
+category groupSpellsOceanL8
+  spellMaelstrom
+end
+
+category groupSpellsOceanL9
+  spellElementalSwarm
+end
+
+category groupSpellsOcean
+  null
+  groupSpellsOceanL1
+  groupSpellsOceanL2
+  groupSpellsOceanL3
+  groupSpellsOceanL4
+  groupSpellsOceanL5
+  groupSpellsOceanL6
+  groupSpellsOceanL7
+  groupSpellsOceanL8
+  groupSpellsOceanL9
+end
+
+category groupSpellsOrcL1
+  spellCauseFear
+end
+
+category groupSpellsOrcL2
+  spellProduceFlame
+end
+
+category groupSpellsOrcL3
+  spellPrayer
+end
+
+category groupSpellsOrcL4
+  spellDivinePower
+end
+
+category groupSpellsOrcL5
+  spellPryingEyes
+end
+
+category groupSpellsOrcL6
+  spellEyebite
+end
+
+category groupSpellsOrcL7
+  spellBlasphemy
+end
+
+category groupSpellsOrcL8
+  spellCloakOfChaos
+end
+
+category groupSpellsOrcL9
+  spellPowerWordKill
+end
+
+category groupSpellsOrc
+  null
+  groupSpellsOrcL1
+  groupSpellsOrcL2
+  groupSpellsOrcL3
+  groupSpellsOrcL4
+  groupSpellsOrcL5
+  groupSpellsOrcL6
+  groupSpellsOrcL7
+  groupSpellsOrcL8
+  groupSpellsOrcL9
+end
+
+category groupSpellsPlanningL1
+  spellDeathwatch
+end
+
+category groupSpellsPlanningL2
+  spellAugury
+end
+
+category groupSpellsPlanningL3
+  spellClairaudienceClairvoyance
+end
+
+category groupSpellsPlanningL4
+  spellStatus
+end
+
+category groupSpellsPlanningL5
+  spellDetectScrying
+end
+
+category groupSpellsPlanningL6
+  spellHeroesFeast
+end
+
+category groupSpellsPlanningL7
+  spellGreaterScrying
+end
+
+category groupSpellsPlanningL8
+  spellDiscernLocation
+end
+
+category groupSpellsPlanningL9
+  spellTimestop
+end
+
+category groupSpellsPlanning
+  null
+  groupSpellsPlanningL1
+  groupSpellsPlanningL2
+  groupSpellsPlanningL3
+  groupSpellsPlanningL4
+  groupSpellsPlanningL5
+  groupSpellsPlanningL6
+  groupSpellsPlanningL7
+  groupSpellsPlanningL8
+  groupSpellsPlanningL9
+end
+
+category groupSpellsPortalL1
+  spellSummonMonsterI
+end
+
+category groupSpellsPortalL2
+  spellAnalyzePortal
+end
+
+category groupSpellsPortalL3
+  spellDimensionalAnchor
+end
+
+category groupSpellsPortalL4
+  spellDimensionDoor
+end
+
+category groupSpellsPortalL5
+  spellTeleport
+end
+
+category groupSpellsPortalL6
+  spellBanishment
+end
+
+category groupSpellsPortalL7
+  spellEtherealness
+end
+
+category groupSpellsPortalL8
+  spellMaze
+end
+
+category groupSpellsPortalL9
+  spellGate
+end
+
+category groupSpellsPortal
+  null
+  groupSpellsPortalL1
+  groupSpellsPortalL2
+  groupSpellsPortalL3
+  groupSpellsPortalL4
+  groupSpellsPortalL5
+  groupSpellsPortalL6
+  groupSpellsPortalL7
+  groupSpellsPortalL8
+  groupSpellsPortalL9
+end
+
+category groupSpellsRenewalL1
+  spellCharmPerson
+end
+
+category groupSpellsRenewalL2
+  spellLesserRestoration
+end
+
+category groupSpellsRenewalL3
+  spellRemoveDisease
+end
+
+category groupSpellsRenewalL4
+  spellReincarnate
+end
+
+category groupSpellsRenewalL5
+  spellAtonement
+end
+
+category groupSpellsRenewalL6
+  spellHeroesFeast
+end
+
+category groupSpellsRenewalL7
+  spellGreaterRestoration
+end
+
+category groupSpellsRenewalL8
+  spellPolymorphAnyObject
+end
+
+category groupSpellsRenewalL9
+  spellFreedom
+end
+
+category groupSpellsRenewal
+  null
+  groupSpellsRenewalL1
+  groupSpellsRenewalL2
+  groupSpellsRenewalL3
+  groupSpellsRenewalL4
+  groupSpellsRenewalL5
+  groupSpellsRenewalL6
+  groupSpellsRenewalL7
+  groupSpellsRenewalL8
+  groupSpellsRenewalL9
+end
+
+category groupSpellsRetributionL1
+  spellShieldOfFaith
+end
+
+category groupSpellsRetributionL2
+  spellEndurance
+end
+
+category groupSpellsRetributionL3
+  spellSpeakWithDead
+end
+
+category groupSpellsRetributionL4
+  spellFireShield
+end
+
+category groupSpellsRetributionL5
+  spellMarkOfJustice
+end
+
+category groupSpellsRetributionL6
+  spellBanishment
+end
+
+category groupSpellsRetributionL7
+  spellSpellTurning
+end
+
+category groupSpellsRetributionL8
+  spellDiscernLocation
+end
+
+category groupSpellsRetributionL9
+  spellStormOfVengeance
+end
+
+category groupSpellsRetribution
+  null
+  groupSpellsRetributionL1
+  groupSpellsRetributionL2
+  groupSpellsRetributionL3
+  groupSpellsRetributionL4
+  groupSpellsRetributionL5
+  groupSpellsRetributionL6
+  groupSpellsRetributionL7
+  groupSpellsRetributionL8
+  groupSpellsRetributionL9
+end
+
+category groupSpellsRuneL1
+  spellErase
+end
+
+category groupSpellsRuneL2
+  spellSecretPage
+end
+
+category groupSpellsRuneL3
+  spellGlyphOfWarding
+end
+
+category groupSpellsRuneL4
+  spellExplosiveRunes
+end
+
+category groupSpellsRuneL5
+  spellLesserPlanarBinding
+end
+
+category groupSpellsRuneL6
+  spellGreaterGlyphOfWarding
+end
+
+category groupSpellsRuneL7
+  spellDrawmijsInstantSummons
+end
+
+category groupSpellsRuneL8
+  spellSymbol
+end
+
+category groupSpellsRuneL9
+  spellTeleportationCircle
+end
+
+category groupSpellsRune
+  null
+  groupSpellsRuneL1
+  groupSpellsRuneL2
+  groupSpellsRuneL3
+  groupSpellsRuneL4
+  groupSpellsRuneL5
+  groupSpellsRuneL6
+  groupSpellsRuneL7
+  groupSpellsRuneL8
+  groupSpellsRuneL9
+end
+
+category groupSpellsScalykindL1
+  spellMagicFang
+end
+
+category groupSpellsScalykindL2
+  spellAnimalTrance
+end
+
+category groupSpellsScalykindL3
+  spellGreaterMagicFang
+end
+
+category groupSpellsScalykindL4
+  spellPoison
+end
+
+category groupSpellsScalykindL5
+  spellAnimalGrowth
+end
+
+category groupSpellsScalykindL6
+  spellEyebite
+end
+
+category groupSpellsScalykindL7
+  spellCreepingDoom
+end
+
+category groupSpellsScalykindL8
+  spellAnimalShapes
+end
+
+category groupSpellsScalykindL9
+  spellShapechange
+end
+
+category groupSpellsScalykind
+  null
+  groupSpellsScalykindL1
+  groupSpellsScalykindL2
+  groupSpellsScalykindL3
+  groupSpellsScalykindL4
+  groupSpellsScalykindL5
+  groupSpellsScalykindL6
+  groupSpellsScalykindL7
+  groupSpellsScalykindL8
+  groupSpellsScalykindL9
+end
+
+category groupSpellsSlimeL1
+  spellGrease
+end
+
+category groupSpellsSlimeL2
+  spellMelfsAcidArrow
+end
+
+category groupSpellsSlimeL3
+  spellPoison
+end
+
+category groupSpellsSlimeL4
+  spellRustingGrasp
+end
+
+category groupSpellsSlimeL5
+  spellEvardsBlackTentacles
+end
+
+category groupSpellsSlimeL6
+  spellTransmuteRockToMud
+end
+
+category groupSpellsSlimeL7
+  spellDestruction
+end
+
+category groupSpellsSlimeL8
+  spellPowerWordBlind
+end
+
+category groupSpellsSlimeL9
+  spellImplosion
+end
+
+category groupSpellsSlime
+  null
+  groupSpellsSlimeL1
+  groupSpellsSlimeL2
+  groupSpellsSlimeL3
+  groupSpellsSlimeL4
+  groupSpellsSlimeL5
+  groupSpellsSlimeL6
+  groupSpellsSlimeL7
+  groupSpellsSlimeL8
+  groupSpellsSlimeL9
+end
+
+category groupSpellsSorcererL1
+  spellScatterspray
+end
+
+category groupSpellsSorcererL2
+  spellAganazzarsScorcher
+  spellClawsOfDarkness
+  spellCreateMagicTattoo
+  spellEaglesSplendor
+  spellShadowMask
+  spellShadowSpray
+  spellSnillocsSnowballSwarm
+end
+
+category groupSpellsSorcererL3
+  spellAnalyzePortal
+  spellBlacklight
+  spellFlashburst
+end
+
+category groupSpellsSorcererL4
+  spellFireStride
+  spellThunderlance
+end
+
+category groupSpellsSorcererL5
+  spellGrimwaldsGreymantle
+  spellLesserIronguard
+end
+
+category groupSpellsSorcererL6
+  spellGateSeal
+end
+
+category groupSpellsSorcererL8
+  spellFlensing
+  spellGreatShout
+end
+
+category groupSpellsSorcererL9
+  spellElminstersEvasion
+end
+
+category groupSpellsSpellL1
+  spellMageArmor
+end
+
+category groupSpellsSpellL2
+  spellSilence
+end
+
+category groupSpellsSpellL3
+  spellAnyspell
+end
+
+category groupSpellsSpellL4
+  spellRarysMnemonicEnhancer
+end
+
+category groupSpellsSpellL5
+  spellBreakEnchantment
+end
+
+category groupSpellsSpellL6
+  spellGreaterAnyspell
+end
+
+category groupSpellsSpellL7
+  spellLimitedWish
+end
+
+category groupSpellsSpellL8
+  spellAntimagicField
+end
+
+category groupSpellsSpellL9
+  spellMordenkainensDisjunction
+end
+
+category groupSpellsSpell
+  null
+  groupSpellsSpellL1
+  groupSpellsSpellL2
+  groupSpellsSpellL3
+  groupSpellsSpellL4
+  groupSpellsSpellL5
+  groupSpellsSpellL6
+  groupSpellsSpellL7
+  groupSpellsSpellL8
+  groupSpellsSpellL9
+end
+
+category groupSpellsSpiderL1
+  spellSpiderClimb
+end
+
+category groupSpellsSpiderL2
+  spellSummonSwarm
+end
+
+category groupSpellsSpiderL3
+  spellPhantomSteed
+end
+
+category groupSpellsSpiderL4
+  spellGiantVermin
+end
+
+category groupSpellsSpiderL5
+  spellInsectPlague
+end
+
+category groupSpellsSpiderL6
+  spellSpiderCurse
+end
+
+category groupSpellsSpiderL7
+  spellStoneSpiders
+end
+
+category groupSpellsSpiderL8
+  spellCreepingDoom
+end
+
+category groupSpellsSpiderL9
+  spellSpiderShapes
+end
+
+category groupSpellsSpider
+  null
+  groupSpellsSpiderL1
+  groupSpellsSpiderL2
+  groupSpellsSpiderL3
+  groupSpellsSpiderL4
+  groupSpellsSpiderL5
+  groupSpellsSpiderL6
+  groupSpellsSpiderL7
+  groupSpellsSpiderL8
+  groupSpellsSpiderL9
+end
+
+category groupSpellsStormL1
+  spellEntropicShield
+end
+
+category groupSpellsStormL2
+  spellGustOfWind
+end
+
+category groupSpellsStormL3
+  spellCallLightning
+end
+
+category groupSpellsStormL4
+  spellSleetStorm
+end
+
+category groupSpellsStormL5
+  spellIceStorm
+end
+
+category groupSpellsStormL6
+  spellSummonMonsterVI
+end
+
+category groupSpellsStormL7
+  spellControlWeather
+end
+
+category groupSpellsStormL8
+  spellWhirlwind
+end
+
+category groupSpellsStormL9
+  spellStormOfVengeance
+end
+
+category groupSpellsStorm
+  null
+  groupSpellsStormL1
+  groupSpellsStormL2
+  groupSpellsStormL3
+  groupSpellsStormL4
+  groupSpellsStormL5
+  groupSpellsStormL6
+  groupSpellsStormL7
+  groupSpellsStormL8
+  groupSpellsStormL9
+end
+
+category groupSpellsSufferingL1
+  spellBane
+end
+
+category groupSpellsSufferingL2
+  spellEndurance
+end
+
+category groupSpellsSufferingL3
+  spellBestowCurse
+end
+
+category groupSpellsSufferingL4
+  spellEnervation
+end
+
+category groupSpellsSufferingL5
+  spellFeeblemind
+end
+
+category groupSpellsSufferingL6
+  spellHarm
+end
+
+category groupSpellsSufferingL7
+  spellEyebite
+end
+
+category groupSpellsSufferingL8
+  spellSymbol
+end
+
+category groupSpellsSufferingL9
+  spellHorridWilting
+end
+
+category groupSpellsSuffering
+  null
+  groupSpellsSufferingL1
+  groupSpellsSufferingL2
+  groupSpellsSufferingL3
+  groupSpellsSufferingL4
+  groupSpellsSufferingL5
+  groupSpellsSufferingL6
+  groupSpellsSufferingL7
+  groupSpellsSufferingL8
+  groupSpellsSufferingL9
+end
+
+category groupSpellsTimeL1
+  spellTrueStrike
+end
+
+category groupSpellsTimeL2
+  spellGentleRepose
+end
+
+category groupSpellsTimeL3
+  spellHaste
+end
+
+category groupSpellsTimeL4
+  spellFreedomOfMovement
+end
+
+category groupSpellsTimeL5
+  spellPermanency
+end
+
+category groupSpellsTimeL6
+  spellContingency
+end
+
+category groupSpellsTimeL7
+  spellMassHaste
+end
+
+category groupSpellsTimeL8
+  spellForesight
+end
+
+category groupSpellsTimeL9
+  spellTimeStop
+end
+
+category groupSpellsTime
+  null
+  groupSpellsTimeL1
+  groupSpellsTimeL2
+  groupSpellsTimeL3
+  groupSpellsTimeL4
+  groupSpellsTimeL5
+  groupSpellsTimeL6
+  groupSpellsTimeL7
+  groupSpellsTimeL8
+  groupSpellsTimeL9
+end
+
+category groupSpellsTradeL1
+  spellMessage
+end
+
+category groupSpellsTradeL2
+  spellGembomb
+end
+
+category groupSpellsTradeL3
+  spellEaglesSplendor
+end
+
+category groupSpellsTradeL4
+  spellSending
+end
+
+category groupSpellsTradeL5
+  spellFabricate
+end
+
+category groupSpellsTradeL6
+  spellTrueSeeing
+end
+
+category groupSpellsTradeL7
+  spellMordenkainensMagnificentMansion
+end
+
+category groupSpellsTradeL8
+  spellMindBlank
+end
+
+category groupSpellsTradeL9
+  spellDiscernLocation
+end
+
+category groupSpellsTrade
+  null
+  groupSpellsTradeL1
+  groupSpellsTradeL2
+  groupSpellsTradeL3
+  groupSpellsTradeL4
+  groupSpellsTradeL5
+  groupSpellsTradeL6
+  groupSpellsTradeL7
+  groupSpellsTradeL8
+  groupSpellsTradeL9
+end
+
+category groupSpellsTyrannyL1
+  spellCommand
+end
+
+category groupSpellsTyrannyL2
+  spellEnthrall
+end
+
+category groupSpellsTyrannyL3
+  spellDiscernLies
+end
+
+category groupSpellsTyrannyL4
+  spellFear
+end
+
+category groupSpellsTyrannyL5
+  spellGreaterCommand
+end
+
+category groupSpellsTyrannyL6
+  spellGeasQuest
+end
+
+category groupSpellsTyrannyL7
+  spellBigbysGraspingHand
+end
+
+category groupSpellsTyrannyL8
+  spellMassCharm
+end
+
+category groupSpellsTyrannyL9
+  spellDominateMonster
+end
+
+category groupSpellsTyranny
+  null
+  groupSpellsTyrannyL1
+  groupSpellsTyrannyL2
+  groupSpellsTyrannyL3
+  groupSpellsTyrannyL4
+  groupSpellsTyrannyL5
+  groupSpellsTyrannyL6
+  groupSpellsTyrannyL7
+  groupSpellsTyrannyL8
+  groupSpellsTyrannyL9
+end
+
+category groupSpellsUndeathL1
+  spellDetectUndead
+end
+
+category groupSpellsUndeathL2
+  spellDesecrate
+end
+
+category groupSpellsUndeathL3
+  spellAnimateDead
+end
+
+category groupSpellsUndeathL4
+  spellDeathWard
+end
+
+category groupSpellsUndeathL5
+  spellCircleOfDoom
+end
+
+category groupSpellsUndeathL6
+  spellCreateUndead
+end
+
+category groupSpellsUndeathL7
+  spellControlUndead
+end
+
+category groupSpellsUndeathL8
+  spellCreateGreaterUndead
+end
+
+category groupSpellsUndeathL9
+  spellEnergyDrain
+end
+
+category groupSpellsUndeath
+  null
+  groupSpellsUndeathL1
+  groupSpellsUndeathL2
+  groupSpellsUndeathL3
+  groupSpellsUndeathL4
+  groupSpellsUndeathL5
+  groupSpellsUndeathL6
+  groupSpellsUndeathL7
+  groupSpellsUndeathL8
+  groupSpellsUndeathL9
+end
+
+category groupSpellsWizardL1
+  spellScatterspray
+end
+
+category groupSpellsWizardL2
+  spellAganazzarsScorcher
+  spellClawsOfDarkness
+  spellCreateMagicTattoo
+  spellEaglesSplendor
+  spellShadowMask
+  spellShadowSpray
+  spellSnillocsSnowballSwarm
+end
+
+category groupSpellsWizardL3
+  spellAnalyzePortal
+  spellBlacklight
+  spellFlashburst
+end
+
+category groupSpellsWizardL4
+  spellFireStride
+  spellThunderlance
+end
+
+category groupSpellsWizardL5
+  spellGrimwaldsGreymantle
+  spellLesserIronguard
+end
+
+category groupSpellsWizardL6
+  spellGateSeal
+end
+
+category groupSpellsWizardL8
+  spellFlensing
+  spellGreatShout
+end
+
+category groupSpellsWizardL9
+  spellElminstersEvasion
+end
+

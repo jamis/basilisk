@@ -7,9 +7,9 @@ fi
 
 fname="$1.tar";
 
-src="src/*.c include/*.h bskrun.c bskcompile.c bsktreasure.c bskcallbacks.c bskcallbacks.h Makefile* README LICENSE CHANGELOG treasure.ini";
+src="src/*.c include/*.h bskrun.c bskcompile.c bsktreasure.c bskcallbacks.c bskcallbacks.h Makefile* README LICENSE CHANGELOG treasure.ini config.h";
 doc="docs/*";
-dat="dat/standard/*.bsk dat/snfist/*.bsk dat/scitadel/*.bsk dat/dragon/*.bsk dat/nbomt/*.bsk dat/defenders/*.bsk dat/tnblood/*.bsk dat/boem/*.bsk dat/diablo/*.bsk dat/dungeon/*.bsk dat/motp/*.bsk dat/polyhedron/*.bsk";
+dat="dat/standard/*.bsk dat/snfist/*.bsk dat/scitadel/*.bsk dat/dragon/*.bsk dat/nbomt/*.bsk dat/defenders/*.bsk dat/tnblood/*.bsk dat/boem/*.bsk dat/diablo/*.bsk dat/dungeon/*.bsk dat/motp/*.bsk dat/polyhedron/*.bsk dat/frcs/*.bsk dat/mof/*.bsk";
 
 case $2 in
   "")

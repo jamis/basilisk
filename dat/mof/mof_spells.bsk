@@ -1,0 +1,1081 @@
+/* --------------------------------------------------------------------- *
+ * Data from "Magic of Faerun", 
+ * converted to Basilisk format
+ * --------------------------------------------------------------------- */
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellAcidSplash { "Acid Splash" schConjuration subschCreation ( descAcid ) sourcesMagicOfFaerun }
+  spellAcidStorm { "Acid Storm" schEvocation $ ( descAcid ) sourcesMagicOfFaerun }
+  spellAlamanthersReturn { "Alamanther's Return" schTransmutation $ ( descSeeText ) sourcesMagicOfFaerun }
+  spellAmanuensis { "Amanuensis" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellAmplify { "Amplify" schTransmutation $ ( descSonic ) sourcesMagicOfFaerun }
+  spellAntimagicAura { "Antimagic Aura" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellAuraAgainstFlame { "Aura Against Flame" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellAuraOfGlory { "Aura Of Glory" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellAuraOfVitality { "Aura Of Vitality" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellAzuthsExaltedTriad { "Azuth's Exalted Triad" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellAzuthsSpellShield { "Azuth's Spell Shield" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellBacklash { "Backlash" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellBalagarnsIronHorn { "Balagarn's Iron Horn" schTransmutation $ ( descSonic ) sourcesMagicOfFaerun }
+  spellBallLightning { "Ball Lightning" schEvocation $ ( descElectricity ) sourcesMagicOfFaerun }
+  spellBatteringRam { "Battering Ram" schEvocation $ ( descForce ) sourcesMagicOfFaerun }
+  spellBattletide { "Battletide" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellBindingWinds { "Binding Winds" schEvocation $ $ sourcesMagicOfFaerun }
+  spellBlackBladeOfDisaster { "Black Blade Of Disaster" schConjuration subschCreation $ sourcesMagicOfFaerun }
+  spellBlackstaff { "Blackstaff" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellBladeThirst { "Blade Thirst" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellBlindingSpittle { "Blinding Spittle" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellBlindsight { "Blindsight" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellBloodFrenzy { "Blood Frenzy" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellBodyBlades { "Body Blades" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellBombardment { "Bombardment" schConjuration subschCreation $ sourcesMagicOfFaerun }
+  spellBranchToBranch { "Branch To Branch" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellBrilliantAura { "Brilliant Aura" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellCacophonicShield { "Cacophonic Shield" schEvocation $ ( descSonic ) sourcesMagicOfFaerun }
+  spellCamouflage { "Camouflage" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellCastInStone { "Cast In Stone" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellCelebration { "Celebration" schEnchantment subschCompulsion ( descMindAffecting descSonic ) sourcesMagicOfFaerun }
+  spellCircleDance { "Circle Dance" schDivination $ $ sourcesMagicOfFaerun }
+  spellClawsOfTheBeast { "Claws of the Beast" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellCloudburst { "Cloudburst" schEvocation $ ( descWater ) sourcesMagicOfFaerun }
+  spellCloudofBewilderment { "Cloud of Bewilderment" schEvocation $ $ sourcesMagicOfFaerun }
+  spellCocoon { "Cocoon" schConjuration subschCreation $ sourcesMagicOfFaerun }
+  spellCombust { "Combust" schEvocation $ ( descFire ) sourcesMagicOfFaerun }
+  spellCorrosiveGrasp { "Corrosive Grasp" schConjuration subschCreation ( descAcid ) sourcesMagicOfFaerun }
+  spellCrawlingDarkness { "Crawling Darkness" schConjuration subschCreation $ sourcesMagicOfFaerun }
+  spellCreateCrossroadsAndBackroad { "Create Crossroads And Backroad" schConjuration subschCreation $ sourcesMagicOfFaerun }
+  spellCrumble { "Crumble" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellCurseOfIllFortune { "Curse Of Ill Fortune" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellDarkfire { "Darkfire" schEvocation $ ( descFire ) sourcesMagicOfFaerun }
+  spellDarkWay { "Dark Way" schIllusion subschShadow $ sourcesMagicOfFaerun }
+  spellDarssonsPotion { "Darsson's Potion" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellDeafeningClang { "Deafening Clang" schTransmutation $ ( descSonic ) sourcesMagicOfFaerun }
+  spellDeathArmor { "Death Armor" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellDeathDragon { "Death Dragon" schNecromancy $ ( descEvil descFear descMindAffecting ) sourcesMagicOfFaerun }
+  spellDeathPact { "Death Pact" schNecromancy $ ( descEvil ) sourcesMagicOfFaerun }
+  spellDecoyImage { "Decoy Image" schIllusion subschFigment $ sourcesMagicOfFaerun }
+  spellDetectCrossroads { "Detect Crossroads" schDivination $ $ sourcesMagicOfFaerun }
+  spellDhularksGlasstrike { "Dhulark's Glasstrike" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellDimesionalLock { "Dimesional Lock" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellDirge { "Dirge" schEvocation $ ( descSonic ) sourcesMagicOfFaerun }
+  spellDisguiseUndead { "Disguise Undead" schIllusion subschGlamer $ sourcesMagicOfFaerun }
+  spellDisquietude { "Disquietude" schAbjuration $ ( descSonic ) sourcesMagicOfFaerun }
+  spellDistortSpeech { "Distort Speech" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellDoomtide { "Doomtide" schIllusion subschPattern $ sourcesMagicOfFaerun }
+  spellDrown { "Drown" schConjuration subschCreation $ sourcesMagicOfFaerun }
+  spellEarthfast { "Earthfast" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellEasyClimb { "Easy Climb" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellEasyTrail { "Easy Trail" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellEchoSkull { "Echo Skull" schDivination $ $ sourcesMagicOfFaerun }
+  spellElectricJolt { "Electric Jolt" schEvocation $ ( descElectricity ) sourcesMagicOfFaerun }
+  spellElminstersEffulgentEpuration { "Elminster's Effulgent Epuration" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellEnergyTransformationShield { "Energy Transformation Shield" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellExplosiveCascade { "Explosive Cascade" schEvocation $ ( descFire ) sourcesMagicOfFaerun }
+  spellFaithHealing { "Faith Healing" schConjuration subschHealing $ sourcesMagicOfFaerun }
+  spellFavorOfIlmater { "Favor Of Ilmater" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellFiendform { "Fiendform" schTransmutation $ ( descEvil ) sourcesMagicOfFaerun }
+  spellFireSpiders { "Fire Spiders" schConjuration subschSummoning ( descFire ) sourcesMagicOfFaerun }
+  spellFlameDagger { "Flame Dagger" schEvocation $ ( descFire ) sourcesMagicOfFaerun }
+  spellFirebrand { "Firebrand" schEvocation $ ( descFire ) sourcesMagicOfFaerun }
+  spellForceLadder { "Force Ladder" schEvocation $ ( descForce ) sourcesMagicOfFaerun }
+  spellForceward { "Forceward" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellForcewave { "Forcewave" schEvocation $ ( descForce ) sourcesMagicOfFaerun }
+  spellFortunateFate { "Fortunate Fate" schConjuration subschHealing $ sourcesMagicOfFaerun }
+  spellGedleesElectricLoop { "Gedlee's Electric Loop" schEvocation $ ( descElectricity ) sourcesMagicOfFaerun }
+  spellGelsewhereChant { "G'elsewhere Chant" schTransmutation $ ( descSonic descTeleportation ) sourcesMagicOfFaerun }
+  spellGemjump { "Gemjump" schTransmutation $ ( descTeleportation ) sourcesMagicOfFaerun }
+  spellGeneralOfUndeath { "General Of Undeath" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellGhorusTothsMetalMelt { "Ghorus Toth's Metal Melt" schTransmutation $ ( descFire ) sourcesMagicOfFaerun }
+  spellGhostharp { "Ghostharp" schDivination $ $ sourcesMagicOfFaerun }
+  spellGloryOfTheMartyr { "Glory Of The Martyr" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellGreaterIronguard { "Greater Ironguard" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellGreaterMageHand { "Greater Mage Hand" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellGreatThunderclap { "Great Thunderclap" schEvocation $ ( descSonic ) sourcesMagicOfFaerun }
+  spellGutsnake { "Gutsnake" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellHandfire { "Handfire" schEvocation $ ( descLight ) sourcesMagicOfFaerun }
+  spellHandOfDivinity { "Hand Of Divinity" schEvocation $ ( descSeeText ) sourcesMagicOfFaerun }
+  spellHandOfTorm { "Hand Of Torm" schAbjuration $ ( descSeeText ) sourcesMagicOfFaerun }
+  spellHardening { "Hardening" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellHarmony { "Harmony" schEnchantment subschCompulsion ( descMindAffecting descSonic ) sourcesMagicOfFaerun }
+  spellHauntingTune { "Haunting Tune" schEnchantment subschCompulsion ( descMindAffecting descSonic ) sourcesMagicOfFaerun }
+  spellHealingSting { "Healing Sting" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellHealingTouch { "Healing Touch" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellHeraldsCall { "Herald's Call" schEnchantment subschCompulsion ( descMindAffecting descSonic ) sourcesMagicOfFaerun }
+  spellHolyStar { "Holy Star" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellHorizikaulsBoom { "Horizikaul's Boom" schEvocation $ ( descSonic ) sourcesMagicOfFaerun }
+  spellHorizikaulsCough { "Horizikaul's Cough" schEvocation $ ( descSonic ) sourcesMagicOfFaerun }
+  spellHorizikaulsVersatileVibration { "Horizikaul's Versatile Vibration" schEvocation $ ( descSonic ) sourcesMagicOfFaerun }
+  spellHuntersMercy { "Hunter's Mercy" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellIceDagger { "Ice Dagger" schEvocation $ ( descCold ) sourcesMagicOfFaerun }
+  spellIgedrazaarsMiasma { "Igedrazaar's Miasma" schConjuration subschCreation $ sourcesMagicOfFaerun }
+  spellInferno { "Inferno" schTransmutation $ ( descFire ) sourcesMagicOfFaerun }
+  spellInfestationOfMaggots { "Infestation Of Maggots" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellIronBones { "Iron Bones" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellIronguts { "Ironguts" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellJawsOfTheWolf { "Jaws Of The Wolf" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellKaupaersSkittishNerves { "Kaupaer's Skittish Nerves" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellKhelbensSuspendedSilence { "Khelben's Suspended Silence" schIllusion subschGlamer $ sourcesMagicOfFaerun }
+  spellKissOfTheVampire { "Kiss Of The Vampire" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellKnowGreatestEnemy { "Know Greatest Enemy" schDivination $ $ sourcesMagicOfFaerun }
+  spellKnowProtections { "Know Protections" schDivination $ $ sourcesMagicOfFaerun }
+  spellKnowVulnerabilities { "Know Vulnerabilities" schDivination $ $ sourcesMagicOfFaerun }
+  spellLaerelsCuttingHand { "Laerel's Cutting Hand" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellLandWomb { "Land Womb" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellLaunchBolt { "Launch Bolt" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellLaunchItem { "Launch Item" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellLifeBolt { "Life Bolt" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellLivingPrints { "Living Prints" schDivination $ $ sourcesMagicOfFaerun }
+  spellLowLightVision { "Low-Light Vision" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellLoyalVassal { "Loyal Vassal" schAbjuration $ ( descLawful ) sourcesMagicOfFaerun }
+  spellLutzaensFrequentJaunt { "Lutzaen's Frequent Jaunt" schTransmutation $ ( descTeleportation ) sourcesMagicOfFaerun }
+  spellMaceOfOdo { "Mace Of Odo" schEvocation $ ( descForce ) sourcesMagicOfFaerun }
+  spellMassCamouflage { "Mass Camouflage" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellMassTeleport { "Mass Teleport" schTransmutation $ ( descTeleportation ) sourcesMagicOfFaerun }
+  spellMasterAir { "Master Air" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellMasterEarth { "Master Earth" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellMawOfChaos { "Maw Of Chaos" schAbjuration $ ( descChaotic ) sourcesMagicOfFaerun }
+  spellMemoryRot { "Memory Rot" schEvocation $ $ sourcesMagicOfFaerun }
+  spellMestilsAcidBreath { "Mestil's Acid Breath" schConjuration subschCreation ( descAcid ) sourcesMagicOfFaerun }
+  spellMestilsAcidSheath { "Mestil's Acid Sheath" schConjuration subschCreation ( descAcid ) sourcesMagicOfFaerun }
+  spellMinorDisguise { "Minor Disguise" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellMonstrousRegeneration { "Monstrous Regeneration" schConjuration subschHealing $ sourcesMagicOfFaerun }
+  spellMurderousMist { "Murderous Mist" schEvocation $ $ sourcesMagicOfFaerun }
+  spellMysticLash { "Mystic Lash" schEvocation $ ( descElectricity descEvil ) sourcesMagicOfFaerun }
+  spellNaturesBalance { "Nature's Balance" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellNaturewatch { "Naturewatch" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellNetOfShadows { "Net Of Shadows" schIllusion subschShadow ( descDarkness ) sourcesMagicOfFaerun }
+  spellNightmareLullaby { "Nightmare Lullaby" schEnchantment subschCompulsion ( descMindAffecting descSonic ) sourcesMagicOfFaerun }
+  spellNyborsGentleReminder { "Nybor's Gentle Reminder" schEnchantment subschCompulsion ( descMindAffecting ) sourcesMagicOfFaerun }
+  spellNyborsMildAdmonishment { "Nybor's Mild Admonishment" schEnchantment subschCompulsion ( descMindAffecting ) sourcesMagicOfFaerun }
+  spellNyborsSternReproof { "Nybor's Stern Reproof" schEnchantment subschCompulsion ( descMindAffecting ) sourcesMagicOfFaerun }
+  spellNyborsWrathfulCastigation { "Nybor's Wrathful Castigation" schEnchantment subschCompulsion ( descMindAffecting ) sourcesMagicOfFaerun }
+  spellOneWithTheLand { "One With The Land" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellOwlsInsight { "Owl's Insight" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellPoisonVines { "Poison Vines" schConjuration subschCreation $ sourcesMagicOfFaerun }
+  spellPrismaticEye { "Prismatic Eye" schEvocation $ $ sourcesMagicOfFaerun }
+  spellPuppeteer { "Puppeteer" schEnchantment subschCompulsion $ sourcesMagicOfFaerun }
+  spellQuillfire { "Quillfire" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellRamsMight { "Ram's Might" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellRemedyModerateWounds { "Remedy Moderate Wounds" schConjuration subschHealing $ sourcesMagicOfFaerun }
+  spellReveille { "Reveille" schNecromancy $ ( descLanguageDependent descSonic ) sourcesMagicOfFaerun }
+  spellRevenance { "Revenance" schConjuration subschHealing $ sourcesMagicOfFaerun }
+  spellReverseArrows { "Reverse Arrows" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellRighteousFury { "Righteous Fury" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellRosemantle { "Rosemantle" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellSafeClearing { "Safe Clearing" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellScent { "Scent" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellScintillatingSphere { "Scintillating Sphere" schEvocation $ ( descElectricity ) sourcesMagicOfFaerun }
+  spellSeekEternalRest { "Seek Eternal Rest" schConjuration subschHealing $ sourcesMagicOfFaerun }
+  spellShadowHand { "Shadow Hand" schIllusion subschShadow $ sourcesMagicOfFaerun }
+  spellShadowWell { "Shadow Well" schIllusion subschShadow $ sourcesMagicOfFaerun }
+  spellShareHusk { "Share Husk" schDivination $ $ sourcesMagicOfFaerun }
+  spellShatterfloor { "Shatterfloor" schEvocation $ ( descSonic ) sourcesMagicOfFaerun }
+  spellShelgarnsPersistentBlade { "Shelgarn's Persistent Blade" schEvocation $ ( descForce ) sourcesMagicOfFaerun }
+  spellShroudOfUndeath { "Shroud Of Undeath" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellSilentPortal { "Silent Portal" schIllusion subschGlamer $ sourcesMagicOfFaerun }
+  spellSilverbeard { "Silverbeard" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSimbulsSkeletalDeliquescence { "Simbul's Skeletal Deliquescence" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSimbulsSpellMatrix { "Simbul's Spell Matrix" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSimbulsSpellSequencer { "Simbul's Spell Sequencer" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSimbulsSpellTrigger { "Simbul's Spell Trigger" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSimbulsSynostodweomer { "Simbul's Synostodweomer" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSkeletalGuard { "Skeletal Guard" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellSkullOfSecrets { "Skull Of Secrets" schIllusion subschShadow $ sourcesMagicOfFaerun }
+  spellSmellOfFear { "Smell Of Fear" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSnakebite { "Snakebite" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSongbird { "Songbird" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSpectralStag { "Spectral Stag" schConjuration subschCreation $ sourcesMagicOfFaerun }
+  spellSpeechlink { "Speechlink" schDivination $ $ sourcesMagicOfFaerun }
+  spellSpeedSwim { "Speed Swim" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSpellEngine { "Spell Engine" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellSpellEnhancer { "Spell Enhancer" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSpellmantle { "Spellmantle" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellSpellPhylactery { "Spell Phylactery" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSpellShield { "Spell Shield" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellSpiderPoison { "Spider Poison" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellSpiritWorm { "Spirit Worm" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellStalkingBrand { "Stalking Brand" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSteeldance { "Steeldance" schEvocation $ $ sourcesMagicOfFaerun }
+  spellStoneBones { "Stone Bones" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellStonehold { "Stonehold" schConjuration subschCreation ( descEarth ) sourcesMagicOfFaerun }
+  spellStoneShatter { "Stone Shatter" schEvocation $ ( descSonic ) sourcesMagicOfFaerun }
+  spellStoneWalk { "Stone Walk" schTransmutation $ ( descTeleportation ) sourcesMagicOfFaerun }
+  spellStormrage { "Stormrage" schTransmutation $ ( descElectricity ) sourcesMagicOfFaerun }
+  spellStormTower { "Storm Tower" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellStrategicCharge { "Strategic Charge" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellStrengthofStone { "Strength of Stone" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSummonUndeadI { "Summon Undead I" schConjuration subschSummoning ( descSeeText ) sourcesMagicOfFaerun }
+  spellSummonUndeadII { "Summon Undead II" schConjuration subschSummoning ( descSeeText ) sourcesMagicOfFaerun }
+  spellSummonUndeadIII { "Summon Undead III" schConjuration subschSummoning ( descSeeText ) sourcesMagicOfFaerun }
+  spellSummonUndeadIV { "Summon Undead IV" schConjuration subschSummoning ( descSeeText ) sourcesMagicOfFaerun }
+  spellSummonUndeadV { "Summon Undead V" schConjuration subschSummoning ( descSeeText ) sourcesMagicOfFaerun }
+  spellSuppressGlyph { "Suppress Glyph" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSurefoot { "Surefoot" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellSymbol { "Symbol" schUniversal $ ( descSeeText ) sourcesMagicOfFaerun }
+  spellTirumaelsEnergySpheres { "Tirumael's Energy Spheres" schEvocation $ ( descAcid descCold descElectricity descFire descSonic ) sourcesMagicOfFaerun }
+  spellTortoiseShell { "Tortoise Shell" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellToweringOak { "Towering Oak" schIllusion subschGlamer $ sourcesMagicOfFaerun }
+  spellTranscribeSymbol { "Transcribe Symbol" schAbjuration $ $ sourcesMagicOfFaerun }
+  spellTranslocationTrick { "Translocation Trick" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellUndeadBaneWeapon { "Undead Bane Weapon" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellUndeadLieutenant { "Undead Lieutenant" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellUndeadTorch { "Undead Torch" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellUndeathAfterDeath { "Undeath After Death" schNecromancy $ ( descEvil ) sourcesMagicOfFaerun }
+  spellUndeathsEternalFoe { "Undeath's Eternal Foe" schAbjuration $ ( descGood ) sourcesMagicOfFaerun }
+  spellUndeathtoDeath { "Undeath to Death" schNecromancy $ $ sourcesMagicOfFaerun }
+  spellUnderstandDevice { "Understand Device" schDivination $ $ sourcesMagicOfFaerun }
+  spellVineMine { "Vine Mine" schConjuration subschCreation $ sourcesMagicOfFaerun }
+  spellVipergout { "Vipergout" schConjuration subschSummoning ( descSeeText ) sourcesMagicOfFaerun }
+  spellVisionOfGlory { "Vision Of Glory" schDivination $ $ sourcesMagicOfFaerun }
+  spellWallOfChaos { "Wall Of Chaos" schAbjuration $ ( descChaotic ) sourcesMagicOfFaerun }
+  spellWallOfGood { "Wall Of Good" schAbjuration $ ( descGood ) sourcesMagicOfFaerun }
+  spellWallOfEvil { "Wall Of Evil" schAbjuration $ ( descEvil ) sourcesMagicOfFaerun }
+  spellWallOfLaw { "Wall Of Law" schAbjuration $ ( descLawful ) sourcesMagicOfFaerun }
+  spellWarCry { "War Cry" schEnchantment subschCompulsion ( descMindAffecting descSonic ) sourcesMagicOfFaerun }
+  spellWarningShout { "Warning Shout" schTransmutation $ ( descSonic ) sourcesMagicOfFaerun }
+  spellWeaponOfTheDeity { "Weapon Of The Deity" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellWeaponOfImpact { "Weapon Of Impact" schTransmutation $ $ sourcesMagicOfFaerun }
+  spellWieldskull { "Wieldskull" schDivination $ $ sourcesMagicOfFaerun }
+  spellWindAtBack { "Wind At Back" schEvocation $ $ sourcesMagicOfFaerun }
+  spellWindTunnel { "Wind Tunnel" schEvocation $ $ sourcesMagicOfFaerun }
+  spellWoundingWhispers { "Wounding Whispers" schAbjuration $ ( descSonic ) sourcesMagicOfFaerun }
+  spellZajimarnsAvalanche { "Zajimarn's Avalanche" schConjuration subschCreation ( descCold ) sourcesMagicOfFaerun }
+  spellZajimarnsFieldOfIcyRazors { "Zajimarn's Field Of Icy Razors" schEvocation $ ( descCold ) sourcesMagicOfFaerun }
+  spellZajimarnsIceClawPrison { "Zajimarn's Ice Claw Prison" schEvocation $ ( descCold ) sourcesMagicOfFaerun }
+end
+
+category groupSpellsAssassinL1
+  spellLowLightVision
+  spellSilentPortal
+end
+
+category groupSpellsAssassinL3
+  spellSpiderPoison
+end
+
+category groupSpellsBardL0
+  spellDetectCrossroads
+  spellGhostharp
+  spellMinorDisguise
+  spellSongbird
+end
+
+category groupSpellsBardL1
+  spellAmplify
+  spellBalagarnsIronHorn
+  spellDisquietude
+  spellDistortSpeech
+  spellHarmony
+  spellHeraldsCall
+  spellKnowProtections
+end
+
+category groupSpellsBardL2
+  spellCircleDance
+  spellCloudOfBewilderment
+  spellNightmareLullaby
+end
+
+category groupSpellsBardL3
+  spellGelsewhereChant
+  spellHauntingTune
+  spellPuppeteer
+  spellReveille
+  spellWeaponOfImpact
+  spellWoundingWhispers
+end
+
+category groupSpellsBardL4
+  spellCelebration
+  spellKnowVulnerabilities
+  spellSpeechlink
+  spellStoneShatter
+  spellWarCry
+end
+
+category groupSpellsBardL5
+  spellRevenance
+end
+
+category groupSpellsBardL6
+  spellCacophonicShield
+  spellDirge
+end
+
+category groupSpellsBlackguardL1
+  spellFaithHealing
+  spellStrategicCharge
+end
+
+category groupSpellsBlackguardL2
+  spellHandOfDivinity
+end
+
+category groupSpellsBlackguardL3
+  spellKnowGreatestEnemy
+end
+
+category groupSpellsBlackguardL4
+  spellWeaponOfTheDeity
+end
+
+category groupSpellsClericL1
+  spellFaithHealing
+  spellHandfire
+  spellVisionOfGlory
+  spellWieldskull
+end
+
+category groupSpellsClericL2
+  spellAuraAgainstFlame
+  spellBodyBlades
+  spellCurseOfIllFortune
+  spellHandOfDivinity
+  spellSpectralStag
+  spellSpellShield
+  spellStoneBones
+end
+
+category groupSpellsClericL3
+  spellAmanuensis
+  spellCircleDance
+  spellDarkWay
+  spellDarkfire
+  spellForceward
+  spellMaceOfOdo
+  spellMysticLash
+  spellRemedyModerateWounds
+  spellUnderstandDevice
+  spellWeaponOfImpact
+end
+
+category groupSpellsClericL4
+  spellBlindsight
+  spellDoomtide
+  spellFavorOfIlmater
+  spellHandOfTorm
+  spellIronBones
+  spellKnowVulnerabilities
+  spellRevenance
+  spellSkullOfSecrets
+  spellWallOfChaos
+  spellWallOfEvil
+  spellWallOfGood
+  spellWallOfLaw
+  spellWeaponOfTheDeity
+end
+
+category groupSpellsClericL5
+  spellBattletide
+  spellCrawlingDarkness
+  spellMonstrousRegeneration
+  spellSpellPhylactery
+end
+
+category groupSpellsClericL6
+  spellAzuthsExaltedTriad
+  spellSpellmantle
+  spellStoneWalk
+  spellSuppressGlyph
+  spellUndeathToDeath
+end
+
+category groupSpellsClericL7
+  spellAzuthsSpellShield
+  spellDeathDragon
+  spellFortunateFate
+  spellHolyStar
+  spellUndeathAfterDeath
+end
+
+category groupSpellsClericL8
+  spellDeathPact
+  spellGeneralOfUndeath
+  spellStormrage
+end
+
+category groupSpellsClericL9
+  spellUndeathsEternalFoe
+end
+
+category groupSpellsDruidL0
+  spellDetectCrossroads
+  spellNaturewatch
+  spellRamsMight
+end
+
+category groupSpellsDruidL1
+  spellBlindingSpittle
+  spellCamouflage
+  spellClawsOfTheBeast
+  spellHandfire
+  spellSpeedSwim
+end
+
+category groupSpellsDruidL2
+  spellBloodFrenzy
+  spellCloudburst
+  spellEarthfast
+  spellEasyTrail
+  spellMasterAir
+  spellOneWithTheLand
+  spellRemedyModerateWounds
+  spellScent
+  spellShareHusk
+end
+
+category groupSpellsDruidL3
+  spellBlindsight
+  spellCircleDance
+  spellHealingSting
+  spellInfestationOfMaggots
+  spellQuillfire
+  spellSnakebite
+  spellTortoiseShell
+end
+
+category groupSpellsDruidL4
+  spellJawsOfTheWolf
+  spellLandWomb
+  spellMassCamouflage
+  spellMurderousMist
+  spellNaturesBalance
+  spellWindAtBack
+end
+
+category groupSpellsDruidL5
+  spellBindingWinds
+  /* spellBreathOfTruth -- FIXME: this needs to be defined */
+  spellEchoSkull
+  spellInferno
+  spellMemoryRot
+  spellOwlsInsight
+  spellVineMine
+  spellWindTunnel
+end
+
+category groupSpellsDruidL6
+  spellCrumble
+  spellDrown
+  spellStonehold
+end
+
+category groupSpellsDruidL7
+  spellAuraOfVitality
+  spellBrilliantAura
+  spellCreateCrossroadsAndBackroad
+  spellMasterEarth
+  spellPoisonVines
+  spellStormTower
+end
+
+category groupSpellsDruidL8
+  spellBombardment
+  spellCocoon
+end
+
+category groupSpellsDruidL9
+  spellCastInStone
+end
+
+category groupSpellsHarperL1
+  spellCamouflage
+  spellHandfire
+  spellHeraldsCall
+  spellLowLightVision
+end
+
+category groupSpellsHarperL2
+  spellEasyTrail
+end
+
+category groupSpellsHarperL3
+  spellLivingPrints
+end
+
+category groupSpellsHarperL4
+  spellMassCamouflage
+end
+
+category groupSpellsHathranL0
+  spellNaturewatch
+end
+
+category groupSpellsHathranL1
+  spellHandfire
+  spellLowLightVision
+end
+
+category groupSpellsHathranL2
+  spellFlameDagger
+  spellOneWithTheLand
+end
+
+category groupSpellsHathranL4
+  spellLandWomb
+end
+
+category groupSpellsPaladinL1
+  spellDeafeningClang
+  spellFaithHealing
+  spellSilverbeard
+  spellStrategicCharge
+  spellVisionOfGlory
+  spellWarningShout
+end
+
+category groupSpellsPaladinL2
+  spellAuraOfGlory
+  spellHandOfDivinity
+  spellStrengthOfStone
+end
+
+category groupSpellsPaladinL3
+  spellForceward
+  spellKnowGreatestEnemy
+  spellLoyalVassal
+  spellRighteousFury
+  spellUndeadBaneWeapon
+end
+
+category groupSpellsPaladinL4
+  spellFavorOfIlmater
+  spellGloryOfTheMartyr
+  spellHandOfTorm
+  spellRevenance
+  spellSeekEternalRest
+  spellWeaponOfTheDeity
+end
+
+category groupSpellsRangerL1
+  spellCamouflage
+  spellHandfire
+  spellHuntersMercy
+  spellLowLightVision
+  spellNaturewatch
+  spellRamsMight
+  spellSmellOfFear
+  spellSpeedSwim
+  spellStalkingBrand
+  spellSurefoot
+  spellToweringOak
+end
+
+category groupSpellsRangerL2
+  spellBranchToBranch
+  spellClawsOfTheBeast
+  spellEasyTrail
+  spellOneWithTheLand
+  spellScent
+end
+
+category groupSpellsRangerL3
+  spellBladeThirst
+  spellDecoyImage
+  spellEasyClimb
+  spellLivingPrints
+  spellSafeClearing
+end
+
+category groupSpellsRangerL4
+  spellLandWomb
+  spellMassCamouflage
+  spellSnakebite
+end
+
+category groupSpellsSorcererL0
+  spellAcidSplash
+  spellElectricJolt
+  spellHorizikaulsCough
+  spellLaunchBolt
+  spellSilentPortal
+end
+
+category groupSpellsSorcererL1
+  spellIronguts
+  spellCorrosiveGrasp
+  spellSummonUndeadI
+  spellKnowProtections
+  spellNyborsGentleReminder
+  spellForcewave
+  spellHorizikaulsBoom
+  spellIceDagger
+  spellShelgarnsPersistentBlade
+  spellNetOfShadows
+  spellSpiritWorm
+  spellKaupaersSkittishNerves
+  spellLaerelsCuttingHand
+  spellLaunchItem
+  spellLowLightVision
+  spellSpeedSwim
+end
+
+category groupSpellsSorcererL2
+  spellIgedrazaarsMiasma
+  spellSummonUndeadII
+  spellBatteringRam
+  spellCloudOfBewilderment
+  spellCombust
+  spellFlameDagger
+  spellForceLadder
+  spellGedleesElectricLoop
+  spellDisguiseUndead
+  spellDeathArmor
+  spellLifeBolt
+  spellShroudOfUndeath
+  spellBalagarnsIronHorn
+  spellScent
+  spellStoneBones
+end
+
+category groupSpellsSorcererL3
+  spellReverseArrows
+  spellMestilsAcidBreath
+  spellSummonUndeadIII
+  spellNyborsMildAdmonishment
+  spellScintillatingSphere
+  spellShatterfloor
+  spellSteeldance
+  spellKhelbensSuspendedSilence
+  spellHealingTouch
+  spellSpiderPoison
+  spellUndeadLieutenant
+  spellUndeadTorch
+  spellAmanuensis
+  spellBlindsight
+  spellGreaterMageHand
+  spellWeaponOfImpact
+end
+
+category groupSpellsSorcererL4
+  spellWallOfChaos
+  spellWallOfEvil
+  spellWallOfGood
+  spellWallOfLaw
+  spellSummonUndeadIV
+  spellExplosiveCascade
+  spellTirumaelsEnergySpheres
+  spellShadowWell
+  spellBacklash
+  spellDarssonsPotion
+  spellGhorusTothsMetalMelt
+  spellGutsnake
+  spellIronBones
+  spellSpellEnhancer
+end
+
+category groupSpellsSorcererL5
+  spellDimensionalLock
+  spellMestilsAcidSheath
+  spellSummonUndeadV
+  spellBallLightning
+  spellFirebrand
+  spellHorizikaulsVersatileVibration
+  spellShadowHand
+  spellKissOfTheVampire
+  spellLutzaensFrequentJaunt
+  spellSimbulsSpellMatrix
+end
+
+category groupSpellsSorcererL6
+  spellFireSpiders
+  spellAcidStorm
+  spellCacophonicShield
+  spellPrismaticEye
+  spellUndeathToDeath
+  spellDhularksGlasstrike
+  spellEnergyTransformationShield
+  spellFiendform
+  spellHardening
+  spellTranslocationTrick
+end
+
+category groupSpellsSorcererL7
+  spellAntimagicAura
+  spellGreaterIronguard
+  spellVipergout
+  spellNyborsSternReproof
+  spellGreatThunderclap
+  spellZajimarnsIceClawPrison
+  spellGemjump
+  spellMassTeleport
+  spellSimbulsSpellSequencer
+  spellSimbulsSynostodweomer
+end
+
+category groupSpellsSorcererL8
+  spellSpellEngine
+  spellTranscribeSymbol
+  spellNyborsWrathfulCastigation
+  spellZajimarnsFieldOfIcyRazors
+  spellSkeletalGuard
+  spellBlackstaff
+  spellSimbulsSkeletalDeliquescence
+end
+
+category groupSpellsSorcererL9
+  spellElminstersEffulgentEpuration
+  spellMawOfChaos
+  spellBlackBladeOfDisaster
+  spellZajimarnsAvalanche
+  spellAlamanthersReturn
+  spellSimbulsSpellTrigger
+end
+
+category groupSpellsWizardL0
+  spellAcidSplash
+  spellElectricJolt
+  spellHorizikaulsCough
+  spellLaunchBolt
+  spellSilentPortal
+end
+
+category groupSpellsWizardL1
+  spellIronguts
+  spellCorrosiveGrasp
+  spellSummonUndeadI
+  spellKnowProtections
+  spellNyborsGentleReminder
+  spellForcewave
+  spellHorizikaulsBoom
+  spellIceDagger
+  spellShelgarnsPersistentBlade
+  spellNetOfShadows
+  spellSpiritWorm
+  spellKaupaersSkittishNerves
+  spellLaerelsCuttingHand
+  spellLaunchItem
+  spellLowLightVision
+  spellSpeedSwim
+end
+
+category groupSpellsWizardL2
+  spellIgedrazaarsMiasma
+  spellSummonUndeadII
+  spellBatteringRam
+  spellCloudOfBewilderment
+  spellCombust
+  spellFlameDagger
+  spellForceLadder
+  spellGedleesElectricLoop
+  spellDisguiseUndead
+  spellDeathArmor
+  spellLifeBolt
+  spellShroudOfUndeath
+  spellBalagarnsIronHorn
+  spellScent
+  spellStoneBones
+end
+
+category groupSpellsWizardL3
+  spellReverseArrows
+  spellMestilsAcidBreath
+  spellSummonUndeadIII
+  spellNyborsMildAdmonishment
+  spellScintillatingSphere
+  spellShatterfloor
+  spellSteeldance
+  spellKhelbensSuspendedSilence
+  spellHealingTouch
+  spellSpiderPoison
+  spellUndeadLieutenant
+  spellUndeadTorch
+  spellAmanuensis
+  spellBlindsight
+  spellGreaterMageHand
+  spellWeaponOfImpact
+end
+
+category groupSpellsWizardL4
+  spellWallOfChaos
+  spellWallOfEvil
+  spellWallOfGood
+  spellWallOfLaw
+  spellSummonUndeadIV
+  spellExplosiveCascade
+  spellTirumaelsEnergySpheres
+  spellShadowWell
+  spellBacklash
+  spellDarssonsPotion
+  spellGhorusTothsMetalMelt
+  spellGutsnake
+  spellIronBones
+  spellSpellEnhancer
+end
+
+category groupSpellsWizardL5
+  spellDimensionalLock
+  spellMestilsAcidSheath
+  spellSummonUndeadV
+  spellBallLightning
+  spellFirebrand
+  spellHorizikaulsVersatileVibration
+  spellShadowHand
+  spellKissOfTheVampire
+  spellLutzaensFrequentJaunt
+  spellSimbulsSpellMatrix
+end
+
+category groupSpellsWizardL6
+  spellFireSpiders
+  spellAcidStorm
+  spellCacophonicShield
+  spellPrismaticEye
+  spellUndeathToDeath
+  spellDhularksGlasstrike
+  spellEnergyTransformationShield
+  spellFiendform
+  spellHardening
+  spellTranslocationTrick
+end
+
+category groupSpellsWizardL7
+  spellAntimagicAura
+  spellGreaterIronguard
+  spellVipergout
+  spellNyborsSternReproof
+  spellGreatThunderclap
+  spellZajimarnsIceClawPrison
+  spellGemjump
+  spellMassTeleport
+  spellSimbulsSpellSequencer
+  spellSimbulsSynostodweomer
+end
+
+category groupSpellsWizardL8
+  spellSpellEngine
+  spellTranscribeSymbol
+  spellNyborsWrathfulCastigation
+  spellZajimarnsFieldOfIcyRazors
+  spellSkeletalGuard
+  spellBlackstaff
+  spellSimbulsSkeletalDeliquescence
+end
+
+category groupSpellsWizardL9
+  spellElminstersEffulgentEpuration
+  spellMawOfChaos
+  spellBlackBladeOfDisaster
+  spellZajimarnsAvalanche
+  spellAlamanthersReturn
+  spellSimbulsSpellTrigger
+end
+
+category groupArcaneScrollSpells0
+  [ 4]  spellAcidSplash
+  [ 4]  spellElectricJolt
+  [ 4]  spellHorizikaulsCough
+  [ 4]  spellLaunchBolt
+  [ 4]  spellSilentPortal
+end
+
+category groupArcaneScrollSpells1
+  [ 4]  spellIronguts
+  [ 4]  spellCorrosiveGrasp
+  [ 4]  spellSummonUndeadI
+  [ 4]  spellKnowProtections
+  [ 4]  spellNyborsGentleReminder
+  [ 4]  spellForcewave
+  [ 4]  spellHorizikaulsBoom
+  [ 4]  spellIceDagger
+  [ 4]  spellShelgarnsPersistentBlade
+  [ 4]  spellNetOfShadows
+  [ 4]  spellSpiritWorm
+  [ 4]  spellKaupaersSkittishNerves
+  [ 4]  spellLaerelsCuttingHand
+  [ 4]  spellLaunchItem
+  [ 4]  spellLowLightVision
+  [ 4]  spellSpeedSwim
+end
+
+category groupArcaneScrollSpells2
+  [ 4]  spellIgedrazaarsMiasma
+  [ 4]  spellSummonUndeadII
+  [ 4]  spellBatteringRam
+  [ 4]  spellCloudOfBewilderment
+  [ 4]  spellCombust
+  [ 4]  spellFlameDagger
+  [ 4]  spellForceLadder
+  [ 4]  spellGedleesElectricLoop
+  [ 4]  spellDisguiseUndead
+  [ 4]  spellDeathArmor
+  [ 4]  spellLifeBolt
+  [ 4]  spellShroudOfUndeath
+  [ 4]  spellBalagarnsIronHorn
+  [ 4]  spellScent
+  [ 4]  spellStoneBones
+end
+
+category groupArcaneScrollSpells3
+  [ 4]  spellReverseArrows
+  [ 4]  spellMestilsAcidBreath
+  [ 4]  spellSummonUndeadIII
+  [ 4]  spellNyborsMildAdmonishment
+  [ 4]  spellScintillatingSphere
+  [ 4]  spellShatterfloor
+  [ 4]  spellSteeldance
+  [ 4]  spellKhelbensSuspendedSilence
+  [ 4]  spellHealingTouch
+  [ 4]  spellSpiderPoison
+  [ 4]  spellUndeadLieutenant
+  [ 4]  spellUndeadTorch
+  [ 4]  spellAmanuensis
+  [ 4]  spellBlindsight
+  [ 4]  spellGreaterMageHand
+  [ 4]  spellWeaponOfImpact
+end
+
+category groupArcaneScrollSpells4
+  [ 4]  spellWallOfChaos
+  [ 4]  spellWallOfEvil
+  [ 4]  spellWallOfGood
+  [ 4]  spellWallOfLaw
+  [ 4]  spellSummonUndeadIV
+  [ 4]  spellExplosiveCascade
+  [ 4]  spellTirumaelsEnergySpheres
+  [ 4]  spellShadowWell
+  [ 4]  spellBacklash
+  [ 4]  spellDarssonsPotion
+  [ 4]  spellGhorusTothsMetalMelt
+  [ 4]  spellGutsnake
+  [ 4]  spellIronBones
+  [ 4]  spellSpellEnhancer
+end
+
+category groupArcaneScrollSpells5
+  [ 4]  spellDimensionalLock
+  [ 4]  spellMestilsAcidSheath
+  [ 4]  spellSummonUndeadV
+  [ 4]  spellBallLightning
+  [ 4]  spellFirebrand
+  [ 4]  spellHorizikaulsVersatileVibration
+  [ 4]  spellShadowHand
+  [ 4]  spellKissOfTheVampire
+  [ 4]  spellLutzaensFrequentJaunt
+  [ 4]  spellSimbulsSpellMatrix
+end
+
+category groupArcaneScrollSpells6
+  [ 4]  spellFireSpiders
+  [ 4]  spellAcidStorm
+  [ 4]  spellCacophonicShield
+  [ 4]  spellPrismaticEye
+  [ 4]  spellUndeathToDeath
+  [ 4]  spellDhularksGlasstrike
+  [ 4]  spellEnergyTransformationShield
+  [ 4]  spellFiendform
+  [ 4]  spellHardening
+  [ 4]  spellTranslocationTrick
+end
+
+category groupArcaneScrollSpells7
+  [ 4]  spellAntimagicAura
+  [ 4]  spellGreaterIronguard
+  [ 4]  spellVipergout
+  [ 4]  spellNyborsSternReproof
+  [ 4]  spellGreatThunderclap
+  [ 4]  spellZajimarnsIceClawPrison
+  [ 4]  spellGemjump
+  [ 4]  spellMassTeleport
+  [ 4]  spellSimbulsSpellSequencer
+  [ 4]  spellSimbulsSynostodweomer
+end
+
+category groupArcaneScrollSpells8
+  [ 4]  spellSpellEngine
+  [ 4]  spellTranscribeSymbol
+  [ 4]  spellNyborsWrathfulCastigation
+  [ 4]  spellZajimarnsFieldOfIcyRazors
+  [ 4]  spellSkeletalGuard
+  [ 4]  spellBlackstaff
+  [ 4]  spellSimbulsSkeletalDeliquescence
+end
+
+category groupArcaneScrollSpells9
+  [ 4]  spellElminstersEffulgentEpuration
+  [ 4]  spellMawOfChaos
+  [ 4]  spellBlackBladeOfDisaster
+  [ 4]  spellZajimarnsAvalanche
+  [ 4]  spellAlamanthersReturn
+  [ 4]  spellSimbulsSpellTrigger
+end
+
+category groupDivineScrollSpells1
+  [ 4]  spellFaithHealing
+  [ 4]  spellHandfire
+  [ 4]  spellVisionOfGlory
+  [ 4]  spellWieldskull
+end
+
+category groupDivineScrollSpells2
+  [ 4]  spellAuraAgainstFlame
+  [ 4]  spellBodyBlades
+  [ 4]  spellCurseOfIllFortune
+  [ 4]  spellHandOfDivinity
+  [ 4]  spellSpectralStag
+  [ 4]  spellSpellShield
+  [ 4]  spellStoneBones
+end
+
+category groupDivineScrollSpells3
+  [ 4]  spellAmanuensis
+  [ 4]  spellCircleDance
+  [ 4]  spellDarkWay
+  [ 4]  spellDarkfire
+  [ 4]  spellForceward
+  [ 4]  spellMaceOfOdo
+  [ 4]  spellMysticLash
+  [ 4]  spellRemedyModerateWounds
+  [ 4]  spellUnderstandDevice
+  [ 4]  spellWeaponOfImpact
+end
+
+category groupDivineScrollSpells4
+  [ 4]  spellBlindsight
+  [ 4]  spellDoomtide
+  [ 4]  spellFavorOfIlmater
+  [ 4]  spellHandOfTorm
+  [ 4]  spellIronBones
+  [ 4]  spellKnowVulnerabilities
+  [ 4]  spellRevenance
+  [ 4]  spellSkullOfSecrets
+  [ 4]  spellWallOfChaos
+  [ 4]  spellWallOfEvil
+  [ 4]  spellWallOfGood
+  [ 4]  spellWallOfLaw
+  [ 4]  spellWeaponOfTheDeity
+end
+
+category groupDivineScrollSpells5
+  [ 4]  spellBattletide
+  [ 4]  spellCrawlingDarkness
+  [ 4]  spellMonstrousRegeneration
+  [ 4]  spellSpellPhylactery
+end
+
+category groupDivineScrollSpells6
+  [ 4]  spellAzuthsExaltedTriad
+  [ 4]  spellSpellmantle
+  [ 4]  spellStoneWalk
+  [ 4]  spellSuppressGlyph
+  [ 4]  spellUndeathToDeath
+end
+
+category groupDivineScrollSpells7
+  [ 4]  spellAzuthsSpellShield
+  [ 4]  spellDeathDragon
+  [ 4]  spellFortunateFate
+  [ 4]  spellHolyStar
+  [ 4]  spellUndeathAfterDeath
+end
+
+category groupDivineScrollSpells8
+  [ 4]  spellDeathPact
+  [ 4]  spellGeneralOfUndeath
+  [ 4]  spellStormrage
+end
+
+category groupDivineScrollSpells9
+  [ 4]  spellUndeathsEternalFoe
+end
+

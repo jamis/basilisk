@@ -1,0 +1,9 @@
+/* data submitted by Spencer "the Sigil" Cooley" */
+
+sourceMagicOfFaerun ( sourcesMagicOfFaerun groupAllSources )
+  .name "Magic of Faerun"
+end
+
+#include "mof_feats.bsk"
+#include "mof_spells.bsk"
+
