@@ -973,6 +973,7 @@ static BSKI32 s_execCode( BSKExecutionEnvironment* env, BSKRule* rule ) {
       case OP_LINE:
         pc++;
         env->line = *(BSKUI32*)(&rule->code[pc]);
+				env->stackFrame->line = env->line;
         pc += sizeof( BSKUI32 ) - 1;
         break;
 
@@ -1712,8 +1713,6 @@ static BSKI32 s_callSub( BSKExecutionEnvironment *env,
   s_popStackItem( env->stackFrame );
 
   if( rule != 0 ) {
-    BSKUI32 oldLine;
-
     /* execute a rule -- create the new stack frame and populate it with
      * the parameters, return value, and currently executing rule */
 
@@ -1736,10 +1735,6 @@ static BSKI32 s_callSub( BSKExecutionEnvironment *env,
       BSKCopyValue( &(v->value), parmList[i] );
     }
 
-    /* save the currently executing line number */
-
-    oldLine = env->line;
-
     /* execute the requested rule */
 
     rc = s_execCode( env, rule );
@@ -1759,7 +1754,7 @@ static BSKI32 s_callSub( BSKExecutionEnvironment *env,
 
     /* restore the currently executing line */
 
-    env->line = oldLine;
+    env->line = env->stackFrame->line;
 
     /* collect all transient values from the parameters into the current
      * stack frame, and invalidate and free the parameters. */
