@@ -1,13 +1,12 @@
-template in ( groupMundaneItems ) { name cost sources }
-  miAlchemistsFire { "alchemist's fire"  20 gp sourcesCoreRules }
-  miAcid { "acid flask(s)"  10 gp sourcesCoreRules }
-  miSmokestick { "smokestick(s)"  20 gp sourcesCoreRules }
-  miHolyWater { "holy water flask(s)"  25 gp sourcesCoreRules }
-  miThunderstone { "thunderstone(s)"  30 gp sourcesCoreRules }
-  miAntitoxin { "antitoxin dose(s)"  50 gp sourcesCoreRules }
-  miTanglefootBag { "tanglefoot bag(s)"  50 gp sourcesCoreRules }
+category groupAlchemicalItems
+  [ 5] { .magnitude 1d4 .type miAlchemistsFire }
+  [ 5] { .magnitude 2d4 .type miAcid }
+  [ 2] { .magnitude 1d4 .type miSmokestick }
+  [ 6] { .magnitude 1d4 .type miHolyWater }
+  [ 2] { .magnitude 1d4 .type miThunderstone }
+  [ 5] { .magnitude 1d4 .type miAntitoxin }
+  [ 2] { .magnitude 1d4 .type miTanglefootBag }
 end
-
 
 category groupMundaneItemSizes1
   [10] small
@@ -114,25 +113,20 @@ category groupCommonRangedWeapons
   [ 5] weaponMightyCompositeLongbow4
 end
 
+
 category groupMundaneItemTable
-  [ 5] { .magnitude 1d4 .type miAlchemistsFire }
-  [ 5] { .magnitude 2d4 .type miAcid }
-  [ 2] { .magnitude 1d4 .type miSmokestick }
-  [ 6] { .magnitude 1d4 .type miHolyWater }
-  [ 2] { .magnitude 1d4 .type miThunderstone }
-  [ 2] { .magnitude 1   .type armorChainShirt .subtable groupMundaneItemSizes1 }
-  [ 5] { .magnitude 1d4 .type miAntitoxin }
-  [ 2] { .magnitude 1d4 .type miTanglefootBag }
-  [ 5] { .magnitude 1   .type armorStuddedLeather .bonuses ( masterworkArmor ) .subtable groupMundaneItemSizes2 }
-  [ 5] { .magnitude 1   .subtable groupMundaneMightyCompositeShortbows }
-  [ 4] { .magnitude 1   .type armorBreastplate }
-  [ 5] { .magnitude 1   .type armorBandedMail }
-  [18] { .magnitude 1   .bonuses ( masterworkWeapon ) .subtable groupCommonMeleeWeapons }
-  [ 2] { .magnitude 1   .bonuses ( masterworkWeapon ) .subtable groupUncommonWeapons }
-  [ 5] { .magnitude 1   .bonuses ( masterworkWeapon ) .subtable groupCommonRangedWeapons }
-  [10] { .magnitude 1   .subtable groupMundaneMightyCompositeLongbows }
-  [10] { .magnitude 1   .type armorHalfPlate }
-  [ 7] { .magnitude 1   .type armorFullPlate }
+	[27] groupAlchemicalItems
+  [ 2] { .magnitude 1 .type armorChainShirt .subtable groupMundaneItemSizes1 }
+  [ 5] { .magnitude 1 .type armorStuddedLeather .bonuses ( masterworkArmor ) .subtable groupMundaneItemSizes2 }
+  [ 5] { .magnitude 1 .subtable groupMundaneMightyCompositeShortbows }
+  [ 4] { .magnitude 1 .type armorBreastplate }
+  [ 5] { .magnitude 1 .type armorBandedMail }
+  [18] { .magnitude 1 .bonuses ( masterworkWeapon ) .subtable groupCommonMeleeWeapons }
+  [ 2] { .magnitude 1 .bonuses ( masterworkWeapon ) .subtable groupUncommonWeapons }
+  [ 5] { .magnitude 1 .bonuses ( masterworkWeapon ) .subtable groupCommonRangedWeapons }
+  [10] { .magnitude 1 .subtable groupMundaneMightyCompositeLongbows }
+  [10] { .magnitude 1 .type armorHalfPlate }
+  [ 7] { .magnitude 1 .type armorFullPlate }
 end
 
 
@@ -195,7 +189,7 @@ rule rLookupMundaneItem( options )
       exit rule;
     end
 
-    mi = any( c );
+    mi = rCascadingLookup( c );
     remove( c, mi );
 
     mi = rConfigureMundaneItem( mi, options ); 

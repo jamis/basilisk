@@ -81,9 +81,12 @@ template in ( groupPrerequisiteTypes ) { name }
   ptMinimumCharacterLevel { "minimum character level" }
   ptMinimumSpellcasterLevel { "minimum spellcaster level" }
   ptIsClericOrPaladin { "is cleric or paladin" }
-  ptIsWizard { "is wizard" }
-  ptIsFighter { "is fighter" }
+	ptIsClass { "is class" }
   ptMinimumClassLevel { "minimum class level" }
+  ptMinimumSkillRank { "minimum skill rank" }
+	ptOrCondition { "or condition" }
+	ptAndCondition { "and condition" }
+	ptNotCondition { "not condition" }
 end
 
 

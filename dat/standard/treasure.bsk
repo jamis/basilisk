@@ -602,7 +602,28 @@ end
 
 rule rAddItemToHoard( hoard item )
   hoard.cost = hoard.cost + item.cost;
-  add( hoard.contents, item );
+	valid = true;
+
+  if item.type ne "gem" or item.type ne "art" then
+		i = SearchCategory( hoard.contents, "name", item.name );
+		if i ne null then
+		  valid = false;
+			if has( i, "magnitude" ) and has( item, "magnitude" ) then
+				i.magnitude = i.magnitude + item.magnitude;
+			elseif has( i, "magnitude" ) then
+			  i.magnitude = i.magnitude + 1;
+      elseif has( item, "magnitude" ) then
+			  i.magnitude = item.magnitude + 1;
+			else
+				i.magnitude = 2;
+			end
+			i.cost = i.cost + item.cost;
+		end
+	end
+
+	if valid then
+		add( hoard.contents, item );
+	end
 end
 
 

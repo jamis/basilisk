@@ -1,0 +1,9 @@
+template ( groupMundaneItems ) { name cost sources }
+  miAlchemistsFire { "alchemist's fire"  20 gp sourcesCoreRules }
+  miAcid { "acid flask(s)"  10 gp sourcesCoreRules }
+  miSmokestick { "smokestick(s)"  20 gp sourcesCoreRules }
+  miHolyWater { "holy water flask(s)"  25 gp sourcesCoreRules }
+  miThunderstone { "thunderstone(s)"  30 gp sourcesCoreRules }
+  miAntitoxin { "antitoxin dose(s)"  50 gp sourcesCoreRules }
+  miTanglefootBag { "tanglefoot bag(s)"  50 gp sourcesCoreRules }
+end

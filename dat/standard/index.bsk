@@ -23,6 +23,7 @@
 #include "intelligence.bsk"
 #include "cursed.bsk"
 
+#include "items.bsk"
 #include "mundane.bsk"
 #include "scrolls.bsk"
 #include "magicArmor.bsk"
@@ -43,3 +44,4 @@
 
 #include "snfist.bsk"   /* Sword & Fist */
 #include "scitadel.bsk" /* the Sunless Citadel */
+#include "dragon.bsk"   /* Dragon Magazine data */
