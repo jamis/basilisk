@@ -351,21 +351,21 @@ attribute name string
 attribute birth string
 
 template { name birth }
-Jamis { "Jamis Gordon Buck"  "25 Jul 1974" }
-Eric { "Eric Victor Bristow" "4 Feb 1976" }
-Nicole { "Nicole Suzanne Buck" "30 Apr 1976" }
-Emily { "Emily Rene Bristow" "28 Aug 1978" }
-Rebecca { "Rebecca Lynn Bristow" "3 Dec 1979" }
-Andrew { "Andrew Michael Bristow" "8 May 1986" }
+  Jamis { "Jamis Gordon Buck"  "25 Jul 1974" }
+  Eric { "Eric Victor Bristow" "4 Feb 1976" }
+  Nicole { "Nicole Suzanne Buck" "30 Apr 1976" }
+  Emily { "Emily Rene Bristow" "28 Aug 1978" }
+  Rebecca { "Rebecca Lynn Bristow" "3 Dec 1979" }
+  Andrew { "Andrew Michael Bristow" "8 May 1986" }
 end
 
 category familyMembers
-Jamis
-Eric
-Nicole
-Emily
-Rebecca
-Andrew
+  Jamis
+  Eric
+  Nicole
+  Emily
+  Rebecca
+  Andrew
 end
 </PRE>
 		</BLOCKQUOTE>
@@ -377,35 +377,35 @@ end
 		as follows:
 		<BLOCKQUOTE>
 <PRE>
-template ( familyMembers ) { name birth }
-Jamis { "Jamis Gordon Buck"  "25 Jul 1974" }
-Eric { "Eric Victor Bristow" "4 Feb 1976" }
-Nicole { "Nicole Suzanne Buck" "30 Apr 1976" }
-Emily { "Emily Rene Bristow" "28 Aug 1978" }
-Rebecca { "Rebecca Lynn Bristow" "3 Dec 1979" }
-Andrew { "Andrew Michael Bristow" "8 May 1986" }
+template <B>in ( familyMembers )</B> { name birth }
+  Jamis { "Jamis Gordon Buck"  "25 Jul 1974" }
+  Eric { "Eric Victor Bristow" "4 Feb 1976" }
+  Nicole { "Nicole Suzanne Buck" "30 Apr 1976" }
+  Emily { "Emily Rene Bristow" "28 Aug 1978" }
+  Rebecca { "Rebecca Lynn Bristow" "3 Dec 1979" }
+  Andrew { "Andrew Michael Bristow" "8 May 1986" }
 end
 </PRE>
 		</BLOCKQUOTE>
-		The parenthesis after the "template" keyword lists all
-		the categories that all things defined by this template
-		will belong to.  The categories do not have to have been
-		previously defined -- if they are not defined when the
-		parser reads the template, a new category by that name is
-		created.  Multiple categories may be specified here -- just
-		separate each category name by at least one space.  You can 
-		further define each individual member of the template to be
-		in other categories, by putting a parenthetical list of 
+		The "in" keyword, followed by the parenthesis after the
+		"template" keyword lists all the categories that all things
+		defined by this template will belong to.  The categories do
+		not have to have been previously defined -- if they are not
+		defined when the parser reads the template, a new category by
+		that name is created.  Multiple categories may be specified
+		here -- just separate each category name by at least one space.
+		You can further define each individual member of the template to
+		be in other categories, by putting a parenthetical list of 
 		category identifiers after the thing identifier, like so:
 		<BLOCKQUOTE>
 <PRE>
 template ( familyMembers ) { name birth }
-Jamis ( buckFamily ) { "..." "..." }
-Eric ( bristowFamily ) { "..." "..." }
-Nicole ( buckFamily ) { "..." "..." }
-Emily ( bristowFamily ) { "..." "..." }
-Rebecca ( bristowFamily ) { "..." "..." }
-Andrew ( bristowFamily ) { "..." "..." }
+  Jamis <B>in ( buckFamily )</B> { "..." "..." }
+  Eric <B>in ( bristowFamily )</B> { "..." "..." }
+  Nicole <B>in ( buckFamily )</B> { "..." "..." }
+  Emily <B>in ( bristowFamily )</B> { "..." "..." }
+  Rebecca <B>in ( bristowFamily )</B> { "..." "..." }
+  Andrew <B>in ( bristowFamily )</B> { "..." "..." }
 end
 </PRE>
 		</BLOCKQUOTE>
@@ -418,7 +418,7 @@ end
 		the basic format, as demonstrated here:
 		<BLOCKQUOTE>
 <PRE>
-longSword ( weapons slashingWeapons )
+longSword <B>in ( weapons slashingWeapons )</B>
 .name "longsword"
 .cost 15 gp
 .weight 4 lb
@@ -482,7 +482,7 @@ end
 attribute name string
 attribute favoriteMovies category
 
-template ( allMovies ) { name }
+template <B>in ( allMovies )</B> { name }
 Bambi { "Bambi" }
 RobinHood { "Robin Hood" }
 TrumanShow { "The Truman Show" }
@@ -493,18 +493,18 @@ ToyStory2 { "Toy Story 2" }
 end
 
 Jamis
-.name "Jamis Buck"
-.favoriteMovies ( ToyStory2 
-							BugsLife 
-							TrumanShow 
-							{ .name "Secret of Roan Inish" } )
+  .name "Jamis Buck"
+  .favoriteMovies ( ToyStory2 
+                    BugsLife 
+                    TrumanShow 
+                    { .name "Secret of Roan Inish" } )
 end
 
 Tarasine
-.name "Tarasine Buck"
-.favoriteMovies ( [3] MrHollandsOpus 
-							Contact 
-							TrumanShow )
+  .name "Tarasine Buck"
+  .favoriteMovies ( [3] MrHollandsOpus 
+                    Contact 
+                    TrumanShow )
 end
 </PRE>
 		</BLOCKQUOTE>
