@@ -113,6 +113,7 @@
 #define TT_PUNCT_OCTOTHORP           ( 116 )
 #define TT_PUNCT_DOLLAR              ( 117 )
 #define TT_PUNCT_SLASH               ( 118 )
+#define TT_PUNCT_COLON               ( 119 )
 
 /* ---------------------------------------------------------------------- *
  * Type definitions
