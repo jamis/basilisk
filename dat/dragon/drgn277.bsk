@@ -1,0 +1,27 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dragon Magazine issue #277, converted to Basilisk format by
+ * Robert Szkotak (dkphoenix@hotmail.com), aka "LightPhoenix" on
+ * Eric Noah's messageboards.
+ * --------------------------------------------------------------------- */
+
+/* "Unusual Suspects", p. 62-67 */
+
+template in ( groupPerformSubskills ) { name sources }
+  performHistoricalRecitation { "historical recitation" sourcesDragon }
+  perfromClanGenealogy { "clan geneology" sourcesDragon }
+  performBaritoneFlute { "baritone flute" sourcesDragon }
+  performViol { "viol" sourcesDragon }
+  performHorns { "horns" sourcesDragon }
+  performConchShell { "conch shell" sourcesDragon }
+  performOboe { "oboe" sourcesDragon }
+  performWhistling { "whistling" sourcesDragon }
+  performHumming { "humming" sourcesDragon }
+  performHurdyGurdy { "hurdy gurdy" sourcesDragon }
+  performFiddle { "fiddle" sourcesDragon }
+  performChimes { "chimes" sourcesDragon }
+  performGlockenspiel { "glockenspiel" sourcesDragon }
+  performTambourine { "tambourine" sourcesDragon }
+  performStampingStick { "stamping stick" sourcesDragon }
+  performRainStick { "rain stick" sourcesDragon }
+  performCymbals { "cymbals" sourcesDragon }
+end

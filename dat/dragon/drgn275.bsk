@@ -1,0 +1,294 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dragon Magazine issue #275, converted to Basilisk format by
+ * Robert Szkotak (dkphoenix@hotmail.com), aka "LightPhoenix" on
+ * Eric Noah's messageboards.
+ * --------------------------------------------------------------------- */
+
+/* "Unusual Suspects", p. 32-36 */
+
+template in ( groupArmor ) { name cost bonuses maxDexBonus armorCheckPenalty arcaneSpellFailure speedModifier weight sources }
+  armorBone { "bone armor"  20 gp  ( AC3 )  +4  -3  15  1  20 lb sourcesDragon }
+  armorCord { "cord armor"  8 gp  ( AC2 )  +4  -2  20  1  15 lb sourcesDragon }
+  armorWood { "wood armor"  15 gp  ( AC3 )  +4  -3  15  1  20 lb sourcesDragon }
+end
+
+category groupLightArmor
+  armorBone armorCord armorWood
+end
+
+category groupRandomArmorType
+	[ 1] armorBone
+	[ 1] armorCord
+	[ 1] armorWood
+end
+
+
+/* "How To Design a Feat", p.38-41 */
+
+featImprovedRapidShot in ( groupAllFeats groupGeneralFeats )
+  .name "improved rapid shot"
+  .takeMultiple no
+  .conditions ( { .type ptMinimumAbilityScore .affectedThing astDexterity .magnitude 13 }
+                	{ .type ptFeat .affectedThing featPointBlankShot }
+	{ .type ptFeat .affectedThing featRapidShot }
+	{ .type ptMinimumBaseAttack .magnitude 8 } )
+  .specialAttacks ( { .description "ignore -2 penalty when using Rapid Shot" } )
+  .sources sourcesDragon
+end
+
+featDelaySpell in (groupAllFeats groupMetaMagicFeats )
+  .name "delay spell"
+  .takeMultiple no
+  .sources sourcesDragon
+end
+
+
+/* "The Right Tool for the Job", p.42-45 */
+
+template in ( groupAspectType ) { name }
+  asArcaneSpellFailure      { "arcane spell failure" }
+end
+
+template in ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
+  weaponBarbedBolas { "barbed bolas" 10 gp 1d6 20 2 4 lb small sourcesDragon }
+  weaponBlowgun { "blowgun" 20 gp 1d3 20 2 2 lb large sourcesDragon }
+  weaponBolas { "bolas" 4 gp $ 20 2 3 lb small sourcesDragon }
+  weaponBoomerang { "boomerang" 20 gp $ 20 2 2 lb small sourcesDragon }
+  weaponChatkcha { "chatkcha" 40 gp 1d6 20 2 1/2 lb small sourcesDragon }
+  weaponCrescentKnife { "crescent knife" 20 gp 1d3 20 2 1 lb small sourcesDragon }
+  weaponDart2 { "dart (tiny)" 1 sp $ $ $ 1/20 lb tiny sourcesDragon }
+  weaponDwarfBucklerAxe { "dwarf buckler-axe" 30 gp 1d6 20 3 6 lb small sourcesDragon }
+  weaponElvenThinblade { "elven thinblade" 100 gp 1d8 18 2 3 lb medium sourcesDragon }
+  weaponGnomeTortoiseBlade { "gnome tortoise blade" 20 gp 1d4 19 2 1 lb tiny sourcesDragon }
+  weaponGreatScimitar { "great scimitar" 50 gp 2d6 18  2 16 lb large sourcesDragon }
+  weaponGythka { "gythka" 100 gp 1d8 20 2 12 lb large sourcesDragon }
+  weaponHalflingBlowgun { "halfling blowgun"  15 gp 1d2 20 2 1 lb medium sourcesDragon }
+  weaponHalflingLajatang { "halfling lajatang" 80 gp 1d6 20 2 3 lb medium sourcesDragon }
+  weaponLajatang { "lajatang" 90 gp 1d8 20 2 7 lb large sourcesDragon }
+  weaponMancatcher { "mancatcher" 30 gp $ 20 2 8 lb large sourcesDragon }
+  weaponOrcCrusher { "orc crusher" 60 gp 1d8 20 2 15 lb large sourcesDragon }
+  weaponScourge { "scourge" 20 gp 1d3 20 2 2 lb medium sourcesDragon }
+end
+
+weaponBolas
+  .rangeIncrement 10 ft
+  .subdualDamage 1d6
+end
+
+weaponBarbedBolas
+  .rangeIncrement 10 ft
+end
+
+weaponBoomerang
+  .rangeIncrement 20 ft
+  .subdualDamage 1d4
+end
+
+weaponChatkcha
+  .rangeIncrement 20 ft
+end
+
+weaponDwarfBucklerAxe
+  .bonuses ( { .type btUnnamed .aspect asAC .magnitude +1 } 
+						 { .type btUnnamed .aspect asArmorCheckPenalty .magnitude -1 }
+						 { .type btUnnamed .aspect asArcaneSpellFailure .magnitude -5 } )
+end
+
+weaponGnomeTortoiseBlade
+  .bonuses ( { .type btUnnamed .aspect asAC .magnitude +1 } 
+						 { .type btUnnamed .aspect asArmorCheckPenalty .magnitude -1 }
+						 { .type btUnnamed .aspect asArcaneSpellFailure .magnitude -5 } )
+end
+
+weaponGythka
+  .secondaryDamage 1d8
+end
+
+weaponHalflingLajatang
+  .secondaryDamage 1d6
+end
+
+weaponLajatang
+  .secondaryDamage 1d6
+end
+
+weaponMancatcher
+  .subdualDamage 1d4
+end
+
+category groupExoticWeapon
+	weaponGnomeTortoiseBlade weaponDwarfBucklerAxe weaponCrescentKnife weaponHalflingLajatang
+	weaponScourge weaponElvenThinblade weaponOrcCrusher weaponGythka weaponLajatang weaponMancatcher
+	weaponGreatScimitar weaponBolas weaponBarbedBolas weaponBoomerang weaponChatkcha weaponHalflingBlowgun
+	weaponDart2 weaponBlowgun
+end
+
+category groupMeleeWeapon
+	weaponGnomeTortoiseBlade weaponDwarfBucklerAxe weaponCrescentKnife weaponHalflingLajatang weaponScourge
+	weaponElvenThinblade weaponOrcCrusher weaponGythka weaponLajatang weaponMancatcher weaponGreatScimitar
+end
+
+category groupRangedWeapon
+	weaponBolas weaponBarbedBolas weaponBoomerang weaponChatkcha weaponHalflingBlowgun weaponDart2 weaponBlowgun
+end
+
+category groupThrownWeapon
+	weaponBolas weaponBarbedBolas weaponBoomerang weaponChatkcha
+end
+
+category groupPropelledWeapon
+	weaponHalflingBlowgun weaponBlowgun
+end
+
+category groupBludgeoningWeapon
+	weaponOrcCrusher weaponBolas weaponBoomerang
+end
+
+category groupPiercingWeapon
+	weaponGnomeTortoiseBlade weaponElvenThinblade weaponBarbedBolas weaponHalflingBlowgun weaponBlowgun
+end
+
+category groupSlashingWeapon
+	weaponDwarfBucklerAxe weaponCrescentKnife weaponHalflingLajatang weaponScourge weaponGythka
+	weaponLajatang weaponGreatScimitar weaponChatkcha
+end
+
+
+category groupDragon275MeleeWeapons
+  [ 1] weaponCrescentKnife
+  [ 1] weaponDwarfBucklerAxe
+  [ 1] weaponElvenThinblade
+  [ 1] weaponGnomeTortoiseBlade
+  [ 1] weaponGreatScimitar
+  [ 1] weaponGythka
+  [ 1] weaponHalflingLajatang
+  [ 1] weaponLajatang
+  [ 1] weaponMancatcher
+  [ 1] weaponOrcCrusher
+  [ 1] weaponScourge
+end
+
+category groupDragon275RangedWeapons
+  [ 1] weaponBarbedBolas
+  [ 1] weaponBlowgun
+  [ 1] weaponBolas
+  [ 1] weaponBoomerang
+  [ 1] weaponChatkcha
+  [ 1] weaponDart2
+  [ 1] weaponHalflingBlowgun
+end
+
+category groupUncommonWeapons
+  [10] groupDragon275MeleeWeapons
+	[ 5] groupDragon275RangedWeapons
+end
+
+/* "Alister's Augmentations", p.84-87 */
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellBattleHymn { "Battle Hymn" schEnchantment subschCharm (descMindAffecting) sourcesDragon }
+  spellBristle { "Bristle" schTransmutation $ $ sourcesDragon }
+  spellBurningSword { "Burning Sword" schEvocation $ $ sourcesDragon }
+  spellDiamondsteel { "Diamondsteel" schTransmutation $ $ sourcesDragon }
+  spellDolorousBlow { "Dolorous Blow" schTransmutation $ $ sourcesDragon }
+  spellHeroics { "Heroics" schTransmutation $ $ sourcesDragon }
+  spellHurl { "Hurl" schTransmutation $ $ sourcesDragon }
+  spellIndomitability { "Indomitability" schAbjuration $ $ sourcesDragon }
+  spellLesserSpellImmunity { "Lesser Spell Immunity" schAbjuration $ $ sourcesDragon }
+  spellMassStrength { "Mass Strength" schTransmutation $ $ sourcesDragon }
+  spellRapidStrikes { "Rapid Strikes" schTransmutation $ $ sourcesDragon }
+  spellShieldbearer { "Shieldbearer" schTransmutation $ $ sourcesDragon }
+  spellWeaponShift { "Weapon Shift" schTransmutation $ $ sourcesDragon }
+end
+
+category groupSpellsBardL2
+  spellWeaponShift spellRapidStrikes
+end
+
+category groupSpellsBardL3
+  spellBattleHymn
+end
+
+category groupSpellsBardL4
+  spellDiamondsteel spellDolorousBlow
+end
+
+category groupSpellsSorcererL1
+  spellShieldbearer spellWeaponShift
+end
+
+category groupSpellsSorcererL2
+  spellBristle spellLesserSpellImmunity spellHurl spellRapidStrikes
+end
+
+category groupSpellsSorcererL3
+  spellDiamondsteel
+end
+
+category groupSpellsSorcererL4
+  spellBurningSword spellDolorousBlow spellHeroics spellBattleHymn
+end
+
+category groupSpellsSorcererL5
+  spellIndomitability
+end
+
+category groupSpellsSorcererL6
+  spellMassStrength
+end
+
+category groupSpellsWizardL1
+  spellShieldbearer spellWeaponShift
+end
+
+category groupSpellsWizardL2
+  spellBristle spellLesserSpellImmunity spellHurl spellRapidStrikes
+end
+
+category groupSpellsWizardL3
+  spellDiamondsteel
+end
+
+category groupSpellsWizardL4
+  spellBurningSword spellDolorousBlow spellHeroics spellBattleHymn
+end
+
+category groupSpellsWizardL5
+  spellIndomitability
+end
+
+category groupSpellsWizardL6
+  spellMassStrength
+end
+
+category groupArcaneScrollSpells1
+  [ 4] spellShieldbearer
+  [ 4] spellWeaponShift
+end
+
+category groupArcaneScrollSpells2
+  [ 4] spellBristle
+  [ 4] spellLesserSpellImmunity
+  [ 4] spellHurl
+  [ 4] spellRapidStrikes
+end
+
+category groupArcaneScrollSpells3
+  [ 4] spellDiamondsteel
+end
+
+category groupArcaneScrollSpells4
+  [ 4] spellBattleHymn
+  [ 4] spellBurningSword
+  [ 4] spellDolorousBlow
+  [ 4] spellHeroics
+end
+
+category groupArcaneScrollSpells5
+  [ 4] spellIndomitability
+end
+
+category groupArcaneScrollSpells6
+  [ 4] spellMassStrength
+end
+

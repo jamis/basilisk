@@ -1,0 +1,53 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dragon Magazine issue #274, converted to Basilisk format by
+ * Robert Szkotak (dkphoenix@hotmail.com), aka "LightPhoenix" on
+ * Eric Noah's messageboards.
+ * --------------------------------------------------------------------- */
+
+/* "How To Design a Feat", p.38-41 */
+
+featRangedDisarm in ( groupAllFeats groupGeneralFeats )
+  .name "ranged disarm"
+  .takeMultiple yes
+  .conditions ( { .type ptMinimumAbilityScore .affectedThing astDexterity .magnitude 13 }
+               	{ .type ptFeat .affectedThing featPointBlankShot }
+								{ .type ptFeat .affectedThing featPreciseShot }
+								{ .type ptMinimumBaseAttack .magnitude 5 } )
+  .specialAttacks ( { .description "can disarm with a ranged weapon" } )
+  .sources sourcesDragon
+end
+
+featDeflectRangedAttack in ( groupAllFeats groupGeneralFeats )
+  .name "deflect ranged attack"
+  .takeMultiple yes
+  .conditions ( { .type ptMinimumAbilityScore .affectedThing astDexterity .magnitude 13 }
+               	{ .type ptFeat .affectedThing featPointBlankShot }
+								{ .type ptFeat .affectedThing featPreciseShot }
+								{ .type ptFeat .affectedThing featRangedDisarm }
+								{ .type ptMinimumBaseAttack .magnitude 5 } )
+  .specialAttacks ( { .description "defelect ranged weapons in flight" } )
+  .sources sourcesDragon
+end
+
+featRangedPin in ( groupAllFeats groupGeneralFeats )
+  .name "ranged pin"
+  .takeMultiple yes
+  .conditions ( { .type ptMinimumAbilityScore .affectedThing astDexterity .magnitude 13 }
+                { .type ptFeat .affectedThing featPointBlankShot }
+								{ .type ptFeat .affectedThing featPreciseShot }
+								{ .type ptMinimumBaseAttack .magnitude 5 } )
+  .specialAttacks ( { .description "can grapple with a ranged weapon" } )
+  .sources sourcesDragon
+end
+
+featRangedSunder in ( groupAllFeats groupGeneralFeats )
+  .name "ranged sunder"
+  .takeMultiple yes
+  .conditions ( { .type ptMinimumAbilityScore .affectedThing astDexterity .magnitude 13 }
+               	{ .type ptFeat .affectedThing featPointBlankShot }
+								{ .type ptFeat .affectedThing featPreciseShot }
+								{ .type ptFeat .affectedThing featRangedPin }
+								{ .type ptMinimumBaseAttack .magnitude 5 } )
+  .specialAttacks ( { .description "deal full damage when sundering with ranged weapons" } )
+  .sources sourcesDragon
+end
