@@ -79,6 +79,9 @@
   /* BSKValue** BSKStackFrameGetParameters( BSKStackFrame* frame ) */
 #define BSKStackFrameGetParameteris(x)           ((x)->parameters)
 
+	/* BSKUI32 BSKStackFrameGetLineNumber( BSKStackFrame* frame ) */
+#define BSKStackFrameGetLineNumber(x)            ((x)->line)
+
 /* ---------------------------------------------------------------------- *
  * Type definitions
  * ---------------------------------------------------------------------- */
@@ -130,6 +133,7 @@ struct __bskstackframe__ {
   BSKCategory* categories;             /* list of all locally instantiated categories */
   BSKArray* arrays;                    /* list of all locally instantiated arrays */
   BSKStackFrame* next;                 /* next stack frame on the stack */
+	BSKUI32 line;                        /* current line number for this stack frame */
 };
 
 struct __bskexecopts__ {
