@@ -1,0 +1,517 @@
+/* ------------------------------------------------------------------------ *
+ * Material in this file is taken from the "Netbook of Magical Treasures"  by
+ * the DnD Community Council.
+ *
+ * Contents are arranged as follows:
+ *  1) special armor abilites
+ *  2) specific armor
+ *  3) special weapon abilities
+ *  4) specific weapons
+ *  5) potions
+ *  6) rings
+ *  7) rods
+ *  8) staffs
+ *  9) wands
+ * 10) wondrous items and cursed items
+ * ------------------------------------------------------------------------ */
+
+
+/* armor special abilities */
+
+
+/* specific armor */
+
+astArmorofDefiance ( groupSpecificArmors )
+  .name "armor of defiance"
+  .prototype armorStuddedLeather
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +2 } )
+  .specialQualities ( { .type satSpellEffect .spell spellDeathWard } )   
+  .cost 64175gp
+  .sources sourcesNboMTDnDCC
+end
+
+astShiftingArmor ( groupSpecificArmors )
+  .name "shifting armor"
+  .prototype armorFullPlate
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +2 } )
+  .specialQualities ( { .description "can alter armor shape" } )   
+  .cost 50650gp
+  .sources sourcesNboMTDnDCC
+end
+
+astBlackArmor ( groupSpecificArmors )
+  .name "black armor"
+  .prototype armorFullPlate
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +3 } )   
+  .cost 45410gp
+  .sources sourcesNboMTDnDCC
+end
+
+astShieldofShelter ( groupSpecificArmors )
+  .name "shield of shelter"
+  .prototype shieldBuckler
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +2 } )
+  .cost 11365gp
+  .sources sourcesNboMTDnDCC
+end
+
+category groupMediumSpecificArmors
+  [10] astArmorofDefiance
+  [10] astShiftingArmor
+  [10] astShieldofShelter
+end
+
+category groupMajorSpecificArmors
+  [25] astShieldofShelter
+  [25] astArmorofDefiance
+  [25] astShiftingArmor
+  [10] astBlackArmor
+end
+
+
+/* weapon special abilities */
+
+
+wsaNight
+  .name "night"
+  .installWeaponAbility rInstallNightAbility
+  .marketPriceWeaponModifier +2
+  .sources sourcesNboMTDnDCC
+end
+
+rule rInstallNightAbility( item ability )
+  if not Exists( groupSlashingWeapon, item.prototype ) and Exists( groupPiercingWeapon, item.prototype ) then
+    exit rule;
+  end
+
+  rInstallNightAbility = ability;
+end
+
+wsaPlagueBlade
+  .name "plague blade"
+  .installWeaponAbility rInstallPlagueBladeAbility
+  .marketPriceWeaponModifier +4
+  .sources sourcesNboMTDnDCC
+end
+
+rule rInstallPlagueBladeAbility( item ability )
+  if not Exists( groupSlashingWeapon, item.prototype ) and Exists( groupPiercingWeapon, item.prototype ) then
+    exit rule;
+  end
+
+  rInstallPlagueBladeAbility = ability;
+end
+
+category groupMeleeWeaponMinorSpecialAbilities
+  [10] wsaNight
+  [10] wsaPlagueBlade
+end
+
+category groupMeleeWeaponMediumSpecialAbilities
+  [15] wsaNight
+  [15] wsaPlagueBlade
+end
+
+category groupMeleeWeaponMajorSpecialAbilities
+  [10] wsaNight
+  [10] wsaPlagueBlade
+end
+
+
+/* specific weapons */
+
+wstAcidBolts
+  .name "acid bolts"
+  .prototype weaponCrossbowBolt
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost  1007 gp
+  .sources sourcesNboMTDnDCC
+end
+
+wstCrossbowofPain
+  .name "crossbow of pain"
+  .prototype weaponLightCrossbow
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 8335 gp
+  .sources sourcesNboMTDnDCC
+end
+
+wstParalyzingBolts
+  .name "paralyzing bolts"
+  .prototype weaponCrossbowBolt
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 647 gp
+  .sources sourcesNboMTDnDCC
+end
+
+wstPickoftheHalfling
+  .name "pick of the halfling"
+  .prototype weaponLightPick
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 72304 gp
+  .sources sourcesNboMTDnDCC
+end
+
+wstSwordofFieryThirst
+  .name "sword of fiery thirst"
+  .prototype weaponLongSword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 } )
+  .cost 98315 gp
+  .sources sourcesNboMTDnDCC
+end
+
+category groupMediumSpecificWeapons
+  [20] wstAcidBolts
+  [20] wstParalyzingBolts
+  [10] wstCrossbowofPain
+  [10] wstSwordofFieryThirst
+end
+
+category groupMajorSpecificWeapons
+  [ 5] wstCrossbowofPain
+  [ 5] wstSwordofFieryThirst
+  [ 5] wstPickoftheHalfling
+end
+
+/* potions */
+
+template ( groupPotions ) { name cost sources }
+  potionNectaroftheGods { "nectar of the gods"  5000 gp  sourcesNboMTDnDCC }
+end
+
+category groupPotionsMedium
+  [ 4] potionNectaroftheGods
+end
+
+category groupPotionsMajor
+  [ 4] potionNectaroftheGods
+end
+
+/* rings */
+
+ringDivineFate ( groupRings )
+  .name "divine fate"
+  .cost 7000 gp
+  .sources sourcesNboMTDnDCC
+end
+
+ringWilting ( groupRings )
+  .name "wilting"
+  .cost 40000 gp
+  .sources sourcesNboMTDnDCC
+end
+
+category groupRingsMinor
+  [10] ringDivineFate
+  [ 5] ringWilting
+end
+
+category groupRingsMedium
+  [10] ringDivineFate
+  [10] ringWilting
+end
+
+
+/* rods */
+
+rodPunishment
+  .name "punishment"
+  .cost 89000 gp
+  .specialAttacks ( { .type satSpellEffect .spell spellHolySmite .description "spell function" .saveDC 21 .frequency 1 .period 1 day }
+                    { .type satSpellEffect .spell spellMarkOfJustice .description "spell function" .saveDC  0 .frequency 1 .period 1 day }
+                    { .type satSpellEffect .spell spellBanishment .description "spell function" .saveDC 23 .frequency 1 .period 1 day }
+                    { .description "rod becomes a +2 light mace" } 
+		    { .description "rod becomes a +3 holy warhammer" } )
+    .sources sourcesNboMTDnDCC
+end
+
+category groupMajorRods
+  [ 5] rodPunishment
+end
+
+/* staffs */
+
+staffDarkStaff
+  .name "dark staff"
+  .cost 67500 gp
+  .init rInitGenericStaffProperties
+  .sources sourcesNboMTDnDCC
+end
+
+staffOfTheRoad
+  .name "the road"
+  .cost 66000 gp
+  .init rInitGenericStaffProperties
+  .sources sourcesNboMTDnDCC
+end
+
+
+category groupMediumStaves
+  [10] staffOfTheRoad
+end
+
+category groupMajorStaves
+  [10] staffOfTheRoad
+  [ 7] staffDarkStaff
+end
+
+
+
+/* wands */
+
+template in ( groupAllWands )  { spell     spellLevel casterLevel sources }
+  wandRecall              { spellRarySMnemonicEnhancer           4   7 sourcesNboMTDnDCC }
+end
+
+category groupMajorWands
+  [ 2] wandRecall
+end
+
+
+/* wondrous items */
+
+wondrousBuskinsOfBruteForce
+  .name "buskins of brute force"
+  .cost 14000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousCloakofFeathers
+  .name "cloak of feathers"
+  .cost 25000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousCloakofHastur
+  .name "cloak of hastur"
+  .cost 9000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousCofferofMending
+  .name "coffer of mending"
+  .cost 1000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousXionsColorGloves
+  .name "xions color-gloves"
+  .cost 4000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousEggShellofPetrification
+  .name "eggshell of petrification"
+  .cost 3300 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousEyesofTerror
+  .name "eyes of terror"
+  .cost 28000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousGlovesofWoundTransfer
+  .name "gloves of wound transfer"
+  .cost 10700 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousHelmoftheNight
+  .name "helm of the night"
+  .cost 6400 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousLuckyUnderwear
+  .name "lucky underwear"
+  .cost 600 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousMedallionofSoulContainment
+  .name "medallion of soul containment"
+  .cost 25000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousMovingPictures1
+  .name "moving pictures (lesser)"
+  .cost 4800 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousMovingPictures2
+  .name "moving pictures (greater)"
+  .cost 10650 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousNeverEmptyCanteen
+  .name "never empty canteen"
+  .cost 500 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousPebbleofDoom
+  .name "pebble of doom"
+  .cost 40000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousPouchoftheSilkWorm
+  .name "pouch of the silk worm"
+  .cost 1200 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousSpadeofDigging
+  .name "spade of digging"
+  .cost 7560 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousTwinJournals
+  .name "twin journals"
+  .cost 17000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousScabbardOfPoisedResponse
+  .name "scabbard of poised response"
+  .cost 4000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousCloakoftheWoodlands
+  .name "cloak of the woodlands"
+  .cost 2160 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousGogglesofNightmares
+  .name "goggles of nightmares (cursed)"
+  .cost 18000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousScrollofDisjunction
+  .name "scroll of disjunction (cursed)"
+  .cost 9350 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousVestmentofDiminishing
+  .name "vestment of diminishing (cursed)"
+  .cost 2600 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousAbominableArmor
+  .name "abominable armor (cursed)"
+  .cost 5325 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousZymoticMantle
+  .name "zymotic mantle (cursed)"
+  .cost 8000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousStrobeStones
+  .name "rasta's strobe stones"
+  .cost 1500 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousShoreofTuning
+  .name "shore of tuning"
+  .cost 8000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousNaleesMagicCover
+  .name "nalee's magic cover of replication"
+  .cost 90000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+wondrousNailsOfShrew
+  .name "nails of the shrew"
+  .cost 58000 gp
+  .canBeIntelligent true
+  .sources sourcesNboMTDnDCC
+end
+
+category groupMinorWondrousItems
+ [ 2] wondrousVestmentofDiminishing
+ [ 2] wondrousAbominableArmor
+ [ 2] wondrousStrobeStones
+ [ 2] wondrousScabbardOfPoisedResponse
+ [ 2] wondrousCloakoftheWoodlands
+ [ 2] wondrousPouchoftheSilkWorm
+ [ 2] wondrousSpadeofDigging
+ [ 2] wondrousNeverEmptyCanteen
+ [ 2] wondrousMovingPictures1
+ [ 2] wondrousHelmoftheNight
+ [ 2] wondrousEggShellofPetrification
+ [ 2] wondrousXionsColorGloves
+ [ 2] wondrousCofferofMending
+ [ 2] wondrousLuckyUnderwear
+end
+
+category groupMediumWondrousItems
+ [ 2] wondrousGogglesofNightmares
+ [ 2] wondrousScrollofDisjunction
+ [ 2] wondrousNailsOfShrew
+ [ 2] wondrousShoreofTuning
+ [ 2] wondrousBuskinsOfBruteForce
+ [ 2] wondrousTwinJournals
+ [ 2] wondrousPebbleofDoom
+ [ 2] wondrousCloakofFeathers
+ [ 2] wondrousCloakofHastur
+ [ 2] wondrousEyesofTerror
+ [ 2] wondrousGlovesofWoundTransfer
+ [ 2] wondrousMedallionofSoulContainment
+ [ 2] wondrousMovingPictures2
+end
+
+
+category groupMajorWondrousItems
+ [ 4] wondrousNaleesMagicCover
+end
