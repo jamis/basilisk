@@ -656,20 +656,28 @@ static BSKI32 s_execCode( BSKExecutionEnvironment* env, BSKRule* rule ) {
        * numeric value on the top of the stack with them.  Note that this 
        * will be dependent on the architecture of the host machine. */
       case OP_LWORD:
-        pc++;
-        top = s_newStackItem( env->stackFrame );
-        BSKSetValueNumber( &(top->value), *(BSKI16*)(&rule->code[pc]) );
-        pc++;
+				{
+					BSKI16 tmp;
+					pc++;
+					top = s_newStackItem( env->stackFrame );
+					BSKMemCpy( &tmp, &(rule->code[pc]), sizeof( tmp ) );
+					BSKSetValueNumber( &(top->value), tmp );
+					pc += sizeof( tmp ) - 1;
+				}
         break;
 
       /* LDWORD: Load Double WORD:  Reads the next four bytes and creates a
        * new numeric value on the top of the stack with them.  Note that 
        * this will be dependent on the architecture of the host machine. */
       case OP_LDWORD:
-        pc++;
-        top = s_newStackItem( env->stackFrame );
-        BSKSetValueNumber( &(top->value), *(BSKI32*)(&rule->code[pc]) );
-        pc += 3;
+				{
+					BSKI32 tmp;
+					pc++;
+					top = s_newStackItem( env->stackFrame );
+					BSKMemCpy( &tmp, &(rule->code[pc]), sizeof( tmp ) );
+					BSKSetValueNumber( &(top->value), tmp );
+					pc += sizeof( tmp ) - 1;
+				}
         break;
 
       /* LFLOAT: Load FLOATing point:  Reads the next sizeof(BSKFLOAT) bytes
@@ -677,10 +685,14 @@ static BSKI32 s_execCode( BSKExecutionEnvironment* env, BSKRule* rule ) {
        * Note that this will be dependent on the architecture of the host 
        * machine. */
       case OP_LFLOAT:
-        pc++;
-        top = s_newStackItem( env->stackFrame );
-        BSKSetValueNumber( &(top->value), *(BSKFLOAT*)(&rule->code[pc]) );
-        pc += sizeof( BSKFLOAT ) - 1;
+				{
+					BSKFLOAT tmp;
+					pc++;
+					top = s_newStackItem( env->stackFrame );
+					BSKMemCpy( &tmp, &(rule->code[pc]), sizeof( tmp ) );
+					BSKSetValueNumber( &(top->value), tmp );
+					pc += sizeof( tmp ) - 1;
+				}
         break;
 
       /* LDICE: Load DICE:  Reads the next four bytes and creates a new 
@@ -688,12 +700,16 @@ static BSKI32 s_execCode( BSKExecutionEnvironment* env, BSKRule* rule ) {
        * will be dependent on the architecture of the host machine.  See
        * bskvalue.c for more on the format of the dice type. */
       case OP_LDICE:
-        pc++;
-        top = s_newStackItem( env->stackFrame );
-        BSKSetValueDice( &(top->value), *(BSKI16*)&(rule->code[pc]),
-                                        *(BSKUI16*)&(rule->code[pc+sizeof(BSKUI16)]),
-                                        0, 0 );
-        pc += 2*sizeof( BSKUI16 )-1;
+				{
+					BSKI16 count;
+					BSKUI16 type;
+					pc++;
+					top = s_newStackItem( env->stackFrame );
+					BSKMemCpy( &count, &(rule->code[pc]), sizeof( count ) );
+					BSKMemCpy( &type, &(rule->code[pc + sizeof(count)]), sizeof( type ) );
+					BSKSetValueDice( &(top->value), count, type, 0, 0 );
+					pc += sizeof( count ) + sizeof( type ) - 1;
+				}
         break;
 
       /* LID: Load IDentifier:  Reads the next four bytes and treats them
@@ -971,10 +987,14 @@ static BSKI32 s_execCode( BSKExecutionEnvironment* env, BSKRule* rule ) {
       /* LINE: sets the current source line being executed to the DWORD
        * indicated by the next four bytes. */
       case OP_LINE:
-        pc++;
-        env->line = *(BSKUI32*)(&rule->code[pc]);
-				env->stackFrame->line = env->line;
-        pc += sizeof( BSKUI32 ) - 1;
+				{
+					BSKUI32 tmp;
+					pc++;
+					BSKMemCpy( &tmp, &(rule->code[pc]), sizeof( tmp ) );
+					env->line = tmp;
+					env->stackFrame->line = env->line;
+					pc += sizeof( tmp ) - 1;
+				}
         break;
 
       /* Otherwise, the instruction is unknown (which is almost definately

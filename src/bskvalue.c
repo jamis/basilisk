@@ -178,16 +178,28 @@ BSKFLOAT BSKEvaluateNumber( BSKValue* value ) {
         }
         break;
       case VT_BYTE:
-        n = *(BSKI8*)value->datum;
+				{
+					BSKI8 tmp;
+					BSKMemCpy( &tmp, value->datum, sizeof( BSKI8 ) );
+					n = tmp;
+				}
         break;
       case VT_WORD:
-        n = *(BSKI16*)value->datum;
+				{
+					BSKI16 tmp;
+					BSKMemCpy( &tmp, value->datum, sizeof( BSKI16 ) );
+					n = tmp;
+				}
         break;
       case VT_DWORD:
-        n = *(BSKI32*)value->datum;
+				{
+					BSKI16 tmp;
+					BSKMemCpy( &tmp, value->datum, sizeof( BSKI32 ) );
+					n = tmp;
+				}
         break;
       case VT_FLOAT:
-        n = *(BSKFLOAT*)value->datum;
+				BSKMemCpy( &n, value->datum, sizeof( BSKFLOAT ) );
         break;
     }
   } else if( BSKValueIsType( value, VT_STRING ) ) {
@@ -389,7 +401,8 @@ BSKBOOL BSKCompareValues( BSKValue* v1, BSKValue* v2 ) {
 
 
 BSKUI32 BSKValueUnits( BSKValue* value ) {
-  BSKCHAR* ptr;
+	BSKUI32  units;
+	BSKUI32  offset;
 
   /* only numbers have units */
 
@@ -405,24 +418,21 @@ BSKUI32 BSKValueUnits( BSKValue* value ) {
 
   /* determine the offset in the buffer where the units exist */
 
-  ptr = (BSKCHAR*)value->datum;
   switch( value->type ) {
-    case VT_BYTE: ptr += sizeof( BSKI8 ); break;
-    case VT_WORD: ptr += sizeof( BSKI16 ); break;
-    case VT_DWORD: ptr += sizeof( BSKI32 ); break;
-    case VT_FLOAT: ptr += sizeof( BSKFLOAT ); break;
-    case VT_DICE: ptr += 2 * sizeof( BSKI16 ); break;
-  }
-
-  /* skip the modifier, if there is one */
-
-  if( ( value->flags & VF_MODIFIER ) != 0 ) {
-    ptr += sizeof( BSKI16 );
+    case VT_BYTE: offset = sizeof( BSKI8 ); break;
+    case VT_WORD: offset = sizeof( BSKI16 ); break;
+    case VT_DWORD: offset = sizeof( BSKI32 ); break;
+    case VT_FLOAT: offset = sizeof( BSKFLOAT ); break;
+    case VT_DICE: offset = sizeof( BSKI16 ) + sizeof( BSKUI16 ); break;
   }
 
   /* return the result as the units */
 
-  return *(BSKUI32*)ptr;
+	BSKMemCpy( &units, (BSKCHAR*)( value->datum ) + offset +
+			       ( ( value->flags & VF_MODIFIER ) ? sizeof( BSKI16 ) : 0 ),
+						 sizeof( BSKUI32 ) );
+
+  return units;
 }
 
 
@@ -440,12 +450,12 @@ void BSKGetDiceParts( BSKValue* value, BSKI16* count,
       *modifier = 0;
     }
     p = value->datum;
-    *count = *(BSKI16*)p;
+		BSKMemCpy( count, p, sizeof( BSKI16 ) );
     p += sizeof( BSKI16 );
-    *type = *(BSKUI16*)p;
+		BSKMemCpy( type, p, sizeof( BSKUI16 ) );
     if( ( value->flags & VF_MODIFIER ) != 0 ) {
       p += sizeof( BSKUI16 );
-      *modifier = *(BSKI16*)p;
+			BSKMemCpy( modifier, p, sizeof( BSKI16 ) );
     }
   } else if( BSKValueIsType( value, VT_NUMBER ) ) {
     *count = BSKEvaluateNumber( value );
@@ -654,7 +664,7 @@ static void s_setValueNumber( BSKValue* value, BSKFLOAT num, BSKUI32 units ) {
 
   if( units > 0 ) {
     value->flags |= VF_UNITS;
-		BSKMemCpy( (value->datum) + size, &units, sizeof( BSKUI32 ) );
+		BSKMemCpy( (BSKCHAR*)(value->datum) + size, &units, sizeof( BSKUI32 ) );
   }
 }
 
@@ -683,7 +693,7 @@ static void s_setValueDice( BSKValue* value,
 														( ( units > 0 ) ? sizeof( BSKUI32 ) : 0 ) );
 
 	BSKMemCpy( value->datum, &count, sizeof( BSKI16 ) );
-	BSKMemCpy( ( value->datum ) + sizeof( BSKI16 ), &type, sizeof( BSKUI16 ) );
+	BSKMemCpy( (BSKCHAR*)( value->datum ) + sizeof( BSKI16 ), &type, sizeof( BSKUI16 ) );
 
 	/* if a modifier has been specified, set the appropriate flags */
 
@@ -692,7 +702,7 @@ static void s_setValueDice( BSKValue* value,
 		if( op == '*' ) {
 			value->flags |= VF_MULTIPLICATIVE;
 		}
-		BSKMemCpy( ( value->datum ) + sizeof( BSKI16 ) + sizeof( BSKUI16 ),
+		BSKMemCpy( (BSKCHAR*)( value->datum ) + sizeof( BSKI16 ) + sizeof( BSKUI16 ),
 				       &modifier, sizeof( BSKI16 ) );
   }
 
@@ -700,7 +710,7 @@ static void s_setValueDice( BSKValue* value,
 
   if( units > 0 ) {
     value->flags |= VF_UNITS;
-		BSKMemCpy( ( value->datum ) + sizeof( BSKI16 ) + sizeof( BSKUI16 ) +
+		BSKMemCpy( (BSKCHAR*)( value->datum ) + sizeof( BSKI16 ) + sizeof( BSKUI16 ) +
 				       ( ( modifier != 0 ) ? sizeof( BSKI16 ) : 0 ),
 							 &units, sizeof( BSKUI32 ) );
   }
