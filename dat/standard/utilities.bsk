@@ -254,11 +254,15 @@ rule rAny( src )
 end
 
 
-rule rItemDeservesCurse( item )
-  c = ( Random(100) lt 5 ); 
-  if Has( item, "intelligence" ) then
-    c = false;
-  end
+rule rItemDeservesCurse( item options )
+	if rSafeGet( options, "optAlwaysCursed", false ) then
+	  c = true;
+	else
+		c = ( Random(100) lt 5 ); 
+		if Has( item, "intelligence" ) then
+			c = false;
+		end
+	end
   rItemDeservesCurse = c;
 end
 
