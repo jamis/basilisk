@@ -467,12 +467,17 @@ void dumpDB( BSKDatabase* db ) {
 void BSKPrintStackTrace( BSKExecutionEnvironment* env, FILE* f ) {
   BSKCHAR name[100];
   BSKStackFrame* frame;
+	BSKRule* rule;
 
   for( frame = BSKExecEnvironmentGetCurrentFrame(env); frame != 0; frame = frame->next ) {
     BSKGetIdentifier( BSKExecEnvironmentGetDB( env )->idTable, 
                       BSKStackFrameGetRuleID( frame ), 
                       name, sizeof( name ) );
-    fprintf( f, " *** %s\n", name );
+		rule = BSKFindRule( BSKExecEnvironmentGetDB( env )->rules, BSKStackFrameGetRuleID( frame ) );
+    fprintf( f, " *** %s (%s:%ld)\n", 
+				     name, 
+						 ( BSKRuleGetSourceFile( rule ) ? BSKRuleGetSourceFile( rule ) : "" ),
+						 BSKStackFrameGetLineNumber( frame ) );
   }
 }
 
