@@ -1,3 +1,13 @@
+version 1.1
+  Data Changes:
+    Shaun Gierent submitted data for: DLofM, demonology, SongSil, LoD, MonstersofF,
+      TrapsTreach, Undead, Gladiator, Dragons, NDreams, Evil, MysticWar, Dungeons,
+      Necromancy, TbtGods, Diomin, LoH, and Jade.  Also modified many data files to
+      rework the weighting system (making things more "even").
+    I reworked many of the standard data files to allow categories to be nested more
+      easily, and thus to allow categorizations and weightings to be nested and more
+      easily organized.
+
 version 1.06
   Data Changes:
     Shaun Gierent submitted data for Relics & Ritutals.
