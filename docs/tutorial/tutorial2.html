@@ -12,6 +12,7 @@
 
     This tutorial assumes that:
     <OL>
+			<LI>You are using at least TG2 version 2.01.
       <LI>You have completed <A HREF="tutorial1.html">Tutorial #1</A>.
       <LI>You have deleted the previous contents of "dat/tutorial" and made a clean copy
           of "dat/standard" into "dat/tutorial".
@@ -34,7 +35,7 @@
 
 <BLOCKQUOTE>
 <PRE>
-weaponSpikedFist ( groupWeapon groupPiercingWeapon groupMeleeWeapon 3:groupUncommonWeapons )
+weaponSpikedFist in ( groupWeapon groupPiercingWeapon groupMeleeWeapon 3:groupUncommonWeapons )
   .name "spiked fist"
   .cost 7 gp
   .damage 1d3
@@ -87,12 +88,12 @@ end
 
 <BLOCKQUOTE>
 <PRE>
-template ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size }
-  weaponSpikedFist ( groupPiercingDamage groupMeleeWeapon 3:groupUncommonWeapons )
+template in ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size }
+  weaponSpikedFist in ( groupPiercingDamage groupMeleeWeapon 3:groupUncommonWeapons )
                    { "spiked fist"  7 gp  1d3  20  2  1 lb  tiny  }
-  weaponSerratedBlade ( groupSlashingDamage groupMeleeWeapon 5:groupUncommonWeapons )
+  weaponSerratedBlade in ( groupSlashingDamage groupMeleeWeapon 5:groupUncommonWeapons )
                    { "serrated blade"  18 gp  1d10  18  3  15 lb  large }
-  weaponBarbedDart ( groupPiercingDamage groupRangedWeapon 2:groupUncommonWeapons )
+  weaponBarbedDart in ( groupPiercingDamage groupRangedWeapon 2:groupUncommonWeapons )
                    { "barbed dart"  5 sp  1d3  20  2  1/10 lb  tiny }
 end
 
