@@ -58,7 +58,14 @@ type := "number"
   #        .name   "baseball"
   #        .weight 2 lb
   #     end
-thing-def := ident { "(" ident-list ")" } { property-list } "end"
+thing-def := ident { "(" weighted-ident-list ")" } { property-list } "end"
+
+	# A weighted ident list lets you specify not only the categories that
+	# a thing belongs to, but also its weight in the specified category.
+weighted-ident-list := weighted-ident-list-entry
+                     | weighted-ident-list-entry weighted-ident-list
+
+weighted-ident-list-entry := { num ":" } ident
 
   # A category is a collection of zero or more things.  The identifier
   # need not be unique, but if it isn't it must be the identifier of an

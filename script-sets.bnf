@@ -32,7 +32,16 @@ type := "number"
 
   # FIRST: ident
   # FOLLOW: "unit" "attribute" ident "rule" "template" "#" "forward" EOF
-thing-def := ident { "(" ident-list ")" } { property-list } "end"
+thing-def := ident { "(" weighted-ident-list ")" } { property-list } "end"
+
+	# FIRST: num ident
+	# FOLLOW: ")"
+weighted-ident-list := weighted-ident-list-entry
+                     | weighted-ident-list-entry weighted-ident-list
+
+	# FIRST: num ident
+	# FOLLOW: num ident ")"
+weighted-ident-list-entry := { num ":" } ident
 
   # FIRST: "category"
   # FOLLOW: "unit" "attribute" ident "rule" "template" "#" "forward" EOF
