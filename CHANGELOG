@@ -1,5 +1,9 @@
   Makefile changes:
     Added an 'update' target for CVS.
+  Data Changes:
+    Added data for Netbook of Magical Treasures.
+    Fixed error in scrolls.bsk where StinkingCloud was being given as a
+      second level spell, instead of a third.
 
 version 1.02
 	Documentation Changes:
