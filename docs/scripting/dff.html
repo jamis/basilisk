@@ -436,6 +436,17 @@ end
 		thing is created and put automatically into the "weapons"
 		category and the "slashingWeapons" category.
 		<P>
+		Note that categories may belong to other categories, just
+		as things (and even rules) do.  The syntax is exactly the
+		same as for both things and templates, using the "in"
+		keyword.  Here's an example:
+		<BLOCKQUOTE>
+<PRE>
+category weapons <B>in ( equipableItems )</B>
+  ...
+end
+</PRE>
+		</BLOCKQUOTE>
 		You may also weight the items in a category to determine
 		their likelihood of being chosen randomly (see the 
 		<A HREF="bskscript.html#fn_any">Any</A> function in the 
