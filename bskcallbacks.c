@@ -9,138 +9,143 @@
 #include "bskcallbacks.h"
 
 
-BSKI32 myConsole( BSKCHAR* msg,
-                  BSKExecutionEnvironment* env,
-                  BSKNOTYPE userData )
+BSKI32 BSKDefaultConsole( BSKCHAR* msg,
+                          BSKExecutionEnvironment* env,
+                          BSKNOTYPE userData )
 {
-  printf( "%s", msg );
+	BSKCallbackData* data = (BSKCallbackData*)userData;
+
+  fprintf( data->consoleOut, "%s", msg );
+
   return 0;
 }
 
 
-BSKI32 myRTEHandler( BSKI32 code,
-                     BSKCHAR* msg,
-                     BSKExecutionEnvironment* env,
-                     BSKNOTYPE userData )
+BSKI32 BSKDefaultRuntimeErrorHandler( BSKI32 code,
+                                      BSKCHAR* msg,
+                                      BSKExecutionEnvironment* env,
+                                      BSKNOTYPE userData )
 {
   BSKRule* rule;
   BSKCHAR name[100];
   BSKStackFrame* frame;
+	BSKCallbackData* data = (BSKCallbackData*)userData;
 
-  printf( "\n" );
+  fprintf( data->errorOut, "\n" );
   switch( code ) {
     case RTE_SUCCESS:
-      printf( "*** no error" );
+      fprintf( data->errorOut, "*** no error" );
       break;
     case RTE_INVALID_RULE:
-      printf( "*** invalid rule" );
+      fprintf( data->errorOut, "*** invalid rule" );
       break;
     case RTE_BUG:
-      printf( "*** bug detected" );
+      fprintf( data->errorOut, "*** bug detected" );
       break;
     case RTE_STACK_UNDERFLOW:
-      printf( "*** stack underflow" );
+      fprintf( data->errorOut, "*** stack underflow" );
       break;
     case RTE_INVALID_OPERANDS:
-      printf( "*** invalid operands" );
+      fprintf( data->errorOut, "*** invalid operands" );
       break;
     case RTE_DIVIDE_BY_ZERO:
-      printf( "*** divide by zero" );
+      fprintf( data->errorOut, "*** divide by zero" );
       break;
     case RTE_UNKNOWN_INSTRUCTION:
-      printf( "*** unknown instruction" );
+      fprintf( data->errorOut, "*** unknown instruction" );
       break;
     case RTE_WRONG_PARAM_COUNT:
-      printf( "*** wrong parameter count" );
+      fprintf( data->errorOut, "*** wrong parameter count" );
       break;
     case RTE_DOMAIN_ERROR:
-      printf( "*** domain error" );
+      fprintf( data->errorOut, "*** domain error" );
       break;
     case RTE_WRONG_UNITS:
-      printf( "*** wrong units" );
+      fprintf( data->errorOut, "*** wrong units" );
       break;
     case RTE_CALL_OF_NONFUNCTION:
-      printf( "*** call of non-function" );
+      fprintf( data->errorOut, "*** call of non-function" );
       break;
   }
 
   frame = BSKExecEnvironmentGetCurrentFrame( env );
 
-  printf( " (" );
+  fprintf( data->errorOut, " (" );
   if( frame == 0 ) {
-    printf( "main: " );
+    fprintf( data->errorOut, "main: " );
   } else {
     rule = BSKFindRule( BSKExecEnvironmentGetDB( env )->rules, BSKStackFrameGetRuleID( frame ) );
     BSKGetIdentifier( BSKExecEnvironmentGetDB( env )->idTable, BSKRuleGetID( rule ), 
                       name, sizeof( name ) );
     if( rule->file != 0 ) {
-      printf( "%s:", BSKRuleGetSourceFile( rule ) );
+      fprintf( data->errorOut, "%s:", BSKRuleGetSourceFile( rule ) );
     }
-    printf( "%s:", name );
+    fprintf( data->errorOut, "%s:", name );
   }
-  printf( "%ld)", BSKExecEnvironmentGetCurrentLine( env ) );
+  fprintf( data->errorOut, "%ld)", BSKExecEnvironmentGetCurrentLine( env ) );
 
   if( msg != 0 ) {
-    printf( " (%s)", msg );
+    fprintf( data->errorOut, " (%s)", msg );
   }
-  printf( "\n" );
+  fprintf( data->errorOut, "\n" );
 
-  printStackTrace( env );
-  printf( "\n" );
+  BSKPrintStackTrace( env, data->errorOut );
+  fprintf( data->errorOut, "\n" );
 
   return 0;
 }
 
 
-BSKI32 myErrorHandler( BSKI32 code,
-                       BSKDatabase* db,
-                       BSKCHAR* file,
-                       BSKToken* token,
-                       BSKUI32 data,
-                       BSKNOTYPE userData )
+BSKI32 BSKDefaultParseErrorHandler( BSKI32 code,
+                                    BSKDatabase* db,
+                                    BSKCHAR* file,
+                                    BSKToken* token,
+                                    BSKUI32 data,
+                                    BSKNOTYPE userData )
 {
   BSKCHAR buffer1[ 128 ];
   BSKCHAR buffer2[ 128 ];
+	BSKCallbackData* cbdata = (BSKCallbackData*)userData;
 
   switch( code ) {
     case PE_NOERROR:
-      printf( "*** no error\n" );
+      fprintf( cbdata->errorOut, "*** no error\n" );
       break;
     case PE_UNEXPECTED_TOKEN:
       BSKGetTokenDescription( (BSKTokenId)data, buffer1, sizeof( buffer1 ) );
       BSKGetTokenDescription( token->type, buffer2, sizeof( buffer2 ) );
-      printf( "*** [%s:%ld,%ld] expected %s, found %s\n", file, token->row, token->col, buffer1, buffer2 );
+      fprintf( cbdata->errorOut, "*** [%s:%ld,%ld] expected %s, found %s\n", file, token->row, token->col, buffer1, buffer2 );
       break;
     case PE_REDEFINED_IDENTIFIER:
       BSKGetIdentifier( db->idTable, data, buffer1, sizeof( buffer1 ) );
-      printf( "*** [%s:%ld,%ld] identifier '%s' redefined\n", file, token->row, token->col, buffer1 );
+      fprintf( cbdata->errorOut, "*** [%s:%ld,%ld] identifier '%s' redefined\n", file, token->row, token->col, buffer1 );
       break;
     case PE_UNDECLARED_IDENTIFIER:
       BSKGetIdentifier( db->idTable, data, buffer1, sizeof( buffer1 ) );
-      printf( "*** [%s:%ld,%ld] identifier '%s' undeclared\n", file, token->row, token->col, buffer1 );
+      fprintf( cbdata->errorOut, "*** [%s:%ld,%ld] identifier '%s' undeclared\n", file, token->row, token->col, buffer1 );
       break;
     case PE_WRONG_TYPE:
       BSKGetIdentifier( db->idTable, data, buffer1, sizeof( buffer1 ) );
-      printf( "*** [%s:%ld,%ld] identifier '%s' of wrong type\n", file, token->row, token->col, buffer1 );
+      fprintf( cbdata->errorOut, "*** [%s:%ld,%ld] identifier '%s' of wrong type\n", file, token->row, token->col, buffer1 );
       break;
     case PE_BUG_DETECTED:
-      printf( "*** [%s:%ld,%ld] bug detected (%s)\n", file, token->row, token->col, (BSKCHAR*)data );
+      fprintf( cbdata->errorOut, "*** [%s:%ld,%ld] bug detected (%s)\n", file, token->row, token->col, (BSKCHAR*)data );
       break;
     case PE_TOO_MANY_ATTRIBUTES:
-      printf( "*** [%s:%ld,%ld] too many attributes\n", file, token->row, token->col );
+      fprintf( cbdata->errorOut, "*** [%s:%ld,%ld] too many attributes\n", file, token->row, token->col );
       break;
     case PE_EXIT_LOOP_NOT_IN_LOOP:
-      printf( "*** [%s:%ld,%ld] \"exit loop\" may only be used in a loop context\n", file, token->row, token->col );
+      fprintf( cbdata->errorOut, "*** [%s:%ld,%ld] \"exit loop\" may only be used in a loop context\n", file, token->row, token->col );
       break;
     case PE_CANNOT_OPEN_FILE:
-      printf( "*** [%s:%ld,%ld] cannot open file '%s'\n", file, token->row, token->col, (BSKCHAR*)data );
+      fprintf( cbdata->errorOut, "*** [%s:%ld,%ld] cannot open file '%s'\n", file, token->row, token->col, (BSKCHAR*)cbdata );
       break;
     case PE_FORWARD_NOT_DEFINED:
       BSKGetIdentifier( db->idTable, data, buffer1, sizeof( buffer1 ) );
-      printf( "*** forwarded identifier '%s' never defined\n", buffer1 );
+      fprintf( cbdata->errorOut, "*** forwarded identifier '%s' never defined\n", buffer1 );
       break;
     default:
-      printf( "*** [%s:%ld,%ld] unknown error %ld\n", file, token->row, token->col, code );
+      fprintf( cbdata->errorOut, "*** [%s:%ld,%ld] unknown error %ld\n", file, token->row, token->col, code );
   }
 
   return 0;
@@ -459,7 +464,7 @@ void dumpDB( BSKDatabase* db ) {
 }
 
 
-void printStackTrace( BSKExecutionEnvironment* env ) {
+void BSKPrintStackTrace( BSKExecutionEnvironment* env, FILE* f ) {
   BSKCHAR name[100];
   BSKStackFrame* frame;
 
@@ -467,7 +472,7 @@ void printStackTrace( BSKExecutionEnvironment* env ) {
     BSKGetIdentifier( BSKExecEnvironmentGetDB( env )->idTable, 
                       BSKStackFrameGetRuleID( frame ), 
                       name, sizeof( name ) );
-    printf( " *** %s\n", name );
+    fprintf( f, " *** %s\n", name );
   }
 }
 
