@@ -4,6 +4,7 @@
 #include "sizes.bsk"
 #include "types.bsk"
 #include "sources.bsk"
+#include "descriptions.bsk"
 
 #include "utilities.bsk"
 #include "grammar.bsk"
