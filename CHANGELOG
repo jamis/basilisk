@@ -1,7 +1,7 @@
 version 1.01
   Makefile changes:
 		Added "library" target to Makefile for making a dynamic-loading basilisk
-			library.
+			library. (Required significant modifications to the makefile).
 	Utility changes:
 		Changed names of 4 callback functions in bskcallback.c:
 			myConsole -> BSKDefaultConsole
