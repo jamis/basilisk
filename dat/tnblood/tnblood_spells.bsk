@@ -28,7 +28,7 @@ template in ( groupAllSpells ) { name school subschool descriptors sources }
   spellHideLife { "Hide Life" schNecromancy $ $ sourcesTomeAndBlood }
   spellIceBurst { "Ice Burst" schEvocation $ ( descCold ) sourcesTomeAndBlood }
   spellIceKnife { "Ice Knife" schConjuration subschCreation ( descCold ) sourcesTomeAndBlood }
-  spellImbueFamiliar { "Imbue Familiar with Spell Ability" schUniversal $ sourcesTomeAndBlood }
+  spellImbueFamiliar { "Imbue Familiar with Spell Ability" schUniversal $ $ sourcesTomeAndBlood }
   spellIndifference { "Indiference" schEnchanment $ ( descMindAffecting ) sourcesTomeAndBlood }
   spellLesserAcidOrb { "Lesser Acid Orb" schEvocation $ ( descAcid ) sourcesTomeAndBlood }
   spellLesserColdOrb { "Lesser Cold Orb" schEvocation $ ( descCold ) sourcesTomeAndBlood }

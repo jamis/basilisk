@@ -2727,6 +2727,10 @@ rule rSelectWondrousItem( itemMagnitude options )
   if y ne null then
     item = rNewInstanceOf( y );
 
+    if options.optShowSourceName then
+      item.name = item.name + " [" + Get( item.sources, 0 ).name + "]";
+    end
+
 		if item.canBeIntelligent and rSafeGet( options, "optAlwaysIntelligent", false ) then
 			rEmbueIntelligenceUpon( item, options );
 		else

@@ -272,6 +272,7 @@ rule rInitializeOptions( options )
   options.optMaxVirtualArmorBonus   = +10;
   options.optMaxPhysicalWeaponBonus =  +5;
   options.optMaxVirtualWeaponBonus  = +10;
+  options.optShowSourceName         = false;
 end
 
 

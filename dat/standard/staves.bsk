@@ -192,6 +192,10 @@ rule rSelectStaff( staffMagnitude options )
     staff = rNewInstanceOf( y );
     staff.treasureType = "staff";
 
+    if options.optShowSourceName then
+      staff.name = staff.name + " [" + Get( staff.sources, 0 ).name + "]";
+    end
+
     if Random(100) lt 30 then
       staff = rEnsureAttributeExists( staff, "itemQualities", atCategory );
       x = NewThing();

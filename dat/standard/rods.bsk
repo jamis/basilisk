@@ -236,16 +236,15 @@ rule rSelectRod( rodMagnitude options )
       exit rule;
   end
 
-/*
-  if c typeof category then
-	c = Any(c);
-  end
-*/
   y = rGetAnyMatchingCriteria( c, options, 1 );
   if y ne null then
     rod = rNewInstanceOf( y );
     rod.treasureType = "rod";
     rod.name = "rod of " + rod.name;
+
+    if options.optShowSourceName then
+      rod.name = rod.name + " [" + Get( rod.sources, 0 ).name + "]";
+    end
 
 		if rSafeGet( options, "optAlwaysIntelligent", false ) then
 			rEmbueIntelligenceUpon( rod, options );

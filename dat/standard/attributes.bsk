@@ -26,6 +26,7 @@ attribute optAlwaysIntelligent          boolean
 attribute optAlwaysCursed               boolean
 attribute optExcludeGems                boolean
 attribute optExcludeArt                 boolean
+attribute optShowSourceName             boolean
 
 // ----------------------------- string attributes ------------------------
 attribute name                          string

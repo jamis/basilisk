@@ -642,6 +642,10 @@ rule rSelectMagicArmor( armorMagnitude options )
 		  exit rule;
 		end
 		newItem = rNewInstanceOf( newItem );
+
+    if options.optShowSourceName then
+      newItem.name = newItem.name + " [" + Get( newItem.sources, 0 ).name + "]";
+    end
   else
     if i.type eq magtArmor then
       proto = rGetAnyMatchingCriteria( groupRandomArmorType, options, true );
@@ -672,6 +676,10 @@ rule rSelectMagicArmor( armorMagnitude options )
     newItem = rNewInstanceOf( proto );
     newItem.prototype = proto;
     newItem.bonuses = NewCategory();
+
+    if options.optShowSourceName then
+      newItem.name = newItem.name + " [" + Get( newItem.sources, 0 ).name + "]";
+    end
 
     x = NewThing();
     x.type = btEnhancement;
@@ -721,12 +729,16 @@ rule rSelectMagicArmor( armorMagnitude options )
               if a ne null then
                 add( newItem.abilities, a );
                 totalBonus = totalBonus + a.marketPriceArmorModifier;
+                abName = a.name;
+                if options.optShowSourceName then
+                  abName = abName + " [" + Get( a.sources, 0 ).name + "]";
+                end
                 if abilitiesAdded lt 1 then
                   newItem.name = newItem.name + " (";
                 else
                   newItem.name = newItem.name + ", ";
                 end
-                newItem.name = newItem.name + a.name;
+                newItem.name = newItem.name + abName;
                 abilitiesAdded = abilitiesAdded + 1;
               end
             end

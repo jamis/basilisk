@@ -454,6 +454,10 @@ rule rLookupRing( ringMagnitude options )
     x.name = "ring of " + x.name;
     x.treasureType = "ring";
 
+    if options.optShowSourceName then
+      x.name = x.name + " [" + Get( x.sources, 0 ).name + "]";
+    end
+
 		if rSafeGet( options, "optAlwaysIntelligent", false ) then
 			rEmbueIntelligenceUpon( x, options );
 		else

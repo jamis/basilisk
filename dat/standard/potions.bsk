@@ -233,6 +233,10 @@ rule rLookupPotion( potionMagnitude options )
     x.prototype = y;
     x.name = "potion of " + x.name;
 
+    if options.optShowSourceName then
+      x.name = x.name + " [" + Get( x.sources, 0 ).name + "]";
+    end
+
     //Added by Spencer Cooley (the_sigil@hotmail.com)
 		x = rEnsureAttributeExists( x, "itemQualities", atCategory );
 

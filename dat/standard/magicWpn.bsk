@@ -1020,6 +1020,10 @@ rule rSelectMagicWeapon( weaponMagnitude options )
     newItem.name = newItem.name + " +" + i.magnitude;
     newItem.bonuses = NewCategory();
 
+    if options.optShowSourceName then
+      newItem.name = newItem.name + " [" + Get( newItem.sources, 0 ).name + "]";
+    end
+
     if proto eq weaponArrow or proto eq weaponCrossbowBolt or proto eq weaponSlingBullet then
       newItem.magnitude = Random(50) + 1;
       newItem.cost = SetUnits( 1, "gp" ) * newItem.magnitude;
@@ -1087,7 +1091,12 @@ rule rSelectMagicWeapon( weaponMagnitude options )
           if valid then
             add( newItem.abilities, a );
             totalBonus = totalBonus + a.marketPriceWeaponModifier;
-            newItem.name = newItem.name + " (" + a.name + ")";
+
+            abName = a.name;
+            if options.optShowSourceName then
+              abName = abName + " [" + Get( a.sources, 0 ).name + "]";
+            end
+            newItem.name = newItem.name + " (" + abName + ")";
 
             if has( a, "lcAlignment" ) and not has( newItem, "lcAlignment" ) then
               newItem.lcAlignment = a.lcAlignment;
@@ -1110,6 +1119,10 @@ rule rSelectMagicWeapon( weaponMagnitude options )
 
     if has( newItem.prototype, "secondaryDamage" ) then
       newItem.cost = newItem.cost + masterworkWeapon.cost;
+    end
+  else
+    if options.optShowSourceName then
+      newItem.name = newItem.name + " [" + Get( newItem.sources, 0 ).name + "]";
     end
   end
 

@@ -264,6 +264,10 @@ rule rSelectWand( wandMagnitude options )
     wand.charges = Random(50) + 1;
 		wand.cost = Int(wand.cost * ( wand.charges / 50 ));
 
+    if options.optShowSourceName then
+      wand.name = wand.name + " [" + Get( wand.sources, 0 ).name + "]";
+    end
+
     if Random(100) lt 30 then
       wand = rEnsureAttributeExists( wand, "itemQualities", atCategory );
       x = NewThing();

@@ -538,6 +538,9 @@ rule rSelectScroll( scrollMagnitude options )
         x = rNewInstanceOf( s );
         x.spellLevel = lev;
         x.casterLevel = clev;
+        if options.optShowSourceName then
+          x.name = x.name + " [" + Get( x.sources, 0 ).name + "]";
+        end
         add( scroll.contents, x );
       end
     end

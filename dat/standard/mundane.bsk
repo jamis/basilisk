@@ -172,6 +172,10 @@ rule rConfigureMundaneItem( a options )
     mi = rNewInstanceOf( a );
   end
   
+  if options.optShowSourceName then
+    mi.name = mi.name + " [" + Get( mi.sources, 0 ).name + "]";
+  end
+
   if has( a, "bonuses" ) then
     mi = rEnsureAttributeExists( mi, "bonuses", atCategory );
     mi.bonuses = union( mi.bonuses, a.bonuses );
