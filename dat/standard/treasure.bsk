@@ -735,8 +735,24 @@ rule rGenerateGoodsByEncounterLevel( level hoard pct options )
 
   maxCost = rSafeGet( options, "optMaxTreasureValue" );
 
-  entryWeight = Random( totalWeight ) + 1;
-  g = GetByWeight( subt.goods, entryWeight );
+	entryWeight = Random( totalWeight ) + 1;
+	g = GetByWeight( subt.goods, entryWeight );
+
+	/* if optExcludeGems or optExcludeArt has been set to true, and if
+	 * g is not null (meaning a valid "goods" treasure should be
+	 * generated), then set the treasure to be generated to be gems
+	 * or art objects, as the flag indicates.  Note that optExcludeGems
+	 * takes precedence if both are set. */
+
+	if rSafeGet( options, "optExcludeGems", false ) then
+	  if g ne null then
+			g = SearchCategory( subt.goods, "lookup", rLookupArt );
+		end
+	elseif rSafeGet( options, "optExcludeArt", false ) then
+		if g ne null then
+			g = SearchCategory( subt.goods, "lookup", rLookupGem );
+		end
+	end
 
   if g ne null then
     cnt = Floor( Eval(g.magnitude) * pct );
@@ -833,6 +849,9 @@ end
 rule rGenerateTreasureByEncounterLevel( level pctCoins pctGoods pctItems options )
   hoard = rNewHoard();
 
+	/* first, determine the "excess" levels -- those levels in excess of 20 --
+	 * and determine how many additional major magic items to generate. */
+
   excess = 0;
   if level gt 20 then
     excess = level - 20;
@@ -843,6 +862,9 @@ rule rGenerateTreasureByEncounterLevel( level pctCoins pctGoods pctItems options
     excess = Floor( excess * pctItems );
     level = 20;
   end
+
+	/* get the maximum and minimum treasure values -- which will be "null"
+	 * if they have not been set. */
 
   maxCost = rSafeGet( options, "optMaxTreasureValue" );
   minCost = rSafeGet( options, "optMinTreasureValue" );
@@ -855,6 +877,8 @@ rule rGenerateTreasureByEncounterLevel( level pctCoins pctGoods pctItems options
 
   tries = 0;
 
+	/* generate coins and goods, unless they have been excluded */
+
   if pctCoins gt 0 then
     rGenerateCoinsByEncounterLevel( level, hoard, pctCoins, options );
   end
@@ -865,6 +889,12 @@ rule rGenerateTreasureByEncounterLevel( level pctCoins pctGoods pctItems options
   do
     if pctItems gt 0 then
       rGenerateItemsByEncounterLevel( level, hoard, pctItems, options );
+		elseif pctGoods gt 0 then
+			rGenerateGoodsByEncounterLevel( level, hoard, pctGoods, options );
+		elseif pctCoins gt 0 then
+			rGenerateCoinsByEncounterLevel( level, hoard, pctCoins, options );
+		else
+			exit loop;
     end
 
     for i = 1 to excess do
@@ -910,14 +940,6 @@ rule rGenerateByELAndDisplay( level pctCoins pctGoods pctItems displayRoutine op
   rGenerateByELAndDisplay = totalValue;
 end
 
-rule rVerifyLength( c )
-  l = count(c);
-  i = 0;
-  for e in c do
-    i = i + 1;
-  end
-print( "count()=" + l + " vs. elements=" + i + "\n" );
-end
 
 rule rGenerateTreasureByItemType( itemCount magnitudes itemTypes options )
   hoard = rNewHoard();
