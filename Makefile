@@ -48,7 +48,7 @@ utils: bskcompile bskrun bsktreasure
 
 compile: dat/standard/*.bsk dat/snfist/*.bsk dat/scitadel/*.bsk bskcompile
 	@echo "Compiling data files"
-	@bskcompile dat/standard/index.bsk "dat/standard|dat/snfist|dat/scitadel|dat/dragon|dat/nbomt|dat/defenders|dat/tnblood|dat/boem|dat/diablo|dat/dungeon|dat/motp|dat/polyhedron|dat/mof|dat/frcs"
+	@bskcompile dat/standard/index.bsk "dat/standard|dat/snfist|dat/scitadel|dat/dragon|dat/nbomt|dat/defenders|dat/tnblood|dat/boem|dat/diablo|dat/dungeon|dat/motp|dat/polyhedron|dat/mof|dat/frcs|dat/rr"
 	
 bskcompile: bskcompile.c bskcallbacks.c
 	$(CC) $(OPTS) -o bskcompile bskcompile.c bskcallbacks.c $(RUNLIBS)

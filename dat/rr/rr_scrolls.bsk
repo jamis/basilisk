@@ -1,0 +1,318 @@
+category groupArcaneScrollSpells1
+  [ 5] spellAcidSpittle
+  [ 5] spellArrowCharm
+  [ 5] spellBuoyancyNet
+  [ 5] spellChameleonskin
+  [ 5] spellClean
+  [ 5] spellDetectGold
+  [ 5] spellDisappear
+  [ 5] spellFlameBolt
+  [ 5] spellFlash
+  [ 5] spellGlue
+  [ 5] spellObscureShadow
+  [ 5] spellQuickSober
+  [ 5] spellRabbitFeet
+  [ 5] spellReshapeShadow
+  [ 5] spellSalamarsQuietContemplation
+  [ 5] spellShadesSight
+  [ 5] spellStealSleep
+  [ 5] spellTriggerRune
+end
+
+category groupArcaneScrollSpells2
+  [ 3] spellAlibi
+  [ 3] spellAssassinsSenses
+  [ 3] spellBattlecry
+  [ 3] spellBlazingShield
+  [ 3] spellColdSnap
+  [ 3] spellCommandingPresence
+  [ 3] spellDarkFlames
+  [ 3] spellDeadMansEyes
+  [ 3] spellDolomarsForceWave
+  [ 3] spellDolomarsMapping
+  [ 3] spellEnkilisPrank
+  [ 3] spellEtherealBolt
+  [ 3] spellEverScent
+  [ 3] spellFlameWeapon
+  [ 3] spellFrostWeapon
+  [ 3] spellGanestsFarstrike
+  [ 3] spellGloom
+  [ 3] spellIntoxicate
+  [ 3] spellLiliandelsFlurry
+  [ 3] spellMinorShadowConjuration
+  [ 3] spellPerfectRecollection
+  [ 3] spellPhantomsHowl
+  [ 3] spellPrevaricationsBounty
+  [ 3] spellRendtheSovereignSoul
+  [ 3] spellRenewedFocus
+  [ 3] spellRuneofDarkness
+  [ 3] spellShadowImages
+  [ 3] spellSleepoftheDead
+  [ 3] spellSmother
+  [ 3] spellSongofHeroes
+  [ 3] spellSwiftWater
+end
+
+category groupArcaneScrollSpells3
+  [ 4] spellAnimalInfusion
+  [ 4] spellAnimateShadow
+  [ 4] spellArmorofUndeath
+  [ 4] spellBloodstorm
+  [ 4] spellCallAquaticHumanoidI
+  [ 4] spellCurseofTerror
+  [ 4] spellDarTansShadowBolt
+  [ 4] spellDirgeofWoe
+  [ 4] spellDragonsBreath
+  [ 4] spellGasCloud
+  [ 4] spellGreatKnock
+  [ 4] spellIronStorm
+  [ 4] spellManaspear
+  [ 4] spellMindRaid
+  [ 4] spellMinorShadowEvocation
+  [ 4] spellPressureSphere
+  [ 4] spellRuneofFire
+  [ 4] spellRuneofSeeing
+  [ 4] spellRuneofSleep
+  [ 4] spellShadowStrike
+  [ 4] spellShadowTouch
+  [ 4] spellTerolesTranslator
+  [ 4] spellTouchoftheEel
+  [ 4] spellUnbuckle
+end
+
+category groupArcaneScrollSpells4
+  [ 4] spellBelsamethsStrife
+  [ 4] spellBottomlessPit
+  [ 4] spellGhostdweomer
+  [ 4] spellGluttony
+  [ 4] spellMindOverMatter
+  [ 4] spellMinorCircleofSeeing
+  [ 4] spellMirrorSafe
+  [ 4] spellPurifyingFlames
+  [ 4] spellRemoveResistance
+  [ 4] spellRuneofPoison
+  [ 4] spellSacrificeSpell
+  [ 4] spellSealofHedrada
+  [ 4] spellShadowFormofLyrand
+  [ 4] spellShadowShield
+  [ 4] spellSongoftheGods
+  [ 4] spellTattooItem
+  [ 4] spellTevikksCreepingEye
+  [ 4] spellVerminplague
+  [ 4] spellWatersEmbrace
+  [ 4] spellYaralsTotemicTransformation
+  [ 4] spellZombieForm
+end
+
+category groupArcaneScrollSpells5
+  [ 6] spellCallAquaticMonster
+  [ 6] spellCurtainofDarkness
+  [ 6] spellDarkWater
+  [ 6] spellDolomarsLimitedLiquification
+  [ 6] spellDoomwail
+  [ 6] spellGreaterFamiliar
+  [ 6] spellInquisition
+  [ 6] spellLiveWood
+  [ 6] spellMeldObject
+  [ 6] spellMultiplicity
+  [ 6] spellNethergaze
+  [ 6] spellPillarofAttraction
+  [ 6] spellPillarofRepulsion
+  [ 6] spellRiesDanceofSeduction
+  [ 6] spellShadowWeapon
+  [ 6] spellShipSnare
+end
+
+category groupArcaneScrollSpells6
+  [ 8] spellAwakenLesserTitanAvatar
+  [ 8] spellCallAquaticHumanoidII
+  [ 8] spellDeathBlade
+  [ 8] spellDeclarationofDeath
+  [ 8] spellEnkilisLightningStorm
+  [ 8] spellPasstheYears
+  [ 8] spellPowerWordThunder
+  [ 8] spellReverseIllusion
+  [ 8] spellShadowSmash
+  [ 8] spellSongofChampions
+  [ 8] spellTaldocksSpellInhibitor
+end
+
+category groupArcaneScrollSpells7
+  [ 10] spellDaggersofVaul
+  [ 10] spellFreezingCurse
+  [ 10] spellIlajamFire
+  [ 10] spellMormosSerpentHands
+  [ 10] spellSever
+  [ 10] spellShadeEvocation
+  [ 10] spellSoulstrike
+  [ 10] spellTransmuteFleshtoShadow
+end
+
+category groupArcaneScrollSpells8
+  [ 9] spellBlackFlame
+  [ 9] spellDarkstaff
+  [ 9] spellGreaterCircleofSeeing
+  [ 9] spellLeechField
+  [ 9] spellRapidJourney
+  [ 9] spellShadowStorm
+  [ 9] spellShadowTwin
+  [ 9] spellStrengthofKadum
+  [ 9] spellTimeSkip
+  [ 9] spellWiddershins
+end
+
+category groupDivineScrollSpells1
+  [ 4] spellAdheretoWood
+  [ 4] spellBuoyancyNet
+  [ 4] spellChameleonSkin
+  [ 4] spellClean
+  [ 4] spellDetectGold
+  [ 4] spellDistortShadow
+  [ 4] spellDowsing
+  [ 4] spellEphodofMelee
+  [ 4] spellGazeofTruth
+  [ 4] spellGrimFeast
+  [ 4] spellHolyBeacon
+  [ 4] spellMadrielsEmpathicResonance
+  [ 4] spellMinorSymbolofDivinity
+  [ 4] spellObscureShadow
+  [ 4] spellPrevaricationsBounty
+  [ 4] spellQuickSober
+  [ 4] spellRabbitFeet
+  [ 4] spellReshapeShadow
+  [ 4] spellSalamarsQuietContemplation
+  [ 4] spellShockwaveStrike
+  [ 4] spellSmite
+  [ 4] spellSpark
+  [ 4] spellStealSleep
+  [ 4] spellTanilsTouch
+end
+
+category groupDivineScrollSpells2
+  [ 3] spellAnimalInfusion
+  [ 3] spellAssassinsSenses
+  [ 3] spellBattlecry
+  [ 3] spellCallAquaticAnimalI
+  [ 3] spellCircleofSounds
+  [ 3] spellColdSnap
+  [ 3] spellCommandingPresence
+  [ 3] spellDeadMansEyes
+  [ 3] spellDivineWisdom
+  [ 3] spellEnkilisLuck
+  [ 3] spellEnkilisPrank
+  [ 3] spellFlameWeapon
+  [ 3] spellFrostWeapon
+  [ 3] spellFrogTongue
+  [ 3] spellGloom
+  [ 3] spellHedradasBalance
+  [ 3] spellHuntersStalk
+  [ 3] spellLiliandelsFlurry
+  [ 3] spellLimbsofEndurance
+  [ 3] spellLocateCorpse
+  [ 3] spellPhantomsHowl
+  [ 3] spellRendtheSovereignSoul
+  [ 3] spellSethrisPotency
+  [ 3] spellSethtelsStickServant
+  [ 3] spellSleepoftheDead
+  [ 3] spellSwiftWater
+  [ 3] spellVangalsTouch
+  [ 3] spellWolfsCry
+end
+
+category groupDivineScrollSpells3
+  [ 4] spellAnimalSpy
+  [ 4] spellBanishShadow
+  [ 4] spellBeastSoul
+  [ 4] spellCallAquaticHumanoidI
+  [ 4] spellChardunsTorments
+  [ 4] spellCurseofTerror
+  [ 4] spellDenevsExilefromNature
+  [ 4] spellDivineRaiment
+  [ 4] spellGanestsFarstrike
+  [ 4] spellHeartofValor
+  [ 4] spellInvigorateDead
+  [ 4] spellLifeForceTransfer
+  [ 4] spellListeningRingworm
+  [ 4] spellMindRaid
+  [ 4] spellPressureSphere
+  [ 4] spellSacredWeapon
+  [ 4] spellShadowStrike
+  [ 4] spellShadowTouch
+  [ 4] spellSunspear
+  [ 4] spellThornThrow
+  [ 4] spellUnbuckle
+  [ 4] spellVangalsWounding
+  [ 4] spellYaralsTotemicTransformation
+end
+
+category groupDivineScrollSpells4
+  [ 4] spellBelsamethsStrife
+  [ 4] spellCallAquaticAnimalII
+  [ 4] spellCloakofRighteousness
+  [ 4] spellCondemned
+  [ 4] spellControlLight
+  [ 4] spellGhostdweomer
+  [ 4] spellGluttony
+  [ 4] spellHandofJustice
+  [ 4] spellHolyBeaconsAnswer
+  [ 4] spellHolyChannel
+  [ 4] spellIronheart
+  [ 4] spellLiveWood
+  [ 4] spellMindOverMatter
+  [ 4] spellPurifyingFlames
+  [ 4] spellSacredJourney
+  [ 4] spellSealofHedrada
+  [ 4] spellSoulofMercy
+  [ 4] spellTanilsPurging
+  [ 4] spellTattooItem
+  [ 4] spellTerolesTranslator
+  [ 4] spellTouchoftheEel
+  [ 4] spellUnholyChannel
+  [ 4] spellVerminplague
+end
+
+category groupDivineScrollSpells5
+  [ 10] spellBelsamethsBlessing
+  [ 10] spellBrothersinArms
+  [ 10] spellDoomwail
+  [ 10] spellGutroot
+  [ 10] spellImbueShadow
+  [ 10] spellInquisition
+  [ 10] spellShipSnare
+  [ 10] spellWatersEmbrace
+end
+
+category groupDivineScrollSpells6
+  [ 10] spellCallAquaticHumanoidII
+  [ 10] spellDarkWater
+  [ 10] spellEnkilisLightningStorm
+  [ 10] spellMormosSerpentHands
+  [ 10] spellPasstheyears
+  [ 10] spellPowerWordThunder
+  [ 10] spellReverseIllusion
+  [ 10] spellSacrificialHeart
+  [ 10] spellTaldocksSpellInhibitor
+end
+
+category groupDivineScrollSpells7
+  [ 16] spellDaggersofVaul
+  [ 16] spellFreezingCurse
+  [ 16] spellGreaterHealingCircle
+  [ 16] spellIncite
+  [ 16] spellSever
+end
+
+category groupDivineScrollSpells8
+  [ 16] spellAvatar
+  [ 16] spellGroveofSerenity
+  [ 16] spellLeechField
+  [ 16] spellRecallChampion
+  [ 16] spellStrengthofKadum
+end
+
+category groupDivineScrollSpells9
+  [ 25] spellConvert
+  [ 25] spellIncapacitate
+  [ 25] spellShatterSoul
+end
+

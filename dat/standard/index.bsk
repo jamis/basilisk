@@ -55,4 +55,5 @@
 #include "tnblood.bsk"    /* Tome and Blood */
 #include "frcs.bsk"       /* Forgotton Realms Campaign Sourcebook */
 #include "mof.bsk"        /* Magic of Faerun */
+#include "rr.bsk"         /* Relics & Rituals */
 

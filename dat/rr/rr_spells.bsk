@@ -1,0 +1,221 @@
+
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellAcidSpittle { "Acid Spittle" schTransmutation $ $ sourcesRelicsRituals }
+  spellAdheretoWood { "Adhere to Wood" schTransmutation $ $ sourcesRelicsRituals }
+  spellAlibi { "Alibi" schEnchantment $ $ sourcesRelicsRituals }
+  spellAnimalInfusion { "Animal Infusion" schTransmutation $ $ sourcesRelicsRituals }
+  spellAnimalSpy { "Animal Spy" schEnchantment $ $ sourcesRelicsRituals }
+  spellAnimateShadow { "Animate Shadow" schTransmutation $ $ sourcesRelicsRituals }
+  spellArmorofUndeath { "Armor of Undeath" schNecromancy $ $ sourcesRelicsRituals }
+  spellArrowCharm { "Arrow Charm" schDivination $ $ sourcesRelicsRituals }
+  spellAssassinsSenses { "Assassin's Senses" sch $ $ sourcesRelicsRituals }
+  spellAvatar { "Avatar" schTransmutation $ $ sourcesRelicsRituals }
+  spellAwakenLesserTitanAvatar { "Awaken Lesser Titan Avatar" schConjuration $ $ sourcesRelicsRituals }
+  spellBanishShadow { "Banish Shadow" schAbjuration $ $ sourcesRelicsRituals }
+  spellBattlecry { "Battlecry" schEvocation $ $ sourcesRelicsRituals }
+  spellBeastSoul { "Beast Soul" schTransmutation $ $ sourcesRelicsRituals }
+  spellBelsamethsBlessing { "BelsamethsBlessing" schTransmutation $ $ sourcesRelicsRituals }
+  spellBelsamethsStrife { "Belsameth's Strife" schEnchantment $ $ sourcesRelicsRituals }
+  spellBlackflame { "Blackflame" schEvocation $ $ sourcesRelicsRituals }
+  spellBlazingShield { "Blazing Shield" schAbjuration $ $ sourcesRelicsRituals }
+  spellBleedingDisease { "Bleeding Disease" schNecromancy $ $ sourcesRelicsRituals }
+  spellBloodstorm { "Bloodstorm" schEvocation $ $ sourcesRelicsRituals }
+  spellBottomlessPit { "Bottomless Pit" schConjuration $ $ sourcesRelicsRituals }
+  spellBrothersinArms { "Brothers in Arms" schTransmutation $ $ sourcesRelicsRituals }
+  spellBuoyancyNet { "Buoyancy Net" schConjuration $ $ sourcesRelicsRituals }
+  spellCallAquaticAnimalI { "Call Aquatic Animal I" schConjuration $ $ sourcesRelicsRituals }
+  spellCallAquaticAnimalII { "Call Aquatic Animal II" schConjuration $ $ sourcesRelicsRituals }
+  spellCallAquaticHumanoidI { "Call Aquatic Humanoid I" schConjuration $ $ sourcesRelicsRituals }
+  spellCallAquaticHumanoidII { "Call Aquatic Humanoid II" schConjuration $ $ sourcesRelicsRituals }
+  spellCallAquaticMonster { "Call Aquatic Monster" schConjuration $ $ sourcesRelicsRituals }
+  spellChameleonSkin { "Chameleon Skin" schIllusion $ $ sourcesRelicsRituals }
+  spellChardunsTorments { "Chardun's Torments" schEvocation $ $ sourcesRelicsRituals }
+  spellChill { "Chill" schTransmutation $ $ sourcesRelicsRituals }
+  spellWarmth { "Warmth" schTransmutation $ $ sourcesRelicsRituals }
+  spellCircleofSounds { "Circle of Sounds" schDivination $ $ sourcesRelicsRituals }
+  spellClean { "Clean" schTransmutation $ $ sourcesRelicsRituals }
+  spellCloakofRighteousness { "Cloak of Righteousness" schAbjuration $ $ sourcesRelicsRituals }
+  spellColdSnap { "Cold Snap" schEvocation $ $ sourcesRelicsRituals }
+  spellCommandingPresence { "Commanding Presence" schEnchantment $ $ sourcesRelicsRituals }
+  spellCondemned { "Condemned" schNecromancy $ $ sourcesRelicsRituals }
+  spellControlLight { "Control Light" schTransmutation $ $ sourcesRelicsRituals }
+  spellConvert { "Convert" schEnchantment $ $ sourcesRelicsRituals }
+  spellCurseofTerror { "Curse of Terror" schEnchantment $ $ sourcesRelicsRituals }
+  spellCurtainofDarkness { "Curtain of Darkness" schEvocation $ $ sourcesRelicsRituals }
+  spellDaggersofVaul { "Daggers of Vaul" schConjuration $ $ sourcesRelicsRituals }
+  spellDarTansShadowBolt { "Dar'Tan's Shadow Bolt" schEvocation $ $ sourcesRelicsRituals }
+  spellDarkFlames { "Dark Flames" schEvocation $ $ sourcesRelicsRituals }
+  spellDarkWater { "Dark Water" schNecromancy $ $ sourcesRelicsRituals }
+  spellDarkstaff { "Darkstaff" schNecromancy $ $ sourcesRelicsRituals }
+  spellDeadMansEyes { "Dead Man's Eyes" schDivination $ $ sourcesRelicsRituals }
+  spellDeathBlade { "Death Blade" schTransmutation $ $ sourcesRelicsRituals }
+  spellDeclarationofDeath { "Declaration of Death" schEnchantment $ $ sourcesRelicsRituals }
+  spellDenevsExilefromNature { "Denev's Exile from Nature" schTransmutation $ $ sourcesRelicsRituals }
+  spellDenevsFury { "Denev's Fury" schEvocation $ $ sourcesRelicsRituals }
+  spellDetectGold { "Detect Gold" schDivination $ $ sourcesRelicsRituals }
+  spellDirgeofWoe { "Dirge of Woe" schEnchantment $ $ sourcesRelicsRituals }
+  spellDisappear { "Disappear" schIllusion $ $ sourcesRelicsRituals }
+  spellDistortShadow { "Distort Shadow" schTransmutation $ $ sourcesRelicsRituals }
+  spellDivineRaiment { "Divine Raiment" schAbjuration $ $ sourcesRelicsRituals }
+  spellDivineWisdom { "Divine Wisdom" schTransmutation $ $ sourcesRelicsRituals }
+  spellDolomarsLimitedLiquification { "Dolomar's Limited Liquification" schTransmutation $ $ sourcesRelicsRituals }
+  spellDolomarsForceWave { "Dolomar's Force Wave" schEvocation $ $ sourcesRelicsRituals }
+  spellDolomarsMapping { "Dolomar's Mapping" schConjuration $ $ sourcesRelicsRituals }
+  spellDoomwail { "Doomwail" schNecromancy $ $ sourcesRelicsRituals }
+  spellDowsing { "Dowsing" schDivination $ $ sourcesRelicsRituals }
+  spellDragonsBreath { "Dragon's Breath" schEvocation $ $ sourcesRelicsRituals }
+  spellEclipse { "Eclipse" schTransmutation $ $ sourcesRelicsRituals }
+  spellEnkilisLuck { "Enkili's Luck" schTransmutation $ $ sourcesRelicsRituals }
+  spellEnkilisLightningStorm { "Enkili's Lightning Storm" schEvocation $ $ sourcesRelicsRituals }
+  spellEnkilisPrank { "Enkili's Prank" schEnchantment $ $ sourcesRelicsRituals }
+  spellEnumerate { "Enumerate" schDivination $ $ sourcesRelicsRituals }
+  spellEphodofMelee { "Ephod of Melee" schAbjuration $ $ sourcesRelicsRituals }
+  spellEtherealBolt { "Ethereal Bolt" schEvocation $ $ sourcesRelicsRituals }
+  spellEverScent { "Ever Scent" schIllusion $ $ sourcesRelicsRituals }
+  spellFlameBolt { "Flame Bolt" schEvocation $ $ sourcesRelicsRituals }
+  spellFlameWeapon { "Flame Weapon" schEvocation $ $ sourcesRelicsRituals }
+  spellFrostWeapon { "Frost weapon" schEvocation $ $ sourcesRelicsRituals }
+  spellFlash { "Flash" schEvocation $ $ sourcesRelicsRituals }
+  spellFreezingCurse { "Freezing Curse" schTransmutation $ $ sourcesRelicsRituals }
+  spellFrogTongue { "Frog Tongue" schTransmutation $ $ sourcesRelicsRituals }
+  spellGanestsFarstrike { "Ganest's Farstrike" schEvocation $ $ sourcesRelicsRituals }
+  spellGasCloud { "Gas Cloud" schConjuration $ $ sourcesRelicsRituals }
+  spellGazeofTruth { "Gaze of Truth" schDivination $ $ sourcesRelicsRituals }
+  spellGhostdweomer { "Ghostdweomer" schIllusion $ $ sourcesRelicsRituals }
+  spellGloom { "Gloom" schEvocation $ $ sourcesRelicsRituals }
+  spellGlue { "Glue" schConjuration $ $ sourcesRelicsRituals }
+  spellGluttony { "Gluttony" schEnchantment $ $ sourcesRelicsRituals }
+  spellGreatKnock { "Great Knock" sch $ $ sourcesRelicsRituals }
+  spellGreaterCircleofSeeing { "Greater Circle of Seeing" schDivination $ $ sourcesRelicsRituals }
+  spellGreaterFamiliar { "Greater Familiar" schConjuration $ $ sourcesRelicsRituals }
+  spellGreaterHealingCircle { "Greater Healing Circle" schConjuration $ $ sourcesRelicsRituals }
+  spellGrimFeast { "Grim Feast" schNecromancy $ $ sourcesRelicsRituals }
+  spellGroveofSerenity { "Grove of Serenity" schConjuration $ $ sourcesRelicsRituals }
+  spellGutroot { "Gutroot" schTransmutation $ $ sourcesRelicsRituals }
+  spellHandofJustice { "Hand of Justice" schTransmutation $ $ sourcesRelicsRituals }
+  spellHeartofValor { "Heart of Valor" schEnchantment $ $ sourcesRelicsRituals }
+  spellHedradasBalance { "Hedrada's Balance" schEnchantment $ $ sourcesRelicsRituals }
+  spellHolyBeacon { "Holy Beacon" schAbjuration $ $ sourcesRelicsRituals }
+  spellHolyBeaconsAnswer { "Holy Beacon's Answer" schTransmutation $ $ sourcesRelicsRituals }
+  spellHolyChannel { "Holy Channel" schConjuration $ $ sourcesRelicsRituals }
+  spellLifeShield { "Life Shield" schConjuration $ $ sourcesRelicsRituals }
+  spellHuntersStalk { "Hunter's Stalk" schIllusion $ $ sourcesRelicsRituals }
+  spellIlajamFire { "Ilajam Fire" schEvocation $ $ sourcesRelicsRituals }
+  spellImbueShadow { "Imbue Shadow" schNecromancy $ $ sourcesRelicsRituals }
+  spellIncapacitate { "Incapacitate" schNecromancy $ $ sourcesRelicsRituals }
+  spellIncite { "Incite" schEnchantment $ $ sourcesRelicsRituals }
+  spellInquisition { "Inquisition" schEnchantment $ $ sourcesRelicsRituals }
+  spellIntoxicate { "Intoxicate" schTransmutation $ $ sourcesRelicsRituals }
+  spellInvigorateDead { "Invigorate Dead" schConjuration $ $ sourcesRelicsRituals }
+  spellIronStorm { "Iron Storm" schEvocation $ $ sourcesRelicsRituals }
+  spellIronheart { "Ironheart" schAbjuration $ $ sourcesRelicsRituals }
+  spellLeechField { "Leech Field" schNecromancy $ $ sourcesRelicsRituals }
+  spellLifeForceTransfer { "Life Force Transfer" schNecromancy $ $ sourcesRelicsRituals }
+  spellLiliandelsFlurry { "Liliandel's Flurry" schConjuration $ $ sourcesRelicsRituals }
+  spellLimbsofEndurance { "Limbs of Endurance" schTransmutation $ $ sourcesRelicsRituals }
+  spellListeningRingworm { "Listening Ringworm" schConjuration $ $ sourcesRelicsRituals }
+  spellLiveWood { "Live Wood" schTransmutation $ $ sourcesRelicsRituals }
+  spellLocateCorpse { "Locate Corpse" schDivination $ $ sourcesRelicsRituals }
+  spellMadrielsEmpathicResonance { "Madriel's Empathic Resonance" schEnchantment $ $ sourcesRelicsRituals }
+  spellManaspear { "Manaspear" schEvocation $ $ sourcesRelicsRituals }
+  spellMeldObject { "Meld Object" schTransmutation $ $ sourcesRelicsRituals }
+  spellMindOverMatter { "Mind Over Matter" schTransmutation $ $ sourcesRelicsRituals }
+  spellMindRaid { "Mind Raid" schDivination $ $ sourcesRelicsRituals }
+  spellMinorCircleofSeeing { "Minor Circle of Seeing" schDivination $ $ sourcesRelicsRituals }
+  spellMinorShadowConjuration { "Minor Shadow Conjuration" schIllusion $ $ sourcesRelicsRituals }
+  spellMinorShadowEvocation { "Minor Shadow Evocation" schIllusion $ $ sourcesRelicsRituals }
+  spellMinorSymbolofDivinity { "Minor Symbol of Divinity" schAbjuration $ $ sourcesRelicsRituals }
+  spellMirrorSafe { "Mirror Safe" schTransmutation $ $ sourcesRelicsRituals }
+  spellMormosSerpentHands { "Mormo's Serpent Hands" schtransmutation $ $ sourcesRelicsRituals }
+  spellMultiplicity { "Multiplicity" schTransmutation $ $ sourcesRelicsRituals }
+  spellNethergaze { "Nethergaze" schNecromancy $ $ sourcesRelicsRituals }
+  spellObscureShadow { "Obscure Shadow" schTransmutation $ $ sourcesRelicsRituals }
+  spellPasstheYears { "PasstheYears" schTransmutation $ $ sourcesRelicsRituals }
+  spellPerfectRecollection { "Perfect Recollection" schTransmutation $ $ sourcesRelicsRituals }
+  spellPhantomsHowl { "Phantom's Howl" schNecromancy $ $ sourcesRelicsRituals }
+  spellPillarofAttraction { "Pillar of Attraction" schConjuration $ $ sourcesRelicsRituals }
+  spellPillarofRepulsion { "Pillar of Repulsion" schConjuration $ $ sourcesRelicsRituals }
+  spellPowerWordThunder { "Power Word, Thunder" schConjuration $ $ sourcesRelicsRituals }
+  spellPressureSphere { "Pressure Sphere" schTransmutation $ $ sourcesRelicsRituals }
+  spellPrevaricationsBounty { "Prevarication's Bounty" schTransmutation $ $ sourcesRelicsRituals }
+  spellPurifyingFlames { "Purifying Flames" schEvocation $ $ sourcesRelicsRituals }
+  spellQuickSober { "Quick Sober" schTransmutation $ $ sourcesRelicsRituals }
+  spellRabbitFeet { "Rabit Feet" schTransmutation $ $ sourcesRelicsRituals }
+  spellRapidJourney { "Rapid Journey" schTransmutation $ $ sourcesRelicsRituals }
+  spellRecallChampion { "Recall Champion" schConjuration $ $ sourcesRelicsRituals }
+  spellRemoveResistance { "Remove Resistance" schTransmutation $ $ sourcesRelicsRituals }
+  spellRendtheSovereignSoul { "Rend the Sovereign soul" schEnchantment $ $ sourcesRelicsRituals }
+  spellRenewedFocus { "Renewed Focus" schTransmutation $ $ sourcesRelicsRituals }
+  spellReshapeShadow { "Reshape Shadow" schTransmutation $ $ sourcesRelicsRituals }
+  spellReverseIllusion { "Reverse Illusion" schIllusion $ $ sourcesRelicsRituals }
+  spellRiesDanceofSeduction { "Rie's Dance of Seduction" schEnchantment $ $ sourcesRelicsRituals }
+  spellRuneofDarkness { "Rune of Darkness" schAbjuration $ $ sourcesRelicsRituals }
+  spellRuneofFire { "Rune of Fire" schAbjuration $ $ sourcesRelicsRituals }
+  spellRuneofPoison { "Rune of Poison" schAbjuration $ $ sourcesRelicsRituals }
+  spellRuneofSeeing { "Rune of Seeing" schDivination $ $ sourcesRelicsRituals }
+  spellRuneofSleep { "Rune of Sleep" schAbjuration $ $ sourcesRelicsRituals }
+  spellSacredJourney { "Sacred Journey" schTransmutation $ $ sourcesRelicsRituals }
+  spellSacredWeapon { "Sacred Weapon" schEvocation $ $ sourcesRelicsRituals }
+  spellSacrificeSpell { "Sacrifice Spell" schEvocation $ $ sourcesRelicsRituals }
+  spellSacrificialHeart { "Sacrificial Heart" schNecromancy $ $ sourcesRelicsRituals }
+  spellSalamarsQuietContemplation { "Salamar's Quiet Contemplation" schEnchantment $ $ sourcesRelicsRituals }
+  spellSealofHedrada { "Seal of Hedrada" schTransmutation $ $ sourcesRelicsRituals }
+  spellSethrisPotency { "Sethris' Potency" schTransmutation $ $ sourcesRelicsRituals }
+  spellSethtelsStickServant { "Sethtel's Stick Servant" schConjuration $ $ sourcesRelicsRituals }
+  spellSever { "Sever" schAbjuration $ $ sourcesRelicsRituals }
+  spellShadeEvocation { "Shade Evocation" schIllusion $ $ sourcesRelicsRituals }
+  spellShadesSight { "Shade's Sight" schDivination $ $ sourcesRelicsRituals }
+  spellShadowFormofLyrand { "Shadow Form of Lyrand" schTransmutation $ $ sourcesRelicsRituals }
+  spellShadowImages { "Shadow Images" schIllusion $ $ sourcesRelicsRituals }
+  spellShadowShield { "Shadow Shield" schEvocation $ $ sourcesRelicsRituals }
+  spellShadowSmash { "Shadow Smash" schTransmutation $ $ sourcesRelicsRituals }
+  spellShadowStorm { "Shadow Storm" schNecromancy $ $ sourcesRelicsRituals }
+  spellShadowStrike { "Shadow Strike" schNecromancy $ $ sourcesRelicsRituals }
+  spellShadowTouch { "Shadow Touch" schNecromancy $ $ sourcesRelicsRituals }
+  spellShadowTwin { "Shadow Twin" schIllusion $ $ sourcesRelicsRituals }
+  spellShadowWeapon { "Shadow Weapon" schIllusion $ $ sourcesRelicsRituals }
+  spellShatterSoul { "Shatter Soul" schNecromancy $ $ sourcesRelicsRituals }
+  spellShipSnare { "Ship Snare" schTransmutation $ $ sourcesRelicsRituals }
+  spellShockwaveStrike { "Shockwave Strike" schEvocation $ $ sourcesRelicsRituals }
+  spellShockwave { "Shockwave" schEvocation $ $ sourcesRelicsRituals }
+  spellSleepoftheDead { "Sleep of the Dead" schNecromancy $ $ sourcesRelicsRituals }
+  spellSmite { "Smite" schEvocation $ $ sourcesRelicsRituals }
+  spellSmother { "Smother" schEvocation $ $ sourcesRelicsRituals }
+  spellSneeze { "Sneeze" schEnchantment $ $ sourcesRelicsRituals }
+  spellSongofChampions { "SongofChampions" schEnchantment $ $ sourcesRelicsRituals }
+  spellSongoftheGods { "Song of the Gods" schEnchantment $ $ sourcesRelicsRituals }
+  spellSongofHeroes { "Song of Heroes" schEnchantment $ $ sourcesRelicsRituals }
+  spellSoulofMercy { "Soul of Mercy" schTransmutation $ $ sourcesRelicsRituals }
+  spellSoulstrike { "Soulstrike" schNecromancy $ $ sourcesRelicsRituals }
+  spellSpark { "Spark" schEvocation $ $ sourcesRelicsRituals }
+  spellStealSleep { "Steal Sleep" schEnchantment $ $ sourcesRelicsRituals }
+  spellStrengthofKadum { "Strength of Kadum" schTransmutation $ $ sourcesRelicsRituals }
+  spellSunspear { "Sunspear" schEvocation $ $ sourcesRelicsRituals }
+  spellSwiftWater { "Swift Water" sch $ $ sourcesRelicsRituals }
+  spellTaldocksSpellInhibitor { "Tandock's Spell Inhibitor" schAbjuration $ $ sourcesRelicsRituals }
+  spellTanilsPurging { "Tanil's Purging" schTransmutation $ $ sourcesRelicsRituals }
+  spellTanilsTouch { "Tanil's Touch" schUniversal $ $ sourcesRelicsRituals }
+  spellTattooItem { "Tattoo Item" schTransmutation $ $ sourcesRelicsRituals }
+  spellTerolesTranslator { "Terole's Translator" schDivination $ $ sourcesRelicsRituals }
+  spellTevikksCreepingEye { "Tevikk's Creeping Eye" schConjuration $ $ sourcesRelicsRituals }
+  spellThornThrow { "Thorn Throw" schEvocation $ $ sourcesRelicsRituals }
+  spellTimeSkip { "Time Skip" schTransmutation $ $ sourcesRelicsRituals }
+  spellTouchoftheEel { "Touch of the Eel" schTransmutation $ $ sourcesRelicsRituals }
+  spellTransmuteFleshtoShadow { "Transmute Flesh to Shadow" schNecromancy $ $ sourcesRelicsRituals }
+  spellTriggerRune { "Trigger Rune" schTransmutation $ $ sourcesRelicsRituals }
+  spellTwoMinds { "Two Minds" schTransmutation $ $ sourcesRelicsRituals }
+  spellUnbuckle { "Unbuckel" schTransmutation $ $ sourcesRelicsRituals }
+  spellUnholyChannel { "Unholy Channel" schNecromancy $ $ sourcesRelicsRituals }
+  spellVangalsTouch { "Vangal's Touch" schEnchantment $ $ sourcesRelicsRituals }
+  spellVangalsWounding { "Vangal's Wounding" schTransmutation $ $ sourcesRelicsRituals }
+  spellVerminplague { "Verminplague" schConjuration $ $ sourcesRelicsRituals }
+  spellWallofHornets { "Wall of Hornets" schConjuration $ $ sourcesRelicsRituals }
+  spellWatersEmbrace { "Water's Embrace" schTransmutation $ $ sourcesRelicsRituals }
+  spellWiddershins { "Widdershins" schTransmutation $ $ sourcesRelicsRituals }
+  spellWolfsCry { "Wolf's Cry" schAbjuration $ $ sourcesRelicsRituals }
+  spellYaralsTotemicTransformation { "Yaral's Totemic Transformation" schTransmutation $ $ sourcesRelicsRituals }
+  spellZombieForm { "Zombie Form" schNecromancy $ $ sourcesRelicsRituals }
+end
+
+

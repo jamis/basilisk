@@ -1,0 +1,1478 @@
+/* --------------------------------------------------------------------- *
+ * Data from Sword & Sorcery's "Relics & Rituals", 
+ * converted to Basilisk format by
+ * Shaun Gierent
+ * --------------------------------------------------------------------- */
+
+/*Armour*/
+astArmoroftheSeaMonarchs in ( groupSpecificArmors )
+  .name "Armor of the Sea Monarchs"
+  .cost 116350 gp
+  .sources sourcesRelicsRituals
+end
+
+astChainShirtofSerpents in ( groupSpecificArmors )
+  .name "Chain Shirt of Serpents"
+  .cost  134845 gp
+  .sources sourcesRelicsRituals
+end
+
+astClothbornLeather in ( groupSpecificArmors )
+  .name "Clothborn Leather"
+  .cost  1160 gp
+  .sources sourcesRelicsRituals
+end
+
+
+astClothbornStuddedLeather in ( groupSpecificArmors )
+  .name "Clothborn Studded Leather"
+  .cost  4175 gp
+  .sources sourcesRelicsRituals
+end
+
+astClothbornChainShirt in ( groupSpecificArmors )
+  .name "Clothborn Chain Shirt"
+  .cost  9250 gp
+  .sources sourcesRelicsRituals
+end
+
+astClothbornHide in ( groupSpecificArmors )
+  .name "Clothborn Hide"
+  .cost  4165 gp
+  .sources sourcesRelicsRituals
+end
+
+astClothbornScale in ( groupSpecificArmors )
+  .name "Clothborn Scale"
+  .cost  9200 gp
+  .sources sourcesRelicsRituals
+end
+
+astClothbornChainmail in ( groupSpecificArmors )
+  .name "Clothborn Chainmail"
+  .cost  16300 gp
+  .sources sourcesRelicsRituals
+end
+
+astClothbornBreastplate in ( groupSpecificArmors )
+  .name "Clothborn Breastplate"
+  .cost  16350 gp
+  .sources sourcesRelicsRituals
+end
+
+astClothbornSplint in ( groupSpecificArmors )
+  .name "Clothborn Splint"
+  .cost  25350 gp
+  .sources sourcesRelicsRituals
+end
+
+astClothbornBanded in ( groupSpecificArmors )
+  .name "Clothborn Banded"
+  .cost  25400 gp
+  .sources sourcesRelicsRituals
+end
+
+astClothbornHalfPlate in ( groupSpecificArmors )
+  .name "Clothborn Half-Plate"
+  .cost  49750 gp
+  .sources sourcesRelicsRituals
+end
+
+astClothbornFullPlate in ( groupSpecificArmors )
+  .name "Clothborn Full Plate"
+  .cost  65650 gp
+  .sources sourcesRelicsRituals
+end
+
+astIronShieldofVesh in ( groupSpecificArmors )
+  .name "Iron Shield of Vesh"
+  .cost  26070 gp
+  .sources sourcesRelicsRituals
+end
+
+astMantleofHope in ( groupSpecificArmors )
+  .name "Mantle of Hope"
+  .cost  43770 gp
+  .sources sourcesRelicsRituals
+end
+
+astMantleoftheIceBear in ( groupSpecificArmors )
+  .name "Mantle of the Ice Bear"
+  .cost  33165 gp
+  .sources sourcesRelicsRituals
+end
+
+astMantleoftheLawkeeper in ( groupSpecificArmors )
+  .name "Mantle of the Lawkeeper"
+  .cost  5560 gp
+  .sources sourcesRelicsRituals
+end
+
+astMonarchsPlate in ( groupSpecificArmors )
+  .name "Monarch's Plate"
+  .cost  48650 gp
+  .sources sourcesRelicsRituals
+end
+
+astShadoworkArmor in ( groupSpecificArmors )
+  .name "Shadowork Armor"
+  .cost  1160 gp
+  .sources sourcesRelicsRituals
+end
+
+astSnakeskinArmor in ( groupSpecificArmors )
+  .name "Snakeskin Armor"
+  .cost  25160 gp
+  .sources sourcesRelicsRituals
+end
+
+astVirduksBane in ( groupSpecificArmors )
+  .name "Virduk's Bane"
+  .cost  18630 gp
+  .sources sourcesRelicsRituals
+end
+
+astWightArmor in ( groupSpecificArmors )
+  .name "Wight Armor"
+  .cost  676650 gp
+  .sources sourcesRelicsRituals
+end
+
+
+category groupMediumSpecificArmors
+  [15] astShadoworkArmor
+  [15] astMantleofHope
+  [1] astClothbornLeather
+  [2] astClothbornStuddedLeather
+  [2] astClothbornChainShirt
+  [1] astClothbornHide
+  [1] astClothbornScale
+  [1] astClothbornChainmail
+  [1] astClothbornBreastplate
+  [1] astClothbornSplint
+  [1] astClothbornBanded
+  [1] astClothbornHalfPlate
+  [6] astClothbornFullPlate
+  [15] astMantleoftheLawkeeper
+  [15] astVirduksBane
+  [10] astMantleoftheIceBear
+  [10] astIronShieldofVesh
+  [5] astArmoroftheSeaMonarchs
+end
+
+category groupMajorSpecificArmors
+  [15] astMantleoftheIceBear
+  [15] astIronShieldofVesh
+  [15] astArmoroftheSeaMonarchs
+  [15] astMonarchsPlate
+  [15] astChainShirtofSerpents
+  [15] astSnakeskinArmor
+  [10] astWightArmor
+end
+
+/* weapons */
+
+wstAsaatthiBlade
+  .name "Asaatthi Blade"
+  .prototype weaponScimitar
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 47515 gp
+  .sources sourcesRelicsRituals
+end
+
+wstAssassinsCrossbow
+  .name " Assassin's Crossbow"
+  .prototype weaponCrossbow
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 32335 gp
+  .sources sourcesRelicsRituals
+end
+
+wstBladeoftheWoundedKing
+  .name "Blade of the Wounded King"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 172115 gp
+  .sources sourcesRelicsRituals
+end
+
+wstBloodfangDagger
+  .name "Bloodfang Dagger"
+  .prototype weaponDagger
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 } )
+  .cost 79902 gp
+  .sources sourcesRelicsRituals
+end
+
+wstBoneDagger
+  .name "Bone Dagger"
+  .prototype weaponDagger
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 218302 gp
+  .sources sourcesRelicsRituals
+end
+
+wstHalflingBlade
+  .name "Halfling Blade"
+  .prototype weaponShortsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 } )
+  .cost 22510 gp
+  .sources sourcesRelicsRituals
+end
+
+wstHammerofShattering
+  .name "Hammer of Shattering"
+  .prototype weaponHammer
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 } )
+  .cost 164820 gp
+  .sources sourcesRelicsRituals
+end
+
+wstHornsawBlade
+  .name "Hornsaw Blade"
+  .prototype weaponScimitar
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +0 }
+             { .type btEnhancement .aspect asDamage .magnitude +4 } )
+  .cost 8315 gp
+  .sources sourcesRelicsRituals
+end
+
+wstHuntersSpear
+  .name "Hunter's Spear"
+  .prototype weaponjavelin
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 68701 gp
+  .sources sourcesRelicsRituals
+end
+
+wstIceSickle
+  .name "Ice Sickle"
+  .prototype weaponSickle
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 40546 gp
+  .sources sourcesRelicsRituals
+end
+
+wstJudgementHammer
+  .name "Judgement Hammer"
+  .prototype weaponHammer
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 64315 gp
+  .sources sourcesRelicsRituals
+end
+
+wstKinSkull
+  .name "Kin-Skull"
+  .prototype weaponThrown
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +0 }
+             { .type btEnhancement .aspect asDamage .magnitude +0 } )
+  .cost 6800 gp
+  .sources sourcesRelicsRituals
+end
+
+wstLadyoftheValley
+  .name "Lady of the Valley"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 37315 gp
+  .sources sourcesRelicsRituals
+end
+
+wstMageblade
+  .name "Mageblade"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 34315 gp
+  .sources sourcesRelicsRituals
+end
+
+wstMarinersSpear
+  .name "Mariner's Spear"
+  .prototype weaponLongspear
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 79902 gp
+  .sources sourcesRelicsRituals
+end
+
+wstRatspike
+  .name "Ratspike"
+  .prototype weaponDagger
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +0 }
+             { .type btEnhancement .aspect asDamage .magnitude +0 } )
+  .cost 150310 gp
+  .sources sourcesRelicsRituals
+end
+
+wstScorpionWhip
+  .name "Scorpion Whip"
+  .prototype weaponWhip
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 14500 gp
+  .sources sourcesRelicsRituals
+end
+
+wstShadowblade
+  .name "Shadowblade"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 19315 gp
+  .sources sourcesRelicsRituals
+end
+
+wstSilverBow
+  .name "SilverBow"
+  .prototype weaponLongbow
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 18375 gp
+  .sources sourcesRelicsRituals
+end
+
+wstSlitherenStarmaw
+  .name "Slitheren Starmaw"
+  .prototype weaponHeavymace
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 32312 gp
+  .sources sourcesRelicsRituals
+end
+
+wstSovereignAccord
+  .name "Sovereign Accord"
+  .prototype weaponWhip
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 33301 gp
+  .sources sourcesRelicsRituals
+end
+
+wstSquiresSword
+  .name "Squire's Sword"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 13315 gp
+  .sources sourcesRelicsRituals
+end
+
+wstStarofTerror
+  .name "Star of Terror"
+  .prototype weaponMorningstar
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 } )
+  .cost 32058 gp
+  .sources sourcesRelicsRituals
+end
+
+wstStormseeker
+  .name "Stormseeker"
+  .prototype weaponShortspear
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 63302 gp
+  .sources sourcesRelicsRituals
+end
+
+wstSwordoftheForsaken
+  .name "Sword of the Forsaken"
+  .prototype weaponRapier
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 22070 gp
+  .sources sourcesRelicsRituals
+end
+
+wstThanqual
+  .name "Thanqual"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 63315gp
+  .sources sourcesRelicsRituals
+end
+
+wstThunderCrossbow
+  .name "Thunder Crossbow"
+  .prototype weaponHeavycrossbow
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 55350 gp
+  .sources sourcesRelicsRituals
+end
+
+wstTridentofSparkfury
+  .name "Trident of Sparkfury"
+  .prototype weaponTrident
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 93515 gp
+  .sources sourcesRelicsRituals
+end
+
+wstWarCleaver
+  .name "War Cleaver"
+  .prototype weaponGreatsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 50375 gp
+  .sources sourcesRelicsRituals
+end
+
+wstWebArrow
+  .name "Web Arrow"
+  .prototype weaponArrow
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +0 }
+             { .type btEnhancement .aspect asDamage .magnitude +0 } )
+  .cost 457 gp
+  .sources sourcesRelicsRituals
+end
+
+wstWhirlwindBlade
+  .name "Whirlwind Blade"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 72315 gp
+  .sources sourcesRelicsRituals
+end
+
+wstWormtongue
+  .name "Wormtongue"
+  .prototype weaponShortsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 } )
+  .cost 98310 gp
+  .sources sourcesRelicsRituals
+end
+
+wstWraithblade
+  .name "Wraithblade"
+  .prototype weaponBroadsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 } )
+  .cost 332315 gp
+  .sources sourcesRelicsRituals
+end
+
+category groupMediumSpecificWeapons
+  [ 10] wstSquiresSword
+  [ 10] wstWebArrow
+  [ 10] wstHornsawBlade
+  [ 10] wstAssassinsCrossbow
+  [ 10] wstIceSickle
+  [ 5] wstSilverBow
+  [ 5] wstSwordoftheForsaken
+  [ 5] wstKinSkull
+  [ 5] wstMarinersSpear
+  [ 4] wstHuntersSpear
+  [ 3] wstTridentofSparkfury
+  [ 3] wstAsaatthiBlade
+  [ 4] wstJudgementHammer
+  [ 3] wstShadowblade
+  [ 4] wstScorpionWhip
+  [ 3] wstMageblade
+  [ 3] wstRatspike
+  [ 2] wstSovereignAccord
+  [ 2] wstWhirlwindBlade
+  [ 1] wstLadyoftheValley
+end
+
+category groupMajorSpecificWeapons
+  [ 5] wstHuntersSpear
+  [ 5] wstTridentofSparkfury
+  [ 5] wstAsaatthiBlade
+  [ 5] wstJudgementHammer
+  [ 5] wstShadowblade
+  [ 5] wstScorpionWhip
+  [ 5] wstMageblade
+  [ 5] wstRatspike
+  [ 5] wstSovereignAccord
+  [ 5] wstWhirlwindBlade
+  [ 5] wstLadyoftheValley
+  [ 4] wstHalflingBlade
+  [ 3] wstBoneDagger
+  [ 5] wstStormseeker
+  [ 3] wstSlitherenStarmaw 
+  [ 3] wstBladeoftheWoundedKing
+  [ 3] wstWarCleaver
+  [ 3] wstWormtongue 
+  [ 3] wstStarofTerror
+  [ 3] wstBloodfangDagger
+  [ 3] wstThanqual
+  [ 3] wstHammerofShattering
+  [ 3] wstWraithblade
+end
+
+/* rings */
+
+ringAsaatthiBattleRing ( groupRings )
+  .name "Asaatthi Battle Ring"
+  .cost 40100 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+ringDimitrisRing ( groupRings )
+  .name "Dimitri's Ring"
+  .cost 14000 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+ringLesserRingsofKyel ( groupRings )
+  .name "Lesser Rings of Kyel"
+  .cost 31750 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+ringMagicAnimalRing ( groupRings )
+  .name "Magic Animal Ring"
+  .cost 7050 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+ringMaidenofWeaponcall ( groupRings )
+  .name "Maiden of Weaponcall"
+  .cost 97200 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+ringPlatinumRingofHedrada ( groupRings )
+  .name "Platinum Ring of Hedrada"
+  .cost 78800 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+ringRingofAlarm ( groupRings )
+  .name "Ring of Alarm"
+  .cost 4200 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+ringRingofMadrielsBlessing ( groupRings )
+  .name "Ring of Madriel's Blessing"
+  .cost 55600 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+ringRingofScribingGreater ( groupRings )
+  .name "Ring of Scribing, Greater"
+  .cost 30000 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+ringRingofScribingLesser ( groupRings )
+  .name "Ring of Scribing, Lesser"
+  .cost 6000 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+ringRingofTrueSacrifice ( groupRings )
+  .name "Ring of True Sacrifice"
+  .cost 168000 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+ringRingofWindfury ( groupRings )
+  .name "Ring of Windfury"
+  .cost 60480 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+ringRingsofthePack ( groupRings )
+  .name "Rings of the Pack"
+  .cost 63000 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+category groupRingsMinor
+  [ 20] ringDimitrisRing
+  [ 20] ringLesserRingsofKyel
+  [ 20] ringRingofAlarm
+  [ 10] ringRingofScribingLesser
+  [ 10] ringMagicAnimalRing
+  [ 5] ringPlatinumRingofHedrada
+  [ 5] ringRingsofthePack
+  [ 5] ringRingofTrueSacrifice
+  [ 5] ringRingofWindfury
+end
+
+category groupRingsMedium
+  [ 20] ringRingofAlarm
+  [ 20] ringRingofScribingGreater
+  [ 20] ringMagicAnimalRing
+  [ 10] ringPlatinumRingofHedrada
+  [ 10] ringRingsofthePack
+  [ 5] ringRingofTrueSacrifice
+  [ 5] ringRingofWindfury
+  [ 5] ringRingofMadrielsBlessing
+  [ 5] ringAsaatthiBattleRing
+end
+
+category groupRingsMajor
+  [ 20] ringPlatinumRingofHedrada
+  [ 20] ringRingsofthePack
+  [ 20] ringRingofTrueSacrifice
+  [ 10] ringRingofWindfury
+  [ 10] ringRingofMadrielsBlessing
+  [ 10] ringAsaatthiBattleRing
+  [ 10] ringMaidenofWeaponcall
+end
+
+/* rods */
+
+rodIronScepterofHedrada
+  .name "Iron Scepter of Hedrada"
+  .cost 112000 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+rodProteusRod
+  .name "Proteus Rod"
+  .cost 81000 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+rodRodofBlasphemy
+  .name "Rod of Blasphemy"
+  .cost 43305 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+rodRodofBlessedRest
+  .name "Rod of Blessed Rest"
+  .cost 110000 gp
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+category groupMediumRods
+  [ 60]  rodProteusRod
+  [ 20]  rodIronScepterofHedrada
+  [ 15]  rodRodofBlessedRest
+  [ 5]  rodRodofBlasphemy
+end
+
+category groupMajorRods
+  [ 20]  rodProteusRod
+  [ 30]  rodIronScepterofHedrada
+  [ 30]  rodRodofBlessedRest
+  [ 20]  rodRodofBlasphemy
+end
+
+/* staffs */
+
+staffStaffofDivineFlame
+  .name "Staff of Divine Flame"
+  .cost 75600 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellFirestrike .charges 1 }
+                    { .type satSpellEffect .spell spellShield .charges 1 }
+                    { .type satSpellEffect .spell spellTrueStrike .charges 1 } 
+                    { .type satSpellEffect .spell spellFireShield .charges 2 }
+                    { .type satSpellEffect .spell spellFlameArrow .charges 2 }
+                    { .type satSpellEffect .spell spellResistElements .charges 2 } )
+
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+staffStaffofGaurak
+  .name "Staff of Gaurak"
+  .cost 105600 gp
+  .init rInitGenericStaffProperties
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+staffStaffofHornsawWood
+  .name "Staff of HornSaw Wood"
+  .cost 70600 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellBlindness .charges 1 }
+                    { .type satSpellEffect .spell spellPoison .charges 2 }
+                    { .type satSpellEffect .spell spellPowerWordStun .charges 3 } )
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+staffStaffoftheWayfarer
+  .name "Staff of the Wayfarer"
+  .cost 82600 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellLeosSecureShelter .charges 1 }
+                    { .type satSpellEffect .spell spellHeroesFeast .charges 1 }
+                    { .type satSpellEffect .spell spellEndureElements .charges 1 }                    
+			  { .type satSpellEffect .spell spellCreateWater .charges 1 } )
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+staffStaffofSpirits
+  .name "Staff of Spirits"
+  .cost 18600 gp
+  .init rInitGenericStaffProperties
+  .sources sourcesRelicsRituals
+  .needPrefix false
+end
+
+category groupMediumStaves
+  [ 40]  staffStaffofSpirits
+  [ 25]  staffStaffoftheWayfarer
+  [ 15]  staffStaffofGaurak
+  [ 15]  staffStaffofHornsawWood
+  [ 5]  staffStaffofDivineFlame
+end
+
+category groupMajorStaves
+  [ 25]  staffStaffofSpirits
+  [ 25]  staffStaffoftheWayfarer
+  [ 20] staffStaffofGaurak
+  [ 20]  staffStaffofHornsawWood
+  [ 10]  staffStaffofDivineFlame
+end
+
+/* wondrous items */
+
+wondrousAllunasLensesofDiscovery75
+  .name "Alluna's Lenses of Discover, 75% chance of success"
+  .cost 24500 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousAllunasLensesofDiscovery85
+  .name "Alluna's Lenses of Discover, 85% chance of success"
+  .cost 34500 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousAllunasLensesofDiscovery90
+  .name "Alluna's Lenses of Discover, 90% chance of success"
+  .cost 50000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousAmaltheanHelm
+  .name "AmaltheanHelm"
+  .cost 50000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousAmuletofGhostArmor
+  .name "Amulet of Ghost Armor"
+  .cost 80000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousAmuletofPeacefulRepose
+  .name "Amulet of Peaceful Repose"
+  .cost 2000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousAmuletsofLove
+  .name "Amulets of Love"
+  .cost 100000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousArtemesiasGarrote
+  .name "Artemesia's Garrote"
+  .cost 12500 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousBagofthePyre
+  .name "Bag of the Pyre"
+  .cost 6500 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousBanjesTurbanofDiscernment
+  .name "Banje's Turban of Discernment"
+  .cost 20000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousBeadsoftheAlteredVoice
+  .name "Beads of the Altered Voice"
+  .cost 980 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousBelsamaugAmulet
+  .name "Belsamaug Amulet"
+  .cost  34000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousBestiaryofBinding
+  .name "Bestiary of Binding"
+  .cost  99200 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousBloodBandsofAwakening
+  .name "Blood Bands of Awakening"
+  .cost  24600 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousBloodstone
+  .name "Bloodstone"
+  .cost  500 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousBoneNeedles
+  .name "Bone Needles"
+  .cost  300 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousBookofKnowledge
+  .name "Book of Knowledge"
+  .cost  10400 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousBootsofLanding
+  .name "Boots of Landing"
+  .cost  2200 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousBreathofLife
+  .name "Breath of Life"
+  .cost  78000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousBurdensomeCoin
+  .name "Burdensome Coind"
+  .cost  8000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousCanopicUrnoftheUndead
+  .name "Canopic Urn of the Undead"
+  .cost  48000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousCatsClaws
+  .name "Cat's Claws"
+  .cost  14100 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousChampionsHelm
+  .name "Champions Helm"
+  .cost  94000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousCircletoftheIronMind
+  .name "Circlet of the Iron Mind"
+  .cost  375000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousCircletofWarning
+  .name "Circlet of Warning"
+  .cost  58000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousCloakofEvasion
+  .name "Cloak of Evasion"
+  .cost  16000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousCloakofFame
+  .name "Cloak of Fame"
+  .cost  240000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousCloakofPestilence
+  .name "Cloak of Pestilence"
+  .cost  56700 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousCloakofWhispers
+  .name "CloakofWhispers"
+  .cost  34400 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousConfessorsQuill
+  .name "Confessor's Quill"
+  .cost  30000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousDespotsCirclet
+  .name "Despot's Circlet"
+  .cost  118000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousDragonstein
+  .name "Dragonstein"
+  .cost  4400 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousEmeraldQuiver
+  .name "Emerald Quiver"
+  .cost  17900 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousEnkilisCloak
+  .name "Enkili's Cloak"
+  .cost  2800 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousEverseeingEyepatch
+  .name "Everseeing Eyepatch"
+  .cost  56000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousFlagonofImbibing
+  .name "Flagon of Imbibing"
+  .cost  2000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousGemgate
+  .name "Gemgate"
+  .cost  81900 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousGlovesoftheGladiator
+  .name "Gloves of the Gladiator"
+  .cost  9000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousHelmoftheReaver
+  .name "Helm of the Reaver"
+  .cost  55200 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousHornsawFlute
+  .name "Hornsaw Flute"
+  .cost  101000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousHorseshoesoftheVanishingSteed
+  .name "Horseshoes of the Vanishing Steed"
+  .cost  66800 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousHourvansHandglassofHolding
+  .name "Hourvan's Handglass of Holding"
+  .cost  79500 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousImpregnableStrongbox
+  .name "ImpregnableStrongbox"
+  .cost  167000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousKadumsPearlsPearlofAgony
+  .name "Kadum's Pearls: Pearl of Agony"
+  .cost  4000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousKadumsPearlsPearlofNightTerrors
+  .name "Kadum's Pearls: Pearl of Night Terrors"
+  .cost  32000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousKadumsPearlsPearlofPestilence
+  .name "Kadum's Pearls: Pearl of Pestilence"
+  .cost  32000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousKadumsPearlsPearlofSlaying
+  .name "Kadum's Pearls: Pearl of Slaying"
+  .cost  92000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousKadumsPearlsPearlofStrife
+  .name "Kadum's Pearls: Pearl of Strife"
+  .cost  92000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousKadumsPearlsPearlofWounding
+  .name "Kadum's Pearls: Pearl of Wounding"
+  .cost  62000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousKadumsPearlsPearlofAgony
+  .name "Kadum's Pearls: Pearl of Agony "
+  .cost  4000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+
+wondrousKelderFeedbag
+  .name "Kelder Feedbag"
+  .cost  6000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousLuthiasToolsofPrecision
+  .name "Luthia's Tools of Precision"
+  .cost  2160 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousMaskofDesire
+  .name "Mask of Desire"
+  .cost  93000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousMedallionsoftheVeshianVigilsMedallionoftheAcorn
+  .name "Medallions of the Veshian Vigils: Medallion of the Acorn"
+  .cost  21600 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousMedallionsoftheVeshianVigilsMedallionofAdamantite
+  .name "Medallions of the Veshian Vigils: Medallion of Adamantite"
+  .cost  78100 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousMedallionsoftheVeshianVigilsMedallionoftheCaterpillar
+  .name "Medallions of the Veshian Vigils: Medallion of the Caterpillar"
+  .cost  12300 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousMedallionsoftheVeshianVigilsMedallionoftheConifer
+  .name "Medallions of the Veshian Vigils: Medallion of the Conifer"
+  .cost  97300 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousMedallionsoftheVeshianVigilsMedallionoftheFlower
+  .name "Medallions of the Veshian Vigils: Medallion of the Flower"
+  .cost  40000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousMedallionsoftheVeshianVigilsMedallionoftheFly
+  .name "Medallions of the Veshian Vigils: Medallion of the Fly"
+  .cost  7400 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousMedallionsoftheVeshianVigilsMedallionofGrass
+  .name "Medallions of the Veshian Vigils: Medallion of Grass"
+  .cost  55100 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousMedallionsoftheVeshianVigilsMedallionoftheMosquito
+  .name "Medallions of the Veshian Vigils: Medallion of the Mosquito"
+  .cost  22100 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousMedallionsoftheVeshianVigilsMedallionoftheMoth
+  .name "Medallions of the Veshian Vigils: Medallion of the Moth"
+  .cost  13100 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousMedallionsoftheVeshianVigilsMedallionoftheSeashell
+  .name "Medallions of the Veshian Vigils: Medallion of the Seashell"
+  .cost  21900 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousMedallionsoftheVeshianVigilsMedallionoftheScorpion
+  .name "Medallions of the Veshian Vigils: Medallion of the Scorpion"
+  .cost  62100 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousMedallionsoftheVeshianVigilsMedallionofWheat
+  .name "Medallions of the Veshian Vigils: Medallion of the Wheat"
+  .cost  28200 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousNecklaceofImmunity
+  .name "Necklace of Immunity"
+  .cost  6000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousNomariCandlesCandleofDeath
+  .name "Nomari Candles: Candle of Death"
+  .cost  9000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousNomariCandlesCandleofExhaustion
+  .name "Nomari Candles: Candle of Exhaustion"
+  .cost  5600 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousNomariCandlesCandleofParalysis
+  .name "Nomari Candles: Candle of Paralysis"
+  .cost  6400 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousNomariCandlesCandleofSleep
+  .name "Nomari Candles: Candle of Sleep"
+  .cost  6400 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousNomariCandlesCandleofSmoke
+  .name "Nomari Candles: Candle of Smoke"
+  .cost  1200 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousOathbreakersBracelet
+  .name "Oathbreaker's Bracelet"
+  .cost   19000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousPackofSafekeeping
+  .name "Pack of Safekeeping"
+  .cost  9800 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousPipeofVisions
+  .name "PipeofVisions"
+  .cost  21600 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousPropheticTablet
+  .name "Prophetic Tablet"
+  .cost  450 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousRevengeDoll
+  .name "Revenge Doll"
+  .cost  59500 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousRobeoftheNetherworld
+  .name "Robe of the Netherworld"
+  .cost  148100 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousSaddleoftheMasterRiders
+  .name "Saddle of the Master Riders"
+  .cost  1200 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousScabbardofHiding
+  .name "Scabbard of Hiding"
+  .cost  18500 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousShacklesofApathy
+  .name "Shackels of Apathy"
+  .cost  52000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousShelloftheOceansCall
+  .name "Shell of the Ocaeans Call"
+  .cost  42000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousSolarBroochNormalVersion
+  .name "Solar Brooch, Normal Version"
+  .cost  50200 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousSolarBroochFireResistantVersion
+  .name "Solar Brooch, Fire Resistant Version"
+  .cost  59000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousSoulBrazier
+  .name "Soul Brazier"
+  .cost  19200 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousSpectralYoke
+  .name "Spectral Yoke"
+  .cost  66000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousSpiderWebs
+  .name "Spider Webs"
+  .cost  500 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousStarGazer
+  .name "Star Gazer"
+  .cost  50500 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+wondrousVengaurakMask
+  .name "Vengaurak Mask"
+  .cost  87000 gp
+  .canBeIntelligent no
+  .sources sourcesRelicsRituals
+end
+
+category groupMinorWondrousItems
+  [ 8]  wondrousAmuletofPeacefulRepose
+  [ 8]  wondrousBeadsoftheAlteredVoice
+  [ 8]  wondrousArtemesiasGarrote
+  [ 8]  wondrousLuthiasToolsofPrecision
+  [ 8]  wondrousBanjesTurbanofDiscernment
+  [ 6]  wondrousSpiderWebs
+  [ 6]  wondrousBootsofLanding
+  [ 6]  wondrousKelderFeedbag
+  [ 5]  wondrousBagofthePyre
+  [ 5]  wondrousBurdensomeCoin
+  [ 5]  wondrousConfessorsQuill
+  [ 4]  wondrousFlagonofImbibing
+  [ 4]  wondrousHelmoftheReaver
+  [ 4]  wondrousScabbardofHiding
+  [ 3]  wondrousCatsClaws
+  [ 2]  wondrousHourvansHandglassofHolding
+  [ 2]  wondrousEnkilisCloak
+  [ 2]  wondrousNomariCandlesCandleofSmoke
+  [ 2]  wondrousOathbreakersBracelet
+  [ 1]  wondrousBoneNeedles
+  [ 1]  wondrousDragonstein
+  [ 1]  wondrousShelloftheOceansCall
+  [ 1]  wondrousStarGazer
+end
+
+category groupMediumWondrousItems
+  [ 5]  wondrousAmuletsofLove
+  [ 5]  wondrousBloodstone
+  [ 5]  wondrousPackofSafekeeping
+  [ 5]  wondrousCloakofWhispers
+  [ 5]  wondrousNomariCandlesCandleofSleep
+  [ 2]  wondrousAllunasLensesofDiscovery75
+  [ 2]  wondrousAllunasLensesofDiscovery85
+  [ 1]  wondrousAllunasLensesofDiscovery90
+  [ 5]  wondrousBelsamaugAmulet
+  [ 5]  wondrousAmuletofGhostArmor
+  [ 5]  wondrousPropheticTablet
+  [ 5]  wondrousNomariCandlesCandleofExhaustion
+  [ 3]  wondrousGlovesoftheGladiator
+  [ 3]  wondrousBookofKnowledge
+  [ 3]  wondrousCloakofEvasion
+  [ 3]  wondrousCloakofPestilence
+  [ 3]  wondrousSaddleoftheMasterRiders
+  [ 3]  wondrousHornsawFlute
+  [ 3]  wondrousMaskofDesire
+  [ 3]  wondrousNomariCandlesCandleofParalysis
+  [ 3]  wondrousChampionsHelm
+  [ 3]  wondrousEmeraldQuiver
+  [ 3]  wondrousHorseshoesoftheVanishingSteed
+  [ 3]  wondrousCanopicUrnoftheUndead
+  [ 3]  wondrousImpregnableStrongbox
+  [ 1]  wondrousMedallionsoftheVeshianVigilsMedallionoftheAcorn
+  [ 1]  wondrousMedallionsoftheVeshianVigilsMedallionofAdamantite
+  [ 1]  wondrousMedallionsoftheVeshianVigilsMedallionoftheCaterpillar
+  [ 1]  wondrousMedallionsoftheVeshianVigilsMedallionoftheConifer
+  [ 1]  wondrousMedallionsoftheVeshianVigilsMedallionoftheFlower
+  [ 1]  wondrousMedallionsoftheVeshianVigilsMedallionoftheFly
+  [ 1]  wondrousMedallionsoftheVeshianVigilsMedallionofGrass
+  [ 1]  wondrousMedallionsoftheVeshianVigilsMedallionoftheMosquito
+  [ 1]  wondrousMedallionsoftheVeshianVigilsMedallionoftheMoth
+  [ 1]  wondrousMedallionsoftheVeshianVigilsMedallionoftheSeashell
+  [ 1]  wondrousMedallionsoftheVeshianVigilsMedallionoftheScorpion
+  [ 1]  wondrousMedallionsoftheVeshianVigilsMedallionofWheat
+  [ 2]  wondrousSpectralYoke
+  [ 2]  wondrousAmaltheanHelm
+  [ 1]  wondrousNecklaceofImmunity
+  [ 1]  wondrousSoulBrazier
+  [ 1]  wondrousRevengeDoll
+  [ 1]  wondrousShacklesofApathy
+  [ 1]  wondrousSolarBroochNormalVersion
+  [ 1]  wondrousSolarBroochFireResistantVersion
+end
+
+category groupMajorWondrousItems
+  [ 10]  wondrousCircletofWarning
+  [ 10]  wondrousCloakofFame
+  [ 9]  wondrousPipeofVisions
+  [ 9]  wondrousBloodBandsofAwakening
+  [ 9]  wondrousCircletoftheIronMind
+  [ 7]  wondrousBreathofLife
+  [ 7]  wondrousVengaurakMask
+  [ 7]  wondrousEverseeingEyepatch
+  [ 7]  wondrousNomariCandlesCandleofDeath
+  [ 6]  wondrousBestiaryofBinding
+  [ 7]  wondrousGemgate
+  [ 5]  wondrousDespotsCirclet
+  [ 3]  wondrousRobeoftheNetherworld
+  [ 1]  wondrousKadumsPearlsPearlofAgony
+  [ 1]  wondrousKadumsPearlsPearlofNightTerrors
+  [ 1]  wondrousKadumsPearlsPearlofPestilence
+  [ 1]  wondrousKadumsPearlsPearlofSlaying
+  [ 1]  wondrousKadumsPearlsPearlofStrife
+  [ 1]  wondrousKadumsPearlsPearlofWounding
+end
+

@@ -1,0 +1,145 @@
+template in ( groupAllWands )  { spell     spellLevel casterLevel sources }
+  wandBuoyancyNet              { spellBuyancyNet           1   1 sourcesRelicsRituals }
+  wandClean              { spellClean           1   1 sourcesRelicsRituals }
+  wandDetectGold              { spellDetectGold           1   1 sourcesRelicsRituals }
+  wandFlameBolt              { spellFlamebolt           1   1 sourcesRelicsRituals }
+  wandMadrielsEmpathicResonance              { spellMadrielsEmpathicResonance           1   1 sourcesRelicsRituals }
+  wandDowsing              { spellDowsing           1   1 sourcesRelicsRituals }
+  wandEphodofMelee              { spellEphodofMelee           1   1 sourcesRelicsRituals }
+  wandFlash              { spellFlash           1   1 sourcesRelicsRituals }
+  wandSalamarsQuietContemplation              { spellSalamarsQuietContemplation           1   1 sourcesRelicsRituals }
+  wandObscureShadow              { spellObscureShadow           1   1 sourcesRelicsRituals }
+  wandPrevaricationsBounty              { spellPrevaricationsBounty           1   1 sourcesRelicsRituals }
+  wandReshapeShadow              { spellReshapeShadow           1   1 sourcesRelicsRituals }
+  wandQuickSober              { spellQuickSober           1   1 sourcesRelicsRituals }
+  wandSpark              { spellSpark           1   1 sourcesRelicsRituals }
+  wandAlibi              { spellAlibi           2   3 sourcesRelicsRituals }
+  wandBlazingShield              { spellBlazingShield           2   3 sourcesRelicsRituals }
+  wandCallAquaticAnimalI              { spellCallAquaticAnimalI           2   3 sourcesRelicsRituals }
+  wandColdSnap              { spellColdSnap           2   3 sourcesRelicsRituals }
+  wandDarkFlames              { spellDarkFlames           2   3 sourcesRelicsRituals }
+  wandDeadMansEyes              { spellDeadMansEyes           2   3 sourcesRelicsRituals }
+  wandDolomarsForceWave              { spellDolomarsForceWave           2   3 sourcesRelicsRituals }
+  wandEnkilisLuck              { spellEnkilisLuck           2   3 sourcesRelicsRituals }
+  wandEnkilisPrank              { spellEnkilisPrank           2   3 sourcesRelicsRituals }
+  wandEtherealBolt              { spellEtherealBolt           2   3 sourcesRelicsRituals }
+  wandFlameWeapon              { spellFlameWeapon           2   3 sourcesRelicsRituals }
+  wandFrostWeapon              { spellFrostWeapon           2   3 sourcesRelicsRituals }
+  wandGanestsFarstrike              { spellGanestsFarstrike           2   3 sourcesRelicsRituals }
+  wandIntoxicate              { spellIntoxicate           2   3 sourcesRelicsRituals }
+  wandLiliandelsFlurry              { spellLiliandelsFlurry           2   3 sourcesRelicsRituals }
+  wandLocateCorpse              { spellLocateCorpse           2   3 sourcesRelicsRituals }
+  wandRendtheSovereignSoul              { spellRendtheSovereignSoul           2   3 sourcesRelicsRituals }
+  wandSethrisPotency              { spellSethrispotency           2   3 sourcesRelicsRituals }
+  wandShadowImages              { spellShadowImages           2   3 sourcesRelicsRituals }
+  wandSmother              { spellSmother           2   3 sourcesRelicsRituals }
+  wandSwiftWater              { spellSwiftWater           2   3 sourcesRelicsRituals }
+  wandAnimateShadow              { spellAnimateShadow           3   5 sourcesRelicsRituals }
+  wandArmorofUndeath              { spellArmorofUndeath           3   5 sourcesRelicsRituals }
+  wandBanishShadow              { spellBanishShadow           3   5 sourcesRelicsRituals }
+  wandBloodstorm              { spellBloodstorm           3   5 sourcesRelicsRituals }
+  wandDarTansShadowBolt              { spellDarTansShadowBolt           3   5 sourcesRelicsRituals }
+  wandGasCloud              { spellGasCloud           3   5 sourcesRelicsRituals }
+  wandGreatKnock              { spellGreatKnock           3   5 sourcesRelicsRituals }
+  wandInvigorateDead              { spellInvigorateDead           3   5 sourcesRelicsRituals }
+  wandIronStorm              { spellIronStorm           3   5 sourcesRelicsRituals }
+  wandPressureSphere              { spellPressureSphere           3   5 sourcesRelicsRituals }
+  wandTerolesTranslator              { spellTerolesTranslator           3   5 sourcesRelicsRituals }
+  wandThornThrow              { spellThornThrow           3   5 sourcesRelicsRituals }
+  wandTouchoftheEel              { spellTouchoftheEel           3   5 sourcesRelicsRituals }
+  wandUnbuckle              { spellUnbuckle           3   5 sourcesRelicsRituals }
+  wandVangalsWounding              { spellVangalsWounding           3   5 sourcesRelicsRituals }
+  wandGluttony              { spellGluttony           4   7 sourcesRelicsRituals }
+  wandMirrorSafe              { spellMirrorSafe           4   7 sourcesRelicsRituals }
+  wandControlLight              { spellControlLight           4   7 sourcesRelicsRituals }
+  wandLiveWood              { spellLiveWood           4   7 sourcesRelicsRituals }
+  wandPurifyingFlames              { spellPurifyingFlames           4   7 sourcesRelicsRituals }
+  wandRemoveResistance              { spellRemoveResistance           4   7 sourcesRelicsRituals }
+  wandSealofHedrada              { spellSealofHedrada           4   7 sourcesRelicsRituals }
+  wandTanilsPurging              { spellTanilsPurging           4   7 sourcesRelicsRituals }
+  wandVerminplague              { spellVerminplague           4   7 sourcesRelicsRituals }
+  wandWatersEmbrace              { spellWatersEmbrace           4   7 sourcesRelicsRituals }
+end
+
+category groupMinorWands
+  [ 5] wandBuoyancyNet
+  [ 5] wandClean
+  [ 5] wandDetectGold
+  [ 5] wandFlameBolt
+  [ 5] wandMadrielsEmpathicResonance
+  [ 5] wandDowsing
+  [ 5] wandEphodofMelee
+  [ 5] wandFlash
+  [ 5] wandSalamarsQuietContemplation
+  [ 5] wandObscureShadow
+  [ 5] wandPrevaricationsBounty
+  [ 5] wandReshapeShadow
+  [ 5] wandQuickSober
+  [ 5] wandSpark
+  [ 5] wandAlibi
+  [ 5] wandBlazingshield
+  [ 5] wandCallAquaticAnimalI
+  [ 5] wandColdSnap
+  [ 5] wandDarkFlames
+  [ 5] wandDeadMansEyes
+end
+
+category groupMediumWands
+  [ 5] wandAlibi
+  [ 5] wandBlazingshield
+  [ 5] wandCallAquaticAnimalI
+  [ 5] wandColdSnap
+  [ 5] wandDarkFlames
+  [ 5] wandDeadMansEyes
+  [ 5] wandDolomarsForceWave
+  [ 5] wandEnkilisLuck
+  [ 5] wandEnkilisPrank
+  [ 5] wandEtherealBolt
+  [ 5] wandFlameWeapon
+  [ 5] wandFrostWeapon
+  [ 5] wandGanestsFarstrike
+  [ 5] wandIntoxicate
+  [ 5] wandLiliandelsFlurry
+  [ 5] wandLocateCorpse
+  [ 5] wandRendtheSovereignSoul
+  [ 5] wandSethrisPotency
+  [ 5] wandShadowImages
+  [ 5] wandSmother
+end
+
+category groupMajorWands
+  [ 5] wandIntoxicate
+  [ 5] wandLiliandelsFlurry
+  [ 5] wandLocateCorpse
+  [ 5] wandRendtheSovereignSoul
+  [ 5] wandSethrisPotency
+  [ 5] wandShadowImages
+  [ 5] wandSmother
+  [ 5] wandSwiftWater
+  [ 5] wandAnimateShadow
+  [ 5] wandArmorofUndeath
+  [ 5] wandBanishShadow
+  [ 5] wandBloodstorm
+  [ 5] wandDarTansShadowBolt
+  [ 5] wandGasCloud
+  [ 5] wandGreatKnock
+  [ 5] wandInvigorateDead
+  [ 5] wandIronStorm
+  [ 5] wandPressureSphere
+  [ 5] wandTerolesTranslator
+  [ 5] wandThornThrow
+  [ 5] wandTouchoftheEel
+  [ 5] wandUnbuckle
+  [ 5] wandVangalsWounding
+  [ 5] wandGluttony
+  [ 5] wandMirrorSafe
+  [ 5] wandControlLight
+  [ 5] wandLiveWood
+  [ 5] wandPurifyingFlames
+  [ 5] wandRemoveResistance
+  [ 5] wandSealofHedrada
+  [ 5] wandTanilsPurging
+  [ 5] wandVerminplague
+  [ 5] wandWatersEmbrace
+end
+

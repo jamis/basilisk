@@ -1,0 +1,15 @@
+/* --------------------------------------------------------------------- *
+ * Data from Sword & Sorcery's "Relics & Rituals", 
+ * converted to Basilisk format by
+ * Shaun Gierent
+ * --------------------------------------------------------------------- */
+SourceRelicsRituals in ( sourcesRelicsRituals groupAllSources )
+  .name "Relics & Rituals"
+end
+
+#include "rr_items.bsk"
+#include "rr_potions.bsk"
+#include "rr_spells.bsk"
+#include "rr_scrolls.bsk"
+#include "rr_wands.bsk"
+

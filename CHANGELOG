@@ -1,3 +1,9 @@
+version 1.06
+  Data Changes:
+    Shaun Gierent submitted data for Relics & Ritutals.
+  Makefile Changes:
+    Added (commented) flags for optimized compilation on i686 machines.
+
 version 1.05
   Data Changes:
     Micah Higgins submitted new data for the Netbook of Magical Treasures.

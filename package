@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 
 if [ ! $1 ] ; then
   echo "Specify a file name.";
@@ -9,7 +9,7 @@ fname="$1.tar";
 
 src="src/*.c include/*.h bskrun.c bskcompile.c bsktreasure.c bskcallbacks.c bskcallbacks.h Makefile* README LICENSE CHANGELOG treasure.ini config.h";
 doc="docs/*";
-dat="dat/standard/*.bsk dat/snfist/*.bsk dat/scitadel/*.bsk dat/dragon/*.bsk dat/nbomt/*.bsk dat/defenders/*.bsk dat/tnblood/*.bsk dat/boem/*.bsk dat/diablo/*.bsk dat/dungeon/*.bsk dat/motp/*.bsk dat/polyhedron/*.bsk dat/frcs/*.bsk dat/mof/*.bsk";
+dat="dat/standard/*.bsk dat/snfist/*.bsk dat/scitadel/*.bsk dat/dragon/*.bsk dat/nbomt/*.bsk dat/defenders/*.bsk dat/tnblood/*.bsk dat/boem/*.bsk dat/diablo/*.bsk dat/dungeon/*.bsk dat/motp/*.bsk dat/polyhedron/*.bsk dat/frcs/*.bsk dat/mof/*.bsk dat/rr/*.bsk";
 
 case $2 in
   "")
@@ -25,5 +25,10 @@ case $2 in
     data="$dat" ;;
 esac
 
-tar cvf $fname $data;
-gzip --best -fq $fname;
+if [ "$3" = "zip" ] ; then
+  fname="$1.zip";
+  zip $fname $data;
+else
+  tar cvf $fname $data;
+  gzip --best -fq $fname;
+fi
