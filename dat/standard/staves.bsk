@@ -170,6 +170,7 @@ end
 
 rule rInitGenericStaffProperties( item )
   item.charges = Random(50) + 1;
+	item.cost = item.cost * ( item.charges / 50 );
   item.prototype = weaponQuarterstaff;
   item.name = "staff of " + item.name;
   rInitGenericStaffProperties = item;

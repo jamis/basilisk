@@ -482,12 +482,14 @@ end
 
 rule rComputeRingCharges( r )
   r.charges = Random(50) + 1;
+	r.cost = r.cost * ( r.charges / 50 );
   rComputeRingCharges = r;
 end
 
 
 rule rComputeWishRingCharges( r )
   r.charges = Random(1d3);
+	r.cost = r.cost * ( r.charges / 3 );
   rComputeWishRingCharges = r;
 end
 

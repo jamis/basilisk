@@ -262,6 +262,7 @@ rule rSelectWand( wandMagnitude options )
                 " (l" + wand.spellLevel + ", cl" + wand.casterLevel + ")";
 
     wand.charges = Random(50) + 1;
+		wand.cost = Int(wand.cost * ( wand.charges / 50 ));
 
     if Random(100) lt 30 then
       wand = rEnsureAttributeExists( wand, "itemQualities", atCategory );
