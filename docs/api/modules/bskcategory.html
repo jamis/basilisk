@@ -1,0 +1,74 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0 Module:  BSKCategory</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+    <H1>BSKCategory</H1>
+
+    <B>Defined in:</B>  bskctgry.h<BR>
+    <P>
+
+    A BSKCategory object contains zero or more "null" objects or objects
+    of type <A HREF="bskrule.html">BSKRule</A>, <A HREF="bskthing.html">BSKThing</A>
+    and <A HREF="bskcategory.html">BSKCategory</A>.  It is used in the database to
+    categorize things.  Items in a BSKCategory object may also be obtained by
+    index (as an array) or randomly, using a weighting system where each item has a
+    weight that determines its likelihood of being chosen.
+    <P>
+    Internally, a BSKCategory object contains a list of
+    <A HREF="../types/structs.html#BSKCategoryEntry">BSKCategoryEntry</A>
+    objects, each of which contains either a null (0), or a pointer to
+    a <A HREF="bskcategory.html">BSKCategory</A>, <A HREF="bskthing.html">BSKThing</A>,
+    or <A HREF="bskrule.html">BSKRule</A>.
+    <P>
+    A BSKCategory object may also be treated as a set, and set operators
+    (union, intersection, and subtraction) may be used on them.
+
+    <P>
+
+    Data types:
+    <UL>
+      <LI><A HREF="../types/structs.html#BSKCategory">BSKCategory</A>
+      <LI><A HREF="../types/structs.html#BSKCategoryEntry">BSKCategoryEntry</A>
+      <LI><A HREF="../types/structs.html#BSKCategoryMember">BSKCategoryMember</A>
+    </UL>
+
+    Functions:
+    <UL>
+      <LI><A HREF="../functions/BSKAddToCategory.html">BSKAddToCategory</A>
+      <LI><A HREF="../functions/BSKCategoryContains.html">BSKCategoryContains</A>
+      <LI><A HREF="../functions/BSKCategoryEntryGetMember.html">BSKCategoryEntryGetMember</A>
+      <LI><A HREF="../functions/BSKCategoryEntryGetWeight.html">BSKCategoryEntryGetWeight</A>
+      <LI><A HREF="../functions/BSKCategoryGetFirstMember.html">BSKCategoryGetFirstMember</A>
+      <LI><A HREF="../functions/BSKCategoryGetID.html">BSKCategoryGetID</A>
+      <LI><A HREF="../functions/BSKCategoryGetTotalWeight.html">BSKCategoryGetTotalWeight</A>
+      <LI><A HREF="../functions/BSKCategoryIntersection.html">BSKCategoryIntersection</A>
+      <LI><A HREF="../functions/BSKCategoryMemberCount.html">BSKCategoryMemberCount</A>
+      <LI><A HREF="../functions/BSKCategoryMemberGetID.html">BSKCategoryMemberGetID</A>
+      <LI><A HREF="../functions/BSKCategoryMemberGetType.html">BSKCategoryMemberGetType</A>
+      <LI><A HREF="../functions/BSKCategorySubtract.html">BSKCategorySubtract</A>
+      <LI><A HREF="../functions/BSKCategoryUnion.html">BSKCategoryUnion</A>
+      <LI><A HREF="../functions/BSKDestroyCategory.html">BSKDestroyCategory</A>
+      <LI><A HREF="../functions/BSKDuplicateCategory.html">BSKDuplicateCategory</A>
+      <LI><A HREF="../functions/BSKFindCategory.html">BSKFindCategory</A>
+      <LI><A HREF="../functions/BSKFindThingInCategory.html">BSKFindThingInCategory</A>
+      <LI><A HREF="../functions/BSKGetAnyCategoryMember.html">BSKGetAnyCategoryMember</A>
+      <LI><A HREF="../functions/BSKGetCategoryMemberByWeight.html">BSKGetCategoryMemberByWeight</A>
+      <LI><A HREF="../functions/BSKGetCategoryMember.html">BSKGetCategoryMember</A>
+      <LI><A HREF="../functions/BSKGetMemberByIndex.html">BSKGetMemberByIndex</A>
+      <LI><A HREF="../functions/BSKGetMemberIndex.html">BSKGetMemberIndex</A>
+      <LI><A HREF="../functions/BSKNewCategory.html">BSKNewCategory</A>
+      <LI><A HREF="../functions/BSKRemoveAllFromCategory.html">BSKRemoveAllFromCategory</A>
+      <LI><A HREF="../functions/BSKRemoveFromCategory.html">BSKRemoveFromCategory</A>
+      <LI><A HREF="../functions/BSKSerializeCategoryListIn.html">BSKSerializeCategoryListIn</A>
+      <LI><A HREF="../functions/BSKSerializeCategoryListOut.html">BSKSerializeCategoryListOut</A>
+    </UL>
+
+    <A HREF="../index.html">Return to API</A>
+
+    <HR>
+    <I>Last updated on 8 Feb 2001 by Jamis Buck (minam@rpgplanet.com)</I>
+  </BODY>
+
+</HTML>

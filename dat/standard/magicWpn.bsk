@@ -1,0 +1,1162 @@
+attribute marketPriceWeaponModifier  number
+attribute installWeaponAbility       rule
+
+
+forward rule rInitializeBaneAbility
+forward rule rInstallBrilliantEnergyAbility
+forward rule rInstallDisruptionAbility
+forward rule rInstallBurstAbility
+forward rule rInstallKeenAbility
+forward rule rInstallReturningAbility
+forward rule rInstallVorpalAbility
+forward rule rInstallSpellStoringAbility
+forward rule rInitializeLuckBlade
+forward rule rInitializeNineLivesStealer
+forward rule rInitSlayingArrow
+forward rule rInitGreaterSlayingArrow
+forward rule rInitTridentOfFishCommand
+
+
+conditionIsPaladin
+  .type ctIsClass
+  .affectedThing classPaladin
+end
+
+conditionIsDwarf
+  .type ctIsRace
+  .affectedThing raceDwarf
+end
+
+conditionSwornTarget
+  .description "vs. sworn target"
+end
+
+conditionEvilCreatures
+  .description "vs. evil creatures"
+end
+
+conditionNegPlaneUndead
+  .description "vs. Negative Energy Plane creatures and undead"
+end
+
+conditionElemental
+  .description "on any elemental plane, or vs. elementals"
+end
+
+conditionAstralEthereal
+  .description "on the etheral or astral planes, or vs. any creature of those planes"
+end
+
+conditionOtherPlanes
+  .description "vs. any outsider, or on any plane besides the Material, Elemental, Ethereal, or Astral"
+end
+
+conditionSneakAttack
+  .description "on a sneak attack"
+end
+
+conditionOutdoors
+  .description "when outdoors in a temperate climate"
+end
+
+
+template ( groupMagicWeaponGeneratorTypes ) { name }
+  mwgtWeapon    { "weapon" }
+  mwgtSpcWeapon { "specific weapon" }
+  mwgtRollAgain { "roll again" }
+end
+
+
+category groupMinorWeapons
+  [70] { .type mwgtWeapon .magnitude +1 }
+  [15] { .type mwgtWeapon .magnitude +2 }
+  [15] { .type mwgtRollAgain }
+end
+
+category groupMediumWeapons
+  [10] { .type mwgtWeapon .magnitude +1 }
+  [10] { .type mwgtWeapon .magnitude +2 }
+  [38] { .type mwgtWeapon .magnitude +3 }
+  [ 4] { .type mwgtWeapon .magnitude +4 }
+  [ 6] { .type mwgtSpcWeapon }
+  [32] { .type mwgtRollAgain }
+end
+
+category groupMajorWeapons
+  [20] { .type mwgtWeapon .magnitude +3 }
+  [18] { .type mwgtWeapon .magnitude +4 }
+  [11] { .type mwgtWeapon .magnitude +5 }
+  [14] { .type mwgtSpcWeapon }
+  [37] { .type mwgtRollAgain }
+end
+
+category groupWeaponTypeDetermination
+  [70] groupCommonMeleeWeapons
+  [10] groupUncommonWeapons
+  [20] groupCommonRangedWeapons
+end
+
+category groupBaneWeaponTypes
+  [ 5] mtAberration
+  [ 3] mtAnimal
+  [ 5] mtBeast
+  [ 7] mtConstruct
+  [ 5] mtDragon
+  [ 5] mtElemental
+  [ 5] mtFey
+  [ 5] mtGiant
+  [ 5] mtMagicalBeast
+  [ 5] mtMonstrousHumanoid
+  [ 3] mtOoze
+  [ 5] ostChaotic
+  [ 7] ostEvil
+  [ 5] ostGood
+  [ 5] ostLawful
+  [ 2] mtPlant
+  [ 8] mtShapechanger
+  [ 7] mtUndead
+  [ 2] mtVermin
+  [ 5] groupHumanoidSubtypes
+end
+
+
+wsaBane
+  .installWeaponAbility rInitializeBaneAbility
+  .marketPriceWeaponModifier +2
+  .sources sourcesCoreRules
+end
+
+wsaBrilliantEnergy
+  .name "brilliant energy"
+  .itemQualities ( { .description "gives off light in 20' radius" } )
+  .specialAttacks ( { .description "weapon ignores armor and enhancement AC bonuses" }
+                    { .description "cannot harm undead, constructs, or objects" } )
+  .installWeaponAbility rInstallBrilliantEnergyAbility
+  .marketPriceWeaponModifier +4
+  .sources sourcesCoreRules
+end
+
+wsaChaotic
+  .name "chaotic"
+  .lcAlignment lcChaotic
+  .bonuses ( { .type btUnnamed .aspect asBonusDamage .magnitude +2d6 .conditions ( { .description "vs. lawfully aligned creatures" } ) } )
+  .itemQualities ( { .description "lawful wielders gain one negative level while wielding the weapon" } )
+  .marketPriceWeaponModifier +2
+  .sources sourcesCoreRules
+end
+
+wsaDancing
+  .name "dancing"
+  .specialAttacks ( { .description "may be loosed as a standard action to attack on it's own for 4 rounds" } )
+  .marketPriceWeaponModifier +4
+  .sources sourcesCoreRules
+end
+
+wsaDefending
+  .name "defending"
+  .specialDefenses ( { .description "wielder may allocate some or all of weapon's enhancement bonus to AC" } )
+  .marketPriceWeaponModifier +1
+  .sources sourcesCoreRules
+end
+
+wsaDisruption
+  .name "disruption"
+  .installWeaponAbility rInstallDisruptionAbility
+  .specialAttacks ( { .description "undead hit in combat must make Fortitude save or be destroyed" .saveDC 14 } )
+  .marketPriceWeaponModifier +2
+  .sources sourcesCoreRules
+end
+
+wsaDistance
+  .name "distance"
+  .bonuses ( { .type btUnnamed .aspect asRangeIncrementMultiplier .magnitude 2 } )
+  .marketPriceWeaponModifier +1
+  .sources sourcesCoreRules
+end
+
+wsaFlaming
+  .name "flaming"
+  .bonuses ( { .type btUnnamed .aspect asBonusDamage .magnitude +1d6 } )
+  .marketPriceWeaponModifier +1
+  .sources sourcesCoreRules
+end
+
+wsaFlamingBurst
+  .name "flaming burst"
+  .installWeaponAbility rInstallBurstAbility
+  .marketPriceWeaponModifier +2
+  .sources sourcesCoreRules
+end
+
+wsaFrost
+  .name "frost"
+  .bonuses ( { .type btUnnamed .aspect asBonusDamage .magnitude +1d6 } )
+  .marketPriceWeaponModifier +1
+  .sources sourcesCoreRules
+end
+
+wsaGhostTouch
+  .name "ghost touch"
+  .specialAttacks ( { .description "weapon may be used normally against incorporeal creatures" } )
+  .marketPriceWeaponModifier +1
+  .sources sourcesCoreRules
+end
+
+wsaHoly
+  .name "holy"
+  .geAlignment geGood
+  .bonuses ( { .type btUnnamed .aspect asBonusDamage .magnitude +2d6 .conditions ( { .description "vs. evil creatures" } ) } )
+  .itemQualities ( { .description "evil wielders gain one negative level while wielding the weapon" } )
+  .marketPriceWeaponModifier +2
+  .sources sourcesCoreRules
+end
+
+wsaIcyBurst
+  .name "icy burst"
+  .installWeaponAbility rInstallBurstAbility
+  .marketPriceWeaponModifier +2
+  .sources sourcesCoreRules
+end
+
+wsaKeen
+  .name "keen"
+  .installWeaponAbility rInstallKeenAbility
+  .bonuses ( { .type btUnnamed .aspect asThreatRange .magnitude 2 } )
+  .marketPriceWeaponModifier +1
+  .sources sourcesCoreRules
+end
+
+wsaLawful
+  .name "lawful"
+  .lcAlignment lcLawful
+  .bonuses ( { .type btUnnamed .aspect asBonusDamage .magnitude +2d6 .conditions ( { .description "vs. chaotic creatures" } ) } )
+  .itemQualities ( { .description "chaotic wielders gain one negative level while wielding the weapon" } )
+  .marketPriceWeaponModifier +2
+  .sources sourcesCoreRules
+end
+
+wsaMightyCleaving
+  .name "mighty cleaving"
+  .specialAttacks ( { .description "may make one extra cleave attempt/round (with Cleave feat)" } )
+  .marketPriceWeaponModifier +1
+  .sources sourcesCoreRules
+end
+
+wsaReturning
+  .name "returning"
+  .installWeaponAbility rInstallReturningAbility
+  .specialQualities ( { .description "weapon returns to thrower" } )
+  .marketPriceWeaponModifier +1
+  .sources sourcesCoreRules
+end
+
+wsaShock
+  .name "shock"
+  .bonuses ( { .type btUnnamed .aspect asBonusDamage .magnitude +1d6 } )
+  .marketPriceWeaponModifier +1
+  .sources sourcesCoreRules
+end
+
+wsaShockingBurst
+  .name "shocking burst"
+  .installWeaponAbility rInstallBurstAbility
+  .marketPriceWeaponModifier +2
+  .sources sourcesCoreRules
+end
+
+wsaSpeed
+  .name "speed"
+  .bonuses ( { .type btHaste .aspect asExtraAttack .magnitude 2 } )
+  .marketPriceWeaponModifier +4
+  .sources sourcesCoreRules
+end
+
+wsaSpellStoring
+  .name "spell storing"
+  .installWeaponAbility rInstallSpellStoringAbility
+  .marketPriceWeaponModifier +1
+  .sources sourcesCoreRules
+end
+
+wsaThundering
+  .name "thundering"
+  .installWeaponAbility rInstallBurstAbility
+  .marketPriceWeaponModifier +2
+  .sources sourcesCoreRules
+end
+
+wsaThrowing
+  .name "throwing"
+  .specialAttacks ( { .description "weapon may be thrown by user proficient in its use (10' range increment)" } )
+  .marketPriceWeaponModifier +1
+  .sources sourcesCoreRules
+end
+
+wsaUnholy
+  .name "unholy"
+  .geAlignment geEvil
+  .bonuses ( { .type btUnnamed .aspect asBonusDamage .magnitude +2d6 .conditions ( { .description "vs. good creatures" } ) } )
+  .itemQualities ( { .description "good wielders gain one negative level while wielding the weapon" } )
+  .marketPriceWeaponModifier +2
+  .sources sourcesCoreRules
+end
+
+wsaVorpal
+  .name "vorpal"
+  .specialAttacks ( { .description "on critical hit, severs opponents head from body" } )
+  .installWeaponAbility rInstallVorpalAbility
+  .marketPriceWeaponModifier +5
+  .sources sourcesCoreRules
+end
+
+wsaWounding
+  .name "wounding"
+  .specialAttacks ( { .description "wounds from weapon bleed for 1 point of damage per round (cumulative)" } )
+  .marketPriceWeaponModifier +2
+  .sources sourcesCoreRules
+end
+
+
+category groupMeleeWeaponMinorSpecialAbilities
+  [15] wsaDefending
+  [10] wsaFlaming
+  [10] wsaFrost
+  [10] wsaShock
+  [10] wsaGhostTouch
+  [15] wsaKeen
+  [10] wsaMightyCleaving
+  [ 9] wsaSpellStoring
+  [10] wsaThrowing
+  [ 1] mwgtRollAgain
+end
+
+category groupMeleeWeaponMediumSpecialAbilities
+  [10] wsaDefending
+  [ 5] wsaFlaming
+  [ 5] wsaFrost
+  [ 5] wsaShock
+  [ 5] wsaGhostTouch
+  [10] wsaKeen
+  [10] wsaMightyCleaving
+  [ 1] wsaSpellStoring
+  [ 5] wsaThrowing
+  [ 3] wsaBane
+  [ 3] wsaDisruption
+  [ 3] wsaFlamingBurst
+  [ 3] wsaIcyBurst
+  [ 3] wsaShockingBurst
+  [ 5] wsaThundering
+  [ 3] wsaWounding
+  [ 3] wsaHoly
+  [ 3] wsaUnholy
+  [ 3] wsaLawful
+  [ 3] wsaChaotic
+  [ 1] wsaBrilliantEnergy
+  [ 1] wsaDancing
+  [ 2] wsaSpeed
+  [ 4] mwgtRollAgain
+end
+
+category groupMeleeWeaponMajorSpecialAbilities
+  [ 3] wsaFlaming
+  [ 3] wsaFrost
+  [ 3] wsaShock
+  [ 3] wsaGhostTouch
+  [ 5] wsaMightyCleaving
+  [ 2] wsaSpellStoring
+  [ 2] wsaThrowing
+  [ 5] wsaBane
+  [ 3] wsaDisruption
+  [ 4] wsaFlamingBurst
+  [ 4] wsaIcyBurst
+  [ 4] wsaShockingBurst
+  [ 3] wsaThundering
+  [ 3] wsaWounding
+  [ 5] wsaHoly
+  [ 5] wsaUnholy
+  [ 5] wsaLawful
+  [ 5] wsaChaotic
+  [ 4] wsaBrilliantEnergy
+  [ 2] wsaDancing
+  [ 3] wsaSpeed
+  [ 4] wsaVorpal
+  [20] mwgtRollAgain
+end
+
+category groupRangedWeaponMinorSpecialAbilities
+  [20] wsaReturning
+  [20] wsaDistance
+  [20] wsaFlaming
+  [20] wsaShock
+  [20] wsaFrost
+end
+
+category groupRangedWeaponMediumSpecialAbilities
+  [15] wsaReturning
+  [15] wsaDistance
+  [ 5] wsaFlaming
+  [ 5] wsaShock
+  [ 5] wsaFrost
+  [ 5] wsaFlamingBurst
+  [ 5] wsaIcyBurst
+  [ 5] wsaShockingBurst
+  [ 6] wsaBane
+  [ 8] wsaHoly
+  [ 8] wsaUnholy
+  [ 8] wsaLawful
+  [ 8] wsaChaotic
+  [ 2] mwgtRollAgain
+end
+
+category groupRangedWeaponMajorSpecialAbilities
+  [10] wsaFlaming
+  [10] wsaShock
+  [10] wsaFrost
+  [10] wsaFlamingBurst
+  [10] wsaIcyBurst
+  [10] wsaShockingBurst
+  [ 5] wsaBane
+  [ 5] wsaHoly
+  [ 5] wsaUnholy
+  [ 5] wsaLawful
+  [ 5] wsaChaotic
+  [ 5] wsaSpeed
+  [ 7] wsaBrilliantEnergy
+  [ 3] mwgtRollAgain
+end
+
+wstAssassinsDagger
+  .name "assassin's dagger"
+  .prototype weaponDagger
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 }
+             { .type btUnnamed .aspect asDeathAttackDC .magnitude +1 } )
+  .cost 10302 gp
+  .sources sourcesCoreRules
+end
+
+wstDaggerOfVenom
+  .name "dagger of venom"
+  .prototype weaponDagger
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .specialAttacks ( { .type satSpellEffect .spell spellPoison .saveDC 14 .frequency 1 .period 1 day } )
+  .cost 9302 gp
+  .sources sourcesCoreRules
+end
+
+wstDwarvenThrower
+  .name "dwarven thrower"
+  .prototype weaponWarhammer
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 .conditions ( conditionIsDwarf ) }
+             { .type btEnhancement .aspect asDamage .magnitude +3 .conditions ( conditionIsDwarf ) } )
+  .specialAttacks ( { .description "weapon may be hurled (30 ft. range increment) for +1d8 damage (+2d8 vs. giants)" .conditions ( conditionIsDwarf ) } )
+  .cost 60312 gp
+  .sources sourcesCoreRules
+end
+
+wstFlameTongue
+  .name "flame tongue"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .abilities ( wsaFlaming wsaFlamingBurst )
+  .cost 32315 gp
+  .sources sourcesCoreRules
+end
+
+wstFrostBrand
+  .name "frost brand"
+  .prototype weaponGreatsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 }
+             { .type btUnnamed .aspect asBonusDamage .magnitude +1d6 } )
+  .specialDefenses ( { .type satDamageReduction .aspect etFire .magnitude 10 } )
+  .specialQualities ( { .description "50% chance of extinguishing any fire into which weapon is thrust (10' radius)" } )
+  .itemQualities ( { .description "only sheds light when temperature is below 0 degrees Farenheit" } )
+  .cost 49350 gp
+  .sources sourcesCoreRules
+end
+
+wstHolyAvenger
+  .name "holy avenger"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 }
+             { .type btEnhancement .aspect asAttack .magnitude +5 .conditions ( conditionIsPaladin ) }
+             { .type btEnhancement .aspect asDamage .magnitude +5 .conditions ( conditionIsPaladin ) }
+             { .type btUnnamed .aspect asBonusDamage .magnitude +1d6 .conditions ( conditionIsPaladin { .description "vs. evil creatures" } ) } )
+  .geAlignment geGood
+  .lcAlignment lcLawful
+  .specialDefenses ( { .type satSpellResistance .magnitude 15 .description "5-foot radius" .conditions ( conditionIsPaladin ) } )
+  .specialQualities ( { .type satSpellEffect .spell spellDispelMagic .description "within 5 feet of wielder (area dispel only)" .conditions ( conditionIsPaladin ) } )
+  .cost 120315 gp
+  .sources sourcesCoreRules
+end
+
+wstJavelinOfLightning
+  .name "javelin of lightning"
+  .prototype weaponJavelin
+  .specialAttacks ( { .type satSpellEffect .spell spellLightningBolt .damage 5d6 .saveDC 14 .description "the javelin is consumed in the attack" } )
+  .cost 751 gp
+  .sources sourcesCoreRules
+end
+
+wstLifeDrinker
+  .name "life-drinker"
+  .prototype weaponGreataxe
+  .specialAttacks ( { .description "bestows two negative levels on its target when it deals damage" } )
+  .specialQualities ( { .description "each time damage is dealt, wielder gains one negative level that lasts until the weapon is put down" } )
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 40320 gp
+  .sources sourcesCoreRules
+end
+
+wstLuckBlade
+  .name "luck blade"
+  .prototype weaponShortsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 }
+             { .type btLuck .aspect asSave .magnitude +1 } )
+  .init rInitializeLuckBlade
+  .cost 170560 gp
+  .sources sourcesCoreRules
+end
+
+wstMaceOfSmiting
+  .name "mace of smiting"
+  .prototype weaponHeavyMace
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 }
+             { .type btEnhancement .aspect asAttack .magnitude +5 .conditions ( { .description "vs. constructs" } ) }
+             { .type btEnhancement .aspect asDamage .magnitude +5 .conditions ( { .description "vs. constructs" } ) } 
+             { .type btUnnamed .aspect asCriticalRange .magnitude 4 .conditions ( { .description "vs. outsiders" } ) } )
+  .specialAttacks ( { .description "critical hit on a construct destroys target (no save)" } )
+  .cost 75312 gp
+  .sources sourcesCoreRules
+end
+
+wstMaceOfTerror
+  .name "mace of terror"
+  .prototype weaponHeavyMace
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .specialAttacks ( { .description "all within 20 feet who view wielder must make Will save or be motionless with terror" .saveDC 16 } )
+  .specialQualities ( { .description "whenever weapon is used for terror, 20% chance that wielder loses 1 point of Charisma permanently" } )
+  .cost 17812 gp
+  .sources sourcesCoreRules
+end
+
+wstNineLivesStealer
+  .name "nine lives stealer"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .specialAttacks ( { .description "on critical hit, target must make Fortitude save or die" .saveDC 17 } )
+  .specialQualities ( { .description "good characters wielding this weapon gain 2 negative levels" } )
+  .geAlignment geEvil
+  .init rInitializeNineLivesStealer
+  .cost 25315 gp
+  .sources sourcesCoreRules
+end
+
+wstOathbow
+  .name "oathbow"
+  .prototype weaponLongbow
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 }
+             { .type btEnhancement .aspect asAttack .magnitude +3 .conditions ( conditionSwornTarget ) }
+             { .type btEnhancement .aspect asDamage .magnitude +3 .conditions ( conditionSwornTarget ) }
+             { .type btEnhancement .aspect asDamageMultiplier .magnitude 2 .conditions ( conditionSwornTarget ) }
+             { .type btUnnamed .aspect asCriticalRange .magnitude 4 .conditions ( conditionSwornTarget ) } )
+  .specialQualities ( { .description "if killing blow not dealt to sworn target within 24 hours, bow is inert for 1 week and character suffers -1 morale penalty to saving throws, attack rolls, and skill checks for that time" } )
+  .cost 27875 gp
+  .sources sourcesCoreRules
+end
+
+wstRapierOfPuncturing
+  .name "rapier of puncturing"
+  .prototype weaponRapier
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .abilities ( wsaWounding )
+  .specialAttacks ( { .description "touch attack made with weapon deals 1d6 temporary Constitution damage by blood loss" } )
+  .cost 50320 gp
+  .sources sourcesCoreRules
+end
+
+wstScreamingBolt
+  .name "screaming bolt"
+  .prototype weaponCrossbowBolt
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .specialAttacks ( { .description "when fired, all enemies within 20 feet must make a Will save or be shaken." .saveDC 14 } )
+  .cost 257 gp
+  .sources sourcesCoreRules
+end
+
+wstSlayingArrow
+  .name "slaying arrow"
+  .prototype weaponArrow
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .init rInitSlayingArrow
+  .cost 2282 gp
+  .sources sourcesCoreRules
+end
+
+wstGreaterSlayingArrow
+  .name "greater slaying arrow"
+  .prototype weaponArrow
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .init rInitGreaterSlayingArrow
+  .cost 4057 gp
+  .sources sourcesCoreRules
+end
+
+wstSleepArrow
+  .name "sleep arrow"
+  .prototype weaponArrow
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .specialAttacks ( { .description "on successful hit, causes subdual damage and forces target to make Will save or fall asleep" .saveDC 11 } )
+  .cost 132 gp
+  .sources sourcesCoreRules
+end
+
+wstSunBlade
+  .name "sun blade"
+  .prototype weaponBastardSword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 }
+             { .type btEnhancement .aspect asAttack .magnitude +4 .conditions ( conditionEvilCreatures ) }
+             { .type btEnhancement .aspect asDamage .magnitude +4 .conditions ( conditionEvilCreatures ) }
+             { .type btEnhancement .aspect asDamageMultiplier .magnitude 2 .conditions ( conditionNegPlaneUndead ) }
+             { .type btEnhancement .aspect asCriticalRange .magnitude 3 .conditions ( conditionNegPlaneUndead ) } )
+  .specialQualities ( { .description "sunbeam power -- invoke radiance of sunlight intensity" }
+                    { .description "evil creatures wielding this weapon gain one negative level" } )
+  .geAlignment geGood
+  .cost 50335 gp
+  .sources sourcesCoreRules
+end
+
+wstSwordOfLifeStealing
+  .name "sword of life stealing"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .specialAttacks ( { .description "deals a negative level on a critical hit, and wielder gains 1d6 temporary hit points" } )
+  .cost 30315 gp
+  .sources sourcesCoreRules
+end
+
+wstSwordOfThePlanes
+  .name "sword of the planes"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 }
+             { .type btEnhancement .aspect asAttack .magnitude +2 .conditions ( conditionElemental ) }
+             { .type btEnhancement .aspect asDamage .magnitude +2 .conditions ( conditionElemental ) }
+             { .type btEnhancement .aspect asAttack .magnitude +3 .conditions ( conditionAstralEthereal ) }
+             { .type btEnhancement .aspect asDamage .magnitude +3 .conditions ( conditionAstralEthereal ) }
+             { .type btEnhancement .aspect asAttack .magnitude +4 .conditions ( conditionOtherPlanes ) }
+             { .type btEnhancement .aspect asDamage .magnitude +4 .conditions ( conditionOtherPlanes ) } )
+  .cost 52315 gp
+  .sources sourcesCoreRules
+end
+
+wstSwordOfSubtlety
+  .name "sword of subtlety"
+  .prototype weaponShortSword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 }
+             { .type btEnhancement .aspect asAttack .magnitude +4 .conditions ( conditionSneakAttack ) }
+             { .type btEnhancement .aspect asDamage .magnitude +4 .conditions ( conditionSneakAttack ) } )
+  .cost 15310 gp
+  .sources sourcesCoreRules
+end
+
+wstSylvanScimitar
+  .name "sylvan scimitar"
+  .prototype weaponScimitar
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 }
+             { .type btUnnamed .aspect asFeat .affectedThing featCleave .conditions ( conditionOutdoors ) }
+             { .type btUnnamed .aspect asBonusDamage .magnitude +1d6 .conditions ( conditionOutdoors ) } )
+  .cost 55815 gp
+  .sources sourcesCoreRules
+end
+
+wstTridentOfFishCommand
+  .name "trident of fish command"
+  .prototype weaponTrident
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .specialAttacks ( { .description "all water-dwelling creatures within 60 feet must make Will save (cost of 1 charge) or fall under empathic command of the wielder" .saveDC 12 } )
+  .init rInitTridentOfFishCommand
+  .cost 3815 gp
+  .sources sourcesCoreRules
+end
+
+wstTridentOfWarning
+  .name "trident of warning"
+  .prototype weaponTrident
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .specialQualities ( { .description "wielder can determine location, depth, species, and number of hostile marine predators within 240 feet." } )
+  .cost 9815 gp
+  .sources sourcesCoreRules
+end
+
+
+category groupMediumSpecificWeapons
+  [20] wstSleepArrow
+  [20] wstScreamingBolt
+  [15] wstJavelinOfLightning
+  [10] wstSlayingArrow
+  [ 5] weaponAdamantineDagger
+  [ 2] wstTridentOfFishCommand
+  [ 2] wstDaggerOfVenom
+  [ 2] weaponAdamantineBattleaxe
+  [ 3] wstTridentOfWarning
+  [ 3] wstAssassinsDagger
+  [ 3] wstSwordOfSubtlety
+  [ 3] wstMaceOfTerror
+  [ 3] wstNineLivesStealer
+  [ 3] wstOathbow
+  [ 2] wstSwordOfLifeStealing
+  [ 2] wstFlameTongue
+  [ 2] wstLifeDrinker
+end
+
+category groupMajorSpecificWeapons
+  [ 4] wstJavelinOfLightning
+  [ 5] wstSlayingArrow
+  [ 2] wstTridentOfFishCommand
+  [ 2] wstGreaterSlayingArrow
+  [ 4] wstDaggerOfVenom
+  [ 3] weaponAdamantineBattleaxe
+  [ 5] wstTridentOfWarning
+  [ 5] wstAssassinsDagger
+  [ 5] wstSwordOfSubtlety
+  [ 5] wstMaceOfTerror
+  [ 5] wstNineLivesStealer
+  [ 5] wstOathbow
+  [ 5] wstSwordOfLifeStealing
+  [ 5] wstFlameTongue
+  [ 6] wstLifeDrinker
+  [ 6] wstFrostBrand
+  [ 6] wstRapierOfPuncturing
+  [ 3] wstSunBlade
+  [ 2] wstSwordOfThePlanes
+  [ 2] wstSylvanScimitar
+  [ 2] wstDwarvenThrower
+  [ 3] wstMaceOfSmiting
+  [ 6] wstHolyAvenger
+  [ 4] wstLuckBlade
+end
+
+
+rule rInitializeBaneAbility( item ability )
+  bane = rNewInstanceOf( rCascadingLookup( groupBaneWeaponTypes ) );
+  ability.aspect = bane;
+
+  mag = 0;
+  for i in item.bonuses do
+    if i.type eq btEnhancement and i.type eq asAttack then
+      mag = i.magnitude;
+      exit loop;
+    end
+  end
+
+  ability.name = "bane of " + bane.name + "(s)";
+
+  condition = NewThing();
+  condition.description = "vs. " + bane.name;
+
+  b1 = NewThing();
+  b1.type = btEnhancement;
+  b1.aspect = asAttack;
+  b1.magnitude = mag;
+  b1.conditions = NewCategory();
+  add( b1.conditions, condition );
+
+  b2 = duplicate( b1 );
+  b2.aspect = asDamage;
+
+  add( item.bonuses, b1 );
+  add( item.bonuses, b2 );
+
+  rInitializeBaneAbility = ability;
+end
+
+rule rInstallBrilliantEnergyAbility( item ability )
+  if Exists( groupPropelledWeapon, item.prototype ) then
+    exit rule;
+  end
+
+  rInstallBrilliantEnergyAbility = ability;
+end
+
+rule rInstallDisruptionAbility( item ability )
+  if not Exists( groupBludgeoningWeapon, item.prototype ) then
+    exit rule;
+  end
+
+  rInstallDisruptionAbility = ability;
+end
+
+rule rInstallBurstAbility( item ability )
+  b = NewThing();
+  b.type = btUnnamed;
+  b.aspect = asBonusDamage;
+  b.magnitude = 1d10;
+
+  case item.prototype.criticalRange
+    is 3 then
+      b.magnitude = 2d10;
+    is 4 then
+      b.magnitude = 3d10;
+  end
+
+  Add( item.bonuses, b );
+
+  rInstallBurstAbility = ability;
+end
+
+rule rInstallKeenAbility( item ability )
+  if not Exists( groupSlashingWeapon, item.prototype ) then
+    exit rule;
+  end
+
+  /* double the critical range of the weapon */
+  item.criticalRange = 21 - ( 21 - item.criticalRange ) * 2;
+
+  rInstallKeenAbility = ability;
+end
+
+rule rInstallReturningAbility( item ability )
+  if not Exists( groupThrownWeapon, item.prototype ) then
+    exit rule;
+  end
+
+  rInstallReturningAbility = ability;
+end
+
+rule rInstallVorpalAbility( item ability )
+  if not Exists( groupSlashingWeapon, item.prototype ) then
+    exit rule;
+  end
+
+  rInstallVorpalAbility = ability;
+end
+
+rule rInstallSpellStoringAbility( item ability options )
+  if Random(2) ne 0 then
+    do
+      s = rGetAnyMatchingCriteria( groupTargetedSpells, options );
+      valid = ( Exists( groupSpellsWizardL0, s ) or
+                Exists( groupSpellsWizardL1, s ) or
+                Exists( groupSpellsWizardL2, s ) or
+                Exists( groupSpellsWizardL3, s ) or
+                Exists( groupSpellsClericL0, s ) or
+                Exists( groupSpellsClericL1, s ) or
+                Exists( groupSpellsClericL2, s ) or
+                Exists( groupSpellsClericL3, s ) );
+    loop while not valid;
+    item = rEnsureAttributeExists( item, "contents", atCategory );
+    add( item.contents, s );
+  end
+
+  rInstallSpellStoringAbility = ability;
+end
+
+rule rInitializeLuckBlade( item )
+  item.charges = Random(1d6) - 1;
+  if item.charges gt 0 then
+    item = rEnsureAttributeExists( item, "specialQualities", atCategory );
+    s = NewThing();
+    s.description = item.charges + " wishes are contained by this weapon";
+    add( item.specialQualities, s );
+  end
+  rInitializeLuckBlade = item;
+end
+
+rule rInitializeNineLivesStealer( item )
+  item.charges = Random(1d9);
+  rInitializeNineLivesStealer = item;
+end
+
+rule rInitSlayingArrow( item )
+  bane = rNewInstanceOf( rCascadingLookup( groupBaneWeaponTypes ) );
+  item.name = item.name + " (" + bane.name + ")";
+
+  item = rEnsureAttributeExists( item, "specialAttacks", atCategory );
+  b = NewThing();
+  b.description = "target (" + bane.name + ") must make a Fortitude save or die";
+  b.saveDC = 20;
+  add( item.specialAttacks, b );
+
+  rInitSlayingArrow = item;
+end
+
+rule rInitGreaterSlayingArrow( item )
+  bane = rNewInstanceOf( rCascadingLookup( groupBaneWeaponTypes ) );
+  item.name = item.name + " (" + bane.name + ")";
+
+  item = rEnsureAttributeExists( item, "specialAttacks", atCategory );
+  b = NewThing();
+  b.description = "target (" + bane.name + ") must make a Fortitude save or die";
+  b.saveDC = 23;
+  add( item.specialAttacks, b );
+
+  rInitGreaterSlayingArrow = item;
+end
+
+rule rInitTridentOfFishCommand( item )
+  item.charges = Random(50) + 1;
+  rInitTridentOfFishCommand = item;
+end
+
+
+rule rComputeWeaponBonusPrice( plusses )
+  rComputeWeaponBonusPrice = plusses * plusses * SetUnits( 2000, "gp" );
+end
+
+
+rule rInstallWeaponAbility( item ability options )
+  a = rNewInstanceOf( ability );
+  if Has( a, "installWeaponAbility" ) then
+    a = a.installWeaponAbility( item, a, options );
+  end
+  rInstallWeaponAbility = a;
+end
+
+
+rule rSelectMagicWeapon( weaponMagnitude options )
+  case weaponMagnitude
+    is "minor" then
+      c = groupMinorWeapons;
+    is "medium" then
+      c = groupMediumWeapons;
+    is "major" then
+      c = groupMajorWeapons;
+    default
+      exit rule;
+  end
+
+  abilityCnt = 0;
+  c = duplicate( c );
+  do
+    i = any( c );
+    remove( c, i );
+    if i.type eq mwgtRollAgain then
+      abilityCnt = abilityCnt + 1;
+    end
+  loop while i.type eq mwgtRollAgain;
+
+  newItem = null;
+  if i.type eq mwgtSpcWeapon then
+    case weaponMagnitude
+      is "medium" then
+        c = groupMediumSpecificWeapons;
+      is "major" then
+        c = groupMajorSpecificWeapons;
+      default
+        exit rule;
+    end
+
+    proto = rGetAnyMatchingCriteria( c, options );
+    if proto ne null then
+      newItem = rNewInstanceOf( proto );
+      if not has( newItem, "prototype" ) then
+        newItem.prototype = proto;
+      end
+    else
+      i = null;
+    end
+  end
+
+  if newItem eq null then
+
+    // i will be null if there was no valid specific weapon for the
+    // given options.  in that case, we need to reroll and see what
+    // abilities the item has.
+
+    if i eq null then
+      case weaponMagnitude
+        is "minor" then
+          c = groupMinorWeapons;
+        is "medium" then
+          c = groupMediumWeapons;
+        is "major" then
+          c = groupMajorWeapons;
+        default
+          exit rule;
+      end
+
+      abilityCnt = 0;
+      c = duplicate( c );
+      do
+        i = any( c );
+        remove( c, i );
+        if i.type eq mwgtRollAgain then
+          abilityCnt = abilityCnt + 1;
+        end
+      loop while i.type eq mwgtRollAgain or i.type eq mwgtSpcWeapon;
+    end
+
+    proto = rCascadeLookupWithOptions( groupWeaponTypeDetermination, options );
+    if proto eq null then
+      exit rule;
+    end
+
+    newItem = rNewInstanceOf( proto );
+    newItem.prototype = proto;
+    newItem.name = newItem.name + " +" + i.magnitude;
+    newItem.bonuses = NewCategory();
+
+    if proto eq weaponArrow or proto eq weaponCrossbowBolt or proto eq weaponSlingBullet then
+      newItem.magnitude = Random(50) + 1;
+      newItem.cost = SetUnits( 1, "gp" ) * newItem.magnitude;
+    end
+
+    b1 = NewThing();
+    b1.type = btEnhancement;
+    b1.aspect = asAttack;
+    b1.magnitude = i.magnitude;
+    b2 = duplicate( b1 );
+    b2.aspect = asDamage;
+
+    add( newItem.bonuses, b1 );
+    add( newItem.bonuses, b2 );
+
+    isMelee = Exists( groupMeleeWeapon, newItem.prototype );
+
+    case weaponMagnitude
+      is "minor" then
+        if isMelee then
+          c = groupMeleeWeaponMinorSpecialAbilities;
+        else
+          c = groupRangedWeaponMinorSpecialAbilities;
+        end
+      is "medium" then
+        if isMelee then
+          c = groupMeleeWeaponMediumSpecialAbilities;
+        else
+          c = groupRangedWeaponMediumSpecialAbilities;
+        end
+      is "major" then
+        if isMelee then
+          c = groupMeleeWeaponMajorSpecialAbilities;
+        else
+          c = groupRangedWeaponMajorSpecialAbilities;
+        end
+      default
+        exit rule;
+    end
+
+    totalBonus = i.magnitude;
+
+    if abilityCnt gt 0 then 
+      c = duplicate( c );
+      newItem.abilities = NewCategory();
+
+      while abilityCnt gt 0 do
+        a = any( c );
+        abilityCnt = abilityCnt - 1;
+
+        if a eq null or Count(c) lt 2 then
+          exit loop;
+        elseif a eq mwgtRollAgain then
+          abilityCnt = abilityCnt + 2;
+        else
+          remove( c, a );
+          valid =  rThingMatchesCriteria( a, options ) and rAlignmentsCompatible( newItem, a );
+          if valid then
+            valid = a.marketPriceWeaponModifier + totalBonus le options.optMaxVirtualWeaponBonus;
+          end
+          if valid then
+            a = rInstallWeaponAbility( newItem, a, options );
+            valid = a ne null;
+          end
+          if valid then
+            add( newItem.abilities, a );
+            totalBonus = totalBonus + a.marketPriceWeaponModifier;
+            newItem.name = newItem.name + " (" + a.name + ")";
+
+            if has( a, "lcAlignment" ) and not has( newItem, "lcAlignment" ) then
+              newItem.lcAlignment = a.lcAlignment;
+            end
+            if has( a, "geAlignment" ) and not has( newItem, "geAlignment" ) then
+              newItem.geAlignment = a.geAlignment;
+            end
+          else
+            abilityCnt = abilityCnt + 1;
+          end
+        end
+      end
+
+      newItem.invisibleBonus = ( totalBonus - i.magnitude );
+    end
+
+    newItem.cost = newItem.cost +
+                   masterworkWeapon.cost +
+                   rComputeWeaponBonusPrice( totalBonus );
+
+    if has( newItem.prototype, "secondaryDamage" ) then
+      newItem.cost = newItem.cost + masterworkWeapon.cost;
+    end
+  end
+
+	newItem.cost = ConvertUnits( newItem.cost, "gp" );
+
+  newItem.treasureType = "weapon";
+
+  isMelee = Exists( groupMeleeWeapon, newItem.prototype );
+
+  d = Random(1d100);
+
+	if rSafeGet( options, "optAlwaysIntelligent", false ) then
+		rEmbueIntelligenceUpon( newItem, options );
+	elseif isMelee then
+    if d le 20 then
+      newItem = rEnsureAttributeExists( newItem, "itemQualities", atCategory );
+      x = NewThing();
+      x.description = "sheds light in a 20-foot radius (as a torch)";
+      add( newItem.itemQualities, x );
+    elseif d le 25 then
+      rEmbueIntelligenceUpon( newItem, options );
+    elseif d le 35 then
+      newItem = rEnsureAttributeExists( newItem, "itemQualities", atCategory );
+      x = NewThing();
+      x.description = "sheds light in a 20-foot radius (as a torch)";
+      add( newItem.itemQualities, x );
+      rEmbueIntelligenceUpon( newItem, options );
+    elseif d le 50 then
+      newItem = rEnsureAttributeExists( newItem, "itemQualities", atCategory );
+      x = NewThing();
+      x.description = "something provides a clue to the item's function(s)";
+      add( newItem.itemQualities, x );
+    end
+  else
+    if d le 5 then
+      rEmbueIntelligenceUpon( newItem,options );
+    elseif d le 25 then
+      newItem = rEnsureAttributeExists( newItem, "itemQualities", atCategory );
+      x = NewThing();
+      x.description = "something provides a clue to the item's function(s)";
+      add( newItem.itemQualities, x );
+    end
+  end
+
+  if rItemDeservesCurse( newItem, options ) then
+    rCurseItem( newItem, options );
+  end
+
+  rSelectMagicWeapon = newItem;
+end

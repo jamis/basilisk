@@ -1,0 +1,82 @@
+grammar_group_halfling_names1
+  .left "[S]"
+  .productions (
+    [1] { .production "[M]" }
+    [1] { .production "[F]" }
+  )
+end
+
+grammar_group_halfling_names2
+  .left "[M]"
+  .productions (
+    [1] { .production "alton" }
+    [1] { .production "beau" }
+    [1] { .production "cade" }
+    [1] { .production "eldon" }
+    [1] { .production "garret" }
+    [1] { .production "lyle" }
+    [1] { .production "milo" }
+    [1] { .production "osborn" }
+    [1] { .production "roscoe" }
+    [1] { .production "welby" }
+    [1] { .production "kenneth" }
+    [1] { .production "arin" }
+    [1] { .production "joey" }
+    [1] { .production "derick" }
+    [1] { .production "milton" }
+    [1] { .production "jim" }
+    [1] { .production "luke" }
+    [1] { .production "gilbert" }
+    [1] { .production "lewis" }
+    [1] { .production "lenny" }
+  )
+end
+
+grammar_group_halfling_names3
+  .left "[F]"
+  .productions (
+    [1] { .production "amaryllis" }
+    [1] { .production "charmaine" }
+    [1] { .production "cora" }
+    [1] { .production "euphemia" }
+    [1] { .production "jillian" }
+    [1] { .production "lavinia" }
+    [1] { .production "merla" }
+    [1] { .production "portia" }
+    [1] { .production "seraphina" }
+    [1] { .production "verna" }
+    [1] { .production "rose" }
+    [1] { .production "violet" }
+    [1] { .production "lobelia" }
+    [1] { .production "tilly" }
+    [1] { .production "peony" }
+    [1] { .production "lilly" }
+    [1] { .production "syringa" }
+    [1] { .production "pansy" }
+    [1] { .production "brook" }
+    [1] { .production "fern" }
+    [1] { .production "iris" }
+    [1] { .production "ivy" }
+    [1] { .production "lavender" }
+    [1] { .production "gladiola" }
+    [1] { .production "matilda" }
+    [1] { .production "carolina" }
+    [1] { .production "camelia" }
+    [1] { .production "belle" }
+    [1] { .production "anemone" }
+    [1] { .production "veronica" }
+    [1] { .production "verbina" }
+    [1] { .production "rosemary" }
+    [1] { .production "poppy" }
+    [1] { .production "marigold" }
+  )
+end
+
+grammar_halfling_names
+  .startSymbol "[S]"
+  .groups (
+    grammar_group_halfling_names1
+    grammar_group_halfling_names2
+    grammar_group_halfling_names3
+  )
+end

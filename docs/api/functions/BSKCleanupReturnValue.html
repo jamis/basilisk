@@ -1,0 +1,45 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKCleanupReturnValue</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKCleanupReturnValue</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+
+<PRE>
+void BSKCleanupReturnValue( BSKValue* value );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>value</i> - the value to cleanup.
+  </UL>
+
+  <P>
+
+  <B>Description:</B>
+  "Cleans up" the given value.  The value is invalidated at the very
+  least (see <A HREF="BSKInvalidateValue.html">BSKInvalidateValue</A>),
+  but if the value is a thing or category, its members and/or attributes
+  are recursively descended and cleaned up, and all objects not owned by the
+  database are destroyed (ownerLevel != 0).
+  <P>
+  You <b>must</b> call this routine on the value returned by BSKExec when you
+  are done with it, or you may end up with memory leaks.
+  <P>
+  This function should only be used on the 'rval' field of the
+  <A HREF="../types/structs.html#BSKExecOpts">BSKExecOpts</A> structure after
+  returning successfully from BSKExec.  Its results are undefined if used on
+  other values.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

@@ -1,0 +1,49 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKGetCategoryMemberByWeight</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKGetCategoryMemberByWeight</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskcategory.html">BSKCategory</A><BR>
+
+<PRE>
+BSKCategoryMember* BSKGetCategoryMemberByWeight( BSKCategory* category, 
+                                                 BSKUI32 weight );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>category</i> - the category from which to get an item.
+    <LI><i>weight</i> - the weight indicating the item to return.
+  </UL>
+
+  <B>Returns:</B> the category member occupying the given weight in
+  the category, or 0 if no such member exists.
+
+  <P>
+
+  <B>Description:</B>
+  Searches the given BSKCategory object for the BSKCategoryMember at
+  the given "total" weight.  A member item's 'total weight' is the range
+  of numbers starting at the sum of all previous item's weights to that
+  value plus the member item's weight.
+  <P>
+  For example, if a category contained 4 items, weighted 2, 3, 1, and 4,
+  the total weight would be 10.  The first item occupies the weights from
+  1 to 2, the second from 3 to 5, the third occupies only weight 6, and
+  the last item occupies the weights from 7 to 10.  If a weight of 5 were
+  passed to this function, the second item would be returned (as it occupies
+  the weights from 3 to 5).  Likewise, if a weight of 8 were passed in, the
+  fourth item would be returned (occyping weights 7 to 10).
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

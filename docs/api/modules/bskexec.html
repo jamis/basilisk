@@ -1,0 +1,62 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0 Module:  BSKExec</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+    <H1>BSKExec</H1>
+
+    <B>Defined in:</B>  bskexec.h<BR>
+    <P>
+
+    This file defines the Basilisk Virtual Machine (VM).  The VM is used
+    to execute the <A HREF="bskrule.html">rules</A> stored in the
+    <A HREF="bskdb.html">database</A>.  Rules may accept zero or more parameters,
+    and can return a value, so the VM also works closely with the
+    <A HREF="bskvalues.html">values</A> API.
+    <P>
+    Run-time errors are handled via an error handler that is passed into the
+    VM when it is called.  The calling routine(s) must define this error
+    handler, or pass a null (0) in place of that parameter.
+     
+    <P>
+
+    Data types:
+    <UL>
+      <LI><A HREF="../types/structs.html#BSKExecOpts">BSKExecOpts</A>
+      <LI><A HREF="../types/structs.html#BSKExecutionEnvironment">BSKExecutionEnvironment</A>
+      <LI><A HREF="../types/structs.html#BSKExecutionStackItem">BSKExecutionStackItem</A>
+      <LI><A HREF="../types/structs.html#BSKStackFrame">BSKStackFrame</A>
+      <LI><A HREF="../types/types.html#BSKConsoleHook">BSKConsoleHook</A>
+      <LI><A HREF="../types/types.html#BSKRuntimeErrorHandler">BSKRuntimeErrorHandler</A>
+    </UL>
+
+    Constants:
+    <UL>
+      <LI><A HREF="../const/constants.html#RTE_BUG">RTE_BUG</A>
+      <LI><A HREF="../const/constants.html#RTE_CALL_OF_NONFUNCTION">RTE_CALL_OF_NONFUNCTION</A>
+      <LI><A HREF="../const/constants.html#RTE_DIVIDE_BY_ZERO">RTE_DIVIDE_BY_ZERO</A>
+      <LI><A HREF="../const/constants.html#RTE_DOMAIN_ERROR">RTE_DOMAIN_ERROR</A>
+      <LI><A HREF="../const/constants.html#RTE_HALTED">RTE_HALTED</A>
+      <LI><A HREF="../const/constants.html#RTE_INVALID_OPERANDS">RTE_INVALID_OPERANDS</A>
+      <LI><A HREF="../const/constants.html#RTE_INVALID_RULE">RTE_INVALID_RULE</A>
+      <LI><A HREF="../const/constants.html#RTE_STACK_UNDERFLOW">RTE_STACK_UNDERFLOW</A>
+      <LI><A HREF="../const/constants.html#RTE_SUCCESS">RTE_SUCCESS</A>
+      <LI><A HREF="../const/constants.html#RTE_UKNOWN_INSTRUCTION">RTE_UKNOWN_INSTRUCTION</A>
+      <LI><A HREF="../const/constants.html#RTE_WRONG_PARAM_COUNT">RTE_WRONG_PARAM_COUNT</A>
+      <LI><A HREF="../const/constants.html#RTE_WRONG_UNITS">RTE_WRONG_UNITS</A>
+    </UL>
+
+    Functions:
+    <UL>
+      <LI><A HREF="../functions/BSKCleanupReturnValue.html">BSKCleanupReturnValue</A>
+      <LI><A HREF="../functions/BSKExec.html">BSKExec</A>
+    </UL>
+
+    <A HREF="../index.html">Return to API</A>
+
+    <HR>
+    <I>Last updated on 8 Feb 2001 by Jamis Buck (minam@rpgplanet.com)</I>
+  </BODY>
+
+</HTML>

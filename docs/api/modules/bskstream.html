@@ -1,0 +1,58 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0 Module:  BSKStream</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+    <H1>BSKStream</H1>
+
+    <B>Defined in:</B>  bskstream.h<BR>
+    <P>
+
+    The BSKStream object encapsulates stream I/O, whether it be from a file
+    or a buffer in memory.  If other streams are needed as well, it would
+    not be difficult to make a new stream object (see bskstream.c for more
+    info).
+    <P>
+    A BSKStream object has the following methods:
+    <UL>
+      <LI><A HREF="../types/types.html#BSKI32">BSKI32</A> close( <A HREF="../types/structs.html#BSKStream">BSKStream</A>* stream ) - closes (and disposes of) the 
+          stream.  The given stream object is no longer valid after the
+          stream is closed.  The method returns 0 on success.
+      <LI><A HREF="../types/types.html#BSKI32">BSKI32</A> read( <A HREF="../types/structs.html#BSKStream">BSKStream</A>* stream, <A HREF="../types/types.html#BSKNOTYPE">BSKNOTYPE</A> buffer, <A HREF="../types/types.html#BSKUI32">BSKUI32</A> len ) -
+          reads up to 'len' bytes from 'stream' and puts them in 'buffer'.
+          The method returns the number of bytes read, or -1 if there
+          was an error, or the end of file was reached before any bytes
+          could be read.
+      <LI><A HREF="../types/types.html#BSKI32">BSKI32</A> write( <A HREF="../types/structs.html#BSKStream">BSKStream</A>* stream, <A HREF="../types/types.html#BSKNOTYPE">BSKNOTYPE</A> buffer, <A HREF="../types/types.html#BSKUI32">BSKUI32</A> len ) -
+          writes len bytes to stream from buffer.  The method returns the
+          number of bytes actually written.
+      <LI><A HREF="../types/types.html#BSKI32">BSKI32</A> getch( <A HREF="../types/structs.html#BSKStream">BSKStream</A>* stream ) - returns the next character on
+          the stream, or -1 if there was an error or EOF was reached.
+      <LI><A HREF="../types/types.html#BSKI32">BSKI32</A> putch( <A HREF="../types/structs.html#BSKStream">BSKStream</A>* stream, <A HREF="../types/types.html#BSKI32">BSKI32</A> c ) - puts the character c
+          back into the stream, making it the character that will be
+          read by the next call to getch.  Returns 0 if successful.
+    </UL>
+
+    Any new stream object must define all these methods.
+
+    <P>
+
+    Data types:
+    <UL>
+      <LI><A HREF="../types/structs.html#BSKStream">BSKStream</A>
+    </UL>
+
+    Functions:
+    <UL>
+      <LI><A HREF="../functions/BSKStreamOpenBuffer.html">BSKStreamOpenBuffer</A>
+      <LI><A HREF="../functions/BSKStreamOpenFile.html">BSKStreamOpenFile</A>
+    </UL>
+
+    <A HREF="../index.html">Return to API</A>
+
+    <HR>
+    <I>Last updated on 8 Feb 2001 by Jamis Buck (minam@rpgplanet.com)</I>
+  </BODY>
+
+</HTML>

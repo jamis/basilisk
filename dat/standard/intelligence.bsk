@@ -1,0 +1,430 @@
+/* ---------------------------------------------------------------------- *
+ * Intelligent Items
+ *
+ * An item's "intelligence" object is composed of the following attributes:
+ *   abilityScores (category)
+ *     - each member has a type (astXXX types) and a magnitude
+ *   communication (string)
+ *   ego (number)
+ *   lcAlignment
+ *   geAlignment
+ *   readingAbility (optional) (string)
+ *   skills (optional) (category)
+ *     - each member has an affectedThing (skillXXX types) and a magnitude
+ *   bonus (optional) (thing) (list)
+ *   specialAttack (optional) (thing) (list)
+ *   specialDefense (optional) (thing) (list)
+ *   specialQuality (optional) (thing) (list)
+ *   languages (optional) (category)
+ *     - each member is one of the languageSubskill things
+ *   specialPurpose (optional) (thing)
+ * ---------------------------------------------------------------------- */
+
+attribute communication       string
+attribute readingAbility      string
+attribute primaryAbilityCount number
+attribute extraAbilityCount   number
+attribute highABScore         thing
+attribute mediumABScore       thing
+attribute lowABScore          thing
+attribute specialPurpose      thing
+attribute ego                 number
+
+category groupIntelligenceLevels
+  [34] { .magnitude 5 .communication "semiempathy" .primaryAbilityCount 1 .extraAbilityCount 0 .cost 10000 gp }
+  [25] { .magnitude 6 .communication "empathy" .primaryAbilityCount 2 .extraAbilityCount 0 .cost 15000 gp }
+  [20] { .magnitude 7 .communication "speech" .primaryAbilityCount 2 .extraAbilityCount 0 .cost 17500 gp }
+  [12] { .magnitude 8 .communication "speech" .primaryAbilityCount 3 .extraAbilityCount 0 .cost 25000 gp }
+  [ 6] { .magnitude 9 .communication "speech" .readingAbility "all languages spoken" .primaryAbilityCount 3 .extraAbilityCount 0 .cost 32000 gp }
+  [ 1] { .magnitude 10 .communication "speech and telepathy" .readingAbility "all languages spoken" .primaryAbilityCount 3 .extraAbilityCount 1 .cost 55000 gp }
+  [ 1] { .magnitude 11 .communication "speech and telepathy" .readingAbility "all languages, and can read magic" .primaryAbilityCount 3 .extraAbilityCount 2 .cost 78000 gp }
+  [ 1] { .magnitude 12 .communication "speech and telepathy" .readingAbility "all languages, and can read magic" .primaryAbilityCount 4 .extraAbilityCount 2 .cost 90000 gp }
+end
+
+category groupAbilityScorePriorities
+  { .highABScore   astIntelligence
+    .mediumABScore astCharisma
+    .lowABScore    astWisdom }
+  { .highABScore   astIntelligence
+    .mediumABScore astWisdom
+    .lowABScore    astCharisma }
+  { .highABScore   astWisdom
+    .mediumABScore astIntelligence
+    .lowABScore    astCharisma }
+  { .highABScore   astCharisma
+    .mediumABScore astIntelligence
+    .lowABScore    astWisdom }
+end
+
+category groupItemAlignments
+  [ 5] { .lcAlignment lcChaotic .geAlignment geGood }
+  [10] { .lcAlignment lcChaotic .geAlignment geNeutral }
+  [ 5] { .lcAlignment lcChaotic .geAlignment geEvil }
+  [ 5] { .lcAlignment lcNeutral .geAlignment geEvil }
+  [ 5] { .lcAlignment lcLawful  .geAlignment geEvil }
+  [25] { .lcAlignment lcLawful  .geAlignment geGood }
+  [ 5] { .lcAlignment lcLawful  .geAlignment geNeutral }
+  [20] { .lcAlignment lcNeutral .geAlignment geGood }
+  [20] { .lcAlignment lcNeutral .geAlignment geNeutral }
+end
+
+template ( groupItemAbilityTypes ) {}
+  iatHasSkill {}
+  iatGrantsFeat {}
+  iatGrantsAbility {}
+  iatGrantsDefense {}
+  iatGrantsAttack {}
+  iatReroll {}
+  iatExtraordinary {}
+  iatRerollAndSpecialPurpose {}
+end
+
+category groupItemPrimaryAbilities
+  [ 4] { .type iatHasSkill .affectedThing skillIntuitDirection .magnitude 10 }
+  [ 4] { .type iatHasSkill .affectedThing skillSenseMotive .magnitude 10 }
+  [ 4] { .type iatGrantsFeat .affectedThing featCombatReflexes }
+  [ 4] { .type iatGrantsFeat .affectedThing featBlindFight }
+  [ 4] { .type iatGrantsFeat .affectedThing featImprovedInitiative }
+  [ 4] { .type iatGrantsFeat .affectedThing featMobility }
+  [ 4] { .type iatGrantsFeat .affectedThing featSunder }
+  [ 4] { .type iatGrantsFeat .affectedThing featExpertise }
+  [ 7] { .type iatGrantsAbility .specialQualities ( { .description "detect opposing alignment at will" } ) }
+  [ 3] { .type iatGrantsAbility .specialQualities ( { .description "find traps at will" } ) }
+  [ 5] { .type iatGrantsAbility .specialQualities ( { .description "detect secret doors at will" } ) }
+  [ 7] { .type iatGrantsAbility .specialQualities ( { .description "detect magic at will" } ) }
+  [ 3] { .type iatGrantsAbility .specialQualities ( { .description "uncanny dodge as 5th-level barbarian" } ) }
+  [ 3] { .type iatGrantsAbility .specialQualities ( { .description "free use of evasion" } ) }
+  [ 5] { .type iatGrantsAbility .specialQualities ( { .description "see invisible at will" } ) }
+  [ 5] { .type iatGrantsAbility .specialQualities ( { .description "'cure light wounds' (1d8+5) on self" .frequency 1 .period 1 day } ) }
+  [ 5] { .type iatGrantsAbility .specialQualities ( { .description "'feather fall' on wielder" .frequency 1 .period 1 day } ) }
+  [ 1] { .type iatGrantsAbility .specialQualities ( { .description "'locate object' in 120-ft. radius" } ) }
+  [ 1] { .type iatGrantsAbility .specialQualities ( { .description "does not need to sleep" } ) }
+  [ 1] { .type iatGrantsAbility .specialQualities ( { .description "does not need to breathe" } ) }
+  [ 1] { .type iatGrantsAbility .specialQualities ( { .description "'jump' for 20 minutes" .frequency 1 .period 1 day } ) }
+  [ 1] { .type iatGrantsAbility .specialQualities ( { .description "'spider climb' for 20 minutes" .frequency 1  .period 1 day } ) }
+  [10] { .type iatReroll .magnitude 2 }
+  [10] { .type iatExtraordinary }
+end
+
+category groupItemExtraordinaryAbilities
+  [ 5] { .type iatGrantsAttack .specialAttacks ( { .description "'charm person' (DC 11) on contact" .frequency 3 .period 1 day } ) }
+  [ 5] { .type iatGrantsAbility .specialQualities ( { .description "'clairaudience/clairvoyance' (100-ft. range, 1 minute per use)" .frequency 3 .period 1 day } ) }
+  [ 5] { .type iatGrantsAttack .specialAttacks ( { .description "'magic missile' (200-ft. range, 3 missiles)" .frequency 3 .period 1 day } ) }
+  [ 5] { .type iatGrantsDefense .specialDefenses ( { .description "'shield' on self" .frequency 3 .period 1 day } ) }
+  [ 5] { .type iatGrantsAbility .specialQualities ( { .description "'detect thoughts' (100-ft. range, 1 minute per use)" .frequency 3 .period 1 day } ) }
+  [ 5] { .type iatGrantsAbility .specialQualities ( { .description "'levitation' (wielder only, 10 minute duration)" .frequency 3 .period 1 day } ) }
+  [ 5] { .type iatGrantsAbility .specialQualities ( { .description "'fly' (30 minutes per use)" .frequency 2 .period 1 day } ) }
+  [ 5] { .type iatGrantsAttack .specialAttacks ( { .description "'lightning bolt' (200-ft. range, DC 13)" .damage 8d6 .frequency 1 .period 1 day } ) }
+  [ 5] { .type iatGrantsAbility .specialQualities ( { .description "'summon monster III'" .frequency 1 .period 1 day } ) }
+  [ 5] { .type iatGrantsAbility .specialQualities ( { .description "'telepathy' (100 ft. range)" .frequency 2 .period 1 day } ) }
+  [ 5] { .type iatGrantsAbility .specialQualities ( { .description "'cat's grace' (self only)" .frequency 1 .period 1 day } ) }
+  [ 5] { .type iatGrantsAbility .specialQualities ( { .description "'bull's strength' (self only)" .frequency 1 .period 1 day } ) }
+  [ 5] { .type iatGrantsAbility .specialQualities ( { .description "'haste' (self only, 10 rounds)" .frequency 1 .period 1 day } ) }
+  [ 3] { .type iatGrantsAbility .specialQualities ( { .description "'telekinesis' (250 lb. maximum, 1 minute each use)" .frequency 2 .period 1 day } ) }
+  [ 3] { .type iatGrantsAbility .specialQualities ( { .description "'heal'" .frequency 1 .period 1 day } ) }
+  [ 1] { .type iatGrantsAbility .specialQualities ( { .description "'teleport', 600 lb. maximum" .frequency 1 .period 1 day } ) }
+  [ 1] { .type iatGrantsDefense .specialDefenses ( { .description "'globe of invulnerability'" .frequency 1 .period 1 day } ) }
+  [ 1] { .type iatGrantsDefense .specialDefenses ( { .description "'stoneskin' (self only, 10 minutes per use)" .frequency 2 .period 1 day } ) }
+  [ 1] { .type iatGrantsAttack .specialAttacks ( { .description "'feeblemind' by touch" .frequency 2 .period 1 day } ) }
+  [ 1] { .type iatGrantsAbility .specialQualities ( { .description "'true seeing' at will" } ) }
+  [ 1] { .type iatGrantsAbility .specialQualities ( { .description "'wall of force'" .frequency 1 .period 1 day } ) }
+  [ 1] { .type iatGrantsAbility .specialQualities ( { .description "'summon monster VI'" .frequency 1 .period 1 day } ) }
+  [ 1] { .type iatGrantsAttack .specialAttacks ( { .description "'finger of death' (100 ft. range, DC 17)" .frequency 1 .period 1 day } ) }
+  [ 1] { .type iatGrantsAbility .specialQualities ( { .description "'passwall' at will" } ) }
+  [ 5] { .type iatReroll .magnitude 1 }
+  [10] { .type iatRerollAndSpecialPurpose }
+end
+
+forward rule ritemOpposingAlignment
+forward rule ritemRaceOrKind
+forward rule ritemDeity
+
+category groupIntelligentItemPurposes
+  [20] { .description "defeat/slay " .lookup ritemOpposingAlignment }
+  [10] { .description "defeat/slay arcane spellcasters" }
+  [10] { .description "defeat/slay divine spellcasters" }
+  [10] { .description "defeat/slay nonspellcasters" }
+  [10] { .description "defeat/slay " .lookup ritemRaceOrKind }
+  [10] { .description "defend " .lookup ritemRaceOrKind }
+  [10] { .description "defeat/slay servants of " .lookup ritemDeity }
+  [10] { .description "defend servants and interests of " .lookup ritemDeity }
+  [ 5] { .description "defeat/slay all" }
+end
+
+
+category groupIntelligentItemPurposePowers
+  [10] { .specialAttacks ( { .description "'blindness' (DC 12) for 2d6 rounds on successful hit" } ) }
+  [10] { .specialAttacks ( { .description "'confusion' (DC 14) for 2d6 rounds on successful hit" } ) }
+  [ 5] { .specialAttacks ( { .description "'fear' (DC 14) for 1d4 rounds on successful hit" } ) }
+  [30] { .specialAttacks ( { .description "'hold monster' (DC 14) for 1d4 rounds on successful hit" } ) }
+  [10] { .specialAttacks ( { .description "'slay living' (DC 15) on successful hit" } ) } 
+  [10] { .specialAttacks ( { .description "'disintegrate' (DC 16) on successful hit" } ) } 
+  [ 5] { .specialAttacks ( { .description "'true resurrection' on self, one time only" } ) }
+  [20] { .bonuses ( { .type btLuck .aspect asSave .magnitude +2 }
+                    { .type btDeflection .aspect asAC .magnitude +2 } )
+         .specialDefenses ( { .type satSpellResistance .magnitude 15 } ) }
+end
+
+
+conditionSpecialPurpose
+  .description "when in pursuit of the item's special purpose"
+end
+
+rule rItemOpposingAlignment( item purpose )
+  a = rOpposingAlignment( item );
+  item.specialPurpose = NewThing();
+  if a.lcAlignment eq lcNeutral and a.geAlignment eq geNeutral then
+    item.specialPurpose.description = "maintain balance by defeating/slaying powerful beings of extreme alignments";
+  else
+    item.specialPurpose.description = purpose.description +
+                                      a.lcAlignment.name + " " +
+                                      a.geAlignment.name;
+  end
+  rItemOpposingAlignment = item;
+end
+
+
+rule rItemRaceOrKind( item purpose )
+  a = any( groupMonsterTypes );
+  item.specialPurpose = Newthing();
+  item.specialPurpose.description = purpose.description +
+                                    a.name + "(s)";
+  rItemRaceOrKind = item;
+end
+
+
+rule rItemDeity( item purpose )
+  c = duplicate( groupAllDeities );
+  do
+    a = any( c );
+    remove( c, a );
+  loop while not rAlignmentsCompatible( a, item );
+  item.specialPurpose = NewThing();
+  item.specialPurpose.description = purpose.description + a.name;
+  rItemDeity = item;
+end
+
+
+rule rAddItemAbility( item ability )
+  if ability.type eq iatHasSkill then
+    item = rEnsureAttributeExists( item, "skills", atCategory );
+    s = NewThing();
+    s.affectedThing = ability.affectedThing;
+    s.magnitude = ability.magnitude;
+    Add( item.skills, s );
+  elseif ability.type eq iatGrantsFeat then
+    item = rEnsureAttributeExists( item, "bonuses", atCategory );
+    x = NewThing();
+    x.type = btUnnamed;
+    x.aspect = asFeat;
+    x.affectedThing = ability.affectedThing;
+    Add( item.bonuses, x );
+  elseif ability.type eq iatGrantsAbility then
+    item = rEnsureAttributeExists( item, "specialQualities", atCategory );
+    item.specialQualities = union( item.specialQualities, rDuplicateCategory( ability.specialQualities ) );
+  elseif ability.type eq iatGrantsAttack then
+    item = rEnsureAttributeExists( item, "specialAttacks", atCategory );
+    item.specialAttacks = union( item.specialAttacks, rDuplicateCategory( ability.specialAttacks ) );
+  elseif ability.type eq iatGrantsDefense then
+    item = rEnsureAttributeExists( item, "specialDefenses", atCategory );
+    item.specialDefenses = union( item.specialDefenses, rDuplicateCategory( ability.specialDefenses ) );
+  end
+end
+
+
+rule rAddSpecialPurpose( item )
+  a = any( groupIntelligentItemPurposes );
+  if has( a, "lookup" ) then
+    a.lookup( item, a );
+  else
+    item.specialPurpose = newThing();
+    item.specialPurpose.description = a.description;
+  end
+  a = any( groupIntelligentItemPurposePowers );
+  if Has( a, "specialAttacks" ) then
+    item = rEnsureAttributeExists( item, "specialAttacks", atCategory );
+    for x in a.specialAttacks do
+      y = rNewInstanceOf( x );
+      y.conditions = NewCategory();
+      Add( y.conditions, conditionSpecialPurpose );
+      Add( item.specialAttacks, y );
+    end
+  end
+  if Has( a, "bonuses" ) then
+    item = rEnsureAttributeExists( item, "bonuses", atCategory );
+    for x in a.bonuses do
+      y = rNewInstanceOf( x );
+      y.conditions = NewCategory();
+      Add( y.conditions, rNewInstanceOf( conditionSpecialPurpose ) );
+      Add( item.bonuses, y );
+    end
+  end
+  rAddSpecialPurpose = item;
+end
+
+
+rule rComputeItemEgo( item )
+  if not has( item.intelligence, "ego" ) then
+    item.intelligence.ego = 0;
+  end
+
+  if has( item, "invisibleBonus" ) then 
+    item.intelligence.ego = item.intelligence.ego + item.invisibleBonus;
+  end
+
+  if has( item, "bonuses" ) then
+    for x in item.bonuses do
+      if x.type eq btEnhancement and x.aspect eq asAttack then
+        item.intelligence.ego = item.intelligence.ego + x.magnitude;
+      end
+    end
+  end
+
+  if instr( item.intelligence.communication, "telepathy" ) ge 0 then
+    item.intelligence.ego = item.intelligence.ego + 1;
+  end
+
+  if has( item.intelligence, "readingAbility" ) then
+    item.intelligence.ego = item.intelligence.ego + 1;
+    if instr( item.intelligence.readingAbility, "magic" ) ge 0 then
+      item.intelligence.ego = item.intelligence.ego + 1;
+    end
+  end
+
+  for x in item.intelligence.abilityScores do
+    y = rComputeAbilityScoreBonus( x.magnitude );
+    if y gt 0 then
+      item.intelligence.ego = item.intelligence.ego + y;
+    end
+  end
+end
+
+
+rule rEmbueIntelligenceUpon( item )
+  /* select the intelligence level */
+  x = any( groupIntelligenceLevels );
+
+  /* modify the item's price */
+  if item.cost eq null then
+    item.cost = SetUnits( 0, "gp" );
+  end
+  item.cost = item.cost + x.cost;
+
+  /* create the object representing the item's intelligence */  
+  smarts = NewThing();
+  smarts.abilityScores = NewCategory();
+
+  /* generate and sort the ability scores */
+  abs = NewArray( 3 );
+  abs[0] = Random(2d6) + x.magnitude;
+  abs[1] = Random(2d6) + x.magnitude;
+  abs[2] = Random(3d6);
+
+  sort( abs, rSortArray_Descending );
+
+  /* assign the ability scores according to priorities */
+  y = any( groupAbilityScorePriorities );
+  Add( smarts.abilityScores, rNewAbilityScore( y.highABScore,   abs[0] ) );
+  Add( smarts.abilityScores, rNewAbilityScore( y.mediumABScore, abs[1] ) );
+  Add( smarts.abilityScores, rNewAbilityScore( y.lowABScore,    abs[2] ) );
+
+  /* decide on the item's alignment */
+  alignments = duplicate( groupItemAlignments );
+  do
+    y = rNewInstanceOf( any( alignments ) );
+    if Has( item, "lcAlignment" ) then
+      y.lcAlignment = item.lcAlignment;
+    end
+    if Has( item, "geAlignment" ) then
+      y.geAlignment = item.geAlignment;
+    end
+    valid = rAlignmentsCompatible( y, item );
+    if not valid then
+      Remove( alignments, y );
+    end
+  loop while not valid;
+  
+  smarts.lcAlignment = y.lcAlignment;
+  smarts.geAlignment = y.geAlignment;
+
+  smarts.communication = x.communication;
+  if has( x, "readingAbility" ) then
+    smarts.readingAbility = x.readingAbility;
+  end
+
+  /* choose item's languages */
+  if instr( smarts.communication, "speech" ) ge 0 then
+    langs = duplicate( groupLanguageSubskills );
+    Remove( langs, languageCommon );
+
+    smarts.languages = NewCategory();
+    Add( smarts.languages, languageCommon );
+
+    intScore = rGetAbilityScore( smarts.abilityScores, astIntelligence );
+    i = rComputeAbilityScoreBonus( intScore.magnitude );
+
+    while i gt 0 do
+      y = any( langs );
+      Add( smarts.languages, y );
+      Remove( langs, y );
+      i = i - 1;
+    end
+  end
+
+  invBonus = 0;
+
+  pacnt = x.primaryAbilityCount;
+  excnt = x.extraAbilityCount;
+
+  /* choose primary abilities */
+  c = duplicate( groupItemPrimaryAbilities );
+  for i = 1 to pacnt do
+    a = any( c );
+    if a eq null then
+      exit loop;
+    end
+    remove( c, a );
+    if rAlignmentsCompatible( a, smarts ) then
+      if a.type eq iatReroll then
+        pacnt = pacnt + a.magnitude;
+      elseif a.type eq iatExtraordinary then
+        excnt = excnt + 1;
+      else
+        invBonus = invBonus + 1;
+        rAddItemAbility( smarts, a );
+      end
+    else
+      pacnt = pacnt + 1;
+    end
+  end
+
+  /* choose extraordinary abilities */
+  if excnt gt 0 then
+    c = duplicate( groupItemExtraordinaryAbilities );
+    for i = 1 to excnt do
+      a = any( c );
+      remove( c, a );
+      if rAlignmentsCompatible( a, smarts ) then
+        if a.type eq iatReroll then
+          excnt = excnt + a.magnitude;
+        elseif a.type eq iatRerollAndSpecialPurpose then
+          excnt = excnt + 1;
+          invBonus = invBonus + 4;
+          rAddSpecialPurpose( smarts );
+        else
+          invBonus = invBonus + 2;
+          rAddItemAbility( smarts, a );
+        end
+      else
+        excnt = excnt + 1;
+      end
+    end
+  end
+
+  item.intelligence = smarts;
+  item.intelligence.ego = invBonus;
+
+  rComputeItemEgo( item );
+
+  rEmbueIntelligenceUpon = item;
+end

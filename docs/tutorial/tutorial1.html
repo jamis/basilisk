@@ -1,0 +1,208 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk Tutorial #1: Adding Data</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+    <H1>Tutorial #1: Adding Data</H1>
+    <I>By <A HREF="mailto:minam@rpgplanet.com">Jamis Buck</A> (minam@rpgplanet.com)</I><BR>
+    <I>doc version 1.0</I>
+
+    <P>
+
+		This tutorial assumes that:
+		<OL>
+			<LI>You have read the <A HREF="../scripting/index.html">Basilisk scripting documents</A>,
+			    at the very least the documents about the data file format.
+			<LI>You have copied the "dat/standard" subdirectory to a new subdirectory named
+			    "dat/tutorial".
+		</OL>
+
+		The goal of this tutorial is to add a new weapon to the data set.  The weapon has the
+		following statistics:
+
+		<BLOCKQUOTE>
+		  Spiked Fist: 7 gp, 1d3 damage, critical 20/x2, 1 lb, tiny, piercing damage.
+		</BLOCKQUOTE>
+
+    By the end of this tutorial, you should be able to add a weapon to the data file, and
+		include it in the random weapon tables that the treasure generator uses to generate
+		treasures.
+
+    <P>
+
+		All weapons are defined in the "weapons.bsk" file.  The original file should be in
+		the "dat/standard" subdirectory of your treasure generator directory, but you should
+		be working on a copy of the data.  Locate the weapons.bsk file and open it in a
+		text editor or word processor.  (Note that although a word processor will work for
+		this, it is best to use a text editor, like notepad).
+
+		<P>
+
+		You will notice that this file begins with a big list of all the weapons.  It should
+		look something like this:
+
+<BLOCKQUOTE>
+<PRE>
+template ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
+  weaponAdamantineBattleaxe { "adamantine battleaxe"  9310 gp  1d8  20  3  7 lb  medium sourcesCoreRules }
+  weaponAdamantineDagger { "adamantine dagger"  3302 gp  1d4  19  2  2 lb  tiny sourcesCoreRules }
+  weaponArrow { "arrow"  5 cp  $ $ $  3/20 lb  tiny sourcesCoreRules }
+  ...
+end
+</PRE>
+</BLOCKQUOTE>
+
+		You will notice that, between the curly braces '{' and '}' is a list of "attributes".  These
+		attributes are properties that describe a weapon.  Some weapons have more than this, and some
+		weapons don't have all of these, but, in general, these are the attributes common to weapons.
+		Here's what they each mean:
+		<UL>
+		  <LI>name - a string (text between quotes) naming the weapon
+			<LI>cost - the cost of the weapon
+			<LI>damage - the damage that the weapon causes
+			<LI>criticalRange - the lowest numer that causes a critical threat.
+			<LI>criticalMultiplier - the amount the damage is increased on a critical hit.
+			<LI>weight - the weight of the item.
+			<LI>size - the size of the item.  Sizes are all defined in the sizes.bsk file.
+			<LI>sources - the list of sources where the item was defined. Sources are defined
+			    in the sources.bsk file.
+		</UL>
+
+    Create a new line in the list, immediately after the line that starts with the word "template".
+		The first word on the line (as on the other lines) is the weapon's "identifier".  This is a
+		one-word (no spaces) identifier that you are giving to this weapon, and by which it will be referenced
+		in the data file.  <I>This is not the name of the weapon.</I>  You will note that all other
+		weapons begin with the word "weapon" followed by the name of the weapon, with each new word
+		capitalized and all spaces removed.  You are encouraged to name your weapons the same way,
+		although you do not have to.  For this tutorial, name the weapon "weaponSpikedFist".
+
+		<P>
+
+		After the name, type an opening curly-brace '{'.  This begins the attribute list of a thing.
+		The first attribute, as mentioned above, is the name of the weapon, so type (including
+		the quotes) "spiked fist".  Following the name is the price (7 gp), then the damage (1d3),
+		then the critical range (20), the criticalMultiplier (2), the weight (1 lb), the size
+		(tiny), and lastly the sources . . . but this item does not come from any published source.
+		You can either create a new source to describe your additions, or just omit the source
+		from this thing.  For this tutorial (and for the sake of simplicity) we will simply omit the
+		source, so instead of a source name, just type the $ character.  This makes Basilisk "leave out"
+		that attribute.  Be sure and close the attribute list with a closing curly-brace '}'.
+
+		<P>
+
+		You should have something that looks like this, now:
+
+<BLOCKQUOTE>
+<PRE>
+template ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
+  <B>weaponSpikedFist { "spiked fist"  7 gp  1d3  20  2  1 lb  tiny  $ }</B>
+  weaponAdamantineBattleaxe { "adamantine battleaxe"  9310 gp  1d8  20  3  7 lb  medium sourcesCoreRules }
+  weaponAdamantineDagger { "adamantine dagger"  3302 gp  1d4  19  2  2 lb  tiny sourcesCoreRules }
+  weaponArrow { "arrow"  5 cp  $ $ $  3/20 lb  tiny sourcesCoreRules }
+  ...
+end
+</PRE>
+</BLOCKQUOTE>
+
+    <P>
+
+		Now, we need to categorize the weapon as a "piercing weapon".  Near the bottom of the file,
+		there is a category named "groupPiercingWeapon".  It contains a list of all weapons that
+		cause piercing damage.  Remember the identifier for the new weapon we just added, the one
+		with no spaces, that starts with the word "weapon"?  You'll add that to this list.  Just
+		create a new line immediately after the line that says "category groupPiercingWeapon" and
+		type "weaponSpikedFist".  The category should now look something like this:
+
+<BLOCKQUOTE><PRE>
+category groupPiercingWeapon
+  <B>weaponSpikedFist</B>
+  weaponDagger weaponPunchingDagger weaponSpikedGauntlet weaponHalfspear 
+  weaponShortspear weaponLightCrossbow weaponDart weaponHeavyCrossbow 
+  weaponJavelin weaponLightLance weaponLightPick weaponShortSword 
+  weaponHeavyLance weaponHeavyPick weaponRapier weaponTrident 
+  weaponHalberd weaponLongspear weaponRanseur weaponScythe weaponShortbow
+  weaponCompositeShortbow weaponLongbow weaponCompositeLongbow 
+  weaponHalflingSiangham weaponSiangham weaponGnomeHookedHammer 
+  weaponSpikedChain weaponDwarvenUrgosh weaponHandCrossbow weaponShuriken
+  weaponRepeatingCrossbow weaponMightyCompositeShortbow1 
+  weaponMightyCompositeShortbow2 weaponMightyCompositeLongbow1 
+  weaponMightyCompositeLongbow2 weaponMightyCompositeLongbow3
+  weaponMightyCompositeLongbow4
+end
+</PRE></BLOCKQUOTE>
+
+		Be sure to save your changes!
+
+		<P>
+
+    Congratulations!  The Spiked Fist is now a weapon in the Basilisk file!  However, before the
+		item will actually be used by the treasure generator as a valid weapon in a treasure, you
+		need to modify the random weapon tables and add the weapon there.  The random weapon
+		tables are located in the <B>mundane.bsk</B> file, so you'll need to open that file next.
+
+    <P>
+
+		As the Spiked Fist is not a common melee weapon, we should probably add it to the
+		uncommon weapons category.  Look for a category named "groupUncommonWeapons".  There
+		will be a big long list of many different weapons, with a number in front of each
+		identifier, in square brackets '[' and ']'.  It should look something like this:
+
+<BLOCKQUOTE><PRE>
+category groupUncommonWeapons
+  [ 3] weaponOrcDoubleAxe
+  [ 4] weaponBattleaxe
+  [ 3] weaponSpikedChain
+  [ 2] weaponClub
+  [ 4] weaponHandCrossbow
+  [ 3] weaponRepeatingCrossbow
+  ...
+</PRE></BLOCKQUOTE>
+
+    The number before each identifier is that item's <i>weight</i>.  The greater the weight,
+		the more likely the item is to be selected.  No item can have a weight that is less than 1,
+		and all items must be integers (for example, 3.5 is not a valid weight, but 3 and 4 both
+		are).
+
+		<P>
+
+		We now need to decide how likely it is to randomly find a spiked fist.  This will vary
+		from campaign to campaign, but for now we choose 3, making it about as likely as a
+		spiked chain or a repeating crossbow.  We add a new line at the top of the list, first
+		with the number 3 in square brackets, followed by "weaponSpikedFist".  The result should
+		look like this:
+
+<BLOCKQUOTE><PRE>
+category groupUncommonWeapons
+  <B>[ 3] weaponSpikedFist</B>
+  [ 3] weaponOrcDoubleAxe
+  [ 4] weaponBattleaxe
+  [ 3] weaponSpikedChain
+  [ 2] weaponClub
+  [ 4] weaponHandCrossbow
+  [ 3] weaponRepeatingCrossbow
+  ...
+</PRE></BLOCKQUOTE>
+
+    Lastly, we just need to compile the new data file and generate treasures!  To do this,
+		open the treasure generator, select "Compile Database" from the "Tools" menu, and
+		press the "..." button to browse until you find the "index.bsk" file in the "dat/tutorial"
+		directory.  Add the "dat/tutorial" directory to the list of directories in the bottom half
+		of the dialog box, and then click "Compile".  If you made any errors in typing the data
+		in, they will show up in the console window, otherwise you will get a message box saying
+		that the data compiled successfully.  Now, generate a few treasures and see if you can
+		come up with a magical spiked fist!
+
+		<P>
+
+		You will probably notice that the spiked fist will be very rare.  To make it more common,
+		you can move it from the "groupUncommonWeapons" category to the "groupCommonMeleeWeapons"
+		category, and/or give it a greater weight.  Experiment and see what you get!
+
+    <P>
+
+		<A HREF="index.html">Back to the tutorial index</A>
+    <HR>
+    <I>Last modified on 13 Feb 2001 by Jamis Buck (minam@rpgplanet.com)</I>
+  </BODY>
+</HTML>

@@ -1,0 +1,39 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKEvaluateNumber</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKEvaluateNumber</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+
+<PRE>
+BSKFLOAT BSKEvaluateNumber( BSKValue* value );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>value</i> - the BSKValue to evaluate as a number.
+  </UL>
+
+  <B>Returns:</B> 0, or the converted numeric value of the parameter.
+
+  <P>
+
+  <B>Description:</B>
+  If value is VT_NUMBER, the numeric value is returned (and if it is
+  VT_DICE, the dice are rolled to determine the number).  If value is
+  VT_STRING, the string is interpreted as if representing a number, and
+  that number is returned (ie, via atof).  If value is anything else,
+  0 is returned.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

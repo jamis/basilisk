@@ -1,0 +1,44 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKNextToken</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKNextToken</H1>
+
+  <B>Module:</B> <A HREF="../modules/bsklexer.html">BSKLexer</A><BR>
+
+<PRE>
+BSKTokenId BSKNextToken( BSKLexer* lexer,
+                         BSKStream* stream,
+                         BSKToken* token );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>lexer</i> - the lexer object that is doing the scanning.
+    <LI><i>stream</i> - the stream being scanned.
+    <LI><i>token</i> - the token that will contain the scanned token.
+  </UL>
+
+  <B>Returns:</B> the type of the new token, or TT_EMPTY if there
+  was an error.
+
+  <P>
+
+  <B>Description:</B>
+  Retrieves the next token in the given stream and stores it in the
+  given token object.  The token type is returned.  A token type of
+  TT_EMTPY is returned if an error is detected.  If any token exists
+  in the back token buffer, the most recently stored one is returned
+  and removed from the buffer.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

@@ -1,0 +1,580 @@
+/* --------------------------------------------------------------------- *
+ * forward rule declarations
+ * --------------------------------------------------------------------- */
+
+forward rule rSelectRingSpell
+forward rule rSelectElement
+forward rule rComputeRingCharges
+forward rule rSelectStoredRingSpells
+
+/* --------------------------------------------------------------------- *
+ * Ring descriptions
+ * --------------------------------------------------------------------- */
+
+ringAnimalFriendship ( groupRings )
+  .name "animal friendship"
+  .cost 9500 gp
+  .activationMethod atCommandWord
+  .specialQualities ( { .type satSpellEffect .spell spellAnimalFriendship .description "up to 12 HD" } )
+  .sources sourcesCoreRules
+end
+
+ringBlinking ( groupRings )
+  .name "blinking"
+  .cost 30000 gp
+  .activationMethod atCommandWord
+  .specialQualities ( { .type satSpellEffect .spell spellBlink } )
+  .sources sourcesCoreRules
+end
+
+ringChameleonPower ( groupRings )
+  .name "chameleon power"
+  .cost 12000 gp
+  .activationMethod atWill
+  .bonuses ( { .type btUnnamed .aspect asSkill .affectedThing skillHide .magnitude +15 } )
+  .sources sourcesCoreRules
+end
+
+ringClimbing ( groupRings )
+  .name "climbing"
+  .cost 2000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btCompetence .aspect asSkill .affectedThing skillClimb .magnitude +10 } )
+  .sources sourcesCoreRules
+end
+
+ringCounterspells ( groupRings )
+  .name "counterspells"
+  .cost 4000 gp
+  .activationMethod atUse
+  .init rSelectRingSpell
+  .sources sourcesCoreRules
+end
+
+ringDjinniCalling 
+  .name "djinni calling"
+  .cost 125000 gp
+  .activationMethod atUse
+  .specialQualities ( { .description "summon a djinni for up to 1 hour per day" } )
+  .sources sourcesCoreRules
+end
+
+ringAirElementalCommand ( groupRings )
+  .name "air elemental command"
+  .cost 200000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btResistance .aspect asSave .conditions ( { .description "attacks of extraplanar air creatures" } ) .magnitude +2 }
+             { .type btMorale .aspect asAttack .conditions ( { .description "attacks against extraplanar air creatures" } ) .magnitude +4 }
+             { .type btUnnamed .aspect asSave .conditions ( { .description "against earth-based effects" } ) .magnitude -2 } )
+  .sources sourcesCoreRules
+end
+
+ringEarthElementalCommand ( groupRings )
+  .name "earth elemental command"
+  .cost 200000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btResistance .aspect asSave .conditions ( { .description "attacks of extraplanar earth creatures" } ) .magnitude +2 }
+             { .type btMorale .aspect asAttack .conditions ( { .description "attacks against extraplanar earth creatures" } ) .magnitude +4 }
+             { .type btUnnamed .aspect asSave .conditions ( { .description "against air- or electricity-based effects" } ) .magnitude -2 } )
+  .sources sourcesCoreRules
+end
+
+ringFireElementalCommand ( groupRings )
+  .name "fire elemental command"
+  .cost 200000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btResistance .aspect asSave .conditions ( { .description "attacks of extraplanar fire creatures" } ) .magnitude +2 }
+             { .type btMorale .aspect asAttack .conditions ( { .description "attacks against extraplanar fire creatures" } ) .magnitude +4 }
+             { .type btUnnamed .aspect asSave .conditions ( { .description "against water- or cold-based effects" } ) .magnitude -2 } )
+  .sources sourcesCoreRules
+end
+
+ringWaterElementalCommand ( groupRings )
+  .name "water elemental command"
+  .cost 200000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btResistance .aspect asSave .conditions ( { .description "attacks of extraplanar water creatures" } ) .magnitude +2 }
+             { .type btMorale .aspect asAttack .conditions ( { .description "attacks against extraplanar water creatures" } ) .magnitude +4 }
+             { .type btUnnamed .aspect asSave .conditions ( { .description "against fire-based effects" } ) .magnitude -2 } )
+  .sources sourcesCoreRules
+end
+
+ringMinorElementalResistance ( groupRings )
+  .name "minor elemental resistance"
+  .cost 16000 gp
+  .activationMethod atContinuous
+  .init rSelectElement
+  .specialDefenses ( { .type satDamageReduction .magnitude +15 } )
+  .sources sourcesCoreRules
+end
+
+ringMajorElementalResistance ( groupRings )
+  .name "major elemental resistance"
+  .cost 24000 gp
+  .activationMethod atContinuous
+  .init rSelectElement
+  .specialDefenses ( { .type satDamageReduction .magnitude +15 } )
+  .sources sourcesCoreRules
+end
+
+ringEvasion ( groupRings )
+  .name "evasion"
+  .cost 25000 gp
+  .activationMethod atUse
+  .specialDefenses ( { .description "successful Reflex save for half-damage results in negation of damage" } )
+  .sources sourcesCoreRules
+end
+
+ringFeatherFalling
+  .name "feather falling"
+  .cost 2200 gp
+  .activationMethod atUse
+  .specialQualities ( { .type satSpellEffect .spell spellFeatherFall } )
+  .sources sourcesCoreRules
+end
+
+ringFriendShield
+  .name "friend shield (pair)"
+  .cost 50000 gp
+  .activationMethod atCommandWord
+  .specialQualities ( { .type satSpellEffect .spell spellShieldOther } )
+  .sources sourcesCoreRules
+end
+
+ringForceShield ( groupRings )
+  .name "force shield"
+  .cost 8500 gp
+  .activationMethod atWill
+  .bonuses ( { .type btShield .aspect asAC .magnitude +2 } )
+  .sources sourcesCoreRules
+end
+
+ringFreedomOfMovement ( groupRings )
+  .name "freedom of movement"
+  .cost 40000 gp
+  .activationMethod atContinuous
+  .specialQualities ( { .type satSpellEffect .spell spellFreedomOfMovement } )
+  .sources sourcesCoreRules
+end
+
+ringInvisibility ( groupRings )
+  .name "invisibility"
+  .cost 20000 gp
+  .activationMethod atWill
+  .specialQualities ( { .description "invisible" } )
+  .sources sourcesCoreRules
+end
+
+ringJumping ( groupRings )
+  .name "jumping"
+  .cost 2000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btUnnamed .aspect asSkill .affectedThing skillJump .magnitude +30 } )
+  .sources sourcesCoreRules
+end
+
+ringMindShielding ( groupRings )
+  .name "mind shielding"
+  .cost 8000 gp
+  .activationMethod atContinuous
+  .specialQualities ( { .description "immune to 'detect thoughts', 'discern lies', and any attempt to magically descern alignment" } )
+  .sources sourcesCoreRules
+end
+
+ringProtection1 ( groupRings )
+  .name "protection +1"
+  .cost 2000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btDeflection .aspect asAC .magnitude +1 } )
+  .sources sourcesCoreRules
+end
+
+ringProtection2 ( groupRings )
+  .name "protection +2"
+  .cost 8000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btDeflection .aspect asAC .magnitude +2 } )
+  .sources sourcesCoreRules
+end
+
+ringProtection3 ( groupRings )
+  .name "protection +3"
+  .cost 18000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btDeflection .aspect asAC .magnitude +3 } )
+  .sources sourcesCoreRules
+end
+
+ringProtection4 ( groupRings )
+  .name "protection +4"
+  .cost 32000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btDeflection .aspect asAC .magnitude +4 } )
+  .sources sourcesCoreRules
+end
+
+ringProtection5 ( groupRings )
+  .name "protection +5"
+  .cost 50000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btDeflection .aspect asAC .magnitude +5 } )
+  .sources sourcesCoreRules
+end
+
+ringRam ( groupRings )
+  .name "the ram"
+  .cost 8600 gp
+  .activationMethod atCommandWord
+  .init rComputeRingCharges
+  .sources sourcesCoreRules
+end
+
+ringRegeneration ( groupRings )
+  .name "regeneration"
+  .cost 90000 gp
+  .activationMethod atContinuous
+  .specialQualities ( { .type satRegeneration .frequency 1 .period 1 hour } )
+  .sources sourcesCoreRules
+end
+
+ringShootingStars
+  .name "shooting stars"
+  .cost 50000 gp
+  .activationMethod atCommandWord
+  .sources sourcesCoreRules
+end
+
+ringSpellStoring ( groupRings )
+  .name "spell storing"
+  .cost 90000 gp
+  .activationMethod atSpellTrigger
+  .init rSelectStoredRingSpells
+  .sources sourcesCoreRules
+end
+
+ringSpellTurning ( groupRings )
+  .name "spell turning"
+  .cost 150000 gp
+  .activationMethod atCommandWord
+  .specialDefenses ( { .type satSpellEffect .spell spellSpellTurning } )
+  .sources sourcesCoreRules
+end
+
+ringSustenance ( groupRings )
+  .name "sustenance"
+  .cost 2500 gp
+  .activationMethod atContinuous
+  .specialQualities ( { .description "needs no food or drink, and only 2 hours of sleep per day" } )
+  .sources sourcesCoreRules
+end
+
+ringSwimming ( groupRings )
+  .name "swimming"
+  .cost 2300 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btCompetence .aspect asSkill .affectedThing skillSwim .magnitude +10 } )
+  .sources sourcesCoreRules
+end
+
+ringTelekinesis ( groupRings )
+  .name "telekinesis"
+  .cost 75000 gp
+  .activationMethod atCommandWord
+  .specialQualities ( { .type satSpellEffect .spell spellTelekinesis } )
+  .sources sourcesCoreRules
+end
+
+ringThreeWishes ( groupRings )
+  .name "three wishes"
+  .cost 97950 gp
+  .activationMethod atSpellTrigger
+  .init rComputeWishRingCharges
+  .sources sourcesCoreRules
+end
+
+ringWarmth ( groupRings )
+  .name "warmth"
+  .cost 2100 gp
+  .activationMethod atContinuous
+  .specialDefenses ( { .type satDamageReduction .magnitude 5 .aspect etCold .description "5/cold" } )
+  .sources sourcesCoreRules
+end
+
+ringWaterWalking ( groupRings )
+  .name "water walking"
+  .cost 15000 gp
+  .activationMethod atContinuous
+  .specialQualities ( { .type satSpellEffect .spell spellWaterWalk } )
+  .sources sourcesCoreRules
+end
+
+ringWizardry1 ( groupRings )
+  .name "wizardry I"
+  .cost 20000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btUnnamed .aspect asSpellsKnown .spellLevel 1 .magnitude 2 } )
+  .sources sourcesCoreRules
+end
+
+ringWizardry2 ( groupRings )
+  .name "wizardry II"
+  .cost 40000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btUnnamed .aspect asSpellsKnown .spellLevel 2 .magnitude 2 } )
+  .sources sourcesCoreRules
+end
+
+ringWizardry3 ( groupRings )
+  .name "wizardry III"
+  .cost 70000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btUnnamed .aspect asSpellsKnown .spellLevel 3 .magnitude 2 } )
+  .sources sourcesCoreRules
+end
+
+ringWizardry4 ( groupRings )
+  .name "wizardry IV"
+  .cost 100000 gp
+  .activationMethod atContinuous
+  .bonuses ( { .type btUnnamed .aspect asSpellsKnown .spellLevel 4 .magnitude 2 } )
+  .sources sourcesCoreRules
+end
+
+ringXRayVision ( groupRings )
+  .name "x-ray vision"
+  .cost 25000 gp
+  .activationMethod atCommandWord
+  .specialQualities ( { .description "x-ray vision" } )
+  .sources sourcesCoreRules
+end
+
+/* --------------------------------------------------------------------- *
+ * ring tables
+ * --------------------------------------------------------------------- */
+
+category groupRingsMinor
+  [ 5] ringClimbing
+  [ 5] ringJumping
+  [15] ringProtection1
+  [ 5] ringWarmth
+  [10] ringFeatherFalling
+  [ 5] ringSwimming
+  [ 5] ringSustenance
+  [ 5] ringCounterspells
+  [ 5] ringMindShielding
+  [10] ringProtection2
+  [ 5] ringForceShield
+  [ 5] ringRam
+  [ 5] ringAnimalFriendship
+  [ 5] ringChameleonPower
+  [ 5] ringWaterWalking
+  [ 5] ringMinorElementalResistance
+end
+
+category groupRingsMedium
+  [ 5] ringCounterspells
+  [ 5] ringMindShielding
+  [10] ringProtection2
+  [ 5] ringForceShield
+  [ 5] ringRam
+  [ 5] ringAnimalFriendship
+  [ 5] ringChameleonPower
+  [ 5] ringWaterWalking
+  [ 5] ringMinorElementalResistance
+  [10] ringProtection3
+  [10] ringInvisibility
+  [ 5] ringWizardry1
+  [ 5] ringMajorElementalResistance
+  [ 2] ringXRayVision
+  [ 2] ringEvasion
+  [ 2] ringBlinking
+  [ 2] ringProtection4
+  [ 2] ringWizardry2
+  [ 2] ringFreedomOfMovement
+  [ 2] ringFriendShield
+  [ 2] ringProtection5
+  [ 2] ringShootingStars
+  [ 1] ringTelekinesis
+  [ 1] ringWizardry3
+end
+
+category groupRingsMajor
+  [ 1] ringRam
+  [ 1] ringAnimalFriendship
+  [ 1] ringChameleonPower
+  [ 1] ringWaterWalking
+  [ 2] ringMinorElementalResistance
+  [ 4] ringProtection3
+  [ 5] ringInvisibility
+  [ 5] ringWizardry1
+  [ 5] ringMajorElementalResistance
+  [ 5] ringXRayVision
+  [ 5] ringEvasion
+  [ 5] ringBlinking
+  [ 5] ringProtection4
+  [ 5] ringWizardry2
+  [ 5] ringFreedomOfMovement
+  [ 5] ringForceShield
+  [ 5] ringProtection5
+  [ 5] ringShootingStars
+  [ 5] ringTelekinesis
+  [ 5] ringWizardry3
+  [ 4] ringSpellStoring
+  [ 3] ringRegeneration
+  [ 2] ringThreeWishes
+  [ 3] ringWizardry4
+  [ 2] ringDjinniCalling
+  [ 2] ringSpellTurning
+  [ 1] ringAirElementalCommand
+  [ 1] ringEarthElementalCommand
+  [ 1] ringFireElementalCommand
+  [ 1] ringWaterElementalCommand
+end
+
+/* -------------------------------------------------------------------- *
+ * rules for determining a ring
+ * -------------------------------------------------------------------- */
+
+rule rLookupRing( ringMagnitude options )
+  case ringMagnitude
+    is "minor" then
+      c = groupRingsMinor;
+    is "medium" then
+      c = groupRingsMedium;
+    is "major" then
+      c = groupRingsMajor;
+    default
+      exit rule;
+  end
+
+  y = rGetAnyMatchingCriteria( c, options );
+  if y ne null then
+    x = rNewInstanceOf( y, options );
+    x.prototype = y;
+    x.name = "ring of " + x.name;
+    x.treasureType = "ring";
+
+		if rSafeGet( options, "optAlwaysIntelligent", false ) then
+			rEmbueIntelligenceUpon( x, options );
+		else
+			d = Random(1d100);
+			if d eq 1 then
+				rEmbueIntelligenceUpon( x, options );
+			elseif d le 31 then
+				x = rEnsureAttributeExists( x, "itemQualities", atCategory );
+				t = NewThing();
+				t.description = "something hints at the ring's function";
+				add( x.itemQualities, t );
+			end
+		end
+
+    if rItemDeservesCurse( x, options ) then
+      x = rCurseItem( x, options );
+    end
+  end
+
+  rLookupRing = x;
+end
+
+/* -------------------------------------------------------------------- *
+ * rules for initializing rings
+ * -------------------------------------------------------------------- */
+
+rule rComputeRingCharges( r )
+  r.charges = Random(50) + 1;
+  rComputeRingCharges = r;
+end
+
+
+rule rComputeWishRingCharges( r )
+  r.charges = Random(1d3);
+  rComputeWishRingCharges = r;
+end
+
+
+category groupArcaneSpellLists
+  [15] groupSpellsWizard
+  [10] groupSpellsSorcerer
+  [ 5] groupSpellsBard
+end
+
+category groupDivineSpellLists
+  [20] groupSpellsCleric
+  [ 5] groupSpellsDruid
+end
+
+
+rule rSelectRingSpell( r options )
+  if Random(100) lt 70 then
+    c = any( groupArcaneSpellLists );
+  else
+    c = any( groupDivineSpellLists );
+  end
+
+  s = rGetAnyMatchingCriteria( Get( c, Random(1d6) ), options );
+  if s eq null then
+    exit rule;
+  end
+
+  r.contents = NewCategory();
+  Add( r.contents, s );
+
+  rSelectRingSpell = r;
+end
+
+
+rule rSelectElement( r )
+  el = rNewInstanceOf( any( groupElementTypes ) );
+  r.name = r.name + " (" + el.name + ")";
+  
+  save = r.specialDefenses;
+  r.specialDefenses = NewCategory();
+
+  for x in save do
+    y = rNewInstanceOf( x );
+    y.aspect = el;
+    add( r.specialDefenses, y );
+  end
+
+  rSelectElement = r;
+end
+
+
+category groupStoredRingSpellLevels
+  [20] { .spellLevel 1 }
+  [15] { .spellLevel 2 }
+  [10] { .spellLevel 3 }
+  [ 8] { .spellLevel 4 }
+  [ 6] { .spellLevel 5 }
+  [ 4] { .spellLevel 6 }
+  [ 3] { .spellLevel 7 }
+  [ 2] { .spellLevel 8 }
+  [ 1] { .spellLevel 9 }
+end
+
+rule rSelectStoredRingSpells( r options )
+  if Random(100) lt 70 then
+    c = any( groupArcaneSpellLists );
+  else
+    c = any( groupDivineSpellLists );
+  end
+
+  r.contents = NewCategory();
+
+  levelsRemaining = 10;
+  do
+    l = any( groupStoredRingSpellLevels ).spellLevel;
+    levelsRemaining = levelsRemaining - l;
+    if levelsRemaining gt 0 then
+      do
+        s = rGetAnyMatchingCriteria( Get( c, l-1 ), options );
+        if s eq null then
+          exit rule;
+        end
+      loop while Exists( r.contents, s );
+      Add( r.contents, s );
+    end
+  loop while levelsRemaining gt 0;
+
+  rSelectStoredRingSpells = r;
+end

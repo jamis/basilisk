@@ -1,0 +1,330 @@
+# Basilisk Scripting Syntax
+#
+# In this file, unquoted curly braces {} denote an optional entry.  Quoted
+# entries indicate literals (ie, terminal symbols).  Empty parenthesis ()
+# denote a null production.  An asterisk "*" indicates that zero or more of
+# the preceding symbol may be substituted.  A "+" indicates that one or more
+# of the preceding symbol may be substituted.  A '#' indicates that the rest
+# of the line is a comment.  All other symbols are non-terminals.
+
+  # A configuration file consists of zero or more configuration file entries.
+config-file := config-entry*
+
+  # A configuration file entry may be either a unit definition, an attribute
+  # definition, a thing definition, a category definition, or a rule 
+  # definition
+config-entry := unit-def
+              | attribute-def
+              | thing-def
+              | category-def
+              | rule-def
+              | template-def
+              | meta-def
+              | forward-def
+
+  # A unit definition allows the configuration file to specify a unit and how
+  # it relates to other units (ie, 1 round is 6 seconds, 1 minute is 10 rounds,
+  # etc.).  The first identifier is the unique name of the unit, while the
+  # last, optional, identifier, specifies a unit that has previously been
+  # defined.  Examples:
+  #    unit rounds;
+  #    unit minute = 10 rounds;
+unit-def := "unit" ident { "=" num ident } ";"
+
+  # An attribute definition specifies that a given attribute will always be
+  # of the given type.  The identifier must be unique.  Example:
+  #    attribute name  string
+  #    attribute bonus thing
+attribute-def := "attribute" ident type
+
+  # A type is one of the 5 built-in types supported by the parser.  See the
+  # grammar rule for number for the various sub-types it supports.  Note that
+  # a category is a thing, so you can create a category and assign it as
+  # an attribute of type thing.
+type := "number"
+      | "string"
+      | "boolean"
+      | "thing"
+      | "category"
+      | "rule"
+
+  # A thing is a collection of zero or more properties.  The identifier
+  # need not be unique, but if it isn't, it must be the identifier of an
+  # existing thing.  The properties in the list will be added to that of
+  # the thing.  The ident-list is a list of categories that the thing will
+  # be added to.  If any of the categories do not exist, it will be created
+  # and the thing will be added to it.  Example:
+  #     baseball ( ballGroup )
+  #        .name   "baseball"
+  #        .weight 2 lb
+  #     end
+thing-def := ident { "(" ident-list ")" } { property-list } "end"
+
+  # A category is a collection of zero or more things.  The identifier
+  # need not be unique, but if it isn't it must be the identifier of an
+  # existing category.  Weightings are optional for each item -- if left
+  # off, a weighting of 1 is assigned to the item.  Example:
+  #     category ballGroup
+  #       baseball
+  #       basketball
+  #       [3] soccerball
+  #       football
+  #     end
+category-def := "category" ident category-body "end"
+
+  # A category-body consists of one or more category-entries.  A category
+  # entry may be explicitly assigned a weighting, but if it is not, the
+  # weight of 1 will be implicitly assigned.
+category-body := category-entry
+               | category-entry category-body
+
+  # A category entry may be either an identifier that was previously 
+  # assigned to a thing, category, or rule, or it may be an anonymous thing, 
+  # defined inside the category definition as a sequence of zero or more 
+  # properties within curly braces.  It may also be an anonymous category,
+  # defined inside the category definition as a sequence of zero or more
+  # category-entries.
+category-entry := { "[" num "]" } category-entry2
+category-entry2 := ident
+                 | "{" property-list "}"
+                 | "(" category-body ")"
+                 | "null"
+
+  # A template defines a sequence of things that possess the same attribute 
+  # types.  The first (optional) ident-list in parentheses is the list of
+  # groups the component items are to belong to.  The second ident-list is a
+  # list of names of properties that each thing has.
+template-def := "template" { "(" ident-list ")" } "{" ident-list "}" template-entry-list "end"
+
+template-entry-list := template-entry
+                     | template-entry template-entry-list
+
+  # A template entry consists of the thing's identifier, followed by a list
+  # of values that correspond to the list of properties given in the 
+  # template definition.  The optional ident-list is a list of categories
+  # that the component thing will belong to.
+template-entry := ident { "(" ident-list ")" } "{" template-value-list "}"
+
+template-value-list := template-value
+                     | template-value template-value-list
+
+  # A template-value is either a value, or the dollar-sign "$", which
+  # indicates that the property does not exist for the given thing.
+template-value := property-value
+                | "$"
+
+  # A meta-definition is used to direct the parser to do certain things,
+  # like including a file.
+meta-def := "#" meta-def2
+meta-def2 := "include" string
+
+  # A forward definition pre-defines a symbol as being of a given type,
+  # though the symbol must later be explicitly defined.
+forward-def := "forward" forward-decl
+
+  # A forward-decl follows the keyword "forward" and consists of the
+  # keyword "thing", "category", or "rule" followed by the identifier to
+  # so define.
+forward-decl := "thing" ident
+              | "category" ident
+              | "rule" ident
+
+  # A rule is essentially a function.  It takes zero or more parameters and
+  # has zero or more statements that constitute it.
+  #   Example:
+  #     rule abilityScoreModifier( score )
+  #       abilityScoreModifier = Int( ( score - 10 ) / 2 );
+  #     end
+rule-def := "rule" ident "(" { ident-list } ")" { rule-statement-list } "end"
+
+  # An identifier is a letter or underscore followed by zero or more
+  # letters, digits, or underscores.
+ident := [a-zA-Z_]+[a-zA-Z0-9_]*
+
+  # An identifier list is one or more identifiers.
+ident-list := ident
+            | ident ident-list
+
+  # A property list is one or more properties.
+property-list := property
+               | property property-list
+
+  # A parameter-list is one or more parameters, delimited by commas.
+parameter-list := logexpr
+                | logexpr "," parameter-list
+
+  # A property always begins with a period ("."), followed by an
+  # identifier (the attribute name, which must be one of the attributes
+  # that have been predefined by the "attribute" keyword.  The attribute
+  # may be followed either by an explicit value (see the "value" grammar
+  # rule, below), or by an anonymous declaration of a thing (with the
+  # optional group list and property-list).
+  #   Example:
+  #     .bonus { .type sizeType .aspect attack .magnitude +1 }
+property := "." ident property-value
+
+  # A value may be a number, string, boolean, identifier (thing or
+  # rule), or an expression that evaluates to one of these things.
+property-value := number
+                | string
+                | boolean
+                | ident
+                | "{" property-list "}"
+                | "(" category-body ")"
+                | "null"
+
+value := property-value
+       | "(" logexpr ")"
+
+  # A number may be multiplicative (ie, it accumulates with other numbers
+  # via multiplication) or additive (ie, it accumulates via addition or
+  # subtraction).  It may have another number that modifies it, either by
+  # addition or subtraction).  It may be modified by a unit specified, which
+  # must be one of the units predefined by the unit keyword.  A number may
+  # be a constant (3.1415, 1, etc.), a dice count and type (2d6, 1d100, etc.)
+  # or a fraction (1/3, 5/2, etc.).
+number := {*}number2 { {+|-}? number } { ident }
+number2 := {+|-}num
+         | {+|-}dice
+         | {+|-}num "/" num
+
+  # A num is a floating point number, with an optional decimal point and
+  # trailing digits.
+num := digit+ { "." digit* }
+int := digit+
+
+  # A dice is an integer followed by a "d" followed by an integer.
+dice := int "d" int
+
+  # A rule statement list is one or more rule-statements.
+rule-statement-list := rule-statement
+                     | rule-statement rule-statement-list
+
+  # A rule statement may be an assignment statement, a function call, an
+  # if statement, a while statement, a do statement, or a for statement.
+rule-statement := ident ident-tail { "=" logexpr } ";"
+                | "if" logexpr "then" rule-statement-list if2 "end"
+                | "while" logexpr "do" rule-statement-list "end"
+                | "do" rule-statement-list "loop" "while" logexpr ";"
+                | "for" ident for2 "do" rule-statement-list "end"
+                | "exit" exit-block ";"
+                | "case" logexpr case-list { "default" rule-statement-list } "end"
+
+  # An if statement may have an optional else statement
+if2 := ()
+     | "elseif" logexpr "then" rule-statement-list if2
+     | "else" rule-statement
+
+for2 := "=" logexpr "to" logexpr 
+      | "in" logexpr
+
+exit-block := "loop"
+            | "rule"
+
+case-list := case-statement
+           | case-statement case-list
+
+case-statement := "is" { "not" } factor2 "then" rule-statement-list
+
+  # A logexpr is either a logexpr2 or a logical "or" combination.
+logexpr := logexpr2
+         | logexpr2 "or" logexpr
+
+  # A logexpr2 is either a logexpr3 or a logical "and" combination.
+logexpr2 := logexpr3
+          | logexpr3 "and" logexpr2
+
+  # A logexpr3 is either an expression or a logical comparison
+  # Example:
+  #    name eq "Jamis"
+logexpr3 := expression
+          | expression "eq" expression
+          | expression "ne" expression
+          | expression "lt" expression
+          | expression "gt" expression
+          | expression "le" expression
+          | expression "ge" expression
+          | expression "typeof" type
+
+  # An expression is either a term or a mathematical expression with the
+  # + or - operator.  Example:
+  #     big - small
+expression := term
+            | term "+" expression
+            | term "-" expression
+
+  # A term is either a factor or a mathematical expression with the * or /
+  # operator.  Example:
+  #    2 * score
+term := factor
+      | factor "*" term
+      | factor "/" term
+      | factor "%" term
+
+  # A factor is either a factor2, or an exponential expression using the
+  # "^" operator.  Example:
+  #    x^4
+factor := factor2
+        | factor2 "^" factor
+
+  # A factor2 is either an identifier (a variable), a function call, an
+  # attribute reference of a thing (using the dereference (".") operator),
+  # a num, a string, a boolean, a sub-expression, or a boolean negation.
+factor2 := ident ident-tail
+         | num
+         | string
+         | boolean
+         | "(" logexpr ")"
+         | "not" factor2
+         | "null"
+
+  # An ident-tail is either empty, or a function call, or a dereference.
+ident-tail := ()
+            | "(" { paremeter-list } ")" ident-tail
+            | "." ident ident-tail
+            | "[" expression "]" ident-tail
+
+built-in-func := Add              # Add(x,y{,z}) -- adds x to category y (with weight z).  Returns 'true' if it succeeded, 'false' otherwise
+               | Any              # Any(x) -- grabs any item from category x (considering weights of items).  If x not a category, Any(x) returns x.
+               | AttributeNameOf  # AttributeNameOf(x,y) -- returns the name of the z-th attribute of thing x (or null if none exists)
+               | AttributeOf      # AttributeOf(x,y) -- returns the attribute named y of thing x (same as x.y if y were not a string)
+               | AttributeValueOf # AttributeValueOf(x,y) -- returns the value of the z-th attribute of thing x (or null if none exists)
+               | ConvertUnits     # ConvertUnits(x,y) -- converts x from it's current units to the units indicated by y.  An error occurs if the units aren't compatible.
+               | Count            # Count(x) -- the number of items in category (or thing) x
+               | Dice             # Dice(x,y) -- creates a "dice" number of x dice, with y sides each.
+               | DiceCount        # DiceCount(x) -- retrieves the count of dice in the given dice value.
+               | DiceType         # DiceType(x) -- retrieves the type of the dice in the given dice value.
+               | Duplicate        # Duplicate(x) -- duplicates thing (or category) x
+               | Empty            # Empty(x) -- returns 'true' if x is empty (or not a category), 'false' otherwise.
+               | Eval             # Eval(x) -- returns the value of x, unless x is a dice value, in which case x is evaluated
+               | Exists           # Exists(x,y) -- true if x exists in y, false otherwise
+               | Floor            # Floor(x {,y}) -- round to nearest multiple of y not greater than x
+               | Get              # Get(x,y) -- gets the item at index x of category y
+               | GetByWeight      # GetByWeight(x,y) -- returns the element at weighting y in category x (the weight is made to fit within the total weight of the category)
+               | Has              # Has(x,y) -- returns true if x is a Thing possessing a property of type y
+               | IndexOf          # IndexOf(x,y) -- gets the index of item x in category y
+               | Instr            # Instr(x,y{,z}) -- returns the index (after z) of the first instance of y in x
+               | Int              # Int(x {,y}) -- round x to nearest multiple of y (y is 1, if not specified)
+               | Intersection     # Intersection(x,y) -- returns the intersection of the two categories
+               | Length           # Length(x) -- if x is an array, the number of elements, and if x is a string, the number of chars
+               | Ln               # Ln(x) -- returns the natural log of x
+               | MagnitudeOf      # MagnitudeOf(x) -- where x is a number, returns the number without it's units
+               | Mid              # Mid(x,y{,z}) -- returns z bytes (or the remainder of the string) starting at y, in x
+               | NewArray         # Array({x}) -- creates a new array (initialized to x null elements)
+               | NewCategory      # NewCategory() -- creates a new, empty Category
+               | NewThing         # NewThing() -- creates a new, empty, unattributed Thing
+               | Parameter        # Parameter(x) -- returns the parameter to the current rule at index x (useful for variable arity rules)
+               | Print            # Print(x) -- prints x to the output (where x is a string, number, or null)
+               | Random           # Random(x) -- returns a random number based on argument x
+               | Remove           # Remove(x,y) -- removes x from category y.  Returns 'true' if it succeeded, 'false' otherwise
+               | RemoveAll        # RemoveAll(y) -- removes all items from category y
+               | Replace          # Replace(x,y,z{,w}) -- replaces the first instance of y (after w) in x with z
+               | SearchCategory   # SearchCategory(x,y{,z}) -- searches category x for a thing with an attribute y, with an optional value of z
+               | SetUnits         # SetUnits(x,y) -- where x is a number, y is a string, returns x with y as units
+               | Sort             # Sort(x,y) -- sort array x, using rule y
+               | Sqrt             # Sqrt(x) -- returns the square root of x
+               | Subtract         # Subtract(x,y) -- returns x-y (where x and y are categories)
+               | TotalWeightOf    # TotalWeightOf(x) -- returns the total weight of all elements in category x
+               | Union            # Union(x,y) -- returns the union of the two categories (or things)
+               | UnitsOf          # UnitsOf(x) -- where x is a number, returns the units of the number (as a string)
+               | WeightOf         # WeightOf(x,y) -- gets the weight of the item at index x of category y

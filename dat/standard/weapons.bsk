@@ -1,0 +1,373 @@
+template ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
+  weaponAdamantineBattleaxe { "adamantine battleaxe"  9310 gp  1d8  20  3  7 lb  medium sourcesCoreRules }
+  weaponAdamantineDagger { "adamantine dagger"  3302 gp  1d4  19  2  2 lb  tiny sourcesCoreRules }
+  weaponArrow { "arrow"  5 cp  $ $ $  3/20 lb  tiny sourcesCoreRules }
+  weaponBastardSword { "bastard sword"  35 gp  1d10  19  2  10 lb  medium sourcesCoreRules }
+  weaponBattleaxe { "battleaxe"  10 gp  1d8  20  3  7 lb  medium sourcesCoreRules }
+  weaponClub { "club"  0 gp  1d6  20  2  3 lb  medium sourcesCoreRules }
+  weaponCompositeLongbow { "composite longbow"  100 gp  1d8  20  3  3 lb  large sourcesCoreRules }
+  weaponCompositeShortbow { "composite shortbow"  75 gp  1d6  20  3  2 lb  medium sourcesCoreRules }
+  weaponCrossbowBolt { "crossbow bolt"  1 sp  1d4  20  2  1/10 lb  tiny sourcesCoreRules }
+  weaponDagger { "dagger"  2 gp  1d4  19  2  2 lb  tiny sourcesCoreRules }
+  weaponDart { "dart"  5 sp  1d4  20  2  1/2 lb  small sourcesCoreRules }
+  weaponDireFlail { "dire flail"  90 gp  1d8  20  2  20 lb  large sourcesCoreRules }
+  weaponDwarvenUrgosh { "dwarven urgosh"  50 gp  1d8  20  3  15 lb  large sourcesCoreRules }
+  weaponDwarvenWaraxe { "dwarven waraxe"  30 gp  1d10  20  3  15 lb  medium sourcesCoreRules }
+  weaponFalchion { "falchion"  75 gp  2d4  18  2  16 lb  large sourcesCoreRules }
+  weaponGauntlet { "gauntlet" 2 gp  $  $  $  2 lb  $ sourcesCoreRules }
+  weaponGlaive { "glaive"  8 gp  1d10  20  3  15 lb  large sourcesCoreRules }
+  weaponGnomeHookedHammer { "gnome hooked hammer"  20 gp  1d6  20  3  6 lb  medium sourcesCoreRules }
+  weaponGreataxe { "greataxe"  20 gp  1d12  20  3  20 lb  large sourcesCoreRules }
+  weaponGreatclub { "greatclub"  5 gp  1d10  20  2  10 lb  large sourcesCoreRules }
+  weaponGreatsword { "greatsword"  50 gp  2d6  19  2  15 lb  large sourcesCoreRules }
+  weaponGuisarme { "guisarme"  9 gp  2d4  20  3  15 lb  large sourcesCoreRules }
+  weaponHalberd { "halberd"  10 gp  1d10  20  3  15 lb  large sourcesCoreRules }
+  weaponHalflingKama { "halfling kama"  2 gp  1d4  20  2  1 lb  tiny sourcesCoreRules }
+  weaponHalflingNunchaku { "halfling nunchaku"  2 gp  1d4  20  2  1 lb  tiny sourcesCoreRules }
+  weaponHalflingSiangham { "halfling siangham"  2 gp  1d4  20  2  1 lb  tiny sourcesCoreRules }
+  weaponHalfspear { "halfspear"  1 gp  1d6  20  3  3 lb  medium sourcesCoreRules }
+  weaponHandaxe { "handaxe"  6 gp  1d6  20  3  5 lb  small sourcesCoreRules }
+  weaponHandCrossbow { "hand crossbow"  100 gp  1d4  19  2  3 lb  tiny sourcesCoreRules }
+  weaponHeavyCrossbow { "heavy crossbow"  50 gp  1d10  19  2  9 lb  medium sourcesCoreRules }
+  weaponHeavyFlail { "heavy flail"  15 gp  1d10  19  2  20 lb  large sourcesCoreRules }
+  weaponHeavyLance { "heavy lance"  10 gp  1d8  20  3  10 lb  medium sourcesCoreRules }
+  weaponHeavyMace { "heavy mace"  12 gp  1d8  20  2  12 lb  medium sourcesCoreRules }
+  weaponHeavyPick { "heavy pick"  8 gp  1d6  20  4  6 lb  medium sourcesCoreRules }
+  weaponJavelin { "javelin"  1 gp  1d6  20  2  2 lb  medium sourcesCoreRules }
+  weaponKama { "kama"  2 gp  1d6  20  2  2 lb  small sourcesCoreRules }
+  weaponKukri { "kukri"  8 gp  1d4  18  2  3 lb  tiny sourcesCoreRules }
+  weaponLightCrossbow { "light crossbow"  35 gp  1d8  19  2  6 lb  small sourcesCoreRules }
+  weaponLightFlail { "light flail"  8 gp  1d8  20  2  5 lb  medium sourcesCoreRules }
+  weaponLightHammer { "light hammer"  1 gp  1d4  20  2  2 lb  small sourcesCoreRules }
+  weaponLightLance { "light lance"  6 gp  1d6  20  3  5 lb  small sourcesCoreRules }
+  weaponLightMace { "light mace"  5 gp  1d6  20  2  6lb  small sourcesCoreRules }
+  weaponLightPick { "light pick"  4 gp  1d4  20  4  4 lb  small sourcesCoreRules }
+  weaponLongbow { "longbow"  75 gp  1d8  20  3  3 lb large sourcesCoreRules }
+  weaponLongspear { "longspear"  5 gp  1d8  20  3  9 lb  large sourcesCoreRules }
+  weaponLongsword { "longsword"  15 gp  1d8  19  2  4 lb  medium sourcesCoreRules }
+  weaponMightyCompositeLongbow1 { "mighty composite longbow (+1 Str bonus)"  200 gp  1d8  20  3  3 lb  large sourcesCoreRules }
+  weaponMightyCompositeLongbow2 { "mighty composite longbow (+2 Str bonus)"  300 gp  1d8  20  3  3 lb  large sourcesCoreRules }
+  weaponMightyCompositeLongbow3 { "mighty composite longbow (+3 Str bonus)"  400 gp  1d8  20  3  3 lb  large sourcesCoreRules }
+  weaponMightyCompositeLongbow4 { "mighty composite longbow (+4 Str bonus)"  500 gp  1d8  20  3  3 lb  large sourcesCoreRules }
+  weaponMightyCompositeShortbow1 { "mighty composite shortbow (+1 Str bonus)"  150 gp  1d6  20  3  2 lb  medium sourcesCoreRules }
+  weaponMightyCompositeShortbow2 { "mighty composite shortbow (+2 Str bonus)"  225 gp  1d6  20  3  2 lb  medium sourcesCoreRules }
+  weaponMorningstar { "morningstar"  8 gp  1d8  20  2  8 lb  medium sourcesCoreRules }
+  weaponNet { "net"  20 gp  $  $  $  10 lb  medium sourcesCoreRules }
+  weaponNunchaku { "nunchaku"  2 gp  1d6  20  2  2 lb  small sourcesCoreRules }
+  weaponOrcDoubleAxe { "orc double axe"  60 gp  1d8  20  3  25 lb  large sourcesCoreRules }
+  weaponPunchingDagger { "punching dagger"  2 gp  1d4  20  3  2 lb  tiny sourcesCoreRules }
+  weaponRanseur { "ranseur"  10 gp  2d4  20  3  15 lb  large sourcesCoreRules }
+  weaponRapier { "rapier"  20 gp  1d6  18  2  3 lb  medium sourcesCoreRules }
+  weaponRepeatingCrossbow { "repeating crossbow"  250 gp  1d8  19  2  16 lb  medium sourcesCoreRules }
+  weaponQuarterstaff { "quarterstaff"  0 gp  1d6  20  2  4 lb  large sourcesCoreRules }
+  weaponSap { "sap"  1 gp  $  20  2  3 lb  small sourcesCoreRules }
+  weaponScimitar { "scimitar"  15 gp  1d6  18  2  4 lb  medium sourcesCoreRules }
+  weaponScythe { "scythe"  18 gp  2d4  20  4  12 lb  large sourcesCoreRules }
+  weaponShortbow { "shortbow"  30 gp  1d6  20  3  2 lb  medium sourcesCoreRules }
+  weaponShortspear { "shortspear"  2 gp  1d8  20  3  5 lb large sourcesCoreRules }
+  weaponShortSword { "short sword"  10 gp  1d6  19  2  3 lb  small sourcesCoreRules }
+  weaponShuriken { "shuriken"  1 gp  1  20  2  1/10 lb  tiny sourcesCoreRules }
+  weaponSiangham { "siangham"  3 gp  1d6  20  2  1 lb  small sourcesCoreRules }
+  weaponSickle { "sickle"  6 gp  1d6  20  2  3 lb  small sourcesCoreRules }
+  weaponSling { "sling"  0 gp  1d4  20  2  0 lb  small sourcesCoreRules }
+  weaponSlingBullet { "sling bullet"  1 cp  $  $  $  1/2 lb  diminutive sourcesCoreRules }
+  weaponSpikedChain { "spiked chain"  25 gp  2d4  20  2  15 lb  large sourcesCoreRules }
+  weaponSpikedGauntlet { "spiked gauntlet"  5 gp  1d4  20  2  2 lb  tiny sourcesCoreRules }
+  weaponThrowingAxe { "throwing axe"  8 gp  1d6  20  2  4 lb  small sourcesCoreRules }
+  weaponTrident { "trident"  15 gp  1d8  20  2  5 lb  medium sourcesCoreRules }
+  weaponTwoBladedSword { "two-bladed sword" 100 gp  1d8  19  2  30 lb  large sourcesCoreRules }
+  weaponWarhammer { "warhammer"  12 gp  1d8  20  3  8 lb  medium sourcesCoreRules }
+  weaponWhip { "whip"  1 gp  $  20  2  $  small sourcesCoreRules }
+end
+
+// additional properties
+
+weaponAdamantineBattleaxe
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +2 } )
+end
+
+weaponAdamantineDagger
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +1 } )
+end
+
+weaponClub
+  .rangeIncrement 10 ft
+end
+
+weaponDart
+  .rangeIncrement 20 ft
+end
+
+weaponHalfspear
+  .rangeIncrement 20 ft
+  .setVsCharge yes
+end
+
+weaponHeavyCrossbow
+  .rangeIncrement 120 ft
+end
+
+weaponHeavyFlail
+  .bonuses ( { .type btUnnamed .aspect asDisarm .magnitude +2 } )
+end
+
+weaponJavelin
+  .rangeIncrement 30 ft
+end
+
+weaponLightCrossbow
+  .rangeIncrement 80 ft
+end
+
+weaponLightFlail
+  .bonuses ( { .type btUnnamed .aspect asDisarm .magnitude +2 } )
+end
+
+weaponLightHammer
+  .rangeIncrement 20 ft
+end
+
+weaponQuarterstaff
+  .secondaryDamage 1d6
+end
+
+weaponSap
+  .subdualDamage 1d6
+end
+
+weaponShortspear
+  .rangeIncrement 20
+  .setVsCharge yes
+end
+
+weaponSling
+  .rangeIncrement 50 ft
+end
+
+weaponThrowingAxe
+  .rangeIncrement 10 ft
+end
+
+weaponTrident
+  .rangeIncrement 10 ft
+  .setVsCharge yes
+end
+
+weaponGlaive
+  .hasReach yes
+end
+
+weaponGuisarme
+  .hasReach yes
+end
+
+weaponHalberd
+  .setVsCharge yes
+end
+
+weaponLongspear
+  .hasReach yes
+  .setVsCharge yes
+end
+
+weaponRanseur
+  .hasReach yes
+end
+
+weaponShortbow
+  .rangeIncrement 60 ft
+end
+
+weaponCompositeShortbow
+  .rangeIncrement 70 ft
+end
+
+weaponMightyCompositeShortbow1
+  .rangeIncrement 70 ft
+  .bonuses ( { .type btUnnamed .aspect asDamage .maximumAbilityBonus { .type astStrength .magnitude +1 } } )
+end
+
+weaponMightyCompositeShortbow2
+  .rangeIncrement 70 ft
+  .bonuses ( { .type btUnnamed .aspect asDamage .maximumAbilityBonus { .type astStrength .magnitude +2 } } )
+end
+
+weaponLongbow
+  .rangeIncrement 100 ft
+end
+
+weaponCompositeLongbow
+  .rangeIncrement 110 ft
+end
+
+weaponMightyCompositeLongbow1
+  .rangeIncrement 110 ft
+  .bonuses ( { .type btUnnamed .aspect asDamage .maximumAbilityBonus { .type astStrength .magnitude +1 } } )
+end
+
+weaponMightyCompositeLongbow2
+  .rangeIncrement 110 ft
+  .bonuses ( { .type btUnnamed .aspect asDamage .maximumAbilityBonus { .type astStrength .magnitude +2 } } )
+end
+
+weaponMightyCompositeLongbow3
+  .rangeIncrement 110 ft
+  .bonuses ( { .type btUnnamed .aspect asDamage .maximumAbilityBonus { .type astStrength .magnitude +3 } } )
+end
+
+weaponMightyCompositeLongbow4
+  .rangeIncrement 110 ft
+  .bonuses ( { .type btUnnamed .aspect asDamage .maximumAbilityBonus { .type astStrength .magnitude +4 } } )
+end
+
+weaponGnomeHookedHammer
+  .secondaryDamage 1d4
+  .secondaryCriticalMultiplier 4
+end
+
+weaponOrcDoubleAxe
+  .secondaryDamage 1d8
+end
+
+weaponDireFlail
+  .secondaryDamage 1d8
+  .bonuses ( { .type btUnnamed .aspect asDisarm .magnitude +2 } )
+end
+
+weaponTwoBladedSword
+  .secondaryDamage 1d8
+end
+
+weaponDwarvenUrgosh
+  .secondaryDamage 1d6
+end
+
+weaponHandCrossbow
+  .rangeIncrement 30 ft
+end
+
+weaponShuriken
+  .rangeIncrement 10 ft
+end
+
+weaponWhip
+  .maximumRange 15 ft
+  .subdualDamage 1d2
+end
+
+weaponRepeatingCrossbow
+  .rangeIncrement 80 ft
+end
+
+weaponNet
+  .maximumRange 10 ft
+end
+
+// -------------------------------------------------------------------------
+// Weapon Categories
+// -------------------------------------------------------------------------
+
+category groupSimpleWeapon
+  weaponDagger weaponPunchingDagger weaponSpikedGauntlet weaponLightMace 
+  weaponSickle weaponClub weaponHalfspear weaponHeavyMace 
+  weaponMorningstar weaponQuarterstaff weaponShortspear 
+  weaponLightCrossbow weaponDart weaponSling weaponHeavyCrossbow 
+  weaponJavelin weaponGauntlet
+end
+
+category groupMartialWeapon
+  weaponThrowingAxe weaponLightHammer weaponHandaxe weaponLightLance 
+  weaponLightPick weaponSap weaponShortSword weaponBattleaxe 
+  weaponLightFlail weaponHeavyLance weaponLongsword weaponHeavyPick 
+  weaponRapier weaponScimitar weaponTrident weaponWarhammer weaponFalchion 
+  weaponHeavyFlail weaponGlaive weaponGreataxe weaponGreatclub 
+  weaponGreatsword weaponGuisarme weaponHalberd weaponLongspear 
+  weaponRanseur weaponScythe weaponShortbow weaponCompositeShortbow
+  weaponLongbow weaponCompositeLongbow weaponMightyCompositeShortbow1 
+  weaponMightyCompositeShortbow2 weaponMightyCompositeLongbow1 
+  weaponMightyCompositeLongbow2 weaponMightyCompositeLongbow3
+  weaponMightyCompositeLongbow4
+end
+
+category groupExoticWeapon
+  weaponHalflingKama weaponKukri weaponHalflingNunchaku 
+  weaponHalflingSiangham weaponKama weaponNunchaku
+  weaponSiangham weaponBastardSword weaponDwarvenWaraxe 
+  weaponGnomeHookedHammer weaponOrcDoubleAxe weaponSpikedChain 
+  weaponDireFlail weaponTwoBladedSword weaponDwarvenUrgosh 
+  weaponHandCrossbow weaponShuriken weaponWhip weaponRepeatingCrossbow 
+  weaponNet
+end
+
+category groupMeleeWeapon
+  weaponDagger weaponPunchingDagger weaponSpikedGauntlet weaponLightMace 
+  weaponSickle weaponClub weaponHalfspear weaponHeavyMace weaponMorningstar 
+  weaponQuarterstaff weaponShortspear weaponLightHammer weaponHandaxe 
+  weaponLightLance weaponLightPick weaponSap weaponShortSword 
+  weaponBattleaxe weaponLightFlail weaponHeavyLance weaponLongsword 
+  weaponHeavyPick weaponRapier weaponScimitar weaponTrident weaponWarhammer 
+  weaponFalchion weaponHeavyFlail weaponGlaive weaponGreataxe weaponGreatclub 
+  weaponGreatsword weaponGuisarme weaponHalberd weaponLongspear weaponRanseur 
+  weaponScythe weaponHalflingKama weaponKukri weaponHalflingNunchaku 
+  weaponHalflingSiangham weaponKama weaponNunchaku weaponSiangham 
+  weaponBastardSword weaponDwarvenWaraxe weaponGnomeHookedHammer 
+  weaponOrcDoubleAxe weaponSpikedChain weaponDireFlail weaponTwoBladedSword
+  weaponDwarvenUrgosh weaponThrowingAxe
+end
+
+category groupRangedWeapon
+  weaponDagger weaponClub weaponHalfspear weaponShortspear weaponLightCrossbow 
+  weaponDart weaponSling weaponHeavyCrossbow weaponJavelin weaponThrowingAxe
+  weaponLightHammer weaponTrident weaponShortbow weaponCompositeShortbow
+  weaponLongbow weaponCompositeLongbow weaponHandCrossbow weaponShuriken 
+  weaponWhip weaponRepeatingCrossbow weaponNet weaponMightyCompositeShortbow1 
+  weaponMightyCompositeShortbow2 weaponMightyCompositeLongbow1 
+  weaponMightyCompositeLongbow2 weaponMightyCompositeLongbow3 
+  weaponMightyCompositeLongbow4
+end
+
+category groupThrownWeapon
+  weaponDagger weaponClub weaponHalfspear weaponShortspear weaponDart 
+  weaponJavelin weaponThrowingAxe weaponLightHammer weaponTrident 
+  weaponShuriken weaponNet
+end
+
+category groupPropelledWeapon
+  weaponLightCrossbow weaponSling weaponHeavyCrossbow weaponShortbow 
+  weaponCompositeShortbow weaponLongbow weaponCompositeLongbow 
+  weaponHandCrossbow weaponRepeatingCrossbow weaponMightyCompositeShortbow1 
+  weaponMightyCompositeShortbow2 weaponMightyCompositeLongbow1 
+  weaponMightyCompositeLongbow2 weaponMightyCompositeLongbow3 
+  weaponMightyCompositeLongbow4
+end
+
+category groupBludgeoningWeapon
+  weaponLightMace weaponClub weaponHeavyMace weaponMorningstar weaponQuarterstaff
+  weaponSling weaponlightHammer weaponSap weaponLightFlail weaponWarhammer 
+  weaponHeavyFlail weaponGreatclub weaponHalflingNunchaku weaponNunchaku 
+  weaponGnomeHookedHammer weaponDireFlail weaponGauntlet
+end
+
+category groupPiercingWeapon
+  weaponDagger weaponPunchingDagger weaponSpikedGauntlet weaponHalfspear 
+  weaponShortspear weaponLightCrossbow weaponDart weaponHeavyCrossbow 
+  weaponJavelin weaponLightLance weaponLightPick weaponShortSword 
+  weaponHeavyLance weaponHeavyPick weaponRapier weaponTrident 
+  weaponHalberd weaponLongspear weaponRanseur weaponScythe weaponShortbow
+  weaponCompositeShortbow weaponLongbow weaponCompositeLongbow 
+  weaponHalflingSiangham weaponSiangham weaponGnomeHookedHammer 
+  weaponSpikedChain weaponDwarvenUrgosh weaponHandCrossbow weaponShuriken
+  weaponRepeatingCrossbow weaponMightyCompositeShortbow1 
+  weaponMightyCompositeShortbow2 weaponMightyCompositeLongbow1 
+  weaponMightyCompositeLongbow2 weaponMightyCompositeLongbow3
+  weaponMightyCompositeLongbow4
+end
+
+category groupSlashingWeapon
+  weaponSickle weaponThrowingAxe weaponHandaxe weaponBattleaxe weaponLongsword
+  weaponScimitar weaponFalchion weaponGlaive weaponGreataxe weaponGreatsword 
+  weaponGuisarme weaponHalberd weaponScythe weaponHalflingKama weaponKukri
+  weaponKama weaponBastardSword weaponDwarvenWaraxe weaponOrcDoubleAxe
+  weaponTwoBladedSword weaponDwarvenUrgosh weaponWhip
+end
+

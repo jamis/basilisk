@@ -1,0 +1,78 @@
+forward thing skillHide
+
+fine ( groupSizes )
+  .name "fine"
+  .magnitude 1
+  .bonuses ( { .type btSize .aspect asAC .magnitude +8 }
+             { .type btSize .aspect asAttack .magnitude +8 }
+             { .type btSize .aspect asGrapple .magnitude -16 }
+             { .type btSize .aspect asSkill .affectedThing skillHide .magnitude +16 } )
+end
+
+diminutive ( groupSizes )
+  .name "diminutive"
+  .magnitude 2
+  .bonuses ( { .type btSize .aspect asAC .magnitude +4 }
+             { .type btSize .aspect asAttack .magnitude +4 }
+             { .type btSize .aspect asGrapple .magnitude -12 }
+             { .type btSize .aspect asSkill .affectedThing skillHide .magnitude +12 } )
+end
+
+tiny ( groupSizes )
+  .name "tiny"
+  .magnitude 3
+  .bonuses ( { .type btSize .aspect asAC .magnitude +2 }
+             { .type btSize .aspect asAttack .magnitude +2 }
+             { .type btSize .aspect asGrapple .magnitude -8 }
+             { .type btSize .aspect asSkill .affectedThing skillHide .magnitude +8 } )
+end
+
+small ( groupSizes )
+  .name "small"
+  .magnitude 4
+  .bonuses ( { .type btSize .aspect asAC .magnitude +1 }
+             { .type btSize .aspect asAttack .magnitude +1 }
+             { .type btSize .aspect asGrapple .magnitude -4 }
+             { .type btSize .aspect asSkill .affectedThing skillHide .magnitude +4 } )
+end
+
+medium ( groupSizes ) 
+  .name "medium"
+  .magnitude 5
+end
+
+large ( groupSizes )
+  .name "large"
+  .magnitude 6
+  .bonuses ( { .type btSize .aspect asAC .magnitude -1 }
+             { .type btSize .aspect asAttack .magnitude -1 }
+             { .type btSize .aspect asGrapple .magnitude +4 }
+             { .type btSize .aspect asSkill .affectedThing skillHide .magnitude -4 } )
+end
+
+huge ( groupSizes )
+  .name "huge"
+  .magnitude 7
+  .bonuses ( { .type btSize .aspect asAC .magnitude -2 }
+             { .type btSize .aspect asAttack .magnitude -2 }
+             { .type btSize .aspect asGrapple .magnitude +8 }
+             { .type btSize .aspect asSkill .affectedThing skillHide .magnitude -8 } )
+end
+
+gargantuan ( groupSizes )
+  .name "gargantuan"
+  .magnitude 8
+  .bonuses ( { .type btSize .aspect asAC .magnitude -4 }
+             { .type btSize .aspect asAttack .magnitude -4 }
+             { .type btSize .aspect asGrapple .magnitude +12 }
+             { .type btSize .aspect asSkill .affectedThing skillHide .magnitude -12 } )
+end
+
+colossal ( groupSizes )
+  .name "colossal"
+  .magnitude 9
+  .bonuses ( { .type btSize .aspect asAC .magnitude -8 }
+             { .type btSize .aspect asAttack .magnitude -8 }
+             { .type btSize .aspect asGrapple .magnitude +16 }
+             { .type btSize .aspect asSkill .affectedThing skillHide .magnitude -16 } )
+end

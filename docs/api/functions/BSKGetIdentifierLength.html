@@ -1,0 +1,41 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKGetIdentifierLength</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKGetIdentifierLength</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskidtbl.html">BSKIdentifierTable</A><BR>
+
+<PRE>
+BSKUI32 BSKGetIdentifierLength( BSKIdentifierTable* table,
+                                BSKUI32 id );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>table</i> - the table containing the identifier.
+    <LI><i>id</i> - the identifier to compute the length of.
+  </UL>
+
+  <B>Returns:</B> the number of bytes in the string for the given
+  identifier, excluding the null-terminating byte.  If the identifier
+  does not exist, returns 0.
+
+  <P>
+
+  <B>Description:</B>
+  Computes the length of the requested identifier in bytes.
+  The requested length does NOT include the null-terminating byte
+  at the end.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

@@ -1,0 +1,39 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKAddThingToDB</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKAddThingToDB</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskdb.html">BSKDatabase</A><BR>
+
+<PRE>
+BSKThing* BSKAddThingToDB( BSKDatabase* db, BSKThing* thing );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>db</i> - the database to add to.
+    <LI><i>thing</i> - the thing to add.  The thing should not already
+        exist in this database or any other.
+  </UL>
+
+  <B>Returns:</B>  The thing that was added.
+
+  <P>
+
+  <B>Description:</B>
+  Adds the given thing to the database.  Doing so marks the 'thing' as
+  persistant (the OF_PERSISTANT flag is set in the thing's flags).  The
+  thing is returned.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

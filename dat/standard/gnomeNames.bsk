@@ -1,0 +1,48 @@
+grammar_group_gnome_names1
+  .left "[S]"
+  .productions (
+    [1] { .production "[M]" }
+    [1] { .production "[F]" }
+  )
+end
+
+grammar_group_gnome_names2
+  .left "[M]"
+  .productions (
+    [1] { .production "boddynock" }
+    [1] { .production "dimble" }
+    [1] { .production "fonkin" }
+    [1] { .production "glim" }
+    [1] { .production "gerbo" }
+    [1] { .production "jebeddo" }
+    [1] { .production "namfoodle" }
+    [1] { .production "roondar" }
+    [1] { .production "seebo" }
+    [1] { .production "zook" }
+  )
+end
+
+grammar_group_gnome_names3
+  .left "[F]"
+  .productions (
+    [1] { .production "bimpnottin" }
+    [1] { .production "caramip" }
+    [1] { .production "duvamil" }
+    [1] { .production "ellywick" }
+    [1] { .production "ellyjobell" }
+    [1] { .production "loopmottin" }
+    [1] { .production "mardnab" }
+    [1] { .production "roywyn" }
+    [1] { .production "shamil" }
+    [1] { .production "wayrocket" }
+  )
+end
+
+grammar_gnome_names
+  .startSymbol "[S]"
+  .groups (
+    grammar_group_gnome_names1
+    grammar_group_gnome_names2
+    grammar_group_gnome_names3
+  )
+end

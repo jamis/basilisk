@@ -1,0 +1,207 @@
+forward rule rInitGenericStaffProperties
+
+
+staffCharming
+  .name "charming"
+  .cost 12000 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellCharmPerson .saveDC 11 .charges 1 }
+                    { .type satSpellEffect .spell spellCharmMonster .saveDC 16 .charges 2 } )
+  .sources sourcesCoreRules
+end
+
+staffHealing
+  .name "healing"
+  .cost 33000 gp
+  .init rInitGenericStaffProperties
+  .specialQualities ( { .type satSpellEffect .spell spellLesserRestoration .charges 1 }
+                      { .type satSpellEffect .spell spellCureSeriousWounds .charges 1 }
+                      { .type satSpellEffect .spell spellRemoveBlindnessDeafness .charges 1 }
+                      { .type satSpellEffect .spell spellRemoveDisease .charges 1 } )
+  .sources sourcesCoreRules
+end
+
+staffDefense
+  .name "defense"
+  .cost 80000 gp
+  .init rInitGenericStaffProperties
+  .specialDefenses ( { .type satSpellEffect .spell spellShield .charges 1 }
+                     { .type satSpellEffect .spell spellShieldOfFaith .charges 1 .description "+5 deflection bonus to AC" }
+                     { .type satSpellEffect .spell spellShieldOther .charges 1 }
+                     { .type satSpellEffect .spell spellShieldOfLaw .charges 2 } )
+  .lcAlignment lcLawful
+  .sources sourcesCoreRules
+end
+
+staffEarthAndStone
+  .name "earth and stone"
+  .cost 85000 gp
+  .init rInitGenericStaffProperties
+  .specialQualities ( { .type satSpellEffect .spell spellPasswall .charges 1 }
+                      { .type satSpellEffect .spell spellMoveEarth .charges 1 } )
+  .sources sourcesCoreRules
+end
+
+staffFire
+  .name "fire"
+  .cost 29000 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellBurningHands .saveDC 11 .charges 1 }
+                    { .type satSpellEffect .spell spellFireball .damage 8d6 .saveDC 14 .charges 1 }
+                    { .type satSpellEffect .spell spellWallOfFire .saveDC 16 .charges 2 } )
+  .sources sourcesCoreRules
+end
+
+staffFrost
+  .name "frost"
+  .cost 70000 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellIceStorm .saveDC 16 .charges 1 }
+                    { .type satSpellEffect .spell spellWallOfIce .saveDC 16 .charges 1 }
+                    { .type satSpellEffect .spell spellConeOfCold .damage 10d6 .saveDC 17 .charges 1 } )
+  .sources sourcesCoreRules
+end
+
+staffLife
+  .name "life"
+  .cost 130000 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellHeal .charges 1 }
+                    { .type satSpellEffect .spell spellResurrection .charges 1 } )
+  .sources sourcesCoreRules
+end
+
+staffPassage
+  .name "passage"
+  .cost 180000 gp
+  .init rInitGenericStaffProperties
+  .specialQualities ( { .type satSpellEffect .spell spellDimensionDoor .charges 1 }
+                      { .type satSpellEffect .spell spellPasswall .charges 1 }
+                      { .type satSpellEffect .spell spellPhaseDoor .charges 2 }
+                      { .type satSpellEffect .spell spellTeleportWithoutError .charges 2 }
+                      { .type satSpellEffect .spell spellAstralProjection .charges 2 } )
+  .sources sourcesCoreRules
+end
+
+staffPower
+  .name "power"
+  .cost 200000 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellMagicMissile .casterLevel 9 .charges 1 }
+                    { .type satSpellEffect .spell spellRayOfEnfeeblement .spellLevel 5 .saveDC 17 .charges 1 }
+                    { .type satSpellEffect .spell spellFireball .spellLevel 5 .damage 10d6 .saveDC 17 .charges 1 }
+                    { .type satSpellEffect .spell spellConeOfCold .damage 15d6 .saveDC 15 .charges 2 }
+                    { .type satSpellEffect .spell spellHoldMonster .saveDC 14 .charges 2 }
+                    { .description "double damage on successful hit (x3 on crit)" .charges 1 }
+                    { .description "retributive strike: 8x charges to all within 10 feet, 6x charges to all within 20 feet, and 4x charges to all within 30 feet (Reflex save for half) -- person breaking staff has 50% chance of traveling to a different plane, but otherwise dies" .saveDC 17 } )
+  .specialQualities ( { .type satSpellEffect .spell spellContinualFlame .charges 1 }
+                      { .type satSpellEffect .spell spellLevitate .charges 1 } )
+  .specialDefenses ( { .type satSpellEffect .spell spellWallOfForce .charges 2 .description "10-foot-diameter hemisphere around caster only" }
+                     { .type satSpellEffect .spell spellGlobeOfInvulnerability .charges 2 } )
+  .bonuses ( { .type btLuck .aspect asAC .magnitude +2 }
+             { .type btLuck .aspect asSave .magnitude +2 }
+             { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .sources sourcesCoreRules
+end
+
+staffSizeAlteration
+  .name "size alteration"
+  .cost 6500 gp
+  .init rInitGenericStaffProperties
+  .specialQualities ( { .type satSpellEffect .spell spellEnlarge .charges 1 }
+                      { .type satSpellEffect .spell spellReduce .charges 1 } )
+  .sources sourcesCoreRules
+end
+
+staffSwarmingInsects
+  .name "swarming insects"
+  .cost 20000 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellSummonSwarm .charges 1 }
+                    { .type satSpellEffect .spell spellInsectPlague .charges 1 } )
+  .sources sourcesCoreRules
+end
+
+staffWoodlands
+  .name "woodlands"
+  .cost 90000 gp
+  .init rInitGenericStaffProperties
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .specialQualities ( { .type satSpellEffect .spell spellAnimalFriendship .charges 1 }
+                      { .type satSpellEffect .spell spellBarkskin .charges 1 }
+                      { .type satSpellEffect .spell spellSpeakWithAnimals .charges 1 }
+                      { .type satSpellEffect .spell spellWallOfThorns .charges 1 }
+                      { .type satSpellEffect .spell spellSummonNaturesAllyVI .charges 2 } 
+                      { .type satSpellEffect .spell spellPassWithoutTrace } )
+  .sources sourcesCoreRules
+end
+
+
+category groupMediumStaves
+  [10] staffSizeAlteration
+  [10] staffCharming
+  [10] staffHealing
+  [10] staffFire
+  [10] staffSwarmingInsects
+  [10] staffFrost
+  [10] staffEarthAndStone
+  [10] staffDefense
+  [ 9] staffWoodlands
+  [ 6] staffLife
+  [ 5] staffPassage
+end
+
+category groupMajorStaves
+  [ 5] staffCharming
+  [10] staffHealing
+  [15] staffFire
+  [10] staffSwarmingInsects
+  [10] staffFrost
+  [10] staffEarthAndStone
+  [10] staffDefense
+  [10] staffWoodlands
+  [10] staffLife
+  [ 6] staffPassage
+  [ 4] staffPower
+end
+
+
+rule rInitGenericStaffProperties( item )
+  item.charges = Random(50) + 1;
+  item.prototype = weaponQuarterstaff;
+  item.name = "staff of " + item.name;
+  rInitGenericStaffProperties = item;
+end
+
+
+rule rSelectStaff( staffMagnitude options )
+  case staffMagnitude
+    is "medium" then
+      c = groupMediumStaves;
+    is "major" then
+      c = groupMajorStaves;
+    default
+      exit rule;
+  end
+
+  y = rGetAnyMatchingCriteria( c, options );
+  if y ne null then
+    staff = rNewInstanceOf( y );
+    staff.treasureType = "staff";
+
+    if Random(100) lt 30 then
+      staff = rEnsureAttributeExists( staff, "itemQualities", atCategory );
+      x = NewThing();
+      x.description = "something provides some clue to the staff's function";
+      add( staff.itemQualities, x );
+    end
+
+    if rItemDeservesCurse( staff, options ) then
+      rCurseItem( staff, options );
+    end
+  end
+
+  rSelectStaff = staff;
+end

@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------------------- *
+ * All random name selection files are included here.  To add your own, create
+ * a new file with a format similar to that in the files below, and add it
+ * below.
+ * ------------------------------------------------------------------------- */
+
+#include "dwarfNames.bsk"
+#include "elfNames.bsk"
+#include "monstrousNames.bsk"
+#include "gnomeNames.bsk"
+#include "humanNames.bsk"
+#include "halflingNames.bsk"
+
+category groupAllNameGrammars
+  grammar_dwarf_names
+  grammar_elf_names
+  grammar_monstrous_names
+  grammar_gnome_names
+  grammar_human_names
+  grammar_halfling_names
+end
+

@@ -1,0 +1,114 @@
+Basilisk Data Engine
+--------------------
+
+The Basilisk data engine is intended to be used by supporting utilties for
+roleplaying games.  However, its structure is such that it may be used for
+a great many other things, in addition to this.
+
+If you desire to include Basilisk in your own programs, you are free to do
+so provided that you adhere to the rules given in the LICENSE.txt file.  If
+your distribution of Basilisk did not come with a LICENSE.txt file, please
+go to http://www.rpgplanet.com/dnd3e/generators and download a complete
+distribution, or contact the author (Jamis Buck) at minam@rpgplanet.com.
+
+COMPILATION/INSTALLATION
+------------------------
+
+Change to the directory containing the 'Makefile' directory, and run 'make'.
+This will create the Basilisk library (libbasilisk.a) and the Basilisk
+compiler (bskcompile) and runner (bskrun).
+
+COMPONENTS
+----------
+
+bskrun.c
+  This is the parser/execution environment for testing Basilisk data files.
+  It's a good place to start if you want to trace the flow of execution of
+  a Basilisk-based application.
+
+bskcompile.c
+  This will compile a Basilisk datafile to a 'bdb' file (binary).
+
+bskarray.c
+  This defines the BSKArray object (used during script run-time).
+
+bskatdef.c
+  This defines a BSKAttributeDef object (used in the database to maintain
+  attribute definitions).
+
+bskbitset.c
+  This is a set of bits, used in the parser to determine when and where
+  a given token is valid.
+
+bskctgry.c
+  This defines the BSKCategory object, used in both the database and during
+  script runtime.
+
+bskdb.c
+  This defines the BSKDatabase object that contains an entire data file.
+
+bskdebug.c
+  Memory allocation/deallocate routines for use while debugging.
+
+bskexec.c
+  The run-time environment.
+
+bskidtbl.c
+  The identifier table object.
+
+bsklexer.c
+  The scanner/lexer for the parser.
+
+bskparse.c
+  The parser.
+
+bskrule.c
+  Definition of the BSKRule object, that represents the logic components in
+  the data file.
+
+bskstream.c
+  An abstraction of file i/o.
+
+bsksymtb.c
+  The symbol table definition.
+
+bskthing.c
+  Definition of the BSKThing object, that represents a single data entity
+  in the database.
+
+bsktokens.c
+  List of valid tokens recognized by the parser.
+
+bskutdef.c
+  Definition of a BSKUnitDefinition object, that represents a definition of
+  a unit in the database.
+
+bskutil.c
+  Various utilities used by Basilisk routines.
+
+bskvalue.c
+  Definition of the BSKValue object, representing a data element.
+
+bskvar.c
+  Definition of the BSKVariable object, used internally by the run-time
+  environment.
+
+BASILISK COMPILER
+-----------------
+
+The Basilisk compiler accepts one parameter, which must be the name of a
+Basilisk data file.  The compiler will then parse the file and output a
+new file with a ".bdb" extension.  This is the binary version of the
+given data set.
+
+BASILISK RUNNER
+---------------
+
+The Basilisk runner executes the given script (either text or binary).  It
+looks for the existance of a rule named "main" and executes it.
+
+If you have any questions, feel free to contact me.
+
+- Jamis Buck
+  minam@rpgplanet.com
+  http://www.rpgplanet.com/dnd3e/generators

@@ -1,0 +1,39 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKUnitGetUnits</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKUnitGetUnits</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskutdef.html">BSKUnitDefinition</A><BR>
+
+<PRE>
+BSKFLOAT BSKUnitGetUnits( BSKUnitDefinition* unit );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+	  <LI><i>unit</i> - the unit to get the "units" of.
+  </UL>
+
+  <B>Returns:</B> the "units" of the given unit definition.
+
+  <P>
+
+  <B>Description:</B>
+	Obtains the "units" of the given unit definition.  If a unit is defined relative to
+	another unit (a "reference" unit), the "units" that this function is referring to
+	are the number of reference units that make up one of the given unit.  For example,
+	if "pounds" is defined relative to "ounces", the reference unit is "ounces", and the
+	number of units is 12 -- the number of ounces in a pound.
+
+	<P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

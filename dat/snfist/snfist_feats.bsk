@@ -1,0 +1,186 @@
+featBlindsight5FootRadius ( groupAllFeats groupGeneralFeats )
+  .name "blindsight, 5-foot radius"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featCircleKick ( groupAllFeats groupGeneralFeats )
+  .name "circle kick"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featCloseQuartersFighting ( groupAllFeats groupGeneralFeats )
+  .name "close-quarters fighting"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featDeathBlow ( groupAllFeats groupGeneralFeats )
+  .name "death blow"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featDirtyFighting ( groupAllFeats groupGeneralFeats )
+  .name "dirty fighting"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featDualStrike ( groupAllFeats groupGeneralFeats )
+  .name "dual strike"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featEagleClawAttack ( groupAllFeats groupGeneralFeats )
+  .name "eagle claw attack"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featExpertTactician ( groupAllFeats groupGeneralFeats )
+  .name "expert tactician"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featExtraStunningAttacks ( groupAllFeats groupGeneralFeats )
+  .name "extra stunning attacks"
+  .takeMultiple yes
+  .sources sourcesSwordAndFist
+end
+
+featEyesInTheBackOfYourHead ( groupAllFeats groupGeneralFeats )
+  .name "eyes in the back of your head"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featFeignWeakness ( groupAllFeats groupGeneralFeats )
+  .name "feign weakness"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featFistsOfIron ( groupAllFeats groupGeneralFeats )
+  .name "fists of iron"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featHoldTheLine ( groupAllFeats groupGeneralFeats )
+  .name "hold the line"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featImprovedOverrun ( groupAllFeats groupGeneralFeats )
+  .name "improved overrun"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featImprovedSunder ( groupAllFeats groupGeneralFeats )
+  .name "improved sunder"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featKnockDown ( groupAllFeats groupGeneralFeats )
+  .name "knock down"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featLightningFists ( groupAllFeats groupGeneralFeats )
+  .name "lightning fists"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featMantisLeap ( groupAllFeats groupGeneralFeats )
+  .name "mantis leap"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featMonkeyGrip ( groupAllFeats groupGeneralFeats )
+  .name "monkey grip"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featOffHandParry ( groupAllFeats groupGeneralFeats )
+  .name "off-hand parry"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featPainTouch ( groupAllFeats groupGeneralFeats )
+  .name "pain touch"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featPinShield ( groupAllFeats groupGeneralFeats )
+  .name "pin shield"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featPowerLunge ( groupAllFeats groupGeneralFeats )
+  .name "power lunge"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featProneAttack ( groupAllFeats groupGeneralFeats )
+  .name "prone attack"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featRapidReload ( groupAllFeats groupGeneralFeats )
+  .name "rapid reload"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featRemainConscious ( groupAllFeats groupGeneralFeats )
+  .name "remain conscious"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featSharpShooting ( groupAllFeats groupGeneralFeats )
+  .name "sharp shooting"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featShieldExpert ( groupAllFeats groupGeneralFeats )
+  .name "shield expert"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featSnatchArrows ( groupAllFeats groupGeneralFeats )
+  .name "snatch arrows"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featThrowAnything ( groupAllFeats groupGeneralFeats )
+  .name "throw anything"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+
+featZenArchery ( groupAllFeats groupGeneralFeats )
+  .name "zen archery"
+  .takeMultiple no
+  .sources sourcesSwordAndFist
+end
+

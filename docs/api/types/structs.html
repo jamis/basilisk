@@ -1,0 +1,109 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0 Structures</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+    <H1>Basilisk Structures</H1>
+
+    Below is a list of structures used in Basilisk.
+
+    <UL>
+      <LI><B><A NAME="BSKArray"></A>BSKArray</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskarray.html">BSKArray</A><BR>
+          Represents a dynamic array of <A HREF="#BSKValue">BSKValue</A> elements.
+      <LI><B><A NAME="BSKAttribute"></A>BSKAttribute</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskthing.html">BSKThing</A><BR>
+          Represents one attribute of a <A HREF="#BSKThing">BSKThing</A>.  Each
+          attribute has exactly one <A HREF="#BSKValue">BSKValue</A>.
+      <LI><B><A NAME="BSKAttributeDef"></A>BSKAttributeDef</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskatdef.html">BSKAttributeDef</A><BR>
+          Represents a definition of an attribute in the database.  Every attribute
+          to be used must be defined via one of these items and stored in the list
+          of attribute definitions in the database.
+      <LI><B><A NAME="BSKCategory"></A>BSKCategory</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskcategory.html">BSKCategory</A><BR>
+          Represents an ordered set of unique items that may be null, a <A HREF="#BSKThing">BSKThing</A>,
+          a <A HREF="#BSKCategory">BSKCategory</A>, or a <A HREF="#BSKRule">BSKRule</A>.
+      <LI><B><A NAME="BSKCategoryEntry"></A>BSKCategoryEntry</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskcategory.html">BSKCategory</A><BR>
+          Represents a single entry in a <A HREF="#BSKCategory">BSKCategory</A>.
+      <LI><B><A NAME="BSKCategoryMember"></A>BSKCategoryMember</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskcategory.html">BSKCategory</A><BR>
+          An abstract object that may represent either a <A HREF="#BSKThing">BSKThing</A>,
+          a <A HREF="#BSKCategory">BSKCategory</A>, or a <A HREF="#BSKRule">BSKRule</A>.
+      <LI><B><A NAME="BSKDatabase"></A>BSKDatabase</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskdb.html">BSKDatabase</A><BR>
+          Contains all items.
+      <LI><B><A NAME="BSKExecOpts"></A>BSKExecOpts</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          The options to pass to <A HREF="../functions/BSKExec.html">BSKExec</A>.  It's members are:
+          <UL>
+            <LI><A HREF="#BSKDatabase">BSKDatabase</A>* db - the database to use during execution.
+            <LI><A HREF="types.html#BSKUI32">BSKUI32</A> ruleId - the identifier of the rule to execute.
+            <LI><A HREF="types.html#BSKUI32">BSKUI32</A> parameterCount - the number of parameters being
+                passed.
+            <LI><A HREF="#BSKValue">BSKValue</A>** parameters - an array of 'parameterCount' values
+            <LI><A HREF="#BSKValue">BSKValue</A>* rval - the variable that will hold the return value of
+                the rule.
+            <LI><A HREF="types.html#BSKRuntimeErrorHandler">BSKRuntimeErrorHandler</A> errorHandler -
+                the callback routine that will handle runtime errors.
+            <LI><A HREF="types.html#BSKConsoleHook">BSKConsoleHook</A> console - the callback routine
+                that will handle console output.
+            <LI><A HREF="types.html#BSKNOTYPE">BSKNOTYPE</A>userData - application-specific data that
+                will be passed to the callback routines.
+            <LI><A HREF="types.html#BSKBOOL">BSKBOOL</A>* halt - pointer to a boolean that, if set to
+                BSKTRUE during script execution, will cause the VM to cease processing instructions.
+          </UL>
+      <LI><B><A NAME="BSKExecutionEnvironment"></A>BSKExecutionEnvironment</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          An object representing the current state of the virtual machine.
+      <LI><B><A NAME="BSKExecutionStackItem"></A>BSKExecutionStackItem</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          One item on the execution stack of the virtual machine.
+      <LI><B><A NAME="BSKIdentifierTable"></A>BSKIdentifierTable</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskidtbl.html">BSKIdentifierTable</A><BR>
+          A table of recognized identifiers.
+      <LI><B><A NAME="BSKIdentifierTableEntry"></A>BSKIdentifierTableEntry</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskidtbl.html">BSKIdentifierTable</A><BR>
+          One entry in the table of recognized identifiers.
+      <LI><B><A NAME="BSKLexer"></A>BSKLexer</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsklexer.html">BSKLexer</A><BR>
+          The scanner module (used by the <A HREF="../modules/bskparse.html">parser</A>).
+      <LI><B><A NAME="BSKRule"></A>BSKRule</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          A single database entity representing program logic.
+      <LI><B><A NAME="BSKStackFrame"></A>BSKStackFrame</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          One execution stack frame in the virtual machine, corresponding to a single rule.
+      <LI><B><A NAME="BSKStream"></A>BSKStream</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskstream.html">BSKStream</A><BR>
+          The I/O object.
+      <LI><B><A NAME="BSKSymbolTable"></A>BSKSymbolTable</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsksymtb.html">BSKSymbolTable</A><BR>
+          A table of recognized symbols.
+      <LI><B><A NAME="BSKSymbolTableEntry"></A>BSKSymbolTableEntry</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsksymtb.html">BSKSymbolTable</A><BR>
+          One entry in the table of recognized symbols.
+      <LI><B><A NAME="BSKThing"></A>BSKThing</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskthing.html">BSKThing</A><BR>
+          A single database entity representing program data.
+      <LI><B><A NAME="BSKToken"></A>BSKToken</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          A scanned token.
+      <LI><B><A NAME="BSKUnitDefinition"></A>BSKUnitDefinition</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskutdef.html">BSKUnitDefinition</A><BR>
+          One definition of a unit in the database, which may be relative to another
+          defined unit.
+      <LI><B><A NAME="BSKValue"></A>BSKValue</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          An object representing any of the possible values in the database.
+      <LI><B><A NAME="BSKVariable"></A>BSKVariable</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvar.html">BSKVariable</A><BR>
+          A temporary storage area used during rule execution.
+    </UL>
+    <A HREF="../index.html">Return to the API</A>
+    <HR>
+    <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)</I>
+  </BODY>
+</HTML>

@@ -1,0 +1,38 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKSetValueNumberU</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKSetValueNumberU</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+
+<PRE>
+void BSKSetValueNumberU( BSKValue* value, BSKFLOAT number, BSKUI32 units );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+	  <LI><i>value</i> - the value to set the number in.
+		<LI><i>number</i> - the number to set.
+		<LI><i>units</i> the identifier of the units to associate with the number, or
+		    0 to not associate any units with the number.
+  </UL>
+
+  <P>
+
+  <B>Description:</B>
+	Same as <A HREF="BSKSetValueNumber.html">BSKSetValueNumber</A>, but also sets
+	the units of the number (the <A HREF="../const/constants.html#VF_UNITS">VF_UNITS</A>
+	flag is set, in this case).
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

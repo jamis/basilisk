@@ -1,0 +1,36 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKDereferenceValue</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKDereferenceValue</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+
+<PRE>
+void BSKDereferenceValue( BSKValue* dest, BSKValue* value );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>dest</i> - the BSKValue to recieve the contents of 'value'.
+    <LI><i>value</i> - the value to dereference and/or copy.
+  </UL>
+
+  <P>
+
+  <B>Description:</B>
+  The value 'value' is dereferenced into 'dest'.  If the value is not
+  VT_DEREFERENCABLE, then a simple copy (<A HREF="BSKCopyValue.html">BSKCopyValue</A>)
+  is performed, otherwise the BSKValue that 'value' contains to is copied into dest.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

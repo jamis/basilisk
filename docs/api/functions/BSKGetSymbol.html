@@ -1,0 +1,39 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKGetSymbol</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKGetSymbol</H1>
+
+  <B>Module:</B> <A HREF="../modules/bsksymtb.html">BSKSymbolTable</A><BR>
+
+<PRE>
+BSKSymbolTableEntry* BSKGetSymbol( BSKSymbolTable* table, BSKUI32 id );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>table</i> - the symbol table to query.
+    <LI><i>id</i> - the identifier to look up.
+  </UL>
+
+  <B>Returns:</B> the symbol table entry for the given identifier, or 0
+  if no such symbol is defined.
+
+  <P>
+
+  <B>Description:</B>
+  Retrieves the symbol table entry for the given identifier, if one
+  exists.  If no such symbol exists in the table, this routine returns
+  null (0).
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

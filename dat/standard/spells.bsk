@@ -1,0 +1,3536 @@
+template ( groupAllSpellSchools ) { name }
+  schAbjuration { "Abjuration" }
+  schConjuration { "Conjuration" }
+  schDivination { "Divination" }
+  schEnchantment { "Enchantment" }
+  schEvocation { "Evocation" }
+  schIllusion { "Illusion" }
+  schNecromancy { "Necromancy" }
+  schTransmutation { "Transmutation" }
+  schUniversal { "Universal" }
+end
+
+template ( groupAllSpellSubschools ) { name }
+  subschCalling { "Calling" }
+  subschCharm { "Charm" }
+  subschCompulsion { "Compulsion" }
+  subschCreation { "Creation" }
+  subschFigment { "Figment" }
+  subschGlamer { "Glamer" }
+  subschHealing { "Healing" }
+  subschPattern { "Pattern" }
+  subschPhantasm { "Phantasm" }
+  subschShadow { "Shadow" }
+  subschSummoning { "Summoning" }
+end
+
+template ( groupAllDescriptors ) { name }
+  descAcid { "Acid" }
+  descAir { "Air" }
+  descChaotic { "Chaotic" }
+  descCold { "Cold" }
+  descDarkness { "Darkness" }
+  descDeath { "Death" }
+  descEarth { "Earth" }
+  descElectricity { "Electricity" }
+  descEvil { "Evil" }
+  descFear { "Fear" }
+  descFire { "Fire" }
+  descForce { "Force" }
+  descGood { "Good" }
+  descLanguageDependent { "Language-Dependent" }
+  descLawful { "Lawful" }
+  descLight { "Light" }
+  descMindAffecting { "Mind-Affecting" }
+  descSeeText { "See text" }
+  descSonic { "Sonic" }
+  descTeleportation { "Teleportation" }
+  descWater { "Water" }
+end
+
+template ( groupAllSpells ) { name school subschool descriptors sources }
+  spellAcidFog { "Acid Fog" schConjuration subschCreation ( descAcid ) sourcesCoreRules }
+  spellAid { "Aid" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellAirWalk { "Air Walk" schTransmutation $ $ sourcesCoreRules }
+  spellAlarm { "Alarm" schAbjuration $ $ sourcesCoreRules }
+  spellAlterSelf { "Alter Self" schTransmutation $ $ sourcesCoreRules }
+  spellAnalyzeDweomer { "Analyze Dweomer" schDivination $ $ sourcesCoreRules }
+  spellAnimalFriendship { "Animal Friendship" schEnchantment subschCharm ( descMindAffecting ) sourcesCoreRules }
+  spellAnimalGrowth { "Animal Growth" schTransmutation $ $ sourcesCoreRules }
+  spellAnimalMessenger { "Animal Messenger" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellAnimalShapes { "Animal Shapes" schTransmutation $ $ sourcesCoreRules }
+  spellAnimalTrance { "Animal Trance" schEnchantment subschCompulsion ( descMindAffecting descSonic ) sourcesCoreRules }
+  spellAnimateDead { "Animate Dead" schNecromancy $( descEvil ) sourcesCoreRules }
+  spellAnimateObjects { "Animate Objects" schTransmutation $ $ sourcesCoreRules }
+  spellAnimateRope { "Animate Rope" schTransmutation $ $ sourcesCoreRules }
+  spellAntilifeShell { "Antilife Shell" schAbjuration $ $ sourcesCoreRules }
+  spellAntimagicField { "Antimagic Field" schAbjuration $ $ sourcesCoreRules }
+  spellAntipathy { "Antipathy" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellAntiplantShell { "Antiplant Shell" schAbjuration $ $ sourcesCoreRules }
+  spellArcaneEye { "Arcane Eye" schDivination $ $ sourcesCoreRules }
+  spellArcaneLock { "Arcane Lock" schAbjuration $ $ sourcesCoreRules }
+  spellArcaneMark { "Arcane Mark" schUniversal $ $ sourcesCoreRules }
+  spellAstralProjection { "Astral Projection" schNecromancy $ $ sourcesCoreRules }
+  spellAtonement { "Atonement" schAbjuration $ $ sourcesCoreRules }
+  spellAugury { "Augury" schDivination $ $ sourcesCoreRules }
+  spellAwaken { "Awaken" schTransmutation $ $ sourcesCoreRules }
+  spellBane { "Bane" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellBanishment { "Banishment" schAbjuration $ $ sourcesCoreRules }
+  spellBarkskin { "Barkskin" schTransmutation $ $ sourcesCoreRules }
+  spellBestowCurse { "Bestow Curse" schTransmutation $ $ sourcesCoreRules }
+  spellBigbySClenchedFist { "Bigby's Clenched Fist" schEvocation $ $ sourcesCoreRules }
+  spellBigbySCrushingHand { "Bigby's Crushing Hand" schEvocation $ $ sourcesCoreRules }
+  spellBigbySForcefulHand { "Bigby's Forceful Hand" schEvocation $ $ sourcesCoreRules }
+  spellBigbySGraspingHand { "Bigby's Grasping Hand" schEvocation $ $ sourcesCoreRules }
+  spellBigbySInterposingHand { "Bigby's Interposing Hand" schEvocation $ $ sourcesCoreRules }
+  spellBinding { "Binding" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellBladeBarrier { "Blade Barrier" schEvocation $ $ sourcesCoreRules }
+  spellBlasphemy { "Blasphemy" schEvocation $( descEvil descSonic ) sourcesCoreRules }
+  spellBless { "Bless" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellBlessWater { "Bless Water" schTransmutation $( descGood ) sourcesCoreRules }
+  spellBlessWeapon { "Bless Weapon" schTransmutation $ $ sourcesCoreRules }
+  spellBlindnessDeafness { "Blindness/Deafness" schTransmutation $ $ sourcesCoreRules }
+  spellBlink { "Blink" schTransmutation $ $ sourcesCoreRules }
+  spellBlur { "Blur" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellBreakEnchantment { "Break Enchantment" schAbjuration $ $ sourcesCoreRules }
+  spellBullSStrength { "Bull's Strength" schTransmutation $ $ sourcesCoreRules }
+  spellBurningHands { "Burning Hands" schTransmutation $( descFire ) sourcesCoreRules }
+  spellCallLightning { "Call Lightning" schEvocation $( descElectricity ) sourcesCoreRules }
+  spellCalmAnimals { "Calm Animals" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellCalmEmotions { "Calm Emotions" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellCatSGrace { "Cat's Grace" schTransmutation $ $ sourcesCoreRules }
+  spellCauseFear { "Cause Fear" schNecromancy $( descFear descMindAffecting ) sourcesCoreRules }
+  spellChainLightning { "Chain Lightning" schEvocation $( descElectricity ) sourcesCoreRules }
+  spellChangeSelf { "Change Self" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellChangestaff { "Changestaff" schTransmutation $ $ sourcesCoreRules }
+  spellChaosHammer { "Chaos Hammer" schEvocation $( descChaotic ) sourcesCoreRules }
+  spellCharmMonster { "Charm Monster" schEnchantment subschCharm ( descMindAffecting ) sourcesCoreRules }
+  spellCharmPerson { "Charm Person" schEnchantment subschCharm ( descMindAffecting ) sourcesCoreRules }
+  spellCharmPersonOrAnimal { "Charm Person or Animal" schEnchantment subschCharm ( descMindAffecting ) sourcesCoreRules }
+  spellChillMetal { "Chill Metal" schTransmutation $( descCold ) sourcesCoreRules }
+  spellChillTouch { "Chill Touch" schNecromancy $ $ sourcesCoreRules }
+  spellCircleOfDeath { "Circle of Death" schNecromancy $( descDeath ) sourcesCoreRules }
+  spellCircleOfDoom { "Circle of Doom" schNecromancy $ $ sourcesCoreRules }
+  spellClairaudienceClairvoyance { "Clairaudience/Clairvoyance" schDivination $ $ sourcesCoreRules }
+  spellCloakOfChaos { "Cloak of Chaos" schAbjuration $( descChaotic ) sourcesCoreRules }
+  spellClone { "Clone" schNecromancy $ $ sourcesCoreRules }
+  spellCloudkill { "Cloudkill" schConjuration subschCreation  $ sourcesCoreRules }
+  spellColorSpray { "Color Spray" schIllusion subschPattern ( descMindAffecting ) sourcesCoreRules }
+  spellCommand { "Command" schEnchantment subschCompulsion ( descLanguageDependent descMindAffecting ) sourcesCoreRules }
+  spellCommandPlants { "Command Plants" schEnchantment subschCharm ( descMindAffecting ) sourcesCoreRules }
+  spellCommune { "Commune" schDivination $ $ sourcesCoreRules }
+  spellCommuneWithNature { "Commune with Nature" schDivination $ $ sourcesCoreRules }
+  spellComprehendLanguages { "Comprehend Languages" schDivination $ $ sourcesCoreRules }
+  spellConeOfCold { "Cone of Cold" schEvocation $( descCold ) sourcesCoreRules }
+  spellConfusion { "Confusion" schEnchantment $( descMindAffecting ) sourcesCoreRules }
+  spellConsecrate { "Consecrate" schEvocation $ $ sourcesCoreRules }
+  spellContactOtherPlane { "Contact Other Plane" schDivination $ $ sourcesCoreRules }
+  spellContagion { "Contagion" schNecromancy $ $ sourcesCoreRules }
+  spellContingency { "Contingency" schEvocation $ $ sourcesCoreRules }
+  spellContinualFlame { "Continual Flame" schEvocation $( descLight ) sourcesCoreRules }
+  spellControlPlants { "Control Plants" schTransmutation $ $ sourcesCoreRules }
+  spellControlUndead { "Control Undead" schNecromancy $ $ sourcesCoreRules }
+  spellControlWater { "Control Water" schTransmutation $ $ sourcesCoreRules }
+  spellControlWeather { "Control Weather" schTransmutation $ $ sourcesCoreRules }
+  spellControlWinds { "Control Winds" schTransmutation $ $ sourcesCoreRules }
+  spellCreateFoodAndWater { "Create Food and Water" schConjuration subschCreation  $ sourcesCoreRules }
+  spellCreateGreaterUndead { "Create Greater Undead" schNecromancy $( descEvil ) sourcesCoreRules }
+  spellCreateUndead { "Create Undead" schNecromancy $( descEvil ) sourcesCoreRules }
+  spellCreateWater { "Create Water" schConjuration subschCreation  $ sourcesCoreRules }
+  spellCreepingDoom { "Creeping Doom" schConjuration subschSummoning  $ sourcesCoreRules }
+  spellCureCriticalWounds { "Cure Critical Wounds" schConjuration subschHealing  $ sourcesCoreRules }
+  spellCureLightWounds { "Cure Light Wounds" schConjuration subschHealing  $ sourcesCoreRules }
+  spellCureMinorWounds { "Cure Minor Wounds" schConjuration subschHealing  $ sourcesCoreRules }
+  spellCureModerateWounds { "Cure Moderate Wounds" schConjuration subschHealing  $ sourcesCoreRules }
+  spellCureSeriousWounds { "Cure Serious Wounds" schConjuration subschHealing  $ sourcesCoreRules }
+  spellCurseWater { "Curse Water" schTransmutation $( descEvil ) sourcesCoreRules }
+  spellDancingLights { "Dancing Lights" schEvocation $( descLight ) sourcesCoreRules }
+  spellDarkness { "Darkness" schEvocation $( descDarkness ) sourcesCoreRules }
+  spellDarkvision { "Darkvision" schTransmutation $ $ sourcesCoreRules }
+  spellDaylight { "Daylight" schEvocation $( descLight ) sourcesCoreRules }
+  spellDaze { "Daze" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellDeathKnell { "Death Knell" schNecromancy $( descDeath descEvil ) sourcesCoreRules }
+  spellDeathWard { "Death Ward" schNecromancy $ $ sourcesCoreRules }
+  spellDeathwatch { "Deathwatch" schNecromancy $ $ sourcesCoreRules }
+  spellDeeperDarkness { "Deeper Darkness" schEvocation $( descDarkness ) sourcesCoreRules }
+  spellDelayPoison { "Delay Poison" schConjuration subschHealing  $ sourcesCoreRules }
+  spellDelayedBlastFireball { "Delayed Blast Fireball" schEvocation $( descFire ) sourcesCoreRules }
+  spellDemand { "Demand" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellDesecrate { "Desecrate" schEvocation $ $ sourcesCoreRules }
+  spellDestruction { "Destruction" schNecromancy $( descDeath ) sourcesCoreRules }
+  spellDetectAnimalsOrPlants { "Detect Animals or Plants" schDivination $ $ sourcesCoreRules }
+  spellDetectChaos { "Detect Chaos" schDivination $ $ sourcesCoreRules }
+  spellDetectEvil { "Detect Evil" schDivination $ $ sourcesCoreRules }
+  spellDetectGood { "Detect Good" schDivination $ $ sourcesCoreRules }
+  spellDetectLaw { "Detect Law" schDivination $ $ sourcesCoreRules }
+  spellDetectMagic { "Detect Magic" schUniversal $ $ sourcesCoreRules }
+  spellDetectPoison { "Detect Poison" schDivination $ $ sourcesCoreRules }
+  spellDetectScrying { "Detect Scrying" schDivination $ $ sourcesCoreRules }
+  spellDetectSecretDoors { "Detect Secret Doors" schDivination $ $ sourcesCoreRules }
+  spellDetectSnaresAndPits { "Detect Snares and Pits" schDivination $ $ sourcesCoreRules }
+  spellDetectThoughts { "Detect Thoughts" schDivination $( descMindAffecting ) sourcesCoreRules }
+  spellDetectUndead { "Detect Undead" schDivination $ $ sourcesCoreRules }
+  spellDictum { "Dictum" schEvocation $( descLawful descSonic ) sourcesCoreRules }
+  spellDimensionDoor { "Dimension Door" schTransmutation $( descTeleportation ) sourcesCoreRules }
+  spellDimensionalAnchor { "Dimensional Anchor" schAbjuration $ $ sourcesCoreRules }
+  spellDiminishPlants { "Diminish Plants" schTransmutation $ $ sourcesCoreRules }
+  spellDiscernLies { "Discern Lies" schDivination $ $ sourcesCoreRules }
+  spellDiscernLocation { "Discern Location" schDivination $ $ sourcesCoreRules }
+  spellDisintegrate { "Disintegrate" schTransmutation $ $ sourcesCoreRules }
+  spellDismissal { "Dismissal" schAbjuration $ $ sourcesCoreRules }
+  spellDispelChaos { "Dispel Chaos" schAbjuration $( descLawful ) sourcesCoreRules }
+  spellDispelEvil { "Dispel Evil" schAbjuration $( descGood ) sourcesCoreRules }
+  spellDispelGood { "Dispel Good" schAbjuration $( descEvil ) sourcesCoreRules }
+  spellDispelLaw { "Dispel Law" schAbjuration $( descChaotic ) sourcesCoreRules }
+  spellDispelMagic { "Dispel Magic" schAbjuration $ $ sourcesCoreRules }
+  spellDisplacement { "Displacement" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellDisruptUndead { "Disrupt Undead" schNecromancy $ $ sourcesCoreRules }
+  spellDivination { "Divination" schDivination $ $ sourcesCoreRules }
+  spellDivineFavor { "Divine Favor" schEvocation $ $ sourcesCoreRules }
+  spellDivinePower { "Divine Power" schEvocation $ $ sourcesCoreRules }
+  spellDominateAnimal { "Dominate Animal" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellDominateMonster { "Dominate Monster" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellDominatePerson { "Dominate Person" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellDoom { "Doom" schEnchantment subschCompulsion ( descFear descMindAffecting ) sourcesCoreRules }
+  spellDrawmijSInstantSummons { "Drawmij's Instant Summons" schConjuration subschSummoning  $ sourcesCoreRules }
+  spellDream { "Dream" schIllusion subschPhantasm ( descMindAffecting ) sourcesCoreRules }
+  spellEarthquake { "Earthquake" schEvocation $ $ sourcesCoreRules }
+  spellElementalSwarm { "Elemental Swarm" schConjuration subschSummoning ( descSeeText ) sourcesCoreRules }
+  spellEmotion { "Emotion" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellEndurance { "Endurance" schTransmutation $ $ sourcesCoreRules }
+  spellEndureElements { "Endure Elements" schAbjuration $ $ sourcesCoreRules }
+  spellEnergyDrain { "Energy Drain" schNecromancy $ $ sourcesCoreRules }
+  spellEnervation { "Enervation" schNecromancy $ $ sourcesCoreRules }
+  spellEnlarge { "Enlarge" schTransmutation $ $ sourcesCoreRules }
+  spellEntangle { "Entangle" schTransmutation $ $ sourcesCoreRules }
+  spellEnthrall { "Enthrall" schEnchantment subschCharm ( descLanguageDependent descMindAffecting descSonic ) sourcesCoreRules }
+  spellEntropicShield { "Entropic Shield" schAbjuration $ $ sourcesCoreRules }
+  spellErase { "Erase" schTransmutation $ $ sourcesCoreRules }
+  spellEtherealJaunt { "Ethereal Jaunt" schTransmutation $ $ sourcesCoreRules }
+  spellEtherealness { "Etherealness" schTransmutation $ $ sourcesCoreRules }
+  spellEvardSBlackTentacles { "Evard's Black Tentacles" schConjuration subschCreation  $ sourcesCoreRules }
+  spellExpeditiousRetreat { "Expeditious Retreat" schTransmutation $ $ sourcesCoreRules }
+  spellExplosiveRunes { "Explosive Runes" schAbjuration $( descForce ) sourcesCoreRules }
+  spellEyebite { "Eyebite" schTransmutation $( descSeeText ) sourcesCoreRules }
+  spellFabricate { "Fabricate" schTransmutation $ $ sourcesCoreRules }
+  spellFaerieFire { "Faerie Fire" schEvocation $ $ sourcesCoreRules }
+  spellFalseVision { "False Vision" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellFear { "Fear" schNecromancy $( descFear descMindAffecting ) sourcesCoreRules }
+  spellFeatherFall { "Feather Fall" schTransmutation $ $ sourcesCoreRules }
+  spellFeeblemind { "Feeblemind" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellFindThePath { "Find the Path" schDivination $ $ sourcesCoreRules }
+  spellFindTraps { "Find Traps" schDivination $ $ sourcesCoreRules }
+  spellFingerOfDeath { "Finger of Death" schNecromancy $( descDeath ) sourcesCoreRules }
+  spellFireSeeds { "Fire Seeds" schConjuration subschCreation ( descFire ) sourcesCoreRules }
+  spellFireShield { "Fire Shield" schEvocation $( descCold descFire ) sourcesCoreRules }
+  spellFireStorm { "Fire Storm" schEvocation $( descFire ) sourcesCoreRules }
+  spellFireTrap { "Fire Trap" schAbjuration $( descFire ) sourcesCoreRules }
+  spellFireball { "Fireball" schEvocation $( descFire ) sourcesCoreRules }
+  spellFlameArrow { "Flame Arrow" schConjuration subschCreation ( descFire ) sourcesCoreRules }
+  spellFlameBlade { "Flame Blade" schEvocation $( descFire ) sourcesCoreRules }
+  spellFlameStrike { "Flame Strike" schEvocation $( descFire ) sourcesCoreRules }
+  spellFlamingSphere { "Flaming Sphere" schEvocation $( descFire ) sourcesCoreRules }
+  spellFlare { "Flare" schEvocation $( descLight ) sourcesCoreRules }
+  spellFleshToStone { "Flesh to Stone" schTransmutation $ $ sourcesCoreRules }
+  spellFly { "Fly" schTransmutation $ $ sourcesCoreRules }
+  spellFogCloud { "Fog Cloud" schConjuration subschCreation  $ sourcesCoreRules }
+  spellForbiddance { "Forbiddance" schAbjuration $ $ sourcesCoreRules }
+  spellForcecage { "Forcecage" schEvocation $( descForce ) sourcesCoreRules }
+  spellForesight { "Foresight" schDivination $ $ sourcesCoreRules }
+  spellFreedom { "Freedom" schAbjuration $ $ sourcesCoreRules }
+  spellFreedomOfMovement { "Freedom of Movement" schAbjuration $ $ sourcesCoreRules }
+  spellGaseousForm { "Gaseous Form" schTransmutation $ $ sourcesCoreRules }
+  spellGate { "Gate" schConjuration subschCreation  $ sourcesCoreRules }
+  spellGeasQuest { "Geas/Quest" schEnchantment subschCompulsion ( descLanguageDependent descMindAffecting ) sourcesCoreRules }
+  spellGentleRepose { "Gentle Repose" schNecromancy $ $ sourcesCoreRules }
+  spellGhostSound { "Ghost Sound" schIllusion subschFigment  $ sourcesCoreRules }
+  spellGhoulTouch { "Ghoul Touch" schNecromancy $ $ sourcesCoreRules }
+  spellGiantVermin { "Giant Vermin" schTransmutation $ $ sourcesCoreRules }
+  spellGlitterdust { "Glitterdust" schConjuration subschCreation  $ sourcesCoreRules }
+  spellGlobeOfInvulnerability { "Globe of Invulnerability" schAbjuration $ $ sourcesCoreRules }
+  spellGlyphOfWarding { "Glyph of Warding" schAbjuration $ $ sourcesCoreRules }
+  spellGoodberry { "Goodberry" schTransmutation $ $ sourcesCoreRules }
+  spellGrease { "Grease" schConjuration subschCreation  $ sourcesCoreRules }
+  spellGreaterCommand { "Greater Command" schEnchantment subschCompulsion ( descLanguageDependent descMindAffecting ) sourcesCoreRules }
+  spellGreaterDispelling { "Greater Dispelling" schAbjuration $ $ sourcesCoreRules }
+  spellGreaterGlyphOfWarding { "Greater Glyph of Warding" schAbjuration $ $ sourcesCoreRules }
+  spellGreaterMagicFang { "Greater Magic Fang" schTransmutation $ $ sourcesCoreRules }
+  spellGreaterMagicWeapon { "Greater Magic Weapon" schTransmutation $ $ sourcesCoreRules }
+  spellGreaterPlanarAlly { "Greater Planar Ally" schConjuration subschCalling ( descSeeText ) sourcesCoreRules }
+  spellGreaterPlanarBinding { "Greater Planar Binding" schConjuration subschCalling ( descSeeText ) sourcesCoreRules }
+  spellGreaterRestoration { "Greater Restoration" schNecromancy $ $ sourcesCoreRules }
+  spellGreaterScrying { "Greater Scrying" schDivination $ $ sourcesCoreRules }
+  spellGreaterShadowConjuration { "Greater Shadow Conjuration" schIllusion subschShadow  $ sourcesCoreRules }
+  spellGreaterShadowEvocation { "Greater Shadow Evocation" schIllusion subschShadow  $ sourcesCoreRules }
+  spellGuardsAndWards { "Guards and Wards" schAbjuration $ $ sourcesCoreRules }
+  spellGuidance { "Guidance" schDivination $ $ sourcesCoreRules }
+  spellGustOfWind { "Gust of Wind" schEvocation $ $ sourcesCoreRules }
+  spellHallow { "Hallow" schEvocation $( descGood ) sourcesCoreRules }
+  spellHallucinatoryTerrain { "Hallucinatory Terrain" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellHaltUndead { "Halt Undead" schNecromancy $ $ sourcesCoreRules }
+  spellHarm { "Harm" schNecromancy $ $ sourcesCoreRules }
+  spellHaste { "Haste" schTransmutation $ $ sourcesCoreRules }
+  spellHeal { "Heal" schConjuration subschHealing  $ sourcesCoreRules }
+  spellHealMount { "Heal Mount" schConjuration subschHealing  $ sourcesCoreRules }
+  spellHealingCircle { "Healing Circle" schConjuration subschHealing  $ sourcesCoreRules }
+  spellHeatMetal { "Heat Metal" schTransmutation $ $ sourcesCoreRules }
+  spellHelpingHand { "Helping Hand" schEvocation $ $ sourcesCoreRules }
+  spellHeroesFeast { "Heroes' Feast" schEvocation $ $ sourcesCoreRules }
+  spellHoldAnimal { "Hold Animal" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellHoldMonster { "Hold Monster" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellHoldPerson { "Hold Person" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellHoldPortal { "Hold Portal" schAbjuration $ $ sourcesCoreRules }
+  spellHolyAura { "Holy Aura" schAbjuration $( descGood ) sourcesCoreRules }
+  spellHolySmite { "Holy Smite" schEvocation $( descGood ) sourcesCoreRules }
+  spellHolySword { "Holy Sword" schEvocation $ $ sourcesCoreRules }
+  spellHolyWord { "Holy Word" schEvocation $( descGood descSonic ) sourcesCoreRules }
+  spellHorridWilting { "Horrid Wilting" schNecromancy $ $ sourcesCoreRules }
+  spellHypnoticPattern { "Hypnotic Pattern" schIllusion subschPattern ( descMindAffecting ) sourcesCoreRules }
+  spellHypnotism { "Hypnotism" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellIceStorm { "Ice Storm" schEvocation $( descCold ) sourcesCoreRules }
+  spellIdentify { "Identify" schDivination $ $ sourcesCoreRules }
+  spellIllusoryScript { "Illusory Script" schIllusion subschPhantasm ( descMindAffecting ) sourcesCoreRules }
+  spellIllusoryWall { "Illusory Wall" schIllusion subschFigment  $ sourcesCoreRules }
+  spellImbueWithSpellAbility { "Imbue With Spell Ability" schEvocation $ $ sourcesCoreRules }
+  spellImplosion { "Implosion" schEvocation $ $ sourcesCoreRules }
+  spellImprisonment { "Imprisonment" schAbjuration $ $ sourcesCoreRules }
+  spellImprovedInvisibility { "Improved Invisibility" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellIncendiaryCloud { "Incendiary Cloud" schConjuration subschCreation ( descFire ) sourcesCoreRules }
+  spellInflictCriticalWounds { "Inflict Critical Wounds" schNecromancy $ $ sourcesCoreRules }
+  spellInflictLightWounds { "Inflict Light Wounds" schNecromancy $ $ sourcesCoreRules }
+  spellInflictMinorWounds { "Inflict Minor Wounds" schNecromancy $ $ sourcesCoreRules }
+  spellInflictModerateWounds { "Inflict Moderate Wounds" schNecromancy $ $ sourcesCoreRules }
+  spellInflictSeriousWounds { "Inflict Serious Wounds" schNecromancy $ $ sourcesCoreRules }
+  spellInsanity { "Insanity" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellInsectPlague { "Insect Plague" schConjuration subschSummoning ( descSeeText ) sourcesCoreRules }
+  spellInvisibility { "Invisibility" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellInvisibilityPurge { "Invisibility Purge" schEvocation $ $ sourcesCoreRules }
+  spellInvisibilitySphere { "Invisibility Sphere" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellInvisibilityToAnimals { "Invisibility to Animals" schAbjuration $ $ sourcesCoreRules }
+  spellInvisibilityToUndead { "Invisibility to Undead" schAbjuration $ $ sourcesCoreRules }
+  spellIronBody { "Iron Body" schTransmutation $ $ sourcesCoreRules }
+  spellIronwood { "Ironwood" schTransmutation $ $ sourcesCoreRules }
+  spellJump { "Jump" schTransmutation $ $ sourcesCoreRules }
+  spellKeenEdge { "Keen Edge" schTransmutation $ $ sourcesCoreRules }
+  spellKnock { "Knock" schTransmutation $ $ sourcesCoreRules }
+  spellKnowDirection { "Know Direction" schDivination $ $ sourcesCoreRules }
+  spellLegendLore { "Legend Lore" schDivination $ $ sourcesCoreRules }
+  spellLeomundSSecretChest { "Leomund's Secret Chest" schConjuration subschSummoning  $ sourcesCoreRules }
+  spellLeomundSSecureShelter { "Leomund's Secure Shelter" schConjuration subschCreation  $ sourcesCoreRules }
+  spellLeomundSTinyHut { "Leomund's Tiny Hut" schEvocation $( descForce ) sourcesCoreRules }
+  spellLeomundSTrap { "Leomund's Trap" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellLesserGeas { "Lesser Geas" schEnchantment subschCompulsion ( descLanguageDependent descMindAffecting ) sourcesCoreRules }
+  spellLesserPlanarAlly { "Lesser Planar Ally" schConjuration subschCalling ( descSeeText ) sourcesCoreRules }
+  spellLesserPlanarBinding { "Lesser Planar Binding" schConjuration subschCalling ( descSeeText ) sourcesCoreRules }
+  spellLesserRestoration { "Lesser Restoration" schConjuration subschHealing  $ sourcesCoreRules }
+  spellLevitate { "Levitate" schTransmutation $ $ sourcesCoreRules }
+  spellLight { "Light" schEvocation $( descLight ) sourcesCoreRules }
+  spellLightningBolt { "Lightning Bolt" schEvocation $( descElectricity ) sourcesCoreRules }
+  spellLimitedWish { "Limited Wish" schUniversal $ $ sourcesCoreRules }
+  spellLiveoak { "Liveoak" schTransmutation $ $ sourcesCoreRules }
+  spellLocateCreature { "Locate Creature" schDivination $ $ sourcesCoreRules }
+  spellLocateObject { "Locate Object" schDivination $ $ sourcesCoreRules }
+  spellMageArmor { "Mage Armor" schConjuration subschCreation ( descForce ) sourcesCoreRules }
+  spellMageHand { "Mage Hand" schTransmutation $ $ sourcesCoreRules }
+  spellMagicCircleAgainstChaos { "Magic Circle against Chaos" schAbjuration $( descLawful ) sourcesCoreRules }
+  spellMagicCircleAgainstEvil { "Magic Circle against Evil" schAbjuration $( descGood ) sourcesCoreRules }
+  spellMagicCircleAgainstGood { "Magic Circle against Good" schAbjuration $( descEvil ) sourcesCoreRules }
+  spellMagicCircleAgainstLaw { "Magic Circle against Law" schAbjuration $( descChaotic ) sourcesCoreRules }
+  spellMagicFang { "Magic Fang" schTransmutation $ $ sourcesCoreRules }
+  spellMagicJar { "Magic Jar" schNecromancy $ $ sourcesCoreRules }
+  spellMagicMissile { "Magic Missile" schEvocation $( descForce ) sourcesCoreRules }
+  spellMagicMouth { "Magic Mouth" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellMagicStone { "Magic Stone" schTransmutation $ $ sourcesCoreRules }
+  spellMagicVestment { "Magic Vestment" schTransmutation $ $ sourcesCoreRules }
+  spellMagicWeapon { "Magic Weapon" schTransmutation $ $ sourcesCoreRules }
+  spellMajorCreation { "Major Creation" schConjuration subschCreation  $ sourcesCoreRules }
+  spellMajorImage { "Major Image" schIllusion subschFigment  $ sourcesCoreRules }
+  spellMakeWhole { "Make Whole" schTransmutation $ $ sourcesCoreRules }
+  spellMarkOfJustice { "Mark of Justice" schTransmutation $ $ sourcesCoreRules }
+  spellMassCharm { "Mass Charm" schEnchantment subschCharm ( descMindAffecting ) sourcesCoreRules }
+  spellMassHaste { "Mass Haste" schTransmutation $ $ sourcesCoreRules }
+  spellMassHeal { "Mass Heal" schConjuration subschHealing  $ sourcesCoreRules }
+  spellMassInvisibility { "Mass Invisibility" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellMassSuggestion { "Mass Suggestion" schEnchantment subschCompulsion ( descLanguageDependent descMindAffecting ) sourcesCoreRules }
+  spellMaze { "Maze" schConjuration subschCreation ( descForce ) sourcesCoreRules }
+  spellMeldIntoStone { "Meld into Stone" schTransmutation $ $ sourcesCoreRules }
+  spellMelfSAcidArrow { "Melf's Acid Arrow" schConjuration subschCreation ( descAcid ) sourcesCoreRules }
+  spellMending { "Mending" schTransmutation $ $ sourcesCoreRules }
+  spellMessage { "Message" schTransmutation $( descLanguageDependent ) sourcesCoreRules }
+  spellMeteorSwarm { "Meteor Swarm" schEvocation $( descFire ) sourcesCoreRules }
+  spellMindBlank { "Mind Blank" schAbjuration $ $ sourcesCoreRules }
+  spellMindFog { "Mind Fog" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellMinorCreation { "Minor Creation" schConjuration subschCreation  $ sourcesCoreRules }
+  spellMinorGlobeOfInvulnerability { "Minor Globe of Invulnerability" schAbjuration $ $ sourcesCoreRules }
+  spellMinorImage { "Minor Image" schIllusion subschFigment  $ sourcesCoreRules }
+  spellMiracle { "Miracle" schEvocation $ $ sourcesCoreRules }
+  spellMirageArcana { "Mirage Arcana" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellMirrorImage { "Mirror Image" schIllusion subschFigment  $ sourcesCoreRules }
+  spellMisdirection { "Misdirection" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellMislead { "Mislead" schIllusion subschFigment  $ sourcesCoreRules }
+  spellModifyMemory { "Modify Memory" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellMordenkainenSDisjunction { "Mordenkainen's Disjunction" schAbjuration $ $ sourcesCoreRules }
+  spellMordenkainenSFaithfulHound { "Mordenkainen's Faithful Hound" schConjuration subschCreation  $ sourcesCoreRules }
+  spellMordenkainenSLucubration { "Mordenkainen's Lucubration" schTransmutation $ $ sourcesCoreRules }
+  spellMordenkainenSMagnificentMansion { "Mordenkainen's Magnificent Mansion" schConjuration subschCreation  $ sourcesCoreRules }
+  spellMordenkainenSSword { "Mordenkainen's Sword" schEvocation $( descForce ) sourcesCoreRules }
+  spellMount { "Mount" schConjuration subschSummoning  $ sourcesCoreRules }
+  spellMoveEarth { "Move Earth" schTransmutation $ $ sourcesCoreRules }
+  spellNegativeEnergyProtection { "Negative Energy Protection" schAbjuration $ $ sourcesCoreRules }
+  spellNeutralizePoison { "Neutralize Poison" schConjuration subschHealing  $ sourcesCoreRules }
+  spellNightmare { "Nightmare" schIllusion subschPhantasm ( descEvil descMindAffecting ) sourcesCoreRules }
+  spellNondetection { "Nondetection" schAbjuration $ $ sourcesCoreRules }
+  spellNystulSMagicAura { "Nystul's Magic Aura" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellNystulSUndetectableAura { "Nystul's Undetectable Aura" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellObscureObject { "Obscure Object" schAbjuration $ $ sourcesCoreRules }
+  spellObscuringMist { "Obscuring Mist" schConjuration subschCreation  $ sourcesCoreRules }
+  spellOpenClose { "Open/Close" schTransmutation $ $ sourcesCoreRules }
+  spellOrderSWrath { "Order's Wrath" schEvocation $( descLawful ) sourcesCoreRules }
+  spellOtilukeSFreezingSphere { "Otiluke's Freezing Sphere" schEvocation $( descCold ) sourcesCoreRules }
+  spellOtilukeSResilientSphere { "Otiluke's Resilient Sphere" schEvocation $( descForce ) sourcesCoreRules }
+  spellOtilukeSTelekineticSphere { "Otiluke's Telekinetic Sphere" schEvocation $( descForce ) sourcesCoreRules }
+  spellOttoSIrresistibleDance { "Otto's Irresistible Dance" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellPassWithoutTrace { "Pass without Trace" schTransmutation $ $ sourcesCoreRules }
+  spellPasswall { "Passwall" schTransmutation $ $ sourcesCoreRules }
+  spellPermanency { "Permanency" schUniversal $ $ sourcesCoreRules }
+  spellPermanentImage { "Permanent Image" schIllusion subschFigment  $ sourcesCoreRules }
+  spellPersistentImage { "Persistent Image" schIllusion subschFigment  $ sourcesCoreRules }
+  spellPhantasmalKiller { "Phantasmal Killer" schIllusion $( descFear descMindAffecting ) sourcesCoreRules }
+  spellPhantomSteed { "Phantom Steed" schConjuration subschCreation  $ sourcesCoreRules }
+  spellPhaseDoor { "Phase Door" schConjuration subschCreation  $ sourcesCoreRules }
+  spellPlanarAlly { "Planar Ally" schConjuration subschCalling ( descSeeText ) sourcesCoreRules }
+  spellPlanarBinding { "Planar Binding" schConjuration subschCalling ( descSeeText ) sourcesCoreRules }
+  spellPlaneShift { "Plane Shift" schTransmutation $ $ sourcesCoreRules }
+  spellPlantGrowth { "Plant Growth" schTransmutation $ $ sourcesCoreRules }
+  spellPoison { "Poison" schNecromancy $ $ sourcesCoreRules }
+  spellPolymorphAnyObject { "Polymorph Any Object" schTransmutation $ $ sourcesCoreRules }
+  spellPolymorphOther { "Polymorph Other" schTransmutation $ $ sourcesCoreRules }
+  spellPolymorphSelf { "Polymorph Self" schTransmutation $ $ sourcesCoreRules }
+  spellPowerWordBlind { "Power Word, Blind" schConjuration subschCreation  $ sourcesCoreRules }
+  spellPowerWordKill { "Power Word, Kill" schConjuration subschCreation ( descDeath ) sourcesCoreRules }
+  spellPowerWordStun { "Power Word, Stun" schConjuration subschCreation  $ sourcesCoreRules }
+  spellPrayer { "Prayer" schConjuration subschCreation  $ sourcesCoreRules }
+  spellPrestidigitation { "Prestidigitation" schUniversal $ $ sourcesCoreRules }
+  spellPrismaticSphere { "Prismatic Sphere" schAbjuration $ $ sourcesCoreRules }
+  spellPrismaticSpray { "Prismatic Spray" schEvocation $ $ sourcesCoreRules }
+  spellPrismaticWall { "Prismatic Wall" schAbjuration $ $ sourcesCoreRules }
+  spellProduceFlame { "Produce Flame" schEvocation $( descFire ) sourcesCoreRules }
+  spellProgrammedImage { "Programmed Image" schIllusion subschFigment  $ sourcesCoreRules }
+  spellProjectImage { "Project Image" schIllusion subschShadow  $ sourcesCoreRules }
+  spellProtectionFromArrows { "Protection from Arrows" schAbjuration $ $ sourcesCoreRules }
+  spellProtectionFromChaos { "Protection from Chaos" schAbjuration $( descLawful ) sourcesCoreRules }
+  spellProtectionFromElements { "Protection from Elements" schAbjuration $ $ sourcesCoreRules }
+  spellProtectionFromEvil { "Protection from Evil" schAbjuration $( descGood ) sourcesCoreRules }
+  spellProtectionFromGood { "Protection from Good" schAbjuration $( descEvil ) sourcesCoreRules }
+  spellProtectionFromLaw { "Protection from Law" schAbjuration $( descChaotic ) sourcesCoreRules }
+  spellProtectionFromSpells { "Protection from Spells" schAbjuration $ $ sourcesCoreRules }
+  spellPryingEyes { "Prying Eyes" schDivination $ $ sourcesCoreRules }
+  spellPurifyFoodAndDrink { "Purify Food and Drink" schUniversal $ $ sourcesCoreRules }
+  spellPyrotechnics { "Pyrotechnics" schTransmutation $ $ sourcesCoreRules }
+  spellQuench { "Quench" schTransmutation $ $ sourcesCoreRules }
+  spellRainbowPattern { "Rainbow Pattern" schIllusion subschPattern ( descMindAffecting ) sourcesCoreRules }
+  spellRaiseDead { "Raise Dead" schConjuration subschHealing  $ sourcesCoreRules }
+  spellRandomAction { "Random Action" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellRarySMnemonicEnhancer { "Rary's Mnemonic Enhancer" schTransmutation $ $ sourcesCoreRules }
+  spellRarySTelepathicBond { "Rary's Telepathic Bond" schDivination $ $ sourcesCoreRules }
+  spellRayOfEnfeeblement { "Ray of Enfeeblement" schNecromancy $ $ sourcesCoreRules }
+  spellRayOfFrost { "Ray of Frost" schConjuration subschCreation ( descCold ) sourcesCoreRules }
+  spellReadMagic { "Read Magic" schUniversal $ $ sourcesCoreRules }
+  spellReduce { "Reduce" schTransmutation $ $ sourcesCoreRules }
+  spellRefuge { "Refuge" schTransmutation $( descTeleportation ) sourcesCoreRules }
+  spellRegenerate { "Regenerate" schConjuration subschHealing  $ sourcesCoreRules }
+  spellReincarnate { "Reincarnate" schTransmutation $ $ sourcesCoreRules }
+  spellRemoveBlindnessDeafness { "Remove Blindness/Deafness" schConjuration subschHealing  $ sourcesCoreRules }
+  spellRemoveCurse { "Remove Curse" schAbjuration $ $ sourcesCoreRules }
+  spellRemoveDisease { "Remove Disease" schConjuration subschHealing  $ sourcesCoreRules }
+  spellRemoveFear { "Remove Fear" schAbjuration $ $ sourcesCoreRules }
+  spellRemoveParalysis { "Remove Paralysis" schConjuration subschHealing  $ sourcesCoreRules }
+  spellRepelMetalOrStone { "Repel Metal or Stone" schAbjuration $ $ sourcesCoreRules }
+  spellRepelVermin { "Repel Vermin" schAbjuration $ $ sourcesCoreRules }
+  spellRepelWood { "Repel Wood" schTransmutation $ $ sourcesCoreRules }
+  spellRepulsion { "Repulsion" schAbjuration $ $ sourcesCoreRules }
+  spellResistElements { "Resist Elements" schAbjuration $ $ sourcesCoreRules }
+  spellResistance { "Resistance" schAbjuration $ $ sourcesCoreRules }
+  spellRestoration { "Restoration" schConjuration subschHealing  $ sourcesCoreRules }
+  spellResurrection { "Resurrection" schConjuration subschHealing  $ sourcesCoreRules }
+  spellReverseGravity { "Reverse Gravity" schTransmutation $ $ sourcesCoreRules }
+  spellRighteousMight { "Righteous Might" schTransmutation $ $ sourcesCoreRules }
+  spellRopeTrick { "Rope Trick" schTransmutation $ $ sourcesCoreRules }
+  spellRustingGrasp { "Rusting Grasp" schTransmutation $ $ sourcesCoreRules }
+  spellSanctuary { "Sanctuary" schAbjuration $ $ sourcesCoreRules }
+  spellScare { "Scare" schNecromancy $( descFear descMindAffecting ) sourcesCoreRules }
+  spellScreen { "Screen" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellScrying { "Scrying" schDivination $ $ sourcesCoreRules }
+  spellSculptSound { "Sculpt Sound" schTransmutation $ $ sourcesCoreRules }
+  spellSearingLight { "Searing Light" schEvocation $ $ sourcesCoreRules }
+  spellSecretPage { "Secret Page" schTransmutation $ $ sourcesCoreRules }
+  spellSeeInvisibility { "See Invisibility" schDivination $ $ sourcesCoreRules }
+  spellSeeming { "Seeming" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellSending { "Sending" schEvocation $ $ sourcesCoreRules }
+  spellSepiaSnakeSigil { "Sepia Snake Sigil" schConjuration subschCreation ( descForce ) sourcesCoreRules }
+  spellSequester { "Sequester" schAbjuration $ $ sourcesCoreRules }
+  spellShades { "Shades" schIllusion subschShadow  $ sourcesCoreRules }
+  spellShadowConjuration { "Shadow Conjuration" schIllusion subschShadow  $ sourcesCoreRules }
+  spellShadowEvocation { "Shadow Evocation" schIllusion subschShadow  $ sourcesCoreRules }
+  spellShadowWalk { "Shadow Walk" schIllusion subschShadow  $ sourcesCoreRules }
+  spellShambler { "Shambler" schConjuration subschCreation  $ sourcesCoreRules }
+  spellShapechange { "Shapechange" schTransmutation $ $ sourcesCoreRules }
+  spellShatter { "Shatter" schEvocation $( descSonic ) sourcesCoreRules }
+  spellShield { "Shield" schAbjuration $( descForce ) sourcesCoreRules }
+  spellShieldOfFaith { "Shield of Faith" schAbjuration $ $ sourcesCoreRules }
+  spellShieldOfLaw { "Shield of Law" schAbjuration $( descLawful ) sourcesCoreRules }
+  spellShieldOther { "Shield Other" schAbjuration $ $ sourcesCoreRules }
+  spellShillelagh { "Shillelagh" schTransmutation $ $ sourcesCoreRules }
+  spellShockingGrasp { "Shocking Grasp" schTransmutation $( descElectricity ) sourcesCoreRules }
+  spellShout { "Shout" schEvocation $( descSonic ) sourcesCoreRules }
+  spellShrinkItem { "Shrink Item" schTransmutation $ $ sourcesCoreRules }
+  spellSilence { "Silence" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellSilentImage { "Silent Image" schIllusion subschFigment  $ sourcesCoreRules }
+  spellSimulacrum { "Simulacrum" schIllusion subschShadow  $ sourcesCoreRules }
+  spellSlayLiving { "Slay Living" schNecromancy $( descDeath ) sourcesCoreRules }
+  spellSleep { "Sleep" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellSleetStorm { "Sleet Storm" schConjuration subschCreation ( descCold ) sourcesCoreRules }
+  spellSlow { "Slow" schTransmutation $ $ sourcesCoreRules }
+  spellSnare { "Snare" schTransmutation $ $ sourcesCoreRules }
+  spellSoftenEarthAndStone { "Soften Earth and Stone" schTransmutation $ $ sourcesCoreRules }
+  spellSolidFog { "Solid Fog" schConjuration subschCreation  $ sourcesCoreRules }
+  spellSoulBind { "Soul Bind" schNecromancy $ $ sourcesCoreRules }
+  spellSoundBurst { "Sound Burst" schEvocation $( descSonic ) sourcesCoreRules }
+  spellSpeakWithAnimals { "Speak with Animals" schDivination $ $ sourcesCoreRules }
+  spellSpeakWithDead { "Speak with Dead" schNecromancy $( descLanguageDependent ) sourcesCoreRules }
+  spellSpeakWithPlants { "Speak with Plants" schDivination $ $ sourcesCoreRules }
+  spellSpectralHand { "Spectral Hand" schNecromancy $ $ sourcesCoreRules }
+  spellSpellImmunity { "Spell Immunity" schAbjuration $ $ sourcesCoreRules }
+  spellSpellResistance { "Spell Resistance" schAbjuration $ $ sourcesCoreRules }
+  spellSpellTurning { "Spell Turning" schAbjuration $ $ sourcesCoreRules }
+  spellSpellstaff { "Spellstaff" schTransmutation $ $ sourcesCoreRules }
+  spellSpiderClimb { "Spider Climb" schTransmutation $ $ sourcesCoreRules }
+  spellSpikeGrowth { "Spike Growth" schTransmutation $ $ sourcesCoreRules }
+  spellSpikeStones { "Spike Stones" schTransmutation $ $ sourcesCoreRules }
+  spellSpiritualWeapon { "Spiritual Weapon" schEvocation $( descForce ) sourcesCoreRules }
+  spellStatue { "Statue" schTransmutation $ $ sourcesCoreRules }
+  spellStatus { "Status" schDivination $ $ sourcesCoreRules }
+  spellStinkingCloud { "Stinking Cloud" schConjuration subschCreation  $ sourcesCoreRules }
+  spellStoneShape { "Stone Shape" schTransmutation $ $ sourcesCoreRules }
+  spellStoneTell { "Stone Tell" schDivination $ $ sourcesCoreRules }
+  spellStoneToFlesh { "Stone to Flesh" schTransmutation $ $ sourcesCoreRules }
+  spellStoneskin { "Stoneskin" schAbjuration $ $ sourcesCoreRules }
+  spellStormOfVengeance { "Storm of Vengeance" schConjuration subschSummoning  $ sourcesCoreRules }
+  spellSuggestion { "Suggestion" schEnchantment subschCompulsion ( descLanguageDependent descMindAffecting ) sourcesCoreRules }
+  spellSummonMonsterI { "Summon Monster I" schConjuration subschSummoning ( descSeeText ) sourcesCoreRules }
+  spellSummonMonsterII { "Summon Monster II" schConjuration subschSummoning ( descSeeText ) sourcesCoreRules }
+  spellSummonMonsterIII { "Summon Monster III" schConjuration subschSummoning ( descSeeText ) sourcesCoreRules }
+  spellSummonMonsterIV { "Summon Monster IV" schConjuration subschSummoning ( descSeeText ) sourcesCoreRules }
+  spellSummonMonsterIX { "Summon Monster IX" schConjuration subschSummoning ( descSeeText ) sourcesCoreRules }
+  spellSummonMonsterV { "Summon Monster V" schConjuration subschSummoning ( descSeeText ) sourcesCoreRules }
+  spellSummonMonsterVI { "Summon Monster VI" schConjuration subschSummoning ( descSeeText ) sourcesCoreRules }
+  spellSummonMonsterVII { "Summon Monster VII" schConjuration subschSummoning ( descSeeText ) sourcesCoreRules }
+  spellSummonMonsterVIII { "Summon Monster VIII" schConjuration subschSummoning ( descSeeText ) sourcesCoreRules }
+  spellSummonNatureSAllyI { "Summon Nature's Ally I" schConjuration subschCreation ( descSeeText ) sourcesCoreRules }
+  spellSummonNatureSAllyII { "Summon Nature's Ally II" schConjuration subschCreation ( descSeeText ) sourcesCoreRules }
+  spellSummonNatureSAllyIII { "Summon Nature's Ally III" schConjuration subschCreation ( descSeeText ) sourcesCoreRules }
+  spellSummonNatureSAllyIV { "Summon Nature's Ally IV" schConjuration subschCreation ( descSeeText ) sourcesCoreRules }
+  spellSummonNatureSAllyIX { "Summon Nature's Ally IX" schConjuration subschCreation ( descSeeText ) sourcesCoreRules }
+  spellSummonNatureSAllyV { "Summon Nature's Ally V" schConjuration subschCreation ( descSeeText ) sourcesCoreRules }
+  spellSummonNatureSAllyVI { "Summon Nature's Ally VI" schConjuration subschCreation ( descSeeText ) sourcesCoreRules }
+  spellSummonNatureSAllyVII { "Summon Nature's Ally VII" schConjuration subschCreation ( descSeeText ) sourcesCoreRules }
+  spellSummonNatureSAllyVIII { "Summon Nature's Ally VIII" schConjuration subschCreation ( descSeeText ) sourcesCoreRules }
+  spellSummonSwarm { "Summon Swarm" schConjuration subschSummoning  $ sourcesCoreRules }
+  spellSunbeam { "Sunbeam" schEvocation $ $ sourcesCoreRules }
+  spellSunburst { "Sunburst" schEvocation $ $ sourcesCoreRules }
+  spellSymbol { "Symbol" schUniversal $( descSeeText ) sourcesCoreRules }
+  spellSympathy { "Sympathy" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+  spellTashaSHideousLaughter { "Tasha's Hideous Laughter" schEnchantment subschCompulsion  $ sourcesCoreRules }
+  spellTelekinesis { "Telekinesis" schTransmutation $ $ sourcesCoreRules }
+  spellTeleport { "Teleport" schTransmutation $( descTeleportation ) sourcesCoreRules }
+  spellTeleportWithoutError { "Teleport without Error" schTransmutation $( descTeleportation ) sourcesCoreRules }
+  spellTeleportationCircle { "Teleportation Circle" schTransmutation $( descTeleportation ) sourcesCoreRules }
+  spellTemporalStasis { "Temporal Stasis" schTransmutation $ $ sourcesCoreRules }
+  spellTenserSFloatingDisk { "Tenser's Floating Disk" schEvocation $( descForce ) sourcesCoreRules }
+  spellTenserSTransformation { "Tenser's Transformation" schTransmutation $ $ sourcesCoreRules }
+  spellTimeStop { "Time Stop" schTransmutation $ $ sourcesCoreRules }
+  spellTongues { "Tongues" schDivination $ $ sourcesCoreRules }
+  spellTransmuteMetalToWood { "Transmute Metal to Wood" schTransmutation $ $ sourcesCoreRules }
+  spellTransmuteMudToRock { "Transmute Mud to Rock" schTransmutation $ $ sourcesCoreRules }
+  spellTransmuteRockToMud { "Transmute Rock to Mud" schTransmutation $ $ sourcesCoreRules }
+  spellTransportViaPlants { "Transport via Plants" schTransmutation $ $ sourcesCoreRules }
+  spellTrapTheSoul { "Trap the Soul" schConjuration subschSummoning  $ sourcesCoreRules }
+  spellTreeShape { "Tree Shape" schTransmutation $ $ sourcesCoreRules }
+  spellTreeStride { "Tree Stride" schTransmutation $( descTeleportation ) sourcesCoreRules }
+  spellTrueResurrection { "True Resurrection" schConjuration subschHealing  $ sourcesCoreRules }
+  spellTrueSeeing { "True Seeing" schDivination $ $ sourcesCoreRules }
+  spellTrueStrike { "True Strike" schDivination $ $ sourcesCoreRules }
+  spellUndetectableAlignment { "Undetectable Alignment" schAbjuration $ $ sourcesCoreRules }
+  spellUnhallow { "Unhallow" schEvocation $( descEvil ) sourcesCoreRules }
+  spellUnholyAura { "Unholy Aura" schAbjuration $( descEvil ) sourcesCoreRules }
+  spellUnholyBlight { "Unholy Blight" schEvocation $( descEvil ) sourcesCoreRules }
+  spellUnseenServant { "Unseen Servant" schConjuration subschCreation  $ sourcesCoreRules }
+  spellVampiricTouch { "Vampiric Touch" schNecromancy $ $ sourcesCoreRules }
+  spellVanish { "Vanish" schTransmutation $( descTeleportation ) sourcesCoreRules }
+  spellVeil { "Veil" schIllusion subschGlamer  $ sourcesCoreRules }
+  spellVentriloquism { "Ventriloquism" schIllusion subschFigment  $ sourcesCoreRules }
+  spellVirtue { "Virtue" schTransmutation $ $ sourcesCoreRules }
+  spellVision { "Vision" schDivination $ $ sourcesCoreRules }
+  spellWailOfTheBanshee { "Wail of the Banshee" schNecromancy $( descDeath descSonic ) sourcesCoreRules }
+  spellWallOfFire { "Wall of Fire" schEvocation $( descFire ) sourcesCoreRules }
+  spellWallOfForce { "Wall of Force" schEvocation $( descForce ) sourcesCoreRules }
+  spellWallOfIce { "Wall of Ice" schEvocation $( descCold ) sourcesCoreRules }
+  spellWallOfIron { "Wall of Iron" schConjuration subschCreation  $ sourcesCoreRules }
+  spellWallOfStone { "Wall of Stone" schConjuration subschCreation  $ sourcesCoreRules }
+  spellWallOfThorns { "Wall of Thorns" schConjuration subschCreation  $ sourcesCoreRules }
+  spellWarpWood { "Warp Wood" schTransmutation $ $ sourcesCoreRules }
+  spellWaterBreathing { "Water Breathing" schTransmutation $ $ sourcesCoreRules }
+  spellWaterWalk { "Water Walk" schTransmutation $ $ sourcesCoreRules }
+  spellWeb { "Web" schConjuration subschCreation  $ sourcesCoreRules }
+  spellWeird { "Weird" schIllusion subschPhantasm ( descFear descMindAffecting ) sourcesCoreRules }
+  spellWhirlwind { "Whirlwind" schEvocation $( descAir ) sourcesCoreRules }
+  spellWhisperingWind { "Whispering Wind" schTransmutation $ $ sourcesCoreRules }
+  spellWindWalk { "Wind Walk" schTransmutation $ $ sourcesCoreRules }
+  spellWindWall { "Wind Wall" schEvocation $ $ sourcesCoreRules }
+  spellWish { "Wish" schUniversal $ $ sourcesCoreRules }
+  spellWoodShape { "Wood Shape" schTransmutation $ $ sourcesCoreRules }
+  spellWordOfChaos { "Word of Chaos" schEvocation $( descChaotic descSonic ) sourcesCoreRules }
+  spellWordOfRecall { "Word of Recall" schTransmutation $( descTeleportation ) sourcesCoreRules }
+  spellZoneOfTruth { "Zone of Truth" schEnchantment subschCompulsion ( descMindAffecting ) sourcesCoreRules }
+end
+
+category groupSpellsAdeptL0
+  spellCreateWater
+  spellCureMinorWounds
+  spellDetectMagic
+  spellGhostSound
+  spellGuidance
+  spellLight
+  spellMending
+  spellPurifyFoodAndDrink
+  spellReadMagic
+end
+
+category groupSpellsAdeptL1
+  spellBless
+  spellBurningHands
+  spellCauseFear
+  spellCommand
+  spellComprehendLanguages
+  spellCureLightWounds
+  spellDetectChaos
+  spellDetectEvil
+  spellDetectGood
+  spellDetectLaw
+  spellEndureElements
+  spellObscuringMist
+  spellProtectionFromChaos
+  spellProtectionFromEvil
+  spellProtectionFromGood
+  spellProtectionFromLaw
+  spellSleep
+end
+
+category groupSpellsAdeptL2
+  spellAid
+  spellAnimalTrance
+  spellBullSStrength
+  spellCatSGrace
+  spellCureModerateWounds
+  spellDarkness
+  spellDelayPoison
+  spellEndurance
+  spellInvisibility
+  spellMirrorImage
+  spellResistElements
+  spellSeeInvisibility
+  spellWeb
+end
+
+category groupSpellsAdeptL3
+  spellAnimateDead
+  spellBestowCurse
+  spellContagion
+  spellContinualFlame
+  spellCureSeriousWounds
+  spellDaylight
+  spellDeeperDarkness
+  spellLightningBolt
+  spellNeutralizePoison
+  spellRemoveCurse
+  spellTongues
+end
+
+category groupSpellsAdeptL4
+  spellCureCriticalWounds
+  spellMinorCreation
+  spellPolymorphOther
+  spellPolymorphSelf
+  spellRestoration
+  spellStoneskin
+  spellWallOfFire
+end
+
+category groupSpellsAdeptL5
+  spellBreakEnchantment
+  spellCommune
+  spellHeal
+  spellMajorCreation
+  spellRaiseDead
+  spellTrueSeeing
+  spellWallOfStone
+end
+
+category groupSpellsAdept
+  groupSpellsAdeptL0
+  groupSpellsAdeptL1
+  groupSpellsAdeptL2
+  groupSpellsAdeptL3
+  groupSpellsAdeptL4
+  groupSpellsAdeptL5
+end
+
+category groupSpellsAirL1
+  spellObscuringMist
+end
+
+category groupSpellsAirL2
+  spellWindWall
+end
+
+category groupSpellsAirL3
+  spellGaseousForm
+end
+
+category groupSpellsAirL4
+  spellAirWalk
+end
+
+category groupSpellsAirL5
+  spellControlWinds
+end
+
+category groupSpellsAirL6
+  spellChainLightning
+end
+
+category groupSpellsAirL7
+  spellControlWeather
+end
+
+category groupSpellsAirL8
+  spellWhirlwind
+end
+
+category groupSpellsAirL9
+  spellElementalSwarm
+end
+
+category groupSpellsAir
+  null
+  groupSpellsAirL1
+  groupSpellsAirL2
+  groupSpellsAirL3
+  groupSpellsAirL4
+  groupSpellsAirL5
+  groupSpellsAirL6
+  groupSpellsAirL7
+  groupSpellsAirL8
+  groupSpellsAirL9
+end
+
+category groupSpellsAnimalL1
+  spellCalmAnimals
+end
+
+category groupSpellsAnimalL2
+  spellHoldAnimal
+end
+
+category groupSpellsAnimalL3
+  spellDominateAnimal
+end
+
+category groupSpellsAnimalL4
+  spellRepelVermin
+end
+
+category groupSpellsAnimalL5
+  spellCommuneWithNature
+end
+
+category groupSpellsAnimalL6
+  spellAntilifeShell
+end
+
+category groupSpellsAnimalL7
+  spellAnimalShapes
+end
+
+category groupSpellsAnimalL8
+  spellCreepingDoom
+end
+
+category groupSpellsAnimalL9
+  spellShapechange
+end
+
+category groupSpellsAnimal
+  null
+  groupSpellsAnimalL1
+  groupSpellsAnimalL2
+  groupSpellsAnimalL3
+  groupSpellsAnimalL4
+  groupSpellsAnimalL5
+  groupSpellsAnimalL6
+  groupSpellsAnimalL7
+  groupSpellsAnimalL8
+  groupSpellsAnimalL9
+end
+
+category groupSpellsAssassinL1
+  spellChangeSelf
+  spellDetectPoison
+  spellGhostSound
+  spellObscuringMist
+  spellSpiderClimb
+end
+
+category groupSpellsAssassinL2
+  spellAlterSelf
+  spellDarkness
+  spellPassWithoutTrace
+  spellUndetectableAlignment
+end
+
+category groupSpellsAssassinL3
+  spellDeeperDarkness
+  spellInvisibility
+  spellMisdirection
+  spellNondetection
+end
+
+category groupSpellsAssassinL4
+  spellDimensionDoor
+  spellFreedomOfMovement
+  spellImprovedInvisibility
+  spellPoison
+end
+
+category groupSpellsAssassin
+  null
+  groupSpellsAssassinL1
+  groupSpellsAssassinL2
+  groupSpellsAssassinL3
+  groupSpellsAssassinL4
+end
+
+category groupSpellsBardL0
+  spellDancingLights
+  spellDaze
+  spellDetectMagic
+  spellFlare
+  spellGhostSound
+  spellLight
+  spellMageHand
+  spellMending
+  spellOpenClose
+  spellPrestidigitation
+  spellReadMagic
+  spellResistance
+end
+
+category groupSpellsBardL1
+  spellAlarm
+  spellCauseFear
+  spellCharmPerson
+  spellCureLightWounds
+  spellDetectSecretDoors
+  spellErase
+  spellExpeditiousRetreat
+  spellFeatherFall
+  spellGrease
+  spellHypnotism
+  spellIdentify
+  spellMageArmor
+  spellMagicWeapon
+  spellMessage
+  spellProtectionFromChaos
+  spellProtectionFromEvil
+  spellProtectionFromGood
+  spellProtectionFromLaw
+  spellSilentImage
+  spellSleep
+  spellSummonMonsterI
+  spellUnseenServant
+  spellVentriloquism
+end
+
+category groupSpellsBardL2
+  spellAnimalTrance
+  spellBlindnessDeafness
+  spellBlur
+  spellBullSStrength
+  spellCatSGrace
+  spellCureModerateWounds
+  spellDarkness
+  spellDaylight
+  spellDelayPoison
+  spellDetectThoughts
+  spellEnthrall
+  spellGlitterdust
+  spellHoldPerson
+  spellHypnoticPattern
+  spellInvisibility
+  spellLevitate
+  spellLocateObject
+  spellMagicMouth
+  spellMinorImage
+  spellMirrorImage
+  spellMisdirection
+  spellObscureObject
+  spellPyrotechnics
+  spellScare
+  spellSeeInvisibility
+  spellShatter
+  spellSilence
+  spellSoundBurst
+  spellSuggestion
+  spellSummonMonsterII
+  spellSummonSwarm
+  spellTashaSHideousLaughter
+  spellTongues
+  spellUndetectableAlignment
+  spellWhisperingWind
+end
+
+category groupSpellsBardL3
+  spellBestowCurse
+  spellBlink
+  spellCharmMonster
+  spellClairaudienceClairvoyance
+  spellConfusion
+  spellCureSeriousWounds
+  spellDispelMagic
+  spellDisplacement
+  spellEmotion
+  spellFear
+  spellGaseousForm
+  spellGreaterMagicWeapon
+  spellGustOfWind
+  spellHaste
+  spellIllusoryScript
+  spellInvisibilitySphere
+  spellKeenEdge
+  spellLeomundSTinyHut
+  spellLesserGeas
+  spellMagicCircleAgainstChaos
+  spellMagicCircleAgainstEvil
+  spellMagicCircleAgainstGood
+  spellMagicCircleAgainstLaw
+  spellMajorImage
+  spellPhantomSteed
+  spellRemoveCurse
+  spellRemoveDisease
+  spellScrying
+  spellSculptSound
+  spellSepiaSnakeSigil
+  spellSlow
+  spellSummonMonsterIII
+  spellWindWall
+end
+
+category groupSpellsBardL4
+  spellBreakEnchantment
+  spellCureCriticalWounds
+  spellDetectScrying
+  spellDimensionDoor
+  spellDismissal
+  spellDominatePerson
+  spellHallucinatoryTerrain
+  spellHoldMonster
+  spellImprovedInvisibility
+  spellLegendLore
+  spellLeomundSSecureShelter
+  spellLocateCreature
+  spellModifyMemory
+  spellNeutralizePoison
+  spellRainbowPattern
+  spellShout
+  spellSummonMonsterIV
+end
+
+category groupSpellsBardL5
+  spellContactOtherPlane
+  spellControlWater
+  spellDream
+  spellFalseVision
+  spellGreaterDispelling
+  spellHealingCircle
+  spellMindFog
+  spellMirageArcana
+  spellMislead
+  spellNightmare
+  spellPersistentImage
+  spellSummonMonsterV
+end
+
+category groupSpellsBardL6
+  spellControlWeather
+  spellEyebite
+  spellGeasQuest
+  spellGreaterScrying
+  spellMassHaste
+  spellMassSuggestion
+  spellPermanentImage
+  spellPlaneShift
+  spellProgrammedImage
+  spellProjectImage
+  spellRepulsion
+  spellSummonMonsterVI
+  spellVeil
+end
+
+category groupSpellsBard
+  groupSpellsBardL0
+  groupSpellsBardL1
+  groupSpellsBardL2
+  groupSpellsBardL3
+  groupSpellsBardL4
+  groupSpellsBardL5
+  groupSpellsBardL6
+end
+
+category groupSpellsBlackguardL1
+  spellCauseFear
+  spellCureLightWounds
+  spellDoom
+  spellInflictLightWounds
+  spellMagicWeapon
+  spellSummonMonsterI
+end
+
+category groupSpellsBlackguardL2
+  spellBullSStrength
+  spellCureModerateWounds
+  spellDarkness
+  spellDeathKnell
+  spellInflictModerateWounds
+  spellShatter
+  spellSummonMonsterII
+end
+
+category groupSpellsBlackguardL3
+  spellContagion
+  spellCureSeriousWounds
+  spellDeeperDarkness
+  spellInflictSeriousWounds
+  spellProtectionFromElements
+  spellSummonMonsterIII
+end
+
+category groupSpellsBlackguardL4
+  spellCureCriticalWounds
+  spellFreedomOfMovement
+  spellInflictCriticalWounds
+  spellPoison
+  spellSummonMonsterIV
+end
+
+category groupSpellsBlackguard
+  null
+  groupSpellsBlackguardL1
+  groupSpellsBlackguardL2
+  groupSpellsBlackguardL3
+  groupSpellsBlackguardL4
+end
+
+category groupSpellsChaosL1
+  spellProtectionFromLaw
+end
+
+category groupSpellsChaosL2
+  spellShatter
+end
+
+category groupSpellsChaosL3
+  spellMagicCircleAgainstLaw
+end
+
+category groupSpellsChaosL4
+  spellChaosHammer
+end
+
+category groupSpellsChaosL5
+  spellDispelLaw
+end
+
+category groupSpellsChaosL6
+  spellAnimateObjects
+end
+
+category groupSpellsChaosL7
+  spellWordOfChaos
+end
+
+category groupSpellsChaosL8
+  spellCloakOfChaos
+end
+
+category groupSpellsChaosL9
+  spellSummonMonsterIX
+end
+
+category groupSpellsChaos
+  null
+  groupSpellsChaosL1
+  groupSpellsChaosL2
+  groupSpellsChaosL3
+  groupSpellsChaosL4
+  groupSpellsChaosL5
+  groupSpellsChaosL6
+  groupSpellsChaosL7
+  groupSpellsChaosL8
+  groupSpellsChaosL9
+end
+
+category groupSpellsClericL0
+  spellCreateWater
+  spellCureMinorWounds
+  spellDetectMagic
+  spellDetectPoison
+  spellGuidance
+  spellInflictMinorWounds
+  spellLight
+  spellMending
+  spellPurifyFoodAndDrink
+  spellReadMagic
+  spellResistance
+  spellVirtue
+end
+
+category groupSpellsClericL1
+  spellBane
+  spellBless
+  spellBlessWater
+  spellCauseFear
+  spellCommand
+  spellComprehendLanguages
+  spellCureLightWounds
+  spellCurseWater
+  spellDeathwatch
+  spellDetectChaos
+  spellDetectEvil
+  spellDetectGood
+  spellDetectLaw
+  spellDetectUndead
+  spellDivineFavor
+  spellDoom
+  spellEndureElements
+  spellEntropicShield
+  spellInflictLightWounds
+  spellInvisibilityToUndead
+  spellMagicStone
+  spellMagicWeapon
+  spellObscuringMist
+  spellProtectionFromChaos
+  spellProtectionFromEvil
+  spellProtectionFromGood
+  spellProtectionFromLaw
+  spellRandomAction
+  spellRemoveFear
+  spellSanctuary
+  spellShieldOfFaith
+  spellSummonMonsterI
+end
+
+category groupSpellsClericL2
+  spellAid
+  spellAnimalMessenger
+  spellAugury
+  spellBullSStrength
+  spellCalmEmotions
+  spellConsecrate
+  spellCureModerateWounds
+  spellDarkness
+  spellDeathKnell
+  spellDelayPoison
+  spellDesecrate
+  spellEndurance
+  spellEnthrall
+  spellFindTraps
+  spellGentleRepose
+  spellHoldPerson
+  spellInflictModerateWounds
+  spellLesserRestoration
+  spellMakeWhole
+  spellRemoveParalysis
+  spellResistElements
+  spellShatter
+  spellShieldOther
+  spellSilence
+  spellSoundBurst
+  spellSpeakWithAnimals
+  spellSpiritualWeapon
+  spellSummonMonsterII
+  spellUndetectableAlignment
+  spellZoneOfTruth
+end
+
+category groupSpellsClericL3
+  spellAnimateDead
+  spellBestowCurse
+  spellBlindnessDeafness
+  spellContagion
+  spellContinualFlame
+  spellCreateFoodAndWater
+  spellCureSeriousWounds
+  spellDaylight
+  spellDeeperDarkness
+  spellDispelMagic
+  spellGlyphOfWarding
+  spellHelpingHand
+  spellInflictSeriousWounds
+  spellInvisibilityPurge
+  spellLocateObject
+  spellMagicCircleAgainstChaos
+  spellMagicCircleAgainstEvil
+  spellMagicCircleAgainstGood
+  spellMagicCircleAgainstLaw
+  spellMagicVestment
+  spellMeldIntoStone
+  spellNegativeEnergyProtection
+  spellObscureObject
+  spellPrayer
+  spellProtectionFromElements
+  spellRemoveBlindnessDeafness
+  spellRemoveCurse
+  spellRemoveDisease
+  spellSearingLight
+  spellSpeakWithDead
+  spellSpeakWithPlants
+  spellStoneShape
+  spellSummonMonsterIII
+  spellWaterBreathing
+  spellWaterWalk
+  spellWindWall
+end
+
+category groupSpellsClericL4
+  spellAirWalk
+  spellControlWater
+  spellCureCriticalWounds
+  spellDeathWard
+  spellDimensionalAnchor
+  spellDiscernLies
+  spellDismissal
+  spellDivination
+  spellDivinePower
+  spellFreedomOfMovement
+  spellGiantVermin
+  spellGreaterMagicWeapon
+  spellImbueWithSpellAbility
+  spellInflictCriticalWounds
+  spellLesserPlanarAlly
+  spellNeutralizePoison
+  spellPoison
+  spellRepelVermin
+  spellRestoration
+  spellSending
+  spellSpellImmunity
+  spellStatus
+  spellSummonMonsterIV
+  spellTongues
+end
+
+category groupSpellsClericL5
+  spellAtonement
+  spellBreakEnchantment
+  spellCircleOfDoom
+  spellCommune
+  spellDispelChaos
+  spellDispelEvil
+  spellDispelGood
+  spellDispelLaw
+  spellEtherealJaunt
+  spellFlameStrike
+  spellGreaterCommand
+  spellHallow
+  spellHealingCircle
+  spellInsectPlague
+  spellMarkOfJustice
+  spellPlaneShift
+  spellRaiseDead
+  spellRighteousMight
+  spellScrying
+  spellSlayLiving
+  spellSpellResistance
+  spellSummonMonsterV
+  spellTrueSeeing
+  spellUnhallow
+  spellWallOfStone
+end
+
+category groupSpellsClericL6
+  spellAnimateObjects
+  spellAntilifeShell
+  spellBanishment
+  spellBladeBarrier
+  spellCreateUndead
+  spellEtherealness
+  spellFindThePath
+  spellForbiddance
+  spellGeasQuest
+  spellGreaterDispelling
+  spellGreaterGlyphOfWarding
+  spellHarm
+  spellHeal
+  spellHeroesFeast
+  spellPlanarAlly
+  spellSummonMonsterVI
+  spellWindWalk
+  spellWordOfRecall
+end
+
+category groupSpellsClericL7
+  spellBlasphemy
+  spellControlWeather
+  spellDestruction
+  spellDictum
+  spellGreaterRestoration
+  spellGreaterScrying
+  spellHolyWord
+  spellRefuge
+  spellRegenerate
+  spellRepulsion
+  spellResurrection
+  spellSummonMonsterVII
+  spellWordOfChaos
+end
+
+category groupSpellsClericL8
+  spellAntimagicField
+  spellCloakOfChaos
+  spellCreateGreaterUndead
+  spellDiscernLocation
+  spellEarthquake
+  spellFireStorm
+  spellGreaterPlanarAlly
+  spellHolyAura
+  spellMassHeal
+  spellShieldOfLaw
+  spellSummonMonsterVIII
+  spellSymbol
+  spellUnholyAura
+end
+
+category groupSpellsClericL9
+  spellAstralProjection
+  spellEnergyDrain
+  spellGate
+  spellImplosion
+  spellMiracle
+  spellSoulBind
+  spellStormOfVengeance
+  spellSummonMonsterIX
+  spellTrueResurrection
+end
+
+category groupSpellsCleric
+  groupSpellsClericL0
+  groupSpellsClericL1
+  groupSpellsClericL2
+  groupSpellsClericL3
+  groupSpellsClericL4
+  groupSpellsClericL5
+  groupSpellsClericL6
+  groupSpellsClericL7
+  groupSpellsClericL8
+  groupSpellsClericL9
+end
+
+category groupSpellsDeathL1
+  spellCauseFear
+end
+
+category groupSpellsDeathL2
+  spellDeathKnell
+end
+
+category groupSpellsDeathL3
+  spellAnimateDead
+end
+
+category groupSpellsDeathL4
+  spellDeathWard
+end
+
+category groupSpellsDeathL5
+  spellSlayLiving
+end
+
+category groupSpellsDeathL6
+  spellCreateUndead
+end
+
+category groupSpellsDeathL7
+  spellDestruction
+end
+
+category groupSpellsDeathL8
+  spellCreateGreaterUndead
+end
+
+category groupSpellsDeathL9
+  spellWailOfTheBanshee
+end
+
+category groupSpellsDeath
+  null
+  groupSpellsDeathL1
+  groupSpellsDeathL2
+  groupSpellsDeathL3
+  groupSpellsDeathL4
+  groupSpellsDeathL5
+  groupSpellsDeathL6
+  groupSpellsDeathL7
+  groupSpellsDeathL8
+  groupSpellsDeathL9
+end
+
+category groupSpellsDestructionL1
+  spellInflictLightWounds
+end
+
+category groupSpellsDestructionL2
+  spellShatter
+end
+
+category groupSpellsDestructionL3
+  spellContagion
+end
+
+category groupSpellsDestructionL4
+  spellInflictCriticalWounds
+end
+
+category groupSpellsDestructionL5
+  spellCircleOfDoom
+end
+
+category groupSpellsDestructionL6
+  spellHarm
+end
+
+category groupSpellsDestructionL7
+  spellDisintegrate
+end
+
+category groupSpellsDestructionL8
+  spellEarthquake
+end
+
+category groupSpellsDestructionL9
+  spellImplosion
+end
+
+category groupSpellsDestruction
+  null
+  groupSpellsDestructionL1
+  groupSpellsDestructionL2
+  groupSpellsDestructionL3
+  groupSpellsDestructionL4
+  groupSpellsDestructionL5
+  groupSpellsDestructionL6
+  groupSpellsDestructionL7
+  groupSpellsDestructionL8
+  groupSpellsDestructionL9
+end
+
+category groupSpellsDruidL0
+  spellCreateWater
+  spellCureMinorWounds
+  spellDetectMagic
+  spellDetectPoison
+  spellFlare
+  spellGuidance
+  spellKnowDirection
+  spellLight
+  spellMending
+  spellPurifyFoodAndDrink
+  spellReadMagic
+  spellResistance
+  spellVirtue
+end
+
+category groupSpellsDruidL1
+  spellAnimalFriendship
+  spellCalmAnimals
+  spellCureLightWounds
+  spellDetectAnimalsOrPlants
+  spellDetectSnaresAndPits
+  spellEndureElements
+  spellEntangle
+  spellFaerieFire
+  spellGoodberry
+  spellInvisibilityToAnimals
+  spellMagicFang
+  spellObscuringMist
+  spellPassWithoutTrace
+  spellShillelagh
+  spellSummonNatureSAllyI
+end
+
+category groupSpellsDruidL2
+  spellAnimalMessenger
+  spellAnimalTrance
+  spellBarkskin
+  spellCharmPersonOrAnimal
+  spellChillMetal
+  spellDelayPoison
+  spellFireTrap
+  spellFlameBlade
+  spellFlamingSphere
+  spellHeatMetal
+  spellHoldAnimal
+  spellLesserRestoration
+  spellProduceFlame
+  spellResistElements
+  spellSoftenEarthAndStone
+  spellSpeakWithAnimals
+  spellSummonNatureSAllyII
+  spellSummonSwarm
+  spellTreeShape
+  spellWarpWood
+  spellWoodShape
+end
+
+category groupSpellsDruidL3
+  spellCallLightning
+  spellContagion
+  spellCureModerateWounds
+  spellDiminishPlants
+  spellDominateAnimal
+  spellGreaterMagicFang
+  spellMeldIntoStone
+  spellNeutralizePoison
+  spellPlantGrowth
+  spellPoison
+  spellProtectionFromElements
+  spellRemoveDisease
+  spellSnare
+  spellSpeakWithPlants
+  spellSpikeGrowth
+  spellStoneShape
+  spellSummonNatureSAllyIII
+  spellWaterBreathing
+end
+
+category groupSpellsDruidL4
+  spellAntiplantShell
+  spellControlPlants
+  spellCureSeriousWounds
+  spellDispelMagic
+  spellFlameStrike
+  spellFreedomOfMovement
+  spellGiantVermin
+  spellQuench
+  spellReincarnate
+  spellRepelVermin
+  spellRustingGrasp
+  spellScrying
+  spellSleetStorm
+  spellSpikeStones
+  spellSummonNatureSAllyIV
+end
+
+category groupSpellsDruidL5
+  spellAnimalGrowth
+  spellAtonement
+  spellAwaken
+  spellCommuneWithNature
+  spellControlWinds
+  spellCureCriticalWounds
+  spellDeathWard
+  spellHallow
+  spellIceStorm
+  spellInsectPlague
+  spellSummonNatureSAllyV
+  spellTransmuteMudToRock
+  spellTransmuteRockToMud
+  spellTreeStride
+  spellUnhallow
+  spellWallOfFire
+  spellWallOfThorns
+end
+
+category groupSpellsDruidL6
+  spellAntilifeShell
+  spellFindThePath
+  spellFireSeeds
+  spellGreaterDispelling
+  spellHealingCircle
+  spellIronwood
+  spellLiveoak
+  spellRepelWood
+  spellSpellstaff
+  spellStoneTell
+  spellSummonNatureSAllyVI
+  spellTransportViaPlants
+  spellWallOfStone
+end
+
+category groupSpellsDruidL7
+  spellChangestaff
+  spellControlWeather
+  spellCreepingDoom
+  spellFireStorm
+  spellGreaterScrying
+  spellHarm
+  spellHeal
+  spellSummonNatureSAllyVII
+  spellSunbeam
+  spellTransmuteMetalToWood
+  spellTrueSeeing
+  spellWindWalk
+end
+
+category groupSpellsDruidL8
+  spellAnimalShapes
+  spellCommandPlants
+  spellFingerOfDeath
+  spellRepelMetalOrStone
+  spellReverseGravity
+  spellSummonNatureSAllyVIII
+  spellSunburst
+  spellWhirlwind
+  spellWordOfRecall
+end
+
+category groupSpellsDruidL9
+  spellAntipathy
+  spellEarthquake
+  spellElementalSwarm
+  spellForesight
+  spellMassHeal
+  spellShambler
+  spellShapechange
+  spellSummonNatureSAllyIX
+  spellSympathy
+end
+
+category groupSpellsDruid
+  groupSpellsDruidL0
+  groupSpellsDruidL1
+  groupSpellsDruidL2
+  groupSpellsDruidL3
+  groupSpellsDruidL4
+  groupSpellsDruidL5
+  groupSpellsDruidL6
+  groupSpellsDruidL7
+  groupSpellsDruidL8
+  groupSpellsDruidL9
+end
+
+category groupSpellsEarthL1
+  spellMagicStone
+end
+
+category groupSpellsEarthL2
+  spellSoftenEarthAndStone
+end
+
+category groupSpellsEarthL3
+  spellStoneShape
+end
+
+category groupSpellsEarthL4
+  spellSpikeStones
+end
+
+category groupSpellsEarthL5
+  spellWallOfStone
+end
+
+category groupSpellsEarthL6
+  spellStoneskin
+end
+
+category groupSpellsEarthL7
+  spellEarthquake
+end
+
+category groupSpellsEarthL8
+  spellIronBody
+end
+
+category groupSpellsEarthL9
+  spellElementalSwarm
+end
+
+category groupSpellsEarth
+  null
+  groupSpellsEarthL1
+  groupSpellsEarthL2
+  groupSpellsEarthL3
+  groupSpellsEarthL4
+  groupSpellsEarthL5
+  groupSpellsEarthL6
+  groupSpellsEarthL7
+  groupSpellsEarthL8
+  groupSpellsEarthL9
+end
+
+category groupSpellsEvilL1
+  spellProtectionFromGood
+end
+
+category groupSpellsEvilL2
+  spellDesecrate
+end
+
+category groupSpellsEvilL3
+  spellMagicCircleAgainstGood
+end
+
+category groupSpellsEvilL4
+  spellUnholyBlight
+end
+
+category groupSpellsEvilL5
+  spellDispelGood
+end
+
+category groupSpellsEvilL6
+  spellCreateUndead
+end
+
+category groupSpellsEvilL7
+  spellBlasphemy
+end
+
+category groupSpellsEvilL8
+  spellUnholyAura
+end
+
+category groupSpellsEvilL9
+  spellSummonMonsterIX
+end
+
+category groupSpellsEvil
+  null
+  groupSpellsEvilL1
+  groupSpellsEvilL2
+  groupSpellsEvilL3
+  groupSpellsEvilL4
+  groupSpellsEvilL5
+  groupSpellsEvilL6
+  groupSpellsEvilL7
+  groupSpellsEvilL8
+  groupSpellsEvilL9
+end
+
+category groupSpellsFireL1
+  spellBurningHands
+end
+
+category groupSpellsFireL2
+  spellProduceFlame
+end
+
+category groupSpellsFireL3
+  spellResistElements
+end
+
+category groupSpellsFireL4
+  spellWallOfFire
+end
+
+category groupSpellsFireL5
+  spellFireShield
+end
+
+category groupSpellsFireL6
+  spellFireSeeds
+end
+
+category groupSpellsFireL7
+  spellFireStorm
+end
+
+category groupSpellsFireL8
+  spellIncendiaryCloud
+end
+
+category groupSpellsFireL9
+  spellElementalSwarm
+end
+
+category groupSpellsFire
+  null
+  groupSpellsFireL1
+  groupSpellsFireL2
+  groupSpellsFireL3
+  groupSpellsFireL4
+  groupSpellsFireL5
+  groupSpellsFireL6
+  groupSpellsFireL7
+  groupSpellsFireL8
+  groupSpellsFireL9
+end
+
+category groupSpellsGoodL1
+  spellProtectionFromEvil
+end
+
+category groupSpellsGoodL2
+  spellAid
+end
+
+category groupSpellsGoodL3
+  spellMagicCircleAgainstEvil
+end
+
+category groupSpellsGoodL4
+  spellHolySmite
+end
+
+category groupSpellsGoodL5
+  spellDispelEvil
+end
+
+category groupSpellsGoodL6
+  spellBladeBarrier
+end
+
+category groupSpellsGoodL7
+  spellHolyWord
+end
+
+category groupSpellsGoodL8
+  spellHolyAura
+end
+
+category groupSpellsGoodL9
+  spellSummonMonsterIX
+end
+
+category groupSpellsGood
+  null
+  groupSpellsGoodL1
+  groupSpellsGoodL2
+  groupSpellsGoodL3
+  groupSpellsGoodL4
+  groupSpellsGoodL5
+  groupSpellsGoodL6
+  groupSpellsGoodL7
+  groupSpellsGoodL8
+  groupSpellsGoodL9
+end
+
+category groupSpellsHealingL1
+  spellCureLightWounds
+end
+
+category groupSpellsHealingL2
+  spellCureModerateWounds
+end
+
+category groupSpellsHealingL3
+  spellCureSeriousWounds
+end
+
+category groupSpellsHealingL4
+  spellCureCriticalWounds
+end
+
+category groupSpellsHealingL5
+  spellHealingCircle
+end
+
+category groupSpellsHealingL6
+  spellHeal
+end
+
+category groupSpellsHealingL7
+  spellRegenerate
+end
+
+category groupSpellsHealingL8
+  spellMassHeal
+end
+
+category groupSpellsHealingL9
+  spellTrueResurrection
+end
+
+category groupSpellsHealing
+  null
+  groupSpellsHealingL1
+  groupSpellsHealingL2
+  groupSpellsHealingL3
+  groupSpellsHealingL4
+  groupSpellsHealingL5
+  groupSpellsHealingL6
+  groupSpellsHealingL7
+  groupSpellsHealingL8
+  groupSpellsHealingL9
+end
+
+category groupSpellsKnowledgeL1
+  spellDetectSecretDoors
+end
+
+category groupSpellsKnowledgeL2
+  spellDetectThoughts
+end
+
+category groupSpellsKnowledgeL3
+  spellClairaudienceClairvoyance
+end
+
+category groupSpellsKnowledgeL4
+  spellDivination
+end
+
+category groupSpellsKnowledgeL5
+  spellTrueSeeing
+end
+
+category groupSpellsKnowledgeL6
+  spellFindThePath
+end
+
+category groupSpellsKnowledgeL7
+  spellLegendLore
+end
+
+category groupSpellsKnowledgeL8
+  spellDiscernLocation
+end
+
+category groupSpellsKnowledgeL9
+  spellForesight
+end
+
+category groupSpellsKnowledge
+  null
+  groupSpellsKnowledgeL1
+  groupSpellsKnowledgeL2
+  groupSpellsKnowledgeL3
+  groupSpellsKnowledgeL4
+  groupSpellsKnowledgeL5
+  groupSpellsKnowledgeL6
+  groupSpellsKnowledgeL7
+  groupSpellsKnowledgeL8
+  groupSpellsKnowledgeL9
+end
+
+category groupSpellsLawL1
+  spellProtectionFromChaos
+end
+
+category groupSpellsLawL2
+  spellCalmEmotions
+end
+
+category groupSpellsLawL3
+  spellMagicCircleAgainstChaos
+end
+
+category groupSpellsLawL4
+  spellOrderSWrath
+end
+
+category groupSpellsLawL5
+  spellDispelChaos
+end
+
+category groupSpellsLawL6
+  spellHoldMonster
+end
+
+category groupSpellsLawL7
+  spellDictum
+end
+
+category groupSpellsLawL8
+  spellShieldOfLaw
+end
+
+category groupSpellsLawL9
+  spellSummonMonsterIX
+end
+
+category groupSpellsLaw
+  null
+  groupSpellsLawL1
+  groupSpellsLawL2
+  groupSpellsLawL3
+  groupSpellsLawL4
+  groupSpellsLawL5
+  groupSpellsLawL6
+  groupSpellsLawL7
+  groupSpellsLawL8
+  groupSpellsLawL9
+end
+
+category groupSpellsLuckL1
+  spellEntropicShield
+end
+
+category groupSpellsLuckL2
+  spellAid
+end
+
+category groupSpellsLuckL3
+  spellProtectionFromElements
+end
+
+category groupSpellsLuckL4
+  spellFreedomOfMovement
+end
+
+category groupSpellsLuckL5
+  spellBreakEnchantment
+end
+
+category groupSpellsLuckL6
+  spellMislead
+end
+
+category groupSpellsLuckL7
+  spellSpellTurning
+end
+
+category groupSpellsLuckL8
+  spellHolyAura
+end
+
+category groupSpellsLuckL9
+  spellMiracle
+end
+
+category groupSpellsLuck
+  null
+  groupSpellsLuckL1
+  groupSpellsLuckL2
+  groupSpellsLuckL3
+  groupSpellsLuckL4
+  groupSpellsLuckL5
+  groupSpellsLuckL6
+  groupSpellsLuckL7
+  groupSpellsLuckL8
+  groupSpellsLuckL9
+end
+
+category groupSpellsMagicL1
+  spellNystulSUndetectableAura
+end
+
+category groupSpellsMagicL2
+  spellIdentify
+end
+
+category groupSpellsMagicL3
+  spellDispelMagic
+end
+
+category groupSpellsMagicL4
+  spellImbueWithSpellAbility
+end
+
+category groupSpellsMagicL5
+  spellSpellResistance
+end
+
+category groupSpellsMagicL6
+  spellAntimagicField
+end
+
+category groupSpellsMagicL7
+  spellSpellTurning
+end
+
+category groupSpellsMagicL8
+  spellProtectionFromSpells
+end
+
+category groupSpellsMagicL9
+  spellMordenkainenSDisjunction
+end
+
+category groupSpellsMagic
+  null
+  groupSpellsMagicL1
+  groupSpellsMagicL2
+  groupSpellsMagicL3
+  groupSpellsMagicL4
+  groupSpellsMagicL5
+  groupSpellsMagicL6
+  groupSpellsMagicL7
+  groupSpellsMagicL8
+  groupSpellsMagicL9
+end
+
+category groupSpellsPaladinL1
+  spellBless
+  spellBlessWater
+  spellBlessWeapon
+  spellCreateWater
+  spellCureLightWounds
+  spellDetectPoison
+  spellDetectUndead
+  spellDivineFavor
+  spellEndureElements
+  spellMagicWeapon
+  spellProtectionFromEvil
+  spellReadMagic
+  spellResistance
+  spellVirtue
+end
+
+category groupSpellsPaladinL2
+  spellDelayPoison
+  spellRemoveParalysis
+  spellResistElements
+  spellShieldOther
+  spellUndetectableAlignment
+end
+
+category groupSpellsPaladinL3
+  spellCureModerateWounds
+  spellDiscernLies
+  spellDispelMagic
+  spellGreaterMagicWeapon
+  spellHealMount
+  spellMagicCircleAgainstEvil
+  spellPrayer
+  spellRemoveBlindnessDeafness
+end
+
+category groupSpellsPaladinL4
+  spellCureSeriousWounds
+  spellDeathWard
+  spellDispelEvil
+  spellFreedomOfMovement
+  spellHolySword
+  spellNeutralizePoison
+end
+
+category groupSpellsPaladin
+  null
+  groupSpellsPaladinL1
+  groupSpellsPaladinL2
+  groupSpellsPaladinL3
+  groupSpellsPaladinL4
+end
+
+category groupSpellsPlantL1
+  spellEntangle
+end
+
+category groupSpellsPlantL2
+  spellBarkskin
+end
+
+category groupSpellsPlantL3
+  spellPlantGrowth
+end
+
+category groupSpellsPlantL4
+  spellControlPlants
+end
+
+category groupSpellsPlantL5
+  spellWallOfThorns
+end
+
+category groupSpellsPlantL6
+  spellRepelWood
+end
+
+category groupSpellsPlantL7
+  spellChangestaff
+end
+
+category groupSpellsPlantL8
+  spellCommandPlants
+end
+
+category groupSpellsPlantL9
+  spellShambler
+end
+
+category groupSpellsPlant
+  null
+  groupSpellsPlantL1
+  groupSpellsPlantL2
+  groupSpellsPlantL3
+  groupSpellsPlantL4
+  groupSpellsPlantL5
+  groupSpellsPlantL6
+  groupSpellsPlantL7
+  groupSpellsPlantL8
+  groupSpellsPlantL9
+end
+
+category groupSpellsProtectionL1
+  spellSanctuary
+end
+
+category groupSpellsProtectionL2
+  spellShieldOther
+end
+
+category groupSpellsProtectionL3
+  spellProtectionFromElements
+end
+
+category groupSpellsProtectionL4
+  spellSpellImmunity
+end
+
+category groupSpellsProtectionL5
+  spellSpellResistance
+end
+
+category groupSpellsProtectionL6
+  spellAntimagicField
+end
+
+category groupSpellsProtectionL7
+  spellRepulsion
+end
+
+category groupSpellsProtectionL8
+  spellMindBlank
+end
+
+category groupSpellsProtectionL9
+  spellPrismaticSphere
+end
+
+category groupSpellsProtection
+  null
+  groupSpellsProtectionL1
+  groupSpellsProtectionL2
+  groupSpellsProtectionL3
+  groupSpellsProtectionL4
+  groupSpellsProtectionL5
+  groupSpellsProtectionL6
+  groupSpellsProtectionL7
+  groupSpellsProtectionL8
+  groupSpellsProtectionL9
+end
+
+category groupSpellsRangerL1
+  spellAlarm
+  spellAnimalFriendship
+  spellDelayPoison
+  spellDetectAnimalsOrPlants
+  spellDetectSnaresAndPits
+  spellEntangle
+  spellMagicFang
+  spellPassWithoutTrace
+  spellReadMagic
+  spellResistElements
+  spellSpeakWithAnimals
+  spellSummonNatureSAllyI
+end
+
+category groupSpellsRangerL2
+  spellAnimalMessenger
+  spellCureLightWounds
+  spellDetectChaos
+  spellDetectEvil
+  spellDetectGood
+  spellDetectLaw
+  spellHoldAnimal
+  spellSleep
+  spellSnare
+  spellSpeakWithPlants
+  spellSummonNatureSAllyII
+end
+
+category groupSpellsRangerL3
+  spellControlPlants
+  spellDiminishPlants
+  spellGreaterMagicFang
+  spellNeutralizePoison
+  spellPlantGrowth
+  spellProtectionFromElements
+  spellRemoveDisease
+  spellSummonNatureSAllyIII
+  spellTreeShape
+  spellWaterWalk
+end
+
+category groupSpellsRangerL4
+  spellCureSeriousWounds
+  spellFreedomOfMovement
+  spellNondetection
+  spellPolymorphSelf
+  spellSummonNatureSAllyIV
+  spellTreeStride
+  spellWindWall
+end
+
+category groupSpellsRanger
+  null
+  groupSpellsRangerL1
+  groupSpellsRangerL2
+  groupSpellsRangerL3
+  groupSpellsRangerL4
+end
+
+category groupSpellsSorcererL0
+  spellArcaneMark
+  spellDancingLights
+  spellDaze
+  spellDetectMagic
+  spellDetectPoison
+  spellDisruptUndead
+  spellFlare
+  spellGhostSound
+  spellLight
+  spellMageHand
+  spellMending
+  spellOpenClose
+  spellPrestidigitation
+  spellRayOfFrost
+  spellReadMagic
+  spellResistance
+end
+
+category groupSpellsSorcererL1
+  spellAlarm
+  spellAnimateRope
+  spellBurningHands
+  spellCauseFear
+  spellChangeSelf
+  spellCharmPerson
+  spellChillTouch
+  spellColorSpray
+  spellComprehendLanguages
+  spellDetectSecretDoors
+  spellDetectUndead
+  spellEndureElements
+  spellEnlarge
+  spellErase
+  spellExpeditiousRetreat
+  spellFeatherFall
+  spellGrease
+  spellHoldPortal
+  spellHypnotism
+  spellIdentify
+  spellJump
+  spellMageArmor
+  spellMagicMissile
+  spellMagicWeapon
+  spellMessage
+  spellMount
+  spellNystulSMagicAura
+  spellNystulSUndetectableAura
+  spellObscuringMist
+  spellProtectionFromChaos
+  spellProtectionFromEvil
+  spellProtectionFromGood
+  spellProtectionFromLaw
+  spellRayOfEnfeeblement
+  spellReduce
+  spellShield
+  spellShockingGrasp
+  spellSilentImage
+  spellSleep
+  spellSpiderClimb
+  spellSummonMonsterI
+  spellTenserSFloatingDisk
+  spellTrueStrike
+  spellUnseenServant
+  spellVentriloquism
+end
+
+category groupSpellsSorcererL2
+  spellAlterSelf
+  spellArcaneLock
+  spellBlindnessDeafness
+  spellBlur
+  spellBullSStrength
+  spellCatSGrace
+  spellContinualFlame
+  spellDarkness
+  spellDarkvision
+  spellDaylight
+  spellDetectThoughts
+  spellEndurance
+  spellFlamingSphere
+  spellFogCloud
+  spellGhoulTouch
+  spellGlitterdust
+  spellHypnoticPattern
+  spellInvisibility
+  spellKnock
+  spellLeomundSTrap
+  spellLevitate
+  spellLocateObject
+  spellMagicMouth
+  spellMelfSAcidArrow
+  spellMinorImage
+  spellMirrorImage
+  spellMisdirection
+  spellObscureObject
+  spellProtectionFromArrows
+  spellPyrotechnics
+  spellResistElements
+  spellRopeTrick
+  spellScare
+  spellSeeInvisibility
+  spellShatter
+  spellSpectralHand
+  spellSummonMonsterII
+  spellSummonSwarm
+  spellTashaSHideousLaughter
+  spellWeb
+  spellWhisperingWind
+end
+
+category groupSpellsSorcererL3
+  spellBlink
+  spellClairaudienceClairvoyance
+  spellDispelMagic
+  spellDisplacement
+  spellExplosiveRunes
+  spellFireball
+  spellFlameArrow
+  spellFly
+  spellGaseousForm
+  spellGentleRepose
+  spellGreaterMagicWeapon
+  spellGustOfWind
+  spellHaltUndead
+  spellHaste
+  spellHoldPerson
+  spellIllusoryScript
+  spellInvisibilitySphere
+  spellKeenEdge
+  spellLeomundSTinyHut
+  spellLightningBolt
+  spellMagicCircleAgainstChaos
+  spellMagicCircleAgainstEvil
+  spellMagicCircleAgainstGood
+  spellMagicCircleAgainstLaw
+  spellMajorImage
+  spellNondetection
+  spellPhantomSteed
+  spellProtectionFromElements
+  spellSecretPage
+  spellSepiaSnakeSigil
+  spellShrinkItem
+  spellSleetStorm
+  spellSlow
+  spellStinkingCloud
+  spellSuggestion
+  spellSummonMonsterIII
+  spellTongues
+  spellVampiricTouch
+  spellWaterBreathing
+  spellWindWall
+end
+
+category groupSpellsSorcererL4
+  spellArcaneEye
+  spellBestowCurse
+  spellCharmMonster
+  spellConfusion
+  spellContagion
+  spellDetectScrying
+  spellDimensionDoor
+  spellDimensionalAnchor
+  spellEmotion
+  spellEnervation
+  spellEvardSBlackTentacles
+  spellFear
+  spellFireShield
+  spellFireTrap
+  spellHallucinatoryTerrain
+  spellIceStorm
+  spellIllusoryWall
+  spellImprovedInvisibility
+  spellLeomundSSecureShelter
+  spellLesserGeas
+  spellLocateCreature
+  spellMinorCreation
+  spellMinorGlobeOfInvulnerability
+  spellOtilukeSResilientSphere
+  spellPhantasmalKiller
+  spellPolymorphOther
+  spellPolymorphSelf
+  spellRainbowPattern
+  spellRemoveCurse
+  spellScrying
+  spellShadowConjuration
+  spellShout
+  spellSolidFog
+  spellStoneskin
+  spellSummonMonsterIV
+  spellWallOfFire
+  spellWallOfIce
+end
+
+category groupSpellsSorcererL5
+  spellAnimalGrowth
+  spellAnimateDead
+  spellBigbySInterposingHand
+  spellCloudkill
+  spellConeOfCold
+  spellContactOtherPlane
+  spellDismissal
+  spellDominatePerson
+  spellDream
+  spellFabricate
+  spellFalseVision
+  spellFeeblemind
+  spellGreaterShadowConjuration
+  spellHoldMonster
+  spellLeomundSSecretChest
+  spellLesserPlanarBinding
+  spellMagicJar
+  spellMajorCreation
+  spellMindFog
+  spellMirageArcana
+  spellMordenkainenSFaithfulHound
+  spellNightmare
+  spellPasswall
+  spellPermanency
+  spellPersistentImage
+  spellPryingEyes
+  spellRarySTelepathicBond
+  spellSeeming
+  spellSending
+  spellShadowEvocation
+  spellStoneShape
+  spellSummonMonsterV
+  spellTelekinesis
+  spellTeleport
+  spellTransmuteMudToRock
+  spellTransmuteRockToMud
+  spellWallOfForce
+  spellWallOfIron
+  spellWallOfStone
+end
+
+category groupSpellsSorcererL6
+  spellAcidFog
+  spellAnalyzeDweomer
+  spellAntimagicField
+  spellBigbySForcefulHand
+  spellChainLightning
+  spellCircleOfDeath
+  spellContingency
+  spellControlWater
+  spellControlWeather
+  spellDisintegrate
+  spellEyebite
+  spellFleshToStone
+  spellGeasQuest
+  spellGlobeOfInvulnerability
+  spellGreaterDispelling
+  spellGreaterShadowEvocation
+  spellGuardsAndWards
+  spellLegendLore
+  spellMassHaste
+  spellMassSuggestion
+  spellMislead
+  spellMoveEarth
+  spellOtilukeSFreezingSphere
+  spellPermanentImage
+  spellPlanarBinding
+  spellProgrammedImage
+  spellProjectImage
+  spellRepulsion
+  spellShades
+  spellStoneToFlesh
+  spellSummonMonsterVI
+  spellTenserSTransformation
+  spellTrueSeeing
+  spellVeil
+end
+
+category groupSpellsSorcererL7
+  spellBanishment
+  spellBigbySGraspingHand
+  spellControlUndead
+  spellDelayedBlastFireball
+  spellDrawmijSInstantSummons
+  spellEtherealJaunt
+  spellFingerOfDeath
+  spellForcecage
+  spellGreaterScrying
+  spellInsanity
+  spellLimitedWish
+  spellMassInvisibility
+  spellMordenkainenSMagnificentMansion
+  spellMordenkainenSSword
+  spellPhaseDoor
+  spellPlaneShift
+  spellPowerWordStun
+  spellPrismaticSpray
+  spellReverseGravity
+  spellSequester
+  spellShadowWalk
+  spellSimulacrum
+  spellSpellTurning
+  spellStatue
+  spellSummonMonsterVII
+  spellTeleportWithoutError
+  spellVanish
+  spellVision
+end
+
+category groupSpellsSorcererL8
+  spellAntipathy
+  spellBigbySClenchedFist
+  spellBinding
+  spellClone
+  spellDemand
+  spellDiscernLocation
+  spellEtherealness
+  spellGreaterPlanarBinding
+  spellHorridWilting
+  spellIncendiaryCloud
+  spellIronBody
+  spellMassCharm
+  spellMaze
+  spellMindBlank
+  spellOtilukeSTelekineticSphere
+  spellOttoSIrresistibleDance
+  spellPolymorphAnyObject
+  spellPowerWordBlind
+  spellPrismaticWall
+  spellProtectionFromSpells
+  spellScreen
+  spellSummonMonsterVIII
+  spellSunburst
+  spellSymbol
+  spellSympathy
+  spellTrapTheSoul
+end
+
+category groupSpellsSorcererL9
+  spellAstralProjection
+  spellBigbySCrushingHand
+  spellDominateMonster
+  spellEnergyDrain
+  spellForesight
+  spellFreedom
+  spellGate
+  spellImprisonment
+  spellMeteorSwarm
+  spellMordenkainenSDisjunction
+  spellPowerWordKill
+  spellPrismaticSphere
+  spellRefuge
+  spellShapechange
+  spellSoulBind
+  spellSummonMonsterIX
+  spellTeleportationCircle
+  spellTemporalStasis
+  spellTimeStop
+  spellWailOfTheBanshee
+  spellWeird
+  spellWish
+end
+
+category groupSpellsSorcerer
+  groupSpellsSorcererL0
+  groupSpellsSorcererL1
+  groupSpellsSorcererL2
+  groupSpellsSorcererL3
+  groupSpellsSorcererL4
+  groupSpellsSorcererL5
+  groupSpellsSorcererL6
+  groupSpellsSorcererL7
+  groupSpellsSorcererL8
+  groupSpellsSorcererL9
+end
+
+category groupSpellsStrengthL1
+  spellEndureElements
+end
+
+category groupSpellsStrengthL2
+  spellBullSStrength
+end
+
+category groupSpellsStrengthL3
+  spellMagicVestment
+end
+
+category groupSpellsStrengthL4
+  spellSpellImmunity
+end
+
+category groupSpellsStrengthL5
+  spellRighteousMight
+end
+
+category groupSpellsStrengthL6
+  spellStoneskin
+end
+
+category groupSpellsStrengthL7
+  spellBigbySGraspingHand
+end
+
+category groupSpellsStrengthL8
+  spellBigbySClenchedFist
+end
+
+category groupSpellsStrengthL9
+  spellBigbySCrushingHand
+end
+
+category groupSpellsStrength
+  null
+  groupSpellsStrengthL1
+  groupSpellsStrengthL2
+  groupSpellsStrengthL3
+  groupSpellsStrengthL4
+  groupSpellsStrengthL5
+  groupSpellsStrengthL6
+  groupSpellsStrengthL7
+  groupSpellsStrengthL8
+  groupSpellsStrengthL9
+end
+
+category groupSpellsSunL1
+  spellEndureElements
+end
+
+category groupSpellsSunL2
+  spellHeatMetal
+end
+
+category groupSpellsSunL3
+  spellSearingLight
+end
+
+category groupSpellsSunL4
+  spellFireShield
+end
+
+category groupSpellsSunL5
+  spellFlameStrike
+end
+
+category groupSpellsSunL6
+  spellFireSeeds
+end
+
+category groupSpellsSunL7
+  spellSunbeam
+end
+
+category groupSpellsSunL8
+  spellSunburst
+end
+
+category groupSpellsSunL9
+  spellPrismaticSphere
+end
+
+category groupSpellsSun
+  null
+  groupSpellsSunL1
+  groupSpellsSunL2
+  groupSpellsSunL3
+  groupSpellsSunL4
+  groupSpellsSunL5
+  groupSpellsSunL6
+  groupSpellsSunL7
+  groupSpellsSunL8
+  groupSpellsSunL9
+end
+
+category groupSpellsTravelL1
+  spellExpeditiousRetreat
+end
+
+category groupSpellsTravelL2
+  spellLocateObject
+end
+
+category groupSpellsTravelL3
+  spellFly
+end
+
+category groupSpellsTravelL4
+  spellDimensionDoor
+end
+
+category groupSpellsTravelL5
+  spellTeleport
+end
+
+category groupSpellsTravelL6
+  spellFindThePath
+end
+
+category groupSpellsTravelL7
+  spellTeleportWithoutError
+end
+
+category groupSpellsTravelL8
+  spellPhaseDoor
+end
+
+category groupSpellsTravelL9
+  spellAstralProjection
+end
+
+category groupSpellsTravel
+  null
+  groupSpellsTravelL1
+  groupSpellsTravelL2
+  groupSpellsTravelL3
+  groupSpellsTravelL4
+  groupSpellsTravelL5
+  groupSpellsTravelL6
+  groupSpellsTravelL7
+  groupSpellsTravelL8
+  groupSpellsTravelL9
+end
+
+category groupSpellsTrickeryL1
+  spellChangeSelf
+end
+
+category groupSpellsTrickeryL2
+  spellInvisibility
+end
+
+category groupSpellsTrickeryL3
+  spellNondetection
+end
+
+category groupSpellsTrickeryL4
+  spellConfusion
+end
+
+category groupSpellsTrickeryL5
+  spellFalseVision
+end
+
+category groupSpellsTrickeryL6
+  spellMislead
+end
+
+category groupSpellsTrickeryL7
+  spellScreen
+end
+
+category groupSpellsTrickeryL8
+  spellPolymorphAnyObject
+end
+
+category groupSpellsTrickeryL9
+  spellTimeStop
+end
+
+category groupSpellsTrickery
+  null
+  groupSpellsTrickeryL1
+  groupSpellsTrickeryL2
+  groupSpellsTrickeryL3
+  groupSpellsTrickeryL4
+  groupSpellsTrickeryL5
+  groupSpellsTrickeryL6
+  groupSpellsTrickeryL7
+  groupSpellsTrickeryL8
+  groupSpellsTrickeryL9
+end
+
+category groupSpellsUndeadSlayerL1
+  spellCureLightWounds
+  spellInvisibilityToUndead
+  spellMagicWeapon
+  spellRemoveFear
+end
+
+category groupSpellsUndeadSlayerL2
+  spellBullSStrength
+  spellContinualFlame
+  spellCureModerateWounds
+  spellDarkvision
+end
+
+category groupSpellsUndeadSlayerL3
+  spellCureSeriousWounds
+  spellHaltUndead
+  spellProtectionFromElements
+  spellSearingLight
+end
+
+category groupSpellsUndeadSlayerL4
+  spellCureCriticalWounds
+  spellDeathWard
+  spellFreedomOfMovement
+end
+
+category groupSpellsUndeadSlayer
+  null
+  groupSpellsUndeadSlayerL1
+  groupSpellsUndeadSlayerL2
+  groupSpellsUndeadSlayerL3
+  groupSpellsUndeadSlayerL4
+end
+
+category groupSpellsWarL1
+  spellMagicWeapon
+end
+
+category groupSpellsWarL2
+  spellSpiritualWeapon
+end
+
+category groupSpellsWarL3
+  spellMagicVestment
+end
+
+category groupSpellsWarL4
+  spellDivinePower
+end
+
+category groupSpellsWarL5
+  spellFlameStrike
+end
+
+category groupSpellsWarL6
+  spellBladeBarrier
+end
+
+category groupSpellsWarL7
+  spellPowerWordStun
+end
+
+category groupSpellsWarL8
+  spellPowerWordBlind
+end
+
+category groupSpellsWarL9
+  spellPowerWordKill
+end
+
+category groupSpellsWar
+  null
+  groupSpellsWarL1
+  groupSpellsWarL2
+  groupSpellsWarL3
+  groupSpellsWarL4
+  groupSpellsWarL5
+  groupSpellsWarL6
+  groupSpellsWarL7
+  groupSpellsWarL8
+  groupSpellsWarL9
+end
+
+category groupSpellsWaterL1
+  spellObscuringMist
+end
+
+category groupSpellsWaterL2
+  spellFogCloud
+end
+
+category groupSpellsWaterL3
+  spellWaterBreathing
+end
+
+category groupSpellsWaterL4
+  spellControlWater
+end
+
+category groupSpellsWaterL5
+  spellIceStorm
+end
+
+category groupSpellsWaterL6
+  spellConeOfCold
+end
+
+category groupSpellsWaterL7
+  spellAcidFog
+end
+
+category groupSpellsWaterL8
+  spellHorridWilting
+end
+
+category groupSpellsWaterL9
+  spellElementalSwarm
+end
+
+category groupSpellsWater
+  null
+  groupSpellsWaterL1
+  groupSpellsWaterL2
+  groupSpellsWaterL3
+  groupSpellsWaterL4
+  groupSpellsWaterL5
+  groupSpellsWaterL6
+  groupSpellsWaterL7
+  groupSpellsWaterL8
+  groupSpellsWaterL9
+end
+
+category groupSpellsWitchL0
+  spellArcaneMark
+  spellCureMinorWounds
+  spellDancingLights
+  spellDaze
+  spellDetectMagic
+  spellDetectPoison
+  spellFlare
+  spellGhostSound
+  spellLight
+  spellMending
+  spellReadMagic
+  spellResistance
+  spellVirtue
+end
+
+category groupSpellsWitchL1
+  spellCauseFear
+  spellChangeSelf
+  spellCharmPerson
+  spellCommand
+  spellComprehendLanguages
+  spellCureLightWounds
+  spellDoom
+  spellEndureElements
+  spellHypnotism
+  spellIdentify
+  spellSilentImage
+  spellSleep
+  spellVentriloquism
+end
+
+category groupSpellsWitchL2
+  spellAlterSelf
+  spellBlindnessDeafness
+  spellCalmEmotions
+  spellCureModerateWounds
+  spellDelayPoison
+  spellDetectThoughts
+  spellEnthrall
+  spellInvisibility
+  spellLocateObject
+  spellMinorImage
+  spellScare
+  spellSpeakWithAnimals
+  spellWhisperingWind
+end
+
+category groupSpellsWitchL3
+  spellBestowCurse
+  spellClairaudienceClairvoyance
+  spellContagion
+  spellCreateFoodAndWater
+  spellDispelMagic
+  spellLeomundSTinyHut
+  spellMagicCircleAgainstChaos
+  spellMagicCircleAgainstEvil
+  spellMagicCircleAgainstGood
+  spellMagicCircleAgainstLaw
+  spellMajorImage
+  spellRemoveBlindnessDeafness
+  spellSuggestion
+  spellTongues
+  spellWaterBreathing
+end
+
+category groupSpellsWitchL4
+  spellCharmMonster
+  spellDiscernLies
+  spellDivination
+  spellEmotion
+  spellFear
+  spellGiantVermin
+  spellLocateCreature
+  spellMinorCreation
+  spellNeutralizePoison
+  spellPolymorphOther
+  spellPolymorphSelf
+  spellRemoveCurse
+  spellScrying
+end
+
+category groupSpellsWitchL5
+  spellAnimalGrowth
+  spellDream
+  spellFalseVision
+  spellFeeblemind
+  spellGreaterCommand
+  spellGreaterScrying
+  spellMagicJar
+  spellMajorCreation
+  spellMirageArcana
+  spellNightmare
+  spellSeeming
+  spellSending
+end
+
+category groupSpellsWitchL6
+  spellAnimateObjects
+  spellControlWeather
+  spellEyebite
+  spellFindThePath
+  spellGeasQuest
+  spellHeroesFeast
+  spellLegendLore
+  spellMassSuggestion
+  spellMislead
+  spellProjectImage
+  spellRepulsion
+  spellTenserSTransformation
+  spellTrueSeeing
+end
+
+category groupSpellsWitchL7
+  spellCreepingDoom
+  spellFingerOfDeath
+  spellInsanity
+  spellLiveoak
+  spellRepelWood
+  spellTransportViaPlants
+end
+
+category groupSpellsWitchL8
+  spellAntipathy
+  spellDiscernLocation
+  spellHorridWilting
+  spellPolymorphAnyObject
+  spellSympathy
+  spellTrapTheSoul
+end
+
+category groupSpellsWitchL9
+  spellEarthquake
+  spellForesight
+  spellRefuge
+  spellShapechange
+  spellWailOfTheBanshee
+  spellWeird
+end
+
+category groupSpellsWitch
+  groupSpellsWitchL0
+  groupSpellsWitchL1
+  groupSpellsWitchL2
+  groupSpellsWitchL3
+  groupSpellsWitchL4
+  groupSpellsWitchL5
+  groupSpellsWitchL6
+  groupSpellsWitchL7
+  groupSpellsWitchL8
+  groupSpellsWitchL9
+end
+
+category groupSpellsWizardL0
+  spellArcaneMark
+  spellDancingLights
+  spellDaze
+  spellDetectMagic
+  spellDetectPoison
+  spellDisruptUndead
+  spellFlare
+  spellGhostSound
+  spellLight
+  spellMageHand
+  spellMending
+  spellOpenClose
+  spellPrestidigitation
+  spellRayOfFrost
+  spellReadMagic
+  spellResistance
+end
+
+category groupSpellsWizardL1
+  spellAlarm
+  spellAnimateRope
+  spellBurningHands
+  spellCauseFear
+  spellChangeSelf
+  spellCharmPerson
+  spellChillTouch
+  spellColorSpray
+  spellComprehendLanguages
+  spellDetectSecretDoors
+  spellDetectUndead
+  spellEndureElements
+  spellEnlarge
+  spellErase
+  spellExpeditiousRetreat
+  spellFeatherFall
+  spellGrease
+  spellHoldPortal
+  spellHypnotism
+  spellIdentify
+  spellJump
+  spellMageArmor
+  spellMagicMissile
+  spellMagicWeapon
+  spellMessage
+  spellMount
+  spellNystulSMagicAura
+  spellNystulSUndetectableAura
+  spellObscuringMist
+  spellProtectionFromChaos
+  spellProtectionFromEvil
+  spellProtectionFromGood
+  spellProtectionFromLaw
+  spellRayOfEnfeeblement
+  spellReduce
+  spellShield
+  spellShockingGrasp
+  spellSilentImage
+  spellSleep
+  spellSpiderClimb
+  spellSummonMonsterI
+  spellTenserSFloatingDisk
+  spellTrueStrike
+  spellUnseenServant
+  spellVentriloquism
+end
+
+category groupSpellsWizardL2
+  spellAlterSelf
+  spellArcaneLock
+  spellBlindnessDeafness
+  spellBlur
+  spellBullSStrength
+  spellCatSGrace
+  spellContinualFlame
+  spellDarkness
+  spellDarkvision
+  spellDaylight
+  spellDetectThoughts
+  spellEndurance
+  spellFlamingSphere
+  spellFogCloud
+  spellGhoulTouch
+  spellGlitterdust
+  spellHypnoticPattern
+  spellInvisibility
+  spellKnock
+  spellLeomundSTrap
+  spellLevitate
+  spellLocateObject
+  spellMagicMouth
+  spellMelfSAcidArrow
+  spellMinorImage
+  spellMirrorImage
+  spellMisdirection
+  spellObscureObject
+  spellProtectionFromArrows
+  spellPyrotechnics
+  spellResistElements
+  spellRopeTrick
+  spellScare
+  spellSeeInvisibility
+  spellShatter
+  spellSpectralHand
+  spellSummonMonsterII
+  spellSummonSwarm
+  spellTashaSHideousLaughter
+  spellWeb
+  spellWhisperingWind
+end
+
+category groupSpellsWizardL3
+  spellBlink
+  spellClairaudienceClairvoyance
+  spellDispelMagic
+  spellDisplacement
+  spellExplosiveRunes
+  spellFireball
+  spellFlameArrow
+  spellFly
+  spellGaseousForm
+  spellGentleRepose
+  spellGreaterMagicWeapon
+  spellGustOfWind
+  spellHaltUndead
+  spellHaste
+  spellHoldPerson
+  spellIllusoryScript
+  spellInvisibilitySphere
+  spellKeenEdge
+  spellLeomundSTinyHut
+  spellLightningBolt
+  spellMagicCircleAgainstChaos
+  spellMagicCircleAgainstEvil
+  spellMagicCircleAgainstGood
+  spellMagicCircleAgainstLaw
+  spellMajorImage
+  spellNondetection
+  spellPhantomSteed
+  spellProtectionFromElements
+  spellSecretPage
+  spellSepiaSnakeSigil
+  spellShrinkItem
+  spellSleetStorm
+  spellSlow
+  spellStinkingCloud
+  spellSuggestion
+  spellSummonMonsterIII
+  spellTongues
+  spellVampiricTouch
+  spellWaterBreathing
+  spellWindWall
+end
+
+category groupSpellsWizardL4
+  spellArcaneEye
+  spellBestowCurse
+  spellCharmMonster
+  spellConfusion
+  spellContagion
+  spellDetectScrying
+  spellDimensionDoor
+  spellDimensionalAnchor
+  spellEmotion
+  spellEnervation
+  spellEvardSBlackTentacles
+  spellFear
+  spellFireShield
+  spellFireTrap
+  spellHallucinatoryTerrain
+  spellIceStorm
+  spellIllusoryWall
+  spellImprovedInvisibility
+  spellLeomundSSecureShelter
+  spellLesserGeas
+  spellLocateCreature
+  spellMinorCreation
+  spellMinorGlobeOfInvulnerability
+  spellOtilukeSResilientSphere
+  spellPhantasmalKiller
+  spellPolymorphOther
+  spellPolymorphSelf
+  spellRainbowPattern
+  spellRarySMnemonicEnhancer
+  spellRemoveCurse
+  spellScrying
+  spellShadowConjuration
+  spellShout
+  spellSolidFog
+  spellStoneskin
+  spellSummonMonsterIV
+  spellWallOfFire
+  spellWallOfIce
+end
+
+category groupSpellsWizardL5
+  spellAnimalGrowth
+  spellAnimateDead
+  spellBigbySInterposingHand
+  spellCloudkill
+  spellConeOfCold
+  spellContactOtherPlane
+  spellDismissal
+  spellDominatePerson
+  spellDream
+  spellFabricate
+  spellFalseVision
+  spellFeeblemind
+  spellGreaterShadowConjuration
+  spellHoldMonster
+  spellLeomundSSecretChest
+  spellLesserPlanarBinding
+  spellMagicJar
+  spellMajorCreation
+  spellMindFog
+  spellMirageArcana
+  spellMordenkainenSFaithfulHound
+  spellNightmare
+  spellPasswall
+  spellPermanency
+  spellPersistentImage
+  spellPryingEyes
+  spellRarySTelepathicBond
+  spellSeeming
+  spellSending
+  spellShadowEvocation
+  spellStoneShape
+  spellSummonMonsterV
+  spellTelekinesis
+  spellTeleport
+  spellTransmuteMudToRock
+  spellTransmuteRockToMud
+  spellWallOfForce
+  spellWallOfIron
+  spellWallOfStone
+end
+
+category groupSpellsWizardL6
+  spellAcidFog
+  spellAnalyzeDweomer
+  spellAntimagicField
+  spellBigbySForcefulHand
+  spellChainLightning
+  spellCircleOfDeath
+  spellContingency
+  spellControlWater
+  spellControlWeather
+  spellDisintegrate
+  spellEyebite
+  spellFleshToStone
+  spellGeasQuest
+  spellGlobeOfInvulnerability
+  spellGreaterDispelling
+  spellGreaterShadowEvocation
+  spellGuardsAndWards
+  spellLegendLore
+  spellMassHaste
+  spellMassSuggestion
+  spellMislead
+  spellMordenkainenSLucubration
+  spellMoveEarth
+  spellOtilukeSFreezingSphere
+  spellPermanentImage
+  spellPlanarBinding
+  spellProgrammedImage
+  spellProjectImage
+  spellRepulsion
+  spellShades
+  spellStoneToFlesh
+  spellSummonMonsterVI
+  spellTenserSTransformation
+  spellTrueSeeing
+  spellVeil
+end
+
+category groupSpellsWizardL7
+  spellBanishment
+  spellBigbySGraspingHand
+  spellControlUndead
+  spellDelayedBlastFireball
+  spellDrawmijSInstantSummons
+  spellEtherealJaunt
+  spellFingerOfDeath
+  spellForcecage
+  spellGreaterScrying
+  spellInsanity
+  spellLimitedWish
+  spellMassInvisibility
+  spellMordenkainenSMagnificentMansion
+  spellMordenkainenSSword
+  spellPhaseDoor
+  spellPlaneShift
+  spellPowerWordStun
+  spellPrismaticSpray
+  spellReverseGravity
+  spellSequester
+  spellShadowWalk
+  spellSimulacrum
+  spellSpellTurning
+  spellStatue
+  spellSummonMonsterVII
+  spellTeleportWithoutError
+  spellVanish
+  spellVision
+end
+
+category groupSpellsWizardL8
+  spellAntipathy
+  spellBigbySClenchedFist
+  spellBinding
+  spellClone
+  spellDemand
+  spellDiscernLocation
+  spellEtherealness
+  spellGreaterPlanarBinding
+  spellHorridWilting
+  spellIncendiaryCloud
+  spellIronBody
+  spellMassCharm
+  spellMaze
+  spellMindBlank
+  spellOtilukeSTelekineticSphere
+  spellOttoSIrresistibleDance
+  spellPolymorphAnyObject
+  spellPowerWordBlind
+  spellPrismaticWall
+  spellProtectionFromSpells
+  spellScreen
+  spellSummonMonsterVIII
+  spellSunburst
+  spellSymbol
+  spellSympathy
+  spellTrapTheSoul
+end
+
+category groupSpellsWizardL9
+  spellAstralProjection
+  spellBigbySCrushingHand
+  spellDominateMonster
+  spellEnergyDrain
+  spellForesight
+  spellFreedom
+  spellGate
+  spellImprisonment
+  spellMeteorSwarm
+  spellMordenkainenSDisjunction
+  spellPowerWordKill
+  spellPrismaticSphere
+  spellRefuge
+  spellShapechange
+  spellSoulBind
+  spellSummonMonsterIX
+  spellTeleportationCircle
+  spellTemporalStasis
+  spellTimeStop
+  spellWailOfTheBanshee
+  spellWeird
+  spellWish
+end
+
+category groupSpellsWizard
+  groupSpellsWizardL0
+  groupSpellsWizardL1
+  groupSpellsWizardL2
+  groupSpellsWizardL3
+  groupSpellsWizardL4
+  groupSpellsWizardL5
+  groupSpellsWizardL6
+  groupSpellsWizardL7
+  groupSpellsWizardL8
+  groupSpellsWizardL9
+end
+
+
+category groupTargetedSpells
+  spellMagicMissile
+  spellMelfsAcidArrow
+  spellFireBall
+  spellLightningBolt
+  spellSleep
+  spellShockingGrasp
+  spellBurningHands
+  spellCauseFear
+  spellChillTouch
+  spellEnlarge
+  spellReduce
+  spellBlindnessDeafness
+  spellGhoulTouch
+  spellScare
+  spellDispelMagic
+  spellSlow
+  spellHoldPerson
+  spellVampiricTouch
+  spellCommand
+  spellInflictLightWounds
+  spellEnthrall
+  spellInflictModerateWounds
+  spellSilence
+  spellBestowCurse
+  spellInflictSeriousWounds
+end
+

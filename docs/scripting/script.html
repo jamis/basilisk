@@ -1,0 +1,916 @@
+<HTML>
+<HEAD>
+  <TITLE>Basilisk Script</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+	<H1>Basilisk Script</H1>
+
+	Whereas <A HREF="dff.html#thing">things</A> form the 
+	building blocks of a Basilisk-defined universe, and
+	<A HREF="dff.html#category">categories</A> form the glue
+	that holds those blocks together, <i>rules</i> define how
+	the things and categories interact and behave.  They are
+	also used to define "functional" values -- those values
+	(like ability score bonuses in D&amp;D) that are computed,
+	rather than looked up.
+	<P>
+	This document will discuss the syntax of rules in Basilisk,
+	and will demonstrate through various examples how they are
+	written and used.
+	<P>
+	Please click on a chapter heading:
+	<OL>
+		<LI><A HREF="#rules">Rules, rules, rules!</A><BR>A very
+				basic introduction to the very basics of rule-writing.
+		<LI><A HREF="#parm">Parameters and Return Values</A><BR>
+				How to send values from one rule to another.
+		<LI><A HREF="#ops">Operators</A><BR>
+				Math and string concatenation.
+		<LI><A HREF="#branch">Conditional Branching</A><BR>
+				How to make your rules smarter by performing a given
+				action only if a certain condition is true.
+		<LI><A HREF="#loop">Looping</A><BR>
+				How to perform actions repeatedly.
+				<UL>
+					<LI><A HREF="#for">For Loops</A>
+					<LI><A HREF="#while">While Loops</A>
+					<LI><A HREF="#do">Do Loops</A>
+					<LI><A HREF="#exit">Exiting Loops Early</A>
+				</UL>
+		<LI><A HREF="#array">Arrays</A><BR>
+				The filing-cabinet type, for managing lists of
+				values.
+		<LI><A HREF="#builtin">Built-In Functions</A><BR>
+				Built-in functions you can use.
+		<LI><A HREF="#conc">Conclusion</A><BR>
+				Wrapping things up.
+	</OL>
+
+	<H2><A NAME="rules"></A>1. Rules, rules, rules!</H2>
+
+	Here's an example of a very simple (and quite useless) rule:
+	<BLOCKQUOTE>
+<PRE>
+<b>rule</b> myVeryFirstRule<b>()</b>
+/* this is a multi-line
+comment! It can stretch for as long as
+you want. */
+
+x = 2 + 2;
+
+// this is a single-line comment!
+<b>end</b>
+</PRE>
+	</BLOCKQUOTE>
+	This example demonstrates some very basic, but very
+	important, points:
+	<OL>
+		<LI><I>All rules are declared with the 'rule' keyword.</I>
+				There is only one way to declare rules (unlike things
+				and categories, which may even be declared anonymously)!
+		<LI><I>The rule's identifier must immediately follow the
+				rule keyword.</I>  This identifier must be unique.
+		<LI>Note the empty parenthesis after the identifier.
+				<I>You must always put these parenthesis here</I>.  In
+				a later example I'll show you exactly what these are
+				for.
+		<LI><I>Comments may be specified either between /* and */ or
+				on one line following //.</I>  Comments are text that
+				you may insert liberally into your rules to help people
+				that later look at them to understand what is happening.
+				Use comments often, and use them well!
+		<LI><I>All rules are terminated by the 'end' keyword,</I>
+				just like things, templates, and categories.
+		<LI><I>All statements (except those ending with the 'end' keyword)
+				must end with a semicolon ';'.</I>  You'll run into all
+				kinds of problems if you forget even one semicolon,
+				anywhere!  In the same vein, if you put a semicolon
+				where you're not supposed to (like after the 'end'
+				keyword), you'll get problems, too.
+	</OL>
+	That little letter 'x' is what is called a "variable."  Those
+	of you who didn't sleep through basic algebra in high
+	school will be familiar with that term.  For the rest of you,
+	a variable is simply place that you can put values.  In
+	Basilisk, a variable may hold any type of value, be it
+	numeric, string, boolean, thing, category, rule, or
+	otherwise.  And in the example shown above, the variable
+	x "gets" (that's how you read that '=' sign) the result of
+	2 + 2, or 4.
+	<P>
+	Notice that this also demonstrates how to compute values.
+	You can use '+' and '-' for addition and subtraction (respectively),
+	'*' for multiplication, '/' for division, '^' for exponentiation,
+	and '%' for modulus division (where you get the remainder
+	instead of the result).  Also, anywhere you would normally
+	put a number in a formula, you can also put a variable (as
+	long as the variable contains a value appropriate to the
+	operation being performed).  For example:
+	<BLOCKQUOTE>
+<PRE>
+rule myNextRule()
+x = 15;
+y = x * 3;
+end
+</PRE>
+	</BLOCKQUOTE>
+	This example assigns the number 15 to x, and then assigns
+	x times 3 to y.  Since x is 15, y will get the value 45
+	(15 times 3).  Make sense?  Great!  We'll talk more about
+	math in the section on <A HREF="#ops">operators</A>.
+	<P>
+	One other thing.  Although a rule will always terminate when
+	it reaches the 'end' keyword at the end of a rule, there
+	are times when you want to exit a rule early.  You can do
+	this with the "exit rule" statement:
+	<BLOCKQUOTE>
+<PRE>
+rule exitDemo()
+/* stuff here */
+
+<b>exit rule</b>;
+
+/* more stuff here */
+end
+</PRE>
+	</BLOCKQUOTE>
+	The rule will end when it reaches the "exit rule"
+	statement.
+
+	<H2><A NAME="parm"></A>2. Parameters and Return Values</H2>
+
+	Well.  That's all fine and dandy, right?  You know how to
+	add 2 and 2.  Now, suppose you had something like this:
+	<BLOCKQUOTE>
+<PRE>
+rule hereIsAnUglyOne()
+y = 15;
+x = ( ( 3 * y ) / 2 ) + 1;
+/* do something with x here */
+x = ( ( 3 * y ) / 2 ) + 2;
+/* do something else with x here */
+x = ( ( 2 * y ) / 2 ) + 1;
+/* do something else with x here */
+end
+</PRE>
+	</BLOCKQUOTE>
+	What if you could simplify this a bit?  What if there were
+	a way to just send the values that change in each formula
+	to another rule and have that rule return the result?
+	<P>
+	You've probably guessed that there is, indeed a way to do it.
+	Observe this next example:
+	<BLOCKQUOTE>
+<PRE>
+rule doMyFormula( <b>a b c</b> )
+doMyFormula = ( ( a * b ) / 2 ) + c;
+end
+
+rule hereIsAnUglyOne()
+y = 15;
+x = doMyFormula( 3, y, 1 );
+/* do something with x here */
+x = doMyFormula( 3, y, 2 );
+/* do something else with x here */
+x = doMyFormula( 2, y, 2 );
+/* do something else with x here */
+end
+</PRE>
+	</BLOCKQUOTE>
+	Hope you didn't blink, or you would have missed it!  What we
+	did here is define a new rule, called 'doMyFormula' that
+	takes 3 <i>parameters</i>.  A parameter is a value that you
+	can send to a rule, and rule's can accept any number of
+	parameters.
+	<P>
+	The three variables ('a', 'b', and 'c') in the parenthesis
+	beside 'doMyFormula' are the parameter list of
+	'doMyFormula'.  In 'hereIsAnUglyOne', the three values
+	in the parameter list beside doMyFormula get mapped,
+	value-by-value, to those three variables ('a', 'b', and 'c').
+	<P>
+	By assigning the result of the formula to 'doMyFormula',
+	we are essentially saying that 'doMyFormula' will return
+	the calculated value as it's <i>return value</i>.  You'll see
+	that we actually assign that return value to x three times
+	in 'hereIsAnUglyOne'.
+	<P>
+	Even though a given rule may only have 3 arguments, you
+	can pass as many parameters to it as you want, or as few.
+	If you pass fewer parameters than the rule expects, the
+	remaining arguments are automatically initialized to null.
+	You may use the <A HREF="#fn_parameter">Parameter</A> 
+	function to access parameters beyond those declared by the
+	rule.
+	<P>
+	You'll see a lot of parameters and return values before this
+	documentation is done.
+
+	<H2><A NAME="ops"></A>3. Operators</H2>
+
+	Operators are things like '+' and '-'.  In Basilisk, you
+	can use operators to perform mathematical calculations, and
+	to perform string concatenation.
+	<P>
+	Here's an example of all the mathematical operators:
+	<BLOCKQUOTE>
+<PRE>
+rule operatorDemo()
+x = 3 + 2; /* gets 5 */
+x = 3 - 2; /* gets 1 */
+x = 3 * 2; /* gets 6 */
+x = 3 / 2; /* gets 1.5 */
+x = 3 ^ 2; /* gets 3 squared, or 9 */
+x = 3 % 2; /* gets 1, or 3 mod 2 */
+end
+</PRE>
+	</BLOCKQUOTE>
+	<P>
+	The '+' operator may also be used to catenate two strings
+	together, like so:
+	<BLOCKQUOTE>
+<PRE>
+rule operatorDemo2()
+x = "Hello " + "World"; 
+/* gets "Hello World" */
+x = "I am " + 26 + " years old"; 
+/* gets "I am 26 years old" */
+end
+</PRE>
+	</BLOCKQUOTE>
+	Notice that when you "add" strings and numbers together,
+	the numbers are converted to strings and catenated into
+	the final result.
+	<P>
+	Other operators are used to test equivalence.  These are:
+	<UL>
+		<LI><b>eq</b> -- test to see if two values are equivalent.
+		<LI><b>ne</b> -- test to see if two values are not equivalent.
+		<LI><b>gt</b> -- test to see if one value is greater than
+				another.
+		<LI><b>lt</b> -- test to see if one value is less than
+				another.
+		<LI><b>ge</b> -- test to see if one value is greater than
+				or equal to another.
+		<LI><b>le</b> -- test to see if one value is less than or
+				equal to another.
+	</UL>
+	Each of the above operators returns a <i>boolean</i> (true
+	or false) value as the result.  Here's an example:
+	<BLOCKQUOTE>
+<PRE>
+rule comparisonDemo()
+x = 3 eq 4; /* gets false */
+x = "nice" ne "mean" /* gets true */
+x = 7 le 9; /* gets true */
+end
+</PRE>
+	</BLOCKQUOTE>
+	<P>
+	There are two other operators you can use.  These are
+	<b>and</b> and <b>or</b>.  The <b>and</b> operator will
+	return true only if both of the operands are true.  The
+	<b>or</b> operator will return true if either of the operands
+	are true.
+	<BLOCKQUOTE>
+<PRE>
+rule conjunctionDemo()
+x = 3 eq 4;
+y = 7 le 9;
+z = x or y; /* gets true */
+
+x = 3 lt 2;
+y = "b" eq "c";
+z = x and y; /* gets false */
+end
+</PRE>
+	</BLOCKQUOTE>
+	There is also this little issue called "operator precedence."
+	What it means is that, for example, before you perform
+	addition, you perform all multiplications first.  In other
+	words, 'multiplication' has a higher precedence than 
+	'addition'.
+	<P>
+	Precedence in Basilisk behaves just as it does in math, with
+	expressions being evaluated left-to-right in order of
+	precendence.  To wit:
+	<UL>
+		<LI>Lowest precedence: eq ne gt lt ge le
+		<LI>+ -
+		<LI>* / %
+		<LI>Highest precedence: ^
+	</UL>
+	Also, expressions in parentheses are performed as if they
+	had an even higher precedence.  For example:
+	<BLOCKQUOTE>
+<PRE>
+rule operatorPrecedenceDemo()
+x = 3 ^ 2 + 1; /* x gets 10 */
+x = 3 ^ ( 2 + 1 ); /* x gets 27 */
+end
+</PRE>
+	</BLOCKQUOTE>
+	In the first example, "3 ^ 2" is evaluated first, and then
+	1 is added to the result.  In the second, "2 + 1" is
+	evaluated, and 3 is then raised to the resulting power.
+
+	<H2></A>4. Conditional Branching</H2>
+
+	Sometimes you only want a particular statement to execute
+	if a certain condition is true.  For instance, you only
+	want your age to increase <i>IF</i> it is your birthday
+	(and even then, some people would stop it if they could).
+	Basilisk supports then kind of "branching" via an 'if'
+	statement.
+	<P>
+	For example:
+	<BLOCKQUOTE>
+<PRE>
+rule ifDemo( something )
+<b>if</b> something eq 5 <b>then</b>
+/* do some processing */
+<b>end</b>
+end
+</PRE>
+	</BLOCKQUOTE>
+	The above example will test to see if the parameter
+	'something' equals 5, and if it does, it will perform
+	some sequence of actions.
+	<P>
+	Sometimes you want one thing done if a condition is true,
+	and another if it is false.  You can use the 'else'
+	clause to accomplish this:
+	<BLOCKQUOTE>
+<PRE>
+rule ifDemo2( something )
+if something eq 5 then
+/* do some processing */
+<b>else</b>
+/* do something else */
+end
+end
+</PRE>
+	</BLOCKQUOTE>
+	And <i>sometimes</i>, you want 'a' if 'b', or 'c' if 'd',
+	or 'e' if 'f', or otherwise just do 'g', like so:
+	<BLOCKQUOTE>
+<PRE>
+rule ifDemo3( something )
+if something eq 5 then
+/* do some processing */
+<b>elseif</b> something lt 2 <b>then</b>
+/* do something else */
+<b>elseif</b> something lt 10 <b>then</b>
+/* do something else */
+else
+/* do the default action */
+end
+end
+</PRE>
+	</BLOCKQUOTE>
+	The 'else' clause is always optional, and need not be
+	specified if it is not needed.
+	<P>
+	There is one other way to do conditional branching in
+	Basilisk.  This is via the 'case' statement.  Sometimes you
+	just want to perform some action if something has a
+	particular value.  The 'case' statement is ideal for this:
+	<BLOCKQUOTE>
+<PRE>
+rule caseDemo( something )
+<b>case</b> something
+<b>is</b> 1 <b>then</b>
+/* do something */
+<b>is</b> 2 <b>then</b>
+/* do something */
+<b>is</b> 3 <b>then</b>
+/* do something */
+<b>is</b> 4 <b>then</b>
+/* do something */
+<b>is</b> 5 <b>then</b>
+/* do something */
+<b>default</b>
+/* do something if it is none
+of the specified values */
+<b>end</b>
+end
+</PRE>
+	</BLOCKQUOTE>
+	Notice that the case statement ends with the 'end'
+	keyword.  Also, the 'default' section is optional --
+	you don't need to specify it if you don't need it.  You
+	can also test non-equivalency with case statement, as
+	follows:
+	<BLOCKQUOTE>
+<PRE>
+rule caseDemo( something )
+case something
+is 1 then
+/* do something */
+is <B>not</B> 2 then
+/* do something */
+end
+end
+</PRE>
+	</BLOCKQUOTE>
+	This has limited uses, however, and actually is almost
+	equivalent to the 'default' statement in most cases.
+
+	<H2><A NAME="loop"></A>5. Looping</H2>
+
+	Sooner or later, you'll find that you want to perform
+	some action over and over again.  You'll want to generate
+	ten random magic items, or create ten random characters.
+	Sure, you could just write the code to generate one item
+	or character, and then copy it 10 times, but what happens
+	what you suddenly decide you need 20, or 100?  That's right,
+	you turn to loops.
+	<P>
+	There are three types of loops in Basilisk, 'for' loops,
+	'while' loops, and 'do' loops.  Let's look at them in
+	that order.
+	<P>
+	<A NAME="for"></A>
+	<I>For Loops</I>
+	<P>
+	A for loop looks like this:
+	<BLOCKQUOTE>
+<PRE>
+rule forLoopDemo()
+x = 0;
+y = 0;
+<b>for</b> i <b>=</b> 1 <b>to</b> 10 <b>do</b>
+x = x + 1;
+y = y + i;
+<b>end</b>
+end
+</PRE>
+	</BLOCKQUOTE>
+	This example first sets the variable x to be 0.  Then, for
+	all values of i from 1 to 10, the statement "x = x + 1" is
+	executed.  By the end of the 10th iteration, the variable
+	x contains the number 10 (it was incremented by 1,
+	10 times).
+	<P>
+	The value of y is a little trickier.  The first time through
+	the loop, the value of i is 1, and that value is added to y
+	(initially 0), making 1.  The second time through the loop,
+	i is 2, which is added to y (now 1), making 3.  The third
+	time through the loop, i is 3, and this is added to y,
+	making 6.  This continues through 10 iterations, and at the
+	end, y is 55, the sum of all the numbers from 1 to 10.
+	<P>
+	There's nothing that says a for loop needs to start at 1.
+	You can start it at 5, or 15, or -3.  However, since the
+	loop goes upward, if you specify a "to" number that is
+	less than the "from" number, the loop will not execute
+	even once.
+	<P>
+	There is one other format for a "for" loop:  you can use it
+	to iterate through all the values in a
+	<A HREF="dff.html#category">category</A>.  Here's an
+	example:
+	<BLOCKQUOTE>
+<PRE>
+attribute cost number
+
+category testCategory
+{ .cost 5 }
+{ .cost 1 }
+{ .cost 11 }
+{ .cost 4 }
+end
+
+rule forLoopDemo2()
+total = 0;
+<b>for</b> i <b>in</b> testCategory <b>do</b>
+total = total + i.cost;
+<b>end</b>
+end
+</PRE>
+	</BLOCKQUOTE>
+	In this example, the variable 'i' will, for each time through
+	the loop, be a different one of the members of the 'testCategory'
+	category.  The first time through the loop, i is the first
+	thing in the category, the second time, it is the second
+	thing, and so on.  One caveat, however:  if the category
+	contains a "null" member, the loop will stop processing
+	when it reaches it.
+	<P>
+	Notice also how attributes of things are referenced -- with a
+	'.' followed by the attribute name.
+	<P>
+	<A NAME="while"></A>
+	<I>While Loops</I>
+	<P>
+	A "while" loop is a bit different than a "for" loop.
+	Essentially, it performs an action "while" a given condition
+	is true.  Here's an example:
+	<BLOCKQUOTE>
+<PRE>
+rule whileLoopDemo()
+x = 0;
+<b>while</b> x lt 10 <b>do</b>
+x = x + 1;
+<b>end</b>
+end
+</PRE>
+	</BLOCKQUOTE>
+	This example increments x by 1 "while" x is less than 10.
+	Since x starts as 0, the loop will execute 10 times.
+	<P>
+	The condition is evaluated each time the loop is executed,
+	before anything in the loop is executed.  This means that
+	if the condition is not true when the loop is first
+	encountered, the loop will not execute.
+	<P>
+	<A NAME="do"></A>
+	<I>Do Loops</I>
+	<P>
+	A "do" loop is much like a "while" loop, except that the
+	condition is tested at the <i>end</i> of the loop, instead
+	of the <i>beginning</i>.  This means that the loop will
+	always execute at least once.  Here's an example:
+	<BLOCKQUOTE>
+<PRE>
+rule doLoopDemo()
+x = 0;
+<b>do</b>
+x = x + 1;
+<b>loop while</b> x lt 10;
+end
+</PRE>
+	</BLOCKQUOTE>
+	This example does exactly what the "while" loop example
+	does -- it counts to ten.
+	<P>
+	<A NAME="exit"></A>
+	<I>Exiting Loops Early</I>
+	<P>
+	A final note about loops -- loops will exit when the
+	specified condition is met, but there may be times when you
+	want to terminate the loop early.  You can do it with the
+	"exit loop" statement, much like the "exit rule" statement
+	described earlier.  Here's an example:
+	<BLOCKQUOTE>
+<PRE>
+rule exitLoopDemo()
+x = 0;
+while true do
+x = x + 1;
+if x ge 10 then
+<b>exit loop</b>;
+end
+end
+end
+</PRE>
+	</BLOCKQUOTE>
+	In this (rather contrived) example, notice that the loop
+	condition is always true, meaning that the while loop will
+	never exit!  However, the 'if' test within the loop will
+	ensure that when/if the variable x is greater than or equal
+	to 10, the "exit loop" statement will be executed, which
+	will terminate the loop.
+	<P>
+	The "exit loop" statement may be used to exit out of any
+	of the loop types (for, while, and do).
+
+	<H2><A NAME="array"></A>6. Arrays</H2>
+
+	Sometimes you may have a list of values that you want to
+	treat as a single entity, like the names of all your friends.
+	Such a grouping is especially useful if you want to sort
+	those names and get them in alphabetical order.  You can
+	use arrays for this.
+	<P>
+	Arrays are created by calling the <A HREF="#builtin">built-in</A>
+	function, <A HREF="#fn_newarray">NewArray</A>.  Here's an
+	example:
+	<BLOCKQUOTE>
+<PRE>
+a = NewArray();
+</PRE>
+	</BLOCKQUOTE>
+	This example creates a new array with no elements.  Elements
+	of an array are referenced by using square brackets '[' and
+	']', with the index of the element you want within the
+	square brackets, like this:
+	<BLOCKQUOTE>
+<PRE>
+a[5] = "Hello";
+</PRE>
+	</BLOCKQUOTE>
+	This assigns the word "Hello" to the element at index 5
+	of the array.  Note that the first element in an array is
+	at index 0, not 1.  Also, if the array is not large enough
+	to have an element at the index given, the array is
+	automatically grown to fit it.  For example:
+	<BLOCKQUOTE>
+<PRE>
+a = NewArray();
+a[3] = "Hello";
+a[15] = "World";
+</PRE>
+	</BLOCKQUOTE>
+	Here, an empty array is created, with no elements.  The
+	second statement assigns "Hello" to index 3, which causes
+	the array to grow to include index 3.  The third statement
+	assigns "World" to index 15, and again the array is grown.
+	All elements not explicitly assigned to (like element 1, or
+	4, etc. in the example above) are given the value "null".
+	<P>
+	If you know how big you want your array to be, you can make
+	your rules a little faster by specifying the initial size
+	of the array, as follows:
+	<BLOCKQUOTE>
+<PRE>
+a = NewArray( 15 );
+a[3] = "Hello";
+a[15] = "World";
+</PRE>
+	</BLOCKQUOTE>
+	In this example, the array is initialized with 15 elements
+	(indices 0 to 14).  When index 3 is assigned to, the array
+	doesn't have to grow because index 3 is already included.
+	However, index 15 (the 16th element, because the first is
+	index 0), is not included, so the array has to grow by 1
+	element to include index 15.
+	<P>
+	Lastly, you can sort arrays using the <A HREF="#builtin">built-in</A>
+	function <A HREF="#fn_sort">Sort</A>.
+
+	<H2><A NAME="builtin"></A>7. Built-In Functions</H2>
+
+	Basilisk comes all set with quite a few built-in "functions."
+	If the term "function" is unfamiliar to you, think of it as
+	a rule.
+	<P>
+	What follows is a list of all the built-in functions in
+	Basilisk, and what parameters they take, and what values
+	they return (if any).
+	<UL>
+		<LI><A NAME="fn_add"></A>
+				<b>Add( category, item )</b><BR>
+				<b>Add( category, item, weight )</b><BR>
+				The "Add" function adds the given item to the given
+				category.  The 'item' must be either a thing, a
+				category, a rule, or the "null" keyword.  The 'weight'
+				parameter is optional, and if specified, it is used
+				as the weight for the item in the category (see the
+				description of weighting in the section on
+				<A HREF="dff.html#category">categories</A>).  If
+				the weight is not specified, it is assumed to be 1.
+		<LI><A NAME="fn_any"></A>
+				<b>Any( category )</b><BR>
+				This function returns an item at random from the given
+				category, taking into account the weighting of the
+				items.  The item is not removed from the category. See
+				also <A HREF="#fn_getbyweight">GetByWeight</A> and
+				<A HREF="#fn_totalweightof">TotalWeightOf</A>.
+		<LI><A NAME="fn_attributenameof"></A>
+				<b>AttributeNameOf( thing, index )</b><BR>
+				This function returns the name of the attribute at
+				the given index.  The first attribute is at index 0,
+				the second is at index 1, etc.  If there is no attribute
+				at the given index, this function returns the empty
+				string "".
+		<LI><A NAME="fn_attributeof"></A>
+				<b>AttributeOf( thing, name )</b><BR>
+				This function returns the attribute with the given
+				name in the given thing.  If the attribute does not
+				yet exist, it is created.  This value may be assigned
+				to.
+		<LI><A NAME="fn_attributevalueof"></A>
+				<b>AttributeValueOf( thing, index )</b><BR>
+				This function returns the value of the attribute at
+				the given index.  The first attribute is at index 0,
+				the second is at index 1, etc.  If there is no attribute
+				at the given index, this function returns null.
+		<LI><A NAME="fn_convertunits"></A>
+				<b>ConvertUnits( number, units )</b><BR>
+				Converts the given number from whatever units it is
+				currently in to the units specified by the string
+				"units".  If the units are incompatible, you'll get
+				an error, otherwise, the converted number is
+				returned.
+		<LI><A NAME="fn_count"></A>
+				<b>Count( category )</b><BR>
+				Returns the number of items in the given category.
+		<LI><A NAME="fn_dice"></A>
+				<b>Dice( count, type )</b><BR>
+				Returns a new dice value with the given count and
+				type of dice.
+		<LI><A NAME="fn_duplicate"></A>
+				<b>Duplicate( thing )</b><BR>
+				<b>Duplicate( category )</b><BR>
+				Returns a copy of the given thing or category.
+		<LI><A NAME="fn_empty"></A>
+				<b>Empty( category )</b><BR>
+				Returns true if the given category has no items, and
+				false otherwise.
+		<LI><A NAME="fn_eval"></A>
+				<b>Eval( value )</b><BR>
+				If the value is a dice value, the dice are rolled and
+				the result is returned, otherwise the value itself is
+				returned.  See also <A HREF="#fn_random">Random</A>.
+		<LI><A NAME="fn_exists"></A>
+				<b>Exists( category, item )</b><BR>
+				Returns true if the actual item given (not a
+				<A HREF="#fn_duplicate">duplicate</A>) exists in the
+				given category, and false otherwise.
+		<LI><A NAME="fn_floor"></A>
+				<b>Floor( number )</b><BR>
+				Returns the first integer number less than or equal
+				to 'number'.
+		<LI><A NAME="fn_get"></A>
+				<b>Get( category, index )</b><BR>
+				Returns the item at the given index in the given
+				category.  The first item is at index 0.  If there
+				is no item at the given index, "Get" returns null.
+		<LI><A NAME="fn_getbyweight"></A>
+				<b>GetByWeight( category, weight )</b><BR>
+				Returns the item "at" the given weight in the category.
+				See also <A HREF="#fn_totalweightof">TotalWeightOf</A>
+				and <A HREF="#fn_any">Any</A>.
+		<LI><A NAME="fn_has"></A>
+				<b>Has( thing, name )</b><BR>
+				Returns true if the given thing has an attribute named
+				'name', otherwise returns false.
+		<LI><A NAME="fn_indexof"></A>
+				<b>IndexOf( category, item )</b><BR>
+				Returns the index of the given item in the given
+				category, or -1 if the item does not exist in the
+				category.  See also <A HREF="#fn_get">Get</A> and
+				<A HREF="#fn_weightof">WeightOf</A>.
+		<LI><A NAME="fn_instr"></A>
+				<b>Instr( string, substr )</b><BR>
+				<b>Instr( string, substr, pos )</b><BR>
+				Returns the index of the first instance of substr
+				within the given string.  If the 'pos' parameter is
+				specified, the index of the first instance of substr
+				after the index specified by pos is returned.  If
+				substr cannot be found, Instr returns -1.
+		<LI><A NAME="fn_int"></A>
+				<b>Int( number )</b><BR>
+				Returns the integer nearest to number.
+		<LI><A NAME="fn_intersection"></A>
+				<b>Intersection( category1, category2 )</b><BR>
+				Returns the "intersection" of the two categories.  The
+				intersection is the group of items that exist in both
+				categories.  See also <A HREF="#fn_subtract">Subtract</A>
+				and <A HREF="#fn_union">Union</A>.
+		<LI><A NAME="fn_length"></A>
+				<b>Length( string )</b><BR>
+				<b>Length( array )</b><BR>
+				If the parameter is a string, returns the number of
+				characters in the string.  If the parameter is an
+				array, the number of elements in the array is
+				returned.
+		<LI><A NAME="fn_ln"></A>
+				<b>Ln( number )</b><BR>
+				Returns the natural logarithm of the given number.
+		<LI><A NAME="fn_lowercase"></A>
+				<b>LowerCase( string )</b><BR>
+				Returns the given string, with all characters converted to
+				lower-case.  See also <A HREF="#fn_uppercase">UpperCase</A>.
+		<LI><A NAME="fn_magnitudeof"></A>
+				<b>MagnitudeOf( number )</b><BR>
+				Returns the number, stripped of any units it might
+				have had.  See also <A HREF="#fn_unitsof">UnitsOf</A>.
+		<LI><A NAME="fn_mid"></A>
+				<b>Mid( string, start )</b><BR>
+				<b>Mid( string, start, length )</b><BR>
+				Returns all characters in the string starting at the
+				given 'start' index, or, if the 'length' is specified,
+				it returns a string containing all characters from
+				start to the length specified.
+		<LI><A NAME="fn_newarray"></A>
+				<b>NewArray()</b><BR>
+				<b>NewArray( length )</b><BR>
+				If no parameters are specified, a new array with no
+				elements is returned.  If a length parameter is
+				specified, the new array will have that many elements
+				(all initialized to null).
+		<LI><A NAME="fn_newcategory"></A>
+				<b>NewCategory()</b><BR>
+				Returns a new category, empty of all items.
+		<LI><A NAME="fn_newthing"></A>
+				<b>NewThing()</b><BR>
+				Returns a new thing, with no attributes.
+		<LI><A NAME="fn_parameter"></A>
+				<b>Parameter( index )</b><BR>
+				Returns the parameter to the rule at the given
+				index, with the first parameter existing at index 0.
+				Use this function to get parameters of variable-arity
+				rules.
+		<LI><A NAME="fn_print"></A>
+				<b>Print( string )</b><BR>
+				<b>Print( number )</b><BR>
+				Displays the given value.  This depends on how the
+				application implements a "console" as to how the
+				value is displayed.  Some applications may choose not
+				to implement a console -- in this case, this function
+				does nothing.
+		<LI><A NAME="fn_random"></A>
+				<b>Random( number )</b><BR>
+				If number is a dice value, the dice value is rolled
+				and the result returned.  If the number is an integer,
+				a random number between 0 and number-1 (inclusive) is
+				returned.  See also <A HREF="#fn_eval">Eval</A>.
+		<LI><A NAME="fn_remove"></A>
+				<b>Remove( category, item )</b><BR>
+				The item is removed from the category, if it existed
+				in the category.  If it did not, this function does
+				nothing.  See also <A HREF="#fn_removeall">RemoveAll</A>.
+		<LI><A NAME="fn_removeall"></A>
+				<b>RemoveAll( category )</b><BR>
+				Removes all items from the given category, leaving
+				it empty.  See also <A HREF="#fn_remove">Remove</A>.
+		<LI><A NAME="fn_replace"></A>
+				<b>Replace( string, pattern, replacement )</b><BR>
+				<b>Replace( string, pattern, replacement, pos )</b><BR>
+				Replaces the first instance of pattern in string with
+				replacement.  If pos is specified, then the first
+				instance at or after pos is replaced with replacement.
+				The new string is returned.  If no replacements were
+				made (because pattern did not exist in string), then
+				the original string is returned.
+		<LI><A NAME="fn_searchcategory"></A>
+				<b>SearchCategory( category, attribute )</b><BR>
+				<b>SearchCategory( category, attribute, value )</b><BR>
+				Searches the given category for the first thing with
+				an attribute with the specified name.  If the value
+				parameter is also specified, then the attribute must
+				have the specified value as well.
+		<LI><A NAME="fn_setunits"></A>
+				<b>SetUnits( number, units )</b><BR>
+				Returns a new number with "units" as its units.  If
+				the "units" string does not specify a declared unit
+				type, an error is generated.
+		<LI><A NAME="fn_sort"></A>
+				<b>Sort( array, comparer )</b><BR>
+				Sorts the given array, and returns it (though the
+				parameter is changed as well).  The comparer must be
+				a rule that you have defined that accepts two 
+				parameters, and returns -1 if the first is less than
+				the second, 0 if they are equivalent, or 1 if the first
+				is greater than the second.  This rule is used to
+				determine the sort order of the elements in the array.
+		<LI><A NAME="fn_sqrt"></A>
+				<b>Sqrt( number )</b><BR>
+				Returns the square root of the given number.
+		<LI><A NAME="fn_subtract"></A>
+				<b>Subtract( category1, category2 )</b><BR>
+				Subtracts category2 from category1 and returns the
+				new category containing the difference.  The difference
+				is defined to be all items in category1 that do not
+				exist in category2.  See also <A HREF="#fn_intersection">Intersection</A>
+				and <A HREF="#fn_union">Union</A>.
+		<LI><A NAME="fn_totalweightof"></A>
+				<b>TotalWeightOf( category )</b><BR>
+				Returns the total weight of all elements in the 
+				category.  See also <A HREF="#fn_any">Any</A> and
+				<A HREF="#fn_getbyweight">GetByWeight</A>.
+		<LI><A NAME="fn_union"></A>
+				<b>Union( category1, category2 )</b><BR>
+				Returns the union of the two categories.  The union
+				is defined to be all elements that exist in either
+				category (with no duplicates).  See also
+				<A HREF="#fn_intersection">Intersection</A> and
+				<A HREF="#fn_subtract">Subtract</A>.
+		<LI><A NAME="fn_unitsof"></A>
+				<b>UnitsOf( number )</b><BR>
+				Returns a string describing the units of the given
+				number, or "" if the number has no units.  See also
+				<A HREF="#fn_magnitudeof">MagnitudeOf</A>.
+		<LI><A NAME="fn_uppercase"></A>
+				<b>UpperCase( string )</b><BR>
+				Returns the given string, with all characters converted to
+				upper-case.  See also <A HREF="#fn_lowercase">LowerCase</A>.
+		<LI><A NAME="fn_weightof"></A>
+				<b>WeightOf( category, index )</b><BR>
+				Returns the weight of the item at the given index
+				in the given category.  The first item in a category
+				is at index 0.  If no item exists at the given index,
+				0 is returned.
+	</UL>
+
+	<H2><A NAME="conc"></A>8. Conclusion</H2>
+
+	Well, that about wraps that up.  You should now be an
+	expert on rule-writing, right? *chuckle*
+	<P>
+	If you ever have any questions while writing your rules for
+	your data, feel free to drop me a line and I'll do my best
+	to answer them.  E-mail me at 
+	<A HREF="mailto:minam@rpgplanet.com">minam@rpgplanet.com</A>.
+	You can also post questions and comments to the Basilisk
+	message board, accessible from
+	<A HREF="http://dynamic.gamespy.com/~dnd3e/Ultimate.cgi?action=intro&category=3&BypassCookie=true">here</A>.
+	<P>
+	Thanks!
+
+</BODY>
+
+</HTML>

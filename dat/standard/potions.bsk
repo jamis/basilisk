@@ -1,0 +1,206 @@
+template ( groupPotions ) { name cost sources }
+  potionJump { "jump"  50 gp sourcesCoreRules }
+  potionSpiderClimb { "spider climb"  50 gp sourcesCoreRules }
+  potionCureLightWounds { "cure light wounds"  50 gp sourcesCoreRules }
+  potionLove { "love"  150 gp sourcesCoreRules }
+  potionVision { "vision"  150 gp sourcesCoreRules }
+  potionSwimming { "swimming"  150 gp sourcesCoreRules }
+  potionHiding { "hiding"  150 gp sourcesCoreRules }
+  potionSneaking { "sneaking"  150 gp sourcesCoreRules }
+  potionOilOfTimelessness { "oil of timelessness"  150 gp sourcesCoreRules }
+  potionReduce5 { "reduce (at 5th level)"  250 gp sourcesCoreRules }
+  potionEnlarge5 { "enlarge (at 5th level)"  250 gp sourcesCoreRules }
+  potionSpeakWithAnimals { "speak with animals"  300 gp sourcesCoreRules }
+  potionClairaudienceClairvoyance { "clairaudience/clairvoyance"  300 gp sourcesCoreRules }
+  potionCharisma { "charisma"  300 gp sourcesCoreRules }
+  potionIntelligence { "intelligence"  300 gp sourcesCoreRules }
+  potionWisdom { "wisdom"  300 gp sourcesCoreRules }
+  potionAlterSelf { "alter self"  300 gp sourcesCoreRules }
+  potionBlur { "blur"  300 gp sourcesCoreRules }
+  potionDarkvision { "darkvision"  300 gp sourcesCoreRules }
+  potionGhoulTouch { "ghoul touch"  300 gp sourcesCoreRules }
+  potionDelayPoison { "delay poison"  300 gp sourcesCoreRules }
+  potionEndurance { "endurance"  300 gp sourcesCoreRules }
+  potionCureModerateWounds { "cure moderate wounds"  300 gp sourcesCoreRules }
+  potionDetectThoughts { "detect thoughts"  300 gp sourcesCoreRules }
+  potionLevitate { "levitate"  300 gp sourcesCoreRules }
+  potionAid { "aid"  300 gp sourcesCoreRules }
+  potionInvisibility { "invisibility"  300 gp sourcesCoreRules }
+  potionLesserRestoration { "lesser restoration"  300 gp sourcesCoreRules }
+  potionCatsGrace { "cat's grace"  300 gp sourcesCoreRules }
+  potionBullsStrength { "bull's strength"  300 gp sourcesCoreRules }
+  potionTruth { "truth"  500 gp sourcesCoreRules }
+  potionGlibness { "glibness"  500 gp sourcesCoreRules }
+  potionNondetection { "nondetection"  750 gp sourcesCoreRules }
+  potionTongues { "tongues"  750 gp sourcesCoreRules }
+  potionWaterBreathing { "water breathing"  750 gp sourcesCoreRules }
+  potionRemoveParalysis { "remove paralysis"  750 gp sourcesCoreRules }
+  potionRemoveBlindnessDeafness { "remove blindness/deafness"  750 gp sourcesCoreRules }
+  potionRemoveDisease { "remove disease"  750 gp sourcesCoreRules }
+  potionNeutralizePoison { "neutralize poison"  750 gp sourcesCoreRules }
+  potionCureSeriousWounds { "cure serious wounds"  750 gp sourcesCoreRules }
+  potionFly { "fly"  750 gp sourcesCoreRules }
+  potionProtectionFromCold { "protection from elements (cold)"  750 gp sourcesCoreRules }
+  potionProtectionFromElectricity { "protection from elements (electricity)"  750 gp sourcesCoreRules }
+  potionProtectionFromFire { "protection from elements (fire)"  750 gp sourcesCoreRules }
+  potionProtectionFromAcid { "protection from elements (acid)"  750 gp sourcesCoreRules }
+  potionProtectionFromSonic { "protection from elements (sonic)"  750 gp sourcesCoreRules }
+  potionHaste { "haste"  750 gp sourcesCoreRules }
+  potionGaseousForm { "gaseous form"  750 gp sourcesCoreRules }
+  potionOilOfSlipperiness { "oil of slipperiness"  900 gp sourcesCoreRules }
+  potionHeroism { "heroism"  900 gp sourcesCoreRules }
+  potionFireBreath { "fire breath"  900 gp sourcesCoreRules }
+end
+
+
+category groupPotionsMinor
+  [ 5] potionJump
+  [ 5] potionSpiderClimb
+  [ 9] potionCureLightWounds
+  [ 1] potionLove
+  [ 4] potionVision
+  [ 4] potionSwimming
+  [ 4] potionHiding
+  [ 4] potionSneaking
+  [ 1] potionOilOfTimelessness
+  [ 5] potionReduce5
+  [ 5] potionEnlarge5
+  [ 3] potionSpeakWithAnimals
+  [ 3] potionClairaudienceClairvoyance
+  [ 3] potionCharisma
+  [ 3] potionIntelligence
+  [ 3] potionWisdom
+  [ 3] potionAlterSelf
+  [ 3] potionBlur
+  [ 3] potionDarkvision
+  [ 3] potionGhoulTouch
+  [ 3] potionDelayPoison
+  [ 3] potionEndurance
+  [ 3] potionCureModerateWounds
+  [ 3] potionDetectThoughts
+  [ 3] potionLevitate
+  [ 2] potionAid
+  [ 2] potionInvisibility
+  [ 1] potionLesserRestoration
+  [ 1] potionCatsGrace
+  [ 1] potionBullsStrength
+  [ 1] potionTruth
+  [ 1] potionGlibness
+  [ 1] potionNondetection
+  [ 1] potionTongues
+end
+
+
+category groupPotionsMedium
+  [ 1] potionLove
+  [ 1] potionVision
+  [ 1] potionSwimming
+  [ 1] potionHiding
+  [ 1] potionSneaking
+  [ 1] potionOilOfTimelessness
+  [ 1] potionReduce5
+  [ 1] potionEnlarge5
+  [ 1] potionSpeakWithAnimals
+  [ 1] potionClairaudienceClairvoyance
+  [ 2] potionCharisma
+  [ 2] potionIntelligence
+  [ 2] potionWisdom
+  [ 2] potionAlterSelf
+  [ 3] potionBlur
+  [ 3] potionDarkvision
+  [ 2] potionGhoulTouch
+  [ 3] potionDelayPoison
+  [ 3] potionEndurance
+  [ 8] potionCureModerateWounds
+  [ 5] potionDetectThoughts
+  [ 5] potionLevitate
+  [ 5] potionAid
+  [ 5] potionInvisibility
+  [ 5] potionLesserRestoration
+  [ 5] potionCatsGrace
+  [ 5] potionBullsStrength
+  [ 2] potionTruth
+  [ 2] potionGlibness
+  [ 5] potionNondetection
+  [ 3] potionTongues
+  [ 4] potionWaterBreathing
+  [ 1] potionRemoveParalysis
+  [ 1] potionRemoveBlindnessDeafness
+  [ 1] potionRemoveDisease
+  [ 2] potionNeutralizePoison
+  [ 1] potionCureSeriousWounds
+  [ 1] potionFly
+  [ 2] potionHeroism
+end
+
+
+category groupPotionsMajor
+  [ 1] potionClairaudienceClairvoyance
+  [ 1] potionCharisma
+  [ 1] potionIntelligence
+  [ 1] potionWisdom
+  [ 1] potionAlterSelf
+  [ 2] potionBlur
+  [ 1] potionDarkvision
+  [ 1] potionGhoulTouch
+  [ 1] potionDelayPoison
+  [ 3] potionEndurance
+  [ 3] potionCureModerateWounds
+  [ 3] potionDetectThoughts
+  [ 3] potionLevitate
+  [ 3] potionAid
+  [ 5] potionInvisibility
+  [ 5] potionLesserRestoration
+  [ 5] potionCatsGrace
+  [ 5] potionBullsStrength
+  [ 1] potionTruth
+  [ 1] potionGlibness
+  [ 2] potionNondetection
+  [ 2] potionTongues
+  [ 2] potionWaterBreathing
+  [ 2] potionRemoveParalysis
+  [ 2] potionRemoveBlindnessDeafness
+  [ 2] potionRemoveDisease
+  [10] potionNeutralizePoison
+  [ 4] potionCureSeriousWounds
+  [ 2] potionFly
+  [ 2] potionProtectionFromCold
+  [ 2] potionProtectionFromElectricity
+  [ 4] potionProtectionFromFire
+  [ 2] potionProtectionFromAcid
+  [ 2] potionProtectionFromSonic
+  [ 3] potionHaste
+  [ 3] potionGaseousForm
+  [ 2] potionOilOfSlipperiness
+  [ 3] potionHeroism
+  [ 2] potionFireBreath
+end
+
+
+rule rLookupPotion( potionMagnitude options )
+  case potionMagnitude
+    is "minor" then
+      c = groupPotionsMinor;
+    is "medium" then
+      c = groupPotionsMedium;
+    is "major" then
+      c = groupPotionsMajor;
+    default
+      exit rule;
+  end
+
+  y = rGetAnyMatchingCriteria( c, options );
+  if y ne null then
+    x = rNewInstanceOf( y );
+    x.prototype = y;
+    x.name = "potion of " + x.name;
+    x.treasureType = "potion";
+
+    if rItemDeservesCurse( x, options ) then
+      x = rCurseItem( x, options );
+    end
+  end
+
+  rLookupPotion = x;
+end
+

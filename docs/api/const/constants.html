@@ -1,0 +1,848 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0 Constants</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+    <H1>Basilisk Constants</H1>
+
+    Below are all the constants defined by the Basilisk 1.0 release.
+
+    <UL>
+      <LI><A NAME="AT_BOOLEAN"></A>
+          <B>AT_BOOLEAN</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskatdef.html">BSKAttributeDef</A><BR>
+          Indicates the attribute is declared to be a boolean value.
+      <LI><A NAME=AT_CATEGORY"></A>
+          <B>AT_CATEGORY</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskatdef.html">BSKAttributeDef</A><BR>
+          Indicates the attribute is declared to be a category value.
+      <LI><A NAME="AT_NONE"></A>
+          <B>AT_NONE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskatdef.html">BSKAttributeDef</A><BR>
+          Indicates the attribute has not been declared a value (error, or bug condition).
+      <LI><A NAME="AT_NUMBER"></A>
+          <B>AT_NUMBER</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskatdef.html">BSKAttributeDef</A><BR>
+          Indicates the attribute is declared to be a numeric (including dice) value.
+      <LI><A NAME="AT_RULE"></A>
+          <B>AT_RULE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskatdef.html">BSKAttributeDef</A><BR>
+          Indicates the attribute is declared to be a rule value.
+      <LI><A NAME="AT_STRING"></A>
+          <B>AT_STRING</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskatdef.html">BSKAttributeDef</A><BR>
+          Indicates the attribute is declared to be a string value.
+      <LI><A NAME="AT_THING"></A>
+          <B>AT_THING</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskatdef.html">BSKAttributeDef</A><BR>
+          Indicates the attribute is declared to be a thing value.
+      <LI><A NAME="BIT_SET_SIZE"></A>
+          <B>BIT_SET_SIZE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskbitset.html">BSKBitSet</A><BR>
+          The number of 32-bit integers in a bit-set.
+      <LI><A NAME="BSKFALSE"></A>
+          <B>BSKFALSE</B><BR>
+          The boolean constant 'false'.
+      <LI><A NAME="BSKTRUE"></A>
+          <B>BSKTRUE</B><BR>
+          The boolean constant 'true'.
+      <LI><A NAME="OF_LOCAL"></A>
+          <B>OF_LOCAL</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          The given object was created by or is local to the currently
+          executing rule.
+      <LI><A NAME="OF_NONE"></A>
+          <B>OF_NONE</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          The given object has no flags.
+      <LI><A NAME="OF_PERSISTANT"></A>
+          <B>OF_PERSISTANT</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          The given object is a persistant object (existing in the database).
+      <LI><A NAME="OF_TRANSIENT"></A>
+          <B>OF_TRANSIENT</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          The given object is being passed between rules.
+      <LI><A NAME="OF_VISITED"></A>
+          <B>OF_VISITED</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          The given object has been visited.  This is a temporary flag that
+          is used while doing garbage collection.
+      <LI><A NAME="OP_ADD"></A>
+          <B>OP_ADD</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The two topmost items on the execution stack are added together (or concatenated, if
+          one or both of them are strings).  The items must be numeric or string values.
+          The result is pushed onto the stack.
+      <LI><A NAME="OP_AND"></A>
+          <B>OP_AND</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The two topmost items on the execution stack are and'ed, using the logical 'and'
+          operator.  Both items must be numeric values.  The result is pushed onto the stack.
+      <LI><A NAME="OP_CALL"></A>
+          <B>OP_CALL</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The (BSKUI8) parameter to this instruction is the number of stack items to treat as
+          parameters to a rule or function call.  After the parameters is the entity
+          to call.  If the entity is a rule object (or dereferences to a rule object), that rule
+          is called.  If the entity is numeric, it is treated as the ID of a built-in function
+          to execute.  Either way, the return value is pushed onto the stack after all parameters
+          and the called entity are popped off the stack.
+      <LI><A NAME="OP_DIV"></A>
+          <B>OP_DIV</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Divides the topmost two items (topmost is the denominator).  The result is pushed onto
+          the stack.  Both items must be numeric.
+      <LI><A NAME="OP_DREF"></A>
+          <B>OP_DREF</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The topmost item must be an identifier of a valid attribute, and the second must be a
+          Thing object.  The specified attribute of the Thing is obtained, or created, as
+          necessary, and pushed onto the stack.
+      <LI><A NAME="OP_DUP"></A>
+          <B>OP_DUP</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Duplicates the topmost stack item (which is NOT popped off as a result of this
+          call).
+      <LI><A NAME="OP_ELEM"></A>
+          <B>OP_ELEM</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The topmost item must be a numeric value, and the second is an array value.  The element
+          at the given index of the array is pushed onto the stack.
+      <LI><A NAME="OP_END"></A>
+          <B>OP_END</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Execution of the current rule is terminated.
+      <LI><A NAME="OP_EQ"></A>
+          <B>OP_EQ</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The topmost two stack items are tested for equivalency, and the boolean result is
+          pushed onto the stack.
+      <LI><A NAME="OP_FIRST"></A>
+          <B>OP_FIRST</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The topmost stack item is a category object.  It's first member (or null) is pushed
+          onto the stack.
+      <LI><A NAME="OP_GE"></A>
+          <B>OP_GE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Compares the second topmost item (A) to the topmost item (B), and puts on the stack the
+          result of the boolean comparison 'A &gt;= B'.
+      <LI><A NAME="OP_GET"></A>
+          <B>OP_GET</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+      <LI><A NAME="OP_GT"></A>
+          <B>OP_GT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Compares the second topmost item (A) to the topmost item (B), and puts on the stack the
+          result of the boolean comparison 'A &gt; B'.
+      <LI><A NAME="OP_JMPF"></A>
+          <B>OP_JMPF</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Tests the topmost stack item (which must be numeric) to see if it evaluates (boolean-wise)
+          to false.  If so, the BSKUI32 parameter to this instruction is treated as the
+          address to jump to.
+      <LI><A NAME="OP_JMPT"></A>
+          <B>OP_JMPT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Tests the topmost stack item (which must be numeric) to see if it evaluates (boolean-wise)
+          to true.  If so, the BSKUI32 parameter to this instruction is treated as the
+          address to jump to.
+      <LI><A NAME="OP_JUMP"></A>
+          <B>OP_JUMP</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The BSKUI32 parameter of this instruction is treated as the address to jump to.
+      <LI><A NAME="OP_LBYTE"></A>
+          <B>OP_LBYTE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The BSKUI8 parameter of this instruction is pushed onto the stack.
+      <LI><A NAME="OP_LDICE"></A>
+          <B>OP_LDICE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The dice parameter of this instruction is pushed onto the stack.
+      <LI><A NAME="OP_LDWORD"></A>
+          <B>OP_LDWORD</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The BSKUI32 parameter of this instruction is pushed onto the stack.
+      <LI><A NAME="OP_LE"></A>
+          <B>OP_LE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Compares the second topmost item (A) to the topmost item (B), and puts on the stack the
+          result of the boolean comparison 'A &lt;= B'.
+      <LI><A NAME="OP_LFLOAT"></A>
+          <B>OP_LFLOAT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The BSKFLOAT parameter of this instruction is pushed onto the stack.
+      <LI><A NAME="OP_LINE"></A>
+          <B>OP_LINE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The BSKUI32 parameter of this instruction is treated as the current line number
+          being executed for the current rule (for debugging and error handling).
+      <LI><A NAME="OP_LSTR"></A>
+          <B>OP_LSTR</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Loads all bytes from the current position to the first 0 byte and pushes them onto the
+          stack as a string value (null-terimated).
+      <LI><A NAME="OP_LT"></A>
+          <B>OP_LT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Compares the second topmost item (A) to the topmost item (B), and puts on the stack the
+          result of the boolean comparison 'A &lt; B'.
+      <LI><A NAME="OP_LWORD"></A>
+          <B>OP_LWORD</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The BSKUI16 parameter of this instruction is pushed onto the stack.
+      <LI><A NAME="OP_MOD"></A>
+          <B>OP_MOD</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Performs modulus division on the topmost two stack items (topmost is the denominator).
+          Pushes the result onto the stack.
+      <LI><A NAME="OP_MUL"></A>
+          <B>OP_MUL</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Multiplies the topmost two stack items together and pushes the result onto the
+          stack.
+      <LI><A NAME="OP_NE"></A>
+          <B>OP_NE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Compares the topmost two stack items and pushes boolean 'true' onto the stack if the
+          items are not equivalent, and boolean 'false' otherwise.
+      <LI><A NAME="OP_NEG"></A>
+          <B>OP_NEG</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Logically negates the topmost stack item (which must be numeric) and pushes the result
+          onto the stack.
+      <LI><A NAME="OP_NEXT"></A>
+          <B>OP_NEXT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The topmost stack item must be a BSKCategoryEntry object.  The next CategoryEntry in the
+          list is pushed onto the stack.
+      <LI><A NAME="OP_NOOP"></A>
+          <B>OP_NOOP</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          NO OPeration.
+      <LI><A NAME="OP_NOT"></A>
+          <B>OP_NOT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Pushes boolean 'true' onto the stack if the topmost stack item is boolean 'false', and
+          pushes boolean 'false' onto the stack if the topmost stack item is boolean 'true'.
+      <LI><A NAME="OP_NULL"></A>
+          <B>OP_NULL</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Pushes a null value onto the stack.
+      <LI><A NAME="OP_OR"></A>
+          <B>OP_OR</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The two topmost items on the execution stack are or'ed, using the logical 'or'
+          operator.  Both items must be numeric values.  The result is pushed onto the stack.
+      <LI><A NAME="OP_POP"></A>
+          <B>OP_POP</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Pops the topmost stack item off the stack.
+      <LI><A NAME="OP_POW"></A>
+          <B>OP_POW</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The second topmost stack item (A) and the topmost stack item (B) must both be numeric.
+          The result of "A^B" (A raised to the power of B) is pushed onto the stack.
+      <LI><A NAME="OP_PUT"></A>
+          <B>OP_PUT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Puts the topmost value into the variable (or other dereferencable object) at the
+          second topmost stack item.
+      <LI><A NAME="OP_SUB"></A>
+          <B>OP_SUB</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Subtracts the topmost stack item from the second topmost stack item and pushes
+          the result onto the stack.  Both items must be numeric.
+      <LI><A NAME="OP_SWAP"></A>
+          <B>OP_SWAP</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          Swaps the topmost two stack items.
+      <LI><A NAME="OP_TYPEOF"></A>
+          <B>OP_TYPEOF</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The topmost stack item must be numeric (and represent the type to test).  Pushes
+          boolean 'true' if the second topmost stack item is of the given type, and 'false'
+          otherwise.
+      <LI><A NAME="OT_CATEGORY"></A>
+          <B>OT_CATEGORY</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          The object type of a <A HREF="../modules/bskcategory.html">BSKCategory</A>.
+      <LI><A NAME="OT_RULE"></A>
+          <B>OT_RULE</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          The object type of a <A HREF="../modules/bskrule.html">BSKRule</A>.
+      <LI><A NAME="OT_THING"></A>
+          <B>OT_THING</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          The object type of a <A HREF="../modules/bskthing.html">BSKThing</A>.
+      <LI><A NAME="PE_BUG_DETECTED"></A>
+          <B>PE_BUG_DETECTED</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskparse.html">BSKParse</A><BR>
+          A bug has been detected in the parser.  The message associated with the error is
+          passed as the 'data' parameter, and should be interpreted as a BSKCHAR*.
+      <LI><A NAME="PE_CANNOT_OPEN_FILE"></A>
+          <B>PE_CANNOT_OPEN_FILE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskparse.html">BSKParse</A><BR>
+          A file could not be opened (such as an included file).  The file that could not
+          be opened is passed as the 'data' parameter, and should be interpreted as a BSKCHAR*.
+      <LI><A NAME="PE_EXIT_LOOP_NOT_IN_LOOP"></A>
+          <B>PE_EXIT_LOOP_NOT_IN_LOOP</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskparse.html">BSKParse</A><BR>
+          An 'exit loop' statement did not appear in a loop context.  The data parameter is
+          not used.
+      <LI><A NAME="PE_FORWARD_NOT_DEFINED"></A>
+          <B>PE_FORWARD_NOT_DEFINED</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskparse.html">BSKParse</A><BR>
+          An entity (thing, category, or rule) was declared 'forward' but never defined.  The
+          id of the entity is passed as the data parameter.
+      <LI><A NAME="PE_NOERROR"></A>
+          <B>PE_NOERROR</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskparse.html">BSKParse</A><BR>
+          The parse completed successfully.
+      <LI><A NAME="PE_REDEFINED_IDENTIFIER"></A>
+          <B>PE_REDEFINED_IDENTIFIER</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskparse.html">BSKParse</A><BR>
+          An identifier was redefined as an entity of a different type.  The id of the entity
+          is passed as the data parameter.
+      <LI><A NAME="PE_TOO_MANY_ATTRIBUTES"></A>
+          <B>PE_TOO_MANY_ATTRIBUTES</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskparse.html">BSKParse</A><BR>
+          An entry in a template definition has more attributes than the template expected.  The
+          data parameter is not used.
+      <LI><A NAME="PE_UNDECLARED_IDENTIFIER"></A>
+          <B>PE_UNDECLARED_IDENTIFIER</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskparse.html">BSKParse</A><BR>
+          An identifier is used, but has never been declared.  The data parameter is the id of the
+          referenced identifier.
+      <LI><A NAME="PE_UNEXPECTED_TOKEN"></A>
+          <B>PE_UNEXPECTED_TOKEN</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskparse.html">BSKParse</A><BR>
+          A token type was encountered that was other than one that was expected.  The data parameter
+          is the token-type that was expected.
+      <LI><A NAME="PE_WRONG_TYPE"></A>
+          <B>PE_WRONG_TYPE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskparse.html">BSKParse</A><BR>
+          An identifier was used or referenced as an entity of the wrong type.  The data parameter
+          is the identifier that was referenced.
+      <LI><A NAME="RTE_BUG"></A>
+          <B>RTE_BUG</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          A bug was detected in the VM (<i>not</I> the script that was being executed).
+      <LI><A NAME="RTE_CALL_OF_NONFUNCTION"></A>
+          <B>RTE_CALL_OF_NONFUNCTION</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          A non-function was called as if it were a function.
+      <LI><A NAME="RTE_DIVIDE_BY_ZERO"></A>
+          <B>RTE_DIVIDE_BY_ZERO</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          An operation divided by zero.
+      <LI><A NAME="RTE_DOMAIN_ERROR"></A>
+          <B>RTE_DOMAIN_ERROR</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          An operation failed due to a domain error (like sqrt(-1)).
+      <LI><A NAME="RTE_HALTED"></A>
+          <B>RTE_HALTED</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          The execution was halted (by setting the 'halt' parameter of the BSKExecOpts
+          structure to true).
+      <LI><A NAME="RTE_INVALID_OPERANDS"></A>
+          <B>RTE_INVALID_OPERANDS</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          The operands to a particular instruction or operation were invalid.  The 'message'
+          parameter has more information.
+      <LI><A NAME="RTE_INVALID_RULE"></A>
+          <B>RTE_INVALID_RULE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          A rule was referenced that was not a rule.
+      <LI><A NAME="RTE_STACK_UNDERFLOW"></A>
+          <B>RTE_STACK_UNDERFLOW</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          There were too few items on the stack to service the requested operation.  (This
+          will usually be the result of a bug in the parser).
+      <LI><A NAME="RTE_SUCCESS"></A>
+          <B>RTE_SUCCESS</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          The VM returned successfully.
+      <LI><A NAME="RTE_UKNOWN_INSTRUCTION"></A>
+          <B>RTE_UKNOWN_INSTRUCTION</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          An unknown instruction was encountered in the code stream for the currently
+          executing rule.
+      <LI><A NAME="RTE_WRONG_PARAM_COUNT"></A>
+          <B>RTE_WRONG_PARAM_COUNT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          The wrong number of parameters were passed to a built-in function.
+      <LI><A NAME="RTE_WRONG_UNITS"></A>
+          <B>RTE_WRONG_UNITS</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          Two numbers were compared (or a conversion requested) that had incompatible
+          units.
+      <LI><A NAME="RULE_RETURN_VAL"></A>
+          <B>RULE_RETURN_VAL</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskrule.html">BSKRule</A><BR>
+          The name of the variable used to hold the return value for a rule.
+      <LI><A NAME="SF_FORWARD_DECL"></A>
+          <B>SF_FORWARD_DECL</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsksymtb.html">BSKSymbolTable</A><BR>
+          The given symbol is declared has 'forward' and has not yet been defined.
+      <LI><A NAME="SF_NONE"></A>
+          <B>SF_NONE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsksymtb.html">BSKSymbolTable</A><BR>
+          No flags for the symbol table.
+      <LI><A NAME="ST_ATTRIBUTE"></A>
+          <B>ST_ATTRIBUTE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsksymtb.html">BSKSymbolTable</A><BR>
+          The symbol defines an attribute.
+      <LI><A NAME="ST_BUILTIN"></A>
+          <B>ST_BUILTIN</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsksymtb.html">BSKSymbolTable</A><BR>
+          The symbol defines a built-in function.
+      <LI><A NAME="ST_CATEGORY"></A>
+          <B>ST_CATEGORY</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsksymtb.html">BSKSymbolTable</A><BR>
+          The symbol defines a category.
+      <LI><A NAME="ST_NONE"></A>
+          <B>ST_NONE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsksymtb.html">BSKSymbolTable</A><BR>
+          The symbol does not define anything (a bug, or error condition).
+      <LI><A NAME="ST_RULE"></A>
+          <B>ST_RULE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsksymtb.html">BSKSymbolTable</A><BR>
+          The symbol defines a rule.
+      <LI><A NAME="ST_THING"></A>
+          <B>ST_THING</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsksymtb.html">BSKSymbolTable</A><BR>
+          The symbol defines a thing.
+      <LI><A NAME="ST_UNIT"></A>
+          <B>ST_UNIT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsksymtb.html">BSKSymbolTable</A><BR>
+          The symbol defines a unit.
+      <LI><A NAME="ST_VARIABLE"></A>
+          <B>ST_VARIABLE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsksymtb.html">BSKSymbolTable</A><BR>
+          The symbol defines a variable.
+      <LI><A NAME="TID_ARRAY"></A>
+          <B>TID_ARRAY</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          Represents an Array type in the execution environment.
+      <LI><A NAME="TID_BOOLEAN"></A>
+          <B>TID_BOOLEAN</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          Represents a boolean type in the execution environment.
+      <LI><A NAME="TID_CATEGORY"></A>
+          <B>TID_CATEGORY</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          Represents the Category type in the execution environment.
+      <LI><A NAME="TID_NUMBER"></A>
+          <B>TID_NUMBER</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          Represents a numeric or dice type in the execution environment.
+      <LI><A NAME="TID_RULE"></A>
+          <B>TID_RULE</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          Represents the Rule type in the execution environment.
+      <LI><A NAME="TID_STRING"></A>
+          <B>TID_STRING</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          Represents the string type in the execution environment.
+      <LI><A NAME="TID_THING"></A>
+          <B>TID_THING</B><BR>
+          <I>Module:</I>  bskenv.h<BR>
+          Represents the Thing type in the execution environment.
+      <LI><A NAME="TT_AND"></A>
+          <B>TT_AND</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'and'
+      <LI><A NAME="TT_ARRAY"></A>
+          <B>TT_ARRAY</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'array'
+      <LI><A NAME="TT_ATTRIBUTE"></A>
+          <B>TT_ATTRIBUTE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'attribute'
+      <LI><A NAME="TT_BOOLEAN_WORD"></A>
+          <B>TT_BOOLEAN_WORD</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'boolean'
+      <LI><A NAME="TT_CASE"></A>
+          <B>TT_CASE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'case'
+      <LI><A NAME="TT_CATEGORY"></A>
+          <B>TT_CATEGORY</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'category'
+      <LI><A NAME="TT_DEFAULT"></A>
+          <B>TT_DEFAULT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'default'
+      <LI><A NAME="TT_DICE"></A>
+          <B>TT_DICE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          A dice value has been parsed.
+      <LI><A NAME="TT_DO"></A>
+          <B>TT_DO</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'do'
+      <LI><A NAME="TT_ELSE"></A>
+          <B>TT_ELSE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'else'
+      <LI><A NAME="TT_ELSEIF"></A>
+          <B>TT_ELSEIF</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'elseif'
+      <LI><A NAME="TT_EMPTY"></A>
+          <B>TT_EMPTY</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          The token represents an error detected by the lexer.
+      <LI><A NAME="TT_END"></A>
+          <B>TT_END</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'end'
+      <LI><A NAME="TT_EOF"></A>
+          <B>TT_EOF</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          The end-of-file has been reached.
+      <LI><A NAME="TT_EQ"></A>
+          <B>TT_EQ</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'eq'
+      <LI><A NAME="TT_EXIT"></A>
+          <B>TT_EXIT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'exit'
+      <LI><A NAME="TT_FALSE"></A>
+          <B>TT_FALSE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'false'
+      <LI><A NAME="TT_FOR"></A>
+          <B>TT_FOR</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'for'
+      <LI><A NAME="TT_FORWARD"></A>
+          <B>TT_FORWARD</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'forward'
+      <LI><A NAME="TT_GE"></A>
+          <B>TT_GE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'ge'
+      <LI><A NAME="TT_GT"></A>
+          <B>TT_GT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'gt'
+      <LI><A NAME="TT_IDENTIFIER"></A>
+          <B>TT_IDENTIFIER</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          An identifier was parsed.  The token holds the identifier.
+      <LI><A NAME="TT_IF"></A>
+          <B>TT_IF</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'if'
+      <LI><A NAME="TT_IN"></A>
+          <B>TT_IN</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'in'
+      <LI><A NAME="TT_INCLUDE"></A>
+          <B>TT_INCLUDE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'include'
+      <LI><A NAME="TT_IS"></A>
+          <B>TT_IS</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'is'
+      <LI><A NAME="TT_LE"></A>
+          <B>TT_LE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'le'
+      <LI><A NAME="TT_LOOP"></A>
+          <B>TT_LOOP</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'loop'
+      <LI><A NAME="TT_LT"></A>
+          <B>TT_LT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'lt'
+      <LI><A NAME="TT_NE"></A>
+          <B>TT_NE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'ne'
+      <LI><A NAME="TT_NO"></A>
+          <B>TT_NO</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'no'
+      <LI><A NAME="TT_NOT"></A>
+          <B>TT_NOT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'not'
+      <LI><A NAME="TT_NULL"></A>
+          <B>TT_NULL</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'null'
+      <LI><A NAME="TT_NUMBER"></A>
+          <B>TT_NUMBER</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          A number has been parsed.
+      <LI><A NAME="TT_NUMBER_WORD"></A>
+          <B>TT_NUMBER_WORD</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'number'
+      <LI><A NAME="TT_OFF"></A>
+          <B>TT_OFF</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'off'
+      <LI><A NAME="TT_ON"></A>
+          <B>TT_ON</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'on'
+      <LI><A NAME="TT_OR"></A>
+          <B>TT_OR</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'or'
+      <LI><A NAME="TT_PUNCT_CARET"></A>
+          <B>TT_PUNCT_CARET</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          '^'
+      <LI><A NAME="TT_PUNCT_COMMA"></A>
+          <B>TT_PUNCT_COMMA</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          ','
+      <LI><A NAME="TT_PUNCT_DASH"></A>
+          <B>TT_PUNCT_DASH</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          '-'
+      <LI><A NAME="TT_PUNCT_DOLLAR"></A>
+          <B>TT_PUNCT_DOLLAR</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          '$'
+      <LI><A NAME="TT_PUNCT_DOT"></A>
+          <B>TT_PUNCT_DOT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          '.'
+      <LI><A NAME="TT_PUNCT_EQ"></A>
+          <B>TT_PUNCT_EQ</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          '='
+      <LI><A NAME="TT_PUNCT_LBRACE"></A>
+          <B>TT_PUNCT_LBRACE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          '{'
+      <LI><A NAME="TT_PUNCT_LBRACKET"></A>
+          <B>TT_PUNCT_LBRACKET</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          '['
+      <LI><A NAME="TT_PUNCT_LPAREN"></A>
+          <B>TT_PUNCT_LPAREN</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          '('
+      <LI><A NAME="TT_PUNCT_OCTOTHORP"></A>
+          <B>TT_PUNCT_OCTOTHORP</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          '#'
+      <LI><A NAME="TT_PUNCT_PERCENT"></A>
+          <B>TT_PUNCT_PERCENT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          '%'
+      <LI><A NAME="TT_PUNCT_PLUS"></A>
+          <B>TT_PUNCT_PLUS</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          '+'
+      <LI><A NAME="TT_PUNCT_RBRACE"></A>
+          <B>TT_PUNCT_RBRACE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          '}'
+      <LI><A NAME="TT_PUNCT_RBRACKET"></A>
+          <B>TT_PUNCT_RBRACKET</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          ']'
+      <LI><A NAME="TT_PUNCT_RPAREN"></A>
+          <B>TT_PUNCT_RPAREN</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          ')'
+      <LI><A NAME="TT_PUNCT_SEMICOLON"></A>
+          <B>TT_PUNCT_SEMICOLON</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          ';'
+      <LI><A NAME="TT_PUNCT_SLASH"></A>
+          <B>TT_PUNCT_SLASH</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          '/'
+      <LI><A NAME="TT_PUNCT_STAR"></A>
+          <B>TT_PUNCT_STAR</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          '*'
+      <LI><A NAME="TT_RULE"></A>
+          <B>TT_RULE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'rule'
+      <LI><A NAME="TT_STRING"></A>
+          <B>TT_STRING</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          A string was parsed.
+      <LI><A NAME="TT_STRING_WORD"></A>
+          <B>TT_STRING_WORD</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'string'
+      <LI><A NAME="TT_TEMPLATE"></A>
+          <B>TT_TEMPLATE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'template'
+      <LI><A NAME="TT_THEN"></A>
+          <B>TT_THEN</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'then'
+      <LI><A NAME="TT_THING"></A>
+          <B>TT_THING</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'thing'
+      <LI><A NAME="TT_TO"></A>
+          <B>TT_TO</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'to'
+      <LI><A NAME="TT_TRUE"></A>
+          <B>TT_TRUE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'true'
+      <LI><A NAME="TT_TYPEOF"></A>
+          <B>TT_TYPEOF</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'typeof'
+      <LI><A NAME="TT_UNIT"></A>
+          <B>TT_UNIT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'unit'
+      <LI><A NAME="TT_WHILE"></A>
+          <B>TT_WHILE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'while'
+      <LI><A NAME="TT_YES"></A>
+          <B>TT_YES</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          'yes'
+      <LI><A NAME="UERR_INCOMPATIBLE_UNITS"></A>
+          <B>UERR_INCOMPATIBLE_UNITS</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskutdef.html">BSKUnitDefinition</A><BR>
+          Returned from <A HREF="../functions/BSKConvertUnits.html">BSKConvertUnits</A>,
+          this value indicates that the units requested were not compatible and could not
+          be converted.
+      <LI><A NAME="VC_EPSILON"></A>
+          <B>VC_EPSILON</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          As close to zero as we care to get.
+      <LI><A NAME="VC_INFINITY"></A>
+          <B>VC_INFINITY</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          As close to infinity as we care to get.
+      <LI><A NAME="VF_MODIFIER"></A>
+          <B>VF_MODIFIER</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The given dice value has a modifier (+,-,*).
+      <LI><A NAME="VF_MULTIPLICATIVE"></A>
+          <B>VF_MULTIPLICATIVE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The modifier for the given dice value is multiplicative, rather than additive.
+      <LI><A NAME="VF_NONE"></A>
+          <B>VF_NONE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          No flags for the value.
+      <LI><A NAME="VF_UNITS"></A>
+          <B>VF_UNITS</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The numeric value has units.
+      <LI><A NAME="VT_ALLOCATED"></A>
+          <B>VT_ALLOCATED</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value was allocated internally and should eventually be deallocated (VT_NUMERIC,
+          VT_STRING, etc).
+      <LI><A NAME="VT_ARRAY"></A>
+          <B>VT_ARRAY</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is an array.
+      <LI><A NAME="VT_ATTRIBUTE"></A>
+          <B>VT_ATTRIBUTE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is an attribute.
+      <LI><A NAME="VT_BOOLEAN"></A>
+          <B>VT_BOOLEAN</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is boolean.
+      <LI><A NAME="VT_BYTE"></A>
+          <B>VT_BYTE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is a byte.
+      <LI><A NAME="VT_CATEGORIZABLE"></A>
+          <B>VT_CATEGORIZABLE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is categorizable (meaning, it may be a value in a category).
+      <LI><A NAME="VT_CATEGORY"></A>
+          <B>VT_CATEGORY</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is a category.
+      <LI><A NAME="VT_CATEGORY_ENTRY"></A>
+          <B>VT_CATEGORY_ENTRY</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is a category entry.
+      <LI><A NAME="VT_DEREFERENCABLE"></A>
+          <B>VT_DEREFERENCABLE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is dereferencable (an attribute, or a variable, for instance).
+      <LI><A NAME="VT_DICE"></A>
+          <B>VT_DICE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is a dice value.
+      <LI><A NAME="VT_DWORD"></A>
+          <B>VT_DWORD</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is a BSKI32 value.
+      <LI><A NAME="VT_FLOAT"></A>
+          <B>VT_FLOAT</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is a BSKFLOAT value.
+      <LI><A NAME="VT_INTEGER"></A>
+          <B>VT_INTEGER</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is an integer value (VT_BYTE, VT_WORD, VT_DWORD, VT_BOOLEAN)
+      <LI><A NAME="VT_NULL"></A>
+          <B>VT_NULL</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is null.
+      <LI><A NAME="VT_NUMBER"></A>
+          <B>VT_NUMBER</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is a number (VT_INTEGER, VT_DICE, VT_FLOAT)
+      <LI><A NAME="VT_RULE"></A>
+          <B>VT_RULE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is a rule.
+      <LI><A NAME="VT_STRING"></A>
+          <B>VT_STRING</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is a string.
+      <LI><A NAME="VT_THING"></A>
+          <B>VT_THING</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is a thing.
+      <LI><A NAME="VT_VALUE"></A>
+          <B>VT_VALUE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is itself another value.
+      <LI><A NAME="VT_VARIABLE"></A>
+          <B>VT_VARIABLE</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is a variable.
+      <LI><A NAME="VT_WORD"></A>
+          <B>VT_WORD</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+          The value is a BSKI16 value.
+    </UL>
+
+    <A HREF="../index.html">Return to the API</A>
+    <HR>
+    <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)</I>
+  </BODY>
+</HTML>
+

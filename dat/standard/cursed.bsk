@@ -1,0 +1,327 @@
+/* ---------------------------------------------------------------------- *
+ * Cursed Items
+ *
+ * A cursed item is a merely an ordinary item with a 'curse' property of
+ * type thing.  The curse property has the following properties:
+ *   description - text describing the curse
+ *   bonus (optional) - the bonus/penalty bestowed by the cursed item
+ * In the tables, you will notice an 'applicableTo' attribute.  This
+ * indicates to which treasure types the curse is applicable.  If the
+ * value is absent or "", the curse applies to all items equally.  The
+ * characters in the string represent the following types:
+ *     a - armor
+ *     p - potion
+ *     r - ring
+ *     d - rod
+ *     s - scroll
+ *     t - staff
+ *     w - wand
+ *     e - weapon
+ *     i - wondrous item
+ * if the first character in the string is a '!', then the curse is
+ * applicable to all items NOT of the given types.
+ * ---------------------------------------------------------------------- */
+
+attribute curse thing
+attribute applicableTo string
+
+forward rule rCursesRandomAlignment
+forward rule rCursesRandomGender
+forward rule rCursesRandomDeity
+forward rule rCursesRandomClass
+forward rule rCursesRandomSkill
+forward rule rCursesRandomSpell
+forward rule rCursesRandomName
+
+category groupRandomCreatures
+       { .name "frog" }
+       { .name "cat" }
+       { .name "dog" }
+       { .name "elephant" }
+       { .name "snake" }
+       { .name "chimpanzee" }
+       { .name "badger" }
+       { .name "wolf" }
+       { .name "horse" }
+       { .name "baracuda" }
+       { .name "sturgeon" }
+       { .name "ostrich" }
+       { .name "falcon" }
+end
+
+category groupIntermittentlyFunctioningCurses
+  [ 3] { .description "below freezing" }
+  [ 2] { .description "above freezing" }
+  [ 5] { .description "it is day" }
+  [ 5] { .description "it is night" }
+  [ 5] { .description "in direct sunlight" }
+  [ 5] { .description "out of direct sunlight" }
+  [ 9] { .description "underwater" }
+  [ 3] { .description "out of water" }
+  [ 8] { .description "underground" }
+  [10] { .description "aboveground" }
+  [ 5] { .description "within 10 feet of a(n) $1$" .subtable groupMonsterTypes }
+  [ 4] { .description "within 10 feet of a(n) $1$" .subtable groupMonsterTypes }
+  [ 8] { .description "within 10 feet of an arcane spellcaster" }
+  [ 8] { .description "within 10 feet of an divine spellcaster" }
+  [ 5] { .description "in the hands of a nonspellcaster" }
+  [ 5] { .description "in the hands of a spellcaster" }
+  [ 5] { .description "in the hands of a $1$ creature" .lookup rCursesRandomAlignment }
+  [ 1] { .description "in the hands of a $1$" .lookup rCursesRandomGender }
+  [ 3] { .description "on nonholy days or during particular astrological events" }
+  [ 1] { .description "more than 100 miles from a particular site (holy, magical, etc.)" }
+end
+
+category groupRequirementCurses
+  { .description "eat twice as much as normal" }
+  { .description "sleep twice as much as normal" }
+  { .description "undergo a specific quest (one time only)" }
+  { .description "sacrifice (destroy) 100 gp worth of valuables per day" }
+  { .description "sacrifice (destroy) 2,000 gp worth of magic items per day" }
+  { .description "swear fealty to a particular noble or his family" }
+  { .description "discard all other magic items" }
+  { .description "worship $1$" .lookup rCursesRandomDeity }
+  { .description "must change their name to '$1$'" .lookup rCursesRandomName }
+  { .description "change their class to $1$ (if not of that class already)" .lookup rCursesRandomClass }
+  { .description "have at least $1$ ranks of $2$" .lookup rCursesRandomSkill }
+  { .description "sacrifice 2 points of Constitution one time (cannot be regained by 'restoration')" }
+  { .description "clean item each day with holy water" .applicableTo "!ps" }
+  { .description "kill a living creature each day with the item" .applicableTo "e" }
+  { .description "bathe item in volcanic lava once per month" .applicableTo "!ps" }
+  { .description "use item at least once per day or item ceases to function" .applicableTo "!ps" }
+  { .description "draw blood with item when wielded (can't be put away until it does)" .applicableTo "e" }
+  { .description "have '$1$' cast upon the item each day" .lookup rCursesRandomSpell .applicableTo "!ps" }
+end
+
+conditionRequiresVision
+  .description "requires vision"
+end
+
+category groupDrawbackCurses
+  [ 4] { .description "possessor's hair grows 1 inch longer (one time only)" }
+  [ 2] { .description "possessor shrinks half an inch (one time only)" }
+  [ 3] { .description "possessor grows half an inch (one time only)" }
+  [ 4] { .description "temperature around item is 10 degrees cooler than normal" }
+  [ 4] { .description "temperature around item is 10 degrees warmer than normal" }
+  [ 4] { .description "possessor's hair color changes" }
+  [ 4] { .description "possessor's skin color changes" }
+  [ 4] { .description "possessor now bears some identifying mark (tattoo, strange glow, etc.)" }
+  [ 3] { .description "possessor's gender changes" }
+  [ 2] { .description "possessor's race or kind changes" }
+  [ 1] { .description "possessor is afflicted with a random disease that cannot be cured" }
+  [ 4] { .description "item continually emits a disturbing sound (moaning, weeping, screaming, cursing, insults)." }
+  [ 1] { .description "item looks ridiculous (garishly colored, silly shape, glows bright pink)" }
+  [ 5] { .description "possessor becomes selfishly possessive about the item" }
+  [ 4] { .description "possessor becomes paranoid about losing the item and afraid of damage occurring to it" }
+  [ 2] { .description "possessor's alignment changes" }
+  [ 3] { .description "possessor must attack nearest creature (5% chance per day)" }
+  [ 3] { .description "possessor is stunned for 1d4 rounds, randomly, once per day" }
+  [ 3] { .description "possessor's vision is blurry" 
+         .bonuses ( { .type btUnnamed .aspect asAttack .magnitude -2 }
+                    { .type btUnnamed .aspect asSave .magnitude -2 .conditions ( conditionRequiresVision ) }
+                    { .type btUnnamed .aspect asSkill .magnitude -2 .conditions ( conditionRequiresVision ) } ) }
+  [ 4] { .description "possessor gains one negative level" }
+  [ 1] { .description "possessor gains two negative levels" }
+  [ 5] { .description "possessor must make a Will save each day or take 1 point of temporary Intelligence damage" }
+  [ 5] { .description "possessor must make a Will save each day or take 1 point of temporary Wisdom damage" }
+  [ 5] { .description "possessor must make a Will save each day or take 1 point of temporary Charisma damage" }
+  [ 5] { .description "possessor must make a Fortitude save each day or take 1 point of temporary Constitution damage" }
+  [ 5] { .description "possessor must make a Fortitude save each day or take 1 point of temporary Strength damage" }
+  [ 5] { .description "possessor must make a Fortitude save each day or take 1 point of temporary Dexterity damage" }
+  [ 1] { .description "possessor is polymorphed into a(n) $1$ (5% chance per day)" .subtable groupRandomCreatures }
+  [ 1] { .description "possessor cannot cast arcane spells" }
+  [ 1] { .description "possessor cannot cast divine spells" }
+  [ 1] { .description "possessor cannot cast any spells" }
+end
+
+category groupCursedItemCommonCurses
+  [15] { .description "item has no actual magical power other than to delude the user" }
+  [20] { .description "item has opposite effect/target" }
+  [10] { .subtable groupIntermittentlyFunctioningCurses }
+  [15] { .subtable groupRequirementCurses }
+  [15] { .subtable groupDrawbackCurses }
+  [15] { .description "item actually has a completely different effect" }
+end
+
+
+rule rCursesRandomAlignment( item obj )
+  x = NewThing();
+  do
+    x.lcAlignment = any( groupLCAlignmentTypes );
+    x.geAlignment = any( groupGEAlignmentTypes );
+  loop while not rAlignmentsCompatible( item, x );
+  n = rGetAlignmentName( x );
+  item.curse.description = rReplaceMacros( obj.description, n );
+  rCursesRandomAlignment = item;
+end
+
+
+rule rCursesRandomGender( item obj )
+  x = any( groupGenders );
+  item.curse.description = rReplaceMacros( obj.description, x.name );
+  rCursesRandomGender = item;
+end
+
+
+rule rCursesRandomDeity( item obj options )
+  c = duplicate( groupAllDeities );
+  do
+    x = any( c );
+    if x eq null then
+      rCursesRandomDeity = item;
+      exit rule;
+    end
+    remove( c, x );
+  loop while not rAlignmentsCompatible( item, x );
+  item.curse.description = rReplaceMacros( obj.description, x.name );
+  rCursesRandomDeity = item;
+end
+
+
+rule rCursesRandomClass( item obj options )
+  x = rGetAnyMatchingCriteria( groupAllClasses, options );
+	if x eq null then
+	  item.curse.description = rReplaceMacros( obj.description, "a random class" );
+	else
+		item.curse.description = rReplaceMacros( obj.description, x.name );
+	end
+  rCursesRandomClass = item;
+end
+
+
+rule rCursesRandomSkill( item obj options )
+  x = rGetAnyMatchingCriteria( groupAllSkills, options );
+  r = Random( 2d6 );
+	if x eq null then
+		item.curse.description = rReplaceMacros( obj.description, r, "a random skill" );
+	else
+		item.curse.description = rReplaceMacros( obj.description, r, x.name );
+	end
+  rCursesRandomSkill = item;
+end
+
+
+rule rCursesRandomSpell( item obj options )
+  x = rGetAnyMatchingCriteria( groupAllSpells, options );
+	if x eq null then
+		item.curse.description = rReplaceMacros( obj.description, "a random spell" );
+	else
+		item.curse.description = rReplaceMacros( obj.description, x.name );
+	end
+  rCursesRandomSpell = item;
+end
+
+
+rule rCursesRandomName( item obj )
+  x = any( groupAllNameGrammars );
+  randomName = rEvaluateGrammar( x );
+  randomName = UpperCase( Mid( randomName, 0, 1 ) ) + Mid( randomName, 1 );
+  item.curse.description = rReplaceMacros( obj.description, randomName );
+  rCursesRandomName = item;
+end
+
+
+rule rCurseApplies( item proposedCurse )
+  rCurseApplies = true;
+  if not has( proposedCurse, "applicableTo" ) then
+    exit rule;
+  end
+  if not has( item, "treasureType" ) then
+    exit rule;
+  end
+  case proposedCurse.applicableTo
+    is null then
+      exit rule;
+    is "" then
+      exit rule;
+  end
+
+  i = 0;
+  doEq = true;
+  len = Length( proposedCurse.applicableTo );
+  if Mid( proposedCurse.applicableTo, 0, 1 ) eq "!" then
+    i = 1;
+    doEq = false;
+  end
+
+  rCurseApplies = not doEq;
+
+  while i lt len do
+    t = Mid( proposedCurse.applicableTo, i, 1 );
+    match = false;
+    case t
+      is "a" then
+        match = ( item.treasureType eq "armor" );
+      is "p" then
+        match = ( item.treasureType eq "potion" );
+      is "r" then
+        match = ( item.treasureType eq "ring" );
+      is "d" then
+        match = ( item.treasureType eq "rod" );
+      is "s" then
+        match = ( item.treasureType eq "scroll" );
+      is "t" then
+        match = ( item.treasureType eq "staff" );
+      is "w" then
+        match = ( item.treasureType eq "wand" );
+      is "e" then
+        match = ( item.treasureType eq "weapon" );
+      is "i" then
+        match = ( item.treasureType eq "wondrous item" );
+    end
+    if match then
+      rCurseApplies = doEq;
+      exit rule;
+    end
+    i = i + 1;
+  end
+end
+
+
+rule rCurseItem( item options )
+  item.curse = NewThing();
+
+  c = duplicate( groupCursedItemCommonCurses );
+  do
+    x = any( c );
+    if x eq null then
+      exit rule;
+    end
+    remove( c, x );
+  loop while not rCurseApplies( item, x );
+
+  if not has( x, "subtable" ) then
+    item.curse.description = x.description;
+  else
+    case x.subtable
+      is groupIntermittentlyFunctioningCurses then
+        pfx = "item only functions when ";
+      is groupRequirementCurses then
+        pfx = "possessor must ";
+      default
+        pfx = "";
+    end
+
+    c = duplicate( x.subtable );
+    do
+      x = any( c );
+      if x eq null then
+        exit rule;
+      end
+      remove( c, x );
+    loop while not rCurseApplies( item, x );
+
+    if has( x, "subtable" ) then
+      y = any( x.subtable );
+      item.curse.description = rReplaceMacros( x.description, y.name );
+    elseif has( x, "lookup" ) then
+      item = x.lookup( item, x, options );
+    else
+      item.curse.description = x.description;
+    end
+
+    item.curse.description = pfx + item.curse.description;
+  end
+
+  rCurseItem = item;
+end

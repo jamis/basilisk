@@ -1,0 +1,46 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKAddUnitDef</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKAddUnitDef</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskutdef.html">BSKUnitDefinition</A><BR>
+
+<PRE>
+BSKUnitDefinition* BSKAddUnitDef( BSKUnitDefinition* list,
+                                  BSKUI32 id,
+                                  BSKFLOAT units,
+                                  BSKUI32 refUnit );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>list</i> - the list to add the new definition to.
+    <LI><i>id</i> - the identifier of the new unit.
+    <LI><i>units</i> - if 'refUnit' is 0, this should be 1, otherwise, it is the
+        number of 'refUnit' units that this new unit is equivalent to.
+    <LI><i>refUnit</i> - either 0 (if this unit is independant of other units), or
+        the id of an existing unit, to which the new unit is relative.
+  </UL>
+
+  <B>Returns:</B>  The new list of unit definitions that includes the new
+  definition.
+
+  <P>
+
+  <B>Description:</B>
+  Adds the given unit definition (id, units, and refUnit) to the 
+  list.  Although there is no checking done to ensure this, refUnit
+  should be an identifier of an existing unit.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

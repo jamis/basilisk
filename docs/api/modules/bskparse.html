@@ -1,0 +1,51 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0 Module:  BSKParse</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+    <H1>BSKParse</H1>
+
+    <B>Defined in:</B>  bskparse.h<BR>
+    <P>
+
+    The parser reads in <A HREF="bsktokens.html">tokens</A> from the
+    <A HREF="bsklexer.html">lexer</A> and interprets them into data and logic.
+    <A HREF="bskthing.html">Things</A> and <A HREF="bskcategory.html">categories</A>
+    are read and put into the database, and <A HREF="bskrule.html">rules</A>
+    are parsed and compiled to a pseudo-bytecode for more effecient
+    <A HREF="bskexec.html">execution</A>.
+
+    <P>
+
+    Data types:
+    <UL>
+      <LI><A HREF="../types/types.html#BSKParserErrorHandler">BSKParserErrorHandler</A>
+    </UL>
+
+    Constants:
+    <UL>
+      <LI><A HREF="../const/constants.html#PE_BUG_DETECTED">PE_BUG_DETECTED</A>
+      <LI><A HREF="../const/constants.html#PE_CANNOT_OPEN_FILE">PE_CANNOT_OPEN_FILE</A>
+      <LI><A HREF="../const/constants.html#PE_EXIT_LOOP_NOT_IN_LOOP">PE_EXIT_LOOP_NOT_IN_LOOP</A>
+      <LI><A HREF="../const/constants.html#PE_FORWARD_NOT_DEFINED">PE_FORWARD_NOT_DEFINED</A>
+      <LI><A HREF="../const/constants.html#PE_NOERROR">PE_NOERROR</A>
+      <LI><A HREF="../const/constants.html#PE_REDEFINED_IDENTIFIER">PE_REDEFINED_IDENTIFIER</A>
+      <LI><A HREF="../const/constants.html#PE_TOO_MANY_ATTRIBUTES">PE_TOO_MANY_ATTRIBUTES</A>
+      <LI><A HREF="../const/constants.html#PE_UNDECLARED_IDENTIFIER">PE_UNDECLARED_IDENTIFIER</A>
+      <LI><A HREF="../const/constants.html#PE_UNEXPECTED_TOKEN">PE_UNEXPECTED_TOKEN</A>
+      <LI><A HREF="../const/constants.html#PE_WRONG_TYPE">PE_WRONG_TYPE</A>
+    </UL>
+
+    Functions:
+    <UL>
+      <LI><A HREF="../functions/BSKParse.html">BSKParse</A>
+    </UL>
+
+    <A HREF="../index.html">Return to API</A>
+
+    <HR>
+    <I>Last updated on 8 Feb 2001 by Jamis Buck (minam@rpgplanet.com)</I>
+  </BODY>
+
+</HTML>

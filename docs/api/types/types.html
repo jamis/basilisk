@@ -1,0 +1,95 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0 Data Types</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+    <H1>Basilisk Data Types</H1>
+
+    Below is a list of the data types defined in Basilisk.
+
+    <UL>
+      <LI><B><A NAME="BSKBitSet"></A>BSKBitSet</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskbitset.html">BSKBitSet</A><BR>
+          An array of <A HREF="../const/constants.html#BIT_SET_SIZE">BIT_SET_SIZE</A>
+          32-bit integers, treated as a set.
+      <LI><B><A NAME="BSKBOOL"></A>BSKBOOL</B><BR>
+          <I>Module:</I>  bsktypes.h<BR>
+          A boolean type.
+      <LI><B><A NAME="BSKCHAR"></A>BSKCHAR</B><BR>
+          <I>Module:</I>  bsktypes.h<BR>
+          A character type.
+      <LI><B><A NAME="BSKConsoleHook"></A>BSKConsoleHook</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          Used by the VM as a callback function when text has been requested to be
+          printed to a "console."  The type defines a function with the following
+          "signature:"
+          <BLOCKQUOTE>
+            BSKI32 consoleHookFunc( BSKCHAR* message, BSKExecutionEnvironment* env, BSKNOTYPE userData )
+          </BLOCKQUOTE>
+          'message' is the text to be displayed, 'env' is the current state of the virtual machine,
+          and 'userData' is an application specific cookie that was passed to the
+          <A HREF="../functions/BSKExec.html">BSKExec</A> function.  This function should return 0
+          if the request was handled, and non-zero otherwise.
+      <LI><B><A NAME="BSKDBL"></A>BSKDBL</B><BR>
+          <I>Module:</I>  bsktypes.h<BR>
+          A double-precision floating point value.
+      <LI><B><A NAME="BSKFLOAT"></A>BSKFLOAT</B><BR>
+          <I>Module:</I>  bsktypes.h<BR>
+          A floating point value (generic).
+      <LI><B><A NAME="BSKI16"></A>BSKI16</B><BR>
+          <I>Module:</I>  bsktypes.h<BR>
+          A 16-bit signed integer value.
+      <LI><B><A NAME="BSKI32"></A>BSKI32</B><BR>
+          <I>Module:</I>  bsktypes.h<BR>
+          A 32-bit signed integer value.
+      <LI><B><A NAME="BSKI8"></A>BSKI8</B><BR>
+          <I>Module:</I>  bsktypes.h<BR>
+          An 8-bit signed integer value.
+      <LI><B><A NAME="BSKNOTYPE"></A>BSKNOTYPE</B><BR>
+          <I>Module:</I>  bsktypes.h<BR>
+          An untyped pointer value (void*).
+      <LI><B><A NAME="BSKParserErrorHandler"></A>BSKParserErrorHandler</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskparse.html">BSKParse</A><BR>
+          Callback function used to report errors during parsing.  The function has the
+          following "signature:"
+          <BLOCKQUOTE>
+            BSKI32 parserErrorFunc( BSKI32 code, BSKDatabase* db, BSKCHAR* message, BSKToken* token, BSKUI32 data, BSKNOTYPE userData )
+          </BLOCKQUOTE>
+          'Code' will be one of the <A HREF="../const/constants.html">PE_xxx constants</A>, 'db' is the
+          database as it currently exists in the parse, 'message' is any additional message that should
+          be displayed, 'token' is the current token in the parser, 'data' is any error-specific data (see
+          the description of each error code), and 'userData' is an application-specific cookie that was
+          passed to the <A HREF="../functions/BSKParse.html">BSKParse</A> function.  This function should
+          return 0 if the error was handled, and non-zero otherwise.
+      <LI><B><A NAME="BSKRuntimeErrorHandler"></A>BSKRuntimeErrorHandler</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+          Callback function used to report errors during script execution.  It has the
+          following "signature:"
+          <BLOCKQUOTE>
+            BSKI32 runtimeErrorFunc( BSKI32 code, BSKCHAR* message, BSKExecutionEnvironment* env, BSKNOTYPE userData )
+          </BLOCKQUOTE>
+          The code will be one of the <A HREF="../const/constants.html">RTE_xxx constants</A>, 'message'
+          (if non-null) is additional text to be displayed, 'env' is the current state of the virtual
+          machine, and 'userData' is an application-specific cookie that was passed to the
+          <A HREF="../functions/BSKExec.html">BSKExec</A> function.  This function should return 0
+          if the error was handled, and non-zero otherwise.
+      <LI><B><A NAME="BSKTokenId"></A>BSKTokenId</B><BR>
+          <I>Module:</I>  <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+          An integer type used to identify tokens.
+      <LI><B><A NAME="BSKUI16"></A>BSKUI16</B><BR>
+          <I>Module:</I>  bsktypes.h<BR>
+          A 16-bit unsigned integer value.
+      <LI><B><A NAME="BSKUI32"></A>BSKUI32</B><BR>
+          <I>Module:</I>  bsktypes.h<BR>
+          A 32-bit unsigned integer value.
+      <LI><B><A NAME="BSKUI8"></A>BSKUI8</B><BR>
+          <I>Module:</I>  bsktypes.h<BR>
+          An 8-bit unsigned integer value.
+    </UL>
+
+    <A HREF="../index.html">Return to API</A>
+    <HR>
+    <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+</HTML>

@@ -1,0 +1,45 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKSetValueDiceU</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKSetValueDiceU</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+
+<PRE>
+void BSKSetValueDiceU( BSKValue* value, 
+                       BSKI16  count, 
+                       BSKUI16 type,
+                       BSKCHAR op,
+                       BSKI16  modifier,
+                       BSKUI32 units );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+		<LI><i>value</i> - the value to set the dice value in.
+		<LI><i>count</i> - the number of dice (if negative, the dice will always result
+		    in a negative number).
+		<LI><i>type</i> - the type of the dice (sides per die).
+		<LI><i>op</i> - the operator for the modifier ('+' or '*').
+		<LI><i>modifier</i> - the modifier for the dice computation.
+		<LI><i>units</i> - the identifier of the units to use (or 0 to use no units).
+  </UL>
+
+  <P>
+
+  <B>Description:</B>
+	Same as <A HREF="BSKSetValueDice.html">BSKSetValueDice</A> but also sets the units
+	(the <A HREF="../const/constants.html#VF_UNITS">VF_UNITS</A> flag is set).
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

@@ -1,0 +1,111 @@
+// ------------------------------------------------------------------------
+// ** attributes.bsk **
+//
+// Place common global attribute definitions here.  Attributes that are
+// less "global" may defined in their respective files, but it would be
+// best if all definitions were in one place, for ease of maintainence.
+//
+// An "attribute" is a property of a "thing" -- a chair, being a thing,
+// might have an attribute of "color", for instance, or "weight".  An
+// attribute has a type, which may be string, number, boolean, thing,
+// category, or rule.
+//
+// Author:  Jamis Buck (minam@rpgplanet.com), 22 Dec 2000
+// ------------------------------------------------------------------------
+
+// ---------------------------- option attributes ------------------------
+attribute optMaxPhysicalArmorBonus      number
+attribute optMaxVirtualArmorBonus       number
+attribute optMaxPhysicalWeaponBonus     number
+attribute optMaxVirtualWeaponBonus      number
+attribute optMinTreasureValue           number
+attribute optMaxTreasureValue           number
+attribute optFillDifferenceWithCoins    boolean
+attribute optUseSources                 category
+attribute optAlwaysIntelligent          boolean
+
+// ----------------------------- string attributes ------------------------
+attribute name                          string
+attribute description                   string
+attribute commandWord                   string
+attribute treasureType                  string
+
+// ---------------------------- numeric attributes ------------------------
+attribute weight                        number
+attribute cost                          number
+attribute damage                        number
+attribute subdualDamage                 number
+attribute criticalRange                 number
+attribute criticalMultiplier            number
+attribute secondaryDamage               number
+attribute secondaryCriticalRange        number
+attribute secondaryCriticalMultiplier   number
+attribute rangeIncrement                number
+attribute maximumRange                  number
+attribute arcaneSpellFailure            number
+attribute maxDexBonus                   number
+attribute speedModifier                 number
+attribute armorCheckPenalty             number
+attribute magnitude                     number
+attribute hitDie                        number
+attribute skillPoints                   number
+attribute levelsPerBonusFeat            number
+attribute charges                       number
+attribute spellLevel                    number
+attribute casterLevel                   number
+attribute period                        number
+attribute frequency                     number
+attribute invisibleBonus                number // for use in calculating maximum plusses
+attribute duration                      number
+attribute saveDC                        number
+attribute capacityWeight                number
+attribute capacityVolume                number
+attribute speed                         number
+
+// ---------------------------- boolean attributes ------------------------
+attribute setVsCharge                   boolean
+attribute hasReach                      boolean
+attribute untrained                     boolean
+attribute acPenaltyApplies              boolean
+attribute bonusFeatAtFirstLevel         boolean
+attribute prerequisiteNot               boolean
+
+// ----------------------------- thing attributes -------------------------
+attribute size                          thing
+attribute aspect                        thing
+attribute affectedThing                 thing
+attribute type                          thing
+attribute maximumAbilityBonus           thing
+attribute damageResistance              thing
+attribute school                        thing
+attribute subschool                     thing
+attribute descriptor                    thing
+attribute spell                         thing
+attribute activationMethod              thing
+attribute intelligence                  thing
+attribute geAlignment                   thing
+attribute lcAlignment                   thing
+attribute prototype                     thing
+
+// --------------------------- category attributes ------------------------
+attribute descriptors                   category
+attribute subskills                     category
+attribute subtable                      category
+attribute contents                      category
+attribute abilityScores                 category
+attribute skills                        category
+attribute languages                     category
+attribute spellList                     category
+attribute domains                       category
+attribute abilities                     category
+attribute bonuses                       category
+attribute specialDefenses               category
+attribute specialAttacks                category
+attribute specialQualities              category
+attribute itemQualities                 category
+attribute conditions                    category
+attribute sources                       category
+
+// ----------------------------- rule attributes --------------------------
+attribute lookup                        rule
+attribute init                          rule

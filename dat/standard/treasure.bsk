@@ -1,0 +1,1069 @@
+attribute coins     category
+attribute goods     category
+attribute items     category
+
+#include "art.bsk"
+#include "gems.bsk"
+
+// ------------------------------------------------------------------------
+// Encounter Level 1
+// ------------------------------------------------------------------------
+
+category cTrLevel1Coins
+  [14] null
+  [15] { .magnitude 1d6*1000 cp }
+  [23] { .magnitude 1d8*100 sp }
+  [43] { .magnitude 2d8*10 gp }
+  [ 5] { .magnitude 1d4*10 pp }
+end
+
+category cTrLevel1Goods
+  [90] null
+  [ 5] { .magnitude 1 .lookup rLookupGem }
+  [ 5] { .magnitude 1 .lookup rLookupArt }
+end
+
+category cTrLevel1Items
+  [71] null
+  [24] { .magnitude 1 .lookup rLookupMundaneItem }
+  [ 5] { .magnitude 1 .lookup rLookupMinorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 2
+// ------------------------------------------------------------------------
+
+category cTrLevel2Coins
+  [13] null
+  [10] { .magnitude 1d10*1000 cp }
+  [20] { .magnitude 2d10*100 sp }
+  [52] { .magnitude 4d10*10 gp }
+  [ 5] { .magnitude 2d8*10 pp }
+end
+
+category cTrLevel2Goods
+  [81] null
+  [14] { .magnitude 1d3 .lookup rLookupGem }
+  [ 5] { .magnitude 1d3 .lookup rLookupArt }
+end
+
+category cTrLevel2Items
+  [49] null
+  [36] { .magnitude 1 .lookup rLookupMundaneItem }
+  [15] { .magnitude 1 .lookup rLookupMinorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 3
+// ------------------------------------------------------------------------
+
+category cTrLevel3Coins
+  [11] null
+  [10] { .magnitude 2d10*1000 cp }
+  [20] { .magnitude 4d8*100 sp }
+  [54] { .magnitude 1d4*100 gp }
+  [ 5] { .magnitude 1d10*10 pp }
+end
+
+category cTrLevel3Goods
+  [77] null
+  [18] { .magnitude 1d3 .lookup rLookupGem }
+  [ 5] { .magnitude 1d3 .lookup rLookupArt }
+end
+
+category cTrLevel3Items
+  [49] null
+  [31] { .magnitude 1d3 .lookup rLookupMundaneItem }
+  [20] { .magnitude 1 .lookup rLookupMinorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 4
+// ------------------------------------------------------------------------
+
+category cTrLevel4Coins
+  [11] null
+  [10] { .magnitude 3d10*1000 cp }
+  [20] { .magnitude 4d12*1000 sp }
+  [54] { .magnitude 1d6*100 gp }
+  [ 5] { .magnitude 1d8*10 pp }
+end
+
+category cTrLevel4Goods
+  [70] null
+  [25] { .magnitude 1d4 .lookup rLookupGem }
+  [ 5] { .magnitude 1d3 .lookup rLookupArt }
+end
+
+category cTrLevel4Items
+  [42] null
+  [20] { .magnitude 1d4 .lookup rLookupMundaneItem }
+  [38] { .magnitude 1 .lookup rLookupMinorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 5
+// ------------------------------------------------------------------------
+
+category cTrLevel5Coins
+  [10] null
+  [ 9] { .magnitude 1d4*10000 cp }
+  [19] { .magnitude 1d6*1000 sp }
+  [57] { .magnitude 1d8*100 gp }
+  [ 5] { .magnitude 1d10*10 pp }
+end
+
+category cTrLevel5Goods
+  [60] null
+  [35] { .magnitude 1d4 .lookup rLookupGem }
+  [ 5] { .magnitude 1d4 .lookup rLookupArt }
+end
+
+category cTrLevel5Items
+  [57] null
+  [10] { .magnitude 1d4 .lookup rLookupMundaneItem }
+  [33] { .magnitude 1d3 .lookup rLookupMinorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 6
+// ------------------------------------------------------------------------
+
+category cTrLevel6Coins
+  [10] null
+  [ 8] { .magnitude 1d6*10000 cp }
+  [19] { .magnitude 1d8*1000 sp }
+  [58] { .magnitude 1d10*100 gp }
+  [ 5] { .magnitude 1d12*10 pp }
+end
+
+category cTrLevel6Goods
+  [56] null
+  [36] { .magnitude 1d4 .lookup rLookupGem }
+  [ 8] { .magnitude 1d4 .lookup rLookupArt }
+end
+
+category cTrLevel6Items
+  [54] null
+  [ 4] { .magnitude 1d4 .lookup rLookupMundaneItem }
+  [40] { .magnitude 1d3 .lookup rLookupMinorItem }
+  [ 1] { .magnitude 1 .lookup rLookupMediumItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 7
+// ------------------------------------------------------------------------
+
+category cTrLevel7Coins
+  [11] null
+  [ 7] { .magnitude 1d10*10000 cp }
+  [17] { .magnitude 1d12*1000 sp }
+  [58] { .magnitude 2d6*100 gp }
+  [ 7] { .magnitude 3d4*10 pp }
+end
+
+category cTrLevel7Goods
+  [48] null
+  [40] { .magnitude 1d4 .lookup rLookupGem }
+  [12] { .magnitude 1d4 .lookup rLookupArt }
+end
+
+category cTrLevel7Items
+  [51] null
+  [46] { .magnitude 1d3 .lookup rLookupMinorItem }
+  [ 3] { .magnitude 1 .lookup rLookupMediumItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 8
+// ------------------------------------------------------------------------
+
+category cTrLevel8Coins
+  [10] null
+  [ 5] { .magnitude 1d12*10000 cp }
+  [14] { .magnitude 2d6*1000 sp }
+  [58] { .magnitude 2d8*100 gp }
+  [13] { .magnitude 3d6*10 pp }
+end
+
+category cTrLevel8Goods
+  [45] null
+  [40] { .magnitude 1d6 .lookup rLookupGem }
+  [15] { .magnitude 1d4 .lookup rLookupArt }
+end
+
+category cTrLevel8Items
+  [48] null
+  [48] { .magnitude 1d4 .lookup rLookupMinorItem }
+  [ 4] { .magnitude 1 .lookup rLookupMediumItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 9
+// ------------------------------------------------------------------------
+
+category cTrLevel9Coins
+  [10] null
+  [ 5] { .magnitude 2d6*10000 cp }
+  [14] { .magnitude 2d8*1000 sp }
+  [56] { .magnitude 5d4*100 gp }
+  [15] { .magnitude 2d12*10 pp }
+end
+
+category cTrLevel9Goods
+  [40] null
+  [40] { .magnitude 1d8 .lookup rLookupGem }
+  [20] { .magnitude 1d4 .lookup rLookupArt }
+end
+
+category cTrLevel9Items
+  [43] null
+  [48] { .magnitude 1d4 .lookup rLookupMinorItem }
+  [ 9] { .magnitude 1 .lookup rLookupMediumItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 10
+// ------------------------------------------------------------------------
+
+category cTrLevel10Coins
+  [10] null
+  [14] { .magnitude 2d10*1000 sp }
+  [55] { .magnitude 6d4*100 gp }
+  [21] { .magnitude 5d6*10 pp }
+end
+
+category cTrLevel10Goods
+  [35] null
+  [44] { .magnitude 1d8 .lookup rLookupGem }
+  [21] { .magnitude 1d6 .lookup rLookupArt }
+end
+
+category cTrLevel10Items
+  [40] null
+  [48] { .magnitude 1d4 .lookup rLookupMinorItem }
+  [11] { .magnitude 1 .lookup rLookupMediumItem }
+  [ 1] { .magnitude 1 .lookup rLookupMajorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 11
+// ------------------------------------------------------------------------
+
+category cTrLevel11Coins
+  [ 8] null
+  [ 6] { .magnitude 3d10*1000 sp }
+  [61] { .magnitude 4d8*100 gp }
+  [25] { .magnitude 4d10*10 pp }
+end
+
+category cTrLevel11Goods
+  [24] null
+  [50] { .magnitude 1d10 .lookup rLookupGem }
+  [26] { .magnitude 1d6 .lookup rLookupArt }
+end
+
+category cTrLevel11Items
+  [31] null
+  [53] { .magnitude 1d4 .lookup rLookupMinorItem }
+  [14] { .magnitude 1 .lookup rLookupMediumItem }
+  [ 2] { .magnitude 1 .lookup rLookupMajorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 12
+// ------------------------------------------------------------------------
+
+category cTrLevel12Coins
+  [ 8] null
+  [ 6] { .magnitude 3d12*1000 sp }
+  [61] { .magnitude 1d4*1000 gp }
+  [25] { .magnitude 1d4*100 pp }
+end
+
+category cTrLevel12Goods
+  [17] null
+  [53] { .magnitude 1d10 .lookup rLookupGem }
+  [30] { .magnitude  1d8 .lookup rLookupArt }
+end
+
+category cTrLevel12Items
+  [27] null
+  [55] { .magnitude 1d6 .lookup rLookupMinorItem }
+  [15] { .magnitude   1 .lookup rLookupMediumItem }
+  [ 3] { .magnitude   1 .lookup rLookupMajorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 13
+// ------------------------------------------------------------------------
+
+category cTrLevel13Coins
+  [ 8] null
+  [67] { .magnitude 1d4*1000 gp }
+  [25] { .magnitude 1d10*100 pp }
+end
+
+category cTrLevel13Goods
+  [11] null
+  [55] { .magnitude 1d12 .lookup rLookupGem }
+  [34] { .magnitude 1d10 .lookup rLookupArt }
+end
+
+category cTrLevel13Items
+  [19] null
+  [64] { .magnitude 1d6 .lookup rLookupMinorItem }
+  [22] { .magnitude   1 .lookup rLookupMediumItem }
+  [ 5] { .magnitude   1 .lookup rLookupMajorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 14
+// ------------------------------------------------------------------------
+
+category cTrLevel14Coins
+  [ 8] null
+  [67] { .magnitude 1d6*1000 gp }
+  [25] { .magnitude 1d12*100 pp }
+end
+
+category cTrLevel14Goods
+  [11] null
+  [55] { .magnitude 2d8 .lookup rLookupGem }
+  [34] { .magnitude 2d6 .lookup rLookupArt }
+end
+
+category cTrLevel14Items
+  [19] null
+  [39] { .magnitude 1d6 .lookup rLookupMinorItem }
+  [34] { .magnitude   1 .lookup rLookupMediumItem }
+  [ 8] { .magnitude   1 .lookup rLookupMajorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 15
+// ------------------------------------------------------------------------
+
+category cTrLevel15Coins
+  [ 3] null
+  [71] { .magnitude 1d8*1000 gp }
+  [26] { .magnitude 3d4*100 pp }
+end
+
+category cTrLevel15Goods
+  [ 9] null
+  [56] { .magnitude 2d10 .lookup rLookupGem }
+  [35] { .magnitude  2d8 .lookup rLookupArt }
+end
+
+category cTrLevel15Items
+  [11] null
+  [35] { .magnitude 1d10 .lookup rLookupMinorItem }
+  [44] { .magnitude    1 .lookup rLookupMediumItem }
+  [10] { .magnitude    1 .lookup rLookupMajorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 16
+// ------------------------------------------------------------------------
+
+category cTrLevel16Coins
+  [ 3] null
+  [71] { .magnitude 1d12*1000 gp }
+  [26] { .magnitude 3d4*100 pp }
+end
+
+category cTrLevel16Goods
+  [ 7] null
+  [57] { .magnitude  4d6 .lookup rLookupGem }
+  [36] { .magnitude 2d10 .lookup rLookupArt }
+end
+
+category cTrLevel16Items
+  [40] null
+  [ 6] { .magnitude 1d10 .lookup rLookupMinorItem }
+  [44] { .magnitude  1d3 .lookup rLookupMediumItem }
+  [10] { .magnitude    1 .lookup rLookupMajorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 17
+// ------------------------------------------------------------------------
+
+category cTrLevel17Coins
+  [ 3] null
+  [65] { .magnitude 3d4*1000 gp }
+  [32] { .magnitude 2d10*100 pp }
+end
+
+category cTrLevel17Goods
+  [ 4] null
+  [59] { .magnitude 4d8 .lookup rLookupGem }
+  [37] { .magnitude 3d8 .lookup rLookupArt }
+end
+
+category cTrLevel17Items
+  [33] null
+  [50] { .magnitude 1d3 .lookup rLookupMediumItem }
+  [17] { .magnitude   1 .lookup rLookupMajorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 18
+// ------------------------------------------------------------------------
+
+category cTrLevel18Coins
+  [ 2] null
+  [63] { .magnitude 3d6*1000 gp }
+  [35] { .magnitude 5d4*100 pp }
+end
+
+category cTrLevel18Goods
+  [ 4] null
+  [50] { .magnitude 3d12 .lookup rLookupGem }
+  [46] { .magnitude 3d10 .lookup rLookupArt }
+end
+
+category cTrLevel18Items
+  [24] null
+  [56] { .magnitude 1d4 .lookup rLookupMediumItem }
+  [20] { .magnitude   1 .lookup rLookupMajorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 19
+// ------------------------------------------------------------------------
+
+category cTrLevel19Coins
+  [ 2] null
+  [63] { .magnitude 3d8*1000 gp }
+  [35] { .magnitude 3d10*100 pp }
+end
+
+category cTrLevel19Goods
+  [ 3] null
+  [47] { .magnitude 6d6 .lookup rLookupGem }
+  [50] { .magnitude 6d6 .lookup rLookupArt }
+end
+
+category cTrLevel19Items
+  [ 4] null
+  [66] { .magnitude 1d4 .lookup rLookupMediumItem }
+  [30] { .magnitude   1 .lookup rLookupMajorItem }
+end
+
+// ------------------------------------------------------------------------
+// Encounter Level 20
+// ------------------------------------------------------------------------
+
+category cTrLevel20Coins
+  [ 2] null
+  [63] { .magnitude 4d8*1000 gp }
+  [35] { .magnitude 4d10*100 pp }
+end
+
+category cTrLevel20Goods
+  [ 2] null
+  [36] { .magnitude 4d10 .lookup rLookupGem }
+  [62] { .magnitude  7d6 .lookup rLookupArt }
+end
+
+category cTrLevel20Items
+  [25] null
+  [40] { .magnitude 1d4 .lookup rLookupMediumItem }
+  [35] { .magnitude 1d3 .lookup rLookupMajorItem }
+end
+
+// ------------------------------------------------------------------------
+// Main Treasure Table
+// ------------------------------------------------------------------------
+
+category mainTreasureTable
+  { .coins cTrLevel1Coins  .goods cTrLevel1Goods  .items cTrLevel1Items }
+  { .coins cTrLevel2Coins  .goods cTrLevel2Goods  .items cTrLevel2Items }
+  { .coins cTrLevel3Coins  .goods cTrLevel3Goods  .items cTrLevel3Items }
+  { .coins cTrLevel4Coins  .goods cTrLevel4Goods  .items cTrLevel4Items }
+  { .coins cTrLevel5Coins  .goods cTrLevel5Goods  .items cTrLevel5Items }
+  { .coins cTrLevel6Coins  .goods cTrLevel6Goods  .items cTrLevel6Items }
+  { .coins cTrLevel7Coins  .goods cTrLevel7Goods  .items cTrLevel7Items }
+  { .coins cTrLevel8Coins  .goods cTrLevel8Goods  .items cTrLevel8Items }
+  { .coins cTrLevel9Coins  .goods cTrLevel9Goods  .items cTrLevel9Items }
+  { .coins cTrLevel10Coins .goods cTrLevel10Goods .items cTrLevel10Items }
+  { .coins cTrLevel11Coins .goods cTrLevel11Goods .items cTrLevel11Items }
+  { .coins cTrLevel12Coins .goods cTrLevel12Goods .items cTrLevel12Items }
+  { .coins cTrLevel13Coins .goods cTrLevel13Goods .items cTrLevel13Items }
+  { .coins cTrLevel14Coins .goods cTrLevel14Goods .items cTrLevel14Items }
+  { .coins cTrLevel15Coins .goods cTrLevel15Goods .items cTrLevel15Items }
+  { .coins cTrLevel16Coins .goods cTrLevel16Goods .items cTrLevel16Items }
+  { .coins cTrLevel17Coins .goods cTrLevel17Goods .items cTrLevel17Items }
+  { .coins cTrLevel18Coins .goods cTrLevel18Goods .items cTrLevel18Items }
+  { .coins cTrLevel19Coins .goods cTrLevel19Goods .items cTrLevel19Items }
+  { .coins cTrLevel20Coins .goods cTrLevel20Goods .items cTrLevel20Items }
+end
+
+category groupMinorMagicItems
+  [ 4] rSelectMagicArmor
+  [ 5] rSelectMagicWeapon
+  [35] rLookupPotion
+  [ 2] rLookupRing
+  [35] rSelectScroll
+  [10] rSelectWand
+  [ 9] rSelectWondrousItem
+end
+
+category groupMediumMagicItems
+  [10] rSelectMagicArmor
+  [10] rSelectMagicWeapon
+  [10] rLookupPotion
+  [10] rLookupRing
+  [10] rSelectRod
+  [15] rSelectScroll
+  [ 3] rSelectStaff
+  [15] rSelectWand
+  [17] rSelectWondrousItem
+end
+
+category groupMajorMagicItems
+  [10] rSelectMagicArmor
+  [10] rSelectMagicWeapon
+  [ 5] rLookupPotion
+  [10] rLookupRing
+  [10] rSelectRod
+  [10] rSelectScroll
+  [20] rSelectStaff
+  [ 5] rSelectWand
+  [20] rSelectWondrousitem
+end
+
+category groupBonusMagicItems
+  { .magnitude  0 }
+  { .magnitude  1 }
+  { .magnitude  2 }
+  { .magnitude  4 }
+  { .magnitude  6 }
+  { .magnitude  9 }
+  { .magnitude 12 }
+  { .magnitude 17 }
+  { .magnitude 23 }
+  { .magnitude 31 }
+  { .magnitude 42 }
+end
+
+
+rule rLookupMinorItem( options )
+  r = any( groupMinorMagicItems );
+  rLookupMinorItem = r( "minor", options );
+end
+
+rule rLookupMediumItem( options )
+  r = any( groupMediumMagicItems );
+  rLookupMediumItem = r( "medium", options );
+end
+
+rule rLookupMajorItem( options )
+  r = any( groupMajorMagicItems );
+  rLookupMajorItem = r( "major", options );
+end
+
+
+rule rGetMostExpensiveItem( hoard )
+  maxVal = SetUnits( 0, "gp" );
+  maxItem = null;
+  for i in hoard.contents do
+    if i.cost ge maxVal then
+      maxVal = i.cost;
+      maxItem = i;
+    end
+  end
+  rGetMostExpensiveItem = maxItem;
+end
+
+
+rule rGetCheapestItem( hoard )
+  minVal = SetUnits( 1000000, "gp" );
+  minItem = null;
+  for i in hoard.contents do
+    if i.cost lt minVal then
+      minVal = i.cost;
+      minItem = i;
+    end
+  end
+  rGetCheapestItem = minItem;
+end
+
+
+rule rNewHoard()
+  hoard = NewThing();
+  hoard.contents = NewCategory();
+  hoard.cost = SetUnits( 0, "gp" );
+  rNewHoard = hoard;
+end
+
+
+rule rAddItemToHoard( hoard item )
+  hoard.cost = hoard.cost + item.cost;
+  add( hoard.contents, item );
+end
+
+
+rule rCombineHoards( hoard1 hoard2 )
+  if hoard2 eq null then
+    rCombineHoards = hoard1;
+    exit rule;
+  end
+
+  if hoard1 eq null then
+    rCombineHoards = hoard2;
+    exit rule;
+  end
+
+  for x in hoard2.contents do
+    if x ne null then
+      y = SearchCategory( hoard1.contents, "name", x.name );
+
+      valid = ( y ne null );
+      if valid then
+        valid = ( y.treasureType ne "gem" ) and
+                ( y.treasureType ne "art" );
+      end
+
+      if valid then
+        y.cost = y.cost + x.cost;
+        hoard1.cost = hoard1.cost + x.cost;
+        if has( y, "magnitude" ) and has( x, "magnitude" ) then
+          y.magnitude = y.magnitude + x.magnitude;
+        elseif has( x, "magnitude" ) then
+          y.magnitude = x.magnitude + 1;
+        elseif has( y, "magnitude" ) then
+            y.magnitude = y.magnitude + 1;
+        else
+          y.magnitude = 2;
+        end
+      else
+        rAddItemToHoard( hoard1, x );
+      end
+    end
+  end
+
+  rCombineHoards = hoard1;
+end
+
+
+rule rNewCoinThing( value pct doJitter )
+  coin = NewThing();
+  coin.treasureType = "coin";
+  if doJitter then
+	coin.cost = Int( rJitterValue( Eval( value ), 0.1 ) * pct );
+  else
+    coin.cost = Int( Eval( value ) * pct );
+  end
+  u = UnitsOf( coin.cost );
+  case u
+    is "cp" then
+      desc = "copper";
+    is "sp" then
+      desc = "silver";
+    is "gp" then
+      desc = "gold";
+    is "pp" then
+      desc = "platinum";
+    default
+      desc = "unknown";
+  end
+  coin.magnitude = MagnitudeOf( coin.cost );
+  coin.name = desc + " coins";
+  coin.cost = ConvertUnits( coin.cost, "gp" );
+  rNewCoinThing = coin;
+end
+
+
+rule rGenerateCoinsByEncounterLevel( level hoard pct options )
+  subt = Get( mainTreasureTable, level-1 );
+  if subt eq null then
+    exit rule;
+  end
+
+  totalWeight = TotalWeightOf( subt.coins );
+  if totalWeight lt 1 then
+    exit rule;
+  end
+
+  maxCost = rSafeGet( options, "optMaxTreasureValue" );
+
+  do
+    entryWeight = Random( totalWeight ) + 1;
+    c = GetByWeight( subt.coins, entryWeight );
+
+    valid = true;
+
+    if c ne null then
+      a = rNewCoinThing( c.magnitude, pct, true );
+      if maxCost ne null then
+        if a.cost + hoard.cost gt maxCost then
+          valid = false;
+        end
+      end
+      if valid then
+        rAddItemToHoard( hoard, a );
+      end
+    end
+  loop while not valid;
+
+  if ( 100 * entryWeight / totalWeight ) gt 95 then
+    x = rNewHoard();
+    rGenerateCoinsByEncounterLevel( level+1, x, pct, options );
+    if maxCost ne null then
+      if x.cost + hoard.cost gt maxCost then
+        exit rule;
+      end
+    end
+    rCombineHoards( hoard, x );
+  end
+end
+
+
+rule rGenerateGoodsByEncounterLevel( level hoard pct options )
+  subt = Get( mainTreasureTable, level-1 );
+  if subt eq null then
+    exit rule;
+  end
+
+  totalWeight = TotalWeightOf( subt.goods );
+  if totalWeight lt 1 then
+    exit rule;
+  end
+
+  maxCost = rSafeGet( options, "optMaxTreasureValue" );
+
+  entryWeight = Random( totalWeight ) + 1;
+  g = GetByWeight( subt.goods, entryWeight );
+
+  if g ne null then
+    cnt = Floor( Eval(g.magnitude) * pct );
+    if pct gt 0 and cnt lt 1 then
+      cnt = 1;
+    end
+    tries = 0;
+    for x = 1 to cnt do
+      v = g.lookup( options );
+      if v ne null then        
+        valid = true;
+        if maxCost ne null then
+          if hoard.cost + v.cost gt maxCost then
+            tries = tries + 1;
+            valid = false;
+            if tries gt 10 then
+              exit loop;
+            end
+            x = x - 1;
+          end
+        end
+        if valid then
+          tries = 0;
+          rAddItemToHoard( hoard, v );
+        end
+      end
+    end
+  end
+
+  if ( 100 * entryWeight / totalWeight ) gt 95 then
+    x = rNewHoard();
+    rGenerateGoodsByEncounterLevel( level+1, x, pct, options );
+    if maxCost ne null then
+      if hoard.cost + x.cost gt maxCost then
+        exit rule;
+      end
+    end
+    rCombineHoards( hoard, x );
+  end
+end
+
+
+rule rGenerateItemsByEncounterLevel( level hoard pct options )
+  subt = Get( mainTreasureTable, level-1 );
+  if subt eq null then
+    exit rule;
+  end
+
+  totalWeight = TotalWeightOf( subt.items );
+  if totalWeight lt 1 then
+    exit rule;
+  end
+
+  maxCost = rSafeGet( options, "optMaxTreasureValue" );
+
+  entryWeight = Random( totalWeight ) + 1;
+  i = GetByWeight( subt.items, entryWeight );
+
+  if i ne null then
+    cnt = Floor( Eval(i.magnitude) * pct );
+    if pct gt 0 and cnt lt 1 then
+      cnt = 1;
+    end
+    tries = 0;
+    for x = 1 to cnt do
+			v = i.lookup( options );
+      if v ne null then
+        valid = true;
+        if maxCost ne null then
+          if v.cost + hoard.cost gt maxCost then
+            if tries gt 10 then
+              exit loop;
+            end
+            valid = false;
+            tries = tries + 1;
+          end
+        end
+        if valid then
+          tries = 0;
+          rAddItemToHoard( hoard, v );
+        end
+      end
+    end
+  end
+
+  if ( 100 * entryWeight / totalWeight ) gt 95 then
+    x = rNewHoard();
+    rGenerateItemsByEncounterLevel( level+1, x, pct, options );
+    rCombineHoards( hoard, x );
+  end
+end
+
+
+rule rGenerateTreasureByEncounterLevel( level pctCoins pctGoods pctItems options )
+  hoard = rNewHoard();
+
+  excess = 0;
+  if level gt 20 then
+    excess = level - 20;
+    if excess gt 10 then
+      excess = 10;
+    end
+    excess = Get( groupBonusMagicItems, excess ).magnitude;
+    excess = Floor( excess * pctItems );
+    level = 20;
+  end
+
+  maxCost = rSafeGet( options, "optMaxTreasureValue" );
+  minCost = rSafeGet( options, "optMinTreasureValue" );
+
+  if minCost ne null and maxCost ne null then
+    if minCost gt maxCost then
+      minCost = maxCost;
+    end
+  end
+
+  tries = 0;
+
+  if pctCoins gt 0 then
+    rGenerateCoinsByEncounterLevel( level, hoard, pctCoins, options );
+  end
+  if pctGoods gt 0 then
+    rGenerateGoodsByEncounterLevel( level, hoard, pctGoods, options );
+  end
+
+  do
+    if pctItems gt 0 then
+      rGenerateItemsByEncounterLevel( level, hoard, pctItems, options );
+    end
+
+    for i = 1 to excess do
+      item = rLookupMajorItem( options );
+      if item ne null then
+        valid = true;
+        if maxCost ne null then
+          if item.cost + hoard.cost gt maxCost then
+            valid = false;
+          end
+        end
+        if valid then
+          rAddItemToHoard( hoard, item );
+        end
+      end
+    end
+
+    valid = true;
+    if minCost ne null then
+      if hoard.cost lt minCost then
+        tries = tries + 1;
+        if tries gt 10 then
+          if rSafeGet( options, "optFillDifferenceWithCoins", false ) then
+            h2 = rNewHoard();
+            coin = rNewCoinThing( minCost - hoard.cost, 1, false );
+            rAddItemToHoard( h2, coin );
+            rCombineHoards( hoard, h2 );
+          end
+          exit loop;
+        end
+        valid = false;
+      end
+    end
+  loop while not valid;
+
+  rGenerateTreasureByEncounterLevel = hoard;
+end
+
+
+rule rGenerateByELAndDisplay( level pctCoins pctGoods pctItems displayRoutine options )
+  hoard = rGenerateTreasureByEncounterLevel( level, pctCoins, pctGoods, pctItems, options );
+  totalValue = displayRoutine( hoard, options );
+  rGenerateByELAndDisplay = totalValue;
+end
+
+rule rVerifyLength( c )
+  l = count(c);
+  i = 0;
+  for e in c do
+    i = i + 1;
+  end
+print( "count()=" + l + " vs. elements=" + i + "\n" );
+end
+
+rule rGenerateTreasureByItemType( itemCount magnitudes itemTypes options )
+  hoard = rNewHoard();
+
+  magnitudesCategory = NewCategory();
+  itemTypesCategory = NewCategory();
+
+  l = Length( magnitudes );
+  if l lt 1 then
+    print( "You must specify at least one magnitude\n" );
+    exit rule;
+  end
+
+  for i = 1 to l do
+    t = NewThing();
+    t.name = magnitudes[ i-1 ];
+    add( magnitudesCategory, t );
+  end
+
+  l = Length( itemTypes );
+  if l lt 1 then
+    print( "You must specify at least one item type\n" );
+    exit rule;
+  end
+
+  for i = 1 to l do
+    t = NewThing();
+    t.name = itemTypes[ i-1 ];
+    add( itemTypesCategory, t );
+  end
+
+  maxCost = rSafeGet( options, "optMaxTreasureValue", null );
+  minCost = rSafeGet( options, "optMinTreasureValue", null );
+  tries   = 0;
+  minTries = 0;
+  largestSeen = null;
+
+  for i = 1 to itemCount do
+    if Empty( itemTypesCategory ) then
+      exit loop;
+    end
+
+    mag = any( magnitudesCategory );
+    t = any( itemTypesCategory );
+
+    case t.name
+      is "armor" then
+        item = rSelectMagicArmor( mag.name, options );
+      is "weapon" then
+        item = rSelectMagicWeapon( mag.name, options );
+      is "potion" then
+        item = rLookupPotion( mag.name, options );
+      is "ring" then
+        item = rLookupRing( mag.name, options );
+      is "rod" then
+        item = rSelectRod( mag.name, options );
+      is "scroll" then
+        item = rSelectScroll( mag.name, options );
+      is "staff" then
+        item = rSelectStaff( mag.name, options );
+      is "wand" then
+        item = rSelectWand( mag.name, options );
+      is "wondrous item" then
+        item = rSelectWondrousItem( mag.name, options );
+      default
+        item = null;
+    end
+
+    if item eq null then
+      remove( itemTypesCategory, t );
+      i = i - 1; // give the loop another chance
+    else
+      // make sure we don't exceed our maximum cost requirement
+      
+      valid = true;
+      if maxCost ne null then
+        if hoard.cost + item.cost gt maxCost then
+          if tries ge 10 then
+            // if we can't meet the maximum cost, then (if asked to) fill the
+            // difference with coins.
+            if hoard.cost lt maxCost and rSafeGet( options, "optFillDifferenceWithCoins", false ) then
+              item = rNewCoinThing( maxCost - hoard.cost, 1, false );
+              rAddItemToHoard( hoard, item );
+            end
+            exit loop;
+          end
+          i = i - 1;
+          valid = false;
+          tries = tries + 1;
+        end
+      end
+
+      if valid then
+        tries = 0;
+        rAddItemToHoard( hoard, item );
+      end
+    end
+
+    // make sure we don't exit until the minimum cost requirement
+    // is met.
+
+    if minCost ne null and i eq itemCount then
+      if hoard.cost lt minCost then
+        if minTries ge 20 then
+          if largestSeen ne null then
+            item = rGetCheapestItem( hoard );
+            if item ne null then
+              hoard.cost = hoard.cost - item.cost;
+              remove( hoard.contents, item );
+            end
+            rAddItemToHoard( hoard, largestSeen );
+          end
+
+          // if we can't meet the maximum cost, then (if asked to) fill the
+          // difference with coins.
+          
+    		  if hoard.cost lt minCost and rSafeGet( options, "optFillDifferenceWithCoins", false ) then
+            item = rNewCoinThing( minCost - hoard.cost, 1, false );
+            rAddItemToHoard( hoard, item );
+          end
+          exit loop;
+        end
+        minTries = minTries + 1;
+        item = rGetCheapestItem( hoard );
+        if item ne null then
+          i = i - 1;
+          hoard.cost = hoard.cost - item.cost;
+          remove( hoard.contents, item );
+          if largestSeen ne null then
+            if item.cost gt largestSeen.cost then
+              largestSeen = item;
+            end
+          end
+        end
+      end
+    end
+  end
+
+  rGenerateTreasureByItemType = hoard;
+end
+
+
+rule rGenerateByTypeAndDisplay( itemCount magnitudes itemTypes displayRoutine options )
+  hoard = rGenerateTreasureByItemType( itemCount, magnitudes, itemTypes, options );
+  totalValue = displayRoutine( hoard, options );
+  rGenerateByTypeAndDisplay = totalValue;
+end
+
+

@@ -1,0 +1,41 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKFindIdentifier</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKFindIdentifier</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskidtbl.html">BSKIdentifierTable</A><BR>
+
+<PRE>
+BSKI32 BSKFindIdentifier( BSKIdentifierTable* table,
+                          BSKCHAR* identifier );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>table</i> - the identifier table to search.
+    <LI><i>identifier</i> - the identifier to search for.
+  </UL>
+
+  <B>Returns:</B>  The unique numeric identifier of the given string, or 0
+  if the string is not in the table.
+
+  <P>
+
+  <B>Description:</B>
+  Searches the given table for the given identifier, returning either
+  0 if the identifier was not found in the table, or the numeric id of
+  the identifier if it was found.  Note that the search is <i>not</i>
+  case-sensitive, i.e. "myVariable" is equivalent to "MYVARIABLE".
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

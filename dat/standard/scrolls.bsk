@@ -1,0 +1,557 @@
+attribute spellsPerMinorScroll number
+attribute spellsPerMediumScroll number
+attribute spellsPerMajorScroll number
+
+optsScrollSettings ( groupAllOptions )
+  .name "scroll settings"
+
+  .spellsPerMinorScroll  1d3
+  .spellsPerMediumScroll 1d4
+  .spellsPerMajorScroll  1d6
+end
+
+
+category groupMinorScrollSpellLevels
+  [50] { .spellLevel 1 }
+  [45] { .spellLevel 2 }
+  [ 5] { .spellLevel 3 }
+end
+
+category groupMediumScrollSpellLevels
+  [ 5] { .spellLevel 2 }
+  [60] { .spellLevel 3 }
+  [30] { .spellLevel 4 }
+  [ 5] { .spellLevel 5 }
+end
+
+category groupMajorScrollSpellLevels
+  [ 5] { .spellLevel 4 }
+  [45] { .spellLevel 5 }
+  [20] { .spellLevel 6 }
+  [15] { .spellLevel 7 }
+  [10] { .spellLevel 8 }
+  [ 5] { .spellLevel 9 }
+end
+
+category groupArcaneScrollSpells1
+  [ 5] spellBurningHands
+  [ 5] spellChangeSelf
+  [ 5] spellCharmPerson
+  [ 3] spellColorSpray
+  [ 4] spellDetectSecretDoors
+  [ 3] spellDetectUndead
+  [ 3] spellEnlarge
+  [ 3] spellErase
+  [ 5] spellFeatherFall
+  [ 3] spellGrease
+  [ 5] spellIdentify
+  [ 3] spellJump
+  [ 4] spellMageArmor
+  [ 3] spellMagicWeapon
+  [ 3] spellMount
+  [ 3] spellRayOfEnfeeblement
+  [ 3] spellReduce
+  [ 3] spellShield
+  [ 3] spellShockingGrasp
+  [ 4] spellSilentImage
+  [ 5] spellSleep
+  [ 3] spellSpiderClimb
+  [ 3] spellSummonMonsterI
+  [ 3] spellTensersFloatingDisk
+  [ 5] spellUnseenServant
+  [ 3] spellVentriloquism
+end
+
+category groupArcaneScrollSpells2
+  [ 3] spellArcaneLock
+  [ 5] spellBlindnessDeafness
+  [ 5] spellBlur
+  [ 5] spellBullsStrength
+  [ 4] spellCatsGrace
+  [ 3] spellDarkvision
+  [ 5] spellDetectThoughts
+  [ 3] spellFlamingSphere
+  [ 5] spellInvisibility
+  [ 3] spellKnock
+  [ 5] spellLevitate
+  [ 5] spellLocateObject
+  [ 3] spellMelfsAcidArrow
+  [ 5] spellMinorImage
+  [ 5] spellMirrorImage
+  [ 5] spellMisdirection
+  [ 3] spellProtectionFromArrows
+  [ 5] spellSeeInvisibility
+  [ 3] spellSpectralHand
+  [ 3] spellStinkingCloud
+  [ 4] spellSummonMonsterII
+  [ 5] spellSummonSwarm
+  [ 3] spellWeb
+end
+
+category groupArcaneScrollSpells3
+  [ 5] spellBlink
+  [ 5] spellClairaudienceClairvoyance
+  [ 5] spellDispelMagic
+  [ 5] spellDisplacement
+  [ 5] spellFireball
+  [ 3] spellFlameArrow
+  [ 3] spellFly
+  [ 1] spellGaseousForm
+  [ 3] spellGreaterMagicWeapon
+  [ 3] spellHaltUndead
+  [ 3] spellHaste
+  [ 3] spellHoldPerson
+  [ 2] spellInvisibilitySphere
+  [ 6] spellLightningBolt
+  [ 1] spellMagicCircleAgainstChaos
+  [ 1] spellMagicCircleAgainstEvil
+  [ 1] spellMagicCircleAgainstGood
+  [ 1] spellMagicCircleAgainstLaw
+  [ 3] spellNondetection
+  [ 5] spellSlow
+  [ 5] spellSpectralHand
+  [ 5] spellSuggestion
+  [ 4] spellSummonMonsterIII
+  [ 5] spellTongues
+  [ 3] spellVampiricTouch
+  [ 3] spellWaterBreathing
+end
+
+category groupArcaneScrollSpells4
+  [ 5] spellCharmMonster
+  [ 5] spellConfusion
+  [ 5] spellDetectScrying
+  [ 3] spellDimensionalAnchor
+  [ 5] spellDimensionDoor
+  [ 5] spellEmotion
+  [ 3] spellEnervation
+  [ 3] spellEvardsBlackTentacles
+  [ 5] spellFear
+  [ 3] spellFireShield
+  [ 3] spellIceStorm
+  [ 5] spellImprovedInvisibility
+  [ 3] spellLesserGeas
+  [ 3] spellMinorGlobeOfInvulnerability
+  [ 6] spellPhantasmalKiller
+  [ 3] spellPolymorphOther
+  [ 3] spellPolymorphSelf
+  [ 3] spellRemoveCurse
+  [ 3] spellShadowConjuration
+  [ 3] spellStoneskin
+  [ 2] spellSummonMonsterIV
+  [ 3] spellWallOfFire
+  [ 3] spellWallOfIce
+end
+
+category groupArcaneScrollSpells5
+  [ 4] spellBigbysInterposingHand
+  [ 4] spellCloudkill
+  [ 5] spellConeOfCold
+  [ 4] spellDismissal
+  [ 4] spellDominatePerson
+  [ 3] spellFeeblemind
+  [ 3] spellGreaterShadowConjuration
+  [ 4] spellHoldMonster
+  [ 4] spellMajorCreation
+  [ 5] spellMindFog
+  [ 4] spellPasswall
+  [ 5] spellPersistentImage
+  [ 4] spellShadowEvocation
+  [ 3] spellStoneShape
+  [ 4] spellSummonMonsterV
+  [ 4] spellTelekinesis
+  [ 4] spellTeleport
+  [ 4] spellTransmuteMudToRock
+  [ 4] spellTransmuteRockToMud
+  [ 4] spellWallOfForce
+  [ 5] spellWallOfIron
+  [ 4] spellWallOfStone
+end
+
+category groupArcaneScrollSpells6
+  [ 4] spellAcidFog
+  [ 3] spellAnalyzeDweomer
+  [ 4] spellAntimagicField
+  [ 4] spellBigbysForcefulHand
+  [ 4] spellChainLightning
+  [ 4] spellCircleOfDeath
+  [ 3] spellControlWater
+  [ 4] spellDisintegrate
+  [ 3] spellEyebite
+  [ 4] spellFleshToStone
+  [ 4] spellGlobeOfInvulnerability
+  [ 4] spellGreaterShadowEvocation
+  [ 4] spellMassSuggestion
+  [ 3] spellMislead
+  [ 5] spellMoveEarth
+  [ 4] spellOtilukesFreezingSphere
+  [ 4] spellProgrammedImage
+  [ 5] spellProjectImage
+  [ 5] spellRepulsion
+  [ 3] spellShades
+  [ 4] spellStoneToFlesh
+  [ 4] spellSummonMonsterVI
+  [ 4] spellTrueSeeing
+end
+
+category groupArcaneScrollSpells7
+  [ 5] spellBigbysGraspingHand
+  [ 5] spellControlUndead
+  [ 5] spellDelayedBlastFireball
+  [ 5] spellEtherealJaunt
+  [ 5] spellFingerOfDeath
+  [ 5] spellForcecage
+  [ 5] spellLimitedWish
+  [ 5] spellMassInvisibility
+  [ 5] spellMordenkainensSword
+  [ 5] spellPowerWordStun
+  [ 5] spellPrismaticSpray
+  [ 5] spellReverseGravity
+  [ 5] spellSequester
+  [ 5] spellSpellTurning
+  [ 5] spellSummonMonsterVII
+  [ 5] spellTeleportWithoutError
+  [ 5] spellVanish
+  [ 5] spellVision
+end
+
+category groupArcaneScrollSpells8
+  [ 3] spellAntipathy
+  [ 5] spellBigbysClenchedFist
+  [ 5] spellClone
+  [ 5] spellDemand
+  [ 5] spellHorridWilting
+  [ 5] spellIncendiaryCloud
+  [ 5] spellMassCharm
+  [ 5] spellMaze
+  [ 5] spellMindBlank
+  [ 5] spellOtilukesTelekineticSphere
+  [ 5] spellOttosIrresistibleDance
+  [ 5] spellPolymorphAnyObject
+  [ 5] spellPowerWordBlind
+  [ 5] spellPrismaticWall
+  [ 5] spellProtectionFromSpells
+  [ 5] spellScreen
+  [ 5] spellSummonMonsterVIII
+  [ 5] spellSunburst
+  [ 2] spellSympathy
+end
+
+category groupArcaneScrollSpells9
+  [ 7] spellBigbysCrushingHand
+  [ 7] spellEnergyDrain
+  [ 7] spellImprisonment
+  [ 7] spellMeteorSwarm
+  [ 7] spellMordenkainensDisjunction
+  [ 7] spellPrismaticSphere
+  [ 7] spellShapechange
+  [ 7] spellSummonMonsterIX
+  [ 6] spellTimeStop
+  [ 7] spellWailOfTheBanshee
+  [ 7] spellWeird
+  [ 7] spellWish
+end
+
+category groupDivineScrollSpells1
+  [ 5] spellBless
+  [ 5] spellCalmAnimals
+  [ 4] spellCommand
+  [ 5] spellCureLightWounds
+  [ 3] spellDetectChaos
+  [ 3] spellDetectEvil
+  [ 3] spellDetectGood
+  [ 3] spellDetectLaw
+  [ 3] spellDetectSnaresAndPits
+  [ 5] spellDoom
+  [ 5] spellEntangle
+  [ 5] spellFaerieFire
+  [ 5] spellInflictLightWounds
+  [ 5] spellInvisibilityToAnimals
+  [ 5] spellInvisibilityToUndead
+  [ 3] spellMagicFang
+  [ 3] spellMagicStone
+  [ 3] spellMagicWeapon
+  [ 4] spellSanctuary
+  [ 5] spellShillelagh
+  [ 4] spellSummonMonsterI
+  [ 4] spellSummonNaturesAllyI
+end
+
+category groupDivineScrollSpells2
+  [ 5] spellAid
+  [ 5] spellAugury
+  [ 5] spellBarkskin
+  [ 5] spellBullsStrength
+  [ 5] spellCharmPersonOrAnimal
+  [ 3] spellChillMetal
+  [ 3] spellCureModerateWounds
+  [ 5] spellDelayPoison
+  [ 3] spellFlameBlade
+  [ 3] spellFlamingSphere
+  [ 5] spellHeatMetal
+  [ 3] spellHoldAnimal
+  [ 5] spellHoldPerson
+  [ 3] spellInflictModerateWounds
+  [ 5] spellLesserRestoration
+  [ 4] spellSilence
+  [ 3] spellSpeakWithAnimals
+  [ 5] spellSpiritualWeapon
+  [ 4] spellSummonMonsterII
+  [ 4] spellSummonNaturesAllyII
+  [ 2] spellSummonSwarm
+  [ 5] spellUndetectableAlignment
+end
+
+category groupDivineScrollSpells3
+  [ 2] spellCallLightning
+  [ 7] spellCureSeriousWounds
+  [ 4] spellDispelMagic
+  [ 2] spellDominateAnimal
+  [ 2] spellGreaterMagicFang
+  [ 2] spellInflictSeriousWounds
+  [ 3] spellInvisibilityPurge
+  [ 4] spellLocateObject
+  [ 2] spellMagicCircleAgainstChaos
+  [ 2] spellMagicCircleAgainstEvil
+  [ 2] spellMagicCircleAgainstGood
+  [ 2] spellMagicCircleAgainstLaw
+  [ 4] spellNegativeEnergyProtection
+  [ 3] spellNeutralizePoison
+  [ 2] spellPlantGrowth
+  [ 3] spellPrayer
+  [ 5] spellProtectionFromElements
+  [ 2] spellRemoveBlindnessDeafness
+  [ 3] spellRemoveCurse
+  [ 3] spellRemoveDisease
+  [ 3] spellSearingLight
+  [ 3] spellSpeakWithDead
+  [ 2] spellSpikeGrowth
+  [ 5] spellStoneShape
+  [ 3] spellSummonMonsterIII
+  [ 3] spellSummonNaturesAllyIII
+  [ 2] spellWaterBreathing
+  [10] spellWaterWalk
+end
+
+category groupDivineScrollSpells4
+  [ 2] spellAntiplantShell
+  [ 3] spellControlWater
+  [ 7] spellCureCriticalWounds
+  [ 7] spellDiscernLies
+  [ 5] spellDispelMagic
+  [ 3] spellDivinePower
+  [ 7] spellFlameStrike
+  [ 7] spellFreedomOfMovement
+  [ 6] spellGiantVermin
+  [ 3] spellGreaterMagicWeapon
+  [ 3] spellInflictCriticalWounds
+  [ 2] spellLesserPlanarAlly
+  [ 7] spellNeutralizePoison
+  [ 4] spellQuench
+  [ 2] spellRestoration
+  [ 3] spellRustingGrasp
+  [ 3] spellSpellImmunity
+  [ 2] spellSpikeStones
+  [ 4] spellSummonMonsterIV
+  [ 2] spellSummonNaturesAllyIV
+  [ 8] spellTongues
+end
+
+category groupDivineScrollSpells5
+  [ 7] spellBreakEnchantment
+  [ 6] spellCommune
+  [ 2] spellControlWinds
+  [ 7] spellCureCriticalWounds
+  [ 4] spellDispelEvil
+  [ 3] spellDispelGood
+  [ 6] spellFlameStrike
+  [ 4] spellGreaterCommand
+  [ 2] spellHallow
+  [ 3] spellHealingCircle
+  [ 2] spellIceStorm
+  [ 5] spellInsectPlague
+  [ 7] spellRaiseDead
+  [ 3] spellRighteousMight
+  [ 3] spellSlayLiving
+  [ 2] spellSpellResistance
+  [ 2] spellSummonMonsterV
+  [ 2] spellSummonNaturesAllyV
+  [ 3] spellTransmuteRockToMud
+  [ 2] spellTrueSeeing
+  [ 1] spellUnhallow
+  [ 3] spellWallOfFire
+  [ 2] spellWallOfStone
+  [10] spellWallOfThorns
+end
+
+category groupDivineScrollSpells6
+  [ 8] spellAntilifeShell
+  [ 6] spellBladeBarrier
+  [ 5] spellFindThePath
+  [ 4] spellFireSeeds
+  [ 5] spellGeasQuest
+  [ 6] spellHarm
+  [ 7] spellHeal
+  [ 6] spellHeroesFeast
+  [ 8] spellPlanarAlly
+  [ 2] spellRepelWood
+  [ 3] spellStoneTell
+  [ 8] spellSummonMonsterVI
+  [ 3] spellTransportViaPlants
+  [ 6] spellWallOfStone
+  [ 3] spellWindWalk
+  [10] spellWordOfRecall
+end
+
+category groupDivineScrollSpells7
+  [11] spellControlWeather
+  [ 7] spellCreepingDoom
+  [ 7] spellDestruction
+  [ 7] spellDictum
+  [ 4] spellFireStorm
+  [ 4] spellGreaterRestoration
+  [ 7] spellHolyWord
+  [ 7] spellRegenerate
+  [ 7] spellRepulsion
+  [ 7] spellResurrection
+  [ 4] spellSummonMonsterVII
+  [ 4] spellTransmuteMetalToWood
+  [ 4] spellTrueSeeing
+  [10] spellWordOfChaos
+end
+
+category groupDivineScrollSpells8
+  [ 6] spellAntimagicField
+  [ 6] spellCreepingDoom
+  [ 6] spellDiscernLocation
+  [ 7] spellEarthquake
+  [ 5] spellFingerOfDeath
+  [ 5] spellFireStorm
+  [ 9] spellHolyAura
+  [ 6] spellMassHeal
+  [ 6] spellRepelMetalOrStone
+  [ 6] spellReverseGravity
+  [ 6] spellSummonMonsterVIII
+  [ 6] spellSunburst
+  [ 6] spellUnholyAura
+  [10] spellWhirlwind
+end
+
+category groupDivineScrollSpells9
+  [ 7] spellEarthquake
+  [ 7] spellElementalSwarm
+  [12] spellEnergyDrain
+  [12] spellImplosion
+  [12] spellMiracle
+  [ 7] spellShapechange
+  [11] spellStormOfVengeance
+  [12] spellSummonMonsterIX
+  [10] spellTrueResurrection
+end
+
+template { name spellList }
+  stArcane { "arcane"
+             ( groupArcaneScrollSpells1
+               groupArcaneScrollSpells2
+               groupArcaneScrollSpells3
+               groupArcaneScrollSpells4
+               groupArcaneScrollSpells5
+               groupArcaneScrollSpells6
+               groupArcaneScrollSpells7
+               groupArcaneScrollSpells8
+               groupArcaneScrollSpells9 ) }
+  stDivine { "divine" 
+             ( groupDivineScrollSpells1
+               groupDivineScrollSpells2
+               groupDivineScrollSpells3
+               groupDivineScrollSpells4
+               groupDivineScrollSpells5
+               groupDivineScrollSpells6
+               groupDivineScrollSpells7
+               groupDivineScrollSpells8
+               groupDivineScrollSpells9 ) }
+end
+
+category groupScrollTypes
+  [70] stArcane
+  [30] stDivine
+end
+
+
+rule rComputeMinimumCasterLevel( spLev )
+  rComputeMinimumCasterLevel = ( spLev * 2 ) - 1;
+end
+
+
+rule rComputeScrollSpellCost( spLev spCasterLev )
+  rComputeScrollSpellCost = spLev * spCasterLev * SetUnits( 25, "gp" );
+end
+
+
+rule rGetScrollSpell( scroll s lev clev )
+  for x in scroll.contents do
+    if s.name eq x.name and x.spellLevel eq lev and x.casterLevel eq clev then
+      rGetScrollSpell = x;
+      exit rule;
+    end
+  end
+  rGetScrollSpell = null;
+end
+
+
+rule rSelectScroll( scrollMagnitude options )
+  case scrollMagnitude
+    is "minor" then
+      cnt = Eval( optsScrollSettings.spellsPerMinorScroll );
+      levGrp = groupMinorScrollSpellLevels;
+    is "medium" then
+      cnt = Eval( optsScrollSettings.spellsPerMediumScroll );
+      levGrp = groupMediumScrollSpellLevels;
+    is "major" then
+      cnt = Eval( optsScrollSettings.spellsPerMajorScroll );
+      levGrp = groupMajorScrollSpellLevels;
+  end
+
+  t = any( groupScrollTypes );
+
+  scroll = NewThing();
+  scroll.name = t.name;
+  scroll.treasureType = "scroll";
+  scroll.type = t;
+  scroll.contents = NewCategory();
+  scroll.cost = SetUnits( 0, "gp" );
+
+  while cnt gt 0 do
+    lev = any( levGrp ).spellLevel;
+    clev = rComputeMinimumCasterLevel( lev );
+    s = rGetAnyMatchingCriteria( Get( t.spellList, lev-1 ), options );
+    if s ne null then
+      x = rGetScrollSpell( scroll, s, lev, clev );
+      scroll.cost = scroll.cost + rComputeScrollSpellCost( lev, clev );
+      if x ne null then
+        if has( x, "magnitude" ) then
+          x.magnitude = x.magnitude + 1;
+        else
+          x.magnitude = 2;
+        end
+      else
+        x = rNewInstanceOf( s );
+        x.spellLevel = lev;
+        x.casterLevel = clev;
+        add( scroll.contents, x );
+      end
+    end
+    cnt = cnt - 1;
+  end
+
+  if Empty( scroll.contents ) then
+    exit rule;
+  end
+
+  if rItemDeservesCurse( scroll, options ) then
+    rCurseItem( scroll, options );
+  end
+
+  rSelectScroll = scroll;
+end
+

@@ -1,0 +1,95 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0 Module:  BSKValue</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+    <H1>BSKValue</H1>
+
+    <B>Defined in:</B>  bskvalue.h<BR>
+    <P>
+
+    Values form the meat of any Basilisk database.  Every string, every
+    number, even every thing, category, and rule, is a value.
+    <P>
+    When dealing with values, ALWAYS ALWAYS ALWAYS invalidate a value when
+    you are done with it!
+         
+    <P>
+
+    Data Types:
+    <UL>
+      <LI><A HREF="../types/structs.html#BSKValue">BSKValue</A>
+    </UL>
+
+    Constants:
+    <UL>
+      <LI><A HREF="../const/constants.html#VC_EPSILON">VC_EPSILON</A>
+      <LI><A HREF="../const/constants.html#VC_INFINITY">VC_INFINITY</A>
+      <LI><A HREF="../const/constants.html#VF_MODIFIER">VF_MODIFIER</A>
+      <LI><A HREF="../const/constants.html#VF_MULTIPLICATIVE">VF_MULTIPLICATIVE</A>
+      <LI><A HREF="../const/constants.html#VF_NONE">VF_NONE</A>
+      <LI><A HREF="../const/constants.html#VF_UNITS">VF_UNITS</A>
+      <LI><A HREF="../const/constants.html#VT_ALLOCATED">VT_ALLOCATED</A>
+      <LI><A HREF="../const/constants.html#VT_ARRAY">VT_ARRAY</A>
+      <LI><A HREF="../const/constants.html#VT_ATTRIBUTE">VT_ATTRIBUTE</A>
+      <LI><A HREF="../const/constants.html#VT_BOOLEAN">VT_BOOLEAN</A>
+      <LI><A HREF="../const/constants.html#VT_BYTE">VT_BYTE</A>
+      <LI><A HREF="../const/constants.html#VT_CATEGORIZABLE">VT_CATEGORIZABLE</A>
+      <LI><A HREF="../const/constants.html#VT_CATEGORY">VT_CATEGORY</A>
+      <LI><A HREF="../const/constants.html#VT_CATEGORY_ENTRY">VT_CATEGORY_ENTRY</A>
+      <LI><A HREF="../const/constants.html#VT_DEREFERENCABLE">VT_DEREFERENCABLE</A>
+      <LI><A HREF="../const/constants.html#VT_DICE">VT_DICE</A>
+      <LI><A HREF="../const/constants.html#VT_DWORD">VT_DWORD</A>
+      <LI><A HREF="../const/constants.html#VT_FLOAT">VT_FLOAT</A>
+      <LI><A HREF="../const/constants.html#VT_INTEGER">VT_INTEGER</A>
+      <LI><A HREF="../const/constants.html#VT_NULL">VT_NULL</A>
+      <LI><A HREF="../const/constants.html#VT_NUMBER">VT_NUMBER</A>
+      <LI><A HREF="../const/constants.html#VT_RULE">VT_RULE</A>
+      <LI><A HREF="../const/constants.html#VT_STRING">VT_STRING</A>
+      <LI><A HREF="../const/constants.html#VT_THING">VT_THING</A>
+      <LI><A HREF="../const/constants.html#VT_VALUE">VT_VALUE</A>
+      <LI><A HREF="../const/constants.html#VT_VARIABLE">VT_VARIABLE</A>
+      <LI><A HREF="../const/constants.html#VT_WORD">VT_WORD</A>
+    </UL>
+
+    Functions:
+    <UL>
+      <LI><A HREF="../functions/BSKCompareValues.html">BSKCompareValues</A>
+      <LI><A HREF="../functions/BSKCopyValue.html">BSKCopyValue</A>
+      <LI><A HREF="../functions/BSKDereferenceValue.html">BSKDereferenceValue</A>
+      <LI><A HREF="../functions/BSKEvaluateNumber.html">BSKEvaluateNumber</A>
+      <LI><A HREF="../functions/BSKGetDiceParts.html">BSKGetDiceParts</A>
+      <LI><A HREF="../functions/BSKInitializeValue.html">BSKInitializeValue</A>
+      <LI><A HREF="../functions/BSKInvalidateValue.html">BSKInvalidateValue</A>
+      <LI><A HREF="../functions/BSKSerializeValueIn.html">BSKSerializeValueIn</A>
+      <LI><A HREF="../functions/BSKSerializeValueOut.html">BSKSerializeValueOut</A>
+      <LI><A HREF="../functions/BSKSetValueDice.html">BSKSetValueDice</A>
+      <LI><A HREF="../functions/BSKSetValueDiceU.html">BSKSetValueDiceU</A>
+      <LI><A HREF="../functions/BSKSetValueNumber.html">BSKSetValueNumber</A>
+      <LI><A HREF="../functions/BSKSetValueNumberU.html">BSKSetValueNumberU</A>
+      <LI><A HREF="../functions/BSKSetValueString.html">BSKSetValueString</A>
+      <LI><A HREF="../functions/BSKValueGetArray.html">BSKValueGetArray</A>
+      <LI><A HREF="../functions/BSKValueGetCategory.html">BSKValueGetCategory</A>
+      <LI><A HREF="../functions/BSKValueGetData.html">BSKValueGetData</A>
+      <LI><A HREF="../functions/BSKValueGetFlags.html">BSKValueGetFlags</A>
+      <LI><A HREF="../functions/BSKValueGetRule.html">BSKValueGetRule</A>
+      <LI><A HREF="../functions/BSKValueGetString.html">BSKValueGetString</A>
+      <LI><A HREF="../functions/BSKValueGetThing.html">BSKValueGetThing</A>
+      <LI><A HREF="../functions/BSKValueGetType.html">BSKValueGetType</A>
+      <LI><A HREF="../functions/BSKValueIsType.html">BSKValueIsType</A>
+      <LI><A HREF="../functions/BSKValueOfAttributeType.html">BSKValueOfAttributeType</A>
+      <LI><A HREF="../functions/BSKValueSetArray.html">BSKValueSetArray</A>
+      <LI><A HREF="../functions/BSKValueSetCategory.html">BSKValueSetCategory</A>
+      <LI><A HREF="../functions/BSKValueSetRule.html">BSKValueSetRule</A>
+      <LI><A HREF="../functions/BSKValueSetThing.html">BSKValueSetThing</A>
+      <LI><A HREF="../functions/BSKValueUnits.html">BSKValueUnits</A>
+    </UL>
+
+    <A HREF="../index.html">Return to API</A>
+
+    <HR>
+    <I>Last updated on 8 Feb 2001 by Jamis Buck (minam@rpgplanet.com)</I>
+  </BODY>
+
+</HTML>

@@ -1,0 +1,36 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKCopyValue</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKCopyValue</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+
+<PRE>
+void BSKCopyValue( BSKValue* dest, BSKValue* src );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>dest</i> - the value to recieve the contents of 'src'.
+    <LI><i>src</i> - the value to copy.
+  </UL>
+
+  <P>
+
+  <B>Description:</B>
+  Copies 'src' into 'dest'.  If 'src' is VT_ALLOCATED, a copy of the
+  memory is made and assigned to dest, otherwise, the datum field is
+  shared between the two values.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

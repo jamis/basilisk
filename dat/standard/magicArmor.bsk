@@ -1,0 +1,767 @@
+attribute marketPriceArmorModifier  number
+attribute installArmorAbility       rule
+
+forward rule rInstallBashingAbility
+forward rule rSelectShieldSpell
+
+template ( groupMagicArmorGeneratorTypes ) { name }
+  magtShield     { "shield" }
+  magtArmor      { "armor" }
+  magtRollAgain  { "roll again" }
+  magtSpecArmor  { "specific armor" }
+  magtSpecShield { "specific shield" }
+end
+
+template ( groupMagicArmorSpecialAbilityTypes ) { name }
+  masatAny { "any" }
+  masatFortification { "fortification" }
+  masatSpellResistance { "spell resistance" }
+  masatArrows { "arrows" }
+end
+
+category groupRandomArmorType
+  [ 1] armorPadded
+  [ 1] armorLeather
+  [10] armorHide
+  [15] armorStuddedLeather
+  [15] armorChainShirt
+  [ 1] armorScaleMail
+  [ 1] armorChainMail
+  [13] armorBreastplate
+  [ 1] armorSplintMail
+  [ 1] armorBandedMail
+  [ 1] armorHalfPlate
+  [40] armorFullPlate
+end
+
+category groupRandomShieldType
+  [10] shieldBuckler
+  [ 5] shieldSmallWooden
+  [ 5] shieldSmallSteel
+  [10] shieldLargeWooden
+  [65] shieldLargeSteel
+  [ 5] shieldTower
+end
+
+category groupMinorArmorAndShields
+  [60] { .type magtShield    .magnitude +1 }
+  [20] { .type magtArmor     .magnitude +1 }
+  [ 5] { .type magtShield    .magnitude +2 }
+  [ 2] { .type magtArmor     .magnitude +2 }
+  [13] { .type magtRollAgain }
+end
+
+category groupMediumArmorAndShields
+  [ 5] { .type magtShield     .magnitude +1 }
+  [ 5] { .type magtArmor      .magnitude +1 }
+  [10] { .type magtShield     .magnitude +2 }
+  [10] { .type magtArmor      .magnitude +2 }
+  [10] { .type magtShield     .magnitude +3 }
+  [10] { .type magtArmor      .magnitude +3 }
+  [ 5] { .type magtShield     .magnitude +4 }
+  [ 2] { .type magtArmor      .magnitude +4 }
+  [ 3] { .type magtSpecArmor }
+  [ 3] { .type magtSpecShield }
+  [37] { .type magtRollAgain }
+end
+
+category groupMajorArmorAndShields
+  [ 8] { .type magtShield     .magnitude +3 }
+  [ 8] { .type magtArmor      .magnitude +3 }
+  [11] { .type magtShield     .magnitude +4 }
+  [11] { .type magtArmor      .magnitude +4 }
+  [11] { .type magtShield     .magnitude +5 }
+  [ 8] { .type magtArmor      .magnitude +5 }
+  [ 3] { .type magtSpecArmor }
+  [ 3] { .type magtSpecShield }
+  [37] { .type magtRollAgain }
+end
+
+asaAcidResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatAny
+  .name "acid resistance"
+  .activationMethod atContinuous
+  .specialDefenses ( { .type satDamageReduction .aspect etAcid .magnitude +10 } )
+  .marketPriceArmorModifier +3
+  .sources sourcesCoreRules
+end
+
+asaAnimated ( groupShieldSpecialAbilities )
+  .type masatAny
+  .name "animated"
+  .activationMethod atCommandWord
+  .specialQualities ( { .description "cause shield to float within 2' as a protection, freeing up both hands" } )
+  .marketPriceArmorModifier +2
+  .sources sourcesCoreRules
+end
+
+asaArrowDeflection ( groupShieldSpecialAbilities )
+  .type masatArrows
+  .name "arrow deflection"
+  .activationMethod atWill
+  .specialDefenses ( { .description "once per round, when would have been struck by a ranged weapon, make DC 20 Reflex save to avoid damage" } )
+  .marketPriceArmorModifier +2
+  .sources sourcesCoreRules
+end
+
+asaBashing ( groupShieldSpecialAbilities )
+  .type masatAny
+  .name "bashing"
+  .installArmorAbility rInstallBashingAbility
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .marketPriceArmorModifier +1
+  .sources sourcesCoreRules
+end
+
+asaBlinding ( groupShieldSpecialAbilities )
+  .type masatAny
+  .name "blinding"
+  .activationMethod atCommandWord
+  .specialAttacks ( { .description "flashes brilliantly, all within 20' (except wielder) must make Reflex save (DC 14) or be blinded for 14 rounds"
+                      .frequency 2 .period 1 day } )
+  .marketPriceArmorModifier +1
+  .sources sourcesCoreRules
+end
+
+asaColdResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatAny
+  .name "cold resistance"
+  .activationMethod atContinuous
+  .specialDefenses ( { .type satDamageReduction .aspect etCold .magnitude +10 } )
+  .marketPriceArmorModifier +3
+  .sources sourcesCoreRules
+end
+
+asaEtherealness ( groupArmorSpecialAbilities )
+  .type masatAny
+  .name "etherealness"
+  .activationMethod atCommandWord
+  .specialQualities ( { .description "become ethereal" .frequency 1 .period 1 day } )
+  .marketPriceArmorModifier +5
+  .sources sourcesCoreRules
+end
+
+asaFireResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatAny
+  .name "fire resistance"
+  .activationMethod atContinuous
+  .specialDefenses ( { .type satDamageReduction .aspect etFire .magnitude +10 } )
+  .marketPriceArmorModifier +3
+  .sources sourcesCoreRules
+end
+
+asaFortificationLight ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatFortification
+  .name "light fortification"
+  .specialDefenses ( { .description "25% chance to avoid a critical hit or sneak attack" } )
+  .marketPriceArmorModifier +1
+  .sources sourcesCoreRules
+end
+
+asaFortificationModerate ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatFortification
+  .name "moderate fortification"
+  .specialDefenses ( { .description "75% chance to avoid a critical hit or sneak attack" } )
+  .marketPriceArmorModifier +3
+  .sources sourcesCoreRules
+end
+
+asaFortificationHeavy ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatFortification
+  .name "heavy fortification"
+  .specialDefenses ( { .description "immune to critical hits and sneak attacks" } )
+  .marketPriceArmorModifier +5
+  .sources sourcesCoreRules
+end
+
+asaGhostTouch ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatAny
+  .name "ghost touch"
+  .specialDefenses ( { .description "armor bonus and enhancement bonus counts vs. attacks from incorporeal creatures" } )
+  .itemQualities ( { .description "may be picked up, moved, and worn by incorporeal creatures" } )
+  .marketPriceArmorModifier +3
+  .sources sourcesCoreRules
+end
+
+asaGlamered ( groupArmorSpecialAbilities )
+  .type masatAny
+  .name "glamered"
+  .activationMethod atCommandWord
+  .specialQualities ( { .description "appears as a normal set of clothing, except to 'true seeing'" } )
+  .marketPriceArmorModifier +1
+  .sources sourcesCoreRules
+end
+
+asaInvulnerability ( groupArmorSpecialAbilities )
+  .type masatAny
+  .name "invulnerability"
+  .specialDefenses ( { .type satDamageReduction .aspect { .name "+1" } .magnitude 5 } )
+  .marketPriceArmorModifier +3
+  .sources sourcesCoreRules
+end
+
+asaLightningResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatAny
+  .name "lightning resistance"
+  .activationMethod atContinuous
+  .specialDefenses ( { .type satDamageReduction .aspect etElectricity .magnitude +10 } )
+  .marketPriceArmorModifier +3
+  .sources sourcesCoreRules
+end
+
+asaReflection ( groupShieldSpecialAbilities )
+  .type masatAny
+  .name "reflection"
+  .activationMethod atWill
+  .specialDefenses ( { .type satSpellEffect .spell spellSpellTurning .frequency 1 .period 1 day } )
+  .marketPriceArmorModifier +5
+  .sources sourcesCoreRules
+end
+
+asaShadow ( groupArmorSpecialAbilities )
+  .type masatAny
+  .name "shadow"
+  .bonuses ( { .type btCircumstance .aspect asSkill .affectedThing skillHide .magnitude +10 } )
+  .marketPriceArmorModifier +1
+  .sources sourcesCoreRules
+end
+
+asaSilentMoves ( groupArmorSpecialAbilities )
+  .type masatAny
+  .name "silent moves"
+  .bonuses ( { .type btCircumstance .aspect asSkill .affectedThing skillMoveSilently .magnitude +10 } )
+  .marketPriceArmorModifier +1
+  .sources sourcesCoreRules
+end
+
+asaSlick ( groupArmorSpecialAbilities )
+  .type masatAny
+  .name "slick"
+  .bonuses ( { .type btCircumstance .aspect asSkill .affectedThing skillEscapeArtist .magnitude +10 } )
+  .marketPriceArmorModifier +1
+  .sources sourcesCoreRules
+end
+
+asaSonicResistance ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatAny
+  .name "sonic resistance"
+  .activationMethod atContinuous
+  .specialDefenses ( { .type satDamageReduction .aspect etSonic .magnitude +10 } )
+  .marketPriceArmorModifier +3
+  .sources sourcesCoreRules
+end
+
+asaSpellResistance13 ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatSpellResistance
+  .name "spell resistance (13)"
+  .activationMethod atContinuous
+  .specialDefenses ( { .type satSpellResistance .magnitude 13 } )
+  .marketPriceArmorModifier +2
+  .sources sourcesCoreRules
+end
+
+asaSpellResistance15 ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatSpellResistance
+  .name "spell resistance (15)"
+  .activationMethod atContinuous
+  .specialDefenses ( { .type satSpellResistance .magnitude 15 } )
+  .marketPriceArmorModifier +3
+  .sources sourcesCoreRules
+end
+
+asaSpellResistance17 ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatSpellResistance
+  .name "spell resistance (17)"
+  .activationMethod atContinuous
+  .specialDefenses ( { .type satSpellResistance .magnitude 17 } )
+  .marketPriceArmorModifier +4
+  .sources sourcesCoreRules
+end
+
+asaSpellResistance19 ( groupArmorSpecialAbilities groupShieldSpecialAbilities )
+  .type masatSpellResistance
+  .name "spell resistance (19)"
+  .activationMethod atContinuous
+  .specialDefenses ( { .type satSpellResistance .magnitude 19 } )
+  .marketPriceArmorModifier +5
+  .sources sourcesCoreRules
+end
+
+
+category groupMinorArmorSpecialAbilities
+  [30] asaGlamered
+  [22] asaSlick
+  [22] asaShadow
+  [22] asaSilentMoves
+  [ 2] asaFortificationModerate
+  [ 2] magtRollAgain
+end
+
+category groupMediumArmorSpecialAbilities
+  [ 2] asaFortificationLight
+  [ 5] asaGlamered
+  [12] asaSlick
+  [11] asaShadow
+  [19] asaSilentMoves
+  [ 1] asaSpellResistance13
+  [10] asaGhostTouch
+  [ 5] asaFortificationModerate
+  [ 1] asaSpellResistance15
+  [ 5] asaAcidResistance
+  [ 5] asaColdResistance
+  [ 5] asaFireResistance
+  [ 5] asaLightningResistance
+  [ 5] asaSonicResistance
+  [ 3] asaSpellResistance17
+  [ 1] asaEtherealness
+  [ 3] asaFortificationHeavy
+  [ 2] magtRollAgain
+end
+
+category groupMajorArmorSpecialAbilities
+  [ 2] asaFortificationLight
+  [ 6] asaGlamered
+  [ 1] asaSlick
+  [ 2] asaShadow
+  [ 3] asaSilentMoves
+  [ 2] asaSpellResistance13
+  [ 5] asaGhostTouch
+  [ 2] asaInvulnerability
+  [ 4] asaFortificationModerate
+  [ 2] asaSpellResistance15
+  [ 2] asaAcidResistance
+  [10] asaColdResistance
+  [10] asaFireResistance
+  [10] asaLightningResistance
+  [ 3] asaSonicResistance
+  [ 3] asaSpellResistance17
+  [ 2] asaEtherealness
+  [ 3] asaFortificationHeavy
+  [ 2] asaSpellResistance19
+  [25] magtRollAgain
+end
+
+category groupMinorShieldSpecialAbilities
+  [30] asaBashing
+  [20] asaBlinding
+  [10] asaFortificationLight
+  [39] asaArrowDeflection
+  [ 1] magtRollAgain
+end
+
+category groupMediumShieldSpecialAbilities
+  [10] asaArrowDeflection
+  [ 6] asaAnimated
+  [ 4] asaSpellResistance13
+  [ 5] asaGhostTouch
+  [ 5] asaFortificationModerate
+  [10] asaAcidResistance
+  [10] asaColdResistance
+  [10] asaFireResistance
+  [10] asaLightningResistance
+  [10] asaSonicResistance
+  [10] asaReflection
+  [10] magtRollAgain
+end
+
+category groupMajorShieldSpecialAbilities
+  [15] asaAnimated
+  [ 5] asaSpellResistance13
+  [ 5] asaGhostTouch
+  [10] asaFortificationModerate
+  [ 3] asaAcidResistance
+  [ 3] asaColdResistance
+  [ 3] asaFireResistance
+  [ 3] asaLightningResistance
+  [ 3] asaSonicResistance
+  [ 5] asaSpellResistance15
+  [ 5] asaSpellResistance17
+  [ 5] asaFortificationHeavy
+  [ 5] asaReflection
+  [10] asaSpellResistance19
+  [20] magtRollAgain
+end
+
+astBandedMailOfLuck ( groupSpecificArmors )
+  .name "banded mail of luck"
+  .cost 18900 gp
+  .prototype armorBandedMail
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +3 } )
+  .specialQualities ( { .description "wearer may require that an attack roll made against themselves be rerolled" .frequency 1 .period 1 week } )
+  .sources sourcesCoreRules
+end
+
+astBreastplateOfCommand ( groupSpecificArmors )
+  .name "breastplate of command"
+  .cost 21600 gp
+  .prototype breastplate
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +2 }
+             { .type btCircumstance .aspect asAbilityCheck .affectedThing astCharisma .magnitude +2 }
+             { .type btCircumstance .aspect asAbilityBasedSkillCheck .affectedThing astCharisma .magnitude +2 }
+             { .type btCircumstance .aspect asTurningCheck .magnitude +2 } )
+  .specialQualities ( { .description "troops within 360' become braver than normal" } )
+  .sources sourcesCoreRules
+end
+
+astCelestialArmor ( groupSpecificArmors )
+  .name "celestial armor"
+  .cost 25300 gp
+  .prototype {
+    .name "chainmail"
+    .bonuses ( AC5 )
+    .maxDexBonus 8
+    .armorCheckPenalty -2
+    .arcaneSpellFailure 15
+    .weight 5 }
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +1 } )
+  .specialQualities ( { .type satSpellEffect .spell spellFly .frequency 1 .period 1 day } )
+  .itemQualities ( { .description "may be worn under normal clothing" } )
+  .geAlignment geGood
+  .sources sourcesCoreRules
+end
+
+astDemonArmor ( groupSpecificArmors )
+  .name "demon armor"
+  .cost 41650 gp
+  .prototype armorFullPlate
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +4 } )
+  .specialAttacks ( { .description "claw attack at 1d10 (x2 critical) damage, target must make Fortitude save (DC 14) or be struck by 'contagion' spell" } )
+  .geAlignment geEvil
+  .itemQualities ( { .description "non-evil wearers gain one negative level while wearing the armor" } )
+  .sources sourcesCoreRules
+end
+
+astPlateArmorOfTheDeep ( groupSpecificArmors )
+  .name "plate armor of the deep"
+  .cost 16650 gp
+  .prototype armorFullPlate
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +1 } )
+  .specialQualities ( { .description "takes no damage from being deep underwater" }
+                      { .type satSpellEffect .spell spellWaterBreathing }
+                      { .description "may converse with any creature that breathes water" } )
+  .sources sourcesCoreRules
+end
+
+astRhinoHide ( groupSpecificArmors )
+  .name "rhino hide"
+  .cost 5165 gp
+  .prototype armorHide
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +2 }
+             { .type btEnhancement .aspect asArmorCheckPenalty .magnitude -1 } )
+  .specialAttacks ( { .description "all damage dealt by wearer on a charge attack is doubled" } )
+  .sources sourcesCoreRules
+end
+
+astAbsorbingShield ( groupSpecificShields )
+  .name "absorbing shield"
+  .cost 50170 gp
+  .prototype shieldLargeSteel
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +1 } )
+  .specialAttacks ( { .description "absorbs any single Large or smaller object or creature that touches the shield (successful touch attack)"
+                      .frequency 1 .period 2 days } )
+  .sources sourcesCoreRules
+end
+
+astCastersShield ( groupSpecificShields )
+  .name "caster's shield"
+  .cost 3153 gp
+  .prototype shieldSmallWooden
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +1 } )
+  .init rSelectShieldSpell
+  .sources sourcesCoreRules
+end
+
+astLionsShield ( groupSpecificShields )
+  .name "lion's shield"
+  .cost 9170 gp
+  .prototype shieldLargeSteel
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +2 } )
+  .specialAttacks ( { .description "bite for 2d6 points of damage (x2 critical), in addition to wielder's actions"
+                      .frequency 3 .period 1 day } )
+  .sources sourcesCoreRules
+end
+
+astSpinedShield ( groupSpecificShields )
+  .name "spined shield"
+  .cost 2670 gp
+  .prototype shieldLargeSteel
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +1 } )
+  .specialAttacks ( { .description "shoot 1 spine up to 120 feet, +1 to hit, for 1d10+1 damage (19-20/x2 critical)"
+                      .frequency 3 .period 1 day } )
+  .sources sourcesCoreRules
+end
+
+astWingedShield ( groupSpecificShields )
+  .name "winged shield"
+  .cost 15159 gp
+  .prototype shieldLargeWooden
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +3 } )
+  .specialQualities ( { .type satSpellEffect .spell spellFly
+                        .frequency 1 .period 1 day
+                        .description "up to 2 hours, carrying up to 400 pounds" } )
+  .sources sourcesCoreRules
+end
+
+category groupMediumSpecificArmors
+  [10] armorMithralShirt
+  [15] armorElvenChain
+  [10] astRhinoHide
+  [10] armorAdamantineBreastplate
+  [25] armorDwarvenPlate
+  [10] astPlateArmorOfTheDeep
+  [10] astBandedMailOfLuck
+  [10] astBreastplateOfCommand
+end
+
+category groupMajorSpecificArmors
+  [10] astPlateArmorOfTheDeep
+  [30] astBandedMailOfLuck
+  [20] astBreastplateOfCommand
+  [20] astCelestialArmor
+  [20] astDemonArmor
+end
+
+category groupMediumSpecificShields
+  [10] shieldDarkwood
+  [ 8] shieldLargeMithral
+  [ 7] shieldAdamantine
+  [20] astSpinedShield
+  [20] astCastersShield
+  [25] astLionsShield
+  [10] astWingedShield
+end
+
+category groupMajorSpecificShields
+  [20] astSpinedShield
+  [20] astCastersShield
+  [20] astLionsShield
+  [20] astWingedShield
+  [20] astAbsorbingShield
+end
+
+rule rComputeArmorBonusPrice( plusses )
+  rComputeArmorBonusPrice = SetUnits( plusses * plusses, "gp" ) * 1000;
+end
+
+rule rSelectShieldSpell( item )
+  if Random(2) ne 0 then
+    l = any( groupMediumScrollSpellLevels ).spellLevel;
+
+    if Random(100) lt 80 then
+      c = Get( stDivine.spellList, l-1 );
+    else
+      c = Get( stArcane.spellList, l-1 );
+    end
+
+    item = rEnsureAttributeExists( item, "contents", atCategory );
+
+    add( item.contents, any( c ) );
+  end
+
+  rSelectShieldSpell = item;
+end
+
+rule rInstallBashingAbility( item ability )
+  if item.prototype eq shieldTower then
+    rInstallBashingAbility = null;
+    exit rule;
+  end
+
+  if Exists( groupSmallShield, item.prototype ) then
+    item.damage = 1d6;
+  elseif Exists( groupLargeShield, item.prototype ) then
+    item.damage = 1d8;
+  else
+    rInstallBashingAbility = null;
+    exit rule;
+  end
+
+  rInstallBashingAbility = ability;
+end
+
+rule rInstallArmorAbility( item ability )
+  a = rNewInstanceOf( ability );
+  if Has( a, "installArmorAbility" ) then
+    a = a.installArmorAbility( item, a );
+  end
+  rInstallArmorAbility = a;
+end
+
+rule rHasAbilityType( a t )
+  for x in a.abilities do
+    if x.type eq t then
+      rHasAbilityType = true;
+      exit rule;
+    end
+  end
+  rHasAbilityType = false;
+end
+
+rule rSelectMagicArmor( armorMagnitude options )
+  case armorMagnitude
+    is "minor" then
+      c = groupMinorArmorAndShields;
+    is "medium" then
+      c = groupMediumArmorAndShields;
+    is "major" then
+      c = groupMajorArmorAndShields;
+    default
+      exit rule;
+  end
+
+  abilityCnt = 0;
+  c = duplicate( c );
+	do
+    i = any( c );
+    remove( c, i );
+    if i.type eq magtRollAgain then
+      abilityCnt = abilityCnt + 1;
+    end
+  loop while i.type eq magtRollAgain;
+
+  if i.type eq magtSpecArmor or i.type eq magtSpecShield then
+    if i.type eq magtSpecArmor then
+      case armorMagnitude
+        is "medium" then
+          c = groupMediumSpecificArmors;
+        is "major" then
+          c = groupMajorSpecificArmors;
+      end
+    else
+      case armorMagnitude
+        is "medium" then
+          c = groupMediumSpecificShields;
+        is "major" then
+          c = groupMajorSpecificShields;
+      end
+    end
+
+    newItem = rGetAnyMatchingCriteria( c, options );
+		if newItem eq null then
+		  exit rule;
+		end
+		newItem = rNewInstanceOf( newItem );
+  else
+    if i.type eq magtArmor then
+      proto = rGetAnyMatchingCriteria( groupRandomArmorType, options );
+      case armorMagnitude
+        is "minor" then
+          c = groupMinorArmorSpecialAbilities;
+        is "medium" then
+          c = groupMediumArmorSpecialAbilities;
+        is "major" then
+          c = groupMajorArmorSpecialAbilities;
+      end
+    elseif i.type eq magtShield then
+      proto = rGetAnyMatchingCriteria( groupRandomShieldType, options );
+      case armorMagnitude
+        is "minor" then
+          c = groupMinorShieldSpecialAbilities;
+        is "medium" then
+          c = groupMediumShieldSpecialAbilities;
+        is "major" then
+          c = groupMajorShieldSpecialAbilities;
+      end
+    end
+
+    if proto eq null then
+      exit rule;
+    end
+
+    newItem = rNewInstanceOf( proto );
+    newItem.prototype = proto;
+    newItem.bonuses = NewCategory();
+
+    x = NewThing();
+    x.type = btEnhancement;
+    x.aspect = asAC;
+    x.magnitude = i.magnitude;
+    Add( newItem.bonuses, x );
+
+    totalBonus = x.magnitude;
+
+    newItem.name = newItem.name + " +" + x.magnitude;
+
+    if abilityCnt gt 0 then
+      tmp = NewCategory();
+      for a in c do
+        if rThingMatchesCriteria( a, options ) then
+          Add( tmp, a );
+        end
+      end
+      c = tmp;
+      newItem.abilities = NewCategory();
+
+      abilitiesAdded = 0;
+      while abilityCnt gt 0 do
+        if Count( c ) lt 2 then
+          exit loop;
+        end
+
+        abilityCnt = abilityCnt - 1;
+        a = any( c );
+
+        if a eq null then
+          exit loop;
+        elseif a eq magtRollAgain then
+          abilityCnt = abilityCnt + 2;
+        else
+          remove( c, a );
+          if a.marketPriceArmorModifier + totalBonus le options.optMaxVirtualArmorBonus then
+            valid = a.type eq masatAny;
+            if not valid then
+              valid = not rHasAbilityType( newItem, a.type );
+            end
+            if valid then
+              valid = rThingMatchesCriteria( a, options );
+            end
+            if valid then
+              a = rInstallArmorAbility( newItem, a );
+              if a ne null then
+                add( newItem.abilities, a );
+                totalBonus = totalBonus + a.marketPriceArmorModifier;
+                if abilitiesAdded lt 1 then
+                  newItem.name = newItem.name + " (";
+                else
+                  newItem.name = newItem.name + ", ";
+                end
+                newItem.name = newItem.name + a.name;
+                abilitiesAdded = abilitiesAdded + 1;
+              end
+            end
+          end
+        end
+      end
+      if abilitiesAdded gt 0 then
+        newItem.name = newItem.name + ")";
+      end
+
+      newItem.invisibleBonus = ( totalBonus - x.magnitude );
+    end
+
+    newItem.cost = newItem.prototype.cost +
+                   masterworkArmor.cost +
+                   rComputeArmorBonusPrice( totalBonus );
+  end
+
+  newItem.treasureType = "armor";
+
+  d = Random(1d100);
+  if d eq 1 or rSafeGet( options, "optAlwaysIntelligent", false ) then
+    rEmbueIntelligenceUpon( newItem, options );
+  elseif d le 31 then
+    newItem = rEnsureAttributeExists( newItem, "itemQualities", atCategory );
+
+    x = NewThing();
+    x.description = "something provides a clue to this item's function";
+
+    Add( newItem.itemQualities, x );
+  end
+
+  if rItemDeservesCurse( newItem, options ) then
+    rCurseItem( newItem, options );
+  end
+
+  rSelectMagicArmor = newItem;
+end

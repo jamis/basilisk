@@ -1,0 +1,39 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKNewArray</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKNewArray</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskarray.html">BSKArray</A><BR>
+
+<PRE>
+BSKArray* BSKNewArray( BSKUI16 initLength );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>initLength</i> - the initial number of (null) values
+        to create in the array (may be 0).
+  </UL>
+
+  <B>Returns:</B> the new array.
+
+  <P>
+
+  <B>Description:</B>
+  Creates and initializes a new array with a beginning capacity of
+  'initLength.'  All elements are initialized to VT_NULL (see 
+  bskvalue.h).  If initLength is 0, the array is initialized with a
+  length of 0.  The new array object is returned.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

@@ -1,0 +1,44 @@
+#include "units.bsk"
+#include "attributes.bsk"
+#include "bonuses.bsk"
+#include "sizes.bsk"
+#include "types.bsk"
+#include "sources.bsk"
+
+#include "utilities.bsk"
+#include "grammar.bsk"
+
+#include "names.bsk"
+
+#include "races.bsk"
+#include "armor.bsk"
+#include "weapons.bsk"
+#include "feats.bsk"
+#include "skills.bsk"
+#include "spells.bsk"
+#include "deities.bsk"
+#include "classes.bsk"
+
+#include "intelligence.bsk"
+#include "cursed.bsk"
+
+#include "mundane.bsk"
+#include "scrolls.bsk"
+#include "magicArmor.bsk"
+#include "magicWpn.bsk"
+#include "potions.bsk"
+#include "rings.bsk"
+#include "rods.bsk"
+#include "staves.bsk"
+#include "wands.bsk"
+#include "wondrous.bsk"
+
+#include "display.bsk"
+
+#include "treasure.bsk"
+
+/* the following are files for data that extends the data found
+ * in the core rulebooks. */
+
+#include "snfist.bsk"   /* Sword & Fist */
+#include "scitadel.bsk" /* the Sunless Citadel */

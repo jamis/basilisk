@@ -1,0 +1,37 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKPutToken</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKPutToken</H1>
+
+  <B>Module:</B> <A HREF="../modules/bsklexer.html">BSKLexer</A><BR>
+
+<PRE>
+void BSKPutToken( BSKLexer* lexer,
+                  BSKToken* token );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>lexer</i> - the scanner into which to put the token.
+    <LI><i>token</i> - the token to put back.
+  </UL>
+
+  <P>
+
+  <B>Description:</B>
+  Stores the given token in the given lexer's back token buffer.  The
+  next call to BSKNextToken for the given lexer will return this
+  token.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

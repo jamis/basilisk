@@ -1,0 +1,521 @@
+/* ---------------------------------------------------------------- *
+ * These routines are for displaying items from a generated treasure
+ * hoard.  The following formatting options are assumed to be
+ * understood by any calling routine:
+ *
+ * ~~ -- insert a tilde character
+ * ~n -- insert a new line at this position
+ * ~B...~b -- bold
+ * ~I...~i -- italic
+ * ~C[xxxxxx]...~c -- set text to given color
+ * ~G[xxxxxx]...~g -- set the background to given color
+ * ---------------------------------------------------------------- */
+
+
+attribute fmtIndentSize number
+
+
+rule rPrintNewline()
+  print( "~n" );
+end
+
+rule rStartBold()
+  print( "~B" );
+end
+
+rule rEndBold()
+  print( "~b" );
+end
+
+rule rStartItalic()
+  print( "~I" );
+end
+
+rule rEndItalic()
+  print( "~i" );
+end
+
+rule rGetColor( clr )
+  case clr
+    is null then
+      clr = "000000";
+    is "red" then
+      clr = "FF0000";
+    is "green" then
+      clr = "00FF00";
+    is "blue" then
+      clr = "0000FF";
+    is "black" then
+      clr = "000000";
+    is "white" then
+      clr = "FFFFFF";
+  end
+  rGetColor = clr;
+end
+
+rule rStartColor( clr )
+  print( "~C[" + rGetColor( clr ) + "]" );
+end
+
+rule rEndColor()
+  print( "~c" );
+end
+
+rule rStartBG( clr )
+  print ( "~G[" + rGetColor( clr ) + "]" );
+end
+
+rule rEndBG()
+  print( "~g" );
+end
+
+rule rPrintHeader( hdrText )
+  rStartBold();
+  print( hdrText );
+  rEndBold();
+  rPrintNewline();
+end
+
+rule rIndent( formatting )
+  ind = "";
+  for i = 1 to formatting.fmtIndentSize do
+    ind = ind + " ";
+  end
+  rIndent = ind;
+end
+
+rule rCommify( num )
+  buf = "";
+  num = num + ""; // force it to be a string
+  p = instr( num, "." ); // find the decimal point
+  if p ge 0 then
+    s = mid( num, p );
+    buf = s + buf;
+    if p gt 0 then
+      num = mid( num, 0, p );
+    else
+      rCommify = buf;
+      exit rule;
+    end
+  end
+  len = length( num );
+  commas = floor( ( len - 1 ) / 3 );
+  while commas gt 0 do
+    s = mid( num, len-3, 3 );
+    buf = "," + s + buf;
+    num = mid( num, 0, len-3 );
+    len = len - 3;
+    commas = commas - 1;
+  end
+  buf = num + buf;
+  rCommify = buf;
+end
+
+
+rule rFormatNum( num )
+  t = DiceType( num );
+
+  u = UnitsOf( num );
+
+  if t eq 1 then
+    n = rCommify( num );
+  else
+    c = DiceCount( num );
+    op = DiceModType( num );
+    mod = DiceModifier( num );
+
+    n = c + "d" + t;
+    if not ( ( op eq "+" and mod eq 0 ) or ( op eq "*" and mod eq 1 ) ) then
+      if op eq "*" then
+        op = "x";
+      end
+      n = n + op + mod;
+    end
+  end
+
+  if u ne "" then
+    n = n + " " + u;
+  end
+  rFormatNum = n;
+end
+
+
+rule rDisplayContents( item formatting )
+  if has( item, "contents" ) then
+    indent = rIndent( formatting );
+    for i in item.contents do
+      print( "~n" + indent + "  - " + i.name );
+    end
+  end
+end
+
+
+rule rDisplayCurse( item formatting )
+  indent = rIndent( formatting );
+  rPrintNewline();
+  rStartBold();
+  print( indent + "  curse: " );
+  rEndBold();
+  print( item.curse.description );
+end
+
+
+rule rDisplayIntelligence( item formatting )
+  indent = rIndent( formatting );
+  indent = indent + "  ";
+
+  rPrintNewline();
+
+  smarts = item.intelligence;
+  intScore = rGetAbilityScore( smarts.abilityScores, astIntelligence );
+  wisScore = rGetAbilityScore( smarts.abilityScores, astWisdom );
+  chaScore = rGetAbilityScore( smarts.abilityScores, astCharisma );
+
+  print( indent + "Int: " + intScore.magnitude + " (" + rComputeAbilityScoreBonus(intScore.magnitude) + ")~n" );
+  print( indent + "Wis: " + wisScore.magnitude + " (" + rComputeAbilityScoreBonus(wisScore.magnitude) + ")~n" );
+  print( indent + "Cha: " + chaScore.magnitude + " (" + rComputeAbilityScoreBonus(chaScore.magnitude) + ")~n" );
+  print( indent + "Ego: " + smarts.ego + "~n" );
+  print( indent + "Communication: " + smarts.communication + "~n" );
+  if has( smarts, "readingAbility" ) then
+    print( indent + "Reading: " + smarts.readingAbility + "~n" );
+  end
+  print( indent + "Alignment: " + rGetAlignmentName( smarts ) );
+
+  if has( smarts, "languages" ) then
+    print( "~n" + indent + "Languages:" );
+    for y in smarts.languages do
+      print( "~n" + indent + "  " + y.name );
+    end
+  end
+
+  if has( smarts, "skills" ) then
+    print( "~n" + indent + "Skills:" );
+    for y in smarts.skills do
+      print( "~n" + indent + "  " + y.affectedThing.name + " +" + y.magnitude );
+    end
+  end
+
+  if has( smarts, "specialPurpose" ) then
+    print( "~n" + indent + "Purpose: " + smarts.specialPurpose.description );
+  end
+
+  if has( smarts, "bonuses" ) then
+    for b in smarts.bonuses do
+      case b.aspect
+        is asFeat then
+          print( "~n" + indent + "grants bearer free use of " + b.affectedThing.name );
+      end
+      if has( b, "conditions" ) then
+        for c in b.conditions do
+          print( " (" + c.description + ")" );
+        end
+      end
+    end
+  end
+
+  specials = NewArray( 3 );
+  specials[0] = "specialQualities";
+  specials[1] = "specialAttacks";
+  specials[2] = "specialDefenses";
+
+  for s = 0 to 2 do
+    if has( smarts, specials[s] ) then
+      special = AttributeOf( smarts, specials[s] );
+      for b in special do
+        print( "~n" + indent + b.description );
+        if has( b, "damage" ) then
+          print( " (" + rFormatNum( b.damage ) + " damage)" );
+        end
+        if has( b, "frequency" ) then
+          print( " (" + rFormatNum( b.frequency ) + " per " );
+          if b.period ne 1 then
+            print( b.period + " " );
+          end
+          print( UnitsOf( b.period ) + ")" );
+        end
+        if has( b, "conditions" ) then
+          for c in b.conditions do
+            print( " (" + c.description + ")" );
+          end
+        end
+      end
+    end
+  end
+end
+
+
+rule rStandardAttributes( item formatting )
+  if Has( item, "description" ) then
+    print( "~n" + rIndent( formatting ) + "  " + item.description );
+  end
+  if Has( item, "intelligence" ) then
+    rDisplayIntelligence( item, formatting );
+  end
+  if Has( item, "curse" ) then
+    rDisplayCurse( item, formatting );
+  end
+  if Has( item, "itemQualities" ) then
+    for i in item.itemQualities do
+      print( "~n" + rIndent( formatting ) + "  " + i.description );
+    end
+  end
+end
+
+
+rule rDisplayCoin( item formatting )
+  print( rIndent( formatting ) +
+         rFormatNum( item.magnitude ) + " " +
+         item.name +
+         " (" + rFormatNum( item.cost ) + ")" );
+  rPrintNewLine();
+end
+
+
+rule rDisplayArt( item formatting )
+  print( rIndent( formatting ) +
+         item.name +
+         " (" + rFormatNum( item.cost ) + ")" );
+  rPrintNewLine();
+end
+
+rule rDisplayGem( item formatting )
+  print( rIndent( formatting ) +
+         item.name +
+         " (" + rFormatNum( item.cost ) + ")" );
+  rPrintNewLine();
+end
+
+rule rDisplayArmor( item formatting )
+  print( rIndent( formatting ) +
+         item.name +
+         " (" + rFormatNum( item.cost ) + ")" );
+  rDisplayContents( item, formatting );
+  rStandardAttributes( item, formatting );
+  rPrintNewLine();
+end
+
+rule rDisplayWeapon( item formatting )
+  print( rIndent( formatting ) );
+  if has( item, "magnitude" ) then
+    if item.magnitude gt 1 then
+      print( item.magnitude + " " );
+    end
+  end
+  print( item.name +
+         " (" + rFormatNum( item.cost ) + ")" );
+  rDisplayContents( item, formatting );
+  rStandardAttributes( item, formatting );
+  rPrintNewLine();
+end
+
+rule rDisplayScroll( item formatting )
+  indent = rIndent( formatting );
+  print( indent +
+         item.name +
+         " (" + rFormatNum( item.cost ) + ")" );
+  for spell in item.contents do
+    print( "~n" + indent +
+           "  " + spell.name +
+           " (l" + spell.spellLevel + ", " +
+             "cl" + spell.casterLevel + ")" );
+  end
+  rStandardAttributes( item, formatting );
+  rPrintNewLine();
+end
+
+rule rDisplayWand( item formatting )
+  print( rIndent( formatting ) +
+         item.name +
+         " (" + item.charges + " charges)" +
+         " (" + rFormatNum( item.cost ) + ")" );
+  rStandardAttributes( item, formatting );
+  rPrintNewLine();
+end
+
+rule rDisplayRod( item formatting )
+  print( rIndent( formatting ) +
+         item.name );
+  if( Has( item, "charges" ) ) then
+    print( " (" + item.charges + " charges)" );
+  end
+  print( " (" + rFormatNum( item.cost ) + ")" );
+  rStandardAttributes( item, formatting );
+  rPrintNewLine();
+end
+
+rule rDisplayRing( item formatting )
+  print( rIndent( formatting ) +
+         item.name );
+  if( Has( item, "charges" ) ) then
+    print( " (" + item.charges + " charges)" );
+  end
+  print( " (" + rFormatNum( item.cost ) + ")" );
+  rDisplayContents( item, formatting );
+  rStandardAttributes( item, formatting );
+  rPrintNewLine();
+end
+
+rule rDisplayStaff( item formatting )
+  print( rIndent( formatting ) +
+         item.name );
+  if( Has( item, "charges" ) ) then
+    print( " (" + item.charges + " charges)" );
+  end
+  print( " (" + rFormatNum( item.cost ) + ")" );
+  rStandardAttributes( item, formatting );
+  rPrintNewLine();
+end
+
+rule rDisplayWondrousItem( item formatting )
+  print( rIndent( formatting ) +
+         item.name +
+         " (" + rFormatNum( item.cost ) + ")" );
+  rDisplayContents( item, formatting );
+  rStandardAttributes( item, formatting );
+  rPrintNewLine();
+end
+
+rule rDisplayMundane( item formatting )
+  print( rIndent( formatting ) );
+  multiple = false;
+  div = 1;
+  if has( item, "magnitude" ) then
+    if item.magnitude gt 1 then
+      print( rFormatNum( item.magnitude ) + " " );
+      multiple = true;
+      div = item.magnitude;
+    end
+  end
+  if has( item, "size" ) then
+    print( item.size.name + " " );
+  end
+  print( item.name );
+  print( " (" + rFormatNum( item.cost/div ) );
+  if multiple then
+    print( " each" );
+  end
+  print( ")" );
+  rPrintNewLine();
+end
+
+rule rDisplayPotion( item formatting )
+  print( rIndent( formatting ) +
+         item.name +
+         " (" + rFormatNum( item.cost ) + ")" );
+  rStandardAttributes( item, formatting );
+  rPrintNewLine();
+end
+
+rule rDisplayTreasureItem( item formatting )
+  case item.treasureType
+    is "coin" then
+      rDisplayCoin( item, formatting );
+    is "art" then
+      rDisplayArt( item, formatting );
+    is "mundane" then
+      rDisplayMundane( item, formatting );
+    is "potion" then
+      rDisplayPotion( item, formatting );
+    is "gem" then
+      rDisplayGem( item, formatting );
+    is "armor" then
+      rDisplayArmor( item, formatting );
+    is "weapon" then
+      rDisplayWeapon( item, formatting );
+    is "scroll" then
+      rDisplayScroll( item, formatting );
+    is "wand" then
+      rDisplayWand( item, formatting );
+    is "rod" then
+      rDisplayRod( item, formatting );
+    is "ring" then
+      rDisplayRing( item, formatting );
+    is "staff" then
+      rDisplayStaff( item, formatting );
+    is "wondrous item" then
+      rDisplayWondrousItem( item, formatting );
+    default
+      exit rule;
+  end
+end
+
+
+rule rSortHoardContents( a b )
+  if a.treasureType lt b.treasureType then
+    rSortHoardContents = -1;
+  elseif a.treasureType gt b.treasureType then
+    rSortHoardContents = 1;
+  elseif a.name lt b.name then
+    rSortHoardContents = -1;
+  elseif a.name gt b.name then
+    rSortHoardContents = 1;
+  elseif a.cost lt b.cost then
+    rSortHoardContents = -1;
+  elseif a.cost gt b.cost then
+    rSortHoardContents = 1;
+  else
+    rSortHoardContents = 0;
+  end
+end
+
+
+rule rDisplayTreasureHoard( hoard options )
+  if Empty( hoard.contents ) then
+
+    print( "None." );
+
+  else
+
+    formatting = NewThing();
+    formatting.fmtIndentSize = 0;
+
+    /* put all items in an array, so we can sort them */
+
+    items = NewArray();
+    idx = 0;
+    for item in hoard.contents do
+      items[ idx ] = item;
+      idx = idx + 1;
+    end
+
+    sort( items, rSortHoardContents );
+
+    len = Length( items );
+    currentHeader = "";
+    for idx = 1 to len do
+      item = items[ idx - 1 ];
+
+      /* because all items are sorted first by treasure type, as
+       * soon as a new treasure type is encountered, we know we've
+       * entered a new "section" and can display it as a header. */
+
+      if item.treasureType ne currentHeader then
+        rPrintHeader( item.treasureType );
+        currentHeader = item.treasureType;
+        formatting.fmtIndentSize = 2;
+      end
+
+      rDisplayTreasureItem( item, formatting );
+
+      mag = 1;
+      if item.treasureType eq "mundane" then
+        mag = item.magnitude;
+      end
+    end
+
+    print( "-------------------" );
+    rPrintNewLine();
+
+    rStartBold();
+
+    print( "Total Value: " );
+    rEndBold();
+    print( rFormatNum( hoard.cost ) );
+
+  end 
+
+  rPrintNewLine();
+
+  rDisplayTreasureHoard = hoard.cost;
+end
+

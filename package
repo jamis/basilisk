@@ -1,0 +1,29 @@
+#! /bin/bash
+
+if [ ! $1 ] ; then
+  echo "Specify a file name.";
+  exit;
+fi
+
+fname="$1.tar";
+
+src="src/*.c include/*.h bskrun.c bskcompile.c bsktreasure.c bskcallbacks.c bskcallbacks.h Makefile README LICENSE CHANGELOG dat/standard/treasure.ini";
+doc="docs/*";
+dat="dat/standard/*.bsk dat/snfist/*.bsk dat/scitadel/*.bsk";
+
+case $2 in
+  "")
+    echo Please specify 'src', 'all', 'doc', or 'data'.;
+    exit ;;
+  "src")
+    data="$src" ;;
+  "all")
+    data="$src $doc $dat" ;;
+  "doc")
+    data="$doc" ;;
+  "data")
+    data="$dat" ;;
+esac
+
+tar cvf $fname $data;
+gzip --best -fq $fname;

@@ -1,0 +1,29 @@
+attribute left string
+attribute production string
+attribute productions category
+attribute startSymbol string
+attribute groups category
+
+rule rFindMatchingGroup( grammar currentWord )
+  for grp in grammar.groups do
+    if instr( currentWord, grp.left ) ge 0 then
+      rFindMatchingGroup = grp;
+      exit loop;
+    end
+  end
+end
+
+rule rEvaluateGrammar( grammar )
+  word = grammar.startSymbol;
+
+  do
+    grp = rFindMatchingGroup( grammar, word );
+    if grp ne null then
+      repl = any( grp.productions ).production;
+      word = Replace( word, grp.left, repl );
+    end
+  loop while grp ne null;
+
+  rEvaluateGrammar = word;
+end
+

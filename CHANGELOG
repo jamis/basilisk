@@ -1,0 +1,39 @@
+version 2.0.b3
+  Added accessor methods as macros to nearly all modules.
+  bskparse.c
+    Added search paths to the #include functionality.
+  bskthing.c
+    Fixed memory leak in BSKDuplicateThing (was not invalidating
+      the temporary value)
+
+2 Feb 2001
+version 2.0.b2
+  Added "copy all" and "clear console" to the edit menu, and the
+    context menu for the console.
+  No coins were showing up for EL 1 treasures -- fixed.
+  Made console a separate (and resizable) window
+  Added parameters for treasure generation (max value, min value,
+    fill with coins)
+  Displayed treasure parameters in console
+  Allow percentages of coins, goods, items in treasures by EL.
+  bskctgry.c
+    BSKRemoveFromCategory:
+      when the tail element of a category was removed, the 'tail' member
+        field was not being set to the next-to-last element in the category.
+    BSKRemoveAllFromCategory:
+      was not setting the 'tail' field to 0.
+  Added name generation (grammar.bsk, names.bsk, etc.)
+  cursed.bsk
+    fixed items recieving curses inappropriate to their type
+    added random names to curses (rCursesRandomName)
+    added random creatures to curses (groupRandomCreatures)
+  potions.bsk
+    fixed misspelling ('edurance' -> 'endurance')
+  utilities.bsk
+    added rItemDeservesCurse rule to determine when an item gets a curse.
+  weapons.bsk:
+    fixed misspelling ('short swort' -> 'short sword')
+
+31 Jan 2001
+version 2.0.b1
+  Initial release

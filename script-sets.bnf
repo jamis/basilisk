@@ -1,0 +1,297 @@
+  # FIRST: "unit" "attribute" ident "rule" "template" "#" EOF
+  # FOLLOW: EOF
+config-file := config-entry*
+
+  # FIRST: "unit" "attribute" ident "rule" "template" "#" "forward"
+  # FOLLOW: "unit" "attribute" ident "rule" "template" "#" "forward" EOF
+config-entry := unit-def
+              | attribute-def
+              | thing-def
+              | category-def
+              | rule-def
+              | template-def
+              | meta-def
+              | forward-def
+
+  # FIRST: "unit"
+  # FOLLOW: "unit" "attribute" ident "rule" "template" "#" "forward" EOF
+unit-def := "unit" ident { "=" num ident } ";"
+
+  # FIRST: "attribute"
+  # FOLLOW: "unit" "attribute" ident "rule" "template" "#" "forward" EOF
+attribute-def := "attribute" ident type
+
+  # FIRST: "number" "string" "boolean" "thing" "category" "rule"
+  # FOLLOW: "unit" "attribute" ident "rule" "template" "#" EOF
+type := "number"
+      | "string"
+      | "boolean"
+      | "thing"
+      | "category"
+      | "rule"
+
+  # FIRST: ident
+  # FOLLOW: "unit" "attribute" ident "rule" "template" "#" "forward" EOF
+thing-def := ident { "(" ident-list ")" } { property-list } "end"
+
+  # FIRST: "category"
+  # FOLLOW: "unit" "attribute" ident "rule" "template" "#" "forward" EOF
+category-def := "category" ident category-body "end"
+
+  # FIRST: "[" ident "{" "(" "null"
+  # FOLLOW: "end"
+category-body := { "[" num "]" } category-entry
+               | { "[" num "]" } category-entry category-body
+
+  # FIRST: ident "{" "(" "null"
+  # FOLLOW: ident "{" "[" "(" "end" "null"
+category-entry := ident
+                | "{" property-list "}"
+                | "(" category-body ")"
+                | "null"
+
+  # FIRST: "template"
+  # FOLLOW: "unit" "attribute" ident "rule" "template" "#" "forward" EOF
+template-def := "template" { "(" ident-list ")" } "{" ident-list "}" template-entry-list "end"
+
+  # FIRST: ident
+  # FOLLOW: "end"
+template-entry-list := template-entry
+                     | template-entry template-entry-list
+
+  # FIRST: ident
+  # FOLLOW: ident "end"
+template-entry := ident { "(" ident-list ")" } "{" template-value-list "}"
+
+  # FIRST: "$" "*" "+" "-" num string boolean ident "{"
+  # FOLLOW: "$" "*" "+" "-" num string boolean ident "{" "}"
+template-value-list := template-value
+                     | template-value template-value-list
+
+  # FIRST: "$" "*" "+" "-" num string boolean ident "{" "(" "null"
+  # FOLLOW: "$" "*" "+" "-" num string boolean ident "{" "}" "(" "null"
+template-value := property-value
+                | "$"
+
+  # FIRST: "#"
+  # FOLLOW: "unit" "attribute" ident "rule" "template" "#" EOF
+meta-def := "#" meta-def2
+
+  # FIRST: "include"
+  # FOLLOW: "unit" "attribute" ident "rule" "template" "#" EOF
+meta-def2 := "include" string
+
+  # FIRST: "forward"
+  # FOLLOW: "unit" "attribute" ident "rule" "template" "#" "forward" EOF
+forward-def := "forward" forward-decl
+
+  # FIRST: "thing" "category" "rule"
+  # FOLLOW: "unit" "attribute" ident "rule" "template" "#" "forward" EOF
+forward-decl := "thing" ident
+              | "category" ident
+              | "rule" ident
+
+  # FIRST: "rule"
+  # FOLLOW: "unit" "attribute" ident "rule" "template" "#" EOF
+rule-def := "rule" ident "(" { ident-list } ")" { rule-statement-list } "end"
+
+ident := [a-zA-Z_][a-zA-Z0-9_]*
+
+  # FIRST: ident
+  # FOLLOW: ")" "}"
+ident-list := ident
+            | ident ident-list
+
+  # FIRST: "."
+  # FOLLOW: "}" "end"
+property-list := property
+               | property property-list
+
+  # FIRST: ident num string boolean "(" "not" "null"
+  # FOLLOW: ")"
+parameter-list := logexpr
+                | logexpr "," parameter-list
+
+  # FIRST: "."
+  # FOLLOW "." "}" "end"
+property := "." ident property-value
+
+  # FIRST: "*" "+" "-" num string boolean ident "{" "null" "("
+  # FOLLOW: "." "}" "end" "$" "*" "+" "-" num string boolean ident "{" "}" "(" "null"
+property-value := number
+                | string
+                | boolean
+                | ident
+                | "{" property-list "}"
+                | "(" category-body ")"
+                | "null"
+
+  # FIRST: "*" "+" "-" num string boolean ident "(" "{"
+  # FOLLOW: "." "}" "end" "$" "*" "+" "-" num string boolean ident "(" "{" "}"
+value := property-value
+       | "(" logexpr ")"
+
+  # FIRST: "*" "+" "-" num
+  # FOLLOW: "." "}" "end" "$" "*" "+" "-" num string boolean ident "(" "{" "}"
+number := {*}number2 { {+|-}? number } { ident }
+
+  # FIRST: "+" "-" num
+  # FOLLOW: "." "}" "end" "$" "*" "+" "-" num string boolean ident "(" "{" "}"
+number2 := {+|-}num
+         | {+|-}dice
+         | {+|-}num "/" num
+
+num := digit+ { "." digit* }
+
+  # FIRST: num
+  # FOLLOW: "." "}" "end" "$" "*" "+" "-" num string boolean ident "(" "{" "}"
+dice := num "d" num
+
+  # FIRST: ident "if" "while" "do" "for" "exit" "case"
+  # FOLLOW: "end"
+rule-statement-list := rule-statement
+                     | rule-statement rule-statement-list
+
+  # FIRST: ident "if" "while" "do" "for" "exit" "case"
+  # FOLLOW: "end" ident "if" "while" "do" "for" "exit" "case"
+rule-statement := ident ident-tail { "=" logexpr } ";"
+                | "if" logexpr "then" rule-statement-list if2 "end"
+                | "while" logexpr "do" rule-statement-list "end"
+                | "do" rule-statement-list "loop" "while" logexpr ";"
+                | "for" ident for2 "do" rule-statement-list "end"
+                | "exit" exit-block ";"
+                | "case" logexpr case-list { "default" rule-statement-list } "end"
+
+  # FIRST: () "else" "elseif"
+  # FOLLOW: "end"
+if2 := ()
+     | "elseif" logexpr "then" rule-statement-list if2
+     | "else" rule-statement-list
+
+  # FIRST: "=" "in"
+  # FOLLOW: "do"
+for2 := "=" logexpr "to" logexpr
+      | "in" logexpr
+
+  # FIRST: "loop" "rule"
+  # FOLLOW: ";"
+exit-block := "loop"
+            | "rule"
+
+  # FIRST: "is"
+  # FOLLOW: "is" "default" "end"
+case-list := case-statement
+           | case-statement case-list
+
+  # FIRST: "is"
+  # FOLLOW: "is" "default" "end"
+case-statement := "is" { "not" } factor2 "then" rule-statement-list
+
+
+  # FIRST: ident num string boolean "(" "not" "null" "category" "rule" "thing" "number" "string" "boolean"
+  # FOLLOW: ")" "," ";" "then" "do" "to"
+logexpr := logexpr2
+         | logexpr2 "or" logexpr
+
+  # FIRST: ident num string boolean "(" "not" "null" "category" "rule" "thing" "number" "string" "boolean"
+  # FOLLOW: ")" "," ";" "then" "do" "to" "or"
+logexpr2 := logexpr3
+          | logexpr3 "and" logexpr2
+
+  # FIRST: ident num string boolean "(" "not" "null" "category" "rule" "thing" "number" "string" "boolean"
+  # FOLLOW: ")" "," ";" "then" "do" "to" "or" "and"
+logexpr3 := expression
+          | expression "eq" expression
+          | expression "ne" expression
+          | expression "lt" expression
+          | expression "gt" expression
+          | expression "le" expression
+          | expression "ge" expression
+          | expression "typeof" type
+
+  # FIRST: ident num string boolean "(" "not" "null" "category" "rule" "thing" "number" "string" "boolean"
+  # FOLLOW: ")" "," ";" "then" "do" "to" "or" "and" "eq" "ne" "lt" "gt" "le" "ge" "typeof"
+expression := term
+            | term "+" expression
+            | term "-" expression
+
+  # FIRST: ident num string boolean "(" "not" "null" "category" "rule" "thing" "number" "string" "boolean"
+  # FOLLOW: ")" "," ";" "then" "do" "to" "or" "and" "eq" "ne" "lt" "gt" "le" "ge" "typeof" "+" "-"
+term := factor
+      | factor "*" term
+      | factor "/" term
+      | factor "%" term
+
+  # FIRST: ident num string boolean "(" "not" "null" "category" "rule" "thing" "number" "string" "boolean"
+  # FOLLOW: ")" "," ";" "then" "do" "to" "or" "and" "eq" "ne" "lt" "gt" "le" "ge" "typeof" "+" "-" "*" "/" "%"
+factor := factor2
+        | factor2 "^" factor
+
+  # FIRST: ident num string boolean "(" "not" "null" "category" "rule" "thing" "number" "string" "boolean"
+  # FOLLOW: ")" "," ";" "then" "do" "to" "or" "and" "eq" "ne" "lt" "gt" "le" "ge" "typeof" "+" "-" "*" "/" "%" "^"
+factor2 := ident-head ident-tail
+         | num
+         | string
+         | boolean
+         | "(" logexpr ")"
+         | "not" factor
+         | "null"
+         | "category"
+         | "rule"
+         | "thing"
+         | "number"
+         | "string"
+         | "boolean"
+
+  # FIRST: () "(" "." "["
+  # FOLLOW: ")" "," ";" "then" "do" "to" "or" "and" "eq" "ne" "lt" "gt" "le" "ge" "typeof" "+" "-" "*" "/" "%" "^"
+ident-tail := ()
+            | "(" { parameter-list } ")" ident-tail
+            | "." ident-tail
+            | "[" expression "]" ident-tail
+
+  # FIRST: ident
+built-in-func := Int              # Int(x {,y}) -- round x to nearest multiple of y (y is 1, if not specified)
+               | Floor            # Floor(x {,y}) -- round to nearest multiple of y not greater than x
+               | Any              # Any(x) -- grabs any item from category x (considering weights of items).  If x not a category, Any(x) returns x.
+               | Exists           # Exists(x,y) -- true if x exists in y, false otherwise
+               | Duplicate        # Duplicate(x) -- duplicates thing (or category) x
+               | NewThing         # NewThing() -- creates a new, empty, unattributed Thing
+               | NewCategory      # NewCategory() -- creates a new, empty Category
+               | Random           # Random(x) -- returns a random number based on argument x
+               | Sqrt             # Sqrt(x) -- returns the square root of x
+               | Add              # Add(x,y{,z}) -- adds x to category y (with weight z).  Returns 'true' if it succeeded, 'false' otherwise
+               | Remove           # Remove(x,y) -- removes x from category y.  Returns 'true' if it succeeded, 'false' otherwise
+               | Empty            # Empty(x) -- returns 'true' if x is empty (or not a category), 'false' otherwise.
+               | RemoveAll        # RemoveAll(y) -- removes all items from category y
+               | Count            # Count(x) -- the number of items in category (or thing) x
+               | Get              # Get(x,y) -- gets the item at index x of category y
+               | WeightOf         # WeightOf(x,y) -- gets the weight of the item at index x of category y
+               | IndexOf          # IndexOf(x,y) -- gets the index of item x in category y
+               | Union            # Union(x,y) -- returns the union of the two categories (or things)
+               | Intersection     # Intersection(x,y) -- returns the intersection of the two categories
+               | Subtract         # Subtract(x,y) -- returns x-y (where x and y are categories)
+               | Instr            # Instr(x,y{,z}) -- returns the index (after z) of the first instance of y in x
+               | Replace          # Replace(x,y,z{,w}) -- replaces the first instance of y (after w) in x with z
+               | Mid              # Mid(x,y{,z}) -- returns z bytes (or the remainder of the string) starting at y, in x
+               | Ln               # Ln(x) -- returns the natural log of x
+               | SearchCategory   # SearchCategory(x,y{,z}) -- searches category x for a thing with an attribute y, with an optional value of z
+               | Has              # Has(x,y) -- returns true if x is a Thing possessing a property of type y
+               | Parameter        # Parameter(x) -- returns the parameter to the current rule at index x (useful for variable arity rules)
+               | Evaluate         # Evaluate(x) -- evaluates the string parameter 'x' as if it were a snippet of Basilisk script.  It is evaluated in the current context.
+               | AttributeNameOf  # AttributeNameOf(x,y) -- returns the name of the z-th attribute of thing x (or null if none exists)
+               | AttributeValueOf # AttributeValueOf(x,y) -- returns the value of the z-th attribute of thing x (or null if none exists)
+               | AttributeOf      # AttributeOf(x,y) -- returns the attribute named y of thing x (same as x.y if y were not a string)
+               | Dice             # Dice(x,y) -- creates a "dice" number of x dice, with y sides each.
+               | DiceCount        # DiceCount(x) -- retrieves the count of dice in the given dice value.
+               | DiceType         # DiceType(x) -- retrieves the type of the dice in the given dice value.
+               | NewArray         # Array({x}) -- creates a new array (initialized to x null elements)
+               | Sort             # Sort(x,y) -- sort array x, using rule y
+               | Length           # Length(x) -- if x is an array, the number of elements, and if x is a string, the number of chars
+               | MagnitudeOf      # MagnitudeOf(x) -- where x is a number, returns the number without it's units
+               | UnitsOf          # UnitsOf(x) -- where x is a number, returns the units of the number (as a string)
+               | SetUnit          # SetUnit(x,y) -- where x is a number, y is a string, returns x with y as units
+               | Eval             # Eval(x) -- returns the value of x, unless x is a dice value, in which case x is evaluated
+               | ConvertUnits     # ConvertUnits(x,y) -- converts x from it's current units to the units indicated by y.  An error occurs if the units aren't compatible.
+               | TotalWeightOf    # TotalWeightOf(x) -- returns the total weight of all elements in category x
+               | GetByWeight      # GetByWeight(x,y) -- returns the element at weighting y in category x (the weight is made to fit within the total weight of the category)

@@ -1,0 +1,13 @@
+template ( groupAllClasses ) { name sources }
+  classBarbarian { "barbarian" sourcesCoreRules }
+  classBard { "bard" sourcesCoreRules }
+  classCleric { "cleric" sourcesCoreRules }
+  classDruid { "druid" sourcesCoreRules }
+  classFighter { "fighter" sourcesCoreRules }
+  classMonk { "monk" sourcesCoreRules }
+  classPaladin { "paladin" sourcesCoreRules }
+  classRanger { "ranger" sourcesCoreRules }
+  classRogue { "rogue" sourcesCoreRules }
+  classSorcerer { "sorcerer" sourcesCoreRules }
+  classWizard { "wizard" sourcesCoreRules }
+end

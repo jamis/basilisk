@@ -1,0 +1,43 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKAddSymbol</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKAddSymbol</H1>
+
+  <B>Module:</B> <A HREF="../modules/bsksymtb.html">BSKSymbolTable</A><BR>
+
+<PRE>
+void BSKAddSymbol( BSKSymbolTable* table, 
+                   BSKUI8 type, 
+                   BSKUI8 flags, 
+                   BSKUI32 id );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>table</i> - the symbol table to add to.
+    <LI><i>type</i> - the type of the symbol (one of the
+        <A HREF="../const/constants.html">ST_xxx constants</A>).
+    <LI><i>flags</i> - flags that further define the symbol (a combination of the
+        <A HREF="../const/constants.html">SF_xxx constants</A>).
+    <LI><i>id</i> - the identifier that the symbol describes.
+  </UL>
+
+  <P>
+
+  <B>Description:</B>
+  Adds a new symbol to the given table, of the given type, with the
+  given flags, and with the given identifier.  This routine does not
+  check to see if the symbol already exists in the table.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

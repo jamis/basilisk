@@ -1,0 +1,39 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKPutElement</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKPutElement</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskarray.html">BSKArray</A><BR>
+
+<PRE>
+void BSKPutElement( BSKArray* array, BSKUI16 index, BSKValue* value );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>array</i> - the array that will recieve the value.
+    <LI><i>index</i> - the index at which to put the value.
+    <LI><i>value</i> - the value to put into the array.
+  </UL>
+
+  <P>
+
+  <B>Description:</B>
+  If the array is smaller than the index indicated by 'index', the
+  array is grown to encompass that index.  The value at that index
+  is then <A HREF="BSKInvalidateValue.html">invalidated</A>, and the new
+  value is <A HREF="BSKDereferenceValue.html">dereferenced</A> into that
+  index.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

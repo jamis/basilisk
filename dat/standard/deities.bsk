@@ -1,0 +1,49 @@
+template ( groupAllDomains ) { name lcAlignment geAlignment spellList sources }
+  domainAir { "air" $ $ spelllistAir sourcesCoreRules }
+  domainAnimal { "animal" $ $ spelllistAnimal sourcesCoreRules }
+  domainChaos { "chaos" lcChaotic $ spelllistChaos sourcesCoreRules }
+  domainDeath { "death" $ geEvil spelllistDeath sourcesCoreRules }
+  domainDestruction { "destruction" $ $ spelllistDestruction sourcesCoreRules }
+  domainEarth { "earth" $ $ spelllistEarth sourcesCoreRules }
+  domainEvil { "evil" $ geEvil spelllistEvil sourcesCoreRules }
+  domainFire { "fire" $ $ spelllistFire sourcesCoreRules }
+  domainGood { "good" $ geGood spelllistGood sourcesCoreRules }
+  domainHealing { "healing" $ geGood spelllistHealing sourcesCoreRules }
+  domainKnowledge { "knowledge" $ $ spelllistKnowledge sourcesCoreRules }
+  domainLaw { "law" lcLawful $ spelllistLaw sourcesCoreRules }
+  domainLuck { "luck" $ $ spelllistLuck sourcesCoreRules }
+  domainMagic { "magic" $ $ spelllistMagic sourcesCoreRules }
+  domainPlant { "plant" $ $ spelllistPlant sourcesCoreRules }
+  domainProtection { "protection" $ $ spelllistProtection sourcesCoreRules }
+  domainStrength { "strength" $ $ spelllistStrength sourcesCoreRules }
+  domainSun { "sun" $ $ spelllistSun sourcesCoreRules }
+  domainTravel { "travel" $ $ spelllistTravel sourcesCoreRules }
+  domainTrickery { "trickery" lcChaotic $ spelllistTrickery sourcesCoreRules }
+  domainWar { "war" $ $ spelllistWar sourcesCoreRules }
+  domainWater { "water" $ $ spelllistWater sourcesCoreRules }
+end
+
+
+template ( groupAllDeities ) { name description lcAlignment geAlignment domains }
+  deityHeironeous (groupGrayhawkDeities) { "Heironeous" "God of Valor" lcLawful geGood ( domainGood domainLaw domainWar ) }
+  deityMoradin (groupGrayhawkDeities) { "Moradin" "God of Dwarves" lcLawful geGood ( domainEarth domainGood domainLaw domainProtection ) }
+  deityYondalla (groupGrayhawkDeities) { "Yondalla" "Goddess of Halflings" lcLawful geGood ( domainGood domainLaw domainProtection ) }
+  deityEhlonna (groupGrayhawkDeities) { "Ehlonna" "Goddess of the Woodlands" lcNeutral geGood ( domainAnimal domainGood domainPlant domainSun ) }
+  deityGarlGlittergold (groupGrayhawkDeities) { "Garl Glittergold" "God of Gnomes" lcNeutral geGood ( domainGood domainProtection domainTrickery ) }
+  deityPelor (groupGrayhawkDeities) { "Pelor" "God of the Sun" lcNeutral geGood ( domainGood domainHealing domainStrength domainSun ) }
+  deityCorellonLarethian (groupGrayhawkDeities) { "Corellon Larethian" "God of the Elves" lcChaotic geGood ( domainChaos domainGood domainProtection domainWar ) }
+  deityKord (groupGrayhawkDeities) { "Kord" "God of Strength" lcChaotic geGood ( domainChaos domainGood domainLuck domainStrength ) }
+  deityWeeJas (groupGrayhawkDeities) { "Wee Jas" "Goddess of Death and Magic" lcLawful geNeutral ( domainDeath domainLaw domainMagic ) }
+  deityStCuthbert (groupGrayhawkDeities) { "St. Cuthbert" "God of Retribution" lcLawful geNeutral ( domainDestruction domainLaw domainProtection domainStrength ) }
+  deityBoccob (groupGrayhawkDeities) { "Boccob" "God of Magic" lcNeutral geNeutral ( domainKnowledge domainMagic domainTrickery ) }
+  deityFharlanghn (groupGrayhawkDeities) { "Fharlanghn" "God of Roads" lcNeutral geNeutral ( domainLuck domainProtection domainTravel ) }
+  deityObadHai (groupGrayhawkDeities) { "Obad-Hai" "God of Nature" lcNeutral geNeutral ( domainAir domainAnimal domainEarth domainFire domainPlant domainWater ) }
+  deityOlidammara (groupGrayhawkDeities) { "Olidammara" "God of Thieves" lcChaotic geNeutral ( domainChaos domainLuck domainTrickery ) }
+  deityHextor (groupGrayhawkDeities) { "Hextor" "God of Tyranny" lcLawful geEvil ( domainDestruction domainEvil domainLaw domainWar ) }
+  deityNerull (groupGrayhawkDeities) { "Nerull" "God of Death" lcNeutral geEvil ( domainDeath domainEvil domainTrickery ) }
+  deityVecna (groupGrayhawkDeities) { "Vecna" "God of Secrets" lcNeutral geEvil ( domainEvil domainKnowledge domainMagic ) }
+  deityErythnul (groupGrayhawkDeities) { "Erythnul" "God of Slaughter" lcChaotic geEvil ( domainChaos domainEvil domainTrickery domainWar ) }
+  deityGruumsh (groupGrayhawkDeities) { "Gruumsh" "God of Orcs" lcChaotic geEvil ( domainChaos domainEvil domainStrength domainWar ) }
+end
+
+

@@ -1,0 +1,124 @@
+grammar_group_dwarf_names1
+  .left "[S]"
+  .productions (
+    [1] { .production "[M]" }
+    [1] { .production "[F]" }
+  )
+end
+
+grammar_group_dwarf_names2
+  .left "[M]"
+  .productions (
+    [1] { .production "[pre][msuf]" }
+  )
+end
+
+grammar_group_dwarf_names3
+  .left "[F]"
+  .productions (
+    [1] { .production "[pre][fsuf]" }
+  )
+end
+
+grammar_group_dwarf_names4
+  .left "[pre]"
+  .productions (
+    [1] { .production "bal" }
+    [1] { .production "belf" }
+    [1] { .production "bif" }
+    [1] { .production "bof" }
+    [1] { .production "bol" }
+    [1] { .production "bomb" }
+    [1] { .production "d" }
+    [1] { .production "dor" }
+    [1] { .production "dorf" }
+    [1] { .production "dur" }
+    [1] { .production "dwal" }
+    [1] { .production "gar" }
+    [1] { .production "fil" }
+    [1] { .production "gil" }
+    [1] { .production "gol" }
+    [1] { .production "gor" }
+    [1] { .production "kon" }
+    [1] { .production "kor" }
+    [1] { .production "kur" }
+    [1] { .production "mor" }
+    [1] { .production "na" }
+    [1] { .production "no" }
+    [1] { .production "nor" }
+    [1] { .production "o" }
+    [1] { .production "or" }
+    [1] { .production "thor" }
+    [1] { .production "thra" }
+    [1] { .production "thro" }
+    [1] { .production "tor" }
+    [1] { .production "whar" }
+    [1] { .production "ulf" }
+    [1] { .production "art" }
+    [1] { .production "aud" }
+    [1] { .production "dag" }
+    [1] { .production "gunn" }
+    [1] { .production "bar" }
+    [1] { .production "brott" }
+    [1] { .production "eb" }
+    [1] { .production "ein" }
+    [1] { .production "osk" }
+    [1] { .production "rur" }
+    [1] { .production "tak" }
+    [1] { .production "hl" }
+    [1] { .production "lift" }
+    [1] { .production "torgg" }
+  )
+end
+
+grammar_group_dwarf_names5
+  .left "[msuf]"
+  .productions (
+    [1] { .production "ar" }
+    [1] { .production "ed" }
+    [1] { .production "ic" }
+    [1] { .production "in" }
+    [1] { .production "lum" }
+    [1] { .production "or" }
+    [1] { .production "to" }
+    [1] { .production "ur" }
+    [1] { .production "endd" }
+    [1] { .production "erk" }
+    [1] { .production "kil" }
+    [1] { .production "ik" }
+    [1] { .production "linn" }
+    [1] { .production "bon" }
+    [1] { .production "gar" }
+  )
+end
+
+grammar_group_dwarf_names6
+  .left "[fsuf]"
+  .productions (
+    [1] { .production "a" }
+    [1] { .production "as" }
+    [1] { .production "i" }
+    [1] { .production "ia" }
+    [1] { .production "if" }
+    [1] { .production "il" }
+    [1] { .production "is" }
+    [1] { .production "la" }
+    [1] { .production "hild" }
+    [1] { .production "nal" }
+    [1] { .production "loda" }
+    [1] { .production "rasa" }
+    [1] { .production "ga" }
+  )
+end
+
+grammar_dwarf_names
+  .startSymbol "[S]"
+  .groups (
+    grammar_group_dwarf_names1
+    grammar_group_dwarf_names2
+    grammar_group_dwarf_names3
+    grammar_group_dwarf_names4
+    grammar_group_dwarf_names5
+    grammar_group_dwarf_names6
+  )
+end

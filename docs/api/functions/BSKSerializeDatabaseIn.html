@@ -1,0 +1,37 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKSerializeDatabaseIn</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKSerializeDatabaseIn</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskdb.html">BSKDatabase</A><BR>
+
+<PRE>
+BSKDatabase* BSKSerializeDatabaseIn( BSKStream* stream );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+	  <LI><i>stream</i> - the stream to read the database from.
+  </UL>
+
+  <B>Returns:</B> the new database object.
+
+  <P>
+
+  <B>Description:</B>
+	Creates a new database object and initializes its contents from the
+	contents of the stream by calling the appropriate "Serialize...In"
+	routine for each of the database's components.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

@@ -1,0 +1,260 @@
+forward rule rInitAbsorptionRod
+
+
+rodAbsorption
+  .name "absorption"
+  .cost 50000 gp
+  .init rInitAbsorptionRod
+  .specialDefenses ( { .description "absorb single-target spells or rays directed at user" } )
+  .sources sourcesCoreRules
+end
+
+rodAlertness
+  .name "alertness"
+  .cost 72000 gp
+  .prototype weaponLightMace
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 }
+             { .type btUnnamed .aspect asInitiative .magnitude +1 } )
+  .specialQualities ( { .type satSpellEffect .spell spellDetectEvil .description "at will, as a standard action" }
+                      { .type satSpellEffect .spell spellDetectGood .description "at will, as a standard action" }
+                      { .type satSpellEffect .spell spellDetectChaos .description "at will, as a standard action" }
+                      { .type satSpellEffect .spell spellDetectLaw .description "at will, as a standard action" }
+                      { .type satSpellEffect .spell spellDetectMagic .description "at will, as a standard action" }
+                      { .type satSpellEffect .spell spellDiscernLies .description "at will, as a standard action" }
+                      { .type satSpellEffect .spell spellSeeInvisibility .description "at will, as a standard action" }
+                      { .type satSpellEffect .spell spellAnimateObjects .description "up to 8 objects within 5 feet" .duration 10 minutes .frequency 1 .period 1 day } )
+  .sources sourcesCoreRules
+end
+
+rodCancellation
+  .name "cancellation"
+  .cost 11000 gp
+  .specialAttacks ( { .description "drain one magic item of all magic on successful melee touch attack (item gets DC 19 Will save to resist)" } )
+  .sources sourcesCoreRules
+end
+
+rodEnemyDetection
+  .name "enemy detection"
+  .cost 23500 gp
+  .specialQualities ( { .description "points to nearest hostile creature, whether hidden (in any way) or not" .duration 10 minutes .frequency 3 .period 1 day } )
+  .sources sourcesCoreRules
+end
+
+rodFlailing
+  .name "flailing"
+  .cost 40000 gp
+  .prototype weaponDireFlail
+  .itemQualities ( { .description "item may be converted from rod to flail form or back as a move-equivalent action" } )
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 }
+             { .type btDeflection .aspect asAC .magnitude +4 .duration 10 minutes .frequency 1 .period 1 day }
+             { .type btResistance .aspect asSave .magnitude +4 .duration 10 minutes .frequency 1 .period 1 day } )
+  .sources sourcesCoreRules
+end
+
+rodFlameExtinguishing
+  .name "flame extinguishing"
+  .cost 15000 gp
+  .specialQualities ( { .description "extinguish medium-size or smaller fires" .charges 1 }
+                      { .description "extinguish large or larger fires fires" .charges 2 } )
+  .specialAttacks ( { .description "6d6 vs. fire creatures on successful attack roll" .charges 3 } )
+  .itemQualities ( { .description "has 10 charges, renewed daily" } )
+  .sources sourcesCoreRules
+end
+
+rodImmovable
+  .name "immovable"
+  .cost 7500 gp
+  .sources sourcesCoreRules
+end
+
+rodLordlyMight
+  .name "lordly might"
+  .cost 70000 gp
+  .specialAttacks ( { .type satSpellEffect .spell spellHoldPerson .description "with successful touch attack" .saveDC 14 .frequency 1 .period 1 day }
+                    { .type satSpellEffect .spell spellFear .description "all enemies viewing the rod" .saveDC 16 .frequency 1 .period 1 day }
+                    { .description "2d4 points of damage on successful touch attack, and cure wielder of like amount of damage" .saveDC 17 .frequency 1 .period 1 day }
+                    { .description "rod becomes a +1 flaming longsword" }
+                    { .description "rod becomes a +4 battleaxe" }
+                    { .description "rod becomes a +3 shortspear or longspear" } )
+  .itemQualities ( { .description "rod becomes a ladder of 5 to 50 feet in length" } )
+  .specialQualities ( { .description "wielder has an approximate knowledge of their current depth or altitude" } )
+  .sources sourcesCoreRules
+end
+
+rodMetalAndMineralDetection
+  .name "metal and mineral detection"
+  .cost 10500 gp
+  .specialQualities ( { .description "wielder has a knowledge of metals within 30 feet, and approximate quantities" } )
+  .sources sourcesCoreRules
+end
+
+rodNegation
+  .name "negation"
+  .cost 44600 gp
+  .specialAttacks ( { .description "negate magic and magic items as a ranged touch attack" } )
+  .sources sourcesCoreRules
+end
+
+rodPython
+  .name "python"
+  .cost 13000 gp
+  .prototype weaponQuarterstaff
+  .geAlignment geGood
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .specialAttacks ( { .description "rod becomes python if thrown to the ground" .conditions ( { .type ctIsAlignment .affectedThing { .geAlignment geGood } } ) } )
+  .sources sourcesCoreRules
+end
+
+rodRulership
+  .name "rulership"
+  .cost 60000 gp
+  .specialQualities ( { .description "wielder can command the loyalty of creatures within 120 feet (up to 300 HD, creatures with Int of 12+ get DC 16 Will save)" } )
+  .sources sourcesCoreRules
+end
+
+rodSecurity
+  .name "security"
+  .cost 61000 gp
+  .itemQualities ( { .description "wielder and up to 199 others can go to nondimensional pocket paradise" } )
+  .sources sourcesCoreRules
+end
+
+rodSplendor
+  .name "splendor"
+  .cost 25000 gp
+  .bonuses ( { .type btEnhancement .aspect asAbility .affectedThing astCharisma .magnitude +4 } )
+  .specialQualities ( { .description "create expensive garb worth 1d4+6 times 1,000 gp" .duration 12 hours .frequency 1 .period 1 day }
+                      { .description "create a palatial silk tent 60 feet across with trappings" .duration 1 day .frequency 1 .period 1 week } )
+  .sources sourcesCoreRules
+end
+
+rodThunderAndLightning
+  .name "thunder and lightning"
+  .cost 23000 gp
+  .prototype weaponLightMace
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .specialAttacks ( { .description "strike as +3 light mace, and stun target with thunderous noise (Fortitude save to negate)" .saveDC 13 .frequency 1 .period 1 day }
+                    { .description "2d6 electrical damage on successful melee touch attack" .frequency 1 .period 1 day }
+                    { .type satSpellEffect .spell spellShout .description "2d6 damage, deafened for 2d6 rounds" .saveDC 14 .frequency 1 .period 1 day }
+                    { .type satSpellEffect .spell spellLightningBolt .description "9d6 damage, 200 foot range" .saveDC 14 .frequency 1 .period 1 day }
+                    { .description "lightning for 9d6 damage (1 and 2 count as 3), plus thunder damage of 2d6" .saveDC 14 .frequency 1 .period 1 week } )
+  .sources sourcesCoreRules
+end
+
+rodViper
+  .name "viper"
+  .cost 19000 gp
+  .prototype weaponHeavyMace
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .specialAttacks ( { .description "rod's head becomes a serpent and poisons target (1d10 temporary Con, and 1d10 temporary Con 1 minute later)" .saveDC 14 .duration 10 minutes .frequency 1 .period 1 day } )
+  .sources sourcesCoreRules
+end
+
+rodWithering
+  .name "withering"
+  .cost 17000 gp
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 } )
+  .specialAttacks ( { .description "on melee touch attack with rod, target must make Fortitude save or lose 1d4 temp Str and 1d4 temp Con (permanent on critical hit)" .saveDC 14 } )
+  .sources sourcesCoreRules
+end
+
+rodWonder
+  .name "wonder"
+  .cost 12000 gp
+  .sources sourcesCoreRules
+end
+
+
+category groupMediumRods
+  [ 6] rodImmovable
+  [ 6] rodMetalAndMineralDetection
+  [ 8] rodCancellation
+  [ 5] rodWonder
+  [ 4] rodPython
+  [ 5] rodFlameExtinguishing
+  [ 6] rodWithering
+  [ 5] rodViper
+  [ 7] rodThunderAndLightning
+  [ 8] rodEnemyDetection
+  [ 8] rodSplendor
+  [10] rodNegation
+  [12] rodFlailing
+  [ 6] rodAbsorption
+  [ 3] rodRulership
+  [ 1] rodSecurity
+end
+
+category groupMajorRods
+  [ 5] rodCancellation
+  [ 5] rodWonder
+  [ 5] rodPython
+  [ 5] rodFlameExtinguishing
+  [ 7] rodWithering
+  [ 6] rodViper
+  [ 7] rodThunderAndLightning
+  [10] rodEnemyDetection
+  [ 5] rodSplendor
+  [10] rodNegation
+  [15] rodFlailing
+  [ 5] rodAbsorption
+  [ 5] rodRulership
+  [ 4] rodSecurity
+  [ 4] rodLordlyMight
+  [ 2] rodAlertness
+end
+
+
+rule rInitAbsorptionRod( item )
+  potentialRemaining = Random(50) + 1;
+  item.description = potentialRemaining + " spell levels unused";
+  if Random(100) lt 30 then
+    potentialWithin = Int( ( 50 - potentialRemaining ) / 2 );
+    item.description = item.description + ", " + potentialWithin +
+                       " spell levels currently stored";
+  end
+  rInitAbsorptionRod = item;
+end
+
+
+rule rSelectRod( rodMagnitude options )
+  case rodMagnitude
+    is "medium" then
+      c = groupMediumRods;
+    is "major" then
+      c = groupMajorRods;
+    default
+      exit rule;
+  end
+
+  y = rGetAnyMatchingCriteria( c, options );
+  if y ne null then
+    rod = rNewInstanceOf( y );
+    rod.treasureType = "rod";
+    rod.name = "rod of " + rod.name;
+
+		if rSafeGet( options, "optAlwaysIntelligent", false ) then
+			rEmbueIntelligenceUpon( rod, options );
+		else
+			d = Random(1d100);
+			if d eq 1 then
+				rEmbueIntelligenceUpon( rod, options );
+			elseif d le 31 then
+				rod = rEnsureAttributeExists( rod, "itemQualities", atCategory );
+				q = NewThing();
+				q.description = "something provides a clue to the rod's function";
+				add( rod.itemQualities, q );
+			end
+		end
+
+    if rItemDeservesCurse( rod, options ) then
+      rCurseItem( rod, options );
+    end
+  end
+
+  rSelectRod = rod;
+end

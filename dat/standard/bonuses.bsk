@@ -1,0 +1,69 @@
+// ------------------------------------------------------------------------
+// Bonus Aspects
+// ------------------------------------------------------------------------
+
+template ( groupAspectType ) { name }
+  asAC      { "ac" }
+  asAttack  { "attack" }
+  asGrapple { "grapple" }
+  asDisarm  { "disarm" }
+  asSkill   { "skill" }
+  asAbility { "ability" }
+  asAbilityCheck { "ability check" }
+  asAbilityBasedSkillCheck { "ability-based skill check" }
+  asDamage  { "damage" }
+  asDamageMultiplier { "damage multiplier" }
+  asBonusDamage { "bonus damage" }
+  asArmorCheckPenalty { "armor check penalty" }
+  asSave    { "saving throw" }
+  asSpellsKnown { "spells known" }
+  asFeat    { "feat" }
+  asTurningAttempts { "turning attempts per day" }
+  asTurningCheck { "turning check" }
+  asTurningLevel { "turning level" }
+  asInitiative { "initiative" }
+  asRangedAttack { "ranged attack" }
+  asHitPoints { "hit-points" }
+  asRangeIncrementMultiplier { "weapon range (multiplicative)" }
+  asThreatRange { "weapon critical threat range" }
+  asExtraAttack { "extra attack" }
+  asDeathAttackDC { "death attack DC" }
+  asCriticalRange { "critical-hit threat range" }
+  asStunningAttackPerDay { "stunning attacks per day" }
+end
+
+// ------------------------------------------------------------------------
+// Bonus Types
+// ------------------------------------------------------------------------
+
+template ( groupBonusType ) { name }
+  btUnnamed      { $ }
+  btArmor        { "armor" }
+  btShield       { "shield" }
+  btCircumstance { "circumstance" }
+  btCompetence   { "competence" }
+  btDeflection   { "deflection" }
+  btDodge        { "dodge" }
+  btEnhancement  { "enhancement" }
+  btEnlargement  { "enlargement" }
+  btHaste        { "haste" }
+  btInherent     { "inherent" }
+  btInsight      { "insight" }
+  btLuck         { "luck" }
+  btMorale       { "morale" }
+  btNaturalArmor { "natural armor" }
+  btProfane      { "profane" }
+  btResistance   { "resistance" }
+  btSacred       { "sacred" }
+  btSize         { "size" }
+  btSynergy      { "synergy" }
+end
+
+// ------------------------------------------------------------------------
+// Standard bonuses
+// ------------------------------------------------------------------------
+
+template { name type aspect magnitude cost }
+  masterworkArmor  { "masterwork" btUnnamed asArmorCheckPenalty -1 +150 gp }
+  masterworkWeapon { "masterwork" btUnnamed asAttack +1 +300 gp }
+end

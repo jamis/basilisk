@@ -1,0 +1,43 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKExec</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKExec</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskexec.html">BSKExec</A><BR>
+
+<PRE>
+BSKI32 BSKExec( BSKExecOpts* opts );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>opts</i> - a pointer to a <A HREF="../types/structs.html#BSKExecOpts">BSKExecOpts</A>
+        structure that defines what BSKExec should do.
+  </UL>
+
+  <B>Returns:</B>
+  <A HREF="../const/constants.html#RTE_SUCCESS">RTE_SUCCESS</A> when successful,
+  or one of the other <A HREF="../const/constants.html">RTE_xxx constants</A>
+  when there was an error.
+
+  <P>
+
+  <B>Description:</B>
+  Executes the requested rule with the given database and parameters,
+  and puts the return value in 'rval'.  Run-time errors are handled by
+  'errorHandler' (unless it is 0).  The 'userData' variable is passed
+  to all calls to the 'errorHandler.'  The 'console' callback function
+  is used by the "print" built-in function to display (or not) data.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

@@ -1,0 +1,38 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKClearBits</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKClearBits</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskbitset.html">BSKBitSet</A><BR>
+
+<PRE>
+BSKBitSet* BSKClearBits( BSKBitSet* set, ... );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>set</i> - the set containing the bits to clear.
+    <LI><i>...</i> - a list of indices of bits to clear, ending with '0'.
+  </UL>
+
+  <B>Returns:</B> the 'set' parameter.
+
+  <P>
+
+  <B>Description:</B>
+  Clears the indicated bits in the given set, and returns the set.  The
+  list of bits to clear must be terminated by '0' (meaning that you cannot
+  use this function to clear the 0th bit in a set).
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

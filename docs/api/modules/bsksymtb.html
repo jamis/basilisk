@@ -1,0 +1,60 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0 Module:  BSKSymbolTable</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+    <H1>BSKSymbolTable</H1>
+
+    <B>Defined in:</B>  bsksymtb.h<BR>
+    <P>
+
+    A symbol table stores information about a given identifier.  It is
+    <i>almost</i> the same as the <A HREF="bskidtbl.html">identifier table</A>,
+    but with the difference that it can exist heirarchically, where a lower
+    symbol table has precedence over a higher one.
+    <P>
+    The information stored with each symbol are its type, and whether it
+    has been fully defined or not.
+
+    <P>
+
+    Data types:
+    <UL>
+      <LI><A HREF="../types/structs.html#BSKSymbolTable">BSKSymbolTable</A>
+      <LI><A HREF="../types/structs.html#BSKSymbolTableEntry">BSKSymbolTableEntry</A>
+    </UL>
+
+    Constants:
+    <UL>
+      <LI><A HREF="../const/constants.html#SF_FORWARD_DECL">SF_FORWARD_DECL</A>
+      <LI><A HREF="../const/constants.html#SF_NONE">SF_NONE</A>
+      <LI><A HREF="../const/constants.html#ST_ATTRIBUTE">ST_ATTRIBUTE</A>
+      <LI><A HREF="../const/constants.html#ST_BUILTIN">ST_BUILTIN</A>
+      <LI><A HREF="../const/constants.html#ST_CATEGORY">ST_CATEGORY</A>
+      <LI><A HREF="../const/constants.html#ST_NONE">ST_NONE</A>
+      <LI><A HREF="../const/constants.html#ST_RULE">ST_RULE</A>
+      <LI><A HREF="../const/constants.html#ST_THING">ST_THING</A>
+      <LI><A HREF="../const/constants.html#ST_UNIT">ST_UNIT</A>
+      <LI><A HREF="../const/constants.html#ST_VARIABLE">ST_VARIABLE</A>
+    </UL>
+
+    Functions:
+    <UL>
+      <LI><A HREF="../functions/BSKAddSymbol.html">BSKAddSymbol</A>
+      <LI><A HREF="../functions/BSKDestroySymbolTable.html">BSKDestroySymbolTable</A>
+      <LI><A HREF="../functions/BSKGetSymbol.html">BSKGetSymbol</A>
+      <LI><A HREF="../functions/BSKNewSymbolTable.html">BSKNewSymbolTable</A>
+      <LI><A HREF="../functions/BSKSerializeSymbolTableIn.html">BSKSerializeSymbolTableIn</A>
+      <LI><A HREF="../functions/BSKSerializeSymbolTableOut.html">BSKSerializeSymbolTableOut</A>
+      <LI><A HREF="../functions/BSKSymbolGetID.html">BSKSymbolGetID</A>
+      <LI><A HREF="../functions/BSKSymbolGetType.html">BSKSymbolGetType</A>
+    </UL>
+
+    <A HREF="../index.html">Return to API</A>
+
+    <HR>
+    <I>Last updated on 8 Feb 2001 by Jamis Buck (minam@rpgplanet.com)</I>
+  </BODY>
+
+</HTML>

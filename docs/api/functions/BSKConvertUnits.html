@@ -1,0 +1,50 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKConvertUnits</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKConvertUnits</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskutdef.html">BSKUnitDefinition</A><BR>
+
+<PRE>
+BSKI32 BSKConvertUnits( BSKUnitDefinition* list,
+                        BSKFLOAT quantity,
+                        BSKUI32 from,
+                        BSKUI32 to,
+                        BSKFLOAT* result );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>list</i> - the list of all units.
+    <LI><i>quantity</i> - the number of 'from' units to convert.
+    <LI><i>from</i> - the units to convert <i>from</i>.
+    <LI><i>to</i> - the units to convert <i>to</i>.
+    <LI><i>result</i> - a buffer to store the result of the conversion in (must not be null).
+  </UL>
+
+  <B>Returns:</B> 0 on success, or
+  <A HREF="../const/constants.html#UERR_INCOMPATIBLE_UNITS">UERR_INCOMPATIBLE_UNITS</A>
+  if the units were incompatible.
+
+  <P>
+
+  <B>Description:</B>
+  Converts the given quantity (in 'from' units) to the units given by
+  'to', and stores the new number in 'result'.  If the units 'from'
+  and 'to' are not compatible, returns UERR_INCOMPATIBLE_UNITS.  Units
+  are incompatible if, by following the path of 'referenceUnit' from
+  one unit to it's parent, a common unit definition cannot be found for
+  both 'from' and 'to'.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

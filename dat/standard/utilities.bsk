@@ -1,0 +1,356 @@
+rule rJitterValue( val variance )
+  amt = 10 * val * variance;
+  rJitterValue = val + ( Random( amt * 2 ) - amt ) / 10;
+end
+
+
+rule rInitialize( t data )
+  if t typeof thing then
+    if has( t, "init" ) then
+      t.init( t, data );
+    end
+  end
+  rInitialize = t;
+end
+
+
+rule rNewInstanceOf( object data )
+  n = rInitialize( duplicate( object ), data );
+  rNewInstanceOf = n;
+end
+
+
+/* --------------------------------------------------------
+ * rSafeGet
+ *
+ * By default, referencing an attribute that does not
+ * already exist in a Thing, creates that attribute in the
+ * Thing.  If this is not a desired effect, rSafeGet will
+ * first test to see if the attribute exists. and if it 
+ * does, return it.  Otherwise, it returns the 'default'
+ * value (if one is given -- null otherwise).
+ * -------------------------------------------------------- */
+
+rule rSafeGet( object attr def )
+  if has( object, attr ) then
+    rSafeGet = AttributeOf( object, attr );
+  else
+    rSafeGet = def;
+  end
+end
+
+
+rule rComputeAbilityScoreBonus( s )
+  rComputeAbilityScoreBonus = Floor( ( s - 10 ) / 2 );
+end
+
+
+rule rSortArray_Ascending( a b )
+  if a lt b then
+    rSortArray_Ascending = -1;
+  elseif a gt b then
+      rSortArray_Ascending = 1;
+  else
+    rSortArray_Ascending = 0;
+  end
+end
+
+
+rule rSortArray_Descending( a b )
+  if a lt b then
+    rSortArray_Descending = 1;
+  elseif a gt b then
+    rSortArray_Descending = -1;
+  else
+    rSortArray_Descending = 0;
+  end
+end
+
+
+rule rNewAbilityScore( abType abMagnitude )
+  s = NewThing();
+  s.type = abType;
+  s.magnitude = abMagnitude;
+  rNewAbilityScore = s;
+end
+
+
+rule rGetAbilityScore( abScores abType )
+  rGetAbilityScore = SearchCategory( abScores, "type", abType );
+end
+
+
+rule rAlignmentsCompatible( al1 al2 )
+  rAlignmentsCompatible = true;
+  if al1 eq null or al2 eq null then
+    exit rule;
+  end
+
+  al1lc = rSafeGet( al1, "lcAlignment" );
+  al1ge = rSafeGet( al1, "geAlignment" );
+  al2lc = rSafeGet( al2, "lcAlignment" );
+  al2ge = rSafeGet( al2, "geAlignment" );
+
+  if ( al1lc eq al2lc ) and ( al1ge eq al2ge ) then
+    exit rule;
+  end
+
+  if ( al1lc eq lcLawful ) and ( al2lc eq lcChaotic ) then
+    rAlignmentsCompatible = false;
+    exit rule;
+  elseif ( al1lc eq lcChaotic ) and ( al2lc eq lcLawful ) then
+    rAlignmentsCompatible = false;
+    exit rule;
+  end
+
+  if ( al1ge eq geGood ) and ( al2ge eq geEvil ) then
+    rAlignmentsCompatible = false;
+    exit rule;
+  elseif ( al1ge eq geEvil ) and ( al2ge eq geGood ) then
+    rAlignmentsCompatible = false;
+    exit rule;
+  end
+end
+
+
+rule rOpposingAlignment( al )
+  opAl = NewThing();
+
+  opAl.lcAlignment = lcNeutral;
+  opAl.geAlignment = geNeutral;
+
+  if Has( al, "lcAlignment" ) then
+    if al.lcAlignment eq lcLawful then
+      opAl.lcAlignment = lcChaotic;
+    elseif al.lcAlignment eq lcChaotic then
+      opAl.lcAlignment = lcLawful;
+    end
+  end
+
+  if Has( al, "geAlignment" ) then
+    if al.geAlignment eq geGood then
+      opAl.geAlignment = geEvil;
+    elseif al.geAlignment eq geEvil then
+      opAl.geAlignment = geGood;
+    end
+  end
+
+  rOpposingAlignment = opAl;
+end
+
+
+rule rGetAlignmentName( al )
+  n = "";
+  hasLC = Has( al, "lcAlignment" );
+  hasGE = Has( al, "geAlignment" );
+
+  if hasLC and hasGE then
+    if al.lcAlignment eq lcNeutral and al.geAlignment eq geNeutral then
+      rGetAlignmentName = "neutral";
+      exit rule;
+    end
+  end
+
+  if hasLC then
+    n = al.lcAlignment.name;
+  end
+  if hasLC and hasGE then
+    n = n + " ";
+  end
+  if hasGE then
+    n = n + al.geAlignment.name;
+  end
+  
+  rGetAlignmentName = n;
+end
+
+
+rule rReplaceMacros( str )
+  i = 1;
+  while parameter(i) ne null do
+    p = "$" + i + "$";
+    while instr( str, p ) ge 0 do
+      /* force the parameter to be a string if it is a number */
+      v = parameter(i) + "";
+      str = replace( str, p, v );
+    end
+    i = i + 1;
+  end
+  rReplaceMacros = str;
+end
+
+
+rule rCascadingLookup( aCategory )
+  i = any( aCategory );
+  if i typeof category then
+    i = rCascadingLookup( i );
+  end
+  rCascadingLookup = i;
+end
+
+
+rule rEnsureAttributeExists( parent attrName attrType )
+  if not Has( parent, attrName ) then
+    case attrType
+      is atString then
+        v = "";
+      is atNumber then
+        v = 0;
+      is atBoolean then
+        v = false;
+      is atThing then
+        v = NewThing();
+      is atCategory then
+        v = NewCategory();
+      is atRule then
+        v = rEnsureAttributeExists;
+      default
+        exit rule;
+    end
+
+    AttributeOf( parent, attrName ) = v;
+  end
+
+  rEnsureAttributeExists = parent;
+end
+
+
+rule rDuplicateCategory( cat forEach )
+  if not ( cat typeof category ) then
+    exit rule;
+  end
+
+  newCat = NewCategory();
+  for x in cat do
+    y = rNewInstanceOf( x );
+    if forEach ne null then
+      y = forEach( y );
+    end
+    Add( newCat, y );
+  end
+
+  rDuplicateCategory = newCat;
+end
+
+
+/* this rule lets you use an "any"-like syntax to extract items
+ * from arrays, as well as categories.  Also, if something that is
+ * not an array or a category is passed in, it just returns that
+ * item. */
+
+rule rAny( src )
+  if src typeof category then
+    rAny = any( src );
+  elseif src typeof array then
+    l = Length( src );
+    if l lt 1 then
+      rAny = src;
+    else
+      rAny = src[ Random( l ) ];
+    end
+  else
+    rAny = src;
+  end
+end
+
+
+rule rItemDeservesCurse( item )
+  c = ( Random(100) lt 5 ); 
+  if Has( item, "intelligence" ) then
+    c = false;
+  end
+  rItemDeservesCurse = c;
+end
+
+
+rule rInitializeOptions( options )
+  options.optMaxPhysicalArmorBonus  =  +5;
+  options.optMaxVirtualArmorBonus   = +10;
+  options.optMaxPhysicalWeaponBonus =  +5;
+  options.optMaxVirtualWeaponBonus  = +10;
+end
+
+
+rule rMinimumDiceValue( dval )
+  c = DiceCount( dval );
+  m = DiceModifier( dval );
+  op = DiceModType( dval );
+
+  v = c;
+  if op eq "+" then
+    v = v + m;
+  elseif m ne 0 then
+    v = v * m;
+  end
+
+  rMinimumDiceValue = v;
+end
+
+
+rule rMaximumDiceValue( dval )
+  c = DiceCount( dval );
+  t = DiceType( dval );
+  m = DiceModifier( dval );
+  op = DiceModType( dval );
+
+  v = c * t;
+  if op eq "+" then
+    v = v + m;
+  elseif m ne 0 then
+    v = v * m;
+  end
+
+  rMaximumDiceValue = v;
+end
+
+
+rule rThingMatchesCriteria( item options )
+  rThingMatchesCriteria = false;
+  if has( options, "optUseSources" ) and has( item, "sources" ) then
+    // the intersection of the two categories is the set of sources that
+    // exist in both categories.  Thus, if the intersection is empty,
+    // the sources that are requested are not those that the item is
+    // referenced in, and the item does not meet this criterion.
+    if Empty( Intersection( options.optUseSources, item.sources ) ) then
+      exit rule;
+    end
+  end
+  rThingMatchesCriteria = true;
+end
+
+
+rule rGetAnyMatchingCriteria( cat options )
+  c = duplicate( cat );
+  while not Empty( c ) do
+    x = any( c );
+    if rThingMatchesCriteria( x, options ) then
+      rGetAnyMatchingCriteria = x;
+      exit loop;
+    end
+    remove( c, x );
+  end
+end
+
+
+rule rCascadeLookupWithOptions( aCategory options )
+  c = duplicate( aCategory );
+  i = null;
+  do
+    if Empty( c ) then
+      exit loop;
+    end
+
+    i = any( c );
+    remove( c, i );
+
+    if i typeof category then
+      i = rCascadeLookupWithOptions( i, options );
+    elseif not rThingMatchesCriteria( i, options ) then
+      i = null;
+    end
+  loop while i eq null;
+
+  rCascadeLookupWithOptions = i;
+end
+
+

@@ -1,0 +1,95 @@
+forward rule rInitArtObject
+
+category group55gpArt
+  { .name "silver ewer" }
+  { .name "carved bone statuette" }
+  { .name "carved ivory statuette" }
+  { .name "finely wrought small gold bracelet" }
+end
+
+category group105gpArt
+  { .name "cloth of gold vestments" }
+  { .name "black velvet mask with numerous citrines" }
+  { .name "silver chalice with lapis lazuli gems" }
+end
+
+category group350gpArt
+  { .name "large well-done wool tapestry" }
+  { .name "brass mug with jade inlays" }
+end
+
+category group550gpArt 
+  { .name "silver comb with moonstones" }
+  { .name "silver-plated steel longsword with jet jewel in hilt" }
+end
+
+category group700gpArt
+  { .name "carved harp of exotic wood with ivory inlay and zircon gems" }
+  { .name "solid gold idol" }
+end
+
+category group1050gpArt
+  { .name "gold dragon comb with red garnet eye" }
+  { .name "gold and topaz bottle stopper cork" }
+  { .name "ceremonial electrum dagger with a star ruby in the pommel" }
+end
+
+category group1400gpArt
+  { .name "eyepatch with mock eye of sapphire and moonstone" }
+  { .name "fire opal pendant on a fine gold chain" }
+  { .name "old masterpiece painting" }
+end
+
+category group1750gpArt
+  { .name "embroidered silk and velvet mantle with numerous moonstones" }
+  { .name "sapphire pendant on gold chain" }
+end
+
+category group2500gpArt
+  { .name "embroidered and bejeweled glove" }
+  { .name "jeweled anklet" }
+  { .name "gold music box" }
+end
+
+category group3500gpArt
+  { .name "golden circlet with four aquamarines" }
+  { .name "a string of small pink pearls" }
+end
+
+category group5000gpArt
+  { .name "jeweled gold crown" }
+  { .name "jeweled electrum ring" }
+end
+
+category group7000gpArt
+  { .name "gold and ruby ring" }
+  { .name "gold cup set with emeralds" }
+end
+
+category groupArtLookup
+  [10] { .cost 1d10*10 gp  .subtable group55gpArt   .init rInitArtObject }
+  [15] { .cost 3d6*10 gp   .subtable group105gpArt  .init rInitArtObject }
+  [15] { .cost 1d6*100 gp  .subtable group350gpArt  .init rInitArtObject }
+  [10] { .cost 1d10*100 gp .subtable group550gpArt  .init rInitArtObject }
+  [10] { .cost 2d6*100 gp  .subtable group700gpArt  .init rInitArtObject }
+  [10] { .cost 3d6*100 gp  .subtable group1050gpArt .init rInitArtObject }
+  [10] { .cost 4d6*100 gp  .subtable group1400gpArt .init rInitArtObject }
+  [ 5] { .cost 5d6*100 gp  .subtable group1750gpArt .init rInitArtObject }
+  [ 5] { .cost 1d4*1000 gp .subtable group2500gpArt .init rInitArtObject }
+  [ 5] { .cost 1d6*1000 gp .subtable group3500gpArt .init rInitArtObject }
+  [ 4] { .cost 2d4*1000 gp .subtable group5000gpArt .init rInitArtObject }
+  [ 1] { .cost 2d6*1000 gp .subtable group7000gpArt .init rInitArtObject }
+end
+
+rule rLookupArt( options )
+  art = rNewInstanceOf( Any( groupArtLookup ) );
+  rLookupArt = art;
+end
+
+
+rule rInitArtObject( r )
+  r.cost = rJitterValue( Eval( r.cost ), 0.1 );
+  r.name = Any( r.subtable ).name;
+  r.treasureType = "art";
+  rInitArtObject = r;
+end

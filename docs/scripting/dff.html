@@ -1,0 +1,584 @@
+<HTML>
+<HEAD>
+  <TITLE>Basilisk Data File Format</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+
+		<H1>Basilisk Data File Format</H1>
+
+		Basilisk consists of <i>things</i>, <i>categories</i>, and
+		<i>rules</i>.  This section will describe the format used
+		to define <i>things</i> and <i>categories</i>.  To read
+		about how to write <i>rules</i>, see the 
+		<A HREF="script.html">scripting</A> section.
+		<P>
+		Basilisk requires that all attributes used in any definition
+		of any thing be predeclared via the "attribute" statement.
+		Any attributes not predeclared will generate errors during
+		the parse of your data file.
+		<P>
+		Basilisk also supports units (like pounds, dollars, inches,
+		meters, years, etc.), and allows you to convert between
+		units easily and quickly.  You do not need to use units
+		to use Basilisk, but they come in very handy.
+		<P>
+		<P>
+		For more information, click on a chapter heading:
+		<OL>
+			<LI><A HREF="#ident">Identifiers</A>
+			<LI><A HREF="#units">Units</A>
+			<LI><A HREF="#attr">Attributes</A>
+			<LI><A HREF="#thing">Things</A>
+					<UL>
+						<LI><A HREF="#thing1">Templated Things</A>
+						<LI><A HREF="#thing2">Anonymous Things</A>
+					</UL>
+			<LI><A HREF="#category">Categories</A>
+					<UL>
+						<LI><A HREF="#category1">Anonymous Categories</A>
+					</UL>
+			<LI><A HREF="#include">Including Files</A>
+			<LI><A HREF="#conclusion">Conclusion</A>
+		</OL>
+
+		<H2><A NAME="ident"></A>1. Identifiers</H2>
+
+		The term "identifier" will be used extensively in this
+		document.  It is essentially a term for a name given to an
+		object.  For example, your name is an identifier that
+		identifies you.
+		<P>
+		In the case of Basilisk, all identifiers must be unique.  You
+		cannot have two separate things both named "Sword", for instance.
+		You must make the identifiers unique by making them more
+		descriptive:  "shortSword" versus "longSword", for example.
+		<P>
+		Note that those two identifiers both lacked a space to
+		separate the words.  This is because identifiers cannot
+		contain spaces.  They also cannot contain dashes, slashes,
+		asterisks, ampersands, or any other punctuation.  In fact,
+		the only valid characters you can put in an identifier are
+		letters, numbers, and the underscore ('_'), and numbers
+		can never be the first characters in an identifier.
+		<P>
+		Examples of valid identifiers:
+		<UL>
+			<LI>longSword
+			<LI>Long_Sword
+			<LI>bilbo1
+			<LI>thing1234
+			<LI>thing_1234
+		</UL>
+		Examples of invalid identifiers are:
+		<UL>
+			<LI>long sword <I>(has a space in it)</I>
+			<LI>1longSword <I>(starts with a number)</I>
+			<LI>long-sword <I>(has a dash in it)</I>
+			<LI>bilbo&frodo <I>(has an ampersand in it)</I>
+		</UL>
+		Also, Basilisk is <i>case-insensitive</i>.  What this means, 
+		is that whether you type your identifier as "longSword", or
+		"LONGSWORD", or "lOnGsWoRd", it's all the same to Basilisk.
+		Upper-case and lower-case make no difference, except in
+		<i>strings</i> (see the section on <A HREF="#attr">Attributes</A>,
+		below, for more on strings).
+
+		<H2><A NAME="units"></A>2. Units</H2>
+
+		To put it simply, units describe numbers.  If you ask someone
+		(rather impertinently) how much they weigh, they are unlikely
+		to just say "140".  If they did, you might wonder if that was
+		in pounds, kilograms, etc.  The unit "pounds" is critical in
+		this case to clarify the meaning of their answer.
+		<P>
+		Likewise, if you were playing a game of D&amp;D, and the
+		DM says to you, "you just found 64!"  64 what?  It would
+		make a big difference if he said "copper pieces" versus
+		"platinum pieces."
+		<P>
+		Basilisk allows you to define units that you will use in your
+		data file.  For example:
+		<BLOCKQUOTE><CODE>
+			unit cp;<BR>
+			unit sp = 10 cp;<BR>
+			unit gp = 10 sp;<BR>
+			unit pp = 10 gp;<BR>
+		</CODE></BLOCKQUOTE>
+		What this tells you is that 1 sp ("silver piece") is worth
+		10 cp ("copper pieces"), that 1 gp ("gold piece") is worth 10 
+		sp, and that 1 pp ("platinum piece") is worth 10 gp.  This, as
+		many of you will recognize, is the default monetary system of
+		the D&amp;D universe.
+		<P>
+		The benefit of explicitly defining units in relation to other
+		units (as in the example above), is that you can easily
+		request the conversion of, say, 1552 cp into pp (1.552 pp).
+		Basilisk will perform the work of converting it for you.
+		<P>
+		You could also do the following:
+		<BLOCKQUOTE><CODE>
+			unit second;<BR>
+			unit round = 6 second;<BR>
+			unit minute = 10 round;<BR>
+			unit hour = 60 minute;<BR>
+			unit day = 24 hour;<BR>
+		</CODE></BLOCKQUOTE>
+		The above is easily recognized as defining units of time.
+		Note, however, that the units are not pluralized when they
+		are referred to (i.e., it says "6 second", rather than
+		"6 seconds").  This is because the plural form ("seconds" vs.
+		"second") has not been defined as a valid unit.  This last
+		example shows how to use plurals validly:
+		<BLOCKQUOTE><CODE>
+			unit second;<BR>
+			unit seconds = 1 second;<BR>
+			unit round = 6 seconds;<BR>
+			unit rounds = 1 round;<BR>
+			unit minute = 10 rounds;<BR>
+			unit minutes = 1 minute;<BR>
+			unit hour = 60 minutes;<BR>
+			unit hours = 1 hour;<BR>
+			unit day = 24 hours;<BR>
+			unit days = 1 day;<BR>
+		</CODE></BLOCKQUOTE>
+		Note that you could also just declare the plural form (without
+		the singular), but you would then wind up saying that a
+		particular spell, for example, lasts for "1 rounds".  If you
+		want your files to sound grammatically correct, your only
+		real option is to either use abbreviations ("cp" vs. "copper
+		piece") or to define both the singular and plural forms of
+		each unit.
+
+		<H2><A NAME="attr"></A>3. Attributes</H2>
+
+		All attributes that will be used to define any thing in any
+		of your files <i>must</i> be declared before you use them.
+		This is accomplished by using the "attribute" statement.
+		<P>
+		An "attribute" statement lets you associate a given 
+		identifier with a type.  The identifier must be unique in
+		the file, and only be used to reference an attribute of
+		a thing.
+		<P>
+		Here's some examples of attribute definitions:
+		<BLOCKQUOTE><CODE>
+			attribute name string<BR>
+			attribute weight number<BR>
+			attribute isSmart boolean<BR>
+			attribute family thing<BR>
+			attribute children category<BR>
+			attribute nameRoutine rule<BR>
+		</CODE></BLOCKQUOTE>
+		Attributes may only be of the following types:
+		<UL>
+			<LI><b>string</b> - this is a sequence of characters between
+					double quotes, "like this."  All characters between
+					the quotes are taken literally, so strings are useful
+					for things like names, descriptions, and narrative
+					text.
+			<LI><b>number</b> - the number type is very flexible in
+					Basilisk.  It may be an integer, like 1, or 15, or
+					-144, or it may be a floating point number, like
+					3.141592, or 21.5.  However, numbers may also represent
+					dice values, like 2d8, or 1d4+3, or 3d8*1000.  Numbers
+					may also have <A HREF="#units">units</A> associated
+					with them.
+			<LI><b>boolean</b> - Boolean values are strictly limited
+					to two values, "true" or "false."  You may also use
+					"yes" or "no" and "off" or "on".  Boolean values are
+					like light switches -- the light is either on or off.
+					Thus, they are good for "yes" or "no" type answers,
+					like whether or not one's sibling is smart.
+			<LI><b>thing</b> - <A HREF="#thing">Things</A> are complex
+					entities that are composed of various <A HREF="#attr">attributes</A>.
+					You are a thing, as is the chair you are sitting on, or the
+					emotion you are feeling for your boyfriend or girlfriend.
+			<LI><b>category</b> - <A HREF="#category">Categories</A> are
+					logical groupings or sets of things or other categories.
+					The children of a family is a category, as is the set of
+					all slashing weapons.
+			<LI><b>rule</b> -- <A HREF="bskscript.html">Rules</A> describe
+					processes, like "how do I select a name for my baby" or "how
+					do I roll for ability scores."
+		</UL>
+		Give careful thought to your data model before you proceed,
+		so that you can select the set of attributes that you will
+		need for the things you create.
+
+		<H2><A NAME="thing"></A>4. Things</H2>
+
+		Things are the building blocks of the universe, and so you'll
+		find that your data files will be <i>full</i> of them.  Because
+		they are so ubiquitous, there are lots of ways to create them.
+		You'll want to learn all the possible ways, because they each
+		have their strengths and weaknesses.
+		<P>
+		The first way is the most straightforward:
+		<BLOCKQUOTE>
+<PRE>
+longSword
+	.name "longsword"
+	.cost 15 gp
+	.weight 4 lb
+	.size medium
+	.damage 1d8
+	.criticalRange 19
+	.criticalMultiplier 2
+end
+</PRE>
+		</BLOCKQUOTE>
+		This example assumes that "name", "cost", "weight", "size",
+		"damage", "criticalRange", and "criticalMultiplier" have
+		all been previously declared with the <A HREF="#attr">attribute</A>
+		keyword, and that "gp" and "lb" have both been previously
+		declared as <A HREF="#units">units</A>.
+		<P>
+		The example shows how you could define a longsword, with
+		all of it's attributes.  You could then do the same thing
+		for a flail, nunchaku, a quarterstaff, and so forth.
+		<P>
+		If you did so, however, you would quickly realize that you
+		were typing the same attributes over and over -- name, cost,
+		weight, size, damage, etc. being fairly common to most
+		weapons.  If you find yourself entering attribute names
+		over and over, you might want to look at the "template"
+		statement.
+		<P>
+		<A NAME="thing1"></A>
+		Templates allow you to abbreviate much of your data entry.
+		Here's an example:
+		<BLOCKQUOTE>
+<PRE>
+template { name cost damage criticalRange 
+           criticalMultiplier weight size }
+	weaponClub { "club" $ 1d6 20 2 3 lb medium }
+	weaponDagger { "dagger" 2 gp 1d4 19 2 2 lb tiny }
+	weaponDart { "dart" 5 sp 1d4 20 2 1/2 lb small }
+end
+</PRE>
+		</BLOCKQUOTE>
+		Notice how much easier that was!  You simply specify (in
+		the curly braces after the "template" keyword) the list of
+		attributes you want to define for each thing, and then
+		you list each thing, followed by each of its attribute
+		values in curly braces.  You will also notice the
+		weaponClub thing -- instead of a price, it has a '$'
+		character.  This means that a club has no price (not just
+		"0 gp", but literally no price attribute), and that the
+		parser should ignore that attribute for this thing.
+		<P>
+		The last method for entering things requires another example
+		to demonstrate:
+		<BLOCKQUOTE>
+<PRE>
+flailSpecialAttack
+	.name "bonus"
+	.description "+2 to disarm attempts"
+end
+
+weaponFlail
+	.name "flail"
+	.cost 8 gp
+	.damage 1d8
+	.criticalRange 20
+	.criticalMultiplier 2
+	.weight 5 lb
+	.size medium
+	.bonus flailSpecialAttack
+end
+</PRE>
+		</BLOCKQUOTE>
+		In this case, a flail has a bonus that grants a +2 to disarm
+		attempts.  This bonus is a thing, because it has attributes
+		that describe it.  However, because that bonus is only
+		ever used once in the file, it seems a waste to even bother
+		naming it, and it takes up 4 lines of the file!
+		<P>
+		<A NAME="thing2"></A>
+		Anonymous things are things that are actually embedded
+		within the definition of another thing or category.  They
+		are not named (hence the term "anonymous"), and take up
+		much less space in the data file.  They are also faster to
+		parse.  Here's the same data as the example above, but with
+		the "flailSpecialAttack" thing made anonymous:
+		<BLOCKQUOTE>
+<PRE>
+weaponFlail
+	.name "flail"
+	.cost 8 gp
+	.damage 1d8
+	.criticalRange 20
+	.criticalMultiplier 2
+	.weight 5 lb
+	.size medium
+	.bonus { .name "bonus" 
+					 .description "+2 to disarm attempts" }
+end
+</PRE>
+		</BLOCKQUOTE>
+		All we had to do was enclose the thing's attribute list in
+		curly braces and put the result where we put the identifier
+		before -- voila!  An anonymous thing!  You can use anonymous
+		things anywhere that you would have referred to a thing's
+		identifier before.  Note, however, that when you use an
+		anonymous thing, you cannot refer to it again later, since
+		it has no identifier.  Thus, you do not want to use an 
+		anonymous thing when the thing will need to be referenced 
+		multiple times in a data file.
+		<P>
+		One final note about things:  you may define and redefine
+		the same thing over and over.  If a thing is encountered
+		that has already been defined, the attributes in the
+		second definition are <i>added to</i> the thing's previous
+		attribute list.  It is <i>very important</i> to note that
+		a thing may have multiple of the same attribute, so a
+		redefinition will never overwrite an existing attribute!
+		Be very careful with this, as the parser will not even
+		issue a warning when you are redefining a thing.
+
+		<H2><A NAME="category"></A>5. Categories</H2>
+
+		Whereas things are the building blocks of the universe,
+		categories are the glue that hold those blocks together.
+		Things and categories really are inseparable in a 
+		well-designed data file.
+		<P>
+		A category, in it's simplest form, has the following format:                
+		<BLOCKQUOTE>
+<PRE>
+attribute name string
+attribute birth string
+
+template { name birth }
+Jamis { "Jamis Gordon Buck"  "25 Jul 1974" }
+Eric { "Eric Victor Bristow" "4 Feb 1976" }
+Nicole { "Nicole Suzanne Buck" "30 Apr 1976" }
+Emily { "Emily Rene Bristow" "28 Aug 1978" }
+Rebecca { "Rebecca Lynn Bristow" "3 Dec 1979" }
+Andrew { "Andrew Michael Bristow" "8 May 1986" }
+end
+
+category familyMembers
+Jamis
+Eric
+Nicole
+Emily
+Rebecca
+Andrew
+end
+</PRE>
+		</BLOCKQUOTE>
+		This puts "Jamis," "Eric," "Nicole," "Emily," "Rebecca,"
+		and "Andrew" grouped together in a category named
+		"familyMembers."
+		<P>
+		A shorter way to do this, if you are using templates, is
+		as follows:
+		<BLOCKQUOTE>
+<PRE>
+template ( familyMembers ) { name birth }
+Jamis { "Jamis Gordon Buck"  "25 Jul 1974" }
+Eric { "Eric Victor Bristow" "4 Feb 1976" }
+Nicole { "Nicole Suzanne Buck" "30 Apr 1976" }
+Emily { "Emily Rene Bristow" "28 Aug 1978" }
+Rebecca { "Rebecca Lynn Bristow" "3 Dec 1979" }
+Andrew { "Andrew Michael Bristow" "8 May 1986" }
+end
+</PRE>
+		</BLOCKQUOTE>
+		The parenthesis after the "template" keyword lists all
+		the categories that all things defined by this template
+		will belong to.  The categories do not have to have been
+		previously defined -- if they are not defined when the
+		parser reads the template, a new category by that name is
+		created.  Multiple categories may be specified here -- just
+		separate each category name by at least one space.  You can 
+		further define each individual member of the template to be
+		in other categories, by putting a parenthetical list of 
+		category identifiers after the thing identifier, like so:
+		<BLOCKQUOTE>
+<PRE>
+template ( familyMembers ) { name birth }
+Jamis ( buckFamily ) { "..." "..." }
+Eric ( bristowFamily ) { "..." "..." }
+Nicole ( buckFamily ) { "..." "..." }
+Emily ( bristowFamily ) { "..." "..." }
+Rebecca ( bristowFamily ) { "..." "..." }
+Andrew ( bristowFamily ) { "..." "..." }
+end
+</PRE>
+		</BLOCKQUOTE>
+		This, then, says that Jamis, Eric, Nicole, Emily, Rebecca,
+		and Andrew are all "familyMembers", but that Jamis and Nicole
+		are both in the "buckFamily" category, and Eric, Emily,
+		Rebecca, and Andrew are all in the "bristowFamily" category.
+		<P>
+		Categories may also be specified when defining things with
+		the basic format, as demonstrated here:
+		<BLOCKQUOTE>
+<PRE>
+longSword ( weapons slashingWeapons )
+.name "longsword"
+.cost 15 gp
+.weight 4 lb
+.size medium
+.damage 1d8
+.criticalRange 19
+.criticalMultiplier 2
+end
+</PRE>
+		</BLOCKQUOTE>
+		The parenthetical list after the thing's identifier states
+		the list of categories that the thing belongs to.  If any
+		of the categories have not yet been defined, they will be
+		defined automatically.  In this example, the longSword
+		thing is created and put automatically into the "weapons"
+		category and the "slashingWeapons" category.
+		<P>
+		You may also weight the items in a category to determine
+		their likelihood of being chosen randomly (see the 
+		<A HREF="bskscript.html#fn_any">Any</A> function in the 
+		<A HREF="bskscript.html">scripting</A> section).  Weights 
+		are much like percentages, but you don't have to make sure 
+		that the numbers total to 100.  For example, if you wanted 
+		to randomly select a gem value, you might use the following
+		category set up:
+		<BLOCKQUOTE>
+<PRE>
+category groupGemLookup
+[50] { .cost 4d4 gp }
+[30] { .cost 2d4*10 gp }
+[25] { .cost 4d4*10 gp }
+[15] { .cost 2d4*100 gp }
+[ 9] { .cost 4d4*100 gp }
+[ 1] { .cost 2d4*1000 gp }
+end
+</PRE>
+		</BLOCKQUOTE>
+		First, note that the things in the category are declared
+		<A HREF="#thing2">anonymously</A>.  Second, notice the
+		numbers in square brackets -- those are the weight value
+		for each thing.  The total of the weights, in this case,
+		is 50+30+25+15+9+1=130, and the chance of any of the items
+		being chosen at random is the thing's weight divided by
+		the total weight. So, a 4d4 gp gem will be chosen 50 times
+		out of 130 (about 38.5%), while a 2d4*1000 gp gem will only
+		be chosen roughly once in 130 times (about 0.75%).
+		<P>
+		Note that if weights are not specified, they default to 1.
+		If a weight is specified, however, it must be an integer
+		value (it cannot have a fractional value, or numbers after
+		the decimal point).
+		<P>
+		<A NAME="category1"></A>
+		Lastly, just as things may be declared <A HREF="#thing1">anonymously</A>,
+		so may categories.  An anonymous category declaration may
+		be used anywhere a category identifier would be used, and
+		is simply the category members (including weights, if you
+		want them) enclosed in parentheses.  For example:
+		<BLOCKQUOTE>
+<PRE>
+attribute name string
+attribute favoriteMovies category
+
+template ( allMovies ) { name }
+Bambi { "Bambi" }
+RobinHood { "Robin Hood" }
+TrumanShow { "The Truman Show" }
+MrHollandsOpus { "Mr. Holland's Opus" }
+Contact { "Contact" }
+BugsLife { "A Bug's Life" }
+ToyStory2 { "Toy Story 2" }
+end
+
+Jamis
+.name "Jamis Buck"
+.favoriteMovies ( ToyStory2 
+							BugsLife 
+							TrumanShow 
+							{ .name "Secret of Roan Inish" } )
+end
+
+Tarasine
+.name "Tarasine Buck"
+.favoriteMovies ( [3] MrHollandsOpus 
+							Contact 
+							TrumanShow )
+end
+</PRE>
+		</BLOCKQUOTE>
+		In this example, a list of movies is declared and then, for
+		each person (in this case, me and my wife), a category is
+		declared anonymously, containing our favorite movies.  (The
+		contents of the categories are listed one per line for
+		space limitation reasons -- there is no reason they could
+		not be strung out on one line, if you preferred).
+		<P>
+		I got tricky in my movie list.  Perhaps you noticed
+		the anonymous thing, listed in the anonymous category!  You
+		can nest them as deep as you need to.
+		<P>
+		Lastly, notice in my wife's movie list that the movie
+		"Mr. Holland's Opus" is weighted so that it will be chosen
+		3 times out of 5.  The other two movies are left to the
+		default weighting of 1, each being chosen 1 time out of 5.
+		You can use weightings wherever you feel you will need them.
+		<P>
+		A special thing, "null," may also be used in a category to
+		indicate that the particular category member is non-existant.
+		Any given category may only contain <i>one</i> null member.
+		<P>
+		One final note about categories:  you may define and redefine
+		the same category over and over.  If a category is encountered
+		that has already been defined, the members of the
+		second definition are <i>added to</i> the category's previous
+		member list.  It is important to note that a category may 
+		only have one of any given thing or category, and multiples
+		are silently ignored.  Be very careful with this, as the 
+		parser will not even issue a warning when you are redefining
+		a category.
+
+		<H2><A NAME="include"></A>6. Including Files</H2>
+
+		You may have noticed by now that any realistic set of data
+		will be quite large.  It is often not going to be reasonable
+		to assume that it could all be managed in one file.  Also,
+		there are times when you would like one part of your data
+		to be shared in multiple different databases (one for D&D,
+		one for Star Wars, etc.).  How to handle that?
+		<P>
+		The answer, my friend, lies in Basilisk's ability to include
+		the contents of one file from within another.  Here's an
+		example:
+		<BLOCKQUOTE>
+<PRE>
+#include "coredata.bsk"
+</PRE>
+		</BLOCKQUOTE>
+		C-programmers everywhere should immediately recognize this
+		as shamelessly stolen from that language.  All it does,
+		in essence, is temporarily stop parsing the current file,
+		and jump into the file referenced in the quotes.  That file
+		is completely parsed into the database, and then the parser
+		jumps back into the original file where it left off and
+		continues.
+		<P>
+		Any given file may include any number of files, each of
+		which may include files, etc.  The Baslisk parser includes
+		a safeguard which will prevent a file from being included
+		more than once, so you don't have to worry about redefining
+		your categories or things, either.
+
+		<H2><A NAME="conclusion"></A>7. Conclusion</H2>
+
+		Well, that's about the gyst of it.  All that remains is
+		for you to master the scripting aspects of Basilisk, and
+		you'll be armed and dangerous!
+		<P>
+		If you feel you're ready, <A HREF="script.html">proceed
+		to the scripting section</A>!
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,2755 @@
+attribute canBeIntelligent boolean
+
+forward rule rInitCandleOfInvocation
+forward rule rInitDeckOfIllusions
+forward rule rInitPaleLavenderIounStone
+forward rule rInitLavenderAndGreenIounStone
+forward rule rInitIronFlask
+forward rule rInitNecklaceOfPrayerBeads
+forward rule rInitSovereignGlue
+
+wondrousAmuletOfHealth2
+  .name "amulet of health (+2)"
+  .cost 4000 gp
+  .bonuses ( { .type btEnhancement 
+               .aspect asAbility
+               .affectedThing astConstitution 
+               .magnitude +2 } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousAmuletOfHealth4
+  .name "amulet of health (+4)"
+  .cost 16000 gp
+  .bonuses ( { .type btEnhancement 
+               .aspect asAbility 
+               .affectedThing astConstitution 
+               .magnitude +4 } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousAmuletOfHealth6
+  .name "amulet of health (+6)"
+  .cost 36000 gp
+  .bonuses ( { .type btEnhancement 
+               .aspect asAbility 
+               .affectedThing astConstitution 
+               .magnitude +6 } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousAmuletOfNaturalArmor1
+  .name "amulet of natural armor (+1)"
+  .cost 2000 gp
+  .bonuses ( { .type btNaturalArmor
+               .aspect asAC
+               .magnitude +1 } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousAmuletOfNaturalArmor2
+  .name "amulet of natural armor (+2)"
+  .cost 8000 gp
+  .bonuses ( { .type btNaturalArmor
+               .aspect asAC
+               .magnitude +2 } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousAmuletOfNaturalArmor3
+  .name "amulet of natural armor (+3)"
+  .cost 18000 gp
+  .bonuses ( { .type btNaturalArmor
+               .aspect asAC
+               .magnitude +3 } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousAmuletOfNaturalArmor4
+  .name "amulet of natural armor (+4)"
+  .cost 32000 gp
+  .bonuses ( { .type btNaturalArmor
+               .aspect asAC
+               .magnitude +4 } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousAmuletOfNaturalArmor5
+  .name "amulet of natural armor (+5)"
+  .cost 50000 gp
+  .bonuses ( { .type btNaturalArmor
+               .aspect asAC
+               .magnitude +1 } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousAmuletOfThePlanes
+  .name "amulet of the planes"
+  .cost 80000 gp
+  .specialQualities ( { .type satSpellEffect
+                        .spell spellPlaneShift } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousAmuletOfProofAgainstDetectionAndLocation
+  .name "amulet of proof against detection and location"
+  .cost 35000 gp
+  .specialQualities ( { .type satSpellEffect
+                        .spell spellNondetection
+                        .description "divination caster must succeed DC 19 caster level check" } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousAmuletOfUndeadTurning
+  .name "amulet of undead turning"
+  .cost 11000 gp
+  .bonuses ( { .type btUnnamed
+               .aspect asTurningLevel
+               .magnitude +4 } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousApparatusOfKwalish
+  .name "apparatus of kwalish"
+  .cost 130000 gp
+  .weight 500 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBagOfHolding1
+  .name "bag of holding (bag 1)"
+  .cost 2500 gp
+  .weight 15 lb
+  .capacityWeight 250 lb
+  .capacityVolume 30 cu_ft
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBagOfHolding2
+  .name "bag of holding (bag 2)"
+  .cost 5000 gp
+  .weight 25 lb
+  .capacityWeight 500 lb
+  .capacityVolume 70 cu_ft
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBagOfHolding3
+  .name "bag of holding (bag 3)"
+  .cost 7400 gp
+  .weight 35 lb
+  .capacityWeight 1000 lb
+  .capacityVolume 150 cu_ft
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBagOfHolding4
+  .name "bag of holding (bag 4)"
+  .cost 10000 gp
+  .weight 60 lb
+  .capacityWeight 1500 lb
+  .capacityVolume 250 cu_ft
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousGrayBagOfTricks
+  .name "bag of tricks (gray)"
+  .cost 900 gp
+  .specialAttacks ( { .description "summon an animal" } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousRustBagOfTricks
+  .name "bag of tricks (rust)"
+  .cost 3000 gp
+  .specialAttacks ( { .description "summon an animal" } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousTanBagOfTricks
+  .name "bag of tricks (tan)"
+  .cost 6300 gp
+  .specialAttacks ( { .description "summon an animal" } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBeadOfForce
+  .name "bead of force"
+  .cost 2000 gp
+  .specialAttacks ( { .description "bursts on impact (destroying bead) for 5d6 damage to all within 10-feet (Reflex save for half, or be trapped in sphere of force for 3d6 minutes)" .saveDC 16 } )
+  .canBeIntelligent false
+  .sources sourcesCoreRules
+end
+
+wondrousMonksBelt
+  .name "monk's belt"
+  .cost 9000 gp
+  .weight 1 lb
+  .bonuses ( { .type btUnnamed .aspect asFeat .affectedThing featAmbidexterity }
+             { .type btUnnamed .aspect asFeat .affectedThing featTwoWeaponFighting }
+             { .type btUnnamed .aspect asStunningAttackPerDay .magnitude +1
+               .conditions ( { .type ctIsClass .affectedThing classMonk } ) } )
+  .specialAttacks ( { .description "stunning attack (as monk) once per day"
+                      .conditions ( { .prerequisiteNot true .type ctIsClass .affectedThing classMonk } ) } )
+  .specialQualities ( { .type satSpellEffect .spell spellHaste .duration 10 rounds .frequency 1 .period 1 day 
+                        .conditions ( { .type ctIsClass .affectedThing classMonk } ) } )
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBeltOfDwarvenkind
+  .name "belt of dwarvenkind"
+  .cost 14900 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBeltOfGiantStrength4
+  .name "belt of giant strength (+4)"
+  .cost 16000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBeltOfGiantStrength6
+  .name "belt of giant strength (+6)"
+  .cost 36000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousFoldingBoat
+  .name "folding boat"
+  .cost 10500 gp
+  .weight 4 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBoccobsBlessedBook
+  .name "Boccob's blessed book"
+  .cost 9500 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBootsOfElvenkind
+  .name "boots of elvenkind"
+  .cost 2000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBootsOfLevitation
+  .name "boots of levitation"
+  .cost 7500 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBootsOfSpeed
+  .name "boots of speed"
+  .cost 8000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBootsOfStridingandSpringing
+  .name "boots of striding and springing"
+  .cost 2500 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousWingedBoots
+  .name "winged boots"
+  .cost 12000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBootsOfTheWinterlands
+  .name "boots of the winterlands"
+  .cost 2500 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBottleOfAir
+  .name "bottle of air"
+  .cost 14500 gp
+  .weight 2 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBowlOfCommandingWaterElementals
+  .name "bowl of commanding water elementals"
+  .cost 100000 gp
+  .weight 3 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBraceletOfFriends
+  .name "bracelet of friends"
+  .cost 4550 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBracersOfArchery
+  .name "bracers of archery"
+  .cost 5100 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBracersOfArmor1
+  .name "bracers of armor (+1)"
+  .cost 1000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBracersOfArmor2
+  .name "bracers of armor (+2)"
+  .cost 4000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBracersOfArmor3
+  .name "bracers of armor (+3)"
+  .cost 9000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBracersOfArmor4
+  .name "bracers of armor (+4)"
+  .cost 16000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBracersOfArmor5
+  .name "bracers of armor (+5)"
+  .cost 25000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBracersOfArmor6
+  .name "bracers of armor (+6)"
+  .cost 36000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBracersOfArmor7
+  .name "bracers of armor (+7)"
+  .cost 49000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBracersOfArmor8
+  .name "bracers of armor (+8)"
+  .cost 64000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBrazierOfCommandingFireElementals
+  .name "brazier of commanding fire elementals"
+  .cost 100000 gp
+  .weight 5 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBroochOfShielding
+  .name "brooch of shielding"
+  .cost 1500 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBroomOfFlying
+  .name "broom of flying"
+  .cost 15100 gp
+  .weight 3 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCandleOfInvocation
+  .name "candle of invocation"
+  .cost 7800 gp
+  .weight 1/2 lb
+  .init rInitCandleOfInvocation
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCandleOfTruth
+  .name "candle of truth"
+  .cost 2500 gp
+  .weight 1/2 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCapeOfTheMountebank
+  .name "cape of the mountebank"
+  .cost 12960 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCarpetOfFlying3x5
+  .name "carpet of flying (3 ft. by 5 ft.)"
+  .cost 18000 gp
+  .weight 5 lb
+  .capacityWeight 300 lb
+  .speed 210 ft
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCarpetOfFlying4x6
+  .name "carpet of flying (4 ft. by 6 ft.)"
+  .cost 29000 gp
+  .weight 8 lb
+  .capacityWeight 600 lb
+  .speed 180 ft
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCarpetOfFlying5x7
+  .name "carpet of flying (5 ft. by 7 ft.)"
+  .cost 41000 gp
+  .weight 10 lb
+  .capacityWeight 900 lb
+  .speed 150 ft
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCarpetOfFlying6x9
+  .name "carpet of flying (6 ft. by 9 ft.)"
+  .cost 53000 gp
+  .weight 15 lb
+  .capacityWeight 1200 lb
+  .speed 120 ft
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCenserOfControllingAirElementals
+  .name "censer of controlling air elementals"
+  .cost 100000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousChaosDiamond
+  .name "chaos diamond"
+  .lcAlignment lcChaotic
+  .cost 93000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousChimeOfInterruption
+  .name "chime of interruption"
+  .cost 15800 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousChimeOfOpening
+  .name "chime of opening"
+  .cost 3000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousMinorCircletOfBlasting
+  .name "minor circlet of blasting"
+  .cost 6480 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousMajorCircletOfBlasting
+  .name "major circlet of blasting"
+  .cost 23760 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCircletOfPersuasion
+  .name "circlet of persuasion"
+  .cost 4500 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCloakOfArachnida
+  .name "cloak of arachnida"
+  .cost 6000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCloakOfTheBat
+  .name "cloak of the bat"
+  .cost 6000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCloakOfCharisma2
+  .name "cloak of charisma (+2)"
+  .cost 4000 gp
+  .weight 2 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCloakOfCharisma4
+  .name "cloak of charisma (+4)"
+  .cost 16000 gp
+  .weight 2 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCloakOfCharisma6
+  .name "cloak of charisma (+6)"
+  .cost 36000 gp
+  .weight 2 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousMinorCloakOfDisplacement
+  .name "minor cloak of displacement"
+  .cost 25000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousMajorCloakOfDisplacement
+  .name "major cloak of displacement"
+  .cost 50000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCloakOfElvenkind
+  .name "cloak of elvenkind"
+  .cost 2000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCloakOfEtherealness
+  .name "cloak of etherealness"
+  .cost 52000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCloakOfTheMantaRay
+  .name "cloak of the manta ray"
+  .cost 20000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCloakOfResistance1
+  .name "cloak of resistance (+1)"
+  .cost 1000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCloakOfResistance2
+  .name "cloak of resistance (+2)"
+  .cost 4000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCloakOfResistance3
+  .name "cloak of resistance (+3)"
+  .cost 9000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCloakOfResistance4
+  .name "cloak of resistance (+4)"
+  .cost 16000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCloakOfResistance5
+  .name "cloak of resistance (+5)"
+  .cost 25000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCrystalBall
+  .name "crystal ball"
+  .cost 42000 gp
+  .weight 7 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCrystalBallWithSeeInvisibility
+  .name "crystal ball with see invisibility"
+  .cost 50000 gp
+  .weight 7 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCrystalBallWithDetectThoughts
+  .name "crystal ball with detect thoughts"
+  .cost 51000 gp
+  .weight 7 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCrystalBallWithTelepathy
+  .name "crystal ball with telepathy"
+  .cost 70000 gp
+  .weight 7 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCrystalBallWithTrueSeeing
+  .name "crystal ball with true seeing"
+  .cost 80000 gp
+  .weight 7 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCubeOfForce
+  .name "cube of force"
+  .cost 62000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCubeOfFrostResistance
+  .name "cube of frost resistance"
+  .cost 22000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousCubicGate
+  .name "cubic gate"
+  .cost 156000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousDaernsInstantFortress
+  .name "Daern's instant fortress"
+  .cost 55000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousDarkskull
+  .name "darkskull"
+  .cost 60000 gp
+  .geAlignment geEvil
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousDecanterOfEndlessWater
+  .name "decanter of endless water"
+  .cost 9000 gp
+  .weight 2 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousDeckOfIllusions
+  .name "deck of illusions"
+  .cost 9200 gp
+  .weight 1/2 lb
+  .init rInitDeckOfIllusions
+  .canBeIntelligent false
+  .sources sourcesCoreRules
+end
+
+wondrousDimensionalShackles
+  .name "dimensional shackles"
+  .cost 26000 gp
+  .weight 5 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousDrumsOfPanic
+  .name "drums of panic"
+  .cost 30000 gp
+  .weight 10 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousDustOfAppearance
+  .name "dust of appearance"
+  .cost 2100 gp
+  .canBeIntelligent false
+  .sources sourcesCoreRules
+end
+
+wondrousDustOfDisappearance
+  .name "dust of disappearance"
+  .cost 3500 gp
+  .canBeIntelligent false
+  .sources sourcesCoreRules
+end
+
+wondrousDustOfDryness
+  .name "dust of dryness"
+  .cost 850 gp
+  .canBeIntelligent false
+  .sources sourcesCoreRules
+end
+
+wondrousDustOfIllusion
+  .name "dust of illusion"
+  .cost 500 gp
+  .canBeIntelligent false
+  .sources sourcesCoreRules
+end
+
+wondrousDustOfTracelessness
+  .name "dust of tracelessness"
+  .cost 250 gp
+  .canBeIntelligent false
+  .sources sourcesCoreRules
+end
+
+wondrousEfreetiBottle
+  .name "efreeti bottle"
+  .cost 150000 gp
+  .weight 1 lb
+  .canBeIntelligent false
+  .sources sourcesCoreRules
+end
+
+wondrousEverburningTorch
+  .name "everburning torch"
+  .cost 90 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousEversmokingBottle
+  .name "eversmoking bottle"
+  .cost 5200 gp
+  .weight 1 lb
+  .canBeIntelligent false
+  .sources sourcesCoreRules
+end
+
+wondrousEyesOfCharming
+  .name "eyes of charming"
+  .cost 56000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousEyesOfDoom
+  .name "eyes of doom"
+  .cost 24500 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousEyesOfTheEagle
+  .name "eyes of the eagle"
+  .cost 1000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousEyesOfPetrification
+  .name "eyes of petrification"
+  .cost 98000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBronzeGriffonFigurine
+  .name "figurine of wondrous power (bronze griffon)"
+  .cost 10000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousEbonyFlyFigurine
+  .name "figurine of wondrous power (ebony fly)"
+  .cost 10000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousGoldenLionFigurines
+  .name "figurines of wondrous power (golden lions)"
+  .cost 16500 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousIvoryGoatFigurines
+  .name "figurines of wondrous power (ivory goats)"
+  .cost 21000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousMarbleElephantFigurine
+  .name "figurine of wondrous power (marble elephant)"
+  .cost 17000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousObsidianSteedFigurine
+  .name "figurine of wondrous power (obsidian steed)"
+  .cost 28500 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousOnyxDogFigurine
+  .name "figurine of wondrous power (onyx dog)"
+  .cost 15500 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousSerpentineOwlFigurine
+  .name "figurine of wondrous power (serpentine owl)"
+  .cost 9100 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousSilverRavenFigurine
+  .name "figurine of wondrous power (silver raven)"
+  .cost 3800 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousGauntletsOfOgrePower
+  .name "gauntlets of ogre power"
+  .cost 4000 gp
+  .weight 4 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousGauntletOfRust
+  .name "gauntlet of rust"
+  .cost 11500 gp
+  .weight 2 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousGemOfBrightness
+  .name "gem of brightness"
+  .cost 15200 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousGemOfSeeing
+  .name "gem of seeing"
+  .cost 75000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousGlovesOfArrowSnaring
+  .name "gloves of arrow snaring"
+  .cost 4000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousGlovesOfDexterity2
+  .name "gloves of dexterity (+2)"
+  .cost 4000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousGlovesOfDexterity4
+  .name "gloves of dexterity (+4)"
+  .cost 16000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousGlovesOfDexterity6
+  .name "gloves of dexterity (+6)"
+  .cost 36000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousGloveOfStoring
+  .name "glove of storing"
+  .cost 2200 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousGlovesOfSwimmingAndClimbing
+  .name "gloves of swimming and climbing"
+  .cost 6000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousGogglesOfMinuteSeeing
+  .name "goggles of minute seeing"
+  .cost 1000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousGogglesOfNight
+  .name "goggles of night"
+  .cost 8000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHandOfGlory
+  .name "hand of glory"
+  .cost 7200 gp
+  .weight 2 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHandOfTheMage
+  .name "hand of the mage"
+  .cost 1000 gp
+  .weight 2 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHarpOfCharming
+  .name "harp of charming"
+  .cost 7500 gp
+  .weight 5 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHatOfDisguise
+  .name "hat of disguise"
+  .cost 2000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHeadbandOfIntellect2
+  .name "headband of intellect (+2)"
+  .cost 4000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHeadbandOfIntellect4
+  .name "headband of intellect (+4)"
+  .cost 16000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHeadbandOfIntellect6
+  .name "headband of intellect (+6)"
+  .cost 36000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHelmOfBrilliance
+  .name "helm of brilliance"
+  .cost 157000 gp
+  .weight 3 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHelmOfComprehendingLanguagesAndReadingMagic
+  .name "helm of comprehending languages and reading magic"
+  .cost 2600 gp
+  .weight 3 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHelmOfTelepathy
+  .name "helm of telepathy"
+  .cost 31000 gp
+  .weight 3 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHelmOfTeleportation
+  .name "helm of teleportation"
+  .cost 48600 gp
+  .weight 3 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHelmOfUnderwaterAction
+  .name "helm of underwater action"
+  .cost 24000 gp
+  .weight 3 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHewardsHandyHaversack
+  .name "Heward's handy haversack"
+  .cost 2000 gp
+  .weight 5 lb
+  .canBeIntelligent false
+  .sources sourcesCoreRules
+end
+
+wondrousHornOfBlasting
+  .name "horn of blasting"
+  .cost 12000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHornOfFog
+  .name "horn of fog"
+  .cost 2000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHornOfGoodnessEvil
+  .name "horn of goodness/evil"
+  .cost 6000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHornOfTheTritons
+  .name "horn of the tritons"
+  .cost 15100 gp
+  .weight 2 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousSilverHornOfValhalla
+  .name "horn of valhalla (silver)"
+  .cost 50000 gp
+  .weight 2 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBrassHornOfValhalla
+  .name "horn of valhalla (brass)"
+  .cost 50000 gp
+  .weight 2 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousBronzeHornOfValhalla
+  .name "horn of valhalla (bronze)"
+  .cost 50000 gp
+  .weight 2 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousIronHornOfValhalla
+  .name "horn of valhalla (iron)"
+  .cost 50000 gp
+  .weight 2 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHorseshoesOfSpeed
+  .name "horseshoes of speed"
+  .cost 1900 gp
+  .weight 3 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousHorseshoesOfAZephyr
+  .name "horseshoes of a zephyr"
+  .cost 3000 gp
+  .weight 1 lb
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousIncenseOfMeditation
+  .name "incense of meditation"
+  .cost 4900 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousDullGrayIounStone
+  .name "ioun stone (dull gray)"
+  .cost 25 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousDustyRoseIounStone
+  .name "ioun stone (dusty rose)"
+  .cost 4000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousClearIounStone
+  .name "ioun stone (clear)"
+  .cost 5000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousPaleBlueIounStone
+  .name "ioun stone (pale blue)"
+  .cost 8000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousScarletAndBlueIounStone
+  .name "ioun stone (scarlet and blue)"
+  .cost 8000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousIncandescentBlueIounStone
+  .name "ioun stone (incandescent blue)"
+  .cost 8000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousDeepRedIounStone
+  .name "ioun stone (deep red)"
+  .cost 8000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousPinkIounStone
+  .name "ioun stone (pink)"
+  .cost 8000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousPinkAndGreenIounStone
+  .name "ioun stone (pink and green)"
+  .cost 8000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousDarkBlueIounStone
+  .name "ioun stone (dark blue)"
+  .cost 8000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousVibrantPurpleIounStone
+  .name "ioun stone (vibrant purple)"
+  .cost 12000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousIridescentIounStone
+  .name "ioun stone (iridescent)"
+  .cost 15000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousPaleGreenIounStone
+  .name "ioun stone (pale green)"
+  .cost 20000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousPearlyWhiteIounStone
+  .name "ioun stone (pearly white)"
+  .cost 20000 gp
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousPaleLavenderIounStone
+  .name "ioun stone (pale lavender)"
+  .cost 20000 gp
+  .init rInitPaleLavenderIounStone
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousLavenderAndGreenIounStone
+  .name "ioun stone (lavender and green)"
+  .cost 40000 gp
+  .init rInitLavenderAndGreenIounStone
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousIronBandsOfBilarro
+  .name "iron bands of Bilarro"
+  .cost 26000 gp
+  .weight 1 lb
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousIronFlask
+  .name "iron flask"
+  .cost 170000 gp
+  .weight 1 lb
+  .init rInitIronFlask
+  .canBeIntelligent true
+  .sources sourcesCoreRules
+end
+
+wondrousKeoghtomsOintment
+  .name "Keoghtom's ointment"
+  .cost 4000 gp
+  .weight 1/2 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousLanternOfRevealing
+  .name "lantern of revealing"
+  .cost 30000 gp
+  .weight 2 lb
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousLensOfDetection
+  .name "lens of detection"
+  .cost 3500 gp
+  .weight 1 lb
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousLyreOfBuilding
+  .name "lyre of building"
+  .cost 13000 gp
+  .weight 5 lb
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousMantleOfSpellResistance
+  .name "mantle of spell resistance"
+  .cost 90000 gp
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfBodilyHealth1
+  .name "manual of bodily health (+1)"
+  .cost 27500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfBodilyHealth2
+  .name "manual of bodily health (+2)"
+  .cost 55000 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfBodilyHealth3
+  .name "manual of bodily health (+3)"
+  .cost 82500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfBodilyHealth4
+  .name "manual of bodily health (+4)"
+  .cost 110000 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfBodilyHealth5
+  .name "manual of bodily health (+5)"
+  .cost 137500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfGainfulExercise1
+  .name "manual of gainful exercise (+1)"
+  .cost 27500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfGainfulExercise2
+  .name "manual of gainful exercise (+2)"
+  .cost 55000 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfGainfulExercise3
+  .name "manual of gainful exercise (+3)"
+  .cost 82500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfGainfulExercise4
+  .name "manual of gainful exercise (+4)"
+  .cost 110000 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfGainfulExercise5
+  .name "manual of gainful exercise (+5)"
+  .cost 137500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfQuicknessOfAction1
+  .name "manual of quickness of action (+1)"
+  .cost 27500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfQuicknessOfAction2
+  .name "manual of quickness of action (+2)"
+  .cost 55000 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfQuicknessOfAction3
+  .name "manual of quickness of action (+3)"
+  .cost 82500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfQuicknessOfAction4
+  .name "manual of quickness of action (+4)"
+  .cost 110000 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousManualOfQuicknessOfAction5
+  .name "manual of quickness of action (+5)"
+  .cost 137500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousMaskOfTheSkull
+	.name "mask of the skull"
+	.cost 25000 gp
+	.weight 3 gp
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousMattockOfTheTitans
+	.name "mattock of the titans"
+	.cost 23000 gp
+	.weight 120 lb
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousMaulOfTheTitans
+	.name "maul of the titans"
+	.cost 25000 gp
+	.weight 160 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousMedallionOfThoughts
+	.name "medallion of thoughts"
+	.cost 12000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousMirrorOfLifeTrapping
+	.name "mirror of life trapping"
+	.cost 152000 gp
+	.weight 50 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousMirrorOfMentalProwess
+	.name "mirror of mental prowess"
+	.cost 175000 gp
+	.weight 40 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousMirrorOfOpposition
+	.name "mirror of opposition"
+	.cost 92000 gp
+	.weight 45 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousMurlyndsSpoon
+	.name "Murlynd's spoon"
+	.cost 5500 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousNecklaceOfAdaptation
+	.name "necklace of adaptation"
+	.cost 19000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousNecklaceOfFireballs1
+	.name "necklace of fireballs (type I)"
+	.cost 1675 gp
+	.weight 2 lb
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousNecklaceOfFireballs2
+	.name "necklace of fireballs (type II)"
+	.cost 2700 gp
+	.weight 2 lb
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousNecklaceOfFireballs3
+	.name "necklace of fireballs (type III)"
+	.cost 4350 gp
+	.weight 2 lb
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousNecklaceOfFireballs4
+	.name "necklace of fireballs (type IV)"
+	.cost 5400 gp
+	.weight 2 lb
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousNecklaceOfFireballs5
+	.name "necklace of fireballs (type V)"
+	.cost 6150 gp
+	.weight 2 lb
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousNecklaceOfFireballs6
+	.name "necklace of fireballs (type VI)"
+	.cost 8100 gp
+	.weight 2 lb
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousNecklaceOfFireballs7
+	.name "necklace of fireballs (type VII)"
+	.cost 9150 gp
+	.weight 2 lb
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousNecklaceOfPrayerBeads_Blessing
+	.name "necklace of prayer beads (blessing)"
+	.cost 500 gp
+	.init rInitNecklaceOfPrayerBeads
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousNecklaceOfPrayerBeads_Healing
+	.name "necklace of prayer beads (healing)"
+	.cost 10000 gp
+	.init rInitNecklaceOfPrayerBeads
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousNecklaceOfPrayerBeads_Karma
+	.name "necklace of prayer beads (karma)"
+	.cost 5000 gp
+	.init rInitNecklaceOfPrayerBeads
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousNecklaceOfPrayerBeads_Smiting
+	.name "necklace of prayer beads (smiting)"
+	.cost 15000 gp
+	.init rInitNecklaceOfPrayerBeads
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousNecklaceOfPrayerBeads_Summons
+	.name "necklace of prayer beads (summons)"
+	.cost 50000 gp
+	.init rInitNecklaceOfPrayerBeads
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousNecklaceOfPrayerBeads_WindWalking
+	.name "necklace of prayer beads (wind walking)"
+	.cost 30000 gp
+	.init rInitNecklaceOfPrayerBeads
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousNolzursMarvelousPigments
+	.name "Nolzur's marvelous pigments"
+	.cost 5500 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousOrbOfStorms
+	.name "orb of storms"
+	.cost 38000 gp
+	.weight 6 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPearlOfPower1
+	.name "pearl of power (1st level)"
+	.cost 1000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPearlOfPower2
+	.name "pearl of power (2nd level)"
+	.cost 4000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPearlOfPower3
+	.name "pearl of power (3rd level)"
+	.cost 9000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPearlOfPower4
+	.name "pearl of power (4th level)"
+	.cost 16000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPearlOfPower5
+	.name "pearl of power (5th level)"
+	.cost 25000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPearlOfPower6
+	.name "pearl of power (6th level)"
+	.cost 36000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPearlOfPower7
+	.name "pearl of power (7th level)"
+	.cost 49000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPearlOfPower8
+	.name "pearl of power (8th level)"
+	.cost 64000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPearlOfPower9
+	.name "pearl of power (9th level)"
+	.cost 81000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPearlOfPower2Spells
+	.name "pearl of power (two spells)"
+	.cost 70000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPearlOfTheSirines
+	.name "pearl of the sirines"
+	.cost 15300 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPeriaptOfHealth
+	.name "periapt of health"
+	.cost 7500 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPeriaptOfProofAgainstPoison
+	.name "periapt of proof against poison"
+	.cost 4000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPeriaptOfWisdom2
+	.name "periapt of wisdom (+2)"
+	.cost 4000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPeriaptOfWisdom4
+	.name "periapt of wisdom (+4)"
+	.cost 16000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPeriaptOfWisdom6
+	.name "periapt of wisdom (+6)"
+	.cost 36000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPeriaptOfWoundClosure
+	.name "periapt of wound closure"
+	.cost 15000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPhylacteryOfFaithfulness
+	.name "phylactery of faithfulness"
+	.cost 1000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPipesOfHaunting
+	.name "pipes of haunting"
+	.cost 6500 gp
+	.weight 3 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPipesOfPain
+	.name "pipes of pain"
+	.cost 12000 gp
+	.weight 3 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPipesOfTheSewers
+	.name "pipes of the sewers"
+	.cost 1150 gp
+	.weight 3 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPipesOfSounding
+	.name "pipes of sounding"
+	.cost 1800 gp
+	.weight 3 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousPortableHole
+	.name "portable hole"
+	.cost 14000 gp
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousQuaalsFeatherToken_Anchor
+	.name "Quaal's feather token (anchor)"
+	.cost 50 gp
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousQuaalsFeatherToken_Bird
+	.name "Quaal's feather token (bird)"
+	.cost 300 gp
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousQuaalsFeatherToken_Fan
+	.name "Quaal's feather token (fan)"
+	.cost 200 gp
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousQuaalsFeatherToken_SwanBoat
+	.name "Quaal's feather token (swan boat)"
+	.cost  450 gp
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousQuaalsFeatherToken_Tree
+	.name "Quaal's feather token (tree)"
+	.cost 100 gp
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousQuaalsFeatherToken_Whip
+	.name "Quaal's feather token (whip)"
+	.cost 500 gp
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousQuiverOfEhlonna
+	.name "quiver of Ehlonna"
+	.cost 1800 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousRingGates
+	.name "ring gates"
+	.cost 40000 gp
+	.weight 1 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousWhiteRobeOfTheArchmagi
+	.name "white robe of archmagi"
+	.cost 75000 gp
+	.weight 1 lb
+	.geAlignment geGood
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousGrayRobeOfTheArchmagi
+	.name "gray robe of archmagi"
+	.cost 75000 gp
+	.weight 1 lb
+	.geAlignment geNeutral
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousBlackRobeOfTheArchmagi
+	.name "black robe of archmagi"
+	.cost 75000 gp
+	.weight 1 lb
+	.geAlignment geEvil
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousRobeOfBlending
+	.name "robe of blending"
+	.cost 10000 gp
+	.weight 1 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousRobeOfEyes
+	.name "robe of eyes"
+	.cost 90000 gp
+	.weight 1 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousRobeOfScintillatingColors
+	.name "robe of scintillating colors"
+	.cost 27000 gp
+	.weight 1 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousRobeOfStars
+	.name "robe of stars"
+	.cost 58000 gp
+	.weight 1 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousRobeOfUsefulItems
+	.name "robe of useful items"
+	.cost 7000 gp
+	.weight 1 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousRopeOfClimbing
+	.name "rope of climbing"
+	.cost 3000 gp
+	.weight 3 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousRopeOfEntanglement
+	.name "rope of entanglement"
+	.cost 21000 gp
+	.weight 5 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousScabbardOfKeenEdges
+	.name "scabbard of keen edges"
+	.cost 15000 gp
+	.weight 1 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousScarabOfProtection
+	.name "scarab of protection"
+	.cost 38000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousGolembaneScarab_Flesh
+	.name "golembane scarab (flesh)"
+	.cost 800 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousGolembaneScarab_Clay
+	.name "golembane scarab (clay)"
+	.cost 1000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousGolembaneScarab_Stone
+	.name "golembane scarab (stone)"
+	.cost 1200 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousGolembaneScarab_Iron
+	.name "golembane scarab (iron)"
+	.cost 1600 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousGolembaneScarab_FleshClay
+	.name "golembane scarab (flesh and clay)"
+	.cost 1800 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousGolembaneScarab_Any
+	.name "golembane scarab (any)"
+	.cost 2500 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousSlippersOfSpiderClimbing
+	.name "slippers of spider climbing"
+	.cost 2000 gp
+	.weight 1/2 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousSovereignGlue
+	.name "sovereign glue"
+	.cost 2400 gp
+	.init rInitSovereignGlue
+	.canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousStoneOfAlarm
+	.name "stone of alarm"
+	.cost 1000 gp
+	.weight 2 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousStoneOfControllingEarthElementals
+	.name "stone of controlling earth elementals"
+	.cost 100000 gp
+	.weight 5 lb
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousStoneOfGoodLuck
+	.name "stone of good luck (luckstone)"
+	.cost 10000 gp
+	.canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousStoneHorse_Courser
+  .name "stone horse (courser)"
+  .cost 10000 gp
+  .weight 6000 lb
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousStoneHorse_Destrier
+  .name "stone horse (destrier)"
+  .cost 14800 gp
+  .weight 6000 lb
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousStoneSalve
+  .name "stone salve"
+  .cost 4000 gp
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTalismanOfTheSphere
+  .name "talisman of the sphere"
+  .cost 9000 gp
+  .weight 1 lb
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfClearThought1
+  .name "tome of clear thought (+1)"
+  .cost 27500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfClearThought2
+  .name "tome of clear thought (+2)"
+  .cost 55000 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfClearThought3
+  .name "tome of clear thought (+3)"
+  .cost 82500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfClearThought4
+  .name "tome of clear thought (+4)"
+  .cost 110000 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfClearThought5
+  .name "tome of clear thought (+5)"
+  .cost 137500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfLeadershipAndInfluence1
+  .name "tome of leadership and influence (+1)"
+  .cost 27500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfLeadershipAndInfluence2
+  .name "tome of leadership and influence (+2)"
+  .cost 55000 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfLeadershipAndInfluence3
+  .name "tome of leadership and influence (+3)"
+  .cost 82500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfLeadershipAndInfluence4
+  .name "tome of leadership and influence (+4)"
+  .cost 110000 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfLeadershipAndInfluence5
+  .name "tome of leadership and influence (+5)"
+  .cost 137500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfUnderstanding1
+  .name "tome of understanding (+1)"
+  .cost 27500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfUnderstanding2
+  .name "tome of understanding (+2)"
+  .cost 55000 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfUnderstanding3
+  .name "tome of understanding (+3)"
+  .cost 82500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfUnderstanding4
+  .name "tome of understanding (+4)"
+  .cost 110000 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousTomeOfUnderstanding5
+  .name "tome of understanding (+5)"
+  .cost 137500 gp
+  .weight 5 lb
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousUniversalSolvent
+  .name "universal solvent"
+  .cost 2000 gp
+  .canBeIntelligent no
+  .sources sourcesCoreRules
+end
+
+wondrousVestOfEscape
+  .name "vest of escape"
+  .cost 2000 gp
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousDruidsVestment
+  .name "druid's vestment"
+  .cost 5800 gp
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousVestmentsOfFaith
+  .name "vestments of faith"
+  .cost 76000 gp
+  .geAlignment geGood
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousWellOfManyWorlds
+  .name "well of many worlds"
+  .cost 82000 gp
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousWindFan
+  .name "wind fan"
+  .cost 5500 gp
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+wondrousWingsOfFlying
+  .name "wings of flying"
+  .cost 5500 gp
+  .weight 2 lb
+  .canBeIntelligent yes
+  .sources sourcesCoreRules
+end
+
+category groupHornsOfValhalla
+  [40] wondrousSilverHornOfValhalla
+  [35] wondrousBrassHornOfValhalla
+  [15] wondrousBronzeHornOfValhalla
+  [10] wondrousIronHornOfValhalla
+end
+
+category groupRobesOfTheArchmagi
+  [45] wondrousWhiteRobeOfTheArchmagi
+  [30] wondrousGrayRobeOfTheArchmagi
+  [25] wondrousBlackRobeOfTheArchmagi
+end
+
+template ( groupDeckOfCards ) { name }
+  aceOfHearts { "ace of hearts" }
+  kingOfHearts { "king of hearts" }
+  queenOfHearts { "queen of hearts" }
+  jackOfHearts { "jack of hearts" }
+  tenOfHearts { "ten of hearts" }
+  nineOfHearts { "nine of hearts" }
+  eightOfHearts { "eight of hearts" }
+  twoOfHearts { "two of hearts" }
+  aceOfDiamonds { "ace of diamonds" }
+  kingOfDiamonds { "king of diamonds" }
+  queenOfDiamonds { "queen of diamonds" }
+  jackOfDiamonds { "jack of diamonds" }
+  tenOfDiamonds { "ten of diamonds" }
+  nineOfDiamonds { "nine of diamonds" }
+  eightOfDiamonds { "eight of diamonds" }
+  twoOfDiamonds { "two of diamonds" }
+  aceOfSpades { "ace of spades" }
+  kingOfSpades { "king of spades" }
+  queenOfSpades { "queen of spades" }
+  jackOfSpades { "jack of spades" }
+  tenOfSpades { "ten of spades" }
+  nineOfSpades { "nine of spades" }
+  eightOfSpades { "eight of spades" }
+  twoOfSpades { "two of spades" }
+  aceOfClubs { "ace of clubs" }
+  kingOfClubs { "king of clubs" }
+  queenOfClubs { "queen of clubs" }
+  jackOfClubs { "jack of clubs" }
+  tenOfClubs { "ten of clubs" }
+  nineOfClubs { "nine of clubs" }
+  eightOfClubs { "eight of clubs" }
+  twoOfClubs { "two of clubs" }
+  joker1 { "joker #1" }
+  joker2 { "joker #2" }
+end
+
+category groupIronFlaskContents
+  [100] { .name "nothing" }
+  [  8] { .name "a large air elemental" }
+  [  8] { .name "an arrowhawk" }
+  [  8] { .name "a large earth elemental" }
+  [  8] { .name "a xorn" }
+  [  8] { .name "a large fire elemental" }
+  [  8] { .name "a salamander" }
+  [  8] { .name "a large water elemental" }
+  [  8] { .name "an adult tojanida" }
+  [  4] { .name "a red slaad" }
+  [  4] { .name "a lone formian taskmaster" }
+  [  2] { .name "a demon (vrock)" }
+  [  2] { .name "a demon (hezrou)" }
+  [  2] { .name "a demon (glabrezu)" }
+  [  2] { .name "a demon (succubus)" }
+  [  2] { .name "a demon (osyluth)" }
+  [  2] { .name "a demon (barbazu)" }
+  [  2] { .name "a demon (erinyes)" }
+  [  2] { .name "a demon (cornugon)" }
+  [  2] { .name "a celestial (avoral)" }
+  [  2] { .name "a celestial (ghaele)" }
+  [  2] { .name "a formian myrmarch" }
+  [  2] { .name "a blue slaad" }
+  [  2] { .name "a rakshasa" }
+  [  1] { .name "a demon (balor)" }
+  [  1] { .name "a demon (pit fiend)" }
+end
+
+category groupMinorWondrousItems
+  wondrousDullGrayIounStone
+  wondrousQuaalsFeatherToken_Anchor
+  wondrousEverburningTorch
+  wondrousQuaalsFeatherToken_Tree
+  wondrousQuaalsFeatherToken_Fan
+  wondrousDustOfTracelessness
+  wondrousQuaalsFeatherToken_Bird
+  wondrousQuaalsFeatherToken_SwanBoat
+  wondrousDustOfIllusion
+  wondrousNecklaceOfPrayerBeads_Blessing
+  wondrousQuaalsFeatherToken_Whip
+  wondrousGolembaneScarab_Flesh
+  wondrousGrayBagOfTricks
+  wondrousDustOfDryness
+  wondrousBracersOfArmor1
+  wondrousCloakOfResistance1
+  wondrousEyesOfTheEagle
+  wondrousGogglesOfMinuteSeeing
+  wondrousHandOfTheMage
+  wondrousPearlOfPower1
+  wondrousPhylacteryOfFaithfulness
+  wondrousGolembaneScarab_Clay
+  wondrousStoneOfAlarm
+  wondrousPipesOfTheSewers
+  wondrousGolembaneScarab_Stone
+  wondrousBroochOfShielding
+  wondrousGolembaneScarab_Iron
+  wondrousNecklaceOfFireballs1
+  wondrousPipesOfSounding
+  wondrousQuiverOfEhlonna
+  wondrousGolembaneScarab_FleshClay
+  wondrousHorseshoesOfSpeed
+  wondrousAmuletOfNaturalArmor1
+  wondrousBeadOfForce
+  wondrousBootsOfElvenkind
+  wondrousCloakOfElvenkind
+  wondrousHatOfDisguise
+  wondrousHewardsHandyHaversack
+  wondrousHornOfFog
+  wondrousSlippersOfSpiderClimbing
+  wondrousUniversalSolvent
+  wondrousVestOfEscape
+  wondrousDustOfAppearance
+  wondrousGloveOfStoring
+  wondrousSovereignGlue
+  wondrousCandleOfTruth
+  wondrousBagOfHolding1
+  wondrousBootsOfTheWinterlands
+  wondrousBootsOfStridingAndSpringing
+  wondrousGolembaneScarab_Any
+  wondrousHelmOfComprehendingLanguagesAndReadingMagic
+  wondrousNecklaceOfFireballs2
+  wondrousRustBagOfTricks
+  wondrousChimeOfOpening
+  wondrousRopeOfClimbing
+  wondrousHorseshoesOfAZephyr
+  wondrousDustOfDisappearance
+  wondrousLensOfDetection
+  wondrousSilverRavenFigurine
+  wondrousBracersOfArmor2
+  wondrousCloakOfResistance2
+  wondrousGlovesOfArrowSnaring
+  wondrousDustyRoseIounStone
+  wondrousKeoghtomsOintment
+  wondrousPearlOfPower2
+  wondrousPeriaptOfProofAgainstPoison
+  wondrousStoneSalve
+  wondrousGauntletsOfOgrePower
+  wondrousAmuletOfHealth2
+  wondrousGlovesOfDexterity2
+  wondrousHeadbandOfIntellect2
+  wondrousPeriaptOfWisdom2
+  wondrousCloakOfCharisma2
+  wondrousNecklaceOfFireballs3
+  wondrousCircletOfPersuasion
+  wondrousBraceletOfFriends
+  wondrousIncenseOfMeditation
+  wondrousBagOfHolding2
+  wondrousClearIounStone
+  wondrousNecklaceOfPrayerBeads_Karma
+  wondrousBracersOfArchery
+  wondrousEversmokingBottle
+  wondrousNecklaceOfFireballs4
+  wondrousMurlyndsSpoon
+  wondrousNolzursMarvelousPigments
+  wondrousWindFan
+  wondrousWingsOfFlying
+  wondrousDruidsVestment
+  wondrousCloakOfArachnida
+  wondrousGlovesOfSwimmingAndClimbing
+  wondrousHornOfGoodnessEvil
+  wondrousNecklaceOfFireballs5
+  wondrousTanBagOfTricks
+  wondrousMinorCircletOfBlasting
+  wondrousPipesOfHaunting
+  wondrousRobeOfUsefulItems
+  wondrousHandOfGlory
+  wondrousBagOfHolding3
+end
+
+category groupMediumWondrousItems
+  wondrousBootsOfLevitation
+  wondrousHarpOfCharming
+  wondrousPeriaptOfHealth
+  wondrousCandleOfInvocation
+  wondrousAmuletOfNaturalArmor2
+  wondrousBootsOfSpeed
+  wondrousDarkBlueIounStone
+  wondrousDeepRedIounStone
+  wondrousIncandescentBlueIounStone
+  wondrousPaleBlueIounStone
+  wondrousPinkIounStone
+  wondrousPinkAndGreenIounStone
+  wondrousScarletAndBlueIounStone
+  wondrousGogglesOfNight
+  wondrousNecklaceOfFireballs6
+  wondrousMonksBelt
+  wondrousBracersOfArmor3
+  wondrousCloakOfResistance3
+  wondrousDecanterOfEndlessWater
+  wondrousPearlOfPower3
+  wondrousTalismanOfTheSphere
+  wondrousSerpentineOwlFigurine
+  wondrousNecklaceOfFireballs7
+  wondrousDeckOfIllusions
+  wondrousBoccobsBlessedBook
+  wondrousBagOfHolding4
+  wondrousBronzeGriffonFigurine
+  wondrousEbonyFlyFigurine
+  wondrousNecklaceOfPrayerBeads_Healing
+  wondrousRobeOfBlending
+  wondrousStoneOfGoodLuck
+  wondrousStoneHorse_Courser
+  wondrousFoldingBoat
+  wondrousAmuletOfUndeadTurning
+  wondrousGauntletOfRust
+  wondrousWingedBoots
+  wondrousHornOfBlasting
+  wondrousVibrantPurpleIounStone
+  wondrousMedallionOfThoughts
+  wondrousPipesOfPain
+  wondrousCapeOfTheMountebank
+  wondrousLyreOfBuilding
+  wondrousPortableHole
+  wondrousBottleOfAir
+  wondrousStoneHorse_Destrier
+  wondrousBeltOfDwarvenkind
+  wondrousIridescentIounStone
+  wondrousNecklaceOfPrayerBeads_Smiting
+  wondrousPeriaptOfWoundClosure
+  wondrousScabbardOfKeenEdges
+  wondrousBroomOfFlying
+  wondrousHornOfTheTritons
+  wondrousGemOfBrightness
+  wondrousPearlOfTheSirines
+  wondrousOnyxDogFigurine
+  wondrousChimeOfInterruption
+  wondrousBracersOfArmor4
+  wondrousCloakOfResistance4
+  wondrousPearlOfPower4
+  wondrousBeltOfGiantStrength4
+  wondrousGlovesOfDexterity4
+  wondrousAmuletOfHealth4
+  wondrousHeadbandOfIntellect4
+  wondrousPeriaptOfWisdom4
+  wondrousCloakOfCharisma4
+  wondrousGoldenLionFigurines
+  wondrousMarbleElephantFigurine
+  wondrousAmuletOfNaturalArmor3
+  wondrousCarpetOfFlying3x5
+  wondrousNecklaceOfAdaptation
+  wondrousCloakOfTheMantaRay
+  wondrousPaleGreenIounStone
+  wondrousPaleLavenderIounStone
+  wondrousPearlyWhiteIounStone
+  wondrousIvoryGoatFigurines
+  wondrousRopeOfEntanglement
+  wondrousCubeOfFrostResistance
+  wondrousMattockOfTheTitans
+  wondrousMajorCircletOfBlasting
+  wondrousCloakOfTheBat
+  wondrousHelmOfUnderwaterAction
+  wondrousEyesOfDoom
+  wondrousMinorCloakOfDisplacement
+  wondrousCloakOfResistance5
+  wondrousMaskOfTheSkull
+  wondrousMaulofTheTitans
+  wondrousPearlOfPower5
+  wondrousBracersOfArmor5
+  wondrousDimensionalShackles
+  wondrousIronBandsOfBilarro
+  wondrousRobeOfScintillatingColors
+  wondrousManualOfBodilyHealth1
+  wondrousManualOfGainfulExercise1
+  wondrousManualOfQuicknessOfAction1
+  wondrousTomeOfClearThought1
+  wondrousTomeOfLeadershipAndInfluence1
+  wondrousTomeOfUnderstanding1
+  wondrousObsidianSteedFigurine
+  wondrousCarpetOfFlying4x6
+end
+
+category groupMajorWondrousItems
+  [ 2] wondrousLanternOfRevealing
+  [ 2] wondrousNecklaceOfPrayerBeads_WindWalking
+  [ 2] wondrousDrumsOfPanic
+  [ 2] wondrousHelmOfTelepathy
+  [ 2] wondrousAmuletOfNaturalArmor4
+  [ 2] wondrousAmuletOfProofAgainstDetectionAndLocation
+  [ 2] wondrousBracersOfArmor6
+       wondrousBeltOfGiantStrength6
+       wondrousGlovesOfDexterity6
+       wondrousAmuletOfHealth6
+       wondrousHeadbandOfIntellect6
+       wondrousPeriaptOfWisdom6
+       wondrousCloakOfCharisma6
+  [ 2] wondrousPearlOfPower6
+  [ 2] wondrousOrbOfStorms
+  [ 2] wondrousScarabOfProtection
+  [ 2] wondrousLavenderAndGreenIounStone
+  [ 2] wondrousRingGates
+       wondrousCarpetOfFlying5x7
+       wondrousCrystalBall
+       wondrousHelmOfTeleportation
+       wondrousBracersofArmor7
+       wondrousPearlOfPower7
+       wondrousAmuletOfNaturalArmor5
+       wondrousMajorCloakOfDisplacement
+       wondrousCrystalBallWithSeeInvisibility
+       groupHornsOfValhalla
+       wondrousNecklaceOfPrayerBeads_Summons
+       wondrousCrystalBallWithDetectThoughts
+       wondrousCloakOfEtherealness
+       wondrousCarpetOfFlying6x9
+       wondrousDaernsInstantFortress
+       wondrousManualOfBodilyHealth2
+       wondrousManualOfGainfulExercise2
+       wondrousManualOfQuicknessOfAction2
+       wondrousTomeOfClearThought2
+       wondrousTomeOfLeadershipAndInfluence2
+       wondrousTomeOfUnderstanding2
+       wondrousEyesofCharming
+       wondrousRobeOfStars
+       wondrousDarkskull
+       wondrousCubeOfForce
+       wondrousBracersOfArmor8
+       wondrousPearlOfPower8
+       wondrousCrystalBallWithTelepathy
+       wondrousPearlOfPower2Spells
+       wondrousGemOfSeeing
+       groupRobesOfTheArchmagi
+       wondrousVestmentsOfFaith
+       wondrousAmuletOfThePlanes
+       wondrousCrystalBallWithTrueSeeing
+       wondrousPearlofPower9
+       wondrousWellOfManyWorlds
+       wondrousManualOfBodilyHealth3
+       wondrousManualOfGainfulExercise3
+       wondrousManualOfQuicknessOfAction3
+       wondrousTomeOfClearThought3
+       wondrousTomeOfLeadershipAndInfluence3
+       wondrousTomeOfUnderstanding3
+       wondrousMantleOfSpellResistance
+       wondrousRobeOfEyes
+       wondrousMirrorOfOpposition
+       wondrousChaosDiamond
+       wondrousEyesOfPetrification
+       wondrousBowlOfCommandingWaterElementals
+       wondrousBrazierOfCommandingFireElementals
+       wondrousCenserOfControllingAirElementals
+       wondrousStoneOfControllingEarthElementals
+       wondrousManualOfBodilyHealth4
+       wondrousManualOfGainfulExercise4
+       wondrousManualOfQuicknessOfAction4
+       wondrousTomeOfClearThought4
+       wondrousTomeOfLeadershipAndInfluence4
+       wondrousTomeOfUnderstanding4
+       wondrousApparatusOfKwalish
+       wondrousManualOfBodilyHealth5
+       wondrousManualOfGainfulExercise5
+       wondrousManualOfQuicknessOfAction5
+       wondrousTomeOfClearThought5
+       wondrousTomeOfLeadershipAndInfluence5
+       wondrousTomeOfUnderstanding5
+       wondrousEfreetiBottle
+       wondrousMirrorOfLifeTrapping
+       wondrousCubicGate
+       wondrousHelmOfBrilliance
+       wondrousIronFlask
+       wondrousMirrorOfMentalProwess
+end
+
+
+rule rInitCandleOfInvocation( item )
+  item.geAlignment = any( groupGEAlignmentTypes );
+  item.lcAlignment = any( groupLCAlignmentTypes );
+  item.name = item.name + " (" + rGetAlignmentName( item ) + ")";
+  rInitCandleOfInvocation = item;
+end
+
+rule rInitDeckOfIllusions( item )
+  if Random(100) ge 10 then
+    item.name = item.name + " (complete)";
+  else
+    deck = duplicate( groupDeckOfCards );
+    missing = Random(1d20);
+    item.name = item.name + " (missing ";
+    while missing gt 0 do
+      c = any( deck );
+      remove( deck, c );
+      item.name = item.name + c.name;
+      missing = missing - 1;
+      if missing gt 0 then
+        item.name = item.name + ", ";
+      end
+    end
+    item.name = item.name + ")";
+  end
+  rInitDeckOfIllusions = item;
+end
+
+rule rInitPaleLavenderIounStone( item )
+  levelsLeft = Random(1d20);
+  item.name = item.name + " (" + levelsLeft + " levels remaining)";
+  rInitPaleLavenderIounStone = item;
+end
+
+rule rInitLavenderAndGreenIounStone( item )
+  levelsLeft = Random(1d50);
+  item.name = item.name + " (" + levelsLeft + " levels remaining)";
+  rInitLavenderAndGreenIounStone = item;
+end
+
+rule rInitIronFlask( item )
+  i = any( groupIronFlaskContents );
+  item.name = item.name + " (contains " + i.name + ")";
+  rInitIronFlask = item;
+end
+
+rule rInitNecklaceOfPrayerBeads( item )
+  beads = Random(1d6) + 24;
+  item.name = item.name + " (" + beads + " semiprecious stones)";
+  rInitNecklaceOfPrayerBeads = item;
+end
+
+rule rInitSovereignGlue( item )
+  i = Random(1d8) - 1;
+  if i lt 1 then
+    i = 0;
+  end
+  item.cost = item.cost * i;
+  item.name = item.name + " (" + i + " ounces)";
+  rInitSovereignGlue = item;
+end
+
+
+rule rSelectWondrousItem( itemMagnitude options )
+  case itemMagnitude
+    is "minor" then
+      c = groupMinorWondrousItems;
+    is "medium" then
+      c = groupMediumWondrousItems;
+    is "major" then
+      c = groupMajorWondrousItems;
+    default
+      exit rule;
+  end
+
+  y = rCascadeLookupWithOptions( c, options );
+  if y ne null then
+    item = rNewInstanceOf( y );
+
+		if item.canBeIntelligent and rSafeGet( options, "optAlwaysIntelligent", false ) then
+			rEmbueIntelligenceUpon( item, options );
+		else
+			d = Random(1d100);
+			if d eq 1 then
+				if item.canBeIntelligent then
+					rEmbueIntelligenceUpon( item, options );
+				end
+			elseif d le 31 then
+				item = rEnsureAttributeExists( item, "itemQualities", atCategory );
+				x = NewThing();
+				x.description = "something provides a clue to its function";
+				add( item.itemQualities, x );
+			end
+		end
+    
+    item.treasureType = "wondrous item";
+
+    if rItemDeservesCurse( item, options ) then
+      rCurseItem( item, options );
+    end
+  end
+
+  rSelectWondrousItem = item;
+end
+

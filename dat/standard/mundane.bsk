@@ -1,0 +1,206 @@
+template ( groupMundaneItems ) { name cost sources }
+  miAlchemistsFire { "alchemist's fire"  20 gp sourcesCoreRules }
+  miAcid { "acid flask(s)"  10 gp sourcesCoreRules }
+  miSmokestick { "smokestick(s)"  20 gp sourcesCoreRules }
+  miHolyWater { "holy water flask(s)"  25 gp sourcesCoreRules }
+  miThunderstone { "thunderstone(s)"  30 gp sourcesCoreRules }
+  miAntitoxin { "antitoxin dose(s)"  50 gp sourcesCoreRules }
+  miTanglefootBag { "tanglefoot bag(s)"  50 gp sourcesCoreRules }
+end
+
+
+category groupMundaneItemSizes1
+  [10] small
+  [90] medium
+end
+
+category groupMundaneItemSizes2
+  [50] small
+  [50] medium
+end
+
+category groupMundaneMightyCompositeShortbows
+  [60] weaponMightyCompositeShortbow1
+  [40] weaponMightyCompositeShortbow2
+end
+
+category groupMundaneMightyCompositeLongbows
+  [45] weaponMightyCompositeLongbow1
+  [30] weaponMightyCompositeLongbow2
+  [15] weaponMightyCompositeLongbow3
+  [10] weaponMightyCompositeLongbow4
+end
+
+category groupCommonMeleeWeapons
+  [ 4] weaponDagger
+  [10] weaponGreataxe
+  [10] weaponGreatsword
+  [ 4] weaponKama
+  [13] weaponLongsword
+  [ 3] weaponLightMace
+  [ 5] weaponHeavyMace
+  [ 4] weaponNunchaku
+  [ 3] weaponQuarterstaff
+  [ 4] weaponRapier
+  [ 5] weaponScimitar
+  [ 4] weaponShortspear
+  [ 4] weaponSiangham
+  [10] weaponBastardSword
+  [ 5] weaponShortSword
+  [11] weaponDwarvenWaraxe
+end
+
+category groupUncommonWeapons
+  [ 3] weaponOrcDoubleAxe
+  [ 4] weaponBattleaxe
+  [ 3] weaponSpikedChain
+  [ 2] weaponClub
+  [ 4] weaponHandCrossbow
+  [ 3] weaponRepeatingCrossbow
+  [ 2] weaponPunchingDagger
+  [ 2] weaponFalchion
+  [ 3] weaponDireFlail
+  [ 5] weaponHeavyFlail
+  [ 4] weaponLightFlail
+  [ 2] weaponGauntlet
+  [ 2] weaponSpikedGauntlet
+  [ 2] weaponGlaive
+  [ 2] weaponGreatclub
+  [ 2] weaponGuisarme
+  [ 3] weaponHalberd
+  [ 3] weaponHalfspear
+  [ 3] weaponGnomeHookedHammer
+  [ 2] weaponLightHammer
+  [ 2] weaponHandaxe
+  [ 3] weaponKukri
+  [ 2] weaponHeavyLance
+  [ 2] weaponLightLance
+  [ 2] weaponLongspear
+  [ 3] weaponMorningstar
+  [ 2] weaponNet
+  [ 2] weaponHeavyPick
+  [ 2] weaponLightPick
+  [ 2] weaponRanseur
+  [ 2] weaponSap
+  [ 2] weaponScythe
+  [ 2] weaponShuriken
+  [ 2] weaponSickle
+  [ 2] weaponTwoBladedSword
+  [ 2] weaponTrident
+  [ 3] weaponDwarvenUrgosh
+  [ 3] weaponWarhammer
+  [ 3] weaponWhip
+end
+
+category groupCommonRangedWeapons
+  [ 5] weaponArrow
+  [ 3] weaponCrossbowBolt
+  [ 2] weaponSlingBullet
+  [ 5] weaponThrowingAxe
+  [10] weaponHeavyCrossbow
+  [10] weaponLightCrossbow
+  [ 4] weaponDart
+  [ 2] weaponJavelin
+  [ 5] weaponShortbow
+  [ 5] weaponCompositeShortbow
+  [ 5] weaponMightyCompositeShortbow1
+  [ 5] weaponMightyCompositeShortbow2
+  [ 4] weaponSling
+  [10] weaponLongbow
+  [ 5] weaponCompositeLongbow
+  [ 5] weaponMightyCompositeLongbow1
+  [ 5] weaponMightyCompositeLongbow2
+  [ 5] weaponMightyCompositeLongbow3
+  [ 5] weaponMightyCompositeLongbow4
+end
+
+category groupMundaneItemTable
+  [ 5] { .magnitude 1d4 .type miAlchemistsFire }
+  [ 5] { .magnitude 2d4 .type miAcid }
+  [ 2] { .magnitude 1d4 .type miSmokestick }
+  [ 6] { .magnitude 1d4 .type miHolyWater }
+  [ 2] { .magnitude 1d4 .type miThunderstone }
+  [ 2] { .magnitude 1   .type armorChainShirt .subtable groupMundaneItemSizes1 }
+  [ 5] { .magnitude 1d4 .type miAntitoxin }
+  [ 2] { .magnitude 1d4 .type miTanglefootBag }
+  [ 5] { .magnitude 1   .type armorStuddedLeather .bonuses ( masterworkArmor ) .subtable groupMundaneItemSizes2 }
+  [ 5] { .magnitude 1   .subtable groupMundaneMightyCompositeShortbows }
+  [ 4] { .magnitude 1   .type armorBreastplate }
+  [ 5] { .magnitude 1   .type armorBandedMail }
+  [18] { .magnitude 1   .bonuses ( masterworkWeapon ) .subtable groupCommonMeleeWeapons }
+  [ 2] { .magnitude 1   .bonuses ( masterworkWeapon ) .subtable groupUncommonWeapons }
+  [ 5] { .magnitude 1   .bonuses ( masterworkWeapon ) .subtable groupCommonRangedWeapons }
+  [10] { .magnitude 1   .subtable groupMundaneMightyCompositeLongbows }
+  [10] { .magnitude 1   .type armorHalfPlate }
+  [ 7] { .magnitude 1   .type armorFullPlate }
+end
+
+
+rule rConfigureMundaneItem( a options )
+  if has( a, "type" ) then
+    if not rThingMatchesCriteria( a.type, options ) then
+      exit rule;
+    end
+    mi = rNewInstanceOf( a.type );
+    if has( a, "subtable" ) then
+      mi.size = rNewInstanceOf( any( a.subtable ) );
+    end
+  elseif has( a, "subtable" ) then
+    x = rCascadeLookupWithOptions( a.subtable, options );
+    if x eq null then
+      exit rule;
+    end
+    mi = rNewInstanceOf( x );
+  end
+  
+  if has( a, "bonuses" ) then
+    mi = rEnsureAttributeExists( mi, "bonuses", atCategory );
+    mi.bonuses = union( mi.bonuses, a.bonuses );
+
+    seenMasterwork = false;
+
+    for t in a.bonuses do
+      if has( t, "name" ) then
+        mi.name = t.name + " " + mi.name;
+        if t eq masterworkArmor and not seenMasterwork then
+          mi.cost = mi.cost + masterworkArmor.cost;
+          seenMasterwork = true;
+        elseif t eq masterworkWeapon and not seenMasterwork then
+          mi.cost = mi.cost + masterworkWeapon.cost;
+          if has( mi, "secondaryDamage" ) then
+            mi.cost = mi.cost + masterworkWeapon.cost;
+          end
+          seenMasterwork = true;
+        end
+      end
+    end
+  end
+  if mi.cost eq null then
+    mi.cost = SetUnits( 0, "gp" );
+  end
+
+  mi.magnitude = Eval( a.magnitude );
+  mi.cost = mi.cost * mi.magnitude;
+  mi.treasureType = "mundane";
+
+  rConfigureMundaneItem = mi;
+end
+
+
+rule rLookupMundaneItem( options )
+  c = duplicate( groupMundaneItemTable );
+
+  do
+    if Empty( c ) then
+      exit rule;
+    end
+
+    mi = any( c );
+    remove( c, mi );
+
+    mi = rConfigureMundaneItem( mi, options ); 
+  loop while mi eq null;
+
+  rLookupMundaneItem = mi;
+end
+

@@ -1,0 +1,105 @@
+grammar_group_monstrous_names1
+  .left "[S]"
+  .productions (
+    [1] { .production "[M]" }
+    [1] { .production "[F]" }
+  )
+end
+
+grammar_group_monstrous_names2
+  .left "[F]"
+  .productions (
+    [1] { .production "[M]" }
+  )
+end
+
+grammar_group_monstrous_names3
+  .left "[M]"
+  .productions (
+    [1] { .production "[pre][suf]" }
+  )
+end
+
+grammar_group_monstrous_names4
+  .left "[suf]"
+  .productions (
+    [1] { .production "lix" }
+    [1] { .production "grah" }
+    [1] { .production "mar" }
+    [1] { .production "sz" }
+    [1] { .production "rg" }
+    [1] { .production "rk" }
+    [1] { .production "kr" }
+    [1] { .production "rachk" }
+    [1] { .production "rah" }
+    [1] { .production "guul" }
+    [1] { .production "gh" }
+    [1] { .production "rrl" }
+    [1] { .production "shk" }
+    [1] { .production "rak" }
+    [1] { .production "hl" }
+    [1] { .production "rrn" }
+    [1] { .production "zzk" }
+    [1] { .production "blam" }
+    [1] { .production "war" }
+    [1] { .production "gah" }
+    [1] { .production "brah" }
+    [1] { .production "krah" }
+    [1] { .production "trah" }
+  )
+end
+
+grammar_group_monstrous_names5
+  .left "[pre]"
+  .productions (
+    [1] { .production "angi[optmid]" }
+    [1] { .production "ar[optmid]" }
+    [1] { .production "ho[optmid]" }
+    [1] { .production "ra[optmid]" }
+    [1] { .production "k'[mid]" }
+    [1] { .production "g'[mid]" }
+    [1] { .production "t'[mid]" }
+    [1] { .production "b'[mid]" }
+    [1] { .production "d'[mid]" }
+    [8] { .production "[mid]" }
+    [1] { .production "oor[optmid]" }
+    [1] { .production "wo[optmid]" }
+    [1] { .production "rez[optmid]" }
+  )
+end
+
+grammar_group_monstrous_names6
+  .left "[optmid]"
+  .productions (
+    [3] { .production "" }
+    [1] { .production "-[mid]" }
+  )
+end
+
+grammar_group_monstrous_names7
+  .left "[mid]"
+  .productions (
+    [1] { .production "nya" }
+    [1] { .production "zo" }
+    [1] { .production "gy" }
+    [1] { .production "fra" }
+    [1] { .production "saa" }
+    [1] { .production "ban" }
+    [1] { .production "gor" }
+    [1] { .production "bruu" }
+    [1] { .production "caa" }
+  )
+end
+
+grammar_monstrous_names
+  .startSymbol "[S]"
+  .groups (
+    grammar_group_monstrous_names1
+    grammar_group_monstrous_names2
+    grammar_group_monstrous_names3
+    grammar_group_monstrous_names4
+    grammar_group_monstrous_names5
+    grammar_group_monstrous_names6
+    grammar_group_monstrous_names7
+  )
+end

@@ -1,0 +1,35 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKInvalidateValue</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKInvalidateValue</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+
+<PRE>
+void BSKInvalidateValue( BSKValue* value );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>value</i> - the value to invalidate.
+  </UL>
+
+  <P>
+
+  <B>Description:</B>
+  Invalidates the value.  If the value is one of the VT_ALLOCATED types,
+  then the 'datum' field of the value is also deallocated.  Either way,
+  'value' will be VT_NULL when this function exits.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

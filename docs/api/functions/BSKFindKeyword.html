@@ -1,0 +1,39 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKFindKeyword</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKFindKeyword</H1>
+
+  <B>Module:</B> <A HREF="../modules/bsktokens.html">BSKTokens</A><BR>
+
+<PRE>
+BSKTokenId BSKFindKeyword( const BSKCHAR* ident );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>ident</i> - the string to search for.
+  </UL>
+
+  <B>Returns:</B> the token type (one of the <A HREF="../const/constants.html">TT_xxx constants</A>
+  if the string is a keyword, or <A HREF="../const/constants.html#TT_IDENTIFIER">TT_IDENTIFIER</A>
+  if is not.
+
+  <P>
+
+  <B>Description:</B>
+  Searches the array of keywords to see if the given string is one of
+  them.  The search is done case-insensitively.  This function is used
+  mainly by the <A HREF="../modules/bsklexer.html">BSKLexer</A> object.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

@@ -1,0 +1,158 @@
+grammar_group_elf_names1
+  .left "[S]"
+  .productions (
+    [1] { .production "[M]" }
+    [1] { .production "[F]" }
+  )
+end
+
+grammar_group_elf_names2
+  .left "[M]"
+  .productions (
+    [1] { .production "[mpre][msuf]" }
+    [1] { .production "[mpre][min][msuf]" }
+  )
+end
+
+grammar_group_elf_names3
+  .left "[mpre]"
+  .productions (
+    [1] { .production "ara" }
+    [1] { .production "a" }
+    [1] { .production "enia" }
+    [1] { .production "he" }
+    [1] { .production "himo" }
+    [1] { .production "ivelli" }
+    [1] { .production "lauci" }
+    [1] { .production "quari" }
+    [1] { .production "thami" }
+    [1] { .production "thari" }
+  )
+end
+
+grammar_group_elf_names4
+  .left "[min]"
+  .productions (
+    [1] { .production "v" }
+    [1] { .production "m" }
+    [1] { .production "l" }
+  )
+end
+
+grammar_group_elf_names5
+  .left "[msuf]"
+  .productions (
+    [1] { .production "il" }
+    [1] { .production "ust" }
+    [1] { .production "is" }
+    [1] { .production "ian" }
+    [1] { .production "o" }
+    [1] { .production "os" }
+    [1] { .production "on" }
+    [1] { .production "or" }
+    [1] { .production "ol" }
+  )
+end
+
+grammar_group_elf_names6
+  .left "[M']"
+  .productions (
+    [1] { .production "Aramil" }
+    [1] { .production "Aust" }
+    [1] { .production "Enialis" }
+    [1] { .production "Heian" }
+    [1] { .production "Himo" }
+    [1] { .production "Ivellios" }
+    [1] { .production "Laucian" }
+    [1] { .production "Quarion" }
+    [1] { .production "Thamior" }
+    [1] { .production "Tharivol" }
+  )
+end
+
+grammar_group_elf_names7
+  .left "[F]"
+  .productions (
+    [1] { .production "[fpre][fsuf]" }
+    [1] { .production "[fpre][fin][fsuf]" }
+  )
+end
+
+grammar_group_elf_names8
+  .left "[fpre]"
+  .productions (
+    [1] { .production "ana" }
+    [1] { .production "anti" }
+    [1] { .production "drusi" }
+    [1] { .production "felo" }
+    [1] { .production "iele" }
+    [1] { .production "li" }
+    [1] { .production "qilla" }
+    [1] { .production "sila" }
+    [1] { .production "vala" }
+    [1] { .production "xana" }
+  )
+end
+
+grammar_group_elf_names9
+  .left "[fsuf]"
+  .productions (
+    [1] { .production "nna" }
+    [1] { .production "nua" }
+    [1] { .production "lia" }
+    [1] { .production "sial" }
+    [1] { .production "nia" }
+    [1] { .production "the" }
+    [1] { .production "qui" }
+    [1] { .production "nthe" }
+    [1] { .production "phia" }
+  )
+end
+
+grammar_group_elf_names10
+  .left "[fin]"
+  .productions (
+    [1] { .production "stria" }
+    [1] { .production "nu" }
+    [1] { .production "si" }
+    [1] { .production "ni" }
+    [1] { .production "la" }
+    [1] { .production "qui" }
+    [1] { .production "qua" }
+    [1] { .production "nthe" }
+    [1] { .production "phi" }
+  )
+end
+
+grammar_group_elf_names11
+  .left "[F']"
+  .productions (
+    [1] { .production "Anastrianna" }
+    [1] { .production "Antinua" }
+    [1] { .production "Drusilia" }
+    [1] { .production "Felosial" }
+    [1] { .production "Ielenia" }
+    [1] { .production "Lia" }
+    [1] { .production "Qillathe" }
+    [1] { .production "Silaqui" }
+    [1] { .production "Valanthe" }
+    [1] { .production "Xanaphia" }
+  )
+end
+
+grammar_elf_names
+  .startSymbol "[S]"
+  .groups (
+    grammar_group_elf_names1
+    grammar_group_elf_names2
+    grammar_group_elf_names3
+    grammar_group_elf_names4
+    grammar_group_elf_names5
+    grammar_group_elf_names6
+    grammar_group_elf_names7
+    grammar_group_elf_names8
+    grammar_group_elf_names9
+    grammar_group_elf_names10
+    grammar_group_elf_names11
+  )
+end

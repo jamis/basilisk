@@ -1,0 +1,46 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKAddAttributeDef</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKAddAttributeDef</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskatdef.html">BSKAttributeDef</A><BR>
+
+<PRE>
+BSKAttributeDef* BSKAddAttributeDef( BSKAttributeDef* list,
+                                     BSKUI32 id,
+                                     BSKUI8 type );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>list</i> - the list of BSKAttributeDef objects to add a new
+        attribute definition to.
+    <LI><i>id</i> - the id of the new BSKAttributeDef object.
+    <LI><i>type</i> - the type of the new BSKAttributeDef object.
+  </UL>
+
+  <B>Returns:</B>  The new (or existing) BSKAttributeDef object, or
+  0.
+
+  <P>
+
+  <B>Description:</B>
+  Creates a new BSKAttributeDef object with the given id and type, and
+  adds it to the front of the given list.  The new object is returned.
+  If an attribute definition already exists in the list with the given
+  id and type, that object is returned and no new object is added.  If
+  the attribute already exists with the same id but a different type,
+  this function returns 0.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

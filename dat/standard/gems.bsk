@@ -1,0 +1,125 @@
+forward rule rInstantiateGem
+
+template { name }
+  bandedAgate { "banded agate" }
+  eyeAgate { "eye agate" }
+  mossAgate { "moss agate" }
+  azurite { "azurite" }
+  blueQuartz { "blue quartz" }
+  hematite { "hematite" }
+  lapisLazuli { "lapis lazuli" }
+  malachite { "malachite" }
+  obsidian { "obsidian" }
+  rhodochrosite { "rhodochrosite" }
+  tigerEyeTurquoise { "tiger-eye turquoise" }
+  freshwaterPearl { "freshwater (irregular) pearl" }
+  bloodstone { "bloodstone" }
+  carnelian { "carnelian" }
+  chalcedony { "chalcedony" }
+  chrysoprase { "chrysoprase" }
+  citrine { "citrine" }
+  iolite { "iolite" }
+  jasper { "jasper" }
+  moonstone { "moonstone" }
+  onyx { "onyx" }
+  peridot { "peridot" }
+  rockCrystal { "rock crystal" }
+  sard { "sard" }
+  sardonyx { "sardonyx" }
+  roseQuartz { "rose quartz" }
+  smokyQuartz { "smoky quartz" }
+  starRoseQuartz { "star rose quartz" }
+  zircon { "zircon" }
+  amber { "amber" }
+  amethyst { "amethyst" }
+  chrysoberyl { "chrysoberyl" }
+  coral { "coral" }
+  redGarnet { "red garnet" }
+  brownGreenGarnet { "brown-green garnet" }
+  jade { "jade" }
+  jet { "jet" }
+  whitePearl { "white pearl" }
+  goldenPearl { "golden pearl" }
+  pinkPearl { "pink pearl" }
+  silverPearl { "silver pearl" }
+  redSpinel { "red spinel" }
+  redBrownSpinel { "red-brown spinel" }
+  deepGreenSpinel { "deep green spinel" }
+  tourmaline { "tourmaline" }
+  alexandrite { "alexandrite" }
+  aquamarine { "aquamarine" }
+  violetGarnet { "violet garnet" }
+  blackPearl { "black pearl" }
+  deepBlueSpinel { "deep blue spinel" }
+  goldenYellowTopaz { "golden yellow topaz" }
+  emerald { "emerald" }
+  whiteOpal { "white opal" }
+  blackOpal { "black opal" }
+  fireOpal { "fire opal" }
+  blueSapphire { "blue sapphire" }
+  fieryYellowCorundum { "fiery yellow corundum" }
+  richPurpleCorundum { "rich purple corundum" }
+  blueStarSapphire { "blue star sapphire" }
+  blackStarSapphire { "black star sapphire" }
+  starRuby { "star ruby" }
+  clearBGEmerald { "clearest bright green emerald" }
+  blueWhiteDiamond { "blue-white diamond" }
+  canaryDiamond { "canary diamond" }
+  pinkDiamond { "pink diamond" }
+  brownDiamond { "brown diamond" }
+  blueDiamond { "blue diamond" }
+  jacinth { "jacinth" }
+end
+
+category group10gpGems
+  bandedAgate eyeAgate mossAgate azurite blueQuartz hematite lapisLazuli
+  malachite obsidian rhodochrosite tigerEyeTurquoise freshwaterPearl
+end
+
+category group50gpGems
+  bloodstone carnelian chalcedony chrysoprase citrine iolite jasper moonstone
+  onyx peridot rockCrystal sard sardonyx roseQuartz smokyQuartz starRoseQuartz
+  zircon
+end
+
+category group100gpGems
+  amber amethyst chrysoberyl coral redGarnet brownGreenGarnet jade jet
+  whitePearl goldenPearl pinkPearl silverPearl redSpinel redBrownSpinel
+  deepGreenSpinel tourmaline
+end
+
+category group500gpGems
+  alexandrite aquamarine violetGarnet blackPearl deepBlueSpinel 
+  goldenYellowTopaz
+end
+
+category group1000gpGems
+  emerald whiteOpal blackOpal fireOpal blueSapphire fieryYellowCorundum
+  richPurpleCorundum blueStarSapphire blackStarSapphire starRuby
+end
+
+category group5000gpGems
+  clearBGEmerald blueWhiteDiamond canaryDiamond pinkDiamond brownDiamond
+  blueDiamond jacinth
+end
+
+category groupGemLookup
+  [25] { .cost 4d4 gp      .subtable group10gpGems   .init rInstantiateGem }
+  [25] { .cost 2d4*10 gp   .subtable group50gpGems   .init rInstantiateGem }
+  [20] { .cost 4d4*10 gp   .subtable group100gpGems  .init rInstantiateGem }
+  [20] { .cost 2d4*100 gp  .subtable group500gpGems  .init rInstantiateGem }
+  [ 9] { .cost 4d4*100 gp  .subtable group1000gpGems .init rInstantiateGem }
+  [ 1] { .cost 2d4*1000 gp .subtable group5000gpGems .init rInstantiateGem }
+end
+
+rule rLookupGem( options )
+  gem = rNewInstanceOf( Any( groupGemLookup ) );
+  rLookupGem = gem;
+end
+
+rule rInstantiateGem( gem )
+  gem.cost = rJitterValue( Eval(gem.cost), 0.1 );
+  gem.name = Any( gem.subtable ).name;
+  gem.treasureType = "gem";
+  rInstantiateGem = gem;
+end

@@ -1,0 +1,9 @@
+template ( groupAllRaces ) { name sources }
+  raceHuman { "human" sourcesCoreRules }
+  raceElf { "elf" sourcesCoreRules }
+  raceHalfElf { "half-elf" sourcesCoreRules }
+  raceDwarf { "dwarf" sourcesCoreRules }
+  raceHalfing { "halfling" sourcesCoreRules }
+  raceHalfOrc { "half-orc" sourcesCoreRules }
+  raceGnome { "gnome" sourcesCoreRules }
+end

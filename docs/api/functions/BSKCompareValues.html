@@ -1,0 +1,40 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKCompareValues</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKCompareValues</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskvalue.html">BSKValue</A><BR>
+
+<PRE>
+BSKBOOL BSKCompareValues( BSKValue* v1, BSKValue* v2 );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>v1</i> - the first value to compare.
+    <LI><i>v2</i> - the second value to compare.
+  </UL>
+
+  <B>Returns:</B>  BSKTRUE if v1 == v2, BSKFALSE otherwise.
+
+  <P>
+
+  <B>Description:</B>
+  Tests to see if the two values are literally equivalent.  This is
+  done by actually comparing the memory buffers of the two BSKValues.  If
+  equivalence is dependant upon more values that simply the contents
+  of the buffer (comparing two BSKThings, for instance), do not use this
+  function.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

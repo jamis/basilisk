@@ -1,0 +1,49 @@
+// ------------------------------------------------------------------------
+// ** units.bsk **
+//
+// Place all unit definitions in this file.
+//
+// A "unit" is a description that may be applied to a number.  For instance,
+// when you say that you weigh 150 pounds, "pounds" is a unit that describes
+// "150".
+//
+// See the list below for more examples of units.
+//
+// Author: Jamis Buck (minam@rpgplanet.com), 22 Dec 2000
+// ------------------------------------------------------------------------
+
+unit second;
+unit seconds = 1 second;
+unit round = 6 seconds;
+unit rounds = 1 round;
+unit minute = 60 seconds;
+unit minutes = 1 minute;
+unit hour = 60 minutes;
+unit hours = 1 hour;
+unit day = 24 hours;
+unit days = 1 day;
+unit week = 7 days;
+unit weeks = 1 week;
+unit months = 4 weeks;
+unit years = 12 months;
+
+unit lb;
+
+unit inches;
+unit ft = 12 inches;
+unit yard = 3 ft;
+unit mile = 5280 ft;
+
+unit m  = 3.28 ft;
+unit cm = 1/100 m;
+unit km = 1000 m;
+
+unit sq_ft;
+unit sq_yard = 9 sq_ft;
+
+unit cu_ft;
+
+unit cp;
+unit sp = 10 cp;
+unit gp = 10 sp;
+unit pp = 10 gp;

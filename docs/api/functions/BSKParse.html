@@ -1,0 +1,53 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKParse</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKParse</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskparse.html">BSKParse</A><BR>
+
+<PRE>
+BSKI32 BSKParse( BSKStream* stream,
+                 BSKDatabase* db,
+                 BSKCHAR* searchPaths,
+                 BSKParserErrorHandler err,
+                 BSKNOTYPE userData );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>stream</i> - the stream to parse.
+    <LI><i>db</i> - the database that will recieve all parsed entities.
+    <LI><i>searchPaths</i> - the null-delimited list of paths that the
+        parser should search for included files.
+    <LI><i>err</i> - the error-handling function to call if an error
+        is detected (may be null).
+    <LI><i>userData</i> - an application-specific cookie that will be
+        passed to the error handler.
+  </UL>
+
+  <B>Returns:</B>  -1 if an error was detected, or 0 if the parse
+  was successful.
+
+  <P>
+
+  <B>Description:</B>
+  Parses the given stream, putting all parsed data and logic into the
+  given database object.  Errors are handled by calling the given
+  error handler, and passing the given userData to it.
+  The searchPaths parameter is a list of paths to search
+  for files that are 'included'.  Each path must be terminated by a
+  a null byte ('\0') and the list itself must be terminated by two
+  such bytes.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

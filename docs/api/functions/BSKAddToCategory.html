@@ -1,0 +1,47 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKAddToCategory</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKAddToCategory</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskcategory.html">BSKCategory</A><BR>
+
+<PRE>
+void BSKAddToCategory( BSKCategory* category, 
+                       BSKUI16 weight, 
+                       BSKNOTYPE newMember );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>category</i> - the category to add the item to.
+    <LI><i>weight</i> - the integer weight of the new item, which determines
+        its likelihood of being randomly chosen relative to the other items
+        in the category. (See <A HREF="../modules/bskcategory.html">BSKCategory</A>).
+    <LI><i>newMember</i> - the new member being added.  This must be either null (0),
+        or a pointer to a <A HREF="../modules/bskthing.html">BSKThing</A>,
+        <A HREF="../modules/bskrule.html">BSKRule</A>, or
+        <A HREF="../modules/bskcategory.html">BSKCategory</A> object.
+  </UL>
+
+  <P>
+
+  <B>Description:</B>
+  Adds the given member to the given category with the given weight.
+  'newMember' must either be null (0), or it must point to a
+  <A HREF="../modules/bskthing.html">BSKThing</A>, <A HREF="../modules/bskrule.html">BSKRule</A>,
+  or <A HREF="../modules/bskcategory.html">BSKCategory</A> object.  The object
+  is added to the END of the category contents list, contrary to the behavior
+  of most other lists in Basilisk (which add the new item to the front of the list).
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

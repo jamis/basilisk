@@ -1,0 +1,94 @@
+template { type aspect magnitude }
+  AC1  { btArmor asAC +1 }
+  AC2  { btArmor asAC +2 }
+  AC3  { btArmor asAC +3 }
+  AC4  { btArmor asAC +4 }
+  AC5  { btArmor asAC +5 }
+  AC6  { btArmor asAC +6 }
+  AC7  { btArmor asAC +7 }
+  AC8  { btArmor asAC +8 }
+  SAC1 { btShield asAC +1 }
+  SAC2 { btShield asAC +2 }
+end
+
+template ( groupArmor ) { name cost bonuses maxDexBonus armorCheckPenalty arcaneSpellFailure speedModifier weight sources }
+  armorPadded { "padded armor"  5 gp  ( AC1 )  +8  0  5  1  10 lb sourcesCoreRules }
+  armorLeather { "leather armor"  10 gp  ( AC2 )  +6  0  10  1  15 lb sourcesCoreRules }
+  armorStuddedLeather { "studded leather armor"  25 gp  ( AC3 )  +5  -1  15  1  20 lb sourcesCoreRules }
+  armorChainShirt { "chain shirt"  100 gp  ( AC4 )  +4  -2  20  1  25 lb sourcesCoreRules }
+  armorHide { "hide armor"  15 gp  ( AC3 )  +4  -3  20  2/3  25 lb sourcesCoreRules }
+  armorScaleMail { "scale mail"  50 gp  ( AC4 )  +3  -4  25  2/3  30 lb sourcesCoreRules }
+  armorChainMail { "chain mail"  150 gp ( AC5 ) +2  -5  30  2/3  40 lb sourcesCoreRules }
+  armorBreastplate { "breastplate"  200 gp ( AC5 ) +3  -4  25  2/3  30 lb sourcesCoreRules }
+  armorSplintMail { "splint mail"  200 gp  ( AC6 )  0  -7  40  2/3  45 lb sourcesCoreRules }
+  armorBandedMail { "banded mail"  250 gp  ( AC6 )  +1  -6  35  2/3  35 lb sourcesCoreRules }
+  armorHalfPlate { "half-plate"  600 gp  ( AC7 )  0  -7  40  2/3  50 lb sourcesCoreRules }
+  armorFullPlate { "full plate"  1500 gp  ( AC8 )  +1  -6  35  2/3  50 lb sourcesCoreRules }
+
+  armorMithralShirt { "mithril shirt"  1100 gp  ( AC4 )  +6  0  10  1  10 lb sourcesCoreRules }
+  armorElvenChain { "elven chain"  4150 gp ( AC5 ) +4  -2  20  1  20 lb sourcesCoreRules }
+  armorDwarvenPlate { "dwarven plate"  10500 gp  ( AC8 )  +3  -4  25  2/3  25 lb sourcesCoreRules }
+end
+
+
+template ( groupShield ) { name cost bonuses armorCheckPenalty arcaneSpellFailure weight sources }
+  shieldBuckler { "buckler"  15 gp  ( SAC1 )  -1  5  5 lb sourcesCoreRules }
+  shieldSmallWooden { "small wooden shield"  3 gp  ( SAC1 )  -1  5  5 lb sourcesCoreRules }
+  shieldSmallSteel { "small steel shield"  9 gp  ( SAC1 )  -1  5  6 lb sourcesCoreRules }
+  shieldLargeWooden { "large wooden shield"  7 gp  ( SAC2 )  -2  15  10 lb sourcesCoreRules }
+  shieldLargeSteel { "large steel shield"  20 gp  ( SAC2 )  -2  15  15 lb sourcesCoreRules }
+  shieldTower { "tower shield"   30 gp  $  -10  50  45 lb sourcesCoreRules }
+
+  shieldDarkwood { "darkwood shield"  257 gp  ( SAC2 )  0  15  5 lb sourcesCoreRules }
+  shieldLargeMithral { "mithral large shield"  1020 gp  ( SAC2 )  0  5  5 lb sourcesCoreRules }
+end
+
+
+armorAdamantineBreastplate ( groupArmor )
+  .name "adamantine breastplate"
+  .cost 5350 gp
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +2 } AC5 )
+  .maxDexBonus +3
+  .armorCheckPenalty -4
+  .arcaneSpellFailure 25
+  .speedModifier 2/3
+  .weight 30 lb
+  .sources sourcesCoreRules
+end
+
+
+shieldAdamantine ( groupShield )
+  .name "adamantine shield"
+  .cost 2170 gp
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +1 } SAC2 )
+  .armorCheckPenalty -2
+  .arcaneSpellFailure 15
+  .weight 15 lb
+  .sources sourcesCoreRules
+end
+
+
+category groupLightArmor
+  armorPadded armorLeather armorStuddedLeather armorChainShirt
+  armorMithralShirt armorElvenChain
+end
+
+
+category groupMediumArmor
+  armorHide armorScaleMail armorChainMail armorBreastplate armorDwarvenPlate
+  armorAdamantineBreastplate
+end
+
+
+category groupHeavyArmor
+  armorSplintMail armorBandedMail armorHalfPlate armorFullPlate
+end
+
+category groupSmallShield
+  shieldBuckler shieldSmallWooden shieldSmallSteel
+end
+
+category groupLargeShield
+  shieldLargeWooden shieldLargeSteel shieldTower
+  shieldDarkwood shieldLargeMithral shieldAdamantine
+end

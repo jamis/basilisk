@@ -1,0 +1,7 @@
+BASILISK_VERSION=1.0
+
+all:
+	package basilisk.${BASILISK_VERSION}_full all
+	package basilisk.${BASILISK_VERSION}_src src
+	package basilisk.${BASILISK_VERSION}_data data
+	package basilisk.${BASILISK_VERSION}_docs doc

@@ -1,0 +1,43 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKFindThingInCategory</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKFindThingInCategory</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskcategory.html">BSKCategory</A><BR>
+
+<PRE>
+BSKThing* BSKFindThingInCategory( BSKCategory* category,
+                                  BSKUI32 attrId,
+                                  BSKValue* value );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>category</i> - the category to search.
+    <LI><i>attrId</i> - the id of the attribute that a matching BSKThing
+        will have.
+    <LI><i>value</i> - if non-null, the value that a matching BSKThing's
+        attribute will have.
+  </UL>
+
+  <B>Returns:</B> the BSKThing object found, if any, otherwise 0.
+
+  <P>
+
+  <B>Description:</B>
+  Searches the given category for a BSKThing member that has an
+  attribute with the given id.  If the 'value' parameter is not null,
+  the value of the attribute must also match (via the
+  <A HREF="BSKCompareValues.html">BSKCompareValues</A> function).
+
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

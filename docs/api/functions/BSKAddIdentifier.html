@@ -1,0 +1,39 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk 1.0: BSKAddIdentifier</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+  <H1>BSKAddIdentifier</H1>
+
+  <B>Module:</B> <A HREF="../modules/bskidtbl.html">BSKIdentifierTable</A><BR>
+
+<PRE>
+BSKI32 BSKAddIdentifier( BSKIdentifierTable* table,
+                         BSKCHAR* identifier );
+</PRE>
+
+  <B>Inputs:</B>
+  <UL>
+    <LI><i>table</i> - the table to add the identifier to.
+    <LI><i>identifier</i> - the identifier string to add.
+  </UL>
+
+  <B>Returns:</B>  The unique integer identifier for the given string.
+
+  <P>
+
+  <B>Description:</B>
+  Searches the given table for the given identifier, and if it is not
+  found it is added to the table.  Either way, the numeric id of the
+  identifier is returned.
+
+  <P>
+
+  <A HREF="../index.html">Return to the API</A><BR>
+  <A HREF="index.html">Return to the function listing</A>
+  <HR>
+  <I>Last updated on 9 Feb 2001 by Jamis Buck (minam@rpgplanet.com)
+  </BODY>
+
+</HTML>

@@ -1,0 +1,8 @@
+template ( groupAllSkills ) { name affectedThing untrained ACPenaltyApplies subskills sources }
+  skillKnowledgeHearthWisdom ( groupKnowledge ) { "knowledge (hearth wisdom)"  astIntelligence  no  no  $  sourcesSwordAndFist }
+  skillKnowledgeLiterature ( groupKnowledge ) { "knowledge (literature)"  astIntelligence  no  no  $  sourcesSwordAndFist }
+  skillKnowledgeMathematics ( groupKnowledge ) { "knowledge (mathematics)"  astIntelligence  no  no  $  sourcesSwordAndFist }
+  skillKnowledgePolitics ( groupKnowledge ) { "knowledge (politics)"  astIntelligence  no  no  $  sourcesSwordAndFist }
+  skillKnowledgeStreetwise ( groupKnowledge ) { "knowledge (streetwise)"  astIntelligence  no  no  $  sourcesSwordAndFist }
+  skillKnowledgeWar ( groupKnowledge ) { "knowledge (war)"  astIntelligence  no  no  $  sourcesSwordAndFist }
+end

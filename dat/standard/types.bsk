@@ -1,0 +1,152 @@
+template ( groupAttributeTypes ) { name }
+  atString { "string" }
+  atNumber { "number" }
+  atBoolean { "boolean" }
+  atThing { "thing" }
+  atCategory { "category" }
+  atRule { "rule" }
+end
+
+
+template ( groupAbilityScoreTypes ) { name }
+  astStrength { "strength" }
+  astDexterity { "dexterity" }
+  astConstitution { "constitution" }
+  astIntelligence { "intelligence" }
+  astWisdom { "wisdom" }
+  astCharisma { "charisma" }
+end
+
+
+template ( groupSavingThrowTypes ) { name affectedThing }
+  sttFortitude { "fortitude" astConstitution }
+  sttReflex { "reflex" astDexterity }
+  sttWill { "will" astWisdom }
+end
+
+
+template ( groupGEAlignmentTypes ) { name }
+  geGood { "good" }
+  geNeutral { "neutral" }
+  geEvil { "evil" }
+end
+
+
+template ( groupLCAlignmentTypes ) { name }
+  lcLawful { "lawful" }
+  lcNeutral { "neutral" }
+  lcChaotic { "chaotic" }
+end
+
+
+template ( groupGenders ) { name }
+  genderMale { "male" }
+  genderFemale { "female" }
+end
+
+
+template ( groupElementTypes ) { name }
+  etFire { "fire" }
+  etCold { "cold" }
+  etElectricity { "electricity" }
+  etSonic { "sonic" }
+  etAcid { "acid" }
+end
+
+
+template ( groupSpecialAttributeTypes ) { name }
+  satSpellEffect { "spell effect" }
+  satDamageReduction { "damage reduction" }
+  satRegeneration { "regeneration" }
+  satSpellResistance { "spell resistance" }
+end
+
+
+template ( groupActivationTypes ) { name }
+  atSpellCompletion { "spell completion" }
+  atSpellTrigger { "spell trigger" }
+  atCommandWord { "command word" }
+  atContinuous { "continous" }
+  atUse { "use" }
+  atWill { "will" }
+end
+
+
+template ( groupPrerequisiteTypes ) { name }
+  ptMinimumAbilityScore { "minimum ability score" }
+  ptFeat { "feat" }
+  ptSkill { "skill" }
+  ptMinimumBaseAttack { "minimum base attack bonus" }
+  ptWeaponProficiency { "proficient with weapon" }
+  ptMinimumCharacterLevel { "minimum character level" }
+  ptMinimumSpellcasterLevel { "minimum spellcaster level" }
+  ptIsClericOrPaladin { "is cleric or paladin" }
+  ptIsWizard { "is wizard" }
+  ptIsFighter { "is fighter" }
+  ptMinimumClassLevel { "minimum class level" }
+end
+
+
+template ( groupMonsterTypes ) { name }
+  mtAberration { "aberration" }
+  mtAnimal { "animal" }
+  mtBeast { "beast" }
+  mtConstruct { "construct" }
+  mtDragon { "dragon" }
+  mtElemental { "elemental" }
+  mtFey { "fey" }
+  mtGiant { "giant" }
+  mtHumanoid { "humanoid" }
+  mtMagicalBeast { "magical beast" }
+  mtMonstrousHumanoid { "monstrous humanoid" }
+  mtOoze { "ooze" }
+  mtOutsider { "outsider" }
+  mtPlant { "plant" }
+  mtShapechanger { "shapechanger" }
+  mtUndead { "undead" }
+  mtVermin { "vermin" }
+end
+
+
+template ( groupHumanoidSubtypes ) { name }
+  hstAquatic { "aquatic humanoid" }
+  hstDwarf { "dwarf" }
+  hstElf { "elf" }
+  hstGnoll { "gnoll" }
+  hstGnome { "gnome" }
+  hstGoblinoid { "goblinoid" }
+  hstHalfling { "halfling" }
+  hstOrc { "orc" }
+  hstReptilian { "reptilian humanoid" }
+end
+
+
+template ( groupOutsiderSubtypes ) { name lcAlignment geAlignment }
+  ostChaotic { "chaotic outsider" lcChaotic $ }
+  ostEvil { "evil outsider" $ geEvil }
+  ostGood { "good outsider" $ geGood }
+  ostLawful { "lawful outsider" lcLawful $ }
+end
+
+
+template ( groupConditionTypes ) { name }
+  ctIsRace { "is of race" }
+  ctIsClass { "is of class" }
+  ctIsAlignment { "is of alignment" }
+end
+
+
+template ( groupSpaceType ) { name }
+  gstCap { "cap" }
+  gstEyes { "eyes" }
+  gstCloak { "cloak" }
+  gstNeck { "neck" }
+  gstArmor { "armor" }
+  gstRobe { "robe" }
+  gstShirt { "shirt" }
+  gstBracelet { "bracelet" }
+  gstGloves { "gloves" }
+  gstRing { "ring" }
+  gstBelt { "belt" }
+  bstFeet { "feet" }
+end

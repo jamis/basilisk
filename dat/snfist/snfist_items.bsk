@@ -1,0 +1,593 @@
+/* ------------------------------------------------------------------------ *
+ * Material in this file is taken from the "Sword and Fist" guidebook by
+ * Jason Carl.
+ *
+ * Contents are arranged as follows:
+ *  1) weapons
+ *  2) weapon groupings and categories
+ *  3) random selection tables
+ *  4) special shield abilities
+ *  5) special weapon abilities
+ *  6) specific weapons
+ *  7) potions
+ *  8) rings
+ *  9) wondrous items
+ * ------------------------------------------------------------------------ */
+
+template ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
+  weapon2BallBolas { "2-ball bolas" 5 gp 1d4 20 2 2 lb small sourcesSwordAndFist }
+  weaponAlchemistsArrow { "alchemist's arrow" 75 gp $ $ $ 1/5 lb tiny sourcesSwordAndFist }
+  weaponBladedGauntlet { "bladed gauntlet" 30 gp 1d6 17 2 4 lb small sourcesSwordAndFist }
+  weaponBodkin { "bodkin"  2 gp  1d4  19  2  2 lb  tiny sourcesSwordAndFist }
+  weaponBokken { "bokken"  5 gp  1d10  20  2  10 lb  large sourcesSwordAndFist }
+  weaponBroadsword { "broadsword"  15 gp  1d8  19  2  4 lb  medium sourcesSwordAndFist }
+  weaponCatONineTails { "cat-o'-nine-tails" 25 gp 1d6 19 2 3 lb small sourcesSwordAndFist }
+  weaponChainAndDagger { "chain-and-dagger" 4 gp 1d4 19 2 4 lb medium sourcesSwordAndFist }
+  weaponClaymore { "claymore"  50 gp  2d6  19  2  15 lb  large sourcesSwordAndFist }
+  weaponCutlass { "cutlass"  15 gp  1d6  18  2  4 lb  medium sourcesSwordAndFist }
+  weaponDaikyuBow { "daikyu bow"  75 gp  1d8  20  3  3 lb large sourcesSwordAndFist }
+  weaponDirk { "dirk"  2 gp  1d4  19  2  2 lb  tiny sourcesSwordAndFist }
+  weaponDuom { "duom"  20 gp 1d8 20 3 8 lb large sourcesSwordAndFist }
+  weaponFlamberge { "flamberge"  50 gp  2d6  19  2  15 lb  large sourcesSwordAndFist }
+  weaponFukimiBari { "fukimi-bari (mouth darts)" 1 gp 1 20 2 1/10 lb tiny sourcesSwordAndFist }
+  weaponFullblade { "fullblade" 100 gp 1d12 19 2 23 lb large sourcesSwordAndFist }
+  weaponGladius { "gladius"  10 gp  1d6  19  2  3 lb  small sourcesSwordAndFist }
+  weaponGnomeBattlepick { "gnome battlepick" 10 gp 1d6 20 4 5 lb small sourcesSwordAndFist }
+  weaponGreatCrossbow { "great crossbow" 100 gp 1d12 19 2 15 lb large sourcesSwordAndFist }
+  weaponGyrspike { "gyrspike" 90 gp 1d8 19 2 20 lb large sourcesSwordAndFist }
+  weaponHankyuBow { "hankyu bow"  30 gp  1d6  20  3  2 lb  medium sourcesSwordAndFist }
+  weaponHalflingSkiprock { "halfling skiprock" 3 gp 1d3 20 2 1/4 lb tiny sourcesSwordAndFist }
+  weaponHarpoon { "harpoon" 15 gp 1d10 20 2 10 lb large sourcesSwordAndFist }
+  weaponJambiya { "jambiya"  2 gp  1d4  19  2  2 lb  tiny sourcesSwordAndFist }
+  weaponJitte { "jitte"  2 gp  1d4  19  2  2 lb  tiny sourcesSwordAndFist }
+  weaponJoStick { "jo stick"  0 gp  1d6  20  2  4 lb  large sourcesSwordAndFist }
+  weaponKatana { "katana"  35 gp  1d10  19  2  10 lb  medium sourcesSwordAndFist }
+  weaponMainGauche { "main-gauche"  2 gp  1d4  19  2  2 lb  tiny sourcesSwordAndFist }
+  weaponManti { "manti" 15 gp 1d8 20 3 9lb large sourcesSwordAndFist }
+  weaponMercurialGreatsword { "mercurial greatsword" 600 gp 2d8 20 4 17 lb large sourcesSwordAndFist }
+  weaponMercurialLongsword { "mercurial longsword" 400 gp 1d10 20 3 6 lb medium sourcesSwordAndFist }
+  weaponMightyWhip1 { "mighty whip (+1 Str bonus)" 200 gp $ 20 2 3 lb small sourcesSwordAndFist }
+  weaponMightyWhip2 { "mighty whip (+2 Str bonus)" 300 gp $ 20 2 4 lb small sourcesSwordAndFist }
+  weaponMightyWhip3 { "mighty whip (+3 Str bonus)" 400 gp $ 20 2 5 lb small sourcesSwordAndFist }
+  weaponMightyWhip4 { "mighty whip (+4 Str bonus)" 500 gp $ 20 2 6 lb small sourcesSwordAndFist }
+  weaponMightyWhipDagger1 { "mighty whip dagger (+1 Str bonus)" 225 gp 1d6 19 2 4 lb small sourcesSwordAndFist }
+  weaponMightyWhipDagger2 { "mighty whip dagger (+2 Str bonus)" 325 gp 1d6 19 2 5 lb small sourcesSwordAndFist }
+  weaponMightyWhipDagger3 { "mighty whip dagger (+3 Str bonus)" 425 gp 1d6 19 2 6 lb small sourcesSwordAndFist }
+  weaponMightyWhipDagger4 { "mighty whip dagger (+4 Str bonus)" 525 gp 1d6 19 2 7 lb small sourcesSwordAndFist }
+  weaponNagimaki { "nagimaki"  10 gp  2d4  20  3  15 lb  large sourcesSwordAndFist }
+  weaponNinjaTo { "ninja-to"  10 gp  1d6  19  2  3 lb  small sourcesSwordAndFist }
+  weaponNoStick { "no stick"  0 gp  1d6  20  2  3 lb  medium sourcesSwordAndFist }
+  weaponOrcShotput { "orc shotput" 10 gp 2d6 19 3 15 lb large sourcesSwordAndFist }
+  weaponSaber { "saber"  15 gp  1d6  18  2  4 lb  medium sourcesSwordAndFist }
+  weaponSai { "sai"  2 gp  1d4  19  2  2 lb  tiny sourcesSwordAndFist }
+  weaponScramasax { "scramasax (sax)"  10 gp  1d6  19  2  3 lb  small sourcesSwordAndFist }
+  weaponSickle { "sickle"  2 gp  1d6  20  2  2 lb  small sourcesSwordAndFist }
+  weaponSpinningJavelin { "spinning javelin" 2 gp 1d8 19 2 2 lb medium sourcesSwordAndFist }
+  weaponSpringLoadedGauntlet { "spring-loaded gauntlet" 200 gp 1d4 20 2 4 lb medium sourcesSwordAndFist }
+  weaponStiletto { "stiletto"  2 gp  1d4  19  2  2 lb  tiny sourcesSwordAndFist }
+  weaponStumpKnife { "stump knife" 8 gp 1d4 19 2 2 lb tiny sourcesSwordAndFist }
+  weaponTanto { "tanto"  2 gp  1d4  19  2  2 lb  tiny sourcesSwordAndFist }
+  weaponThreeSectionStaff { "three-section staff" 4 gp 1d8 20 3 8 lb large sourcesSwordAndFist }
+  weaponTripleDagger { "tripple dagger" 10 gp 1d4 19 2 1 lb tiny sourcesSwordAndFist }
+  weaponTumblingBolt { "tumbling bolt" 50 gp $ $ $ 1/5 lb tiny sourcesSwordAndFist }
+  weaponWakizashi { "wakizashi"  10 gp  1d6  19  2  3 lb  small sourcesSwordAndFist }
+  weaponWardCestus { "ward cestus" 10 gp $ $ $ 4 lb $ sourcesSwordAndFist }
+  weaponWarFan { "war fan" 30 gp 1d6 20 3 3 lb small sourcesSwordAndFist }
+  weaponWhipDagger { "whip dagger" 25 gp 1d6 19 2 3 lb small sourcesSwordAndFist }
+  weaponYari { "yari"  1 gp  1d6  20  2  2 lb  medium sourcesSwordAndFist }
+end
+
+
+weapon2BallBolas
+  .rangeIncrement 10 ft
+end
+
+weaponDaikyuBow
+  .rangeIncrement 100 ft
+end
+
+weaponFukimiBari
+  .rangeIncrement 10 ft
+end
+
+weaponGreatCrossbow
+  .rangeIncrement 150 ft
+end
+
+weaponGyrspike
+  .secondaryDamage 1d8
+end
+
+weaponHalflingSkiprock
+  .rangeIncrement 10 ft
+end
+
+weaponHankyuBow
+  .rangeIncrement 60 ft
+end
+
+weaponHarpoon
+  .rangeIncrement 30 ft
+end
+
+weaponJoStick
+  .secondaryDamage 1d6
+end
+
+weaponMightyWhip1
+  .secondaryDamage 1d2
+  .bonuses ( { .type btUnnamed .aspect asDamage .maximumAbilityBonus { .type astStrength .magnitude +1 } } )
+end
+
+weaponMightyWhip2
+  .secondaryDamage 1d2
+  .bonuses ( { .type btUnnamed .aspect asDamage .maximumAbilityBonus { .type astStrength .magnitude +2 } } )
+end
+
+weaponMightyWhip3
+  .secondaryDamage 1d2
+  .bonuses ( { .type btUnnamed .aspect asDamage .maximumAbilityBonus { .type astStrength .magnitude +3 } } )
+end
+
+weaponMightyWhip4
+  .secondaryDamage 1d2
+  .bonuses ( { .type btUnnamed .aspect asDamage .maximumAbilityBonus { .type astStrength .magnitude +4 } } )
+end
+
+weaponNagimaki
+  .hasReach yes
+end
+
+weaponOrcShotput
+  .rangeIncrement 10 ft
+end
+
+weaponSpinningJavelin
+  .rangeIncrement 50 ft
+end
+
+weaponSpringLoadedGauntlet
+  .rangeIncrement 20 ft
+end
+
+weaponYari
+  .rangeIncrement 30 ft
+end
+
+
+category groupSimpleWeapon
+  weaponDirk weaponBodkin weaponStiletto
+end
+
+category groupMartialWeapon
+  weaponClaymore weaponGladius weaponScramasax weaponFlamberge weaponBroadsword weaponSaber
+  weaponCutlass weaponSickle
+end
+
+category groupExoticWeapon
+  weaponWardCestus weaponStumpKnife weaponTripleDagger weaponGnomeBattlepick weaponBladedGauntlet
+  weaponWarFan weaponChainAndDagger weaponMercurialLongsword weaponDuom weaponFullblade
+  weaponGyrspike weaponManti weaponMercurialGreatsword weaponThreeSectionStaff
+  weaponFukimiBari weaponHalflingSkiprock weapon2BallBolas weaponSpinningJavelin weaponSpringLoadedGauntlet
+  weaponGreatCrossbow weaponHarpoon weaponOrcShotput weaponMightyWhip1 weaponMightyWhip2 weaponMightyWhip3
+  weaponMightyWhip4 weaponWhipDagger weaponMightyWhipDagger1 weaponMightyWhipDagger2 weaponMightyWhipDagger3
+  weaponMightyWhipDagger3 weaponKatana weaponWakizashi weaponNinjaTo weaponDaikyuBow weaponHankyuBow
+  weaponNagimaki weaponYari weaponBokken weaponNoStick weaponJoStick weaponSai weaponTanto weaponJitte
+  weaponMainGauche weaponJambiya weaponCatONineTails
+end
+
+category groupMeleeWeapon
+  weaponWardCestus weaponStumpKnife weaponTripleDagger weaponGnomeBattlepick weaponBladedGauntlet
+  weaponWarFan weaponChainAndDagger weaponMercurialLongsword weaponDuom weaponFullblade
+  weaponGyrspike weaponManti weaponMercurialGreatsword weaponThreeSectionStaff weaponKatana
+  weaponClaymore weaponWakizashi weaponGladius weaponScramasax weaponNinjaTo weaponFlamberge
+  weaponBroadsword weaponNagimaki weaponYari weaponSpinningJavelin weaponBokken weaponNoStick
+  weaponJoStick weaponSaber weaponCutlass weaponSai weaponTanto weaponJitte weaponMainGauche
+  weaponDirk weaponBodkin weaponJambiya weaponStiletto weaponSickle weaponCatONineTails
+end
+
+category groupRangedWeapon
+  weaponFukimiBari weaponHalflingSkiprock weapon2BallBolas weaponSpinningJavelin weaponSpringLoadedGauntlet
+  weaponGreatCrossbow weaponHarpoon weaponOrcShotput weaponDaikyuBow weaponHankyuBow weaponYari
+end
+
+category groupThrownWeapon
+  weaponHalflingSkiprock weapon2BallBolas weaponSpinningJavelin weaponHarpoon weaponOrcShotput
+  weaponYari
+end
+
+category groupPropelledWeapon
+  weaponFukimiBari weaponSpringLoadedGauntlet weaponGreatCrossbow weaponDaikyuBow weaponHankyuBow
+end
+
+category groupBludgeoningWeapon
+  weaponGyrspike weaponThreeSectionStaff weaponHalflingSkiprock weapon2BallBolas weaponOrcShotput
+  weaponBokken weaponNoStick weaponJoStick
+end
+
+category groupPiercingWeapon
+  weaponStumpKnife weaponTripleDagger weaponGnomeBattlepick weaponChainAndDagger weaponDuom
+  weaponManti weaponFukimiBari weaponSpinningJavelin weaponSpringLoadedGauntlet
+  weaponGreatCrossbow weaponHarpoon weaponWakizashi weaponGladius weaponScramasax weaponNinjaTo
+  weaponDaikyuBow weaponHankyuBow weaponRanseur weaponYari weaponSai weaponTanto weaponJitte
+  weaponMainGauche weaponDirk weaponBodkin weaponJambiya weaponStiletto
+end
+
+category groupSlashingWeapon
+  weaponBladedGauntlet weaponMercurialLongsword weaponFullblade weaponGyrspike weaponMercurialGreatsword
+  weaponMightyWhip1 weaponMightyWhip2 weaponMightyWhip3 weaponMightyWhip4 weaponWhipDagger
+  weaponMightyWhipDagger1 weaponMightyWhipDagger2 weaponMightyWhipDagger3 weaponMightyWhipDagger4
+  weaponKatana weaponClaymore weaponFlamberge weaponBroadsword weaponSaber weaponCutlass
+  weaponSickle weaponCatONineTails
+end
+
+/* categories for use with the tables in mundane.bsk */
+
+category groupMundaneMightyWhips
+  [45] weaponMightyWhip1
+  [30] weaponMightyWhip2
+  [15] weaponMightyWhip3
+  [10] weaponMightyWhip4
+end
+
+category groupMundaneMightyWhipDaggers
+  [45] weaponMightyWhipDagger1
+  [30] weaponMightyWhipDagger2
+  [15] weaponMightyWhipDagger3
+  [10] weaponMightyWhipDagger4
+end
+
+category groupSwordAndFistMeleeWeapons
+  [ 1] weaponWardCestus
+  [ 1] weaponStumpKnife
+  [ 1] weaponTripleDagger
+  [ 1] weaponGnomeBattlepick
+  [ 1] weaponBladedGauntlet
+  [ 1] weaponWarFan
+  [ 1] weaponChainAndDagger
+  [ 2] weaponMercurialLongsword
+  [ 3] weaponDuom
+  [ 2] weaponFullblade
+  [ 2] weaponGyrspike
+  [ 2] weaponManti
+  [ 1] weaponMercurialGreatsword
+  [ 1] weaponThreeSectionStaff
+  [ 1] weaponKatana
+  [ 4] weaponClaymore
+  [ 1] weaponWakizashi
+  [ 1] weaponGladius
+  [ 1] weaponScramasax
+  [ 1] weaponNinjaTo
+  [ 2] weaponFlamberge
+  [ 8] weaponBroadsword
+  [ 1] weaponNagimaki
+  [ 1] weaponYari
+  [ 1] weaponBokken
+  [ 1] weaponNoStick
+  [ 1] weaponJoStick
+  [ 2] weaponSaber
+  [ 1] weaponCutlass
+  [ 1] weaponSai
+  [ 1] weaponTanto
+  [ 1] weaponJitte
+  [ 1] weaponMainGauche
+  [ 3] weaponDirk
+  [ 1] weaponBodkin
+  [ 1] weaponJambiya
+  [ 4] weaponStiletto
+  [ 1] weaponSickle
+  [ 1] weaponCatONineTails
+end
+
+category groupSwordAndFistRangedWeapons
+  [ 1] weaponFukimiBari
+  [ 1] weaponHalflingSkiprock
+  [ 5] weapon2BallBolas
+  [ 2] weaponSpinningJavelin
+  [ 1] weaponSpringLoadedGauntlet
+  [ 5] weaponGreatCrossbow
+  [ 8] weaponHarpoon
+  [ 2] weaponOrcShotput
+  [ 1] groupMundaneMightyWhips
+  [ 1] weaponWhipDagger
+  [ 1] groupMundaneMightyWhipDaggers
+  [ 1] weaponDaikyuBow
+  [ 1] weaponHankyuBow
+end
+
+/* add the sword and fist weapons to the mundane items' table */
+
+category groupUncommonWeapons
+  [10] groupSwordAndFistRangedWeapons
+  [15] groupSwordAndFistMeleeWeapons
+end
+
+/* shield special abilities */
+
+asaArrowCatching ( groupShieldSpecialAbilities )
+  .type masatArrows
+  .name "arrow catching"
+  .marketPriceArmorModifier +1
+  .sources sourcesSwordAndFist
+end
+
+asaDancing ( groupShieldSpecialAbilities )
+  .type masatAny
+  .name "dancing"
+  .marketPriceArmorModifier +3
+  .sources sourcesSwordAndFist
+end
+
+category groupMinorShieldSpecialAbilities
+  [10] asaArrowCatching
+end
+
+category groupMediumShieldSpecialAbilities
+  [10] asaDancing
+end
+
+category groupMajorShieldSpecialAbilities
+  [ 5] asaDancing
+end
+
+/* weapon special abilities */
+
+wsaKiFocus
+  .name "ki focus"
+  .marketPriceWeaponModifier +1
+  .sources sourcesSwordAndFist
+end
+
+wsaMerciful
+  .name "merciful"
+  .marketPriceWeaponModifier +1
+  .sources sourcesSwordAndFist
+end
+
+wsaSeeking
+  .name "seeking"
+  .marketPriceWeaponModifier +1
+  .sources sourcesSwordAndFist
+end
+
+rule rInstallSureStrikingAbility( item ability )
+  if not Exists( groupThrownWeapon, item.prototype ) and Exists( groupPropelledWeapon, item.prototype ) then
+    exit rule;
+  end
+
+  rInstallSureStrikingAbility = ability;
+end
+
+wsaSureStriking
+  .name "sure striking"
+  .installWeaponAbility rInstallSureStrikingAbility
+  .marketPriceWeaponModifier +1
+  .sources sourcesSwordAndFist
+end
+
+wsaVicious
+  .name "vicious"
+  .marketPriceWeaponModifier +1
+  .sources sourcesSwordAndFist
+end
+
+category groupMeleeWeaponMinorSpecialAbilities
+  [ 5] wsaKiFocus
+  [ 5] wsaMerciful
+  [10] wsaSureStriking
+  [10] wsaVicious
+end
+
+category groupMeleeWeaponMediumSpecialAbilities
+  [ 2] wsaKiFocus
+  [ 2] wsaMerciful
+  [ 5] wsaSureStriking
+  [ 5] wsaVicious
+end
+
+category groupMeleeWeaponMajorSpecialAbilities
+  [ 2] wsaSureStriking
+  [ 2] wsaVicious
+end
+
+category groupRangedWeaponMinorSpecialAbilities
+  [ 5] wsaMerciful
+  [20] wsaSeeking
+  [10] wsaSureStriking
+end
+
+category groupRangedWeaponMediumSpecialAbilities
+  [15] wsaSeeking
+  [ 5] wsaSureStriking
+end
+
+category groupRangedWeaponMajorSpecialAbilities
+  [ 3] wsaSeeking
+end
+
+/* specific weapons */
+
+wstBowOfTrueArrows
+  .name "bow of true arrows"
+  .prototype weaponMightyCompositeLongbow1
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 4000 gp
+  .sources sourcesSwordAndFist
+end
+
+wstShatterspike
+  .name "shatterspike"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 4315 gp
+  .sources ( sourceSwordAndFist sourceSunlessCitadel )
+end
+
+wstShurikenOfTremendousShock
+  .name "shurikens of tremendous shock (3)"
+  .prototype weaponShuriken
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 31000 gp
+  .sources sourcesSwordAndFist
+end
+
+category groupMediumSpecificWeapons
+  [ 3] wstBowOfTrueArrows
+  [ 3] wstShatterspike
+end
+
+category groupMajorSpecificWeapons
+  [ 4] wstShurikenOfTremendousShock
+end
+
+/* potions */
+
+template ( groupPotions ) { name cost sources }
+  potionFalseLife { "false life"  300 gp  sourcesSwordAndFist }
+  potionFlamingFists { "flaming fists"  300 gp  sourcesSwordAndFist }
+end
+
+category groupPotionsMinor
+  [ 3] potionFalseLife
+  [ 3] potionFlamingFists
+end
+
+category groupPotionsMedium
+  [ 1] potionFalseLife
+  [ 1] potionFlamingFists
+end
+
+/* rings */
+
+ringMageArmor ( groupRings )
+  .name "mage armor"
+  .cost 12000 gp
+  .sources sourcesSwordAndFist
+end
+
+ringShockingBlows ( groupRings )
+  .name "shocking blows"
+  .cost 13000 gp
+  .sources sourcesSwordAndFist
+end
+
+category groupRingsMinor
+  [ 5] ringMageArmor
+  [ 5] ringShockingBlows
+end
+
+category groupRingsMedium
+  [ 5] ringMageArmor
+  [ 5] ringShockingBlows
+end
+
+/* wondrous items */
+
+wondrousAmuletOfMightyFists1
+  .name "amulet of mighty fists (+1)"
+  .cost 6000 gp
+  .canBeIntelligent yes
+  .sources sourcesSwordAndFist
+end
+
+wondrousAmuletOfMightyFists2
+  .name "amulet of mighty fists (+2)"
+  .cost 24000 gp
+  .canBeIntelligent yes
+  .sources sourcesSwordAndFist
+end
+
+wondrousAmuletOfMightyFists3
+  .name "amulet of mighty fists (+3)"
+  .cost 54000 gp
+  .canBeIntelligent yes
+  .sources sourcesSwordAndFist
+end
+
+wondrousAmuletOfMightyFists4
+  .name "amulet of mighty fists (+4)"
+  .cost 96000 gp
+  .canBeIntelligent yes
+  .sources sourcesSwordAndFist
+end
+
+wondrousAmuletOfMightyFists5
+  .name "amulet of mighty fists (+5)"
+  .cost 150000 gp
+  .canBeIntelligent yes
+  .sources sourcesSwordAndFist
+end
+
+wondrousBeltOfMightyProwess
+  .name "belt of mighty prowess"
+  .cost 108000 gp
+  .canBeIntelligent yes
+  .sources sourcesSwordAndFist
+end
+
+wondrousGlovesOfFearsomeGrip
+  .name "gloves of fearsome grip"
+  .cost 15000 gp
+  .canBeIntelligent yes
+  .sources sourcesSwordAndFist
+end
+
+wondrousHeadbandOfFerocity
+  .name "headband of ferocity"
+  .cost 2000 gp
+  .canBeIntelligent yes
+  .sources sourcesSwordAndFist
+end
+
+wondrousHeadBandOfPerfectExcellence
+  .name "headband of perfect excellence"
+  .cost 180000 gp
+  .canBeIntelligent yes
+  .sources sourcesSwordAndFist
+end
+
+wondrousKiStraps
+  .name "ki straps"
+  .cost 5000 gp
+  .canBeIntelligent yes
+  .sources sourcesSwordAndFist
+end
+
+wondrousSandalsOfTheTigersLeap
+  .name "sandals of the tiger's leap"
+  .cost 3500 gp
+  .canBeIntelligent yes
+  .sources sourcesSwordAndFist
+end
+
+wondrousVestOfFalseLife
+  .name "vest of false life"
+  .cost 12000 gp
+  .canBeIntelligent yes
+  .sources sourcesSwordAndFist
+end
+
+category groupMinorWondrousItems
+  wondrousAmuletOfMightyFists1
+  wondrousHeadbandOfFerocity
+  wondrousKiStraps
+  wondrousSandalsOfTheTigersLeap
+end
+
+category groupMediumWondrousItems
+  wondrousAmuletOfMightyFists2
+  wondrousGlovesOfFearsomeGrip
+  wondrousVestOfFalseLife
+end
+
+category groupMajorWondrousItems
+  wondrousAmuletOfMightyFists3
+  wondrousAmuletOfMightyFists4
+  wondrousAmuletOfMightyFists5
+  wondrousBeltOfMightyProwess
+  wondrousHeadbandOfPerfectExcellence
+end
+
