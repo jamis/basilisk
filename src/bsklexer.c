@@ -202,6 +202,7 @@ BSKTokenId BSKNextToken( BSKLexer* lexer,
     case '#': token->type = TT_PUNCT_OCTOTHORP; break;
     case '$': token->type = TT_PUNCT_DOLLAR; break;
     case '/': token->type = TT_PUNCT_SLASH; break;
+    case ':': token->type = TT_PUNCT_COLON; break;
 
     default:
       if( BSKIsAlpha( c ) || ( c == '_' ) ) {

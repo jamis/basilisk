@@ -181,6 +181,9 @@ void BSKGetTokenDescription( BSKTokenId type,
     case TT_PUNCT_SLASH:
       BSKStrNCpy( buffer, "'/'", length );
       break;
+		case TT_PUNCT_COLON:
+			BSKStrNCpy( buffer, "':'", length );
+			break;
 
     default:
       BSKStrNCpy( buffer, "<unknown>", length );

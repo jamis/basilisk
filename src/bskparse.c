@@ -34,6 +34,7 @@
 
 typedef struct __bskparser__         BSKParser;
 typedef struct __bskidentlist__      BSKIdentList;
+typedef struct __bskwtidentlist__    BSKWeightedIdentList;
 typedef struct __bsksubnumber__      BSKSubNumber;
 
 /* ---------------------------------------------------------------------- *
@@ -72,6 +73,13 @@ struct __bskparser__ {
 struct __bskidentlist__ {
   BSKUI32 id;
   BSKIdentList* next;
+};
+
+
+struct __bskwtidentlist__ {
+  BSKUI32 id;
+	BSKUI16 weight;
+  BSKWeightedIdentList* next;
 };
 
 
@@ -280,7 +288,7 @@ static BSKI32 s_parseTemplateDef( BSKParser* parser, BSKBitSet* follow );
    * -------------------------------------------------------------------- */
 static BSKI32 s_parseRuleDef( BSKParser* parser, BSKBitSet* follow );
 
-  /* -------------------------------------------------------------------- *
+ /* -------------------------------------------------------------------- *
    * s_parseIdentList
    *
    * Parses a space-delimited list of identifiers.  Note that the created
@@ -295,6 +303,20 @@ static BSKIdentList* s_parseIdentList( BSKParser* parser,
                                        BSKBitSet* follow );
 
   /* -------------------------------------------------------------------- *
+   * s_parseWeightedIdentList
+   *
+   * Parses a space-delimited list of identifiers.  Note that the created
+   * identifier list will list the identifiers in reverse order from the
+   * way they were parsed.  Each identifier may be preceded by an integer
+	 * which will be treated as its weight.
+   *
+   * weighted-ident-list := weighted-ident-list-entry
+   *                      | weighted-ident-list-entry ident-list
+   * -------------------------------------------------------------------- */
+static BSKWeightedIdentList* s_parseWeightedIdentList( BSKParser* parser, 
+                                                       BSKBitSet* follow );
+
+   /* -------------------------------------------------------------------- *
    * s_parsePropertyList
    *
    * Parses a list of properties.
@@ -402,7 +424,7 @@ static BSKI32 s_parseCategoryEntry( BSKParser* parser,
    *                  | "$"
    * -------------------------------------------------------------------- */
 static BSKI32 s_parseTemplateEntry( BSKParser* parser,
-                                    BSKIdentList* categories,
+                                    BSKWeightedIdentList* categories,
                                     BSKIdentList* attributes,
                                     BSKBitSet* follow );
 
@@ -765,6 +787,13 @@ static BSKIdentList* s_reverseIdentList( BSKIdentList* list );
    * Destroys and deallocates the given identifier list.
    * -------------------------------------------------------------------- */
 static void s_destroyIdentList( BSKIdentList* list );
+
+  /* -------------------------------------------------------------------- *
+   * s_destroyWeightedIdentList
+   *
+   * Destroys and deallocates the given weighted identifier list.
+   * -------------------------------------------------------------------- */
+static void s_destroyWeightedIdentList( BSKWeightedIdentList* list );
 
   /* -------------------------------------------------------------------- *
    * s_addToIdentList
@@ -1275,8 +1304,8 @@ static BSKI32 s_parseAttributeDef( BSKParser* parser, BSKBitSet* follow ) {
 
 static BSKI32 s_parseThingDef( BSKParser* parser, BSKBitSet* follow ) {
   BSKBitSet keys;
-  BSKIdentList* list;
-  BSKIdentList* i;
+  BSKWeightedIdentList* list;
+  BSKWeightedIdentList* i;
   BSKSymbolTableEntry* sym;
   BSKCategory* cat;
   BSKThing* thing;
@@ -1317,7 +1346,7 @@ static BSKI32 s_parseThingDef( BSKParser* parser, BSKBitSet* follow ) {
   BSKClearBit( &keys, TT_PUNCT_LPAREN );
   if( parser->currentToken.type == TT_PUNCT_LPAREN ) {
     s_eatToken( parser, TT_PUNCT_LPAREN, &keys );
-    list = s_parseIdentList( parser, &keys );
+    list = s_parseWeightedIdentList( parser, &keys );
 
     BSKClearBit( &keys, TT_PUNCT_RPAREN );
     s_eatToken( parser, TT_PUNCT_RPAREN, &keys );
@@ -1330,7 +1359,7 @@ static BSKI32 s_parseThingDef( BSKParser* parser, BSKBitSet* follow ) {
         if( sym == 0 ) { /* if not, add it */
           BSKAddSymbol( parser->symbols, ST_CATEGORY, SF_NONE, i->id );
           cat = BSKAddCategoryToDB( parser->db, BSKNewCategory( i->id ) );
-          BSKAddToCategory( cat, 1, thing );
+          BSKAddToCategory( cat, i->weight, thing );
         } else if( sym->type != ST_CATEGORY ) {
           s_error( parser, PE_WRONG_TYPE, i->id, 0 );
         } else {
@@ -1339,13 +1368,13 @@ static BSKI32 s_parseThingDef( BSKParser* parser, BSKBitSet* follow ) {
           if( cat == 0 ) {
             s_error( parser, PE_BUG_DETECTED, (BSKUI32)"category symbol exists in symbol table, but not in category list (s_parseThingDef)", 0 );
           } else {
-            BSKAddToCategory( cat, 1, thing );
+            BSKAddToCategory( cat, i->weight, thing );
           }
         }
       }
     }
 
-    s_destroyIdentList( list );
+    s_destroyWeightedIdentList( list );
   }
 
   /* read the list of properties that defines the thing */
@@ -1413,9 +1442,10 @@ static BSKI32 s_parseCategoryDef( BSKParser* parser, BSKBitSet* follow ) {
 
 
 static BSKI32 s_parseTemplateDef( BSKParser* parser, BSKBitSet* follow ) {
-  BSKIdentList* categoryList;
+  BSKWeightedIdentList* categoryList;
   BSKIdentList* attributeList;
   BSKIdentList* i;
+  BSKWeightedIdentList* wi;
   BSKBitSet keys;
   BSKSymbolTableEntry* sym;
   BSKCategory* category;
@@ -1425,7 +1455,8 @@ static BSKI32 s_parseTemplateDef( BSKParser* parser, BSKBitSet* follow ) {
 
   s_eatToken( parser, TT_TEMPLATE, &keys );
 
-  categoryList = attributeList = 0;
+  categoryList = 0;
+	attributeList = 0;
 
   /* if there is a category list, parse it into an identifier list.  All
    * things defined by this template will automatically be added to these
@@ -1436,18 +1467,18 @@ static BSKI32 s_parseTemplateDef( BSKParser* parser, BSKBitSet* follow ) {
   if( parser->currentToken.type == TT_PUNCT_LPAREN ) {
     s_eatToken( parser, TT_PUNCT_LPAREN, &keys );
     BSKSetBit( &keys, TT_PUNCT_RPAREN );
-    categoryList = s_parseIdentList( parser, &keys );
+    categoryList = s_parseWeightedIdentList( parser, &keys );
     BSKClearBit( &keys, TT_PUNCT_RPAREN );
     s_eatToken( parser, TT_PUNCT_RPAREN, &keys );
 
-    for( i = categoryList; i != 0; i = i->next ) {
-      sym = BSKGetSymbol( parser->symbols, i->id );
+    for( wi = categoryList; wi != 0; wi = wi->next ) {
+      sym = BSKGetSymbol( parser->symbols, wi->id );
       if( sym == 0 ) {
-        category = BSKAddCategoryToDB( parser->db, BSKNewCategory( i->id ) );
-        BSKAddSymbol( parser->symbols, ST_CATEGORY, SF_NONE, i->id );
+        category = BSKAddCategoryToDB( parser->db, BSKNewCategory( wi->id ) );
+        BSKAddSymbol( parser->symbols, ST_CATEGORY, SF_NONE, wi->id );
       } else if( sym->type != ST_CATEGORY ) {
-        s_error( parser, PE_WRONG_TYPE, i->id, 0 );
-        i->id = 0;
+        s_error( parser, PE_WRONG_TYPE, wi->id, 0 );
+        wi->id = 0;
       } else {
         /* mark the symbol as declared, in case it was previously declared "forward" */
         sym->flags = SF_NONE;
@@ -1495,7 +1526,7 @@ static BSKI32 s_parseTemplateDef( BSKParser* parser, BSKBitSet* follow ) {
 
   /* clean up */
 
-  s_destroyIdentList( categoryList );
+  s_destroyWeightedIdentList( categoryList );
   s_destroyIdentList( attributeList );
 
   return 0;
@@ -1683,6 +1714,46 @@ static BSKIdentList* s_parseIdentList( BSKParser* parser, BSKBitSet* follow ) {
   while( parser->currentToken.type == TT_IDENTIFIER ) {
     list = s_addToIdentList( list, parser->currentToken.data.identifier );
     s_getToken( parser );
+  }
+
+  return list;
+}
+
+
+static BSKWeightedIdentList* s_parseWeightedIdentList( BSKParser* parser, BSKBitSet* follow ) {
+  BSKWeightedIdentList* list;
+
+  /* keep adding identifiers to the list for as long as they appear
+   * in the input. */
+
+  list = 0;
+  while( parser->currentToken.type == TT_NUMBER || parser->currentToken.type == TT_IDENTIFIER ) {
+		BSKWeightedIdentList* i;
+		BSKUI16 weight;
+
+		if( parser->currentToken.type == TT_NUMBER ) {
+			weight = (BSKUI16)parser->currentToken.data.dblValue;
+			s_getToken( parser );
+			if( parser->currentToken.type != TT_PUNCT_COLON ) {
+				s_error( parser, PE_UNEXPECTED_TOKEN, TT_PUNCT_COLON, follow );
+			} else {
+				s_getToken( parser );
+			}
+		} else {
+			weight = 1;
+		}
+
+		if( parser->currentToken.type != TT_IDENTIFIER ) {
+      s_error( parser, PE_UNEXPECTED_TOKEN, TT_IDENTIFIER, follow );
+		} else {
+			i = (BSKWeightedIdentList*)BSKMalloc( sizeof( BSKWeightedIdentList ) );
+			i->weight = weight;
+			i->id = parser->currentToken.data.identifier;
+			i->next = list;
+
+			list = i;
+			s_getToken( parser );
+		}
   }
 
   return list;
@@ -2184,15 +2255,16 @@ static BSKI32 s_parseCategoryEntry( BSKParser* parser,
 
 
 static BSKI32 s_parseTemplateEntry( BSKParser* parser,
-                                    BSKIdentList* categories,
+                                    BSKWeightedIdentList* categories,
                                     BSKIdentList* attributes,
                                     BSKBitSet* follow )
 {
   BSKBitSet keys;
   BSKBitSet tvalHead;
   BSKThing* thing;
-  BSKIdentList* moreCategories;
+  BSKWeightedIdentList* moreCategories;
   BSKIdentList* i;
+  BSKWeightedIdentList* wi;
   BSKSymbolTableEntry* sym;
   BSKCategory* category;
   BSKValue value;
@@ -2232,36 +2304,36 @@ static BSKI32 s_parseTemplateEntry( BSKParser* parser,
   if( parser->currentToken.type == TT_PUNCT_LPAREN ) {
     s_eatToken( parser, TT_PUNCT_LPAREN, &keys );
     BSKSetBit( &keys, TT_PUNCT_RPAREN );
-    moreCategories = s_parseIdentList( parser, &keys );
+    moreCategories = s_parseWeightedIdentList( parser, &keys );
     BSKClearBit( &keys, TT_PUNCT_RPAREN );
     s_eatToken( parser, TT_PUNCT_RPAREN, &keys );
 
-    for( i = moreCategories; i != 0; i = i->next ) {
-      sym = BSKGetSymbol( parser->symbols, i->id );
+    for( wi = moreCategories; wi != 0; wi = wi->next ) {
+      sym = BSKGetSymbol( parser->symbols, wi->id );
       
       if( sym == 0 ) {
-        category = BSKAddCategoryToDB( parser->db, BSKNewCategory( i->id ) );
-        BSKAddSymbol( parser->symbols, ST_CATEGORY, SF_NONE, i->id );
+        category = BSKAddCategoryToDB( parser->db, BSKNewCategory( wi->id ) );
+        BSKAddSymbol( parser->symbols, ST_CATEGORY, SF_NONE, wi->id );
       } else if( sym->type != ST_CATEGORY ) {
-        s_error( parser, PE_WRONG_TYPE, i->id, 0 );
+        s_error( parser, PE_WRONG_TYPE, wi->id, 0 );
         category = 0;
       } else {
-        category = BSKFindCategory( parser->db, i->id );
+        category = BSKFindCategory( parser->db, wi->id );
       }
 
       if( category != 0 ) {
-        BSKAddToCategory( category, 1, thing );
+        BSKAddToCategory( category, wi->weight, thing );
       }
     }
   }
   
   /* add the thing to each of the given categories */
 
-  for( i = categories; i != 0; i = i->next ) {
-    if( i->id != 0 ) {
-      category = BSKFindCategory( parser->db, i->id );
+  for( wi = categories; wi != 0; wi = wi->next ) {
+    if( wi->id != 0 ) {
+      category = BSKFindCategory( parser->db, wi->id );
       if( category != 0 ) {
-        BSKAddToCategory( category, 1, thing );
+        BSKAddToCategory( category, wi->weight, thing );
       }
     }
   }
@@ -2313,7 +2385,7 @@ static BSKI32 s_parseTemplateEntry( BSKParser* parser,
   BSKClearBit( &keys, TT_PUNCT_RBRACE );
   s_eatToken( parser, TT_PUNCT_RBRACE, &keys );
 
-  s_destroyIdentList( moreCategories );
+  s_destroyWeightedIdentList( moreCategories );
 
   return 0;
 }
@@ -2429,6 +2501,19 @@ static BSKIdentList* s_reverseIdentList( BSKIdentList* list ) {
 static void s_destroyIdentList( BSKIdentList* list ) {
   BSKIdentList* i;
   BSKIdentList* n;
+
+  i = list;
+  while( i != 0 ) {
+    n = i->next;
+    BSKFree( i );
+    i = n;
+  }
+}
+
+
+static void s_destroyWeightedIdentList( BSKWeightedIdentList* list ) {
+  BSKWeightedIdentList* i;
+  BSKWeightedIdentList* n;
 
   i = list;
   while( i != 0 ) {

@@ -285,10 +285,12 @@ BSKCategoryEntry* BSKGetEntryByIndex( BSKCategory* category, BSKUI32 idx ) {
   BSKCategoryEntry* entry;
   BSKUI32 count;
 
-  for( count = 0, entry = category->members; entry != 0; count++, entry = entry->next ) {
+	count = 0;
+  for( entry = category->members; entry != 0; entry = entry->next ) {
     if( count == idx ) {
       return entry;
     }
+		count++;
   }
   
   return 0;  

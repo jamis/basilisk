@@ -2183,8 +2183,8 @@ static BSKI32 s_execBuiltin( BSKExecutionEnvironment* env,
     ENFORCETYPE( (parameters[0]->type), VT_CATEGORY, "1", "WeightOf" );
     ENFORCETYPE( (parameters[1]->type), VT_NUMBER, "2", "WeightOf" );
 
-    val = BSKEvaluateNumber( parameters[0] );
-    entry = BSKGetEntryByIndex( (BSKCategory*)parameters[1]->datum, (BSKUI32)val );
+    val = BSKEvaluateNumber( parameters[1] );
+    entry = BSKGetEntryByIndex( (BSKCategory*)parameters[0]->datum, (BSKUI32)val );
 
     if( entry == 0 ) {
       BSKSetValueNumber( retVal, 0 );
