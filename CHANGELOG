@@ -1,3 +1,15 @@
+version 1.03
+  Package changes:
+    Added paths to new dat/defenders and dat/tnblood directors for the
+      data files.
+  Makefile changes:
+    Added paths to new dat/defenders and dat/tnblood directors for the
+      data compile.
+  Data Changes:
+    Added data for Tome & Blood, Defenders of the Faith.
+    Fixed minor mispellings in the skills file.
+
+version 1.02
   Makefile changes:
     Added an 'update' target for CVS.
   Data Changes:
@@ -5,7 +17,7 @@
     Fixed error in scrolls.bsk where StinkingCloud was being given as a
       second level spell, instead of a third.
 
-version 1.02
+version 1.01.01
 	Documentation Changes:
 		Added tutorial3, tutorial4, and tutorial5, submitted by Richard Avery.
 	Data Changes:
