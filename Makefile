@@ -52,7 +52,7 @@ libbasilisk_static: $(OBJS)
 	ar r $(LIBNAME) $(OBJS)
 
 libbasilisk_dynamic: $(OBJS)
-	ld -shared -o $(LIBNAME) $(OBJS)
+	ld -shared -o $(LIBNAME) $(OBJS) -lm
  
 bskcompile: $(LIBNAME) bskcompile.c bskcallbacks.c
 	$(CC) $(OPTS) $(LIBOPTS) -o bskcompile bskcompile.c bskcallbacks.c $(RUNLIBS)
