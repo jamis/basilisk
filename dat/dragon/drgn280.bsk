@@ -1,0 +1,207 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dragon Magazine issue #280, converted to Basilisk format by
+ * Robert Szkotak (dkphoenix@hotmail.com), aka "LightPhoenix" on
+ * Eric Noah's messageboards.
+ * --------------------------------------------------------------------- */
+
+/* "Polymorphology", p. 39-45 */
+/* "A Little More Familiar", p. 60-63 */
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellCallFamiliar { "Call Familiar" schTransmutation $ ( descTeleportation ) sourcesDragon }
+  spellFamiliarsForm { "Familiar's Form" schNecromancy $ $ sourcesDragon }
+  spellFamiliarsSense { "Familiar's Sense" schDivination $ $ sourcesDragon }
+  spellFamiliarsTouch { "Familiar's Touch" schConjuration $ $ sourcesDragon }
+  spellShareLife { "Share Life" schNecromancy $ $ sourcesDragon }
+  spellSwarmForm { "Swarm Form" schTransmutation $ $ sourcesDragon }
+end
+
+category groupSpellsSorcererL2
+  spellFamiliarsSense
+  spellFamiliarsTouch
+  spellShareLife
+end
+
+category groupSpellsSorcererL3
+  spellFamiliarsForm
+  spellCallFamiliar
+end
+
+category groupSpellsSorcererL5
+  spellSwarmForm
+end
+
+category groupSpellsWizardL2
+  spellFamiliarsSense
+  spellFamiliarsTouch
+  spellShareLife
+end
+
+category groupSpellsWizardL3
+  spellFamiliarsForm
+  spellCallFamiliar
+end
+
+category groupSpellsWizardL5
+  spellSwarmForm
+end
+
+
+category groupArcaneScrollSpells2
+	spellFamiliarsSense spellFamiliarsTouch spellShareLife
+end
+
+category groupArcaneScrollSpells3
+	spellFamiliarsForm spellCallFamiliar
+end
+
+category groupArcaneScrollSpells5
+	spellSwarmForm
+end
+
+/* "Better Living Through Alchemy", p. 50-53 */
+
+template in ( groupMundaneItems ) { name cost sources }
+  miAlchemistsMercy { "alchemist's mercy(s)"  1 gp sourcesDragon }
+  miArmorSoft { "armor soft(s)"  50 gp sourcesDragon }
+  miCoolingGel { "cooling gel(s)"  100 gp sourcesDragon }
+  miCouriersInk { "courier's ink"  20 gp sourcesDragon }
+  miFireBeetlePaste { "fire beetle paste(s)"  50 gp sourcesDragon }
+  miFireBane { "fire bane(s)"  50 gp sourcesDragon }
+  miFirestone { "firestone(s)"  50 gp sourcesDragon }
+  miFlashPowder { "flash powder(s)"  20 gp sourcesDragon }
+  miFreeFoot { "free foot(s)"  25 gp sourcesDragon }
+  miHoldfast { "holdfast(s)"  50 gp sourcesDragon }
+  miIceCrystal { "ice crystal(s)"  5 gp sourcesDragon }
+  miInsectRepellent { "insect repellent(s)"  5 gp sourcesDragon }
+  miLiquidIce { "liquid ice(s)"  30 gp sourcesDragon }
+  miNightEyes { "night eyes"  25 gp sourcesDragon }
+  miPowderedWater { "powdered water(s)"  5 sp sourcesDragon }
+  miRedRager { "red rager(s)"  50 gp sourcesDragon }
+  miSlimebane { "slimebane(s)"  15 gp sourcesDragon }
+  miSlipperyOil { "slippery oil(s)"  50 gp sourcesDragon }
+  miSneezingPowder { "sneezing powder(s)"  60 gp sourcesDragon }
+  miSoftshoePowder { "softshoe powder(s)"  25 gp sourcesDragon }
+  miSoupstone { "soupstone(s)"  300 gp sourcesDragon }
+  miStonecloth { "stonecloth(s)"  100 gp sourcesDragon }
+  miTangleWire { "tangle wire(s)"  25 gp sourcesDragon }
+  miTravellersSolace { "traveller's solace(s)"  50 gp sourcesDragon }
+  miTruthWine { "truth wine(s)"  75 gp sourcesDragon }
+  miVaporsOfSleep { "vapors of sleep(s)"  50 gp sourcesDragon }
+end
+
+category groupDragon280Items
+  [ 5] { .magnitude 1  .type miAlchemistsMercy }
+  [ 5] { .magnitude 1  .type miArmorSoft }
+  [ 5] { .magnitude 1  .type miCoolingGel }
+  [ 5] { .magnitude 1  .type miCouriersInk }
+  [ 5] { .magnitude 1  .type miFireBeetlePaste }
+  [ 5] { .magnitude 1  .type miFireBane }
+  [ 5] { .magnitude 1  .type miFirestone }
+  [ 5] { .magnitude 1  .type miFlashPowder }
+  [ 5] { .magnitude 1  .type miFreeFoot }
+  [ 5] { .magnitude 1  .type miHoldfast }
+  [ 5] { .magnitude 1  .type miIceCrystal }
+  [ 5] { .magnitude 1  .type miInsectRepellent }
+  [ 5] { .magnitude 1  .type miLiquidIce }
+  [ 5] { .magnitude 1  .type miNightEyes }
+  [ 5] { .magnitude 1  .type miPowderedWater }
+  [ 5] { .magnitude 1  .type miRedRager }
+  [ 5] { .magnitude 1  .type miSlimebane }
+  [ 5] { .magnitude 1  .type miSlipperyOil }
+  [ 5] { .magnitude 1  .type miSneezingPowder }
+  [ 5] { .magnitude 1  .type miSoftshoePowder }
+  [ 5] { .magnitude 1  .type miSoupstone }
+  [ 5] { .magnitude 1  .type miStonecloth }
+  [ 5] { .magnitude 1  .type miTangleWire }
+  [ 5] { .magnitude 1  .type miTravellersSolace }
+  [ 5] { .magnitude 1  .type miTruthWine }
+  [ 5] { .magnitude 1  .type miVaporsOfSleep }
+end
+
+category groupAlchemicalItems
+  [ 5] groupDragon280Items
+end
+
+
+/* "A Little More Familiar", p.60-63 */
+
+featEnspellFamiliar in ( groupAllFeats groupGeneralFeats )
+  .name "enspell familiar"
+  .takeMultiple no
+  .conditions ( { .type ptOrCondition .conditions (
+									{ .type ptIsClass .affectedThing classWizard }
+									{ .type ptIsClass .affectedThing classSorcerer } )
+								} )
+  .sources sourcesDragon
+end
+
+featExtraFamiliar in ( groupAllFeats groupGeneralFeats )
+  .name "extra familiar"
+  .takeMultiple yes
+  .conditions ( { .type ptOrCondition .conditions (
+									{ .type ptIsClass .affectedThing classWizard }
+									{ .type ptIsClass .affectedThing classSorcerer } )
+								} )
+  .sources sourcesDragon
+end
+
+featConstructFamiliar in ( groupAllFeats groupGeneralFeats )
+  .name "construct familiar"
+  .takeMultiple no
+  .conditions ( { .type ptOrCondition .conditions (
+									{ .type ptIsClass .affectedThing classWizard }
+									{ .type ptIsClass .affectedThing classSorcerer } )
+								} )
+  .sources sourcesDragon
+end
+
+featTokenFamiliar in ( groupAllFeats groupGeneralFeats )
+  .name "token familiar"
+  .takeMultiple no
+  .conditions ( { .type ptOrCondition .conditions (
+									{ .type ptIsClass .affectedThing classWizard }
+									{ .type ptIsClass .affectedThing classSorcerer } )
+								} )
+  .sources sourcesDragon
+end
+
+featUndeadFamiliar in ( groupAllFeats groupGeneralFeats )
+  .name "undead familiar"
+  .takeMultiple no
+  .conditions ( { .type ptOrCondition .conditions (
+									{ .type ptIsClass .affectedThing classWizard }
+									{ .type ptIsClass .affectedThing classSorcerer } )
+								} )
+  .sources sourcesDragon
+end
+
+
+/* "Reel Heroes", p.64-71 */
+
+wondrousQuicksandRug
+  .name "quicksand rug"
+  .cost 3500 gp
+  .weight 15 lb
+  .capacityWeight 250 lb
+  .capacityVolume 30 cu_ft
+  .canBeIntelligent false
+  .sources sourcesDragon
+end
+
+wondrousPortalDust
+  .name "portal dust"
+  .cost 12000 gp
+  .specialQualities ( { .type satSpellEffect
+                        .spell spellGate } )
+  .canBeIntelligent false
+  .sources sourcesDragon
+end
+
+category groupMinorWondrousItems
+  wondrousQuicksandRug
+end
+
+category groupMediumWondrousItems
+  wondrousPortalDust
+end

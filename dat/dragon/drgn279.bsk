@@ -1,0 +1,182 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dragon Magazine issue #279, converted to Basilisk format by
+ * Robert Szkotak (dkphoenix@hotmail.com), aka "LightPhoenix" on
+ * Eric Noah's messageboards.
+ * --------------------------------------------------------------------- */
+
+/* "Leaf & Thorn", p. 34-46 */
+/* "Revenge of the Spider Queen", p. 42-47 */
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellBaneWeapon { "Bane Weapon" schTransmutation $ $ sourcesDragon }  
+  spellForagersBlessing { "Forager's Blessing" schDivination $ $ sourcesDragon }
+  spellWombOfTheEarth { "Womb of the Earth" schTransmutation $ $ sourcesDragon }
+end
+
+category groupSpellsClericL0
+  spellForagersBlessing
+end
+
+category groupSpellsClericL1
+  spellWombOfTheEarth
+end
+
+category groupSpellsClericL4
+  spellBaneWeapon
+end
+
+category groupSpellsRangerL1
+  spellForagersBlessing
+end
+
+category groupSpellsSorcererL4
+  spellBaneWeapon
+end
+
+category groupSpellsWizardL4
+  spellBaneWeapon
+end
+
+category groupArcaneScrollSpells4
+  [ 4] spellBaneWeapon
+end
+
+category groupDivineScrollSpells0
+  [ 4] spellForagersBlessing
+end
+
+category groupDivineScrollSpells1
+  [ 4] spellWombOfTheEarth
+end
+
+category groupDivineScrollSpells4
+  [ 4] spellBaneWeapon
+end
+
+
+/* "The Elven Marketplace", p. 48-50 */
+
+template in ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
+  weaponBluntArrow { "blunt arrow" 10 gp  $  $  $  3/20 lb  tiny sourcesDragon }
+  weaponFlightArrow { "flight arrow" 10 gp  $  $  $  2/20 lb  tiny sourcesDragon }
+  weaponSignalArrow { "signal arrow" 10 gp  $  $  $  3/20 lb  tiny sourcesDragon }
+  weaponSmokeArrow { "smoke arrow" 25 gp  $  $  $  4/20 lb  tiny sourcesDragon }
+  weaponThunderArrow { "thunder arrow" 35 gp  $  $  $  6/20 lb  tiny sourcesDragon }
+end 
+
+// -------------
+// Weapon data here... needs to be adjusted so arrows do damage, have range, damage type, etc.
+// -------------
+
+template in ( groupArmor ) { name cost bonuses maxDexBonus armorCheckPenalty arcaneSpellFailure speedModifier weight sources }
+  armorLeafPadded { "leaf armor - padded"  755 gp  ( AC1 )  +9  0  0  1  10 lb sourcesDragon }
+  armorLeafLeather { "leaf armor - leather"  760 gp  ( AC2 )  +7  0  5  1  15 lb sourcesDragon }
+  armorLeafStuddedLeather { "leaf armor - studded leather"  775 gp  ( AC3 )  +6  0  10  1  20 lb sourcesDragon }
+  armorLeafHide { "leaf armor - hide"  765 gp  ( AC3 )  +5  -1  15  2/3  25 lb sourcesDragon }
+  armorWoodChainShirt { "darkwood chain shirt"  850 gp  ( AC4 )  +5  0  15  1  25 lb sourcesDragon }
+  armorWoodScaleMail { "darkwood scale mail"  2300 gp  ( AC4 )  +4  -2  20  1  30 lb sourcesDragon }
+  armorWoodChainMail { "darkwood chain mail"  2400 gp ( AC5 ) +3  -3  25  1  40 lb sourcesDragon }
+  armorWoodBreastplate { "darkwood breastplate"  2450 gp ( AC5 ) +4  -2  20  1  30 lb sourcesDragon }
+  armorWoodSplintMail { "darkwood splint mail"  6200 gp  ( AC6 )  +1  -5  35  2/3  45 lb sourcesDragon }
+  armorWoodBandedMail { "darkwood banded mail"  6250 gp  ( AC6 )  +2  -4  30  2/3  35 lb sourcesDragon }
+  armorWoodHalfPlate { "darkwood half-plate"  6600 gp  ( AC7 )  +1  -5  35  2/3  50 lb sourcesDragon }
+  armorWoodFullPlate { "darkwood full plate"  7500 gp  ( AC8 )  +2  -4  30  2/3  50 lb sourcesDragon }
+end
+
+category groupLightArmor
+  armorLeafPadded armorLeafLeather armorLeafStuddedLeather
+  armorWoodChainShirt armorWoodScaleMail armorWoodChainMail armorWoodBreastplate
+end
+
+category groupMediumArmor
+  armorLeafHide
+  armorPadded armorLeather armorStuddedLeather armorChainShirt
+end
+
+category groupMinorSpecificArmors
+  [ 5] armorLeafPadded
+  [ 5] armorLeafLeather
+  [ 5] armorLeafStuddedLeather
+  [ 5] armorLeafHide
+  [ 5] armorWoodChainShirt
+  [ 5] armorWoodScaleMail
+  [ 5] armorWoodChainMail
+  [ 5] armorWoodBreastplate
+  [ 5] armorWoodSplintMail
+  [ 5] armorWoodBandedMail
+  [ 5] armorWoodHalfPlate
+  [ 5] armorWoodFullPlate
+end
+
+template in ( groupMundaneItems ) { name cost sources }
+  miMaskingPerfume { "masking perfume"  100 gp sourcesDragon }
+  miStarLantern { "star lantern"  100 gp sourcesDragon }
+  miForestCamoKit { "forest camouflage kit, masterwork"  50 gp sourcesDragon }
+  miStarlightCloth { "starlight cloth (5 lb.)"  100 gp sourcesDragon }
+end
+
+category groupAlchemicalItems
+  [ 5] { .magnitude 1  .type miMaskingPerfume }
+end
+
+// -------------
+// Waiting for information on how the CG will handle "non-treasure" items.
+// The StarLantern, CamoKit, and StarlightCloth will not show up in treasure hordes for now.
+// -------------
+
+
+/* "Unusual Suspects 3: Monks & Druid", p.60-63 */
+
+featHammerFist in ( groupAllFeats groupGeneralFeats )
+  .name "hammer fist"
+  .takeMultiple no
+  .conditions ( { .type ptMinimumAbilityScore .affectedThing astStrength .magnitude 13 }
+                { .type ptFeat .affectedThing featImprovedUnarmedStrike })
+  .specialAttacks ( { .description "do 1.5 times damage with unarmed attacks" } )
+  .sources sourcesDragon
+end
+
+featUnorthodoxFlurry in ( groupAllFeats )
+  .name "unorthodox flurry"
+  .takeMultiple yes
+  .conditions ( { .type ptMinimumClassLevel .affectedThing classMonk .magnitude 6 } )
+  .specialAttacks ( { .description "treat chosen light weapon as a monk weapon" } )
+  .sources sourcesDragon
+end
+
+featPebbleUnderfoot in ( groupAllFeats groupGeneralFeats )
+  .name "pebble underfoot"
+  .takeMultiple no
+  .conditions ( { .type ptMinimumAbilityScore .affectedThing astIntelligence .magnitude 13 }
+  	{ .type ptFeat .affectedThing featExpertise }
+  	{ .type ptFeat .affectedThing featImprovedTrip } )
+  .specialAttacks ( { .description "+4 to trip attempts when two sizes smaller, can not counter-trip" } )
+  .sources sourcesDragon
+end
+
+featGrasshopperStrike in ( groupAllFeats groupGeneralFeats )
+  .name "grasshopper strike"
+  .takeMultiple no
+  .conditions ( { .type ptMinimumAbilityScore .affectedThing astDexterity .magnitude 13 }
+  	{ .type ptFeat .affectedThing featDodge }
+  	{ .type ptFeat .affectedThing featMobility }
+  	{ .type ptFeat .affectedThing featSpringAttack }
+  	{ .type ptMinimumBaseAttack .magnitude 4 }
+  	{ .type ptMinimumSkillRank .affectedThing skillJump .magnitude 5 }
+  	{ .type ptMinimumSkillRank .affectedThing skillTumble .magnitude 5 } )
+  .sources sourcesDragon
+end
+
+featStaggeringBlow in ( groupAllFeats groupGeneralFeats )  
+  .name "staggering blow"
+  .takeMultiple no
+  .conditions ( { .type ptMinimumAbilityScore .affectedThing astDexterity .magnitude 13 }
+  	{ .type ptMinimumAbilityScore .affectedThing astWisdom .magnitude 13 }
+  	{ .type ptMinimumAbilityScore .affectedThing astStrength .magnitude 15 }
+  	{ .type ptFeat .affectedThing featImprovedUnarmedStrike }
+  	{ .type ptFeat .affectedThing featStunningFist }
+  	{ .type ptMinimumBaseAttack .magnitude 8 } )
+  .specialAttacks ( { .description "Stagger an opponent if he is stunned" } )
+  .sources sourcesDragon
+end
+

@@ -1,0 +1,167 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dragon Magazine Annual #5, converted to Basilisk format by
+ * Robert Szkotak (dkphoenix@hotmail.com), aka "LightPhoenix" on
+ * Eric Noah's messageboards.
+ * --------------------------------------------------------------------- */
+
+/* "Rays of Light", p. 22-26 */
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellDistract { "Distract" schEnchantment subschCompulsion $ sourcesDragon }
+  spellDistractingRay { "Distracting Ray" schAbjuration $ $ sourcesDragon }
+  spellEagleEyes { "Eagle Eyes" schTransmutation $ $ sourcesDragon }
+  spellGlibTongue { "Glib Tongue" schTransmutation $ $ sourcesDragon }
+  spellGreaterDisruptUndead { "Greater Disrupt Undead" schNecromancy $ $ sourcesDragon }
+  spellLordsCharisma { "Lord's Charisma" schTransmutation $ $ sourcesDragon }
+  spellMinorReflection { "Minor Reflection" schAbjuration $ $ sourcesDragon }
+  spellRayOfClumsiness { "Ray of Clumsiness" schTransmutation $ $ sourcesDragon }  
+  spellRayOfDeanimation { "Ray of Deanimation" schAbjuration $ $ sourcesDragon }
+  spellRayOfDizziness { "Ray of Dizziness" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDragon }
+  spellRayOfEntropy { "Ray of Entropy" schNecromancy $ $ sourcesDragon }
+  spellRayOfFlame { "Ray of Flame" schEvocation  $ ( descFire ) sourcesDragon }
+  spellRayOfIce { "Ray of Ice" schEvocation $ ( descCold ) sourcesDragon }
+  spellRayOfLight { "Ray of Light" schEvocation $ ( descLight ) sourcesDragon }
+  spellRayOfSickness { "Ray of Sickness" schNecromancy $ $ sourcesDragon }
+  spellRayOfStupidity { "Ray of Stupidity" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDragon }
+  spellRayOfWeakness { "Ray of Weakness" schNecromancy $ $ sourcesDragon }
+  spellRustRay { "Rust Ray" schTransmutation $ $ sourcesDragon }
+  spellStingRay { "Sting Ray" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDragon }
+  spellStunRay { "Stun Ray" schConjuration subschCreation (descElectricity) sourcesDragon }
+  spellSuddenMastery { "Sudden Mastery" schTransmutation $ $ sourcesDragon }
+  spellTargetingRay { "Targeting Ray" schDivination $ $ sourcesDragon }
+end
+
+category groupSpellsBardL1
+  spellRayOfLight spellTargetingRay
+end
+
+category groupSpellsBardL2
+  spellDistractingRay spellRayOfDizziness
+end
+
+category groupSpellsBardL3
+  spellMinorReflection spellStingRay
+end
+
+category groupSpellsHeraldL0
+  spellDancingLights spellDaze spellDistract spellGhostSound spellGuidance spellKnowDirection spellLight
+  spellMageHand spellOpenClose spellPrestidigitation
+end
+
+category groupSpellsHeraldL1
+  spellAlarm spellChangeSelf spellCharmPerson spellComprehendLanguages spellEndureElements
+  spellDetectSecretDoors spellGlibTongue spellMessage spellSleep spellSpiderClimb
+end
+
+category groupSpellsHeraldL2
+  spellArcaneLock spellCatsGrace spellDarkness spellDetectThoughts spellInvisibility spellKnock
+  spellLocateObject spellLordsCharisma spellSilence spellSuggestion
+end
+
+category groupSpellsHeraldL3
+  spellClairaudienceClairvoyance spellDarkvision spellDetectScrying spellEagleEyes spellHoldPerson
+  spellIllusoryScript spellLeomundsTinyHut spellNondetection spellShrinkItem spellTongues
+end
+
+category groupSpellsHeraldL4
+  spellDiscernLies spellDimensionDoor spellDominatePerson spellFreedomOfMovement spellLegendLore
+  spellModifyMemory spellScrying spellSending spellSpeakWithDead spellSuddenMastery
+end
+
+category groupSpellsSorcererL1
+  spellRayOfClumsiness spellRayOfFlame spellRayOfLight spellStunRay spellTargetingRay
+end
+
+category groupSpellsSorcererL2
+  spellDistractingRay spellRayOfDizziness spellRayOfSickness spellRayOfIce spellRayOfStupidity
+end
+
+category groupSpellsSorcererL3
+  spellMinorReflection spellRustRay spellStingRay spellGreaterDisruptUndead
+end
+
+category groupSpellsSorcererL4
+  spellRayOfWeakness spellRayOfDeanimation
+end
+
+category groupSpellsSorcererL5
+  spellRayOfEntropy
+end
+
+category groupSpellsWizardL1
+  spellRayOfClumsiness spellRayOfFlame spellRayOfLight spellStunRay spellTargetingRay
+end
+
+category groupSpellsWizardL2
+  spellDistractingRay spellRayOfDizziness spellRayOfSickness spellRayOfIce spellRayOfStupidity
+end
+
+category groupSpellsWizardL3
+  spellMinorReflection spellRustRay spellStingRay spellGreaterDisruptUndead
+end
+
+category groupSpellsWizardL4
+  spellRayOfWeakness spellRayOfDeanimation
+end
+
+category groupSpellsWizardL5
+  spellRayOfEntropy
+end
+
+category groupArcaneScrollSpells0
+  spellDistract
+end
+
+category groupArcaneScrollSpells1
+  spellRayOfClumsiness spellRayOfFlame spellRayOfLight spellStunRay spellTargetingRay spellGlibTongue
+end
+
+category groupArcaneScrollSpells2
+  spellDistractingRay spellRayOfDizziness spellRayOfSickness spellRayOfIce spellRayOfStupidity spellLordsCharisma
+end
+
+category groupArcaneScrollSpells3
+  spellMinorReflection spellRustRay spellStingRay spellGreaterDisruptUndead spellEagleEyes
+end
+
+category groupArcaneScrollSpells4
+  spellRayOfWeakness spellRayOfDeanimation spellSuddenMastery
+end
+
+category groupArcaneScrollSpells5
+  spellRayOfEntropy
+end
+
+
+/* "Rays of Light", p. 20-26 */
+
+featRayBurst in ( groupAllFeats groupMetaMagicFeats )
+  .name "ray burst"
+  .takeMultiple no
+  .sources sourcesDragon
+end
+
+featRayConing in ( groupAllFeats groupMetaMagicFeats )
+  .name "ray coning"
+  .takeMultiple no
+  .sources sourcesDragon
+end
+
+featRayExtension in ( groupAllFeats groupMetaMagicFeats )
+  .name "ray extension"
+  .takeMultiple no
+  .sources sourcesDragon
+end
+
+featRayFocus in ( groupAllFeats groupGeneralFeats )
+  .name "ray focus"
+  .takeMultiple no
+  .sources sourcesDragon
+end
+
+featRaySplitting in ( groupAllFeats groupMetaMagicFeats )
+  .name "ray splitting"
+  .takeMultiple no
+  .sources sourcesDragon
+end
+
