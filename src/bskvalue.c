@@ -604,9 +604,13 @@ static BSKUI8 s_determineNumberSize( BSKUI16 type ) {
 }
 
 
+/* updated 21 Feb 2001 by Lydia Leong (lwl@sorcery.black-knight.org).  Previously,
+ * typecasting the value->datum pointer and assigning values directly to it was
+ * causing memory problems on some platforms.  This is fixed by using a memcpy
+ * instead, and is probably a cleaner solution. */
+
 static void s_setValueNumber( BSKValue* value, BSKFLOAT num, BSKUI32 units ) {
   BSKUI8    size;
-  BSKNOTYPE ptr;
 
   BSKInitializeValue( value );
   
@@ -614,51 +618,51 @@ static void s_setValueNumber( BSKValue* value, BSKFLOAT num, BSKUI32 units ) {
 
   value->type = s_determineNumberType( num );
   size = s_determineNumberSize( value->type );
-  if( units > 0 ) {
-    size += sizeof( BSKUI32 );
-  }
 
   /* allocate the number's buffer */
 
-  value->datum = BSKMalloc( size );
+  value->datum = BSKMalloc( size + ( units > 0 ? sizeof( BSKUI32 ) : 0 ) );
 
-  ptr = 0;
   switch( value->type ) {
     case VT_BYTE:
-      *(BSKI8*)value->datum = (BSKI8)num;
-      if( units > 0 ) {
-        ptr = ((BSKI8*)value->datum)+1;
-      }
+			{
+				BSKI8 tmp;
+				tmp = (BSKI8)num;
+				BSKMemCpy( value->datum, &tmp, size );
+			}
       break;
     case VT_WORD:
-      *(BSKI16*)value->datum = (BSKI16)num;
-      if( units > 0 ) {
-        ptr = ((BSKI16*)value->datum)+1;
-      }
+			{
+				BSKI16 tmp;
+				tmp = (BSKI16)num;
+				BSKMemCpy( value->datum, &tmp, size );
+			}
       break;
     case VT_DWORD:
-      *(BSKI32*)value->datum = (BSKI32)num;
-      if( units > 0 ) {
-        ptr = ((BSKI32*)value->datum)+1;
+			{
+				BSKI32 tmp;
+				tmp = (BSKI32)num;
+				BSKMemCpy( value->datum, &tmp, size );
       }
       break;
     case VT_FLOAT:
-      *(BSKFLOAT*)value->datum = num;
-      if( units > 0 ) {
-        ptr = ((BSKFLOAT*)value->datum)+1;
-      }
+			BSKMemCpy( value->datum, &num, size );
       break;
   }
 
-  /* if the ptr != 0, then there are units and we need to set the units
-   * in the buffer at the position indicated by ptr */
+	/* if we have units, set a flag indicating this, and tack them on */
 
-  if( ptr != 0 ) {
+  if( units > 0 ) {
     value->flags |= VF_UNITS;
-    *(BSKUI32*)ptr = units;
+		BSKMemCpy( (value->datum) + size, &units, sizeof( BSKUI32 ) );
   }
 }
 
+
+/* updated 21 Feb 2001 by Lydia Leong (lwl@sorcery.black-knight.org).  Previously,
+ * typecasting the value->datum pointer and assigning values directly to it was
+ * causing memory problems on some platforms.  This is fixed by using a memcpy
+ * instead, and is probably a cleaner solution. */
 
 static void s_setValueDice( BSKValue* value, 
                             BSKI16    count,
@@ -667,50 +671,38 @@ static void s_setValueDice( BSKValue* value,
                             BSKI16    modifier,
                             BSKUI32   units )
 {
-  BSKUI8    size;
-  BSKNOTYPE ptr;
-
   BSKInitializeValue( value );
-
-  /* figure the size of the buffer */
-
-  size = 2 * sizeof( BSKUI16 );
-  if( modifier != 0 ) {
-    size += sizeof( BSKI16 );
-  }
-  if( units > 0 ) {
-    size += sizeof( BSKUI32 );
-  }
 
   value->type = VT_DICE;
   value->flags = VF_NONE;
 
-  if( modifier != 0 ) {
-    value->flags |= VF_MODIFIER;
-  }
-
-  if( op == '*' ) {
-    value->flags |= VF_MULTIPLICATIVE;
-  }
-
   /* allocate and populate the buffer */
 
-  value->datum = BSKMalloc( size );
-  ((BSKI16*)value->datum)[0] = count;
-  ((BSKUI16*)value->datum)[1] = type;
+	value->datum = BSKMalloc( sizeof( BSKI16 ) + sizeof( BSKUI16 ) +
+			                      ( ( modifier != 0 ) ? sizeof( BSKI16 ) : 0 ) +
+														( ( units > 0 ) ? sizeof( BSKUI32 ) : 0 ) );
+
+	BSKMemCpy( value->datum, &count, sizeof( BSKI16 ) );
+	BSKMemCpy( ( value->datum ) + sizeof( BSKI16 ), &type, sizeof( BSKUI16 ) );
+
+	/* if a modifier has been specified, set the appropriate flags */
 
   if( modifier != 0 ) {
-    ((BSKI16*)value->datum)[2] = modifier;
-    ptr = &(((BSKI16*)value->datum)[3]);
-  } else {
-    ptr = &(((BSKI16*)value->datum)[2]);
+		value->flags |= VF_MODIFIER;
+		if( op == '*' ) {
+			value->flags |= VF_MULTIPLICATIVE;
+		}
+		BSKMemCpy( ( value->datum ) + sizeof( BSKI16 ) + sizeof( BSKUI16 ),
+				       &modifier, sizeof( BSKI16 ) );
   }
 
   /* if there are units, add them in as well */
 
   if( units > 0 ) {
     value->flags |= VF_UNITS;
-    *(BSKUI32*)ptr = units;
+		BSKMemCpy( ( value->datum ) + sizeof( BSKI16 ) + sizeof( BSKUI16 ) +
+				       ( ( modifier != 0 ) ? sizeof( BSKI16 ) : 0 ),
+							 &units, sizeof( BSKUI32 ) );
   }
 }
 
