@@ -1,3 +1,9 @@
+version 1.04
+  Data Changes:
+    Added data for Manual of the Planes, Book of Eldritch Might, Diablo,
+      Dungeon Magazine, Polyhedron Magazine, and more Dragon Magazine
+      issues.
+
 version 1.03
   Package changes:
     Added paths to new dat/defenders and dat/tnblood directors for the
