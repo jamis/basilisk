@@ -2,6 +2,8 @@ version 1.01
   Makefile changes:
 		Added "library" target to Makefile for making a dynamic-loading basilisk
 			library. (Required significant modifications to the makefile).
+		Added a RUNLIBS variable.  Swapped order of -lbasilisk and -lm so that
+			math library would be picked up correctly on some platforms.
 	Utility changes:
 		Changed names of 4 callback functions in bskcallback.c:
 			myConsole -> BSKDefaultConsole
@@ -17,6 +19,8 @@ version 1.01
 		Modified BSKPrintStackTrace to use new "line" member of BSKStackFrame
 			to tell what line of what rule was called, for each level of the
 			stack.
+		Modified bsktreasure.c to correctly set default options if none are
+			specified.
 	Documentation Changes:
 		Modified script.bnf to reflect the new preferred syntax for specifying
 			parent categories for entities (using the "in" keyword).
@@ -58,6 +62,9 @@ version 1.01
 		Added BSKStackFrameGetLineNumber function to bskexec module.
 		Added "line" member to BSKStackFrame to store current line number on
 			a per-stack-frame basis (for use in stack tracing).
+		Removed typecasts from s_setValueNumber and s_setValueDice, replacing
+			them with BSKMemCpy calls.  This fixed a core-dump issue on Irix
+			6.5.
 	
 14 Feb 2001
 version 1.0
