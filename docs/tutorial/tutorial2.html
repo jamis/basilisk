@@ -1,0 +1,130 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk Tutorial #2: Adding Data, Part 2</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+    <H1>Tutorial #2: Adding Data, Part 2</H1>
+    <I>By <A HREF="mailto:minam@rpgplanet.com">Jamis Buck</A> (minam@rpgplanet.com)</I><BR>
+    <I>doc version 1.0</I>
+
+    <P>
+
+    This tutorial assumes that:
+    <OL>
+      <LI>You have completed <A HREF="tutorial1.html">Tutorial #1</A>.
+      <LI>You have deleted the previous contents of "dat/tutorial" and made a clean copy
+          of "dat/standard" into "dat/tutorial".
+    </OL>
+
+    Well, you've modified the database.  But now, suppose you wanted to send your new weapon
+    definition to a friend, so they could use it in their own database.  Hmmm -- you have to send
+    them all your modified files, and if they have already modified those files, they will need
+    to find some way to merge the changes into their existing data...  Ugly.  Ugly, ugly.
+
+    <P>
+
+    Fortunately, there is a clean solution.  What you need to do is define your new weapon in
+    it's own file, and then all you have to do is send that one file to your friend!
+
+    <P>
+
+    For simplicity, I will just show here what the new file will look like, and then explain
+    how we got it:
+
+<BLOCKQUOTE>
+<PRE>
+weaponSpikedFist ( groupWeapon groupPiercingWeapon groupMeleeWeapon 3:groupUncommonWeapons )
+  .name "spiked fist"
+  .cost 7 gp
+  .damage 1d3
+  .criticalRange 20
+  .criticalMultiplier 2
+  .weight 1 lb
+  .size tiny
+end
+</PRE>
+</BLOCKQUOTE>
+
+    Hope you didn't blink, because that is <I>all</i> you need to put in your new file.  Notice that
+    we didn't use the <b>template</b> syntax here, since we only had one item to define -- if we'd had
+    to define several items (demonstrated below), we would have done better to use a template, but
+    since we were only defining one item, this was a much shorter (and simpler) solution.
+
+    <P>
+
+    First, look at all the category names in the parentheses following our weapon's identifier.  This
+    list is simply all the categories that the given thing belongs to.  And notice the "3:" before
+    the "groupUncommonWeapons" -- this says that "weaponSpikedFist" has a weight of 3 in the category
+    "groupUncommonWeapons".  If a weighting is not given, it is simply assumed to be 1.
+
+    <P>
+
+    Following the category list is the list of attributes.  This is the "long" syntax because each
+    attribute is explicitly named by typing a "." followed by the name of the attribute, followed by
+    the value of the attribute.
+
+    <P>
+
+    Now, before this will actually work in the treasure generator, we need to modify the <b>index.bsk</b> file
+    so that it knows to read the file we just created.  First, save your new file as "myweapons.bsk", and open
+    index.bsk.  Go to the very end of the file, and add a line that says:
+
+<BLOCKQUOTE>
+<PRE>
+#include "myweapons.bsk"
+</PRE>
+</BLOCKQUOTE>
+
+    This will cause the compiler to read your new file in addition to all the others mentioned in the
+    index.bsk file.  That done, save "index.bsk", open the treasure generator, and compile it as you did
+    in <A HREF="tutorial1.html">Tutorial #1</A>.
+
+    <P>
+
+    Now, since we're on the subject, what if you wanted to declare multiple new weapons?  Here's
+    how:
+
+<BLOCKQUOTE>
+<PRE>
+template ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size }
+  weaponSpikedFist ( groupPiercingDamage groupMeleeWeapon 3:groupUncommonWeapons )
+                   { "spiked fist"  7 gp  1d3  20  2  1 lb  tiny  }
+  weaponSerratedBlade ( groupSlashingDamage groupMeleeWeapon 5:groupUncommonWeapons )
+                   { "serrated blade"  18 gp  1d10  18  3  15 lb  large }
+  weaponBarbedDart ( groupPiercingDamage groupRangedWeapon 2:groupUncommonWeapons )
+                   { "barbed dart"  5 sp  1d3  20  2  1/10 lb  tiny }
+end
+
+weaponBarbedDart
+  .rangeIncrement 10 ft
+end
+</PRE>
+</BLOCKQUOTE>
+
+    Notice how the template has a category list (containing one category, groupWeapon).  This
+    means that all things defined in it are automatically in that category.  Each entry, too,
+    may have a category list, so that each individual entry may be added to categories
+    independent of the other entries being defined.
+
+    <P>
+
+    Lastly, notice that weaponBarbedDart is declared again after the template.  This is so that
+    we can define any additional properties of the item (in this case, a range increment).  We
+    could also have added "rangeIncrement" to the template's attribute list, but this would have
+    been wasteful since most weapons don't have a range increment.  It was clearer to define
+    the weapon again and add the necessary attributes.
+
+    <P>
+
+    Notice, now, that if you wanted to share your new weapons with a friend, all you have to do
+    is send him the "myweapons.bsk" file.  He would then save it on his computer, modify the
+    index.bsk file for his data so it looks at the new file, and then compile the database.
+
+    <P>
+
+    <A HREF="index.html">Back to the tutorial index</A>
+    <HR>
+    <I>Last modified on 14 Feb 2001 by Jamis Buck (minam@rpgplanet.com)</I>
+  </BODY>
+</HTML>
