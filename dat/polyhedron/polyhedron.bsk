@@ -1,0 +1,6 @@
+sourcePolyhedron in ( sourcesPolyhedron groupAllSources )
+  .name "Polyhedron Magazine"
+end
+
+#include "poly_146.bsk"
+#include "poly_144.bsk"

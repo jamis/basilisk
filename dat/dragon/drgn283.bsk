@@ -1,0 +1,50 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dragon Magazine issue #283, converted to Basilisk format by
+ * Eric Polovich
+ * --------------------------------------------------------------------- */
+
+/* "Foes of Stormweather", p.86-91 */
+
+wondrousDustofSlumber
+  .name "dust of slumber"
+  .cost 50 gp
+  .specialQualities ( { .type satSpellEffect
+                        .spell spellSleep } )
+
+  .sources sourcesDragon
+end
+
+category groupMinorWondrousItems
+  wondrousDustofSlumber
+end
+
+category groupMediumWondrousItems
+  wondrousPortalDust
+end
+
+ringRingsofPlaneShifting in ( groupRings )
+  .name "rings of planeshifting"
+  .cost 136500 gp
+  .activationMethod atCommandWord
+  .specialQualities ( { .type satSpellEffect .spell spellPlaneShift } )
+  .sources sourcesDragon
+end
+
+
+category groupRingsMajor
+  [ 1] ringRingsofPlaneShifting
+end
+
+
+wstQuarterstaffofPain
+  .name "quarterstaff of pain"
+  .prototype weaponQuarterstaff
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 } )
+  .cost 72300 gp
+  .sources sourcesDragon
+end
+
+category groupMajorSpecificWeapons
+  [ 4] wstQuarterstaffofPain
+end

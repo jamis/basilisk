@@ -1,0 +1,5 @@
+featLucidDreaming in ( groupAllFeats groupGeneralFeats )
+  .name "Lucid Dreaming"
+  .takeMultiple yes
+  .sources sourcesMotPlanes
+end

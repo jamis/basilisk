@@ -1,0 +1,7 @@
+sourceMotPlanes in ( sourcesMotPlanes groupAllSources )
+  .name "Manual of the Planes"
+end
+
+#include "planes_items.bsk"
+#include "planes_spells.bsk"
+#include "planes_feats.bsk"

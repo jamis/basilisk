@@ -1,0 +1,30 @@
+/* ------------------------------------------------------------------------ *
+ * Material in this file is taken from the "Manual of the Planes"  by
+ * the Jeff Grubb, Bruce Cordell, and David Noonan.
+ *
+ * converted to Basilisk format by Eric Polovich
+ * ------------------------------------------------------------------------ */
+
+/* wondrous items */
+
+wondrousDimensionalSextant
+  .name "dimensional sextant"
+  .cost 21600gp
+  .canBeIntelligent true
+  .sources sourcesMotPlanes
+end
+
+wondrousEtherealTapestry
+  .name "ethereal tapestry"
+  .cost 47520gp
+  .canBeIntelligent true
+  .sources sourcesMotPlanes
+end
+
+category groupMediumWondrousItems
+ [ 2] wondrousDimensionalSextant
+end
+
+category groupMajorWondrousItems
+ [2] wondrousEtherealTapestry
+end

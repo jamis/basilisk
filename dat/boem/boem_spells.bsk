@@ -1,0 +1,343 @@
+/* --------------------------------------------------------------------- *
+ * Data from Monte Cooke's "Book of Eldritch Might", 
+ * converted to Basilisk format by
+ * Eric Polovich
+ * --------------------------------------------------------------------- */
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellAcidicCurse { "Acidic Curse" schEvocation $ $ sourcesBookofEldritchMight }
+  spellArcanaForm { "ArcanaForm" schTransmutation $ $ sourcesBookofEldritchMight }
+  spellBindItem { "Bind Item" schEvocation $ $ sourcesBookofEldritchMight }
+  spellBlackMulching { "Black Mulching" schNecromancy $ $ sourcesBookofEldritchMight }
+  spellBoltofConjuring { "Bolt of Conjuring" schConjuration $ $ sourcesBookofEldritchMight }
+  spellBoneTattoo { "Bone Tattoo" schNecromancy $ $ sourcesBookofEldritchMight }
+  spellChainsofVengeance { "Chains of Vengeance" schEvocation $ $ sourcesBookofEldritchMight }
+  spellColdscream { "Coldscream" schEvocation $ $ sourcesBookofEldritchMight }
+  spellComa { "Coma" schEnchantment$ $ sourcesBookofEldritchMight }
+  spellConditionalSpell { "Conditional Spell" schEvocation $ $ sourcesBookofEldritchMight }
+  spellCrossofLightning { "Cross of Lightning" schEvocation $ $ sourcesBookofEldritchMight }
+  spellDevlinsBarb { "Devlin's Barb" schConjuration $ $ sourcesBookofEldritchMight }
+  spellDevlinsVenomblade { "Devlin's Venomblade" schConjuration $ $ sourcesBookofEldritchMight }
+  spellDragonskin { "Dragonskin" schConjuration $ $ sourcesBookofEldritchMight }
+  spellElectricalDeluge { "Electrical Deluge" schEvocation $ $ sourcesBookofEldritchMight }
+  spellElementalShroud { "Elemental Shroud" schNecromancy $ $ sourcesBookofEldritchMight }
+  spellEnchantingFlavor { "Enchanting Flavor" schTransmutation $ $ sourcesBookofEldritchMight }
+  spellEnhanceMagicalFlow { "Enhance Magical Flow" schUniversal $ $ sourcesBookofEldritchMight }
+  spellFlamingCorrosion { "Flaming Corrosion" schEvocation $ $ sourcesBookofEldritchMight }
+  spellFoilTracer { "Foil Tracer" schAbjuration $ $ sourcesBookofEldritchMight }
+  spellFreezingClaw { "Freezing Claw" schConjuration $ $ sourcesBookofEldritchMight }
+  spellGreaterMagicalFlowEnhancement { "Greater Magical Flow Enhancement" schUniversal $ $ sourcesBookofEldritchMight }
+  spellGreaterMarkofAir { "Greater Mark of Air" schEvocation $ $ sourcesBookofEldritchMight }
+  spellGreaterMarkofEarth { "Greater Mark of Earth" schEvocation $ $ sourcesBookofEldritchMight }
+  spellGreaterMarkofFire { "Greater Mark of Fire" schEvocation $ $ sourcesBookofEldritchMight }
+  spellGreaterMarkofFrost { "Greater Mark of Frost" schEvocation $ $ sourcesBookofEldritchMight }
+  spellGreaterMarkofWater { "Greater Mark of Water" schEvocation $ $ sourcesBookofEldritchMight }
+  spellGreaterSleep { "Greater Sleep" schEnchantment $ $ sourcesBookofEldritchMight }
+  spellGuilt { "Guilt" schEnchantment $ $ sourcesBookofEldritchMight }
+  spellHiddenObject { "Hidden Object" schTransmutation $ $ sourcesBookofEldritchMight }
+  spellIcebolt { "Icebolt" schEvocation $ $ sourcesBookofEldritchMight }
+  spellImbueGuardian { "Imbue Guardian" schTransmutation $ $ sourcesBookofEldritchMight }
+  spellMagmaBurst { "Magma Burst" schConjuration $ $ sourcesBookofEldritchMight }
+  spellMantleofEgregiousMight { "Mantle of Egregious Might" schTransmutation $ $ sourcesBookofEldritchMight }
+  spellMarkofAir { "Mark of Air" schEvocation $ $ sourcesBookofEldritchMight }
+  spellMarkofDeath { "Mark of Death" schEvocation $ $ sourcesBookofEldritchMight }
+  spellMarkofEarth { "Mark of Earth" schEvocation $ $ sourcesBookofEldritchMight }
+  spellMarkofFire { "Mark of Frost" schEvocation $ $ sourcesBookofEldritchMight }
+  spellMarkofWater { "Mark of Water" schEvocation $ $ sourcesBookofEldritchMight }
+  spellMassFly { "Mass Fly" schTransmutation $ $ sourcesBookofEldritchMight }
+  spellMentalAlarm { "Mental Alarm" schDivination $ $ sourcesBookofEldritchMight }
+  spellMinorWard { "Minor Ward" schAbjuration $ $ sourcesBookofEldritchMight }
+  spellPreciseVision { "Precise Vision" schTransmutation $ $ sourcesBookofEldritchMight }
+  spellPrimalRelease { "Primal Release" schTransmutation $ $ sourcesBookofEldritchMight }
+  spellSilentSound { "Silent Sound" schEvocation $ $ sourcesBookofEldritchMight }
+  spellSpelltrap { "Spelltrap" schAbjuration $ $ sourcesBookofEldritchMight }
+  spellStaticVeil { "Static Veil" schConjuration $ $ sourcesBookofEldritchMight }
+  spellTeleportBlock { "Teleport Block" schAbjuration $ $ sourcesBookofEldritchMight }
+  spellTeleportCoordinatesTransfer { "Teleport Coordinates Transfer" schDivination $ $ sourcesBookofEldritchMight }
+  spellTeleportRedirect { "Teleport Redirect" schEvocation $ $ sourcesBookofEldritchMight }
+  spellTeleportTracer { "Teleport Tracer" schDivination $ $ sourcesBookofEldritchMight }
+  spellThiefWard { "Thief Ward" schAbjuration $ $ sourcesBookofEldritchMight }
+  spellTongueofAngels { "Tongue of Angels" schEvocation $ $ sourcesBookofEldritchMight }
+  spellTongueofFiends { "Tongue of Fiends" schTransmutation $ $ sourcesBookofEldritchMight }
+  spellUndauntedFixture { "Undaunted Fixture" schTransmutation $ $ sourcesBookofEldritchMight }
+  spellZoneofSpeed { "Zone of Speed" schEvocation $ $ sourcesBookofEldritchMight }
+end
+
+category groupSpellsWizardL0
+  spellDevlinsBarb
+  spellEnchantingFlavor
+  spellMentalAlarm
+  spellMinorWard
+  spellTongueofAngels
+  spellTongueofFiends
+end
+
+category groupSpellsWizardL1
+  spellAcidicCurse
+  spellGuilt
+  spellPreciseVision
+  spellSilentSound
+end
+
+category groupSpellsWizardL2
+  spellEnhanceMagicalFlow
+  spellIcebolt
+  spellMarkofAir
+  spellMarkofEarth
+  spellMarkofFire
+  spellMarkofFrost
+  spellMarkofWater
+  spellStaticVeil
+  spellThiefWard
+  spellUndauntedFixture
+end
+
+category groupSpellsWizardL3
+  spellBoltofConjuring
+  spellBoneTattoo
+  spellDevlinsVenomblade
+  spellDragonskin
+  spellFoilTracer
+  spellGreaterSleep
+end
+
+category groupSpellsWizardL4
+  spellBindItem
+  spellBlackMulching
+  spellChainsofVengeance
+  spellColdscream
+  spellFlamingCorrosion
+  spellFreezingClaw
+  spellGreaterMagicalFlowEnhancement
+  spellGreaterMarkofAir
+  spellGreaterMarkofEarth
+  spellGreaterMarkofFire
+  spellGreaterMarkofFrost
+  spellGreaterMarkofWater
+  spellHiddenObject
+  spellSpelltrap
+  spellZoneofSpeed
+end
+
+category groupSpellsWizardL5
+  spellCrossofLightning
+  spellElementalShroud
+  spellTeleportBlock
+  spellTeleportRedirect
+end
+
+category groupSpellsWizardL6
+  spellComa
+  spellConditionalSpell
+  spellElectricalDeluge
+  spellTeleportCoordinatesTransfer
+  spellTeleportTracer
+end
+
+category groupSpellsWizardL7
+  spellMassFly
+end
+
+category groupSpellsWizardL8
+  spellImbueGuardian
+  spellMantleofEgregiousMight
+  spellMarkofDeath
+  spellPrimalRelease
+end
+
+category groupSpellsWizardL9
+  spellArcanaForm
+  spellMagmaBurst
+end
+
+category groupSpellsBardL1
+  spellGuilt
+  spellSilentSound
+end
+
+category groupSpellsBardL3
+  spellDragonskin
+  spellGreaterSleep
+end
+
+category groupSpellsDruidL2
+  spellIcebolt
+  spellMarkofAir
+  spellMarkofEarth
+  spellMarkofFire
+  spellMarkofFrost
+  spellMarkofWater
+end
+
+category groupSpellsDruidL4
+  spellBlackMulching
+  spellGreaterMarkofAir
+  spellGreaterMarkofEarth
+  spellGreaterMarkofFire
+  spellGreaterMarkofFrost
+  spellGreaterMarkofWater
+end
+
+category groupSpellsDruidL6
+  spellFoilTracer
+end
+
+category groupSpellsDruidL9
+  spellMagmaBurst
+end
+
+category groupSpellsClericL0
+  spellTongueofAngels
+  spellTongueofFiends
+end
+
+category groupSpellsClericL1
+  spellGuilt
+end
+
+category groupSpellsClericL2
+  spellEnhanceMagicalFlow
+  spellStaticVeil
+end
+
+category groupSpellsClericL4
+  spellGreaterMagicalFlowEnhancement
+end
+
+category groupSpellsClericL6
+  spellComa
+end
+
+category groupSpellsAssassinL1
+  spellDevlinsBarb
+end
+
+category groupSpellsAssassinL3
+  spellDevlinsVenomblade
+end
+
+category groupArcaneScrollSpells0
+  [ 4]  spellDevlinsBarb
+  [ 4]  spellEnchantingFlavor
+  [ 4]  spellMentalAlarm
+  [ 4]  spellMinorWard
+  [ 4]  spellTongueofAngels
+  [ 4]  spellTongueofFiends
+end
+
+category groupArcaneScrollSpells1
+  [ 4]  spellAcidicCurse
+  [ 4]  spellGuilt
+  [ 4]  spellPreciseVision
+  [ 4]  spellSilentSound
+end
+
+category groupArcaneScrollSpells2
+  [ 4]  spellEnhanceMagicalFlow
+  [ 4]  spellIcebolt
+  [ 4]  spellMarkofAir
+  [ 4]  spellMarkofEarth
+  [ 4]  spellMarkofFire
+  [ 4]  spellMarkofFrost
+  [ 4]  spellMarkofWater
+  [ 4]  spellStaticVeil
+  [ 4]  spellThiefWard
+  [ 4]  spellUndauntedFixture
+end
+
+category groupArcaneScrollSpells3
+  [ 4]  spellBoltofConjuring
+  [ 4]  spellBoneTattoo
+  [ 4]  spellDevlinsVenomblade
+  [ 4]  spellDragonskin
+  [ 4]  spellFoilTracer
+  [ 4]  spellGreaterSleep
+end
+
+category groupArcaneScrollSpells4
+  [ 4]  spellBindItem
+  [ 4]  spellBlackMulching
+  [ 4]  spellChainsofVengeance
+  [ 4]  spellColdscream
+  [ 4]  spellFlamingCorrosion
+  [ 4]  spellFreezingClaw
+  [ 4]  spellGreaterMagicalFlowEnhancement
+  [ 4]  spellGreaterMarkofAir
+  [ 4]  spellGreaterMarkofEarth
+  [ 4]  spellGreaterMarkofFire
+  [ 4]  spellGreaterMarkofFrost
+  [ 4]  spellGreaterMarkofWater
+  [ 4]  spellHiddenObject
+  [ 4]  spellSpelltrap
+  [ 4]  spellZoneofSpeed
+end
+
+category groupArcaneScrollSpells5
+  [ 4]  spellCrossofLightning
+  [ 4]  spellElementalShroud
+  [ 4]  spellTeleportBlock
+  [ 4]  spellTeleportRedirect
+end
+
+category groupArcaneScrollSpells6
+  [ 4]  spellComa
+  [ 4]  spellConditionalSpell
+  [ 4]  spellElectricalDeluge
+  [ 4]  spellTeleportCoordinatesTransfer
+  [ 4]  spellTeleportTracer
+end
+
+category groupArcaneScrollSpells7
+  [ 4]  spellMassFly
+end
+
+category groupArcaneScrollSpells8
+  [ 4]  spellImbueGuardian
+  [ 4]  spellMantleofEgregiousMight
+  [ 4]  spellMarkofDeath
+  [ 4]  spellPrimalRelease
+end
+
+category groupArcaneScrollSpells9
+  [ 4]  spellArcanaForm
+  [ 4]  spellMagmaBurst
+end
+
+category groupDivineScrollSpells0
+  [ 4]  spellTongueofAngels
+  [ 4]  spellTongueofFiends
+end
+
+category groupDivineScrollSpells1
+  [ 4]  spellGuilt
+end
+
+category groupDivineScrollSpells2
+  [ 4]  spellEnhanceMagicalFlow
+  [ 4]  spellIcebolt
+  [ 4]  spellMarkofAir
+  [ 4]  spellMarkofEarth
+  [ 4]  spellMarkofFire
+  [ 4]  spellMarkofFrost
+  [ 4]  spellMarkofWater
+  [ 4]  spellStaticVeil
+end
+
+category groupDivineScrollSpells4
+  [ 4]  spellBlackMulching
+  [ 4]  spellGreaterMagicalFlowEnhancement
+  [ 4]  spellGreaterMarkofAir
+  [ 4]  spellGreaterMarkofEarth
+  [ 4]  spellGreaterMarkofFire
+  [ 4]  spellGreaterMarkofFrost
+  [ 4]  spellGreaterMarkofWater
+end
+
+category groupDivineScrollSpells6
+  [ 4]  spellComa
+  [ 4]  spellFoilTracer
+end
+
+category groupDivineScrollSpells9
+  spellMagmaBurst
+end

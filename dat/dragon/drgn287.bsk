@@ -1,0 +1,131 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dragon Magazine issue #287, converted to Basilisk format by
+ * Eric Polovich
+ * --------------------------------------------------------------------- */
+
+/* "Dreamlands", p.32-37 */
+
+wondrousMirrorofDreams
+  .name "mirror of dreams"
+  .cost 40000 gp
+  .sources sourcesDragon
+end
+
+wondrousFigurineofProtectionFromDreams
+  .name "figurine of protection from dreams"
+  .cost 40000 gp
+  .sources sourcesDragon
+end
+
+category groupMajorWondrousItems
+  wondrousMirrorofDreams
+  wondrousFigurineofProtectionFromDreams
+end
+
+/* "Expand Your Mind", p.54-56 */
+
+featPsionicDefense in ( groupAllFeats groupPsionicFeats )
+  .name "psionic defense"
+  .takeMultiple no
+  .sources sourcesDragon
+end
+
+featAugmentConstruction in ( groupAllFeats groupPsionicFeats )
+  .name "augment construction"
+  .takeMultiple no
+  .conditions ( { .type ptMinimumManifesterLevel .magnitude 2 } )
+  .sources sourcesDragon
+end
+
+featChainPower in ( groupAllFeats groupPsionicFeats )
+  .name "chain power"
+  .takeMultiple no
+  .sources sourcesDragon
+end
+
+featPsionicEnergySubstitution in ( groupAllFeats groupMetapsionicFeats )
+  .name "psionic energy substitution"
+  .takeMultiple yes
+  .conditions ( { .type ptSkill .affectedThing skillKnowldegePsionics .magnitude 5 } )
+  .sources sourcesDragon
+end
+
+featPsionicEnergyAdmixture in ( groupAllFeats groupMetapsionicFeats )
+  .name "psionic energy admixture"
+  .takeMultiple yes
+  .conditions ( { .type ptFeat .affectedThing featPsionicEnergySubstitution }
+                { .type ptSkill .affectedThing skillKnowlegePsionics .magnitude 5 } )
+  .sources sourcesDragon
+end
+
+featExtraPower in ( groupAllFeats groupPsionicFeats )
+  .name "extra power"
+  .takeMultiple yes
+  .conditions ( { .type ptMinimumManifesterLevel .magnitude 3 } )
+  .sources sourcesDragon
+end
+
+featFortifyPower in ( groupAllFeats groupMetapsionicFeats )
+  .name "fortify power"
+  .takeMultiple yes
+  .sources sourcesDragon
+end
+
+featMindBlind in ( groupAllFeats groupPsionicFeats )
+  .name "mind blind"
+  .takeMultiple no
+  .conditions ( { .type ptFeat .affectedThing featPsychicBastion } )
+  .sources sourcesDragon
+end
+
+featReachPower in ( groupAllFeats groupMetapsionicFeats )
+  .name "reach power"
+  .takeMultiple no
+  .conditions ( { .type ptFeat .affectedThing featEnlargePower } )
+  .sources sourcesDragon
+end
+
+featRepeatPower in ( groupAllFeats groupMetapsionicFeats )
+  .name "repeat power"
+  .takeMultiple no
+  .sources sourcesDragon
+end
+
+featResculptMind in ( groupAllFeats groupPsionicFeats )
+  .name "resculpt mind"
+  .takeMultiple no
+  .conditions ( { .type ptMinimumManifesterLevel .magnitude 3 } )
+  .sources sourcesDragon
+end
+
+featSculptPower in ( groupAllFeats groupMetapsionicFeats )
+  .name "sculpt power"
+  .takeMultiple no
+  .sources sourcesDragon
+end
+
+featPowerSpecialization in ( groupAllFeats groupPsionicFeats )
+  .name "power specialization"
+  .takeMultiple no
+  .conditions ( { .type ptFeat .affectedThing featWeaponFocus }
+                { .type ptMinimumManifesterLevel .magnitude 4 } )
+  .sources sourcesDragon
+end
+
+featSplitPsionicRay in ( groupAllFeats groupMetapsionicFeats )
+  .name "split psionic ray"
+  .takeMultiple no
+  .sources sourcesDragon
+end
+
+featWidenPower in ( groupAllFeats groupMetapsionicFeats )
+  .name "widen power"
+  .takeMultiple no
+  .sources sourcesDragon
+end
+
+featUpgradePower in ( groupAllFeats groupPsionicFeats )
+  .name "upgrade power"
+  .takeMultiple no
+  .sources sourcesDragon
+end

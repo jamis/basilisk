@@ -1,0 +1,429 @@
+/* --------------------------------------------------------------------- *
+ * Data from Polyhedron Magazine issue #146, converted to Basilisk format by
+ * Eric Polovich
+ * --------------------------------------------------------------------- */
+
+/* "The Magic of Raven's Bluff", p.12-19 */
+
+astAvoreensShield in ( groupSpecificShields )
+  .name "avoreen's shield of the protector"
+  .cost 18575 gp
+  .prototype shieldSmallWooden
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +1 } )
+  .specialQualities ( { .type satSpellEffect .spell spellShield
+                        .frequency 1 .period 1 day
+                        .description "protect an ally with the shield spell" } )
+  .sources sourcesPolyhedron
+end
+
+astDragonShieldofProtection in ( groupSpecificShields )
+  .name "dragon shield of protection"
+  .cost 42070 gp
+  .prototype shieldLargeSteel
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +3 } )
+  .sources sourcesPolyhedron
+end
+
+astHalfPlateoftheMoon in ( groupSpecificArmors )
+  .name "half-plate of the moon"
+  .cost 8350 gp
+  .prototype armorHalfPlate
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +2 } )
+  .sources sourcesPolyhedron
+end
+
+category groupMediumSpecificArmors
+  [10] astHalfPlateoftheMoon 
+end
+
+category groupMediumSpecificShields
+  [10] astAvoreensShield
+end
+
+category groupMajorSpecificShields
+  [ 5] astDragonShieldofProtection
+end
+
+wstBracerBlade
+  .name "bracer blade"
+  .prototype weaponShortSword
+  .bonuses        ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+                    { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .itemQualities  ( { .description "gives off light in 20' radius" } )
+  .specialAttacks ( { .description "weapon ignores armor and enhancement AC bonuses" }
+                    { .description "cannot harm undead, constructs, or objects" } )
+  .cost 54000 gp
+  .sources sourcesPolyhedron
+end
+
+wstChrysmalSword
+  .name "chrysmal sword"
+  .prototype weaponShortSword
+  .cost 53100 gp
+  .sources sourcesPolyhedron
+end
+
+wstDaggerofClanShado
+  .name "dagger of clan shado"
+  .prototype weaponShortSword
+  .cost 2302 gp
+  .sources sourcesPolyhedron
+end
+
+wstDeathstryke
+  .name "deathstryke"
+  .prototype weaponBastardSword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .itemQualities ( { .description "gives off a soft green glow" } )
+  .cost 38135 gp
+  .sources sourcesPolyhedron
+end
+
+wstMaceofthePositiveMaterialPlane
+  .name "mace of the positive material plane"
+  .prototype weaponHeavyMace
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .itemQualities ( { .description "gives off a soft green glow" } )
+  .cost 32420 gp
+  .sources sourcesPolyhedron
+end
+
+wstQuarterstaffofRapidMagery
+  .name "quarterstaff of rapid magery"
+  .prototype weaponQuarterstaff
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 18600 gp
+  .sources sourcesPolyhedron
+end
+
+wstSixShooterCrossbow
+  .name "six shooter crossbow"
+  .prototype weaponHandCrossbow
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 3650 gp
+  .sources sourcesPolyhedron
+end
+
+wstStormreaver
+  .name "stormreaver"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 } )
+  .cost 71665 gp
+  .sources sourcesPolyhedron
+end
+
+wstVipersBroodDagger
+  .name "viper's brood dagger"
+  .prototype weaponDagger
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 11302 gp
+  .sources sourcesPolyhedron
+end
+
+category groupMediumSpecificWeapons
+  [ 5] wstDaggerofClanShado
+  [ 4] wstQuarterstaffofRapidMagery
+  [ 4] wstSixShooterCrossbow
+  [ 4] wstVipersBroodDagger
+end
+
+category groupMajorSpecificWeapons
+  [ 5] wstBracerBlade
+  [ 5] wstChrysmalSword
+  [ 4] wstDeathstryke
+  [ 4] wstMaceofthePositiveMaterialPlane
+  [ 4] wstStormreaver
+end
+
+ringMoonRingofSelune in ( groupRings )
+  .name "moon ring of selune"
+  .cost 16400 gp
+  .sources sourcesPolyhedron
+end
+
+ringRingoftheLast in ( groupRings )
+  .name "ring of last"
+  .cost 1800 gp
+  .sources sourcesPolyhedron
+end
+
+ringRingoftheRat in ( groupRings )
+  .name "ring of the rat"
+  .cost 10000 gp
+  .sources sourcesPolyhedron
+end
+
+category groupRingsMinor
+  [ 5] ringRingoftheLast
+end
+
+category groupRingsMedium
+  [ 5] ringRingoftheRat
+  [ 5] ringMoonRingofSelune
+end
+
+staffStormsFury
+  .name "storms fury"
+  .cost 18750 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellShockingGrasp .saveDC 12 .charges 1 }
+                    { .type satSpellEffect .spell spellGlyphofWarding .saveDC 14 .charges 2 }
+                    { .type satSpellEffect .spell spellLightningBolt .saveDC 14 .charges 2 } )
+  .sources sourcesPolyhedron
+end
+
+category groupMediumStaves
+  [10] staffStormsFury
+end
+
+category groupMajorStaves
+  [10] staffStormsFury
+end
+
+
+wondrousAmuletofLifeProtection
+  .name "amulet of life protection"
+  .cost 124000 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousAmuletofNeutrality
+  .name "amulet of neutrality"
+  .cost 48000 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousAmuletoftheSilverDragon
+  .name "amulet of the silver dragon"
+  .cost 4320 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousAshofEnvisioning
+  .name "ash of envisioning"
+  .cost 750 gp
+  .canBeIntelligent false
+  .sources sourcesPolyhedron
+end
+
+wondrousBagofMonkeys
+  .name "bag of monkeys"
+  .cost 300 gp
+  .canBeIntelligent false
+  .sources sourcesPolyhedron
+end
+
+wondrousBeholderPendant
+  .name "beholder pendant"
+  .cost 3750 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousBootsoftheWindrider
+  .name "boots of the windrider"
+  .cost 5000 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousBowlofMonsterSummoning
+  .name "bowl of monster summoning"
+  .cost 24000 gp
+  .canBeIntelligent false
+  .sources sourcesPolyhedron
+end
+
+wondrousCandleofExploding
+  .name "candle of exploding"
+  .cost 900 gp
+  .canBeIntelligent false
+  .sources sourcesPolyhedron
+end
+
+wondrousCloakofStarlight
+  .name "cloak of starlight"
+  .cost 13000 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousConesofCommunication
+  .name "cones of communication"
+  .cost 27000 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousDirtyTurtle
+  .name "dirty turtle"
+  .cost 500 gp
+  .canBeIntelligent false
+  .sources sourcesPolyhedron
+end
+
+wondrousEaringofDarkFire
+  .name "earing of dark fire"
+  .cost 13600 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousOrigamiPeaceCrane
+  .name "origami peace crane"
+  .cost 14400 gp
+  .canBeIntelligent false
+  .sources sourcesPolyhedron
+end
+
+wondrousFlagonofFlowingAle
+  .name "flagon of flowing ale"
+  .cost 6480 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousGauntletsofHeat
+  .name "gauntlets of hear"
+  .cost 12000 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousGlovesofEntropy
+  .name "gloves of entropy"
+  .cost 64000 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousSixFingerdPendant
+  .name "graz'zt's six fingered pendant"
+  .cost 12000 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousFireyRedIounStone
+  .name "ioun stone (firey red)"
+  .cost 10000 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousKeyofTranslation
+  .name "key of translation"
+  .cost 2000 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousDeathspeakStone
+  .name "deathspeak stone"
+  .cost 750 gp
+  .canBeIntelligent false
+  .sources sourcesPolyhedron
+end
+
+wondrousMaskofBhaal
+  .name "mask of bhaal"
+  .cost 39200 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousNecklaceofBeadyEyes
+  .name "necklace of beady eyes"
+  .cost 16000 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousObsidianWarEaglePendant
+  .name "obsidian war eagle pendant"
+  .cost 10000 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousPowderofStonetoFlesh
+  .name "powder of stone to flesh"
+  .cost 3000 gp
+  .canBeIntelligent false
+  .sources sourcesPolyhedron
+end
+
+wondrousShifterManacles
+  .name "shifter manacles"
+  .cost 56050 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousSkullMask
+  .name "skull mask"
+  .cost 18400 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousThievesPicksofStealth
+  .name "thieves picks of stealth"
+  .cost 2000 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+wondrousCuringClasp
+  .name "waukeen's curing clasp"
+  .cost 5600 gp
+  .canBeIntelligent true
+  .sources sourcesPolyhedron
+end
+
+
+category groupMinorWonderousItems
+  wondrousAmuletoftheSilverDragon
+  wondrousAshofEnvisioning
+  wondrousBagofMonkeys
+  wondrousBeholderPendant
+  wondrousBootsoftheWindrider
+  wondrousCandleofExploding
+  wondrousFlagonofFlowingAle
+  wondrousKeyofTranslation
+  wondrousDeathspeakStone
+  wondrousPowderofStonetoFlesh
+  wondrousThievesPicksofStealth
+  wondrousCuringClasp
+end
+
+category groupMediumWonderousItems
+  wondrousBowlofMonsterSummoning
+  wondrousCloakofStarlight
+  wondrousConesofCommunication
+  wondrousEaringofDarkFire
+  wondrousOrigamiPeaceCrane
+  wondrousGauntletsofHeat
+  wondrousSixFingerdPendant
+  wondrousFireyRedIounStone
+  wondrousNecklaceofBeadyEyes
+  wondrousObsidianWarEaglePendant
+  wondrousSkullMask
+end
+
+category groupMajorWonderousItems
+  wondrousAmuletofLifeProtection
+  wondrousAmuletofNeutrality
+  wondrousGlovesofEntropy
+  wondrousMaskofBhaal
+  wondrousShifterManacles
+end

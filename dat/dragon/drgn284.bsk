@@ -1,0 +1,91 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dragon Magazine issue #284, converted to Basilisk format by
+ * Eric Polovich
+ * --------------------------------------------------------------------- */
+
+/* "Hoard of the Howling Wyrm", p.98-101 */
+
+astLetrathesSkin in ( groupSpecificArmors )
+  .name "letrathe's skin"
+  .cost 56650 gp
+  .prototype armorFullPlate
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +1 } )
+  .sources sourcesDragon
+end
+
+category groupMajorSpecificArmors
+  [10] astLetrathesSkin
+end
+
+wstScalebreaker
+  .name "scalebreaker"
+  .prototype weaponweaponOrcDoubleAxe
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 102400 gp
+  .sources sourcesDragon
+end
+
+category groupMajorSpecificWeapons
+  [ 2] wstScalebreaker
+end
+
+astFrosthaven in ( groupSpecificShields )
+  .name "frosthaven"
+  .cost 32959 gp
+  .prototype shieldSmallSteel
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +2 } )
+  .specialQualities ( { .type satSpellEffect .spell spellFireShield
+                        .frequency 1 .period 1 day } )
+  .sources sourcesDragon
+end
+
+category groupMajorSpecificShields
+  [10] astFrosthaven
+end
+
+wondrousBeguilerofWyrms
+  .name "beguiler of wyrms"
+  .cost 18850 gp
+  .sources sourcesDragon
+end
+
+wondrousHounsGrandCompendium
+  .name "houn's grand compendium viii: draco conflagratio horriblis"
+  .cost 11100 gp
+  .sources sourcesDragon
+end
+
+category groupMajorWondrousItems
+  wondrousBeguilerofWyrms
+  wondrousHounsGrandCompendium
+end
+
+/* "A Look at Asheron's Call", p.122-123 */
+
+featFastArmor in ( groupAllFeats groupGeneralFeats )
+  .name "fast armor"
+  .takeMultiple no
+  .conditions ( { .type ptMinimumAbilityScore .affectedThing astDexterity .magnitude 13 } )
+  .sources sourcesDragon
+end
+
+featCombatAgility in ( groupAllFeats groupGeneralFeats )
+  .name "combat agility"
+  .takeMultiple no
+  .conditions ( { .type ptFeat .affectedThing featDodge }
+                { .type ptFeat .affectedThing featLightningReflexes } )
+  .specialDefenses ( { .description "gain a +4 competence bonus to reflex saves vs. spells cast by adjacent opponents" } )
+  .sources sourcesDragon
+end
+
+featStoicComposure in ( groupAllFeats groupGeneralFeats )
+  .name "stoic compusure"
+  .takeMultiple no
+  .conditions ( { .type ptMinimumAbilityScore .affectedThing astConstitution .magnitude 13 } 
+                { .type ptFeat .affectedThing featEndurance }
+                { .type ptFeat .affectedThing featToughness } )
+  .specialDefenses ( { .description "automatically make your save when subjected to massive damage" }
+                     { .description "if you are brought to negative hit points you have a 50% chance to stabilize at the end of each round" } )
+  .sources sourcesDragon
+end

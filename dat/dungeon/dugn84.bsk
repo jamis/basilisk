@@ -1,0 +1,41 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dungeon Magazine issue #84, converted to Basilisk format by
+ * Eric Polovich
+ * --------------------------------------------------------------------- */
+
+/* "The Harrowing", p.23-64 */
+
+wstDemonsbloodSword
+  .name "demonsblood sword"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +3 }
+             { .type btEnhancement .aspect asDamage .magnitude +3 } )
+  .cost 32315 gp
+  .sources sourcesDungeon
+end
+
+category groupMajorSpecificWeapons
+  [ 4]  wstDemonsbloodSword
+end
+
+rodViscidGlobs
+  .name "viscid globs"
+  .cost 6000 gp
+  .sources sourcesDungeon
+end
+
+category groupMediumRods
+  [ 6]  rodViscidGlobs
+end
+
+astWebArmor in ( groupSpecificArmors )
+  .name "web armor"
+  .cost 5000 gp
+  .prototype armorLeather
+  .bonuses ( { .type btEnhancement .aspect asAC .magnitude +7 } )
+  .sources sourcesDungeon
+end
+
+category groupMediumSpecificArmors
+  [10] astWebArmor 
+end

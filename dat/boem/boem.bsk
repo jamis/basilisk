@@ -1,0 +1,7 @@
+sourceBookOfEldritchMight in ( sourcesBookOfEldritchMight groupAllSources )
+  .name "Book of Eldritch Might, The"
+end
+
+#include "boem_feats.bsk"
+#include "boem_items.bsk"
+#include "boem_spells.bsk"

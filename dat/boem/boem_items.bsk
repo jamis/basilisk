@@ -1,0 +1,387 @@
+/* --------------------------------------------------------------------- *
+ * Data from Monte Cooke's "Book of Eldritch Might", 
+ * converted to Basilisk format by
+ * Eric Polovich
+ * --------------------------------------------------------------------- */
+/* weapons */
+
+wstTheBleedingSword
+  .name "the bleeding sword"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +2 }
+             { .type btEnhancement .aspect asDamage .magnitude +2 } )
+  .cost 30315 gp
+  .sources sourcesBookofEldritchMight
+end
+
+wstFlayerFlail
+  .name "flayer flail"
+  .prototype weaponHeavyFlail
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 3435 gp
+  .sources sourcesBookofEldritchMight
+end
+
+wstKTerronWitchblade
+  .name "k'terron witchblade"
+  .prototype weaponLongsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 3315 gp
+  .sources sourcesBookofEldritchMight
+end
+
+wstTenticleBlade
+  .name "tenticle blade"
+  .prototype weaponGreatsword
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 3315 gp
+  .sources sourcesBookofEldritchMight
+end
+
+category groupMinorSpecificWeapons
+  [ 3] wstFlayerFlail
+  [ 3] wstKTerronWitchblade
+  [ 3] wstTenticleBlade
+end
+
+category groupMediumSpecificWeapons
+  [ 3] wstTheBleedingSword
+end
+
+/* rings */
+
+ringRingofBlueConjures ( groupRings )
+  .name "ring of blue conjures"
+  .cost 42000 gp
+  .sources sourcesBookofEldritchMight
+end
+
+ringRingofEbonyBolts ( groupRings )
+  .name "ring of ebony bolts"
+  .cost 86000 gp
+  .sources sourcesBookofEldritchMight
+end
+
+ringRingofHolySpells ( groupRings )
+  .name "ring of holy spells"
+  .cost 25000 gp
+  .sources sourcesBookofEldritchMight
+end
+
+ringRingofRedConjures ( groupRings )
+  .name "ring of red conjures"
+  .cost 14000 gp
+  .sources sourcesBookofEldritchMight
+end
+
+ringRingofSilence ( groupRings )
+  .name "ring of silence"
+  .cost 7000 gp
+  .sources sourcesBookofEldritchMight
+end
+
+category groupRingsMinor
+  [ 5] ringRingofSilence 
+end
+
+category groupRingsMedium
+  [ 5] ringRingofRedConjures
+  [ 5] ringRingofHolySpells
+end
+
+category groupRingsMajor
+  [ 5] ringRingofBlueConjures 
+  [ 3] ringRingofEbonyBolts
+end
+
+/* rods */
+
+rodBookrod
+  .name "bookrod"
+  .cost 32000 gp
+  .sources sourcesBookofEldritchMight
+  .needPrefix false
+end
+
+rodDemonwhistleRod
+  .name "demonwhistle rod"
+  .cost 20000 gp
+  .sources sourcesBookofEldritchMight
+  .needPrefix false
+end
+
+rodRodofBrandingBrandthrall
+  .name "branding - brandthrall"
+  .cost 68000 gp
+  .sources sourcesBookofEldritchMight
+end
+
+rodRodofBrandingSilence
+  .name "branding - silence"
+  .cost 55000 gp
+  .sources sourcesBookofEldritchMight
+end
+
+rodRodofBrandingSpellsleep
+  .name "branding - spellsleep"
+  .cost 80000 gp
+  .sources sourcesBookofEldritchMight
+end
+
+rodRodofBrandingTrueRest
+  .name "branding - true rest"
+  .cost 72000 gp
+  .sources sourcesBookofEldritchMight
+end
+
+rodRodofBrandingWeakness
+  .name "branding - weakness"
+  .cost 60000 gp
+  .sources sourcesBookofEldritchMight
+end
+
+rodRodofFears
+  .name "fears"
+  .cost 5000 gp
+  .sources sourcesBookofEldritchMight
+end
+
+rodSlaysongRod
+  .name "slaysong rod"
+  .cost 36000 gp
+  .sources sourcesBookofEldritchMight
+  .needPrefix false
+end
+
+category groupMediumRods
+  [ 4]  rodBookrod
+  [ 4]  rodDemonwhistleRod
+  [ 4]  rodRodofBrandingSilence
+  [ 4]  rodRodofBrandingWeakness
+  [ 8]  rodRodofFears
+  [ 4]  rodSlaysongRod
+end
+
+category groupMajorRods
+  [ 4]  rodBookrod
+  [ 4]  rodDemonwhistleRod
+  [ 4]  rodRodofBrandingSilence
+  [ 4]  rodRodofBrandingSpellsleep
+  [ 4]  rodRodofBrandingBrandthrall
+  [ 4]  rodRodofBrandingWeakness
+  [ 4]  rodRodofBrandingTrueRest
+  [ 4]  rodSlaysongRod
+end
+
+/* staffs */
+
+staffStaffofGoldenFires
+  .name "staff of golden fires"
+  .cost 35000 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellMarkofFire .charges 1 }
+                    { .type satSpellEffect .spell spellBurningHands .charges 1 }
+                    { .type satSpellEffect .spell spellFireball .saveDC 14 .charges 2 } 
+                    { .type satSpellEffect .spell spellFireshield .charges 2 }
+                    { .type satSpellEffect .spell spellGreaterMarkofFire .saveDC 16 .charges 2 } )
+  .sources sourcesBookofEldritchMight
+end
+
+staffStaffoftheIcyHeart
+  .name "staff of the icy heart"
+  .cost 67000 gp
+  .init rInitGenericStaffProperties
+  .specialAttacks ( { .type satSpellEffect .spell spellMarkofFrost .charges 1 }
+                    { .type satSpellEffect .spell spellIcebolt .charges 1 }
+                    { .type satSpellEffect .spell spellGreaterMarkofFrost .saveDC 16 .charges 2 }
+                    { .type satSpellEffect .spell spellConeofCold .saveDC 17 .charges 2 }
+                    { .type satSpellEffect .spell spellFreezingClaw .saveDC 19 .charges 2 } )
+  .sources sourcesBookofEldritchMight
+end
+
+category groupMajorStaves
+  [ 4]  staffStaffoftheIcyHeart
+  [ 4]  staffStaffofGoldenFires
+end
+
+/* wondrous items */
+
+wondrousAmuletoftheArcanist
+  .name "amulet of the arcanist"
+  .cost 50000 gp
+  .canBeIntelligent yes
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousBookofRoses
+  .name "book of roses"
+  .cost 100000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousBottledWhirlwind
+  .name "bottled whirlwind"
+  .cost 3000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousDoomskull
+  .name "doomskull"
+  .cost 800 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousGlassofMist
+  .name "glass of mist"
+  .cost 9000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousGlassRose
+  .name "glass rose"
+  .cost 15000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousLanneathsConjureBomb
+  .name "lanneath's conjure bomb"
+  .cost 4000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousMirrorofVanity2
+  .name "mirror of vanity +2"
+  .cost 4000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousMirrorofVanity4
+  .name "mirror of vanity +4"
+  .cost 16000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousMirrorofVanity6
+  .name "mirror of vanity +6"
+  .cost 40000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousOcularBand
+  .name "occular band"
+  .cost 21000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousPipesofPower
+  .name "pipes of power"
+  .cost 70000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousScabbardofVenoms
+  .name "scabbard of venoms"
+  .cost 5000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousSpellstealer
+  .name "spellstealer"
+  .cost 90000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousStarofBlood
+  .name "star of blood"
+  .cost 57000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousWandwrap
+  .name "wandwrap"
+  .cost 21000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousBulletteWalker
+  .name "bullette walker"
+  .cost 100000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousDivingSphere
+  .name "diving sphere"
+  .cost 100000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousPsychicSkiff
+  .name "psychic skiff"
+  .cost 150000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousWarAlter
+  .name "war alter"
+  .cost 80000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+wondrousWarThrone
+  .name "war throne"
+  .cost 90000 gp
+  .canBeIntelligent no
+  .sources sourcesBookofEldritchMight
+end
+
+category groupMinorWondrousItems
+  wondrousBottledWhirlwind
+  wondrousDoomskull
+  wondrousLanneathsConjureBomb
+  wondrousMirrorofVanity2
+  wondrousScabbardofVenoms
+  wondrousStarofBlood
+end
+
+category groupMediumWondrousItems
+  wondrousGlassofMist
+  wondrousGlassRose
+  wondrousMirrorofVanity4
+  wondrousOcularBand
+  wondrousWandwrap
+end
+
+category groupMajorWondrousItems
+  wondrousAmuletoftheArcanist
+  wondrousBookofRoses
+  wondrousMirrorofVanity6
+  wondrousPipesofPower
+  wondrousSpellstealer
+  wondrousBulletteWalker
+  wondrousDivingSphere
+  wondrousPsychicSkiff
+  wondrousWarAlter
+  wondrousWarThrone
+end

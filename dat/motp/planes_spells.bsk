@@ -1,0 +1,266 @@
+/* ------------------------------------------------------------------------ *
+ * Material in this file is taken from the "Manual of the Planes"  by
+ * the Jeff Grubb, Bruce Cordell, and David Noonan.
+ *
+ * converted to Basilisk format by Eric Polovich
+ * --------------------------------------------------------------------- */
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellAnalyzePortal { "Analyze Portal" schDivination $ $ sourcesMotPlanes }
+  spellAttuneForm { "Attune Form" schTransmutation $ $ sourcesMotPlanes }
+  spellAvoidPlanarEffects { "Avoid Planar Effects" schAbjuration $ $ sourcesMotPlanes }
+  spellChamber { "Chamber" schEvocation $ $ sourcesMotPlanes }
+  spellElementalBody { "Elemental Body" schTransmuation $ $ sourcesMotPlanes }
+  spellEtherBlast { "EtherBlast" schAbjuration $ $ sourcesMotPlanes }
+  spellEtherealMount { "Ethereal Mount" schConjuration $ $ sourcesMotPlanes }
+  spellImprovedAlarm { "Improved Alarm" schAbjuration $ $ sourcesMotPlanes }
+  spellImprovedPortalAlarm { "Improved Portal Alarm" schAbjuration $ $ sourcesMotPlanes }
+  spellInterplanarMessage { "Interplanar Message" schEvocation $ $ sourcesMotPlanes }
+  spellMakeManifest { "Make Manifest" schTransmuation $ $ sourcesMotPlanes }
+  spellMassManifest { "Mass Manifest" schTransmuation $ $ sourcesMotPlanes }
+  spellPortalAlarm { "Portal Alarm" schAbjuration $ $ sourcesMotPlanes }
+  spellPortalBeacon { "Portal Beacon" schTransmuation $ $ sourcesMotPlanes }
+  spellPositiveEnergyProtection { "Positive Energy Protection" schAbjuration $ $ sourcesMotPlanes }
+  spellRealityMaelstrom { "Reality Maelstrom" schEvocation $ $ sourcesMotPlanes }
+  spellReviveOutsider { "Revive Outsider" schConjuration $ $ sourcesMotPlanes }
+  spellSaftey { "Saftey" schAbjuration $ $ sourcesMotPlanes }
+  spellScramblePortal { "Scramble Portal" schTransmuation $ $ sourcesMotPlanes }
+  spellSealPortal { "Seal Portal" schAbjuration $ $ sourcesMotPlanes }
+  spellShadowCache { "Shadow Cache" schIllusion $ $ sourcesMotPlanes }
+  spellShadowblast { "Shadowblast" schEvocation $ $ sourcesMotPlanes }
+  spellShadowfade { "Shadowfade" schIllusion $ $ sourcesMotPlanes }
+  spellXornMovement { "Xorn Movement" schAlteration $ $ sourcesMotPlanes }
+  spellZoneofRespite { "Zone of Respite" schAbjuration $ $ sourcesMotPlanes }
+  spellZoneofRevelation { "Zone of Revelation" schEvocation $ $ sourcesMotPlanes }
+  spellDreamTravel { "Dream Travel" schTransmuation $ $ sourcesMotPlanes }
+  spellMirrorWalking { "Mirror Walking" schEvocation $ $ sourcesMotPlanes }
+end
+
+category groupSpellsWizardL1
+  spellPortalBeacon
+end
+
+category groupSpellsWizardL2
+  spellPortalAlarm
+end
+
+category groupSpellsWizardL3
+  spellAnalyzePortal
+  spellAvoidPlanarEffects
+  spellChamber
+  spellImprovedAlarm
+  spellShadowCache
+end
+
+category groupSpellsWizardL4
+  spellAttuneForm
+  spellEtherealMount
+  spellImprovedPortalAlarm
+  spellScramblePortal
+  spellZoneofRespite
+  spellZoneofRevelation
+end
+
+category groupSpellsWizardL5
+  spellShadowfade
+  spellXornMovement
+end
+
+category groupSpellsWizardL6
+  spellMakeManifest
+  spellSealPortal
+end
+
+category groupSpellsWizardL7
+  spellElementalBody
+  spellRealityMaelstrom
+  spellMirrorWalking
+end
+
+category groupSpellsWizardL8
+  spellMassManifest
+  spellDreamTravel
+end
+
+category groupSpellsBardL2
+  spellPortalAlarm
+end
+
+category groupSpellsBardL3
+  spellAnalyzePortal
+  spellImprovedAlarm
+  spellShadowCache
+end
+
+category groupSpellsBardL4
+  spellEtherealMount
+  spellImprovedPortalAlarm
+end
+
+category groupSpellsDruidL2
+  spellAvoidPlanarEffects
+end
+
+category groupSpellsDruidL3
+  spellAttuneForm
+end
+
+category groupSpellsDruidL4
+  spellShadowblast
+end
+
+category groupSpellsClericL1
+  spellPortalBeacon
+end
+
+category groupSpellsClericL2
+  spellAvoidPlanarEffects
+end
+
+category groupSpellsClericL3
+  spellAttuneForm
+  spellInterplanarMessage
+  spellPositiveEnergyProtection
+  spellSaftey
+  spellZoneofRespite
+  spellZoneofRevelation
+end
+
+category groupSpellsClericL4
+  spellEtherBlast
+  spellMakeManifest
+  spellShadowblast
+end
+
+category groupSpellsClericL5
+  spellMirrorWalking
+end
+
+category groupSpellsClericL6
+  spellMassManifest
+  spellReviveOutsider
+end
+
+category groupSpellsSorcererL1
+  spellPortalBeacon
+end
+
+category groupSpellsSorcererL2
+  spellPortalAlarm
+end
+
+category groupSpellsSorcererL3
+  spellAnalyzePortal
+  spellAvoidPlanarEffects
+  spellChamber
+  spellImprovedAlarm
+  spellShadowCache
+end
+
+category groupSpellsSorcererL4
+  spellAttuneForm
+  spellEtherealMount
+  spellImprovedPortalAlarm
+  spellScramblePortal
+  spellZoneofRespite
+  spellZoneofRevelation
+end
+
+category groupSpellsSorcererL5
+  spellShadowfade
+  spellXornMovement
+end
+
+category groupSpellsSorcererL6
+  spellMakeManifest
+  spellSealPortal
+end
+
+category groupSpellsSorcererL7
+  spellElementalBody
+  spellRealityMaelstrom
+  spellMirrorWalking
+end
+
+category groupSpellsSorcererL8
+  spellMassManifest
+  spellDreamTravel
+end
+
+category groupArcaneScrollSpells1
+  [ 4]    spellPortalBeacon
+end
+
+category groupArcaneScrollSpells2
+  [ 4]    spellPortalAlarm
+end
+
+category groupArcaneScrollSpells3
+  [ 4]    spellAnalyzePortal
+  [ 4]    spellAvoidPlanarEffects
+  [ 4]    spellChamber
+  [ 4]    spellImprovedAlarm
+  [ 4]    spellShadowCache
+end
+
+category groupArcaneScrollSpells4
+  [ 4]   spellAttuneForm
+  [ 4]    spellEtherealMount
+  [ 4]    spellImprovedPortalAlarm
+  [ 4]    spellScramblePortal
+  [ 4]    spellZoneofRespite
+  [ 4]    spellZoneofRevelation
+end
+
+category groupArcaneScrollSpells5
+  [ 4]    spellShadowfade
+  [ 4]    spellXornMovement
+end
+
+category groupArcaneScrollSpells6
+  [ 4]    spellMakeManifest
+  [ 4]    spellSealPortal
+end
+
+category groupArcaneScrollSpells7
+  [ 4]   spellElementalBody
+  [ 4]    spellRealityMaelstrom
+  [ 4]    spellMirrorWalking
+end
+
+category groupArcaneScrollSpells8
+  [ 4]    spellMassManifest
+  [ 4]    spellDreamTravel
+end
+
+category groupDivineScrollSpells1
+  [ 4]    spellPortalBeacon
+end
+
+category groupDivineScrollSpells2
+  [ 4]    spellAvoidPlanarEffects
+end
+
+category groupDivineScrollSpells3
+  [ 4]    spellAttuneForm
+  [ 4]    spellInterplanarMessage
+  [ 4]    spellPositiveEnergyProtection
+  [ 4]    spellSaftey
+  [ 4]    spellZoneofRespite
+  [ 4]    spellZoneofRevelation
+end
+
+category groupDivineScrollSpells4
+  [ 4]    spellEtherBlast
+  [ 4]    spellMakeManifest
+  [ 4]    spellShadowblast
+end
+
+category groupDivineScrollSpells5
+  [ 4]    spellMirrorWalking
+end
+
+category groupDivineScrollSpells6
+  [ 4]    spellMassManifest
+  [ 4]    spellReviveOutsider
+end

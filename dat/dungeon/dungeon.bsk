@@ -1,0 +1,7 @@
+sourceDungeon in ( sourcesDungeon groupAllSources )
+  .name "Dungeon Magazine"
+end
+
+#include "dugn84.bsk"
+
+

@@ -1,0 +1,59 @@
+/* --------------------------------------------------------------------- *
+ * Data from Monte Cooke's "Book of Eldritch Might", 
+ * converted to Basilisk format by
+ * Eric Polovich
+ * --------------------------------------------------------------------- */
+
+featConjureMastery in ( groupAllFeats groupEldritchFeats )
+  .name "conjure mastery"
+  .takeMultiple no
+  .sources sourcesBookofEldritchMight
+end
+
+featEtchObjectRune in ( groupAllFeats groupItemCreationFeats )
+  .name "etch object rune"
+  .takeMultiple no
+  .sources sourcesBookofEldritchMight
+end
+
+featItemImage in ( groupAllFeats groupEldritchFeats )
+  .name "item image"
+  .takeMultiple no
+  .sources sourcesBookofEldritchMight
+end
+
+featLaceSpellElementalEnergies in ( groupAllFeats groupEldritchFeats )
+  .name "lace spell - elemental energies"
+  .takeMultiple no
+  .sources sourcesBookofEldritchMight
+end
+
+featLaceSpellEnemyBane in ( groupAllFeats groupEldritchFeats )
+  .name "lace spell - enemy bane"
+  .takeMultiple no
+  .sources sourcesBookofEldritchMight
+end
+
+featLaceSpellHolyUnholy in ( groupAllFeats groupEldritchFeats )
+  .name "lace spell - holy/unholy"
+  .takeMultiple no
+  .sources sourcesBookofEldritchMight
+end
+
+featLaceSpellLawfulChaotic in ( groupAllFeats groupEldritchFeats )
+  .name "lace spell - lawful/chaotic"
+  .takeMultiple no
+  .sources sourcesBookofEldritchMight
+end
+
+featManufactureMagicPoison in ( groupAllFeats groupItemCreationFeats)
+  .name "manufacture magic poison"
+  .takeMultiple no
+  .sources sourcesBookofEldritchMight
+end
+
+featMirrorSight in ( groupAllFeats groupEldritchFeats )
+  .name "mirror sight"
+  .takeMultiple no
+  .sources sourcesBookofEldritchMight
+end

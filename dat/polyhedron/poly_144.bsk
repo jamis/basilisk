@@ -1,0 +1,52 @@
+/* --------------------------------------------------------------------- *
+ * Data from Polyhedron Magazine issue #146, converted to Basilisk format by
+ * Eric Polovich
+ * --------------------------------------------------------------------- */
+
+/* "Secrets of the City of Ravens", p.9-11 */
+
+template in ( groupAllSpells ) { name school subschool descriptors sources }
+  spellAbolishShadows { "Abolish Shadows" schAbjuration $ $ sourcesPolyhedron }
+  spellShadowBolt { "Shadow Bolt" schConjuration $ $ sourcesPolyhedron }
+  spellShadowSimulacrum { "Shadow Simulacrum" schIllusion $ $ sourcesPolyhedron }
+  spellShadowSight { "Shadow Sight" schTransmutation $ $ sourcesPolyhedron }
+end
+
+category groupSpellsWizardL3
+  spellAbolishShadows
+  spellShadowSight
+end
+
+category groupSpellsWizardL4
+  spellShadowBolt
+end
+
+category groupSpellsWizardL7
+  spellShadowSimulacrum
+end
+
+category groupSpellsSorcererL3
+  spellAbolishShadows
+  spellShadowSight
+end
+
+category groupSpellsSorcererL4
+  spellShadowBolt
+end
+
+category groupSpellsSorcererL7
+  spellShadowSimulacrum
+end
+
+category groupArcaneScrollSpells3
+  [ 4]  spellAbolishShadows
+  [ 4]  spellShadowSight
+end
+
+category groupArcaneScrollSpells4
+  [ 4]  spellShadowBolt
+end
+
+category groupArcaneScrollSpells7
+  [ 4]  spellShadowSimulacrum
+end

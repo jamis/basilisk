@@ -1,0 +1,87 @@
+/* --------------------------------------------------------------------- *
+ * Data from Dragon Magazine issue #281, converted to Basilisk format by
+ * Eric Polovich
+ * --------------------------------------------------------------------- */
+
+/* "The Splintering Mind", p.38-45 */
+
+template in ( groupWeapon ) { name cost damage criticalRange criticalMultiplier weight size sources }
+  weaponBladedStaff { "bladed staff" 50 gp  1d8  20  2  10 lb  large sourcesDragon }
+  weaponDoubleScimitar { "double scimitar" 125 gp  1d6  18  2  15 lb  large sourcesDragon }
+  weaponPantherClaw { "panther claw"  75 gp  1d4  20  3  3 lb  tiny sourcesDragon }
+end
+
+weaponBladedStaff
+  .secondaryDamage 1d8
+  .rangeIncrement 20 ft
+end
+
+weaponDoubleScimitar
+  .secondaryDamage 1d6
+end
+
+category groupExoticWeapon
+  weaponBladedStaff  weaponDoubleScimitar  weaponPantherClaw
+end
+
+category groupMeleeWeapon
+  weaponBladedStaff  weaponDoubleScimitar  weaponPantherClaw
+end
+
+category groupRangedWeapon
+  weaponBladedStaff
+end
+
+category groupThrownWeapon
+  weaponBladedStaff
+end
+
+category groupPiercingWeapon
+  weaponPantherClaw
+end
+
+category groupSlashingWeapon
+  weaponBladedStaff  weaponDoubleScimitar  weaponPantherClaw
+end
+
+category groupSplinteredMindMeleeWeapons
+  [ 1]  weaponBladedStaff
+  [ 1]  weaponDoubleScimitar
+  [ 1]  weaponPantherClaw
+end
+
+category groupSplinteredMindRangedWeapons
+  [ 1]  weaponBladedStaff
+end
+
+category groupUncommonWeapons
+  [10] groupSplinteredMindRangedWeapons
+  [15] groupSplinteredMindMeleeWeapons
+end
+
+
+/* "Heroes of the Summoning", p.79-83 */
+
+wstDeathArrow
+  .name "death arrow"
+  .prototype weaponArrow
+  .bonuses ( { .type btEnhancement .aspect asAttack .magnitude +1 }
+             { .type btEnhancement .aspect asDamage .magnitude +1 } )
+  .cost 9650 gp
+  .sources sourcesDragon
+end
+
+category groupMajorSpecificWeapons
+  [ 5] wstDeathArrow
+end
+
+wondrousRopeofImmutableBinding
+  .name "rope of immutable binding"
+  .cost 18000 gp
+  .canBeIntelligent true
+  .sources sourcesDragon
+end
+
+category groupMediumWonderousItems
+  wondrousRopeofImmutableBinding
+end
