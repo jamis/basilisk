@@ -449,7 +449,7 @@ void BSKGetDiceParts( BSKValue* value, BSKI16* count,
       *op = '+';
       *modifier = 0;
     }
-    p = value->datum;
+    p = (BSKCHAR*)value->datum;
 		BSKMemCpy( count, p, sizeof( BSKI16 ) );
     p += sizeof( BSKI16 );
 		BSKMemCpy( type, p, sizeof( BSKUI16 ) );

@@ -248,11 +248,16 @@ static BSKI16 s_nextChar( BSKLexer* lexer, BSKStream* stream ) {
 
   if( c == '\r' ) {
     c = stream->getch( stream );
+
+		/* fixed by Roger Bonzer (minotaur@hurloon.net):
+		 * if c was not '\n', it was not being forced to be '\r'
+		 * as it should have been. */
+
     if( c != '\n' ) {
       s_pushChar( lexer, c );
-    } else {
-      c = '\r';
     }
+		c = '\r';
+
     lexer->row++;
     lexer->col = 0;
   } else if( c == '\n' ) {

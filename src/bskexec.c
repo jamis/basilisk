@@ -2304,7 +2304,7 @@ static BSKI32 s_execBuiltin( BSKExecutionEnvironment* env,
       if( attribute->id > 0 ) {
         BSKUI32 len;
         len = BSKGetIdentifierLength( env->db->idTable, attribute->id ) + 1;
-        ptr = BSKMalloc( len );
+        ptr = (BSKCHAR *)BSKMalloc( len );
         BSKGetIdentifier( env->db->idTable, attribute->id, ptr, len );
         BSKSetValueString( retVal, ptr );
         BSKFree( ptr );
@@ -2880,7 +2880,7 @@ static BSKI32 s_doPut( BSKExecutionEnvironment* env ) {
         s_error( env, RTE_DOMAIN_ERROR, "A category may only contain THINGs, CATEGORYs, and RULEs" );
         rc = RTE_DOMAIN_ERROR;
       } else {
-        ((BSKCategoryEntry*)dest.datum)->member = value.datum;
+        ((BSKCategoryEntry*)dest.datum)->member = (BSKCategoryMember*)value.datum;
       }
       break;
   }

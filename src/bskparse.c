@@ -102,6 +102,8 @@ struct __bsksubnumber__ {
 
 #if defined( __unix__ )
 #define FILE_SEPARATOR     "/"
+#elif defined( __MACOS__ )
+#define FILE_SEPARATOR     ":"
 #else
 #define FILE_SEPARATOR     "\\"
 #endif
@@ -1739,6 +1741,9 @@ static BSKI32 s_parseRuleStatementList( BSKParser* parser,
 static BSKIdentList* s_parseIdentList( BSKParser* parser, BSKBitSet* follow ) {
   BSKIdentList* list;
 
+	/* unused -- so we'll prevent compiler warnings this way */
+	(void)follow;
+
   /* keep adding identifiers to the list for as long as they appear
    * in the input. */
 
@@ -2454,7 +2459,7 @@ static void s_error( BSKParser* parser,
   if( parser->handler != 0 ) {
     parser->handler( code, 
                      parser->db,
-                     ( parser->currentFile ? parser->currentFile : "" ),
+                     ( parser->currentFile ? parser->currentFile : (BSKCHAR*)"" ),
                      &(parser->currentToken), 
                      data,
                      parser->userData );
@@ -3892,7 +3897,7 @@ static BSKI32 s_metaDef( BSKParser* parser,
                                  streamName,
                                  sizeof( streamName ) );
         if( p != NULL ) {
-          subStream = BSKStreamOpenFile( streamName, "rt" );
+          subStream = BSKStreamOpenFile( streamName, "r" );
           s_parseSubStream( parser, subStream, streamName );
           subStream->close( subStream );
         } else {
