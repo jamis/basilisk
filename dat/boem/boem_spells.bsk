@@ -42,7 +42,8 @@ template in ( groupAllSpells ) { name school subschool descriptors sources }
   spellMarkofAir { "Mark of Air" schEvocation $ $ sourcesBookofEldritchMight }
   spellMarkofDeath { "Mark of Death" schEvocation $ $ sourcesBookofEldritchMight }
   spellMarkofEarth { "Mark of Earth" schEvocation $ $ sourcesBookofEldritchMight }
-  spellMarkofFire { "Mark of Frost" schEvocation $ $ sourcesBookofEldritchMight }
+  spellMarkofFire { "Mark of Fire" schEvocation $ $ sourcesBookofEldritchMight }
+  spellMarkofFrost { "Mark of Frost" schEvocation $ $ sourcesBookofEldritchMight }
   spellMarkofWater { "Mark of Water" schEvocation $ $ sourcesBookofEldritchMight }
   spellMassFly { "Mass Fly" schTransmutation $ $ sourcesBookofEldritchMight }
   spellMentalAlarm { "Mental Alarm" schDivination $ $ sourcesBookofEldritchMight }
