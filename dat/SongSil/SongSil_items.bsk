@@ -50,8 +50,8 @@ end
 
 /* Potions */
 
-template in ( groupPotions ) { name cost sources }
-  potionVialoftheLastGasp { "Vial of the Last Gasp"  6200 gp sourcesSongSil }
+template in ( groupPotions ) { name cost needPrefix sources }
+  potionVialoftheLastGasp { "Vial of the Last Gasp"  6200 gp false sourcesSongSil }
 end
 
 category groupSongSilPotionsMajor

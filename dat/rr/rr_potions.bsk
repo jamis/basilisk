@@ -1,37 +1,37 @@
-template in ( groupPotions ) { name cost sources }
-  potionAcidSpittle { "Acid Spittle"  50 gp sourcesRelicsRituals }
-  potionChameleonSkin { "Chameleon Skin"  50 gp sourcesRelicsRituals }
-  potionAdheretoWood { "Adhere to Wood"  50 gp sourcesRelicsRituals }
-  potionGazeofTruth { "Gaze of Truth"  50 gp sourcesRelicsRituals }
-  potionCircleofSounds { "Circle of Sounds"  300 gp sourcesRelicsRituals }
-  potionClean { "Clean"  50 gp sourcesRelicsRituals }
-  potionDisappear { "Disappear"  50 gp sourcesRelicsRituals }
-  potionGlue { "Glue"  50 gp sourcesRelicsRituals }
-  potionQuickSober { "Quicksober"  50 gp sourcesRelicsRituals }
-  potionRabbitFeet { "Rabbit Feet"  50 gp sourcesRelicsRituals }
-  potionArmorinaBottle { "Armor in a Bottle"  1400 gp sourcesRelicsRituals }
-  potionShadesSight { "Shade's Sight"  50 gp sourcesRelicsRituals }
-  potionCommandingPresence { "Commanding Presence"  300 gp sourcesRelicsRituals }
-  potionGloom { "Gloom"  50 gp sourcesRelicsRituals }
-  potionIntoxicate { "Intoxicate"  300 gp sourcesRelicsRituals }
-  potionDivineWisdom { "Divine Wisdom"  300 gp sourcesRelicsRituals }
-  potionFalseDeath { "False Death"  1000 gp sourcesRelicsRituals }
-  potionFrogTongue { "Frog Tongue"  300 gp sourcesRelicsRituals }
-  potionPerfectRecollection { "Perfect Recollection"  300 gp sourcesRelicsRituals }
-  potionPrevaricationsBounty { "Prevarication's Bounty"  50 gp sourcesRelicsRituals }
-  potionSleepoftheDead { "Sleep of the Dead"  300 gp sourcesRelicsRituals }
-  potionCurseofTerror { "Curse of Terror"  750 gp sourcesRelicsRituals }
-  potionKadumsBlood { "Kadum's Blood"  1200 gp sourcesRelicsRituals }
-  potionDragonsBreath { "Dragon's Breath"  750 gp sourcesRelicsRituals }
-  potionMindRaid { "Mind Raid"  750 gp sourcesRelicsRituals }
-  potionMormosVisage { "Mormo's Visage"  1400 gp sourcesRelicsRituals }
-  potionShadowTouch { "Shadow Touch"  750 gp sourcesRelicsRituals }
-  potionTerolesTranslator { "Terole's Translator"  900 gp sourcesRelicsRituals }
-  potionFeltonsRed { "Felton's Red"  750 gp sourcesRelicsRituals }
-  potionTouchoftheEel { "Touch of the Eel"  750 gp sourcesRelicsRituals }
-  potionHedradasBalance { "Hedrada's Balance"  300 gp sourcesRelicsRituals }
-  potionLimbsofEndurance { "Limbs of Endurance"  300 gp sourcesRelicsRituals }
-  potionVangalsTouch { "Vangal's Touch"  300 gp sourcesRelicsRituals }
+template in ( groupPotions ) { name cost needPrefix sources }
+  potionAcidSpittle { "Acid Spittle"  50 gp true sourcesRelicsRituals }
+  potionChameleonSkin { "Chameleon Skin"  50 gp true sourcesRelicsRituals }
+  potionAdheretoWood { "Adhere to Wood"  50 gp true sourcesRelicsRituals }
+  potionGazeofTruth { "Gaze of Truth"  50 gp true sourcesRelicsRituals }
+  potionCircleofSounds { "Circle of Sounds"  300 gp true sourcesRelicsRituals }
+  potionClean { "Clean"  50 gp true sourcesRelicsRituals }
+  potionDisappear { "Disappear"  50 gp true sourcesRelicsRituals }
+  potionGlue { "Glue"  50 gp true sourcesRelicsRituals }
+  potionQuickSober { "Quicksober"  50 gp true sourcesRelicsRituals }
+  potionRabbitFeet { "Rabbit Feet"  50 gp true sourcesRelicsRituals }
+  potionArmorinaBottle { "Armor in a Bottle"  1400 gp true sourcesRelicsRituals }
+  potionShadesSight { "Shade's Sight"  50 gp true sourcesRelicsRituals }
+  potionCommandingPresence { "Commanding Presence"  300 gp true sourcesRelicsRituals }
+  potionGloom { "Gloom"  50 gp true sourcesRelicsRituals }
+  potionIntoxicate { "Intoxicate"  300 gp true sourcesRelicsRituals }
+  potionDivineWisdom { "Divine Wisdom"  300 gp true sourcesRelicsRituals }
+  potionFalseDeath { "False Death"  1000 gp true sourcesRelicsRituals }
+  potionFrogTongue { "Frog Tongue"  300 gp true sourcesRelicsRituals }
+  potionPerfectRecollection { "Perfect Recollection"  300 gp true sourcesRelicsRituals }
+  potionPrevaricationsBounty { "Prevarication's Bounty"  50 gp true sourcesRelicsRituals }
+  potionSleepoftheDead { "Sleep of the Dead"  300 gp true sourcesRelicsRituals }
+  potionCurseofTerror { "Curse of Terror"  750 gp true sourcesRelicsRituals }
+  potionKadumsBlood { "Kadum's Blood"  1200 gp true sourcesRelicsRituals }
+  potionDragonsBreath { "Dragon's Breath"  750 gp true sourcesRelicsRituals }
+  potionMindRaid { "Mind Raid"  750 gp true sourcesRelicsRituals }
+  potionMormosVisage { "Mormo's Visage"  1400 gp true sourcesRelicsRituals }
+  potionShadowTouch { "Shadow Touch"  750 gp true sourcesRelicsRituals }
+  potionTerolesTranslator { "Terole's Translator"  900 gp true sourcesRelicsRituals }
+  potionFeltonsRed { "Felton's Red"  750 gp true sourcesRelicsRituals }
+  potionTouchoftheEel { "Touch of the Eel"  750 gp true sourcesRelicsRituals }
+  potionHedradasBalance { "Hedrada's Balance"  300 gp true sourcesRelicsRituals }
+  potionLimbsofEndurance { "Limbs of Endurance"  300 gp true sourcesRelicsRituals }
+  potionVangalsTouch { "Vangal's Touch"  300 gp true sourcesRelicsRituals }
 end
 
 

@@ -78,8 +78,8 @@ category groupMajorSpecificWeapons
 end
 
 /* Potions */
-template in ( groupPotions ) { name cost sources }
-  potionMakkutPoison { "Makk'ut Poison"  100 gp sourcesTouchedbytheGods }
+template in ( groupPotions ) { name cost needPrefix sources }
+  potionMakkutPoison { "Makk'ut Poison"  100 gp true sourcesTouchedbytheGods }
 end
 
 category groupTbtGodsPotionsMinor

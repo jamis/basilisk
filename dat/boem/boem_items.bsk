@@ -62,39 +62,45 @@ end
 /* rings */
 
 ringRingofBlueConjures ( groupRings )
-  .name "ring of blue conjures"
+  .name "blue conjures"
   .cost 42000 gp
   .sources sourcesBookofEldritchMight
+  .needPrefix true
 end
 
 ringRingofEbonyBolts ( groupRings )
-  .name "ring of ebony bolts"
+  .name "ebony bolts"
   .cost 86000 gp
   .sources sourcesBookofEldritchMight
+  .needPrefix true
 end
 
 ringRingofHolySpells ( groupRings )
-  .name "ring of holy spells"
+  .name "holy spells"
   .cost 25000 gp
   .sources sourcesBookofEldritchMight
+  .needPrefix true
 end
 
 ringPotionStorage ( groupRings )
-  .name "ring of potion storage"
+  .name "potion storage"
   .cost 1000 gp
   .sources sourcesBookofEldritchMight
+  .needPrefix true
 end
 
 ringRingofRedConjures ( groupRings )
-  .name "ring of red conjures"
+  .name "red conjures"
   .cost 14000 gp
   .sources sourcesBookofEldritchMight
+  .needPrefix true
 end
 
 ringRingofSilence ( groupRings )
-  .name "ring of silence"
+  .name "silence"
   .cost 7000 gp
   .sources sourcesBookofEldritchMight
+  .needPrefix true
 end
 
 category groupBoEMRingsMinor
@@ -224,7 +230,7 @@ end
 /* staffs */
 
 staffStaffofGoldenFires
-  .name "staff of golden fires"
+  .name "golden fires"
   .cost 35000 gp
   .init rInitGenericStaffProperties
   .specialAttacks ( { .type satSpellEffect .spell spellMarkofFire .charges 1 }
@@ -236,7 +242,7 @@ staffStaffofGoldenFires
 end
 
 staffStaffoftheIcyHeart
-  .name "staff of the icy heart"
+  .name "the icy heart"
   .cost 67000 gp
   .init rInitGenericStaffProperties
   .specialAttacks ( { .type satSpellEffect .spell spellMarkofFrost .charges 1 }

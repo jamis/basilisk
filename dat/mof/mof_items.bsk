@@ -66,7 +66,7 @@ category groupMoFMinorShieldSpecialAbilities
   [5] asaMagicEating
   [8] asaStrength2
   [2] asaStrength4
-  [2] mwgtRollAgain
+  [2] magtRollAgain
 end
 
 category groupMoFMinorArmorSpecialAbilities
@@ -78,7 +78,7 @@ category groupMoFMinorArmorSpecialAbilities
   [5] asaMagicEating
   [8] asaStrength2
   [2] asaStrength4
-  [2] mwgtRollAgain
+  [2] magtRollAgain
 end
 
 category groupMoFMediumArmorSpecialAbilities
@@ -91,7 +91,7 @@ category groupMoFMediumArmorSpecialAbilities
   [2] asaProofAgainstTransmutation
   [5] asaStrength2
   [5] asaStrength4
-  [10] mwgtRollAgain
+  [10] magtRollAgain
 end
 
 category groupMoFMediumShieldSpecialAbilities
@@ -104,7 +104,7 @@ category groupMoFMediumShieldSpecialAbilities
   [2] asaProofAgainstTransmutation
   [5] asaStrength2
   [5] asaStrength4
-  [10] mwgtRollAgain
+  [10] magtRollAgain
 end
 
 category groupMoFMajorArmorSpecialAbilities
@@ -117,7 +117,7 @@ category groupMoFMajorArmorSpecialAbilities
   [3] asaProofAgainstTransmutation
   [5] asaStrength2
   [5] asaStrength4
-  [25] mwgtRollAgain
+  [25] magtRollAgain
 end
 
 category groupMoFMajorShieldSpecialAbilities
@@ -130,7 +130,7 @@ category groupMoFMajorShieldSpecialAbilities
   [3] asaProofAgainstTransmutation
   [5] asaStrength2
   [5] asaStrength4
-  [25] mwgtRollAgain
+  [25] magtRollAgain
 end
 
 category groupMinorArmorSpecialAbilities

@@ -215,11 +215,11 @@ category groupMinorWondrousItems
  [4]  groupDragon289MinorWondrousItems
 end
 
-template in ( groupPotions ) { name cost sources }
-  potionRedPotion { "Red Potion"  2000 gp sourcesDragon289 }
-  potionBluePotion { "Blue Potion"  2000 gp sourcesDragon289 }
-  potionGreenPotion { "Green Potion"  3000 gp sourcesDragon289 }
-  potionYellowPotion { "Yellow Potion"  2750 gp sourcesDragon289 }
+template in ( groupPotions ) { name cost needPrefix sources }
+  potionRedPotion { "Red Potion"  2000 gp true sourcesDragon289 }
+  potionBluePotion { "Blue Potion"  2000 gp true sourcesDragon289 }
+  potionGreenPotion { "Green Potion"  3000 gp true sourcesDragon289 }
+  potionYellowPotion { "Yellow Potion"  2750 gp true sourcesDragon289 }
 end
 
 category groupDragon289PotionsMajor

@@ -9,7 +9,7 @@ fname="$1.tar";
 
 src="src/*.c include/*.h bskrun.c bskcompile.c bsktreasure.c bskcallbacks.c bskcallbacks.h Makefile* README LICENSE CHANGELOG treasure.ini config.h";
 doc="docs/*";
-dat="dat/standard/*.bsk dat/snfist/*.bsk dat/scitadel/*.bsk dat/dragon/*.bsk dat/nbomt/*.bsk dat/defenders/*.bsk dat/tnblood/*.bsk dat/boem/*.bsk dat/diablo/*.bsk dat/dungeon/*.bsk dat/motp/*.bsk dat/polyhedron/*.bsk dat/frcs/*.bsk dat/mof/*.bsk dat/rr/*.bsk";
+dat="dat/dragon/*.bsk dat/scitadel/*.bsk dat/snfist/*.bsk dat/standard/*.bsk dat/nbomt/*.bsk dat/tnblood/*.bsk dat/boem/*.bsk dat/defenders/*.bsk dat/diablo/*.bsk dat/dungeon/*.bsk dat/motp/*.bsk dat/polyhedron/*.bsk dat/frcs/*.bsk dat/mof/*.bsk dat/rr/*.bsk dat/DLofM/*.bsk dat/demonology/*.bsk dat/SongSil/*.bsk dat/LoD/*.bsk dat/MonstersofF/*.bsk dat/TrapsTreach/*.bsk dat/Undead/*.bsk dat/Gladiator/*.bsk dat/Dragons/*.bsk dat/NDreams/*.bsk dat/Evil/*.bsk dat/MysticWar/*.bsk dat/Dungeons/*.bsk dat/Necromancy/*.bsk dat/TbtGods/*.bsk dat/Diomin/*.bsk dat/LoH/*.bsk dat/Jade/*.bsk"
 
 case $2 in
   "")

@@ -40,8 +40,8 @@ end
 
 /* Potions */
 
-template in ( groupPotions ) { name cost sources }
-  potionPreservation { "Preservation"  750 gp sourcesUndead }
+template in ( groupPotions ) { name cost needPrefix sources }
+  potionPreservation { "Preservation"  750 gp true sourcesUndead }
 end
 
 category groupUndeadPotionsMedium
@@ -63,9 +63,10 @@ end
 /* rings */
 
 ringRingoftheTombGuardian ( groupRings )
-  .name "Ring of the Tomb Guardian"
+  .name "Tomb Guardian"
   .cost 10000 gp
   .sources sourcesUndead
+  .needPrefix true
 end
 
 category groupUndeadRingsMinor

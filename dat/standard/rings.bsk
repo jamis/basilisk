@@ -17,6 +17,7 @@ ringAnimalFriendship in ( groupRings )
   .activationMethod atCommandWord
   .specialQualities ( { .type satSpellEffect .spell spellAnimalFriendship .description "up to 12 HD" } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringBlinking in ( groupRings )
@@ -25,6 +26,7 @@ ringBlinking in ( groupRings )
   .activationMethod atCommandWord
   .specialQualities ( { .type satSpellEffect .spell spellBlink } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringChameleonPower in ( groupRings )
@@ -33,6 +35,7 @@ ringChameleonPower in ( groupRings )
   .activationMethod atWill
   .bonuses ( { .type btUnnamed .aspect asSkill .affectedThing skillHide .magnitude +15 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringClimbing in ( groupRings )
@@ -41,6 +44,7 @@ ringClimbing in ( groupRings )
   .activationMethod atContinuous
   .bonuses ( { .type btCompetence .aspect asSkill .affectedThing skillClimb .magnitude +10 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringCounterspells in ( groupRings )
@@ -49,6 +53,7 @@ ringCounterspells in ( groupRings )
   .activationMethod atUse
   .init rSelectRingSpell
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringDjinniCalling in ( groupRings )
@@ -57,6 +62,7 @@ ringDjinniCalling in ( groupRings )
   .activationMethod atUse
   .specialQualities ( { .description "summon a djinni for up to 1 hour per day" } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringAirElementalCommand in ( groupRings )
@@ -67,6 +73,7 @@ ringAirElementalCommand in ( groupRings )
              { .type btMorale .aspect asAttack .conditions ( { .description "attacks against extraplanar air creatures" } ) .magnitude +4 }
              { .type btUnnamed .aspect asSave .conditions ( { .description "against earth-based effects" } ) .magnitude -2 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringEarthElementalCommand in ( groupRings )
@@ -77,6 +84,7 @@ ringEarthElementalCommand in ( groupRings )
              { .type btMorale .aspect asAttack .conditions ( { .description "attacks against extraplanar earth creatures" } ) .magnitude +4 }
              { .type btUnnamed .aspect asSave .conditions ( { .description "against air- or electricity-based effects" } ) .magnitude -2 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringFireElementalCommand in ( groupRings )
@@ -87,6 +95,7 @@ ringFireElementalCommand in ( groupRings )
              { .type btMorale .aspect asAttack .conditions ( { .description "attacks against extraplanar fire creatures" } ) .magnitude +4 }
              { .type btUnnamed .aspect asSave .conditions ( { .description "against water- or cold-based effects" } ) .magnitude -2 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringWaterElementalCommand in ( groupRings )
@@ -97,6 +106,7 @@ ringWaterElementalCommand in ( groupRings )
              { .type btMorale .aspect asAttack .conditions ( { .description "attacks against extraplanar water creatures" } ) .magnitude +4 }
              { .type btUnnamed .aspect asSave .conditions ( { .description "against fire-based effects" } ) .magnitude -2 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringMinorElementalResistance in ( groupRings )
@@ -106,6 +116,7 @@ ringMinorElementalResistance in ( groupRings )
   .init rSelectElement
   .specialDefenses ( { .type satDamageReduction .magnitude +15 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringMajorElementalResistance in ( groupRings )
@@ -115,6 +126,7 @@ ringMajorElementalResistance in ( groupRings )
   .init rSelectElement
   .specialDefenses ( { .type satDamageReduction .magnitude +15 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringEvasion in ( groupRings )
@@ -123,6 +135,7 @@ ringEvasion in ( groupRings )
   .activationMethod atUse
   .specialDefenses ( { .description "successful Reflex save for half-damage results in negation of damage" } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringFeatherFalling in ( groupRings )
@@ -131,6 +144,7 @@ ringFeatherFalling in ( groupRings )
   .activationMethod atUse
   .specialQualities ( { .type satSpellEffect .spell spellFeatherFall } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringFriendShield in ( groupRings )
@@ -139,6 +153,7 @@ ringFriendShield in ( groupRings )
   .activationMethod atCommandWord
   .specialQualities ( { .type satSpellEffect .spell spellShieldOther } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringForceShield in ( groupRings )
@@ -147,6 +162,7 @@ ringForceShield in ( groupRings )
   .activationMethod atWill
   .bonuses ( { .type btShield .aspect asAC .magnitude +2 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringFreedomOfMovement in ( groupRings )
@@ -155,6 +171,7 @@ ringFreedomOfMovement in ( groupRings )
   .activationMethod atContinuous
   .specialQualities ( { .type satSpellEffect .spell spellFreedomOfMovement } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringInvisibility in ( groupRings )
@@ -163,6 +180,7 @@ ringInvisibility in ( groupRings )
   .activationMethod atWill
   .specialQualities ( { .description "invisible" } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringJumping in ( groupRings )
@@ -171,6 +189,7 @@ ringJumping in ( groupRings )
   .activationMethod atContinuous
   .bonuses ( { .type btUnnamed .aspect asSkill .affectedThing skillJump .magnitude +30 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringMindShielding in ( groupRings )
@@ -179,6 +198,7 @@ ringMindShielding in ( groupRings )
   .activationMethod atContinuous
   .specialQualities ( { .description "immune to 'detect thoughts', 'discern lies', and any attempt to magically descern alignment" } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringProtection1 in ( groupRings )
@@ -187,6 +207,7 @@ ringProtection1 in ( groupRings )
   .activationMethod atContinuous
   .bonuses ( { .type btDeflection .aspect asAC .magnitude +1 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringProtection2 in ( groupRings )
@@ -195,6 +216,7 @@ ringProtection2 in ( groupRings )
   .activationMethod atContinuous
   .bonuses ( { .type btDeflection .aspect asAC .magnitude +2 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringProtection3 in ( groupRings )
@@ -203,6 +225,7 @@ ringProtection3 in ( groupRings )
   .activationMethod atContinuous
   .bonuses ( { .type btDeflection .aspect asAC .magnitude +3 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringProtection4 in ( groupRings )
@@ -211,6 +234,7 @@ ringProtection4 in ( groupRings )
   .activationMethod atContinuous
   .bonuses ( { .type btDeflection .aspect asAC .magnitude +4 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringProtection5 in ( groupRings )
@@ -219,6 +243,7 @@ ringProtection5 in ( groupRings )
   .activationMethod atContinuous
   .bonuses ( { .type btDeflection .aspect asAC .magnitude +5 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringRam in ( groupRings )
@@ -227,6 +252,7 @@ ringRam in ( groupRings )
   .activationMethod atCommandWord
   .init rComputeRingCharges
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringRegeneration in ( groupRings )
@@ -235,6 +261,7 @@ ringRegeneration in ( groupRings )
   .activationMethod atContinuous
   .specialQualities ( { .type satRegeneration .frequency 1 .period 1 hour } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringShootingStars in ( groupRings )
@@ -242,6 +269,7 @@ ringShootingStars in ( groupRings )
   .cost 50000 gp
   .activationMethod atCommandWord
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringSpellStoring in ( groupRings )
@@ -250,6 +278,7 @@ ringSpellStoring in ( groupRings )
   .activationMethod atSpellTrigger
   .init rSelectStoredRingSpells
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringSpellTurning in ( groupRings )
@@ -258,6 +287,7 @@ ringSpellTurning in ( groupRings )
   .activationMethod atCommandWord
   .specialDefenses ( { .type satSpellEffect .spell spellSpellTurning } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringSustenance in ( groupRings )
@@ -266,6 +296,7 @@ ringSustenance in ( groupRings )
   .activationMethod atContinuous
   .specialQualities ( { .description "needs no food or drink, and only 2 hours of sleep per day" } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringSwimming in ( groupRings )
@@ -274,6 +305,7 @@ ringSwimming in ( groupRings )
   .activationMethod atContinuous
   .bonuses ( { .type btCompetence .aspect asSkill .affectedThing skillSwim .magnitude +10 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringTelekinesis in ( groupRings )
@@ -282,6 +314,7 @@ ringTelekinesis in ( groupRings )
   .activationMethod atCommandWord
   .specialQualities ( { .type satSpellEffect .spell spellTelekinesis } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringThreeWishes in ( groupRings )
@@ -290,6 +323,7 @@ ringThreeWishes in ( groupRings )
   .activationMethod atSpellTrigger
   .init rComputeWishRingCharges
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringWarmth in ( groupRings )
@@ -298,6 +332,7 @@ ringWarmth in ( groupRings )
   .activationMethod atContinuous
   .specialDefenses ( { .type satDamageReduction .magnitude 5 .aspect etCold .description "5/cold" } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringWaterWalking in ( groupRings )
@@ -306,6 +341,7 @@ ringWaterWalking in ( groupRings )
   .activationMethod atContinuous
   .specialQualities ( { .type satSpellEffect .spell spellWaterWalk } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringWizardry1 in ( groupRings )
@@ -314,6 +350,7 @@ ringWizardry1 in ( groupRings )
   .activationMethod atContinuous
   .bonuses ( { .type btUnnamed .aspect asSpellsKnown .spellLevel 1 .magnitude 2 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringWizardry2 in ( groupRings )
@@ -322,6 +359,7 @@ ringWizardry2 in ( groupRings )
   .activationMethod atContinuous
   .bonuses ( { .type btUnnamed .aspect asSpellsKnown .spellLevel 2 .magnitude 2 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringWizardry3 in ( groupRings )
@@ -330,6 +368,7 @@ ringWizardry3 in ( groupRings )
   .activationMethod atContinuous
   .bonuses ( { .type btUnnamed .aspect asSpellsKnown .spellLevel 3 .magnitude 2 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringWizardry4 in ( groupRings )
@@ -338,6 +377,7 @@ ringWizardry4 in ( groupRings )
   .activationMethod atContinuous
   .bonuses ( { .type btUnnamed .aspect asSpellsKnown .spellLevel 4 .magnitude 2 } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 ringXRayVision in ( groupRings )
@@ -346,6 +386,7 @@ ringXRayVision in ( groupRings )
   .activationMethod atCommandWord
   .specialQualities ( { .description "x-ray vision" } )
   .sources sourcesCoreRules
+  .needPrefix true
 end
 
 /* --------------------------------------------------------------------- *
@@ -466,7 +507,9 @@ rule rLookupRing( ringMagnitude options )
   if y ne null then
     x = rNewInstanceOf( y, options );
     x.prototype = y;
-    x.name = "ring of " + x.name;
+    if x.needPrefix then
+      x.name = "ring of " + x.name;
+    end
     x.treasureType = "ring";
 
     if options.optShowSourceName then
@@ -532,9 +575,14 @@ rule rSelectRingSpell( r options )
     c = any( groupDivineSpellLists );
   end
 
-  s = rGetAnyMatchingCriteria( Get( c, Random(1d6) ), options );
+  s = rGetAnyMatchingCriteria( Get( c, Random(1d6) ), options, true );
   if s eq null then
     exit rule;
+  end
+
+  if options.optShowSourceName then
+    s = Duplicate( s );
+    s.name = s.name + " [" + Get( s.sources, 0 ).name + "]";
   end
 
   r.contents = NewCategory();
@@ -588,11 +636,15 @@ rule rSelectStoredRingSpells( r options )
     levelsRemaining = levelsRemaining - l;
     if levelsRemaining gt 0 then
       do
-        s = rGetAnyMatchingCriteria( Get( c, l-1 ), options );
+        s = rGetAnyMatchingCriteria( Get( c, l-1 ), options, true );
         if s eq null then
           exit rule;
         end
       loop while Exists( r.contents, s );
+      if options.optShowSourceName then
+        s = Duplicate( s );
+        s.name = s.name + " [" + Get( s.sources, 0 ).name + "]";
+      end
       Add( r.contents, s );
     end
   loop while levelsRemaining gt 0;

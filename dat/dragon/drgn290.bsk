@@ -13,36 +13,42 @@ ringCharmResistance ( groupRings )
   .name "Charm Resistance"
   .cost 13100 gp
   .sources sourcesDragon290
+  .needPrefix true
 end
 
 ringDefense1 ( groupRings )
   .name "Defense +1"
   .cost 4000 gp
   .sources sourcesDragon290
+  .needPrefix true
 end
 
 ringDefense2 ( groupRings )
   .name "Defense +2"
   .cost 16000 gp
   .sources sourcesDragon290
+  .needPrefix true
 end
 
 ringDefense3 ( groupRings )
   .name "Defense +3"
   .cost 36000 gp
   .sources sourcesDragon290
+  .needPrefix true
 end
 
 ringDefense4 ( groupRings )
   .name "Defense +4"
   .cost 64000 gp
   .sources sourcesDragon290
+  .needPrefix true
 end
 
 ringDefense5 ( groupRings )
   .name "Defense +5"
   .cost 100000 gp
   .sources sourcesDragon290
+  .needPrefix true
 end
 
 category groupDragon290RingsMinor

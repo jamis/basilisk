@@ -145,18 +145,21 @@ ringMoonRingofSelune in ( groupRings )
   .name "moon ring of selune"
   .cost 16400 gp
   .sources sourcesPolyhedron
+  .needPrefix false
 end
 
 ringRingoftheLast in ( groupRings )
-  .name "ring of last"
+  .name "the last"
   .cost 1800 gp
   .sources sourcesPolyhedron
+  .needPrefix true
 end
 
 ringRingoftheRat in ( groupRings )
-  .name "ring of the rat"
+  .name "the rat"
   .cost 10000 gp
   .sources sourcesPolyhedron
+  .needPrefix true
 end
 
 category groupRingsMinor

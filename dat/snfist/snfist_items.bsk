@@ -492,9 +492,9 @@ end
 
 /* potions */
 
-template ( groupPotions ) { name cost sources }
-  potionFalseLife { "false life"  300 gp  sourcesSwordAndFist }
-  potionFlamingFists { "flaming fists"  300 gp  sourcesSwordAndFist }
+template ( groupPotions ) { name cost needPrefix sources }
+  potionFalseLife { "false life"  300 gp  true sourcesSwordAndFist }
+  potionFlamingFists { "flaming fists"  300 gp  true sourcesSwordAndFist }
 end
 
 category groupSFPotionsMinor
@@ -522,12 +522,14 @@ ringMageArmor ( groupRings )
   .name "mage armor"
   .cost 12000 gp
   .sources sourcesSwordAndFist
+  .needPrefix true
 end
 
 ringShockingBlows ( groupRings )
   .name "shocking blows"
   .cost 13000 gp
   .sources sourcesSwordAndFist
+  .needPrefix true
 end
 
 category groupSfRingsMinor

@@ -584,7 +584,7 @@ rule rComputeArmorBonusPrice( plusses )
   rComputeArmorBonusPrice = SetUnits( plusses * plusses, "gp" ) * 1000;
 end
 
-rule rSelectShieldSpell( item )
+rule rSelectShieldSpell( item options )
   if Random(2) ne 0 then
     l = any( groupMediumScrollSpellLevels ).spellLevel;
 
@@ -595,14 +595,20 @@ rule rSelectShieldSpell( item )
     end
 
     item = rEnsureAttributeExists( item, "contents", atCategory );
-
-    add( item.contents, any( c ) );
+    my_spell = rGetAnyMatchingCriteria( c, options, true );
+    if my_spell ne null then
+      if options.optShowSourceName then
+        my_spell = Duplicate( my_spell );
+        my_spell.name = my_spell.name + " [" + Get( my_spell.sources, 0 ).name + "]";
+      end
+      add( item.contents, my_spell );
+    end
   end
 
   rSelectShieldSpell = item;
 end
 
-rule rInstallBashingAbility( item ability )
+rule rInstallBashingAbility( item ability options )
   if item.prototype eq shieldTower then
     rInstallBashingAbility = null;
     exit rule;
@@ -620,10 +626,10 @@ rule rInstallBashingAbility( item ability )
   rInstallBashingAbility = ability;
 end
 
-rule rInstallArmorAbility( item ability )
-  a = rNewInstanceOf( ability );
+rule rInstallArmorAbility( item ability options )
+  a = rNewInstanceOf( ability, options );
   if Has( a, "installArmorAbility" ) then
-    a = a.installArmorAbility( item, a );
+    a = a.installArmorAbility( item, a, options );
   end
   rInstallArmorAbility = a;
 end
@@ -681,7 +687,7 @@ rule rSelectMagicArmor( armorMagnitude options )
 		if newItem eq null then
 		  exit rule;
 		end
-		newItem = rNewInstanceOf( newItem );
+		newItem = rNewInstanceOf( newItem, options );
 
     if options.optShowSourceName then
       newItem.name = newItem.name + " [" + Get( newItem.sources, 0 ).name + "]";
@@ -713,7 +719,7 @@ rule rSelectMagicArmor( armorMagnitude options )
       exit rule;
     end
 
-    newItem = rNewInstanceOf( proto );
+    newItem = rNewInstanceOf( proto, options );
     newItem.prototype = proto;
     newItem.bonuses = NewCategory();
 
@@ -758,7 +764,7 @@ rule rSelectMagicArmor( armorMagnitude options )
               valid = not rHasAbilityType( newItem, a.type );
             end
             if valid then
-              a = rInstallArmorAbility( newItem, a );
+              a = rInstallArmorAbility( newItem, a, options );
               if a ne null then
                 add( newItem.abilities, a );
                 totalBonus = totalBonus + a.marketPriceArmorModifier;
@@ -773,11 +779,12 @@ rule rSelectMagicArmor( armorMagnitude options )
                 end
                 newItem.name = newItem.name + abName;
                 abilitiesAdded = abilitiesAdded + 1;
-              end
-            end
-          end
-        end
-      end
+              end // if a ne null
+            end // if valid
+          end // if marketPriceModifier not too much
+        end // if not null and not magtRollAgain
+      end // while abilityCnt gt 0
+
       if abilitiesAdded gt 0 then
         newItem.name = newItem.name + ")";
       end

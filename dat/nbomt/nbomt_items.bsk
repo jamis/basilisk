@@ -268,8 +268,8 @@ end
 
 /* potions */
 
-template ( groupPotions ) { name cost sources }
-  potionNectaroftheGods { "nectar of the gods"  5000 gp  sourcesNboMTDnDCC }
+template ( groupPotions ) { name cost needPrefix sources }
+  potionNectaroftheGods { "nectar of the gods"  5000 gp  false sourcesNboMTDnDCC }
 end
 
 category groupPotionsMedium

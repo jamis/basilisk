@@ -579,45 +579,45 @@ ringPlatinumRingofHedrada ( groupRings )
 end
 
 ringRingofAlarm ( groupRings )
-  .name "Ring of Alarm"
+  .name "Alarm"
   .cost 4200 gp
   .sources sourcesRelicsRituals
-  .needPrefix false
+  .needPrefix true
 end
 
 ringRingofMadrielsBlessing ( groupRings )
-  .name "Ring of Madriel's Blessing"
+  .name "Madriel's Blessing"
   .cost 55600 gp
   .sources sourcesRelicsRituals
-  .needPrefix false
+  .needPrefix true
 end
 
 ringRingofScribingGreater ( groupRings )
-  .name "Ring of Scribing, Greater"
+  .name "Scribing, Greater"
   .cost 30000 gp
   .sources sourcesRelicsRituals
-  .needPrefix false
+  .needPrefix true
 end
 
 ringRingofScribingLesser ( groupRings )
-  .name "Ring of Scribing, Lesser"
+  .name "Scribing, Lesser"
   .cost 6000 gp
   .sources sourcesRelicsRituals
-  .needPrefix false
+  .needPrefix true
 end
 
 ringRingofTrueSacrifice ( groupRings )
-  .name "Ring of True Sacrifice"
+  .name "True Sacrifice"
   .cost 168000 gp
   .sources sourcesRelicsRituals
-  .needPrefix false
+  .needPrefix true
 end
 
 ringRingofWindfury ( groupRings )
-  .name "Ring of Windfury"
+  .name "Windfury"
   .cost 60480 gp
   .sources sourcesRelicsRituals
-  .needPrefix false
+  .needPrefix true
 end
 
 ringRingsofthePack ( groupRings )

@@ -91,9 +91,9 @@ end
 
 /* Potions */
 
-template in ( groupPotions ) { name cost sources }
-  potionOilofDragonsBlood { "Oil of Dragon's Blood"  10000 gp sourcesDragons }
-  potionDraconicMight { "Draconic Might"  1200 gp sourcesDragons }
+template in ( groupPotions ) { name cost needPrefix sources }
+  potionOilofDragonsBlood { "Oil of Dragon's Blood"  10000 gp false sourcesDragons }
+  potionDraconicMight { "Draconic Might"  1200 gp true sourcesDragons }
 end
 
 category groupDragonsPotionsMajor

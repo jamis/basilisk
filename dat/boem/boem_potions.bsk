@@ -1,66 +1,66 @@
 /* Compiled by Shaun Gierent */
 
-template in ( groupPotions ) { name cost sources }
-  potionOilofPurifyFoodandDrink { "Oil of Purify Food and Drink"  25 gp sourcesBookofEldritchMight }
-  potionResistance { "Resistance"  25 gp sourcesBookofEldritchMight }
-  potionComprehendLanguages { "Comprehend Languages"  50 gp sourcesBookofEldritchMight }
-  potionEndureElementsCold { "Endure Elements (Cold)"  50 gp sourcesBookofEldritchMight }
-  potionEndureElementsElectricity { "Endure Elements (Electricity)"  50 gp sourcesBookofEldritchMight }
-  potionEndureElementsFire { "Endure Elements (Fire)"  50 gp sourcesBookofEldritchMight }
-  potionEndureElementsAcid { "Endure Elements (Acid)"  50 gp sourcesBookofEldritchMight }
-  potionEndureElementsSonic { "Endure Elements (Sonic)"  50 gp sourcesBookofEldritchMight }
-  potionVentriliquism { "Ventriliquism"  50 gp sourcesBookofEldritchMight }
-  potionExpeditiousRetreat { "Expeditious Retreat"  50 gp sourcesBookofEldritchMight }
-  potionRemoveFear { "Remove Fear"  50 gp sourcesBookofEldritchMight }
-  potionOilofMagicStone { "Oil of Magic Stone"  50 gp sourcesBookofEldritchMight }
-  potionDivineFavor { "Divine Favor"  50 gp sourcesBookofEldritchMight }
-  potionShillelaghOil { "Shillelagh Oil"  50 gp sourcesBookofEldritchMight }
-  potionShieldofFaith { "Shield of Faith"  50 gp sourcesBookofEldritchMight }
-  potionOilofProtectionfromGood { "Oil of Protection from Good"  50 gp sourcesBookofEldritchMight }
-  potionOilofProtectionfromEvil { "Oil of Protection from Evil"  50 gp sourcesBookofEldritchMight }
-  potionOilofProtectionfromLaw { "Oil of Protection from Law"  50 gp sourcesBookofEldritchMight }
-  potionOilofProtectionfromChaos { "Oil of Protection from Chaos"  50 gp sourcesBookofEldritchMight }
-  potionOilofMagicWeapon { "Oil of Magic Weapon"  50 gp sourcesBookofEldritchMight }
-  potionSanctuary { "Sanctuary"  50 gp sourcesBookofEldritchMight }
-  potionTrueStrike { "True Strike"  50 gp sourcesBookofEldritchMight }
-  potionMageArmor { "Mage Armor"  50 gp sourcesBookofEldritchMight }
-  potionShield { "Shield"  50 gp sourcesBookofEldritchMight }
-  potionResistElementsCold { "Resist Elements (Cold)"  300 gp sourcesBookofEldritchMight }
-  potionResistElementsElectricity { "Resist Elements (Electricity)"  300 gp sourcesBookofEldritchMight }
-  potionResistElementsFire { "Resist Elements (Fire)"  300 gp sourcesBookofEldritchMight }
-  potionResistElementsAcid { "Resist Elements (Acid)"  300 gp sourcesBookofEldritchMight }
-  potionResistElementsSonic { "Resist Elements (Sonic)"  300 gp sourcesBookofEldritchMight }
-  potionOilofGentleRepose { "Oil of Gentle Repose"  300 gp sourcesBookofEldritchMight }
-  potionBarkskin { "Barkskin"  300 gp sourcesBookofEldritchMight }
-  potionTreeShape { "TreeShape"  300 gp sourcesBookofEldritchMight }
-  potionOilofWarpWood { "Oil of Warp Wood"  300 gp sourcesBookofEldritchMight }
-  potionOilofWoodShape { "Oil of Wood Shape"  300 gp sourcesBookofEldritchMight }
-  potionOilofConsecrate { "Oil of Consecrate"  300 gp sourcesBookofEldritchMight }
-  potionOilofDesecrate { "Oil of Desecrate"  300 gp sourcesBookofEldritchMight }
-  potionWhisperingWind { "Whispering Wind"  300 gp sourcesBookofEldritchMight }
-  potionSeeInvisibility { "See Invisibility"  300 gp sourcesBookofEldritchMight }
-  potionProtectionfromArrows { "Protection from Arrows"  300 gp sourcesBookofEldritchMight }
-  potionOilofKnock { "Oil of Knock"  300 gp sourcesBookofEldritchMight }
-  potionSpeakwithPlants { "Speak with Plants"  750 gp sourcesBookofEldritchMight }
-  potionOilofPlantGrowth { "Oil of Plant Growth"  750 gp sourcesBookofEldritchMight }
-  potionMeldwithStone { "Meld with Stone"  750 gp sourcesBookofEldritchMight }
-  potionOilofShrinkItem { "Oil of Shrink Item"  750 gp sourcesBookofEldritchMight }
-  potionOilofMagicCircleAgainstGood { "Oil of Magic Circle Against Good"  750 gp sourcesBookofEldritchMight }
-  potionOilofMagicCircleAgainstEvil { "Oil of Magic Circle Against Evil"  750 gp sourcesBookofEldritchMight }
-  potionOilofMagicCircleAgainstLaw { "Oil of Magic Circle Against Law"  750 gp sourcesBookofEldritchMight }
-  potionOilofMagicCircleAgainstChaos { "Oil of Magic Circle Against Chaos"  750 gp sourcesBookofEldritchMight }
-  potionOilofStoneShape { "Oil of Stone Shape"  750 gp sourcesBookofEldritchMight }
-  potionWaterWalk { "Water Walk"  750 gp sourcesBookofEldritchMight }
-  potionBlink { "Blink"  750 gp sourcesBookofEldritchMight }
-  potionOilofMagicVestment { "Oil of Magic Vestment"  750 gp sourcesBookofEldritchMight }
-  potionDisplacement { "Displacement"  750 gp sourcesBookofEldritchMight }
-  potionOilofPoison { "Oil of Poison"  750 gp sourcesBookofEldritchMight }
-  potionOilofGreaterMagicWeapon { "Oil of Greater Magic Weapon"  750 gp sourcesBookofEldritchMight }
-  potionOilofKeenEdge { "Oil of Keen Edge"  750 gp sourcesBookofEldritchMight }
-  potionOilofAnimateDead { "Oil of Animate Dead"  750 gp sourcesBookofEldritchMight }
-  potionVampiricTouch { "Vampiric Touch"  750 gp sourcesBookofEldritchMight }
-  potionPotionofEvasion { "Potion of Evasion"  800 gp sourcesBookofEldritchMight }
-  potionPotionofSpellPower { "Potion of Spell Power"  600 gp sourcesBookofEldritchMight }
+template in ( groupPotions ) { name cost needPrefix sources }
+  potionOilofPurifyFoodandDrink { "Oil of Purify Food and Drink"  25 gp false sourcesBookofEldritchMight }
+  potionResistance { "Resistance"  25 gp true sourcesBookofEldritchMight }
+  potionComprehendLanguages { "Comprehend Languages"  50 gp true sourcesBookofEldritchMight }
+  potionEndureElementsCold { "Endure Elements (Cold)"  50 gp true sourcesBookofEldritchMight }
+  potionEndureElementsElectricity { "Endure Elements (Electricity)"  50 gp true sourcesBookofEldritchMight }
+  potionEndureElementsFire { "Endure Elements (Fire)"  50 gp true sourcesBookofEldritchMight }
+  potionEndureElementsAcid { "Endure Elements (Acid)"  50 gp true sourcesBookofEldritchMight }
+  potionEndureElementsSonic { "Endure Elements (Sonic)"  50 gp true sourcesBookofEldritchMight }
+  potionVentriliquism { "Ventriliquism"  50 gp true sourcesBookofEldritchMight }
+  potionExpeditiousRetreat { "Expeditious Retreat"  50 gp true sourcesBookofEldritchMight }
+  potionRemoveFear { "Remove Fear"  50 gp true sourcesBookofEldritchMight }
+  potionOilofMagicStone { "Oil of Magic Stone"  50 gp false sourcesBookofEldritchMight }
+  potionDivineFavor { "Divine Favor"  50 gp true sourcesBookofEldritchMight }
+  potionShillelaghOil { "Shillelagh Oil"  50 gp true sourcesBookofEldritchMight }
+  potionShieldofFaith { "Shield of Faith"  50 gp true sourcesBookofEldritchMight }
+  potionOilofProtectionfromGood { "Oil of Protection from Good"  50 gp false sourcesBookofEldritchMight }
+  potionOilofProtectionfromEvil { "Oil of Protection from Evil"  50 gp false sourcesBookofEldritchMight }
+  potionOilofProtectionfromLaw { "Oil of Protection from Law"  50 gp false sourcesBookofEldritchMight }
+  potionOilofProtectionfromChaos { "Oil of Protection from Chaos"  50 gp false sourcesBookofEldritchMight }
+  potionOilofMagicWeapon { "Oil of Magic Weapon"  50 gp false sourcesBookofEldritchMight }
+  potionSanctuary { "Sanctuary"  50 gp true sourcesBookofEldritchMight }
+  potionTrueStrike { "True Strike"  50 gp true sourcesBookofEldritchMight }
+  potionMageArmor { "Mage Armor"  50 gp true sourcesBookofEldritchMight }
+  potionShield { "Shield"  50 gp true sourcesBookofEldritchMight }
+  potionResistElementsCold { "Resist Elements (Cold)"  300 gp true sourcesBookofEldritchMight }
+  potionResistElementsElectricity { "Resist Elements (Electricity)"  300 gp true sourcesBookofEldritchMight }
+  potionResistElementsFire { "Resist Elements (Fire)"  300 gp true sourcesBookofEldritchMight }
+  potionResistElementsAcid { "Resist Elements (Acid)"  300 gp true sourcesBookofEldritchMight }
+  potionResistElementsSonic { "Resist Elements (Sonic)"  300 gp true sourcesBookofEldritchMight }
+  potionOilofGentleRepose { "Oil of Gentle Repose"  300 gp false sourcesBookofEldritchMight }
+  potionBarkskin { "Barkskin"  300 gp true sourcesBookofEldritchMight }
+  potionTreeShape { "TreeShape"  300 gp true sourcesBookofEldritchMight }
+  potionOilofWarpWood { "Oil of Warp Wood"  300 gp false sourcesBookofEldritchMight }
+  potionOilofWoodShape { "Oil of Wood Shape"  300 gp false sourcesBookofEldritchMight }
+  potionOilofConsecrate { "Oil of Consecrate"  300 gp false sourcesBookofEldritchMight }
+  potionOilofDesecrate { "Oil of Desecrate"  300 gp false sourcesBookofEldritchMight }
+  potionWhisperingWind { "Whispering Wind"  300 gp true sourcesBookofEldritchMight }
+  potionSeeInvisibility { "See Invisibility"  300 gp true sourcesBookofEldritchMight }
+  potionProtectionfromArrows { "Protection from Arrows"  300 gp true sourcesBookofEldritchMight }
+  potionOilofKnock { "Oil of Knock"  300 gp false sourcesBookofEldritchMight }
+  potionSpeakwithPlants { "Speak with Plants"  750 gp true sourcesBookofEldritchMight }
+  potionOilofPlantGrowth { "Oil of Plant Growth"  750 gp false sourcesBookofEldritchMight }
+  potionMeldwithStone { "Meld with Stone"  750 gp true sourcesBookofEldritchMight }
+  potionOilofShrinkItem { "Oil of Shrink Item"  750 gp false sourcesBookofEldritchMight }
+  potionOilofMagicCircleAgainstGood { "Oil of Magic Circle Against Good"  750 gp false sourcesBookofEldritchMight }
+  potionOilofMagicCircleAgainstEvil { "Oil of Magic Circle Against Evil"  750 gp false sourcesBookofEldritchMight }
+  potionOilofMagicCircleAgainstLaw { "Oil of Magic Circle Against Law"  750 gp false sourcesBookofEldritchMight }
+  potionOilofMagicCircleAgainstChaos { "Oil of Magic Circle Against Chaos"  750 gp false sourcesBookofEldritchMight }
+  potionOilofStoneShape { "Oil of Stone Shape"  750 gp false sourcesBookofEldritchMight }
+  potionWaterWalk { "Water Walk"  750 gp true sourcesBookofEldritchMight }
+  potionBlink { "Blink"  750 gp true sourcesBookofEldritchMight }
+  potionOilofMagicVestment { "Oil of Magic Vestment"  750 gp false sourcesBookofEldritchMight }
+  potionDisplacement { "Displacement"  750 gp true sourcesBookofEldritchMight }
+  potionOilofPoison { "Oil of Poison"  750 gp false sourcesBookofEldritchMight }
+  potionOilofGreaterMagicWeapon { "Oil of Greater Magic Weapon"  750 gp false sourcesBookofEldritchMight }
+  potionOilofKeenEdge { "Oil of Keen Edge"  750 gp false sourcesBookofEldritchMight }
+  potionOilofAnimateDead { "Oil of Animate Dead"  750 gp false sourcesBookofEldritchMight }
+  potionVampiricTouch { "Vampiric Touch"  750 gp true sourcesBookofEldritchMight }
+  potionPotionofEvasion { "Evasion"  800 gp true sourcesBookofEldritchMight }
+  potionPotionofSpellPower { "Spell Power"  600 gp true sourcesBookofEldritchMight }
 end
 
 

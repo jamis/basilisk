@@ -1,8 +1,8 @@
 /*Magic of Faerun Potions compiled by Shaun Gierent*/
 
-template in ( groupPotions ) { name cost sources }
-  potionOilofAnimateDead { "Oil of Animate Dead"  1550 gp sourcesMagicofFaerun }
-  potionPotionofInfertility { "Potion of Infertility"  150 gp sourcesMagicofFaerun }
+template in ( groupPotions ) { name cost needPrefix sources }
+  potionOilofAnimateDead { "Oil of Animate Dead"  1550 gp false sourcesMagicofFaerun }
+  potionPotionofInfertility { "Infertility"  150 gp true sourcesMagicofFaerun }
 end
 
 category groupMoFPotionsMinor

@@ -35,12 +35,14 @@ ringDemonicControl ( groupRings )
   .name "Demonic Control"
   .cost 10000 gp
   .sources sourcesDemon
+  .needPrefix true
 end
 
 ringDemonicObedience ( groupRings )
   .name "Demonic Obedience"
   .cost 25000 gp
   .sources sourcesDemon
+  .needPrefix true
 end
 
 category groupDemonRingsMinor

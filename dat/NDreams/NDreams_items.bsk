@@ -43,9 +43,9 @@ end
 
 /* Potions */
 
-template in ( groupPotions ) { name cost sources }
-  potionMemoryLoss { "Memory Loss"  900 gp sourcesNightmaresDreams }
-  potionElixirofLoss { "Elixir of Loss"  500 gp sourcesNightmaresDreams }
+template in ( groupPotions ) { name cost needPrefix sources }
+  potionMemoryLoss { "Memory Loss"  900 gp true sourcesNightmaresDreams }
+  potionElixirofLoss { "Elixir of Loss"  500 gp false sourcesNightmaresDreams }
 end
 
 category groupNDPotionsMajor
@@ -60,10 +60,10 @@ end
 /* rings */
 
 ringRingofNightmares ( groupRings )
-  .name "Ring of Nightmares"
+  .name "Nightmares"
   .cost 50000 gp
   .sources sourcesNightmaresDreams
-  .needPrefix false
+  .needPrefix true
 end
 
 category groupNDRingsMedium

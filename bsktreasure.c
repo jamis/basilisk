@@ -485,7 +485,11 @@ void usage() {
   printf( "         a compiled version of a Basilisk script file\n" );
   printf( "  <count> is the number of items to generate.\n" );
   printf( "  <magnitudes> is a '|' delimited list of magnitudes.\n" );
+  printf( "      valid magnitudes are:\n" );
+  printf( "         minor medium major\n" );
   printf( "  <itemtypes> is a '|' delimited list of item types.\n" );
+  printf( "      valid item types are:\n" );
+  printf( "         armor weapon potion ring rod scroll staff wand \"wondrous item\"\n" );
   printf( "  <level> is the encounter level of the treasure (1-30).\n" );
   printf( "  <coins> is the multiplier of coins to generate (default is 1)\n" );
   printf( "  <goods> is the multiplier of goods to generate (default is 1)\n" );
