@@ -940,6 +940,16 @@ static BSKCHAR* s_findStreamInPaths( BSKParser* parser,
    * -------------------------------------------------------------------- */
 static BSKBOOL s_fileExists( BSKCHAR* file );
 
+  /* -------------------------------------------------------------------- *
+   * s_addMemberToCategories
+   *
+   * Adds the given category member to all categories in the given
+	 * weighted list.
+   * -------------------------------------------------------------------- */
+static void s_addMemberToCategories( BSKParser* parser,
+		                                 BSKCategoryMember* member,
+																		 BSKWeightedIdentList* list );
+
 /* ---------------------------------------------------------------------- *
  * Private Macros
  * ---------------------------------------------------------------------- */
@@ -1305,13 +1315,11 @@ static BSKI32 s_parseAttributeDef( BSKParser* parser, BSKBitSet* follow ) {
 static BSKI32 s_parseThingDef( BSKParser* parser, BSKBitSet* follow ) {
   BSKBitSet keys;
   BSKWeightedIdentList* list;
-  BSKWeightedIdentList* i;
   BSKSymbolTableEntry* sym;
-  BSKCategory* cat;
   BSKThing* thing;
 
   BSKCopyBitSet( &keys, follow );
-  BSKSetBits( &keys, TT_PUNCT_LPAREN, TT_IDENTIFIER, TT_PUNCT_RPAREN, TT_PUNCT_DOT, TT_END, 0 );
+  BSKSetBits( &keys, TT_PUNCT_LPAREN, TT_IDENTIFIER, TT_PUNCT_RPAREN, TT_PUNCT_DOT, TT_END, TT_IN, 0 );
 
   thing = 0;
 
@@ -1339,11 +1347,21 @@ static BSKI32 s_parseThingDef( BSKParser* parser, BSKBitSet* follow ) {
     s_getToken( parser );
   }
 
-  /* if there is a left paren here, expect a list of zero or more category
-   * names that this thing belongs to.  Read them all and add the thing to
-   * each category */
+  /* if there is the keyword "in" here, then there must be an lparen and a list of
+	 * weighted identifiers as well.  Otherwise, if there is just a left paren here,
+	 * expect a list of zero or more category names that this thing belongs to. 
+	 * Read them all and add the thing to each category */
 
   BSKClearBit( &keys, TT_PUNCT_LPAREN );
+	BSKClearBit( &keys, TT_IN );
+
+	if( parser->currentToken.type == TT_IN ) {
+		s_getToken( parser );
+		if( parser->currentToken.type != TT_PUNCT_LPAREN ) {
+			s_error( parser, PE_UNEXPECTED_TOKEN, TT_PUNCT_LPAREN, &keys );
+		}
+	}
+
   if( parser->currentToken.type == TT_PUNCT_LPAREN ) {
     s_eatToken( parser, TT_PUNCT_LPAREN, &keys );
     list = s_parseWeightedIdentList( parser, &keys );
@@ -1353,25 +1371,7 @@ static BSKI32 s_parseThingDef( BSKParser* parser, BSKBitSet* follow ) {
 
     /* add the "thing" to each category identifier in the identifier list */
     if( thing != 0 ) {
-      for( i = list; i != 0; i = i->next ) {
-        /* has the symbol been declared already? */
-        sym = BSKGetSymbol( parser->symbols, i->id );
-        if( sym == 0 ) { /* if not, add it */
-          BSKAddSymbol( parser->symbols, ST_CATEGORY, SF_NONE, i->id );
-          cat = BSKAddCategoryToDB( parser->db, BSKNewCategory( i->id ) );
-          BSKAddToCategory( cat, i->weight, thing );
-        } else if( sym->type != ST_CATEGORY ) {
-          s_error( parser, PE_WRONG_TYPE, i->id, 0 );
-        } else {
-          sym->flags = SF_NONE; /* mark it as parsed, if this was previously declared "forward" */
-          cat = BSKFindCategory( parser->db, i->id );
-          if( cat == 0 ) {
-            s_error( parser, PE_BUG_DETECTED, (BSKUI32)"category symbol exists in symbol table, but not in category list (s_parseThingDef)", 0 );
-          } else {
-            BSKAddToCategory( cat, i->weight, thing );
-          }
-        }
-      }
+			s_addMemberToCategories( parser, (BSKCategoryMember*)thing, list );
     }
 
     s_destroyWeightedIdentList( list );
@@ -1399,9 +1399,9 @@ static BSKI32 s_parseCategoryDef( BSKParser* parser, BSKBitSet* follow ) {
   category = 0;
 
   BSKCopyBitSet( &keys, follow );
-  BSKSetBit( &keys, TT_END );
+  BSKSetBits( &keys, TT_END, TT_PUNCT_LPAREN, TT_IN, 0 );
 
-  s_eatToken( parser, TT_CATEGORY, follow );
+  s_eatToken( parser, TT_CATEGORY, &keys );
 
   if( parser->currentToken.type != TT_IDENTIFIER ) {
     s_error( parser, PE_UNEXPECTED_TOKEN, TT_IDENTIFIER, &keys );
@@ -1428,6 +1428,26 @@ static BSKI32 s_parseCategoryDef( BSKParser* parser, BSKBitSet* follow ) {
     s_getToken( parser );
   }
 
+	/* if the keyword "in" is found, expect a weighted list of identifiers representing
+	 * the categories that this category should be placed in. */
+
+	BSKClearBit( &keys, TT_IN );
+	if( parser->currentToken.type == TT_IN ) {
+		BSKWeightedIdentList* list;
+
+		s_getToken( parser );
+		BSKSetBit( &keys, TT_PUNCT_RPAREN );
+		s_eatToken( parser, TT_PUNCT_LPAREN, &keys );
+		BSKClearBit( &keys, TT_PUNCT_RPAREN );
+
+    list = s_parseWeightedIdentList( parser, &keys );
+		if( category != 0 ) {
+			s_addMemberToCategories( parser, (BSKCategoryMember*)category, list );
+		}
+
+		s_destroyWeightedIdentList( list );
+	}
+
   /* populate the category */
 
   s_parseCategoryBody( parser, category, follow );
@@ -1451,7 +1471,7 @@ static BSKI32 s_parseTemplateDef( BSKParser* parser, BSKBitSet* follow ) {
   BSKCategory* category;
 
   BSKCopyBitSet( &keys, follow );
-  BSKSetBits( &keys, TT_PUNCT_LBRACE, TT_END, TT_IDENTIFIER, 0 );
+  BSKSetBits( &keys, TT_PUNCT_LBRACE, TT_END, TT_IDENTIFIER, TT_IN, 0 );
 
   s_eatToken( parser, TT_TEMPLATE, &keys );
 
@@ -1462,7 +1482,19 @@ static BSKI32 s_parseTemplateDef( BSKParser* parser, BSKBitSet* follow ) {
    * things defined by this template will automatically be added to these
    * categories.  Make sure here, therefore, that all these identifiers
    * are categories, and if they aren't yet defined, create new categories
-   * for them. */
+   * for them.
+	 *
+	 * Added 18 Feb 2001: if the keyword "in" is present, it must be followed
+	 * by an lparen that contains a weighted list of identifiers. */
+
+	BSKClearBit( &keys, TT_IN );
+	if( parser->currentToken.type == TT_IN ) {
+		s_getToken( parser );
+		BSKClearBit( &keys, TT_PUNCT_LPAREN );
+		if( parser->currentToken.type != TT_PUNCT_LPAREN ) {
+			s_error( parser, PE_UNEXPECTED_TOKEN, TT_PUNCT_LPAREN, &keys );
+		}
+	}
 
   if( parser->currentToken.type == TT_PUNCT_LPAREN ) {
     s_eatToken( parser, TT_PUNCT_LPAREN, &keys );
@@ -2271,7 +2303,7 @@ static BSKI32 s_parseTemplateEntry( BSKParser* parser,
   BSKAttributeDef* attr;
       
   BSKCopyBitSet( &keys, follow );
-  BSKSetBits( &keys, TT_IDENTIFIER, TT_PUNCT_LBRACE, 0 );
+  BSKSetBits( &keys, TT_IDENTIFIER, TT_PUNCT_LBRACE, TT_IN, TT_PUNCT_LPAREN, 0 );
 
   thing = 0;
   moreCategories = 0;
@@ -2299,7 +2331,20 @@ static BSKI32 s_parseTemplateEntry( BSKParser* parser,
 
   /* if an LPAREN '(' is found, anticipate a list of category names to add
    * the thing to.  If a given symbol is not yet defined, create a new
-   * category for that identifier. */
+   * category for that identifier.
+   *
+	 * Added 18 Feb 2001: if the keyword "in" is found, expect an lparen and a weighted
+	 * identifier list immediately following it.
+	 */
+
+	BSKClearBits( &keys, TT_IN, TT_PUNCT_LPAREN, 0 );
+
+	if( parser->currentToken.type == TT_IN ) {
+		s_getToken( parser );
+		if( parser->currentToken.type != TT_PUNCT_LPAREN ) {
+			s_error( parser, PE_UNEXPECTED_TOKEN, TT_PUNCT_LPAREN, &keys );
+		}
+	}
 
   if( parser->currentToken.type == TT_PUNCT_LPAREN ) {
     s_eatToken( parser, TT_PUNCT_LPAREN, &keys );
@@ -2308,26 +2353,14 @@ static BSKI32 s_parseTemplateEntry( BSKParser* parser,
     BSKClearBit( &keys, TT_PUNCT_RPAREN );
     s_eatToken( parser, TT_PUNCT_RPAREN, &keys );
 
-    for( wi = moreCategories; wi != 0; wi = wi->next ) {
-      sym = BSKGetSymbol( parser->symbols, wi->id );
-      
-      if( sym == 0 ) {
-        category = BSKAddCategoryToDB( parser->db, BSKNewCategory( wi->id ) );
-        BSKAddSymbol( parser->symbols, ST_CATEGORY, SF_NONE, wi->id );
-      } else if( sym->type != ST_CATEGORY ) {
-        s_error( parser, PE_WRONG_TYPE, wi->id, 0 );
-        category = 0;
-      } else {
-        category = BSKFindCategory( parser->db, wi->id );
-      }
-
-      if( category != 0 ) {
-        BSKAddToCategory( category, wi->weight, thing );
-      }
-    }
+		s_addMemberToCategories( parser, (BSKCategoryMember*)thing, moreCategories );
   }
   
-  /* add the thing to each of the given categories */
+  /* add the thing to each of the given categories; we could use
+	 * s_addMemberToCategories for this, but that function also checks to make sure
+	 * that each identifier is a valid category, and that's overhead that we've already
+	 * done once when the list was first parsed (in s_parseTemplateDef).  This is faster.
+	 */
 
   for( wi = categories; wi != 0; wi = wi->next ) {
     if( wi->id != 0 ) {
@@ -4052,5 +4085,35 @@ static BSKBOOL s_fileExists( BSKCHAR* file ) {
 #else
   return BSKFALSE;
 #endif
+}
+
+
+static void s_addMemberToCategories( BSKParser* parser,
+		                                 BSKCategoryMember* member,
+																		 BSKWeightedIdentList* list )
+{
+	BSKWeightedIdentList* i;
+	BSKCategory* cat;
+	BSKSymbolTableEntry* sym;
+
+	for( i = list; i != 0; i = i->next ) {
+		/* has the symbol been declared already? */
+		sym = BSKGetSymbol( parser->symbols, i->id );
+		if( sym == 0 ) { /* if not, add it */
+			BSKAddSymbol( parser->symbols, ST_CATEGORY, SF_NONE, i->id );
+			cat = BSKAddCategoryToDB( parser->db, BSKNewCategory( i->id ) );
+			BSKAddToCategory( cat, i->weight, member );
+		} else if( sym->type != ST_CATEGORY ) {
+			s_error( parser, PE_WRONG_TYPE, i->id, 0 );
+		} else {
+			sym->flags = SF_NONE; /* mark it as parsed, if this was previously declared "forward" */
+			cat = BSKFindCategory( parser->db, i->id );
+			if( cat == 0 ) {
+				s_error( parser, PE_BUG_DETECTED, (BSKUI32)"category symbol exists in symbol table, but not in category list (s_parseThingDef)", 0 );
+			} else {
+				BSKAddToCategory( cat, i->weight, member );
+			}
+		}
+	}
 }
 
