@@ -29,7 +29,7 @@
 
 #define MAX_NUMERIC_CONSTANT_LEN      ( 64 )
 #define MAX_IDENTIFIER_LEN            ( 64 )
-#define MAX_STRING_LEN                ( 256 )
+#define MAX_STRING_LEN                ( 4095 )
 
 /* ---------------------------------------------------------------------- *
  * Private Function Declarations
