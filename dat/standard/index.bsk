@@ -45,3 +45,4 @@
 #include "snfist.bsk"   /* Sword & Fist */
 #include "scitadel.bsk" /* the Sunless Citadel */
 #include "dragon.bsk"   /* Dragon Magazine data */
+#include "nbomt.bsk"    /* NboMT DnDCC */
