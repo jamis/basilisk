@@ -1,83 +1,143 @@
-featDivineCleansing in ( groupAllFeats groupDivineFeats )
-  .name "divine cleansing"
-  .takeMultiple no
-  .sources sourcesDefendersoftheFaith
+featArcaneDefense in ( groupAllFeats groupGeneralFeats )
+  .name "Arcane Defense"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
 end
 
-featDivineMight in ( groupAllFeats groupDivineFeats )
-  .name "divine might"
+featArcanePreparation in ( groupAllFeats groupGeneralFeats )
+  .name "Arcane Preparation"
   .takeMultiple no
-  .sources sourcesDefendersoftheFaith
+  .sources sourcesTomeAndBlood
 end
 
-featDivineResistance in ( groupAllFeats groupDivineFeats )
-  .name "divine resistance"
+featAugmentSummoning in ( groupAllFeats groupGeneralFeats )
+  .name "Augment Summoning"
   .takeMultiple no
-  .sources sourcesDefendersoftheFaith
+  .sources sourcesTomeAndBlood
 end
 
-featDivineShield in ( groupAllFeats groupDivineFeats )
-  .name "divine shield"
-  .takeMultiple no
-  .sources sourcesDefendersoftheFaith
+featExtraSlot in ( groupAllFeats groupGeneralFeats )
+  .name "Extra Slot"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
 end
 
-featDivineVengence in ( groupAllFeats groupDivineFeats )
-  .name "divine vengence"
-  .takeMultiple no
-  .sources sourcesDefendersoftheFaith
+featExtraSpell in ( groupAllFeats groupGeneralFeats )
+  .name "Extra Spell"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
 end
 
-featDivineVigor in ( groupAllFeats groupDivineFeats )
-  .name "divine vigor"
-  .takeMultiple no
-  .sources sourcesDefendersoftheFaith
+featGreaterSpellFocus in ( groupAllFeats groupGeneralFeats )
+  .name "Greater Spell Focus"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
 end
 
-featEmpowerTurning in ( groupAllFeats groupSpecialFeats )
-  .name "empower turning"
+featGreaterSpellPenetration in ( groupAllFeats groupGeneralFeats )
+  .name "Greater Spell Penetration"
   .takeMultiple no
-  .sources sourcesDefendersoftheFaith
+  .sources sourcesTomeAndBlood
 end
 
-featExtraSmiting in ( groupAllFeats groupSpecialFeats )
-  .name "extra smiting"
+featImprovedFamiliar in ( groupAllFeats groupGeneralFeats )
+  .name "Improved Familiar"
   .takeMultiple no
-  .sources sourcesDefendersoftheFaith
+  .sources sourcesTomeAndBlood
 end
 
-featHeightenTurning in ( groupAllFeats groupSpecialFeats )
-  .name "heighten turning"
-  .takeMultiple no
-  .sources sourcesDefendersoftheFaith
+featInnateSpell in ( groupAllFeats groupGeneralFeats )
+  .name "Innate Spell"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
 end
 
-featImprovedShieldBash in ( groupAllFeats groupGeneralFeats )
-  .name "improved shield bash"
-  .takeMultiple no
-  .sources sourcesDefendersoftheFaith
+featSpellSpecialization in ( groupAllFeats groupGeneralFeats )
+  .name "Spell Specialization"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
 end
 
-featQuickenTurning in ( groupAllFeats groupSpecialFeats )
-  .name "special feats"
+featChainSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Chain Spell"
   .takeMultiple no
-  .sources sourcesDefendersoftheFaith
+  .sources sourcesTomeAndBlood
 end
 
-featReachSpell in ( groupAllFeats groupMetaMagicFeats )
-  .name "reach spell"
+featCooperativeSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Cooperative Spell"
   .takeMultiple no
-  .sources sourcesDefendersoftheFaith
+  .sources sourcesTomeAndBlood
 end
 
-featSacredSpell in ( groupAllFeats groupMetaMagicFeats )
-  .name "sacred spell"
+featDelaySpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Delay Spell"
   .takeMultiple no
-  .sources sourcesDefendersoftheFaith
+  .sources sourcesTomeAndBlood
 end
 
-featShieldCharge in ( groupAllFeats groupGeneralFeats )
-  .name "shield charge"
+featEnergyAdmixture in ( groupAllFeats groupMetaMagicFeats )
+  .name "Energy Admixture"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
+end
+
+featSubstitution in ( groupAllFeats groupMetaMagicFeats )
+  .name "Substitution"
+  .takeMultiple yes
+  .sources sourcesTomeAndBlood
+end
+
+featEschewMaterials in ( groupAllFeats groupMetaMagicFeats )
+  .name "Eschew Materials"
   .takeMultiple no
-  .sources sourcesDefendersoftheFaith
+  .sources sourcesSwordAndFist
+end
+
+featPersistentSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Persistent Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featRepeatSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Repeat Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featSanctumSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Sanctum Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featSculptSpell in ( groupAllFeats groupSculptSpellFeats )
+  .name "Sculpt Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featSplitRay in ( groupAllFeats groupMetaMagicFeats )
+  .name "Split Ray"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featSubdualSubstitution in ( groupAllFeats groupMetaMagicFeats )
+  .name "Subdual Substitution"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featTwinSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Twin Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
+end
+
+featWidenSpell in ( groupAllFeats groupMetaMagicFeats )
+  .name "Widen Spell"
+  .takeMultiple no
+  .sources sourcesTomeAndBlood
 end
