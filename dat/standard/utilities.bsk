@@ -305,6 +305,11 @@ end
 
 
 rule rThingMatchesCriteria( item options )
+	if not ( item typeof thing ) then
+		rThingMatchesCriteria = true;
+		exit rule;
+	end
+
   rThingMatchesCriteria = false;
   if has( options, "optUseSources" ) and has( item, "sources" ) then
     // the intersection of the two categories is the set of sources that
@@ -319,15 +324,30 @@ rule rThingMatchesCriteria( item options )
 end
 
 
-rule rGetAnyMatchingCriteria( cat options )
+rule rGetAnyMatchingCriteria( cat options recursive )
+	if recursive eq null then
+		recursive = false;
+	end
+
   c = duplicate( cat );
   while not Empty( c ) do
     x = any( c );
-    if rThingMatchesCriteria( x, options ) then
-      rGetAnyMatchingCriteria = x;
-      exit loop;
-    end
     remove( c, x );
+
+		if recursive and x typeof category then
+			x = rGetAnyMatchingCriteria( x, options, recursive );
+			if x ne null then
+			  rGetAnyMatchingCriteria = x;
+				exit loop;
+			end
+		end
+
+		if x ne null then
+			if rThingMatchesCriteria( x, options ) then
+				rGetAnyMatchingCriteria = x;
+				exit loop;
+			end
+		end
   end
 end
 
