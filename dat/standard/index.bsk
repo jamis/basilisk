@@ -47,3 +47,4 @@
 #include "dragon.bsk"   /* Dragon Magazine data */
 #include "tnblood.bsk"   /* Tome and Blood */
 #include "defenders.bsk" /* Defenders of the Faith */
+#include "nbomt.bsk"     /* Netbook of Magical Treasures */

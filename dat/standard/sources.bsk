@@ -5,4 +5,5 @@ template in ( groupAllSources ) { name }
   sourceSunlessCitadel in ( sourcesSunlessCitadel ) { "Sunless Citadel, The" }
   sourceDragon         in ( sourcesDragon )         { "Dragon Magazine" }
   sourceDefendersoftheFaith in ( sourcesDefendersoftheFaith ) { "Defenders of the Faith" }
+  sourceNboMTDnDCC     in ( sourcesNboMTDnDCC ) { "Netbook of Magical Treasures (DnDCC)" }
 end

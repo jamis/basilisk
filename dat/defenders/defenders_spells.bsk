@@ -46,7 +46,7 @@ template in ( groupAllSpells ) { name school subschool descriptors sources }
   spellTrueCreation { "True Creation" schConjuration subschCreation $ sourcesDefendersoftheFaith }
   spellTrueDomination { "True Domination" schEnchantment subschCompulsion ( descMindAffecting ) sourcesDefendersoftheFaith }
   spellUnbinding { "Unbinding" schAbjuration $ $ sourcesDefendersoftheFaith }
-  spellUnfailingEndurance { "Unfailing Endurance" schTransmutation $ sourcesDefendersoftheFaith }
+  spellUnfailingEndurance { "Unfailing Endurance" schTransmutation $ $ sourcesDefendersoftheFaith }
   spellWeaponoftheDeity { "Weapon of the Deity" schTransmutation $ $ sourcesDefendersoftheFaith }
   spellWeatherEye { "Weather Eye" schDivination $ $ sourcesDefendersoftheFaith }
   spellZeal { "Zeal" schAbjuration $ $ sourcesDefendersoftheFaith }
