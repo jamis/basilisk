@@ -318,6 +318,11 @@ rule rDisplayScroll( item formatting )
            "  " + spell.name +
            " (l" + spell.spellLevel + ", " +
              "cl" + spell.casterLevel + ")" );
+		if has( spell, "magnitude" ) then
+			if spell.magnitude gt 1 then
+				print( " (scribed " + spell.magnitude + " times)" );
+			end
+		end
   end
   rStandardAttributes( item, formatting );
   rPrintNewLine();
