@@ -176,6 +176,44 @@ category groupPotionsMajor
   [ 2] potionFireBreath
 end
 
+/* --------------------------------------------------------- *
+ * Added by Spencer Cooley (the_sigil@hotmail.com)
+ * --------------------------------------------------------- */
+category potionAppearance
+  [8]  appearsBubbling
+  [14] appearsCloudy
+  [6]  appearsEffervescent
+  [4]  appearsFuming
+  [7]  appearsOily
+  [3]  appearsSmoky
+  [12] appearsSyrupy
+  [9]  appearsVaporous
+  [11] appearsViscous
+  [35] appearsWatery
+end
+
+/* --------------------------------------------------------- *
+ * Added by Spencer Cooley (the_sigil@hotmail.com)
+ * --------------------------------------------------------- */
+category potionTransparency
+  [20] transClear
+  [14] transFlecked
+  [12] transLayered
+  [7]  transLuminous
+  [5]  transOpaline
+  [15] transOpaque
+  [6]  transPhosphorescent
+  [2]  transRainbowed
+  [18] transTranslucent
+  [9]  transVariegated
+end
+
+
+rule rAddPotionQuality( potion quality )
+  t = NewThing();
+	t.description = quality;
+	Add( potion.itemQualities, t );
+end
 
 rule rLookupPotion( potionMagnitude options )
   case potionMagnitude
@@ -194,6 +232,16 @@ rule rLookupPotion( potionMagnitude options )
     x = rNewInstanceOf( y );
     x.prototype = y;
     x.name = "potion of " + x.name;
+
+    //Added by Spencer Cooley (the_sigil@hotmail.com)
+		x = rEnsureAttributeExists( x, "itemQualities", atCategory );
+
+    rAddPotionQuality( x, Any( groupColors ).name + "-colored" );
+		rAddPotionQuality( x, Any( groupOdorsAndTastes ).name + " odor/taste" );
+		rAddPotionQuality( x, Any( potionAppearance ).name + ", " +
+		                      Any( potionTransparency ).name + " appearance" );
+    //End of area added by Spencer Cooley (the_sigil@hotmail.com)
+
     x.treasureType = "potion";
 
     if rItemDeservesCurse( x, options ) then
