@@ -539,7 +539,7 @@ int main( int argc, char* argv[] ) {
   if( *type == 't' ) {
     if( argc > 6 ) {
       seed = atol( argv[6] );
-    }
+    } 
   } else {
     if( argc > 7 ) {
       seed = atol( argv[7] );
@@ -568,16 +568,6 @@ int main( int argc, char* argv[] ) {
     }
   }
 
-  ptr = argv[1] + strlen( argv[1] );
-  while( ( *ptr != '/' ) && ( *ptr != '\\' ) && ( ptr > argv[1] ) ) {
-    ptr--;
-  }
-
-  if( ( *ptr == '/' ) || ( *ptr == '\\' ) ) {
-    *ptr = 0;
-    chdir( argv[1] );
-  }
-
   if( !isCompiled ) {
 		cbdata.consoleOut = stdout;
 		cbdata.errorOut = stderr;
@@ -600,9 +590,22 @@ int main( int argc, char* argv[] ) {
     start = clock();
     for( rc = 0; rc < 1; rc++ ) {
       if( *type == 't' ) {
-        doByType( db, atoi( argv[3] ), argv[4], argv[5] );
+				BSKCHAR defaultMag[10];
+				BSKCHAR defaultType[10];
+
+				BSKStrCpy( defaultMag, "minor" );
+				BSKStrCpy( defaultType, "armor" );
+
+        doByType( db,
+						      ( argc > 3 ? atoi( argv[3] ) : 1 ),
+									( argc > 4 ? argv[4] : defaultMag ),
+									( argc > 5 ? argv[5] : defaultType ) );
       } else {
-        doByLevel( db, atoi( argv[3] ), atof( argv[4] ), atof( argv[5] ), atof( argv[6] ) );
+        doByLevel( db, 
+						       ( argc > 3 ? atoi( argv[3] ) : 1 ),
+									 ( argc > 4 ? atof( argv[4] ) : 1 ),
+									 ( argc > 5 ? atof( argv[5] ) : 1 ),
+									 ( argc > 6 ? atof( argv[6] ) : 1 ) );
       }
     }
     end = clock();
