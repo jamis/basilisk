@@ -701,6 +701,29 @@ a[15] = "World";
 				<b>Dice( count, type )</b><BR>
 				Returns a new dice value with the given count and
 				type of dice.
+		<LI><A HREF="fn_dicecount"></A>
+				<b>DiceCount( value )</b><BR>
+				If value is a dice value, this function returns the "count"
+				portion of the value (ie, if the value was 10d6, this function
+				returns 10).  If the value was a number but not a dice value,
+				this function returns 1.
+		<LI><A HREF="fn_dicetype"></A>
+		    <b>DiceType( value )</b><BR>
+				If value is a dice value, this function returns the "type"
+				of the dice (ie, if the value was 10d6, this function returns
+				6).  If the value was a number but not a dice value, this
+				function returns the number itself.
+		<LI><A HREF="fn_dicemodtype"></A>
+		    <b>DiceModType( value )</b><BR>
+				If value is a dice value, this function returns the type of the
+				modifier.  This will be "*" for a multiplicative modifier or
+				"+" for an additive modifier.  (ie, if the value was 10d6+15, this
+				function returns "+").
+		<LI><A HREF="fn_dicemodifier"></A>
+		    <b>DiceModifier( value )</b><BR>
+				If value is a dice value this function returns the modifier portion
+				of the dice value.  Ie, if the value was 10d6+15, this function
+				returns 15.
 		<LI><A NAME="fn_duplicate"></A>
 				<b>Duplicate( thing )</b><BR>
 				<b>Duplicate( category )</b><BR>
