@@ -1,3 +1,20 @@
+/* This file modified by Devon Apple (uphemism@yahoo.com) with a combination of
+ * data from the AD&D Forgotten Realms sourcebook, plus items he made up himself.
+ *   "The data is a combination of treasure items from the
+ *    AD&D Forgotten Realms sourcebook, but the bulk of them
+ *    are items I made up based various art pieces and
+ *    jewelry I had seen.  I think a couple of items were
+ *    inspired by Denrandrien's treasure generator.
+ *    
+ *   "Some of them seem like duplicates because I had, in my
+ *    Excel spreadsheet, lookup calls to random gems, fabric
+ *    types, and painting themes.  I wanted there to be a
+ *    variety of these things, so I made several of those
+ *    items, with different permutations."
+ *   - Devon Apple, 13 June 2001
+ */
+
+
 forward rule rInitArtObject
 
 category group55gpArt
@@ -5,65 +22,373 @@ category group55gpArt
   { .name "carved bone statuette" }
   { .name "carved ivory statuette" }
   { .name "finely wrought small gold bracelet" }
+  { .name "golden monocle" }
+  { .name "ivory scroll tube with silver endcaps" }
+  { .name "small, intricately beaded pouch" }
+  { .name "ivory statuette, warrior leaning on his sword" }
+  { .name "lg. brass bodice pin, sleeping unicorn, with a chalcedony horn" }
+  { .name "ornamental gold skullcap, vine motif" }
+  { .name "ornate silver arrowheads" }
+  { .name "seashell fingerpick" }
+  { .name "silver earring" }
+  { .name "chased silver jewel coffer with dryad scene " }
+  { .name "decorative golden sword hilt, falcon design" }
+  { .name "electrum belt buckle " }
+  { .name "electrum ring, laughing imp with obsidian eyes" }
+  { .name "fragment of a stained glass window" }
+  { .name "silver and amber earring" }
+  { .name "golden ball" }
+  { .name "silver thimble of elven origin" }
+  { .name "small golden vase, chased with floral patterns" }
+  { .name "toy warrior, bronze with silver trim and blue crystal eyes" }
 end
 
 category group105gpArt
+  { .name "ornamental silver inkpot with chrysoprase gems" }
+  { .name "ornamental silver inkpot with jet gems" }
+  { .name "moss agate silver earring" }
+  { .name "silver chalice with eye agate gems" }
+  { .name "silver hoop bracelet" }
+  { .name "silver puzzle ring" }
   { .name "cloth of gold vestments" }
   { .name "black velvet mask with numerous citrines" }
   { .name "silver chalice with lapis lazuli gems" }
+  { .name "pewter beer stein, 12 inches tall, gold-plated iron frame and handle, with hunting scenes" }
+  { .name "black velvet mask with numerous lapis lazuli gems" }
+  { .name "bowl, beaten gold, depicting a battle " }
+  { .name "crystal flagon, polished smooth" }
+  { .name "death mask, beaten gold, depicting a noble visage " }
+  { .name "electrum bodice pin, floral design" }
+  { .name "electrum bracer with mock scales and four citrine gems" }
+  { .name "electrum bracer with mock scales and four bloodstone gems" }
+  { .name "false hand, solid silver, with ivory nails" }
+  { .name "gold platter, beaten and pierced, 2 feet x 1 foot oval" }
+  { .name "ornamental silver inkpot with blue quartz gems" }
+  { .name "ornamental silver inkpot with moonstone gems" }
+  { .name "ornamental silver inkpot with citrine gems" }
+  { .name "silver-plated steel gorget chased with stellar designs" }
+  { .name "small gold statuette, maiden on a unicorn" }
+  { .name "small ivory music box" }
+  { .name "thin silver bracelet decorated with azurite charms" }
+  { .name "polished electrum mirror, elven visage on the back" }
+  { .name "silver-plated sickle, golden handle, druidic vine motif" }
+  { .name "wrought gold eating utensils" }
 end
 
 category group350gpArt
   { .name "large well-done wool tapestry" }
   { .name "brass mug with jade inlays" }
+  { .name "brass knuckles, made of wrought silver and gold" }
+  { .name "brass mug with tourmaline inlays" }
+  { .name "brass mug, engraved with waves, decorated in red enamel" }
+  { .name "gold ring with flame motif" }
+  { .name "golden flute" }
+  { .name "hairpins, gilded, with sard stones" }
+  { .name "hairpins, gilded, with amber stones" }
+  { .name "ivory and silver carving service" }
+  { .name "ivory inkpot" }
+  { .name "jeweled fan with exotic feathers" }
+  { .name "large, well-done wool tapestry, depicting a tragic event" }
+  { .name "large, well-done wool tapestry, depicting a battle" }
+  { .name "large, well-done wool tapestry, depicting a noble house" }
+  { .name "large, well-done wool tapestry, depicting a mythical tale" }
+  { .name "large, well-done wool tapestry, depicting a pastoral scene" }
+  { .name "lapis lazuli gold earring" }
+  { .name "agate gold earring" }
+  { .name "amber gold earring" }
+  { .name "malachite gold earring" }
+  { .name "old bronze bracelet" }
+  { .name "platinum collar pin" }
+  { .name "polished silver mirror with golden frame" }
+  { .name "red gold ring, coiled snake with ruby eyes" }
+  { .name "silver and gold-wrought slave bracelets" }
+  { .name "silver locket with platinum filigree depicting a rose " }
+  { .name "silver and steel slave-girl outfit" }
+  { .name "simple gold cloak pin" }
+  { .name "small painting, a mythical tale" }
+  { .name "small painting, a beach" }
+  { .name "small painting, a nautical scene" }
+  { .name "small painting, a tragic event" }
+  { .name "small painting, a rural scene" }
+  { .name "small painting, a hero's exploits" }
+  { .name "small painting, a pastoral scene" }
+  { .name "small painting, a religious tale" }
+  { .name "intricately beaded headdress" }
+  { .name "simple platinum ring, vine motif" }
+  { .name "small jewel box, ivory with silver frame" }
+  { .name "well-wrought chain of silver and gold" }
+  { .name "ornate helmet" }
 end
 
 category group550gpArt 
   { .name "silver comb with moonstones" }
+  { .name "silver comb with small sapphires and an oceanic theme" }
   { .name "silver-plated steel longsword with jet jewel in hilt" }
+  { .name "anklechain, made of wrought silver and gold" }
+  { .name "translucent apple chrysoprase gold earring" }
+  { .name "choker, wrought silver, with a small sapphire pendant" }
+  { .name "choker, wrought silver, with a moonstone pendant" }
+  { .name "choker, wrought silver, with a jet stone pendant" }
+  { .name "dice set made of carved amethyst" }
+  { .name "dice set made of carved malachite" }
+  { .name "finely made silver mug, celestial motifs, with semiprecious stones for planets" }
+  { .name "golden shield, decorative, 4 feet tall, depicting a past warrior's conquests" }
+  { .name "a fancy cloak, silver wolf fur" }
+  { .name "a fancy cloak, purple velvet" }
+  { .name "silver flask etched with designs" }
+  { .name "decorative mask, exotic wood and feathers" }
+  { .name "ceramic doll" }
+  { .name "crystal snow globe" }
+  { .name "bizarre idol, made of serpentine" }
+  { .name "bizarre idol, made of jet" }
+  { .name "bizarre idol" }
+  { .name "nightmarish idol, made of serpentine" }
+  { .name "fertility idol" }
+  { .name "ornamental silver skullcap, with gold inlaid runes and a sard set above the brow" }
+  { .name "ornamental silver skullcap, with gold inlaid runes and an onyx set above the brow" }
+  { .name "ornamental silver skullcap, with gold inlaid runes and a jet stone set above the brow" }
+  { .name "ornamental silver skullcap, with gold inlaid runes and a moonstone set above the brow" }
+  { .name "ornamental silver skullcap, with gold inlaid runes and a jasper set above the brow" }
+  { .name "platinum ring" }
+  { .name "silver belt, round discs with gold inlays" }
+  { .name "silver bottle stopper with iolite crown" }
+  { .name "silver comb decorated with peridot" }
+  { .name "silver snuff box with abstract designs" }
+  { .name "silver-plated rapier with amethyst in the hilt" }
+  { .name "silver-plated dagger with tourmaline set in the hilt" }
+  { .name "silver-plated greataxe with chrysoberyl jewel in the hilt" }
+  { .name "silver-plated longsword with iolite jewel in the hilt" }
+  { .name "simple platinum cloak pin" }
+  { .name "wrought gold spice set" }
+  { .name "wrought silver torque bracelet" }
 end
 
 category group700gpArt
   { .name "carved harp of exotic wood with ivory inlay and zircon gems" }
-  { .name "solid gold idol" }
+  { .name "carved harp of exotic wood with jade inlay and emerald gems" }
+  { .name "carved harp of darkwood, with jet inlay and ruby gems" }
+  { .name "intricate solid gold fertility idol" }
+  { .name "carved harp of exotic wood with gold inlay, decorated with sard" }
+  { .name "ceremonial silver dagger with golden yellow topaz in the pommel" }
+  { .name "white pearl gold earrings" }
+  { .name "coronet, wrought silver and gold" }
+  { .name "golden phoenix cloak pin with garnets" }
+  { .name "heavy wrought gold bracelet" }
+  { .name "intertwined gold hoop bracelet" }
+  { .name "platinum earrings" }
+  { .name "miniature scale castle" }
+  { .name "miniature scale carriage" }
+  { .name "miniature scale ship" }
+  { .name "miniature scale airship" }
+  { .name "well-wrought bizarre idol" }
+  { .name "well-wrought fertility idol" }
+  { .name "well-wrought nightmarish idol" }
+  { .name "silver & gold lock and key" }
+  { .name "golden flask, inlaid with silver designs" }
+  { .name "necklace of ancient pierced coins" }
+  { .name "ancient calendar, embellished with turquoise" }
+  { .name "old painting, a parable" }
+  { .name "ancient calendar, silver embellished with jade" }
+  { .name "wrought gold carving service" }
+  { .name "wrought gold picture frame" }
+  { .name "wrought silver torque" }
+  { .name "meteoric iron chainmail shirt, AC +7, well-oiled and triple-linked" }
 end
 
 category group1050gpArt
   { .name "gold dragon comb with red garnet eye" }
   { .name "gold and topaz bottle stopper cork" }
   { .name "ceremonial electrum dagger with a star ruby in the pommel" }
+  { .name "belt buckle, decorated with brown-green garnets" }
+  { .name "ceremonial silver dagger with a star sapphire in the pommel" }
+  { .name "ceremonial silver dagger with emerald in the pommel" }
+  { .name "platinum bottle stopper with emerald crown" }
+  { .name "golden bottle stopper with golden sapphire crown" }
+  { .name "intricate ivory anklechain" }
+  { .name "ivory bracelet" }
+  { .name "large gold ring, curlicue motif, with a claw holding a large round alexandrite gem" }
+  { .name "large silver cloak pin, griffon design" }
+  { .name "oaken staff, shod with meteoric iron, and smoky quartz gems set in the head" }
+  { .name "pen and quill set, wrought silver, of extraplanar origin" }
+  { .name "wrought gold anklet" }
+  { .name "wrought platinum armband" }
+  { .name "wrought silver and gold collar" }
+  { .name "wrought silver ring of exceptional workmanship" }
+  { .name "pirate's hook, mithril, with gold-plated stump set with golden sapphire stones" }
 end
 
 category group1400gpArt
-  { .name "eyepatch with mock eye of sapphire and moonstone" }
   { .name "fire opal pendant on a fine gold chain" }
   { .name "old masterpiece painting" }
+  { .name "carved ivory scroll case with jet caps" }
+  { .name "coronet, wrought silver and gold, of illithid origin" }
+  { .name "crystal bell and clapper, finely carved" }
+  { .name "eyepatch with mock eye of sapphire and moonstone" }
+  { .name "gold medallion with black opal gemstone" }
+  { .name "intricate coral phylactery" }
+  { .name "large gold cloak pin, dragon design" }
+  { .name "old masterpiece painting, a religious tale" }
+  { .name "platinum bracelet" }
+  { .name "platinum flask inlaid with gold and silver designs" }
+  { .name "silver finger sheath with ivory nail" }
+  { .name "intricately-wrought silver goblet, decorated with pearls" }
+  { .name "black star sapphire pendant on a fine gold chain" }
+  { .name "carved ivory scroll case with tiger's eye caps" }
+  { .name "old masterpiece painting, a parable" }
+  { .name "black opal pendant on a fine gold chain" }
+  { .name "fiery yellow corundum pendant on a fine gold chain" }
+  { .name "gold medallion with a ruby gemstone" }
+  { .name "carved ivory scroll case with tourmaline caps" }
+  { .name "gold medallion with blue star sapphire gemstone" }
+  { .name "old masterpiece painting, a famous battle" }
+  { .name "carved ivory scroll case with chrysoberyl caps" }
+  { .name "gold medallion with black opal gemstone" }
+  { .name "old masterpiece painting, a comedic event" }
+  { .name "emerald pendant on a fine gold chain" }
 end
 
 category group1750gpArt
-  { .name "embroidered silk and velvet mantle with numerous moonstones" }
   { .name "sapphire pendant on gold chain" }
+  { .name "black velvet mantle, well-made, decorated with moonstones and beaded stars" }
+  { .name "carved ivory tusk, depicting a warrior's exploits" }
+  { .name "choker, made of wrought gold of infernal origin" }
+  { .name "elaborate ship in a bottle" }
+  { .name "embroidered silk and velvet mantle with numerous moonstones" }
+  { .name "golden crown, 6 spires, with a large blue star sapphire at the brow and circled with amethyst" }
+  { .name "large platinum cloak pin, sphinx design" }
+  { .name "ornamental saddle, embellished with gems and scenes of horsemanship" }
+  { .name "ornate half-mask, decorated with teardrop citrines" }
+  { .name "platinum bookbindings, encrusted with alabaster and an amethyst clasp" }
+  { .name "platinum medallion with white opal gemstone" }
+  { .name "platinum necklace" }
+  { .name "sapphire pendant on gold chain" }
+  { .name "scarab, made of gold with silver inlay and green gemstones" }
+  { .name "silver vase shaped like a rearing pegasus" }
+  { .name "golden crown, 6 spires, with a large rich purple corundum at the brow and circled with jade" }
+  { .name "platinum bookbindings, encrusted with banded agate and a silver pearl clasp" }
+  { .name "platinum medallion with blue star sapphire gemstone" }
+  { .name "golden crown, 6 spires, with a large blue sapphire at the brow and circled with brown-green garnet" }
+  { .name "platinum bookbindings, encrusted with alabaster and a chrysoberyl clasp" }
+  { .name "platinum medallion with fiery yellow corundum gemstone" }
+  { .name "golden crown, 6 spires, with a large star ruby at the brow and circled with amber" }
+  { .name "platinum bookbindings, encrusted with azurite and an amethyst clasp" }
+  { .name "platinum medallion with emerald gemstone" }
+  { .name "golden crown, 6 spires, with a large fire opal at the brow and circled with chrysoberyl" }
+  { .name "platinum bookbindings, encrusted with malachite and a brown-green garnet clasp" }
+  { .name "platinum medallion with white opal gemstone" }
 end
 
 category group2500gpArt
-  { .name "embroidered and bejeweled glove" }
-  { .name "jeweled anklet" }
-  { .name "gold music box" }
+  { .name "carved ebony scroll case with fiery yellow corundum caps " }
+  { .name "carved ebony scroll case with fire opal caps " }
+  { .name "carved ebony scroll case with rich purple corundum caps " }
+  { .name "carved ebony scroll case with white opal caps " }
+  { .name "embroidered and bejewelled exotic leather glove " }
+  { .name "embroidered and bejewelled glove " }
+  { .name "exotic darkwood staff, ironwood-shod, with red leather wrappings, phoenix feathers, and many red gemstones set in the head " }
+  { .name "exotic darkwood staff, mithril-shod, with blue leather wrappings and many sapphires set in the head " }
+  { .name "extremely rare animal idol " }
+  { .name "extremely rare bizarre idol " }
+  { .name "extremely rare fertility idol " }
+  { .name "extremely rare nightmarish idol " }
+  { .name "fine mithril bracelet " }
+{ .name "golden flagon, intricately decorated, with a long blue sapphire dominating the neck " }
+  { .name "golden flagon, intricately decorated, with a long emerald dominating the neck " }
+  { .name "golden flagon, intricately decorated, with a long fiery yellow corundum dominating the neck " }
+  { .name "golden flagon, intricately decorated, with a long ruby dominating the neck " }
+  { .name "golden music box " }
+  { .name "intricate gold finger sheath with platinum nail " }
+  { .name "jewelled anklet " }
+  { .name "mithril brooch with aquamarine stones " }
+  { .name "mithril brooch with serpentine stones " }
+  { .name "mithril brooch with deep blue spinel stones " }
+  { .name "mithril brooch with golden yellow topaz stones " }
+  { .name "necklace, red gold, with ruby pendants " }
+  { .name "well-wrought miniature scale castle " }
+  { .name "well-wrought miniature scale knight in armor " }
+  { .name "well-wrought miniature scale ship " }
+  { .name "well-wrought miniature scale war machine " }
 end
 
 category group3500gpArt
-  { .name "golden circlet with four aquamarines" }
   { .name "a string of small pink pearls" }
+  { .name "githzerai talisman, silver with black opal gemstone" }
+  { .name "githzerai talisman, silver with black star sapphire gemstone" }
+  { .name "githzerai talisman, silver with fiery yellow corundum gemstone" }
+  { .name "gold anklet with pearls, garnets & spinels" }
+  { .name "gold ring, with gems of extraplanar origin" }
+  { .name "golden circlet with 4 aquamarines" }
+  { .name "marble statuette, 10 inches tall, of a warrior, with elven mithril armor" }
+  { .name "meteoric iron necklace with sapphire eye" }
+  { .name "silver brooch with small blue-white diamond stones" }
+  { .name "silver brooch with small clear, bright green emerald stones" }
+  { .name "silver brooch with small clear, sapphire stones" }
+  { .name "silver coronet, gem-encrusted" }
+  { .name "silver dice set with aquamarine pips" }
+  { .name "silver dice set with golden topaz pips" }
+  { .name "silver dice set with black pearl pips" }
+  { .name "silver dice set with violet garnet pips" }
 end
 
 category group5000gpArt
   { .name "jeweled gold crown" }
   { .name "jeweled electrum ring" }
+  { .name "a string of small pink pearls" }
+  { .name "electrum ring encrusted with brown diamond stones" }
+  { .name "electrum ring encrusted with pink diamond stones" }
+  { .name "elven anklechain, platinum with clear blue gemstones" }
+  { .name "githzerai talisman, silver with blue sapphire gemstone" }
+  { .name "gold anklet with pearls, garnets & spinels" }
+  { .name "gold ring, with gems of extraplanar origin" }
+  { .name "golden circlet with 4 aquamarines" }
+  { .name "golden harp, avian designs, with jet and ruby inlays" }
+  { .name "golden pearl necklace" }
+  { .name "golden sword hilt, inlaid with gems" }
+  { .name "intricate wool tapestry, (a hero's exploits)" }
+  { .name "intricate wool tapestry, (a parable)" }
+  { .name "intricate wool tapestry, (a rural scene)" }
+  { .name "jewelled gold crown" }
+  { .name "marble statuette, 12 inches tall, of a warrior, with golden armor" }
+  { .name "meteoric iron necklace with sapphire eye" }
+  { .name "mithril jewel box, inlaid with silver and white gems" }
+  { .name "pink pearl necklace" }
+  { .name "platinum brooch with blue sapphire stones" }
+  { .name "platinum brooch with emerald stones" }
+  { .name "platinum brooch with white opal stones" }
+  { .name "silver brooch with small pink diamond stones" }
+  { .name "silver coronet, gem-encrusted" }
+  { .name "silver dice set with golden sapphire pips" }
+  { .name "white pearl necklace" }
 end
 
 category group7000gpArt
   { .name "gold and ruby ring" }
   { .name "gold cup set with emeralds" }
+  { .name "ornate censer, gold with a platinum frame, cut with depictions of a phoenix and several angels" }
+  { .name "demonic phylactery, gold with black star sapphire gemstones" }
+  { .name "phylactery, silver with blue sapphire gemstones" }
+  { .name "phylactery, platinum with emerald gemstones" }
+  { .name "demonic phylactery, gold with fiery yellow corundum gemstones" }
+  { .name "phylactery, silver with fire opal gemstones" }
+  { .name "gold bust, gnomish, decorated with gems" }
+  { .name "golden bracelet, chased in celestial designs, with six diamonds set in each of its plates" }
+  { .name "golden goblet set with emeralds" }
+  { .name "golden ring with large ruby" }
+  { .name "golden sphere, chased with depictions of clouds and sylphs (sapphires for eyes)" }
+  { .name "intricate golden locket encrusted with gems" }
+  { .name "old masterpiece painting, (a bogeyman theme)" }
+  { .name "old masterpiece painting, (a beach)" }
+  { .name "old masterpiece painting, (a cautionary myth)" }
+  { .name "old masterpiece painting, (a festival)" }
+  { .name "old masterpiece painting, (a hero's exploits)" }
+  { .name "ornate bronze rod, with silver circles, studded in jet beads, bearing a large black star sapphire set in the tip" }
+  { .name "ornate bronze rod, with silver rings, studded in garnets, bearing a large rich purple corundum set in the tip" }
+  { .name "ornate bronze rod, with silver rings, studded in zircon gemstones, bearing a large fire opal set in the tip" }
+  { .name "ornate silver rod, with gold rings, studded in garnets, bearing a large white opal set in the tip" }
+  { .name "old masterpiece painting, (a tragic event)" }
+  { .name "old masterpiece painting, (a mythical tale)" }
+  { .name "old masterpiece painting, (a religious tale)" }
+  { .name "old masterpiece painting, (a comedic event)" }
 end
 
 category groupArtLookup
