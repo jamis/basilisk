@@ -130,11 +130,9 @@ end
 
 template in ( groupLiquidAppearances ) { name }
   appearsBubbling {"bubbling"}
-  appearsCloudy {"cloudy"}
   appearsEffervescent {"effervescent"}
   appearsFuming {"fuming"}
   appearsOily {"oily"}
-  appearsSmoky {"smoky"}
   appearsSyrupy {"syrupy"}
   appearsVaporous {"vaporous"}
   appearsViscous {"viscous"}
@@ -142,7 +140,7 @@ template in ( groupLiquidAppearances ) { name }
 end
 
 template in ( groupTransparentVariations ) { name }
-  transClear {"clear"}
+	transClear {"clear"}
   transFlecked {"flecked"}
   transLayered {"layered"}
   transLuminous {"luminous"}
@@ -152,5 +150,7 @@ template in ( groupTransparentVariations ) { name }
   transRainbowed {"rainbowed"}
   transTranslucent {"translucent"}
   transVariegated {"variegated"}
+  transCloudy {"cloudy"}
+  transSmoky {"smoky"}
 end
 

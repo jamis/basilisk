@@ -181,11 +181,9 @@ end
  * --------------------------------------------------------- */
 category potionAppearance
   [8]  appearsBubbling
-  [14] appearsCloudy
   [6]  appearsEffervescent
   [4]  appearsFuming
   [7]  appearsOily
-  [3]  appearsSmoky
   [12] appearsSyrupy
   [9]  appearsVaporous
   [11] appearsViscous
@@ -206,6 +204,8 @@ category potionTransparency
   [2]  transRainbowed
   [18] transTranslucent
   [9]  transVariegated
+  [3]  transSmoky
+  [14] transCloudy
 end
 
 
