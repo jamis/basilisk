@@ -1,0 +1,167 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk Tutorial #5: Adding Coin Types</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+    <H1>Tutorial #5: Adding Coin Types</H1>
+    <I>By <A HREF="mailto:Richard@spectraproducts.com">Richard Avery (Loric)</A> (Richard@spectraproducts.com)</I><BR>
+    <I>doc version 1.0</I>
+
+    <P>
+
+    This tutorial assumes that:
+    <OL>
+      <LI>You have completed <A HREF="tutorial4.html">Tutorial #4</A>.
+    </OL>
+
+		If you're like me you can't leave well enough alone.  The next thing
+		I asked myself after figuring out how to add art objects and gems,
+		was "How do I change or add coin types?"  If I am running a non-standard
+		game setting I might need steel coins or jade coins or even pieces of
+		bloodstone. 
+
+    <P>
+
+		Well this one is a bit more complicated than just adding a new art object
+		or gem.  We will need to edit two different files:
+
+		<UL>
+			<LI>units.bsk
+			<LI>treasure.bsk
+		</UL>
+
+		I decided that I wanted to add a few jade coins to my generator at the 
+		value of 50 gold pieces each.  To do this, we first need to add "jade pieces"
+		as a <A HREF="../scripting/dff.html#units">unit</A>, so we need to go back to
+		our trusty text editing program and open up the "units.bsk" file.  At the
+		very end of this 2 page file you will see a section that starts with the
+		line:
+
+<BLOCKQUOTE><PRE>
+unit cp;
+</PRE></BLOCKQUOTE>
+
+		Under this section are all the coin units and their relative values.
+		We need to add the following line after the <CODE>pp</CODE> definition:
+
+<BLOCKQUOTE><PRE>
+unit jp = 50 gp;
+</PRE></BLOCKQUOTE>
+
+		We will use "jp" as the abbreviate for "jade pieces."  Save this file.
+
+    <P>
+
+		Next, we need to open up the "treasure.bsk" file.  Now, this is a rather 
+		large file so we need to be careful not to edit something that we don't 
+		want to change.  Use your text editor and search for the first instance of 
+		<CODE>coin.cost</CODE>, then scroll down a little bit and look for this.
+
+<BLOCKQUOTE><PRE>
+is "cp" then
+	desc = "copper";
+is "sp" then
+	desc = "silver";
+is "gp" then
+	desc = "gold";
+is "pp" then
+	desc = "platinum";
+default
+	desc = "unknown";
+</PRE></BLOCKQUOTE>
+
+		These are the descriptions and the names of the coins as they will appear.  
+		Remember that anything that you put in the quote will appear in the 
+		console box. We will be adding the lines:
+
+<BLOCKQUOTE><PRE>
+is "jp" then
+	desc = "jade";
+</PRE></BLOCKQUOTE>
+	
+		after the platinum section so it will now look like this:
+
+<BLOCKQUOTE><PRE>
+is "cp" then
+	desc = "copper";
+is "sp" then
+	desc = "silver";
+is "gp" then
+	desc = "gold";
+is "pp" then
+	desc = "platinum";
+is "jp" then
+	desc = "jade";
+default
+	desc = "unknown";
+</PRE></BLOCKQUOTE>
+
+		So now you have added the value of the Jade pieces in the "units.bsk" file 
+		and we added the visual output translation.  If we didn't add this then 
+		the console would list it as an unknown type which as you can see by the 
+		code is the default setting.  But right now none of the treasure  
+		percentages are including jade pieces.  We will 
+		need to change that in the "treasure.bsk" file as well.  To accomplish 
+		this we will need to edit the encounter levels, which are the first 12 
+		pages of this file.  Decide what encounter levels that you want your new
+		coins to be found at.  I decide that I want it to be encountered at levels
+		19 to 30.  You will notice that the Encounter level tables end at 20, since
+		encounter levels 21 to 30 are the same as level 20, except for the number
+		of major magic items they bestow.  Thus, we only really need to 
+		change two sections to effect all 11 levels.  Scroll down the top half of 
+		the file till you find this:
+
+<BLOCKQUOTE><PRE>
+// Encounter Level 20
+
+category cTrLevel20Coins
+	[ 2] null
+	[63] { .magnitude 4d8*1000 gp }
+	[35] { .magnitude 4d10*100 pp }
+end
+</PRE></BLOCKQUOTE>
+
+		The numbers that you see in the "[&nbsp;]" are the weights for those items. The
+		larger the number, the more likely it is to appear.  "Null" means nothing
+		will appear. The "magnitude" is the number of coins appearing.  If you're
+		bothering to edit the code of a treasure generator for a role playing 
+		game, you should already understand the numbers that follow the magnitude --
+		it's a dice specification.
+
+    <P>
+
+		So we need to add our jade pieces, and we can do so as follows:
+
+<BLOCKQUOTE><PRE>
+category cTrLevel20Coins
+	[ 2] null
+	[63] { .magnitude 4d8*1000 gp }
+	[35] { .magnitude 4d10*100 pp }
+	[ 8] { .magnitude 2d10*10 jp }
+end
+</PRE></BLOCKQUOTE>
+
+		This means that I have a 8/108 (about 7.5%) chance of getting 2d10*10 jade
+		pieces.  Remember that we made them worth 50 gp each so we don't want to give a 
+		ton of them.
+
+		<P>
+
+		Now simply go back to the line starting with:
+
+<BLOCKQUOTE><PRE>
+// Encounter Level 19
+</PRE></BLOCKQUOTE>
+
+		and edit those fields as you wish.  Don't forget to compile the database 
+		afterwards, otherwise the changes will not take effect.
+
+    <P>
+
+    <A HREF="index.html">Back to the tutorial index</A>
+    <HR>
+    <I>Last modified on 24 Feb 2001 by Jamis Buck (minam@rpgplanet.com)</I>
+  </BODY>
+</HTML>
+

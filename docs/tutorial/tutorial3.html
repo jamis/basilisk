@@ -1,0 +1,107 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk Tutorial #3: Adding Art Objects</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+    <H1>Tutorial #3: Adding Art Objects</H1>
+    <I>By <A HREF="mailto:Richard@spectraproducts.com">Richard Avery (Loric)</A> (Richard@spectraproducts.com)</I><BR>
+    <I>doc version 1.0</I>
+
+    <P>
+
+		This tutorial will introduce a method for adding items to the art
+		object table.
+
+    <P>
+
+		The first file we will be taking a look at is the "art.bsk" file. 
+		This is the first file that I was able to add items to, and one of the 
+		easiest.  The art files, as they stand, are great, but if you're like me 
+		they just don't have enough as far as inventory.  If you were going to 
+		use the treasure generator for a prolonged period of time, your players 
+		would have tons of "brass mugs with jade inlays," and they would probably
+		start to get sick of it.  So, let's add some more items.  Find the file
+		"art.bsk" and open it up in a text editor (it will probably be in
+		"C:\Program Files\JamisBuck\Treasure\dat\standard", unless you installed the
+		treasure generator somewhere else).
+
+    <P>
+		
+		The "art.bsk" file is relatively small, only 3-4 pages.  When you open up the
+		file you will see some text and words that seem a little confusing, but on
+		about the 4th line you will see a line that says 
+
+<BLOCKQUOTE><PRE>
+{ .name "silver ewer" }
+</PRE></BLOCKQUOTE>
+
+		This is the type of item line that the database looks for.  An important thing to look
+		at is the category section above the items.  For example, the first category is
+		group55gpart, meaning that the average value of any item in this category should
+		be near that amount.  In other words, if you want to add an item that is a "small
+		jade necklace," don't add it under the 7000gp category unless there is a reason
+		that a small jade necklace would be worth on average 7000 gold pieces.
+
+    <P>
+
+		So let's add an item: "a small crystal ring."  We will say it
+		is worth about 55 gold pieces.  We can simply add the following line
+		after the "category" keyword and before the "end" keyword:
+
+<BLOCKQUOTE><PRE>
+{ .name "a small crystal ring" }
+</PRE></BLOCKQUOTE>
+
+		So now instead of it saying:
+
+<BLOCKQUOTE><PRE>
+category group55gpArt
+	{ .name "silver ewer" }
+	{ .name "carved bone statuette" }
+	{ .name "carved ivory statuette" }
+	{ .name "finely wrought small gold bracelet" }
+end
+</PRE></BLOCKQUOTE>
+
+		It would say:
+
+<BLOCKQUOTE><PRE>
+category group55gpArt
+	{ .name "silver ewer" }
+	{ .name "carved bone statuette" }
+	{ .name "carved ivory statuette" }
+	{ .name "finely wrought small gold bracelet" }
+	<b>{ .name "a small crystal ring" }</b>
+end
+</PRE></BLOCKQUOTE>
+
+		Now, save the file.  Your new item  won't appear yet when you generate
+		treasure, however -- you still need to recompile the database.
+		To do this, open up the treasure generator and select the "Tools" menu.
+		Then select "compile database," which will open up a "Compile Scripts"
+		window.  As long as you didn't move the location of the original file 
+		you shouldn't need to change anything here; just hit "compile."  It will take
+		a few seconds to compile the data files, and when it has finished you will
+		get a window saying, "The requested database has been compiled and 
+		loaded, and is now the current database."  Just press OK.
+
+		<P>
+
+		Now, generate some treasure! For testing, I recommend having the console on 
+		Auto-Clear set the encounter level for 20, and select "No Gems."  You should
+		get a decent return on the items, but it may take you about 15-30 generations
+		to get your new item.  But keep doing it until you make sure it works.
+
+		<P>
+
+		Bang!  You now know how to add art items to database!
+
+    <P>
+
+    <A HREF="index.html">Back to the tutorial index</A>
+    <HR>
+    <I>Last modified on 23 Feb 2001 by Jamis Buck (minam@rpgplanet.com)</I>
+  </BODY>
+</HTML>
+

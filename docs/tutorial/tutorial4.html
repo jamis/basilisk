@@ -1,0 +1,73 @@
+<HTML>
+  <HEAD>
+    <TITLE>Basilisk Tutorial #4: Adding Gems</TITLE>
+  </HEAD>
+
+  <BODY BGCOLOR="White">
+    <H1>Tutorial #4: Adding Data Gems</H1>
+    <I>By <A HREF="mailto:Richard@spectraproducts.com">Richard Avery (Loric)</A> (Richard@spectraproducts.com)</I><BR>
+    <I>doc version 1.0</I>
+
+    <P>
+
+    This tutorial assumes that:
+    <OL>
+      <LI>You have completed <A HREF="tutorial3.html">Tutorial #3</A>.
+    </OL>
+
+		So, now you want to add something to the Gem list huh?  Well this is also
+		a very easy step -- moving from the art objects to the gems is pretty simple.
+
+		<P>
+
+		Open up the "gem.bsk" file in a text editor.
+
+		<P>
+
+		This file is somewhat small (only 3-4 pages) so it's not a lot to have to
+		absorb.  Let's say that you want to add a gem called a "small rock."  Why?
+		Who knows?  Maybe rocks are worth money in your game world. ;)
+
+		<P>
+
+		When you open the file you will see alot of gems set up like this:
+
+<BLOCKQUOTE><PRE>
+mossAgate { "moss agate" }
+</PRE></BLOCKQUOTE>
+
+		The first part (one word, without any spaces) is the identifier that we will be
+		adding (it won't actually be displayed by the treasure generator).  The 
+		part in the brackets and quotes is the name that will actually be displayed.
+		So we want to add a small rock.  At the bottom of the list of gems add 
+		the line:
+
+<BLOCKQUOTE><PRE>
+smallrock { "small rock" }
+</PRE></BLOCKQUOTE> 
+
+		Then you need to choose how much this gem is worth, because there are 
+		average value categories just like in the art.bsk file.
+		We decide that it is worth about 10 gold, so we need to place the name 
+		<CODE>smallrock</CODE> in between the line reading <CODE>category
+		group10gpGems</CODE> and the <CODE>end</CODE> keyword,
+		which seperates these gems from the next, more valueable group.
+
+		<P>
+
+		Then, save the file and recompile the database just like you did in
+		the tutorial for making a new art object.
+
+		<P>
+
+		Then generate a few treasures (encounter level 20, selecting "No Art"),
+		and you should see your new gem!
+
+    <P>
+
+    <A HREF="index.html">Back to the tutorial index</A>
+    <HR>
+    <I>Last modified on 23 Feb 2001 by Jamis Buck (minam@rpgplanet.com)</I>
+  </BODY>
+</HTML>
+
