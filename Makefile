@@ -59,6 +59,10 @@ bskrun: bskrun.c bskcallbacks.c
 bsktreasure: bsktreasure.c bskcallbacks.c
 	$(CC) $(OPTS) -o bsktreasure bsktreasure.c bskcallbacks.c $(RUNLIBS)
 
+update:
+	# doesn't work on Windows (but ok Cygwin).  How to fix?
+	CVS_RSH=ssh; export CVS_RSH; cvs update
+
 clean:
 	rm -f libbasilisk.a
 	rm -f libbasilisk.so
