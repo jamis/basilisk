@@ -77,7 +77,7 @@ weighted-ident-list-entry := { num ":" } ident
   #       [3] soccerball
   #       football
   #     end
-category-def := "category" ident category-body "end"
+category-def := "category" ident { "(" weighted-ident-list ")" } category-body "end"
 
   # A category-body consists of one or more category-entries.  A category
   # entry may be explicitly assigned a weighting, but if it is not, the
@@ -101,7 +101,7 @@ category-entry2 := ident
   # types.  The first (optional) ident-list in parentheses is the list of
   # groups the component items are to belong to.  The second ident-list is a
   # list of names of properties that each thing has.
-template-def := "template" { "(" ident-list ")" } "{" ident-list "}" template-entry-list "end"
+template-def := "template" { "(" weighted_ident-list ")" } "{" ident-list "}" template-entry-list "end"
 
 template-entry-list := template-entry
                      | template-entry template-entry-list
@@ -110,7 +110,7 @@ template-entry-list := template-entry
   # of values that correspond to the list of properties given in the 
   # template definition.  The optional ident-list is a list of categories
   # that the component thing will belong to.
-template-entry := ident { "(" ident-list ")" } "{" template-value-list "}"
+template-entry := ident { "(" weighted_ident-list ")" } "{" template-value-list "}"
 
 template-value-list := template-value
                      | template-value template-value-list
@@ -220,7 +220,7 @@ rule-statement := ident ident-tail { "=" logexpr } ";"
   # An if statement may have an optional else statement
 if2 := ()
      | "elseif" logexpr "then" rule-statement-list if2
-     | "else" rule-statement
+     | "else" rule-statement_list
 
 for2 := "=" logexpr "to" logexpr 
       | "in" logexpr
