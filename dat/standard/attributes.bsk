@@ -73,6 +73,7 @@ attribute untrained                     boolean
 attribute acPenaltyApplies              boolean
 attribute bonusFeatAtFirstLevel         boolean
 attribute prerequisiteNot               boolean
+attribute needPrefix                    boolean
 
 // ----------------------------- thing attributes -------------------------
 attribute size                          thing

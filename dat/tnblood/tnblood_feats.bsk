@@ -1,83 +1,83 @@
 featDivineCleansing in ( groupAllFeats groupDivineFeats )
-  .name "Divine Cleansing"
+  .name "divine cleansing"
   .takeMultiple no
   .sources sourcesDefendersoftheFaith
 end
 
 featDivineMight in ( groupAllFeats groupDivineFeats )
-  .name "Divine Might"
+  .name "divine might"
   .takeMultiple no
   .sources sourcesDefendersoftheFaith
 end
 
 featDivineResistance in ( groupAllFeats groupDivineFeats )
-  .name "Divine Resistance"
+  .name "divine resistance"
   .takeMultiple no
   .sources sourcesDefendersoftheFaith
 end
 
 featDivineShield in ( groupAllFeats groupDivineFeats )
-  .name "Divine Shield"
+  .name "divine shield"
   .takeMultiple no
   .sources sourcesDefendersoftheFaith
 end
 
 featDivineVengence in ( groupAllFeats groupDivineFeats )
-  .name "Divine Vengence"
+  .name "divine vengence"
   .takeMultiple no
   .sources sourcesDefendersoftheFaith
 end
 
 featDivineVigor in ( groupAllFeats groupDivineFeats )
-  .name "Divine Vigor"
+  .name "divine vigor"
   .takeMultiple no
   .sources sourcesDefendersoftheFaith
 end
 
 featEmpowerTurning in ( groupAllFeats groupSpecialFeats )
-  .name "Empower Turning"
+  .name "empower turning"
   .takeMultiple no
   .sources sourcesDefendersoftheFaith
 end
 
 featExtraSmiting in ( groupAllFeats groupSpecialFeats )
-  .name "Extra Smiting"
+  .name "extra smiting"
   .takeMultiple no
   .sources sourcesDefendersoftheFaith
 end
 
 featHeightenTurning in ( groupAllFeats groupSpecialFeats )
-  .name "Heighten Turning"
+  .name "heighten turning"
   .takeMultiple no
   .sources sourcesDefendersoftheFaith
 end
 
 featImprovedShieldBash in ( groupAllFeats groupGeneralFeats )
-  .name "Improved Shield Bash"
+  .name "improved shield bash"
   .takeMultiple no
   .sources sourcesDefendersoftheFaith
 end
 
 featQuickenTurning in ( groupAllFeats groupSpecialFeats )
-  .name "Special Feats"
+  .name "special feats"
   .takeMultiple no
   .sources sourcesDefendersoftheFaith
 end
 
 featReachSpell in ( groupAllFeats groupMetaMagicFeats )
-  .name "Reach Spell"
+  .name "reach spell"
   .takeMultiple no
   .sources sourcesDefendersoftheFaith
 end
 
 featSacredSpell in ( groupAllFeats groupMetaMagicFeats )
-  .name "Sacred Spell"
+  .name "sacred spell"
   .takeMultiple no
   .sources sourcesDefendersoftheFaith
 end
 
 featShieldCharge in ( groupAllFeats groupGeneralFeats )
-  .name "Shield Charge"
+  .name "shield charge"
   .takeMultiple no
   .sources sourcesDefendersoftheFaith
 end

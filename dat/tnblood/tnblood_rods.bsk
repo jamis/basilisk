@@ -1,180 +1,180 @@
 rodChaining
-  .name "Chaining"
+  .name "chaining"
   .cost 108000 gp
   .itemQualities ( { .description "item may be converted from rod to flail form or back as a move-equivalent action" } )
   .sources sourcesTomeAndBlood
 end
 
 rodlesserChaining
-  .name "Lesser Chaining"
+  .name "lesser chaining"
   .cost 27200 gp
   .sources sourcesTomeAndBlood
 end
 
 rodgreaterChaining
-  .name "Greater Chaining"
+  .name "greater chaining"
   .cost 243000 gp
   .sources sourcesTomeAndBlood
 end
 
 rodCooperation
-  .name "Cooperation"
+  .name "cooperation"
   .cost 10500 gp
   .sources sourcesTomeAndBlood
 end
 
 rodlesserCooperation
-  .name "Lesser Cooperation"
+  .name "lesser cooperation"
   .cost 2700 gp
   .sources sourcesTomeAndBlood
 end
 
 rodgreaterCooperation
-  .name "Greater Cooperation"
+  .name "greater cooperation"
   .cost 24300 gp
   .sources sourcesTomeAndBlood
 end
 
 rodEmpowerment
-  .name "Empowerment"
+  .name "empowerment"
   .cost 64800 gp
   .sources sourcesTomeAndBlood
 end
 
 rodlesserEmpowerment
-  .name "Lesser Empowerment"
+  .name "lesser empowerment"
   .cost 16200 gp
   .sources sourcesTomeAndBlood
 end
 
 rodgreaterEmpowerment
-  .name "Greater Empowerment"
+  .name "greater empowerment"
   .cost 145800 gp
   .sources sourcesTomeAndBlood
 end
 
 rodEnlargement
-  .name "Enlargement"
+  .name "enlargement"
   .cost 21600 gp
   .sources sourcesTomeAndBlood
 end
 
 rodlesserEnlargement
-  .name "Lesser Enlargement"
+  .name "lesser enlargement"
   .cost 5400 gp
   .sources sourcesTomeAndBlood
 end
 
 rodgreaterEnlargement
-  .name "Greater Enlargement"
+  .name "greater enlargement"
   .cost 48600 gp
   .sources sourcesTomeAndBlood
 end
 
 rodExtension
-  .name "Extension"
+  .name "extension"
   .cost 21600 gp
   .sources sourcesTomeAndBlood
 end
 
 rodlesserExtension
-  .name "Lesser Extension"
+  .name "lesser extension"
   .cost 5400 gp
   .sources sourcesTomeAndBlood
 end
 
 rodgreaterExtension
-  .name "Greater Extension"
+  .name "greater extension"
   .cost 48600 gp
   .sources sourcesTomeAndBlood
 end
 
 rodMaximization
-  .name "Maximization"
+  .name "maximization"
   .cost 108000 gp
   .sources sourcesTomeAndBlood
 end
 
 rodlesserMaximization
-  .name "Lesser Maximization"
+  .name "lesser maximization"
   .cost 27200 gp
   .sources sourcesTomeAndBlood
 end
 
 rodgreaterMaximization
-  .name "Greater Maximization"
+  .name "greater maximization"
   .cost 243000 gp
   .sources sourcesTomeAndBlood
 end
 
 rodQuickening
-  .name "Quickening"
+  .name "quickening"
   .cost 151200 gp
   .sources sourcesTomeAndBlood
 end
 
 rodlesserQuickening
-  .name "Lesser Quickening"
+  .name "lesser quickening"
   .cost 37800 gp
   .sources sourcesTomeAndBlood
 end
 
 rodgreaterQuickening
-  .name "Greater Quickening"
+  .name "greater quickening"
   .cost 340200 gp
   .sources sourcesTomeAndBlood
 end
 
 rodSculpting
-  .name "Sculpting"
+  .name "sculpting"
   .cost 21600 gp
   .sources sourcesTomeAndBlood
 end
 
 rodlesserSculpting
-  .name "Lesser Sculpting"
+  .name "lesser sculpting"
   .cost 5400 gp
   .sources sourcesTomeAndBlood
 end
 
 rodgreaterSculpting
-  .name "Greater Sculpting"
+  .name "greater sculpting"
   .cost 48600 gp
   .sources sourcesTomeAndBlood
 end
 
 rodSilence
-  .name "Silence"
+  .name "silence"
   .cost 21600 gp
   .sources sourcesTomeAndBlood
 end
 
 rodlesserSilence
-  .name "Lesser Silence"
+  .name "lesser silence"
   .cost 5400 gp
   .sources sourcesTomeAndBlood
 end
 
 rodgreaterSilence
-  .name "Greater Silence"
+  .name "greater silence"
   .cost 48600 gp
   .sources sourcesTomeAndBlood
 end
 
 rodSubstitution
-  .name "Substitution"
+  .name "substitution"
   .cost 10500 gp
   .sources sourcesTomeAndBlood
 end
 
 rodlesserSubstitution
-  .name "Lesser Substitution"
+  .name "lesser substitution"
   .cost 2700 gp
   .sources sourcesTomeAndBlood
 end
 
 rodgreaterSubstitution
-  .name "Greater Substitution"
+  .name "greater substitution"
   .cost 24300 gp
   .sources sourcesTomeAndBlood
 end

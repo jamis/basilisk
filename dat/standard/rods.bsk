@@ -240,7 +240,10 @@ rule rSelectRod( rodMagnitude options )
   if y ne null then
     rod = rNewInstanceOf( y );
     rod.treasureType = "rod";
-    rod.name = "rod of " + rod.name;
+
+    if rSafeGet( rod, "needPrefix", true ) then
+      rod.name = "rod of " + rod.name;
+    end
 
     if options.optShowSourceName then
       rod.name = rod.name + " [" + Get( rod.sources, 0 ).name + "]";
@@ -253,7 +256,11 @@ rule rSelectRod( rodMagnitude options )
 			if d eq 1 then
 				rEmbueIntelligenceUpon( rod, options );
 			elseif d le 31 then
-				rod = rEnsureAttributeExists( rod, "itemQualities", atCategory );
+        if has( rod, "itemQualities" ) then
+          rod.itemQualities = duplicate( rod.itemQualities );
+        else
+          rod.itemQualities = NewCategory();
+        end
 				q = NewThing();
 				q.description = "something provides a clue to the rod's function";
 				add( rod.itemQualities, q );

@@ -241,6 +241,7 @@ staffDarkStaff
   .cost 67500 gp
   .init rInitGenericStaffProperties
   .sources sourcesNboMTDnDCC
+  .needPrefix false
 end
 
 staffOfTheRoad

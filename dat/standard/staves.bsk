@@ -172,7 +172,9 @@ rule rInitGenericStaffProperties( item )
   item.charges = Random(50) + 1;
 	item.cost = item.cost * ( item.charges / 50 );
   item.prototype = weaponQuarterstaff;
-  item.name = "staff of " + item.name;
+  if rSafeGet( item, "needPrefix", true ) then
+    item.name = "staff of " + item.name;
+  end
   rInitGenericStaffProperties = item;
 end
 

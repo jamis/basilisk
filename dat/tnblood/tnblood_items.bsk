@@ -26,77 +26,77 @@ wondrousBeltofManyPockets
 end
 
 wondrousBeltofSpellResistance
-  .name "Belt of Spell Resistance"
+  .name "belt of spell resistance"
   .cost 90000 gp
   .canBeIntelligent no
   .sources sourcesTomeAndBlood
 end
 
 wondrousClayGolemManual
-  .name "Clay Golem Manual"
+  .name "clay golem manual"
   .cost 24000 gp
   .canBeIntelligent no
   .sources sourcesTomeAndBlood
 end
 
 wondrousFleshGolemManual
-  .name "Flesh Golem Manual"
+  .name "flesh golem manual"
   .cost 24000 gp
   .canBeIntelligent no
   .sources sourcesTomeAndBlood
 end
 
 wondrousIronGolemManual
-  .name "Iron Golem Manual"
+  .name "iron golem manual"
   .cost 32250 gp
   .canBeIntelligent no
   .sources sourcesTomeAndBlood
 end
 
 wondrousStoneGolemManual
-  .name "Stone Golem Manual"
+  .name "stone golem manual"
   .cost 28750 gp
   .canBeIntelligent no
   .sources sourcesTomeAndBlood
 end
 
 wondrousRugofWelcome
-  .name "Rug of Welcome"
+  .name "rug of welcome"
   .cost 30000 gp
   .canBeIntelligent yes
   .sources sourcesTomeAndBlood
 end
 
 wondrousVestOfResistance1
-  .name "Vest Of Resistance (+1)"
+  .name "vest of resistance (+1)"
   .cost 1000 gp
   .canBeIntelligent yes
   .sources sourcesTomeAndBlood
 end
 
 wondrousVestOfResistance2
-  .name "Vest Of Resistance (+2)"
+  .name "vest of resistance (+2)"
   .cost 2000 gp
   .canBeIntelligent yes
   .sources sourcesTomeAndBlood
 end
 
 wondrousVestOfResistance3
-  .name "Vest Of Resistance (+3)"
+  .name "vest of resistance (+3)"
   .cost 4000 gp
   .canBeIntelligent yes
   .sources sourcesTomeAndBlood
 end
 
 wondrousVestOfResistance4
-  .name "Vest Of Resistance (+4)"
+  .name "vest of resistance (+4)"
   .cost 16000 gp
   .canBeIntelligent yes
   .sources sourcesTomeAndBlood
 end
 
 wondrousVestOfResistance5
-  .name "Vest Of Resistance (+5)"
+  .name "vest of resistance (+5)"
   .cost 25000 gp
   .canBeIntelligent yes
   .sources sourcesTomeAndBlood

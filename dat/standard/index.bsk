@@ -42,9 +42,14 @@
 /* the following are files for data that extends the data found
  * in the core rulebooks. */
 
-#include "snfist.bsk"   /* Sword & Fist */
-#include "scitadel.bsk" /* the Sunless Citadel */
-#include "dragon.bsk"   /* Dragon Magazine data */
-#include "tnblood.bsk"   /* Tome and Blood */
-#include "defenders.bsk" /* Defenders of the Faith */
-#include "nbomt.bsk"     /* Netbook of Magical Treasures */
+#include "boem.bsk"       /* Book of Eldritch Might */
+#include "defenders.bsk"  /* Defenders of the Faith */
+#include "diablo.bsk"     /* Diablo */
+#include "dragon.bsk"     /* Dragon Magazine data */
+#include "dungeon.bsk"    /* Dungeon Magazine */
+#include "motplanes.bsk"  /* Manual of the Planes */
+#include "nbomt.bsk"      /* Netbook of Magical Treasures */
+#include "polyhedron.bsk" /* Polyhedron Magazine */
+#include "scitadel.bsk"   /* the Sunless Citadel */
+#include "snfist.bsk"     /* Sword & Fist */
+#include "tnblood.bsk"    /* Tome and Blood */

@@ -3,5 +3,9 @@
 #include "drgn277.bsk"
 #include "drgn279.bsk"
 #include "drgn280.bsk"
+#include "drgn281.bsk"
+#include "drgn283.bsk"
+#include "drgn284.bsk"
+#include "drgn287.bsk"
 #include "drgnann5.bsk"
 

@@ -1,5 +1,5 @@
 staffIllumination
-  .name "Illumination"
+  .name "illumination"
   .cost 51000 gp
   .init rInitGenericStaffProperties
   .specialAttacks ( { .type satSpellEffect .spell spellDancingLights .charges 1 }
@@ -10,7 +10,7 @@ staffIllumination
 end
 
 staffAbjuration
-  .name "Abjuration"
+  .name "abjuration"
   .cost 99000 gp
   .init rInitGenericStaffProperties
   .specialQualities ( { .type satSpellEffect .spell spellShield .charges 1 }
@@ -23,7 +23,7 @@ staffAbjuration
 end
 
 staffConjuration
-  .name "Conjuration"
+  .name "conjuration"
   .cost 102000 gp
   .init rInitGenericStaffProperties
   .specialQualities ( { .type satSpellEffect .spell spellUnseenServant .charges 1 }
@@ -36,7 +36,7 @@ staffConjuration
 end
 
 staffDivination
-  .name "Divination"
+  .name "divination"
   .cost 102000 gp
   .init rInitGenericStaffProperties
   .specialQualities ( { .type satSpellEffect .spell spellDetectSecretDoors .charges 1 }
@@ -49,7 +49,7 @@ staffDivination
 end
 
 staffEnchantment
-  .name "Enchantment"
+  .name "enchantment"
   .cost 101000 gp
   .init rInitGenericStaffProperties
   .specialQualities ( { .type satSpellEffect .spell spellSleep .saveDC 11 .charges 1 }
@@ -62,7 +62,7 @@ staffEnchantment
 end
 
 staffEvocation
-  .name "Evocation"
+  .name "evocation"
   .cost 98000 gp
   .init rInitGenericStaffProperties
   .specialQualities ( { .type satSpellEffect .spell spellMagicMissile .charges 1 }
@@ -75,7 +75,7 @@ staffEvocation
 end
 
 staffIllusion
-  .name "Illusion"
+  .name "illusion"
   .cost 102000 gp
   .init rInitGenericStaffProperties
   .specialQualities ( { .type satSpellEffect .spell spellChangeSelf .charges 1 }
@@ -88,7 +88,7 @@ staffIllusion
 end
 
 staffNecromancy
-  .name "Necromancy"
+  .name "necromancy"
   .cost 101000 gp
   .init rInitGenericStaffProperties
   .specialQualities ( { .type satSpellEffect .spell spellCauseFear .saveDC 11 .charges 1 }
@@ -101,7 +101,7 @@ staffNecromancy
 end
 
 staffTransmutation
-  .name "Transmutation"
+  .name "transmutation"
   .cost 101000 gp
   .init rInitGenericStaffProperties
   .specialQualities ( { .type satSpellEffect .spell spellBurningHands .saveDC 11 .charges 1 }
