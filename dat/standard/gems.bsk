@@ -1,106 +1,455 @@
+/* ----------------------------------------------------------------------------- *
+ * The data in this file is ENTIRELY thanks to Spencer Cooley, aka "Sigil"
+ * (the_sigil@hotmail.com).  It represents a lot of time spent in research, so
+ * if you appreciate it -- drop him a line!
+ * ----------------------------------------------------------------------------- */
+
 forward rule rInstantiateGem
 
 template { name }
+  achroiteBeryl { "achroite beryl (clear beryl)" }
+	adventurine { "adventurine (speckles in green, blue, brown and red)" }
+	agniMani { "agni mani" }
+  albite { "albite (white)" }
+  alestone { "alestone" }
+  alexandrite { "alexandrite (dark green, but transmitted light is red)" }
+  algae { "algae" }
+  allanite { "allanite (black epidote)" }
+  almandine { "almandine (bright red - garnet)" }
+  almandineDark { "almandine (dark red - garnet)" }
+  amarantha { "amaratha" }
+  amazoniteMicroline { "amazonite microcline (green)" }
+  amber { "amber (yellow)" }
+  amberOrange { "amber (orange)" }
+  amberRed { "amber (red)" }
+  amethyst { "amethyst (purple crystals)" }
+  ametrine { "ametrine (alternating layers of purple amethyst and yellowish citrine)" }
+  andar { "andar" }
+  andradite { "andradite (brownish-black garnet)" }
+  angelsSkin { "angel's skin" }
+  apacheTears { "apache tears (small droplets of black, smokey black, reddish, greenish black, or purplish black obsidian)" }
+  apatite { "apatite (violet)" }
+  aquaAura { "aqua aura (clear or cloudy blue crystals with flecks of gold - the metal - on the surface)" }
+  aquamarine { "aquamarine (blue-green beryl)" }
+  augelite { "augelite" }
+  augite { "augite (brown)" }
+  ausOpalGreen { "australian opal (light green)" }
+  ausOpalWhite { "australian opal (white)" }
+  ausOpalYellow { "australian opal (yellow)" }
+  azurite { "azurite (royal blue)" }
+  balasRuby { "balas ruby (red spinel)" }
+  balasRubyPink { "balas ruby (pink spinel)" }
   bandedAgate { "banded agate" }
-  eyeAgate { "eye agate" }
-  mossAgate { "moss agate" }
-  azurite { "azurite" }
-  blueQuartz { "blue quartz" }
-  hematite { "hematite" }
-  lapisLazuli { "lapis lazuli" }
-  malachite { "malachite" }
-  obsidian { "obsidian" }
-  rhodochrosite { "rhodochrosite" }
-  tigerEyeTurquoise { "tiger-eye turquoise" }
-  freshwaterPearl { "freshwater (irregular) pearl" }
-  bloodstone { "bloodstone" }
-  carnelian { "carnelian" }
-  chalcedony { "chalcedony" }
-  chrysoprase { "chrysoprase" }
-  citrine { "citrine" }
-  iolite { "iolite" }
-  jasper { "jasper" }
-  moonstone { "moonstone" }
-  onyx { "onyx" }
-  peridot { "peridot" }
-  rockCrystal { "rock crystal" }
-  sard { "sard" }
-  sardonyx { "sardonyx" }
-  roseQuartz { "rose quartz" }
-  smokyQuartz { "smoky quartz" }
-  starRoseQuartz { "star rose quartz" }
-  zircon { "zircon" }
-  amber { "amber" }
-  amethyst { "amethyst" }
-  chrysoberyl { "chrysoberyl" }
-  coral { "coral" }
-  redGarnet { "red garnet" }
-  brownGreenGarnet { "brown-green garnet" }
-  jade { "jade" }
-  jet { "jet" }
-  whitePearl { "white pearl" }
-  goldenPearl { "golden pearl" }
-  pinkPearl { "pink pearl" }
-  silverPearl { "silver pearl" }
-  redSpinel { "red spinel" }
-  redBrownSpinel { "red-brown spinel" }
-  deepGreenSpinel { "deep green spinel" }
-  tourmaline { "tourmaline" }
-  alexandrite { "alexandrite" }
-  aquamarine { "aquamarine" }
-  violetGarnet { "violet garnet" }
-  blackPearl { "black pearl" }
-  deepBlueSpinel { "deep blue spinel" }
-  goldenYellowTopaz { "golden yellow topaz" }
-  emerald { "emerald" }
-  whiteOpal { "white opal" }
+  batCaveJasper { "bat cave jasper (chocolate brown to tan)" }
+  beljuril { "beljuril" }
+  benitoite { "benitoite (blue, fluoresces in UV light)" }
+  berylWhite { "beryl (white)" }
+  berylYellow { "beryl (yellow)" }
+  bixbiteRaspberry { "bixbite (raspberry red beryl)" }
+  bixbiteViolet { "bixbite (violet beryl)" }
+  bixbyte { "bixbyte (large, black, opaque cube-shaped crystals)" }
+  blackAgate { "black agate" }
+  blackAndWhiteAgate { "black and white agate" }
+  blackDiamond { "black diamond" }
   blackOpal { "black opal" }
-  fireOpal { "fire opal" }
-  blueSapphire { "blue sapphire" }
-  fieryYellowCorundum { "fiery yellow corundum" }
-  richPurpleCorundum { "rich purple corundum" }
-  blueStarSapphire { "blue star sapphire" }
-  blackStarSapphire { "black star sapphire" }
-  starRuby { "star ruby" }
-  clearBGEmerald { "clearest bright green emerald" }
-  blueWhiteDiamond { "blue-white diamond" }
-  canaryDiamond { "canary diamond" }
-  pinkDiamond { "pink diamond" }
-  brownDiamond { "brown diamond" }
-  blueDiamond { "blue diamond" }
+  blackSapphire { "black sapphire (corundum)" }
+  blackSpinel { "black spinel" }
+  bloodstone { "bloodstone (deep green with red flecks)" }
+  blueAgate { "blue agate" }
+  blueJohnFluorite { "blue john fluorite (crystals are like intertwined blocks)" }
+  blueLaceAgate { "blue lace agate" }
+  blueOpal { "blue opal" }
+  blueQuartz { "blue quartz" }
+  blueSpinel { "blue spinel" }
+  bluestone { "bluestone" }
+  blueTopaz { "blue topaz" }
+  boakhar { "boakhar" }
+  borax { "borax (white)" }
+  boraxPaleBlue { "borax (pale blue)" }
+  boraxYellow { "borax (yellow)" }
+  boulderOpal { "boulder opal (brown)" }
+  brandeen { "brandeen" }
+  brownAgate { "brown/tawny agate" }
+  brownJasper { "brown jasper" }
+  brownSpinel { "brown spinel" }
+  brownTopaz { "brown topaz" }
+  bruneauJasperBrown { "bruneau jasper (brown with ivory in spherical and oval patterns)" }
+  bruneauJasperTan { "bruneau jasper (tan with ivory in spherical and oval patterns)" }
+  buergerite { "buergerite (brown tourmaline)" }
+  burntTopaz { "burnt topaz (brownish to off-pink)" }
+  careyPlumeAgate { "carey plume agate" }
+  carnelianBrown { "carnelian (dark brown chalcedony)" }
+  carnelianOrange { "carnelian (orange chalcedony)" }
+  carnelianRed { "carnelian (red chalcedony)" }
+  celestite { "celestite (clear milky whites to yellows and pale blues)" }
+  cherryOpal { "cherry opal (bright red opal)" }
+  chromiumDiopside { "chromium diopside (dark green)" }
+  chrysocolla { "chrysocolla" }
+  chrysoprase { "chrysoprase (bright green)" }
+  chrystolite { "chrystolite (greenish yellow)" }
+  citrine { "citrine (yellow to brown)" }
+  clearFluorite { "clear fluorite (crystals are like intertwined blocks)" }
+  clearQuartz { "clear quartz" }
+  clearSpinel { "clear spinel" }
+  clearSpodumene { "clear spodumene" }
+  clearTopaz { "clear topaz" }
+  clelophane { "clelophane" }
+  colorlessSapphire { "colorless sapphire (clear corundum)" }
+  coral { "coral" }
+  corstal { "corstal" }
+  crazyLaceAgate { "crazy lace agate" }
+  crownOfSilver { "crown of silver" }
+  datchas { "datchas" }
+  demantoid { "demantoid (green garnet)" }
+  dendriticAgate { "dendritic agate" }
+  diamondBlue { "diamond (light blue)" }
+  diamondBrown { "diamond (brown)" }
+  diamondChampagne { "diamond (champagne-color)" }
+  diamond { "diamond (colorless)" }
+  diamondGray { "diamond (gray)" }
+  diamondGreen { "diamond (green)" }
+  diamondPink { "diamond (pink)" }
+  diamondYellow { "diamond (yellow)" }
+  diopsideBlue { "diopside (blue)" }
+  diopsideBrown { "diopside (brown)" }
+  diopsideWhite { "diopside (white)" }
+  dioptase { "dioptase" }
+  disthene { "disthene" }
+  dravite { "dravite (black to brownish yellow tourmaline)" }
+  dunite { "dunite (light green with white speckles)" }
+  elbaiteGreen { "elbaite (green tourmaline)" }
+  elbaiteOrange { "elbaite (orange tourmaline)" }
+  elbaitePink { "elbaite (pink tourmaline)" }
+  elbaiteRed { "elbaite (red tourmaline)" }
+  elbaiteViolet { "elbaite (violet-red tourmaline)" }
+  electricObsidian { "electric obsidian (deep blue)" }
+  emerald { "emerald (green beryl)" }
+  emery { "emery (grey corundum)" }
+  enstatite { "enstatite (olive green stubby crystals)" }
+  euclase { "euclase" }
+  eyeAgate { "eye agate" }
+  fadenQuartz { "faden quartz (clear with white fiberlike inclusions)" }
+  fayalite { "fayalite (opaque green; found in masses, not crystals)" }
+  ferrosalite { "ferrosalite (green diopside)" }
+  fireAgate { "fire agate" }
+  fireOpal { "fire opal (orange to red)" }
+  flamedance { "flamedance" }
+  fluorspar { "fluorspar" }
+  frostAgate { "frost agate" }
+  galena { "galena (lead-gray cubes)" }
+  garnetPeridotite { "garnet peridotite (dark green with deep red spots)" }
+  geode { "geode ('thunderstones')" }
+  girasol { "girasol (blue opal)" }
+  goldline { "goldline" }
+  goldSheenObsidian { "gold sheen obsidian" }
+  goldTopaz { "gold topaz" }
+  goshenite { "goshenite (clear to pale blue beryl)" }
+  graveyardPlumeAgate { "graveyard plume agate (white flames)" }
+  grayAgate { "gray agate" }
+  graySpodumene { "gray spodumene" }
+  grayTopaz { "gray topaz (actually dirty white, not gray)" }
+  greenAgate { "green agate" }
+  greenFluorite { "green fluorite (crystals are like intertwined blocks)" }
+  greenJasper { "green jasper (green with red flecks)" }
+  greenQuartz { "green quartz" }
+  greenSapphire { "green sapphire (green corundum)" }
+  greenSpinel { "green spinel" }
+  greenstone { "greenstone" }
+  greenTopaz { "green topaz (actually nearly blue instead of green)" }
+  grossular { "grossular (colorless to faint green garnets)" }
+  gypsum { "gypsum (yellow to colorless)" }
+  hambergyle { "hambergyle" }
+  harlequinOpal { "harlequin opal (blue with flecks of pink, green, darker blue)" }
+  heliodore { "heliodore (gold-colored beryl)" }
+  hematite { "hematite" }
+  hessonite { "hessonite (grainy mass of garnet)" }
+  hiddenite { "hiddenite (bright green spodumene)" }
+  hollyBlueAgate { "holly blue agate (has violet tinges)" }
+  honduranOpal { "honduran opal (fiery flecks on a basalt-colored stone)" }
+  hornCoral { "horn coral" }
+  howlite { "howlite (gray to white, absorbs liquid VERY easily - this makes it easily dyed a different color)" }
+  hyaline { "hyaline" }
+  hyalite { "hyalite (colorless, transparent opal)" }
+  hydrophane { "hydrophane (white, when soaked in water absorbs water and becomes transparent or irridescent)" }
+  hypersthene { "hypersthene" }
+  imperialTopaz { "imperial topaz (deep golden color)" }
+  ioliteBlue { "iolite (blue)" }
+  ioliteGray { "iolite (gray)" }
+  iolitePurple { "iolite (purple)" }
+  ioliteWhite { "iolite (white)" }
+  irtios { "irtios" }
   jacinth { "jacinth" }
+  jade { "jade (any color, comes in masses and not crystals)" }
+  jargoon { "jargoon" }
+  jasmal { "jasmal" }
+  jellyOpal { "jelly opal (multiple colors smeared together)" }
+  jet { "jet (black, sometimes called 'black amber')" }
+  kingsTears { "king's tears" }
+  kornerupine { "kornerupine" }
+  kunzite { "kunzite (pink spodumene)" }
+  labradorite { "labradorite (blue, irridescent feldspar)" }
+  laerelsTears { "laeral's tears" }
+  lapisLazuli { "lapis lazuli (blue, often flecked with gold or white)" }
+  lavrovite { "lavrovite (green diopside)" }
+  lazulite { "lazulite (bright blue to green)" }
+  leopardAgate { "leopard agate" }
+  lilacSpinel { "lilac spinel (purple spinel)" }
+  lodestone { "lodestone" }
+  luriyl { "luriyl" }
+  lynxEye { "lynx eye" }
+  malachite { "malachite (green)" }
+  malacon { "malacon" }
+  mauveSpinel { "mauve spinel" }
+  melanite { "melanite (black garnet)" }
+  mellochrysos { "mellochrysos" }
+  milkyQuartz { "milky quartz" }
+  moonbar { "moonbar" }
+  moonstoneBlue { "moonstone (blue)" }
+  moonstoneGreen { "moonstone (green)" }
+  moonstone { "moonstone (milky white)" }
+  moonstonePink { "moonstone (pink)" }
+  morganite { "morganite (pink beryl, sometimes called 'pink emerald')" }
+  morion { "morion (dark brown to black quartz)" }
+  mossAgate { "moss agate" }
+  mossOpal { "moss opal (green)" }
+  motherOfPearl { "mother-of-pearl (varies - inside of shell - usually irridescent and multiple colors)" }
+  mottledJasper { "mottled jasper (can be any combination of black, brown, gray, green, red, white, yellow)" }
+  mykaro { "mykaro" }
+  mynteer { "mynteer" }
+  nelvine { "nelvine" }
+  nune { "nune" }
+  obsidian { "obsidian (black)" }
+  octel { "octel" }
+  okenite { "okenite (soft white, feels of velvetine)" }
+  olivine { "olivine (yellow-green to green to brown)" }
+  onyxBlackAndGray { "onyx (black and gray or white)" }
+  onyxBlack { "onyx (black)" }
+	onyxLayers { "onyx (layers of various shades of red, pink, orange/brown and honey yellow)" }
+  onyxWhiteAndRed { "onyx (white and red)" }
+  onyxWhite { "onyx (white)" }
+  oolite { "oolite" }
+  ophealine { "ophealine" }
+  orangeQuartz { "orange quartz" }
+  orangeRedGarnet { "orange-red garnet" }
+  orangeRuby { "orange ruby (corundum)" }
+  orangeSpinel { "orange spinel" }
+  orbaline { "orbaline" }
+  orbicularJasper { "orbicular jasper (brown with small circles)" }
+  orblen { "orblen" }
+  orl { "orl" }
+  orprase { "orprase" }
+  paleGreenSpodumene { "pale green spodumene" }
+  pearl { "pearl" }
+  pelesHair { "pele's hair (obsidian filaments)" }
+  peridotite { "peridotite (massive and granular, dark green with lighter veining)" }
+  peridot { "peridot (green)" }
+  petrifiedWood { "petrified wood" }
+  phantomQuartz { "phantom quartz (one quartz crystal overgrown by another - a crystal within a crystal)" }
+  phenalope { "phenalope" }
+  pictureJasper { "picture jasper (combinations of black, blue, brown, ivory, and tan)" }
+  pinkFluorite { "pink fluorite (crystals are like intertwined blocks)" }
+  pinkOpalCream { "pink opal (whites to creams)" }
+  pinkOpal { "pink opal (pink to lavender)" }
+  pinkSapphire { "pink sapphire (corundum)" }
+  pinkTopaz { "pink topaz" }
+  plumSpinel { "plum spinel" }
+  pridayPlumeAgate { "priday plume agate ('thundereggs')" }
+  purpleFluorite { "purple fluorite (crystals are like intertwined blocks)" }
+  purpleObsidian { "purple obsidian (purple is like a film on top of obsidian)" }
+  purpleQuartz { "purple quartz" }
+  purpleSapphire { "purple sapphire (corundum)" }
+  purpleSpodumene { "purple spodumene" }
+  rainbowObsidian { "rainbow obsidian" }
+  raindrop { "raindrop" }
+  ravenar { "ravenar" }
+  redAgate { "red agate" }
+  redGarnet { "red garnet" }
+  redJasperFlameAgate { "red jasper flame agate" }
+  redJasper { "red jasper (red with green flecks)" }
+  redQuartz { "red quartz" }
+  redSpinel { "red spinel" }
+  redTears { "red tears" }
+  rhodochrosite { "rhodochrosite" }
+  rhodolite { "rhodolite (pink garnet)" }
+  rockCrystalQuartz { "rock crystal quartz" }
+  rogueStone { "rogue stone" }
+  rosaline { "rosaline" }
+  roseQuartz { "rose quartz (pink)" }
+  royalPlumeJasper { "royal plume jasper (plumed purplish shade)" }
+  ruby { "ruby (red corundum)" }
+  rubySpinel { "ruby spinel (dusky red)" }
+  rusteen { "rusteen" }
+  rutilatedQuartz { "rutilated quartz (yellow and red random patterns in clear quartz)" }
+  sagenite { "sagenite" }
+  salite { "salite (green diopside)" }
+  samarskite { "samarskite" }
+  sanidine { "sanidine" }
+  sapphire { "sapphire (blue corundum)" }
+  sarbossa { "sarbossa" }
+  sardonyxBlack { "sardonyx (black)" }
+  sardonyxBrown { "sardonyx (brown)" }
+  sardonyxRed { "sardonyx (red)" }
+  sardonyxWhite { "sardonyx (white)" }
+  sard { "sard (yellow chalcedony)" }
+  satinSpar { "satin spar (gypsum)" }
+  scapra { "scapra" }
+  scepterQuartz { "scepter quartz (one crystal overgrown by another - a crystal within a crystal)" }
+  schorl { "schorl (black, brown, or dark blue tourmaline)" }
+  selenite { "selenite (gypsum)" }
+  serpentine { "serpentine (green)" }
+  shandon { "shandon" }
+  sharpstone { "sharpstone" }
+  silkstone { "silkstone" }
+  silverSheenObsidian { "silver sheen obsidian" }
+  sinhalite { "sinhalite" }
+  skydrop { "skydrop" }
+  smokyQuartz { "smoky quartz (dark browns, grays, and blacks)" }
+  snowflakeObsidian { "snowflake obsidian (black with with white flakes)" }
+  sodalite { "sodalite (royal to navy blue)" }
+  spessartine { "spessartine (orange through red garnet)" }
+  sphene { "sphene" }
+  starChrysBullsEye { "star chrysoberyl - bull's eye (blue gray - also called falcon's eye or hawk's eye)" }
+  starChrysCatsEye { "star chrysoberyl - cat's eye (green)" }
+  starChrysTigersEye { "star chrysoberyl - tiger's eye (light or dark brown)" }
+  starDiopside { "star diopside" }
+  starRoseQuartz { "star rose quartz" }
+  starRuby { "star ruby" }
+  starSapphire { "star sapphire" }
+  strawberryQuartz { "strawberry quartz (strawberry red)" }
+  sugilite { "sugilite (deep purple to magenta)" }
+  sunstoneBrown { "sunstone (brown)" }
+  sunstoneGreen { "sunstone (green)" }
+  sunstoneGrey { "sunstone (gray)" }
+  sunstoneOrange { "sunstone (orange)" }
+  sunstonePeach { "sunstone (peach)" }
+  sunstonePink { "sunstone (pink)" }
+  sunstoneRed { "sunstone (red)" }
+  sunstoneYellow { "sunstone (yellow)" }
+  tabasheer { "tabasheer" }
+  tchazar { "tchazar" }
+  temair { "temair" }
+  thulite { "thulite (pink zoiste)" }
+  thuparlial { "thuparlial" }
+  tigerEyeAgate { "tiger eye agate" }
+  tombJade { "tomb jade" }
+  topazolite { "topazolite (greenish-yellow to yellow garnets)" }
+  tourmalinedQuartz { "tourmalined quartz (quartz with inclusions of black tourmaline)" }
+  tourmaline { "tourmaline (varies in color)" }
+  transvaalJade { "transvaal jade (massy, not crystalline green garnet)" }
+  turquoise { "turquoise" }
+  turritella { "turritella (agate)" }
+  ulvaen { "ulvaen" }
+  uvarite { "uvarite (bright green garnet)" }
+  uvite { "uvite (dark brown to green tourmaline)" }
+  variscite { "variscite (strongly resembles turquoise)" }
+  violane { "violane (purple diopside)" }
+  violetSapphire { "violet sapphire (corundum)" }
+  violetSpinel { "violet spinel" }
+  violetTopaz { "violet topaz" }
+  waterOpal { "water opal (clear and colorless with inside opal coloration)" }
+  waterstar { "waterstar" }
+  webstone { "webstone" }
+  whiteOpal { "white opal" }
+  whiteTopaz { "white topaz" }
+  witherite { "witherite" }
+  wonderstone { "wonderstone (tannish to yellow jasper)" }
+  woodOpal { "wood opal (clear with brown streaks)" }
+  woodwardAgate { "woodward ranch plume agate" }
+  wootine { "wootine" }
+  yellowFluorite { "yellow fluorite (crystals are like intertwined blocks)" }
+  yellowJasper { "yellow jasper" }
+  yellowSapphire { "yellow sapphire (corundum)" }
+  yellowSpinel { "yellow spinel" }
+  yellowSpodumene { "yellow spodumene" }
+  yellowTopaz { "yellow topaz" }
+  zendalure { "zendalure" }
+  ziose { "ziose" }
+  zircon { "zircon (any color)" }
+  zoisteBlue { "zoiste (blue)" }
+  zoisteBrown { "zoiste (brown)" }
+  zoisteClear { "zoiste (clear)" }
+  zoisteGray { "zoiste (gray)" }
+  zoisteGreen { "zoiste (pale green)" }
+  zoistePink { "zoiste (pink)" }
+  zoisteWhite { "zoiste (white)" }
 end
 
 category group10gpGems
-  bandedAgate eyeAgate mossAgate azurite blueQuartz hematite lapisLazuli
-  malachite obsidian rhodochrosite tigerEyeTurquoise freshwaterPearl
+  agniMani algae allanite amazoniteMicroline apacheTears augelite azurite
+  bandedAgate blackAgate blackAndWhiteAgate blueAgate blueJohnFluorite
+  blueLaceAgate blueQuartz bluestone borax brownAgate chromiumDiopside
+  chrysocolla clearFluorite clearQuartz corstal crazyLaceAgate dendriticAgate
+  diopsideBlue diopsideBrown diopsideWhite disthene electricObsidian eyeAgate
+  fadenQuartz ferrosalite fireAgate fluorspar frostAgate geode goldline
+  grayAgate greenAgate greenFluorite greenQuartz greenstone gypsum hematite
+  hollyBlueAgate hyaline labradorite lapisLazuli lavrovite leopardAgate
+  lodestone lynxEye malachite milkyQuartz morion mossAgate nelvine nune
+  obsidian okenite oolite ophealine orangeQuartz pelesHair petrifiedWood
+  pinkFluorite purpleFluorite purpleQuartz redQuartz rhodochrosite rosaline
+  roseQuartz rutilatedQuartz sagenite salite sanidine sarbossa satinSpar
+  sharpstone silkstone silverSheenObsidian snowflakeObsidian sunstoneBrown
+  sunstoneGrey sunstoneGreen sunstoneOrange sunstonePeach sunstonePink
+  sunstoneRed sunstoneYellow thuparlial tigerEyeAgate turquoise turritella
+  variscite violane webstone wonderstone wootine yellowFluorite
 end
 
 category group50gpGems
-  bloodstone carnelian chalcedony chrysoprase citrine iolite jasper moonstone
-  onyx peridot rockCrystal sard sardonyx roseQuartz smokyQuartz starRoseQuartz
-  zircon
+  adventurine albite alestone amber andar apatite aquaAura augite
+  batCaveJasper benitoite bixbyte bloodstone boakhar boraxPaleBlue
+  boraxYellow brownJasper bruneauJasperBrown bruneauJasperTan
+  careyPlumeAgate carnelianBrown carnelianOrange carnelianRed celestite
+  chrysoprase chrystolite citrine clearSpodumene clelophane crownOfSilver
+  datchas dioptase dunite enstatite fayalite galena goldSheenObsidian
+  graveyardPlumeAgate graySpodumene greenJasper hambergyle hiddenite howlite
+  hydrophane hypersthene ioliteBlue ioliteGray iolitePurple ioliteWhite
+  irtios jet kunzite lazulite luriyl malacon mellochrysos moonstone mykaro
+  mynteer onyxBlackAndGray onyxBlack onyxWhiteAndRed onyxWhite orbicularJasper
+  orprase paleGreenSpodumene phantomQuartz phenalope pictureJasper
+  pridayPlumeAgate purpleObsidian purpleSpodumene rainbowObsidian redAgate
+  redJasper redJasperFlameAgate rockCrystalQuartz samarskite sard sardonyxBlack
+  sardonyxBrown sardonyxRed sardonyxWhite scepterQuartz selenite serpentine
+  skydrop smokyQuartz sodalite starRoseQuartz strawberryQuartz sugilite
+  tabasheer tchazar tourmalinedQuartz transvaalJade witherite woodwardAgate
+  yellowJasper yellowSpodumene zircon
 end
 
 category group100gpGems
-  amber amethyst chrysoberyl coral redGarnet brownGreenGarnet jade jet
-  whitePearl goldenPearl pinkPearl silverPearl redSpinel redBrownSpinel
-  deepGreenSpinel tourmaline
+  alexandrite amberOrange amberRed amethyst ametrine angelsSkin brandeen
+  buergerite coral demantoid dravite elbaiteGreen elbaiteOrange elbaitePink
+  elbaiteRed elbaiteViolet grossular hessonite jade jargoon kornerupine
+  laerelsTears moonstoneBlue moonstoneGreen moonstonePink motherOfPearl
+  mottledJasper octel olivine onyxLayers royalPlumeJasper scapra schorl
+  shandon sinhalite starDiopside temair thulite tourmaline ulvaen uvite
+  waterstar ziose zoisteBlue zoisteBrown zoisteClear zoisteGray zoisteGreen
+  zoistePink zoisteWhite
 end
 
 category group500gpGems
-  alexandrite aquamarine violetGarnet blackPearl deepBlueSpinel 
-  goldenYellowTopaz
+  achroiteBeryl almandine almandineDark andradite aquamarine berylWhite
+  berylYellow blackSpinel blueSpinel blueTopaz brownSpinel brownTopaz
+  burntTopaz clearSpinel clearTopaz euclase flamedance garnetPeridotite
+  goldTopaz grayTopaz greenSpinel greenTopaz heliodore hornCoral
+  lilacSpinel mauveSpinel melanite orangeSpinel orangeRedGarnet orbaline
+  pearl peridot pinkTopaz plumSpinel raindrop redGarnet redSpinel rhodolite
+  rusteen spessartine sphene starChrysCatsEye starChrysTigersEye topazolite
+  uvarite violetSpinel violetTopaz whiteTopaz yellowSpinel yellowTopaz
 end
 
 category group1000gpGems
-  emerald whiteOpal blackOpal fireOpal blueSapphire fieryYellowCorundum
-  richPurpleCorundum blueStarSapphire blackStarSapphire starRuby
+  ausOpalGreen ausOpalWhite ausOpalYellow balasRubyPink balasRuby
+  bixbiteRaspberry bixbiteViolet blackOpal blueOpal boulderOpal
+  cherryOpal colorlessSapphire emery fireOpal girasol goshenite
+  greenSapphire honduranOpal hyalite imperialTopaz jasmal moonbar
+  mossOpal orblen orl peridotite pinkOpal pinkOpalCream pinkSapphire
+  ravenar redTears rubySpinel sapphire starChrysBullsEye tombJade
+  waterOpal whiteOpal woodOpal yellowSapphire zendalure
 end
 
 category group5000gpGems
-  clearBGEmerald blueWhiteDiamond canaryDiamond pinkDiamond brownDiamond
-  blueDiamond jacinth
+  amarantha beljuril blackDiamond blackSapphire diamondBrown diamondChampagne
+  diamond diamondGray diamondGreen diamondBlue diamondPink diamondYellow
+  emerald harlequinOpal jacinth jellyOpal kingsTears morganite orangeRuby
+  purpleSapphire rogueStone ruby starRuby starSapphire violetSapphire
 end
 
 category groupGemLookup
