@@ -1,0 +1,12 @@
+# -----------------------------------------------------
+# Rules for building a statically linked Basilisk
+# library.  Called from Makefile.
+# -----------------------------------------------------
+
+include Makefile.opts
+include Makefile.obj
+
+LIBNAME = libbasilisk.a
+
+all: $(OBJS)
+	ar r $(LIBNAME) $(OBJS)

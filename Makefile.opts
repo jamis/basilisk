@@ -1,0 +1,36 @@
+# ---------------------------------------------------------
+# Makefile options common to all configurations of
+# Basilisk.
+# ---------------------------------------------------------
+
+CC = gcc
+AR = ar
+
+DBGFLAGS := -g
+OPTS := -Iinclude $(DBGFLAGS) -Wall
+
+RUNLIBS := -L. -lbasilisk -lm
+
+OUTDIR := output
+
+OBJS := \
+  $(OUTDIR)/bskarray.o \
+  $(OUTDIR)/bskatdef.o \
+  $(OUTDIR)/bskbitset.o \
+  $(OUTDIR)/bskctgry.o \
+  $(OUTDIR)/bskdb.o \
+  $(OUTDIR)/bskdebug.o \
+  $(OUTDIR)/bskexec.o \
+  $(OUTDIR)/bskidtbl.o \
+  $(OUTDIR)/bsklexer.o \
+  $(OUTDIR)/bskparse.o \
+  $(OUTDIR)/bskrule.o \
+  $(OUTDIR)/bskstream.o \
+  $(OUTDIR)/bsksymtb.o \
+  $(OUTDIR)/bskthing.o \
+  $(OUTDIR)/bsktokens.o \
+  $(OUTDIR)/bskutdef.o \
+  $(OUTDIR)/bskutil.o \
+  $(OUTDIR)/bskvalue.o \
+  $(OUTDIR)/bskvar.o
+

@@ -1,127 +1,61 @@
-CC=gcc
-AR=ar
+include Makefile.opts
 
-DBGFLAGS ?= -g
-OPTS=-Iinclude $(DBGFLAGS) -Wall
+all:
+	@echo "Please specify one of the following options to build Basilisk:"
+	@echo "  dynamic_lib: builds ONLY the dynamically linked Basilisk"
+	@echo "     library."
+	@echo "  dynamic: builds a dynamically linked library, all utilities"
+	@echo "     and compiles the data files."
+	@echo "  static_lib: builds ONLY the statically linked Basilisk"
+	@echo "     library."
+	@echo "  static: builds a statically linked library, all utilities"
+	@echo "     and compiles the data files."
+	@echo "  package: builds .tar.gz files for the Basilisk sources,"
+	@echo "     documentation, and data files."
+	@echo
+	@echo "Once the library has been built, you may specify one of the"
+	@echo "following options:"
+	@echo "  utils: builds ONLY the basilisk utilities"
+	@echo "  compile: compiles the basilisk data"
+	@echo "  clean: removes all executables and object files from the"
+	@echo "     Basilisk directories."
 
-OUTDIR=output
-SRCDIR=src
+static: static_lib utils compile
+	@echo "Done making static basilisk library"
 
-RUNLIBS = -L. -lbasilisk -lm
+static_lib: prepare
+	@echo "Making static basilisk library"
+	@make -f Makefile.static all
 
-all: LIBOPTS =
-all: LIBNAME = libbasilisk.a
-all: prepare libbasilisk_static utils data
+dynamic: dynamic_lib utils compile
+	@echo "Done making dynamic basilisk library"
 
-library: LIBOPTS = -Wl,-rpath .
-library: LIBNAME = libbasilisk.so
-library: OPTS += -fPIC -DPIC
-library: prepare libbasilisk_dynamic utils data
+dynamic_lib: prepare
+	@echo "Making dynamic basilisk library"
+	@make -f Makefile.dynamic all
 
-utils: bskcompile bskrun bsktreasure
-data: data-compile
-
-BASES=\
-  bskarray \
-  bskatdef \
-  bskbitset \
-  bskctgry \
-  bskdb \
-  bskdebug \
-  bskexec \
-  bskidtbl \
-  bsklexer \
-  bskparse \
-  bskrule \
-  bskstream \
-  bsksymtb \
-  bskthing \
-  bsktokens \
-  bskutdef \
-  bskutil \
-  bskvalue \
-  bskvar
-
-OBJS=$(BASES:%=$(OUTDIR)/%.o)
-SRCS=$(BASES:%=$(SRCDIR)/%.c)
+package:
+	@echo "Building basilisk packages"
+	@make -f Makefile.packages all
 
 prepare:
-	mkdir -p $(OUTDIR)
+	@mkdir -p $(OUTDIR)
 
-libbasilisk_static: $(OBJS)
-	ar r $(LIBNAME) $(OBJS)
+utils: bskcompile bskrun bsktreasure
+	@echo "Utility programs finished"
 
-libbasilisk_dynamic: $(OBJS)
-	ld -shared -o $(LIBNAME) $(OBJS) -lm
- 
-bskcompile: $(LIBNAME) bskcompile.c bskcallbacks.c
-	$(CC) $(OPTS) $(LIBOPTS) -o bskcompile bskcompile.c bskcallbacks.c $(RUNLIBS)
+compile: dat/standard/*.bsk dat/snfist/*.bsk dat/scitadel/*.bsk bskcompile
+	@echo "Compiling data files"
+	@bskcompile dat/standard/index.bsk "dat/standard|dat/snfist|dat/scitadel|dat/dragon"
+	
+bskcompile: bskcompile.c bskcallbacks.c
+	$(CC) $(OPTS) -Wl,-rpath . -o bskcompile bskcompile.c bskcallbacks.c $(RUNLIBS)
 
-bskrun: $(LIBNAME) bskrun.c bskcallbacks.c
-	$(CC) $(OPTS) $(LIBOPTS) -o bskrun bskrun.c bskcallbacks.c $(RUNLIBS)
+bskrun: bskrun.c bskcallbacks.c
+	$(CC) $(OPTS) -Wl,-rpath . -o bskrun bskrun.c bskcallbacks.c $(RUNLIBS)
 
-bsktreasure: $(LIBNAME) bsktreasure.c bskcallbacks.c
-	$(CC) $(OPTS) $(LIBOPTS) -o bsktreasure bsktreasure.c bskcallbacks.c $(RUNLIBS)
-
-data-compile: dat/standard/*.bsk dat/snfist/*.bsk dat/scitadel/*.bsk bskcompile $(LIBNAME)
-	bskcompile dat/standard/index.bsk "dat/standard|dat/snfist|dat/scitadel"
-
-$(OUTDIR)/bskarray.o: $(SRCDIR)/bskarray.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskatdef.o: $(SRCDIR)/bskatdef.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskbitset.o: $(SRCDIR)/bskbitset.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskctgry.o: $(SRCDIR)/bskctgry.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskdb.o: $(SRCDIR)/bskdb.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskdebug.o: $(SRCDIR)/bskdebug.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskexec.o: $(SRCDIR)/bskexec.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskidtbl.o: $(SRCDIR)/bskidtbl.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bsklexer.o: $(SRCDIR)/bsklexer.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskparse.o: $(SRCDIR)/bskparse.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskrule.o: $(SRCDIR)/bskrule.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskstream.o: $(SRCDIR)/bskstream.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bsksymtb.o: $(SRCDIR)/bsksymtb.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskthing.o: $(SRCDIR)/bskthing.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bsktokens.o: $(SRCDIR)/bsktokens.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskutdef.o: $(SRCDIR)/bskutdef.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskutil.o: $(SRCDIR)/bskutil.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskvalue.o: $(SRCDIR)/bskvalue.c
-	$(CC) $(OPTS) -c -o $@ $<
-
-$(OUTDIR)/bskvar.o: $(SRCDIR)/bskvar.c
-	$(CC) $(OPTS) -c -o $@ $<
+bsktreasure: bsktreasure.c bskcallbacks.c
+	$(CC) $(OPTS) -Wl,-rpath . -o bsktreasure bsktreasure.c bskcallbacks.c $(RUNLIBS)
 
 clean:
 	rm -f libbasilisk.a

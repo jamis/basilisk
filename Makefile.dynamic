@@ -1,0 +1,14 @@
+# ---------------------------------------------------------
+# rules for building a dynamically loaded Basilisk
+# library.  Called from Makefile.
+# ---------------------------------------------------------
+
+include Makefile.opts
+
+LIBNAME = libbasilisk.so
+OPTS := $(OPTS) -fPIC -DPIC
+
+include Makefile.obj
+
+all: $(OBJS)
+	ld -shared -o $(LIBNAME) $(OBJS) -lm
