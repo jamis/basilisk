@@ -35,7 +35,6 @@ int main( int argc, char* argv[] ) {
   BSKCHAR* ptr;
   BSKCHAR* p2;
   BSKCHAR* p3;
-	BSKCallbackData cbdata;
 
   if( argc < 2 || argc > 3 ) {
     printf( "bskcompile usage:\n\n" );
@@ -94,15 +93,12 @@ int main( int argc, char* argv[] ) {
 
   printf( "Parsing...\n" );
 
-	cbdata.consoleOut = stdout;
-	cbdata.errorOut = stderr;
-
   db = BSKNewDatabase();
   rc = BSKParse( stream,
                  db,
                  searchPath,
                  BSKDefaultParseErrorHandler,
-                 &cbdata );
+                 0 );
 
   if( rc != 0 ) {
     printf( "Parse terminated with errors.\n" );

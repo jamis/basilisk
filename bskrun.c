@@ -44,12 +44,8 @@ void runMain( BSKDatabase* db ) {
   BSKValue retVal;
   BSKExecOpts opts;
   BSKBOOL halt;
-	BSKCallbackData cbdata;
 
   printf( "\n\n" );
-
-	cbdata.consoleOut = stdout;
-	cbdata.errorOut = stderr;
 
   id = BSKFindIdentifier( db->idTable, "main" );
   if( id < 0 ) {
@@ -70,7 +66,7 @@ void runMain( BSKDatabase* db ) {
   opts.rval = &retVal;
   opts.errorHandler = BSKDefaultRuntimeErrorHandler;
   opts.console = BSKDefaultConsole;
-  opts.userData = &cbdata;
+  opts.userData = 0;
 
   halt = BSKFALSE;
   opts.halt = &halt;
@@ -140,7 +136,6 @@ int main( int argc, char* argv[] ) {
   BSKBOOL isCompiled;
   BSKUI32 start;
   BSKUI32 end;
-	BSKCallbackData cbdata;
 
   if( argc < 2 ) {
     printf( "BSKRun Usage:\n" );
@@ -200,15 +195,12 @@ int main( int argc, char* argv[] ) {
   }
 
   if( !isCompiled ) {
-	  cbdata.consoleOut = stdout;
-		cbdata.errorOut = stderr;
-
     db = BSKNewDatabase();
     rc = BSKParse( stream,
                    db,
                    "\0\0",
                    BSKDefaultParseErrorHandler,
-                   &cbdata );
+                   0 );
   } else {
     db = BSKSerializeDatabaseIn( stream );
     rc = ( db == 0 );

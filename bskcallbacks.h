@@ -10,12 +10,6 @@
 
 #include <stdio.h>
 
-typedef struct __bskcallbackdata__ BSKCallbackData;
-
-struct __bskcallbackdata__ {
-  FILE* consoleOut;
-	FILE* errorOut;
-};
 
 BSKI32 BSKDefaultConsole( BSKCHAR* msg,
                           BSKExecutionEnvironment* env,
