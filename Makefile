@@ -1,58 +1,131 @@
 CC=gcc
 AR=ar
 
-OPTS=-Iinclude -g -Wall
+DBGFLAGS ?= -g
+OPTS=-Iinclude $(DBGFLAGS) -Wall
 
-.SUFFIXES:
+OUTDIR=output
+SRCDIR=src
 
-.SUFFIXES: .c .o
+all: LIBOPTS =
+all: LIBNAME = libbasilisk.a
+all: prepare libbasilisk_static utils data
 
-.c.o:
+library: LIBOPTS = -Wl,-rpath .
+library: LIBNAME = libbasilisk.so
+library: OPTS += -fPIC -DPIC
+library: prepare libbasilisk_dynamic utils data
+
+utils: bskcompile bskrun bsktreasure
+data: data-compile
+
+BASES=\
+  bskarray \
+  bskatdef \
+  bskbitset \
+  bskctgry \
+  bskdb \
+  bskdebug \
+  bskexec \
+  bskidtbl \
+  bsklexer \
+  bskparse \
+  bskrule \
+  bskstream \
+  bsksymtb \
+  bskthing \
+  bsktokens \
+  bskutdef \
+  bskutil \
+  bskvalue \
+  bskvar
+
+OBJS=$(BASES:%=$(OUTDIR)/%.o)
+SRCS=$(BASES:%=$(SRCDIR)/%.c)
+
+prepare:
+	mkdir -p $(OUTDIR)
+
+libbasilisk_static: $(OBJS)
+	ar r $(LIBNAME) $(OBJS)
+
+libbasilisk_dynamic: $(OBJS)
+	ld -shared -o $(LIBNAME) $(OBJS)
+ 
+bskcompile: $(LIBNAME) bskcompile.c bskcallbacks.c
+	$(CC) $(OPTS) $(LIBOPTS) -o bskcompile bskcompile.c bskcallbacks.c -lm -L. -lbasilisk
+
+bskrun: $(LIBNAME) bskrun.c bskcallbacks.c
+	$(CC) $(OPTS) $(LIBOPTS) -o bskrun bskrun.c bskcallbacks.c -lm -L. -lbasilisk
+
+bsktreasure: $(LIBNAME) bsktreasure.c bskcallbacks.c
+	$(CC) $(OPTS) $(LIBOPTS) -o bsktreasure bsktreasure.c bskcallbacks.c -lm -L. -lbasilisk
+
+data-compile: dat/standard/*.bsk dat/snfist/*.bsk dat/scitadel/*.bsk bskcompile $(LIBNAME)
+	bskcompile dat/standard/index.bsk "dat/standard|dat/snfist|dat/scitadel"
+
+$(OUTDIR)/bskarray.o: $(SRCDIR)/bskarray.c
 	$(CC) $(OPTS) -c -o $@ $<
 
-all: libbasilisk.a bskcompile bskrun bsktreasure data-compile
+$(OUTDIR)/bskatdef.o: $(SRCDIR)/bskatdef.c
+	$(CC) $(OPTS) -c -o $@ $<
 
-OBJS=\
-  src/bskarray.o \
-  src/bskatdef.o \
-  src/bskbitset.o \
-  src/bskctgry.o \
-  src/bskdb.o \
-  src/bskdebug.o \
-  src/bskexec.o \
-  src/bskidtbl.o \
-  src/bsklexer.o \
-  src/bskparse.o \
-  src/bskrule.o \
-  src/bskstream.o \
-  src/bsksymtb.o \
-  src/bskthing.o \
-  src/bsktokens.o \
-  src/bskutdef.o \
-  src/bskutil.o \
-  src/bskvalue.o \
-  src/bskvar.o
+$(OUTDIR)/bskbitset.o: $(SRCDIR)/bskbitset.c
+	$(CC) $(OPTS) -c -o $@ $<
 
-libbasilisk.a: $(OBJS)
-	ar r libbasilisk.a $(OBJS)
- 
-bskcompile: libbasilisk.a bskcompile.c bskcallbacks.c
-	$(CC) $(OPTS) -o bskcompile bskcompile.c bskcallbacks.c -lm -L. -lbasilisk
+$(OUTDIR)/bskctgry.o: $(SRCDIR)/bskctgry.c
+	$(CC) $(OPTS) -c -o $@ $<
 
-bskrun: libbasilisk.a bskrun.c bskcallbacks.c
-	$(CC) $(OPTS) -o bskrun bskrun.c bskcallbacks.c -lm -L. -lbasilisk
+$(OUTDIR)/bskdb.o: $(SRCDIR)/bskdb.c
+	$(CC) $(OPTS) -c -o $@ $<
 
-bsktreasure: libbasilisk.a bsktreasure.c bskcallbacks.c
-	$(CC) $(OPTS) -o bsktreasure bsktreasure.c bskcallbacks.c -lm -L. -lbasilisk
+$(OUTDIR)/bskdebug.o: $(SRCDIR)/bskdebug.c
+	$(CC) $(OPTS) -c -o $@ $<
 
-data-compile: dat/standard/*.bsk dat/snfist/*.bsk dat/scitadel/*.bsk libbasilisk.a
-	bskcompile dat/standard/index.bsk "dat/standard|dat/snfist|dat/scitadel"
+$(OUTDIR)/bskexec.o: $(SRCDIR)/bskexec.c
+	$(CC) $(OPTS) -c -o $@ $<
+
+$(OUTDIR)/bskidtbl.o: $(SRCDIR)/bskidtbl.c
+	$(CC) $(OPTS) -c -o $@ $<
+
+$(OUTDIR)/bsklexer.o: $(SRCDIR)/bsklexer.c
+	$(CC) $(OPTS) -c -o $@ $<
+
+$(OUTDIR)/bskparse.o: $(SRCDIR)/bskparse.c
+	$(CC) $(OPTS) -c -o $@ $<
+
+$(OUTDIR)/bskrule.o: $(SRCDIR)/bskrule.c
+	$(CC) $(OPTS) -c -o $@ $<
+
+$(OUTDIR)/bskstream.o: $(SRCDIR)/bskstream.c
+	$(CC) $(OPTS) -c -o $@ $<
+
+$(OUTDIR)/bsksymtb.o: $(SRCDIR)/bsksymtb.c
+	$(CC) $(OPTS) -c -o $@ $<
+
+$(OUTDIR)/bskthing.o: $(SRCDIR)/bskthing.c
+	$(CC) $(OPTS) -c -o $@ $<
+
+$(OUTDIR)/bsktokens.o: $(SRCDIR)/bsktokens.c
+	$(CC) $(OPTS) -c -o $@ $<
+
+$(OUTDIR)/bskutdef.o: $(SRCDIR)/bskutdef.c
+	$(CC) $(OPTS) -c -o $@ $<
+
+$(OUTDIR)/bskutil.o: $(SRCDIR)/bskutil.c
+	$(CC) $(OPTS) -c -o $@ $<
+
+$(OUTDIR)/bskvalue.o: $(SRCDIR)/bskvalue.c
+	$(CC) $(OPTS) -c -o $@ $<
+
+$(OUTDIR)/bskvar.o: $(SRCDIR)/bskvar.c
+	$(CC) $(OPTS) -c -o $@ $<
 
 clean:
 	rm -f libbasilisk.a
+	rm -f libbasilisk.so
 	rm -f bskrun
 	rm -f bskcompile
 	rm -f bsktreasure
-	rm -f src/*.o
 	rm -f dat/standard/index.bdb
-
+	rm -rf $(OUTDIR)
