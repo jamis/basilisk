@@ -130,21 +130,46 @@ category groupMundaneItemTable
 end
 
 
+rule rFindMundaneItem( c options )
+  c2 = duplicate( c );
+
+	while not Empty( c2 ) do
+	  i = any( c2 );
+		remove( c2, i );
+		if i typeof category then
+		  i = rFindMundaneItem( i, options );
+			if i ne null then
+				rFindMundaneItem = i;
+				exit rule;
+			end
+		elseif has( i, "type" ) then
+			if rThingMatchesCriteria( i.type, options ) then
+			  rFindMundaneItem = i;
+				exit rule;
+			end
+		elseif has( i, "subtable" ) then
+			mi = rCascadeLookupWithOptions( i.subtable, options );
+		  if mi ne null then
+			  mi.magnitude = i.magnitude;
+				if has( i, "bonuses" ) then
+					mi.bonuses = i.bonuses;
+				end
+				rFindMundaneItem = mi;
+				exit rule;
+			end
+		end
+	end
+end
+
+
 rule rConfigureMundaneItem( a options )
   if has( a, "type" ) then
-    if not rThingMatchesCriteria( a.type, options ) then
-      exit rule;
-    end
     mi = rNewInstanceOf( a.type );
     if has( a, "subtable" ) then
       mi.size = rNewInstanceOf( any( a.subtable ) );
     end
-  elseif has( a, "subtable" ) then
-    x = rCascadeLookupWithOptions( a.subtable, options );
-    if x eq null then
-      exit rule;
-    end
-    mi = rNewInstanceOf( x );
+	else
+    mi = rNewInstanceOf( a );
   end
   
   if has( a, "bonuses" ) then
@@ -182,19 +207,11 @@ end
 
 
 rule rLookupMundaneItem( options )
-  c = duplicate( groupMundaneItemTable );
-
-  do
-    if Empty( c ) then
-      exit rule;
-    end
-
-    mi = rCascadingLookup( c );
-    remove( c, mi );
-
-    mi = rConfigureMundaneItem( mi, options ); 
-  loop while mi eq null;
-
+  mi = rFindMundaneItem( groupMundaneItemTable, options );
+	if mi eq null then
+		exit rule;
+	end
+  mi = rConfigureMundaneItem( mi, options ); 
   rLookupMundaneItem = mi;
 end
 
