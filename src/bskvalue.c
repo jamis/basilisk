@@ -193,7 +193,7 @@ BSKFLOAT BSKEvaluateNumber( BSKValue* value ) {
         break;
       case VT_DWORD:
 				{
-					BSKI16 tmp;
+					BSKI32 tmp;
 					BSKMemCpy( &tmp, value->datum, sizeof( BSKI32 ) );
 					n = tmp;
 				}
