@@ -524,7 +524,7 @@ rule rSelectScroll( scrollMagnitude options )
   while cnt gt 0 do
     lev = any( levGrp ).spellLevel;
     clev = rComputeMinimumCasterLevel( lev );
-    s = rGetAnyMatchingCriteria( Get( t.spellList, lev-1 ), options );
+    s = rGetAnyMatchingCriteria( Get( t.spellList, lev-1 ), options, true );
     if s ne null then
       x = rGetScrollSpell( scroll, s, lev, clev );
       scroll.cost = scroll.cost + rComputeScrollSpellCost( lev, clev );
