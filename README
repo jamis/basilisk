@@ -1,3 +1,9 @@
+# ========================================================================
+# NOTE: this repository is provided for historical purposes only. It was
+# written decades ago and while it may still be made to function, there
+# are almost certainly better ways to do what it did, now. -- Jamis
+# ========================================================================
+
 Basilisk Data Engine
 --------------------
 
@@ -6,10 +12,7 @@ roleplaying games.  However, its structure is such that it may be used for
 a great many other things, in addition to this.
 
 If you desire to include Basilisk in your own programs, you are free to do
-so provided that you adhere to the rules given in the LICENSE.txt file.  If
-your distribution of Basilisk did not come with a LICENSE.txt file, please
-go to http://www.rpgplanet.com/dnd3e/generators and download a complete
-distribution, or contact the author (Jamis Buck) at minam@rpgplanet.com.
+so provided that you adhere to the rules given in the LICENSE.txt file.
 
 COMPILATION/INSTALLATION
 ------------------------
@@ -110,5 +113,3 @@ looks for the existance of a rule named "main" and executes it.
 If you have any questions, feel free to contact me.
 
 - Jamis Buck
-  minam@rpgplanet.com
-  http://www.rpgplanet.com/dnd3e/generators
